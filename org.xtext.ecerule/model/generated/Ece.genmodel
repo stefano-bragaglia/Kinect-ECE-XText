@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.ecerule/src-gen" editDirectory="/org.xtext.ecerule.edit/src"
+    editorDirectory="/org.xtext.ecerule.editor/src" modelPluginID="org.xtext.ecerule"
+    forceOverwrite="true" modelName="Ece" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.ecerule.edit"
+    editorPluginID="org.xtext.ecerule.editor" runtimeVersion="2.9">
+  <genPackages prefix="Ece" basePackage="org.xtext.ecerule" disposableProviderFactory="true"
+      fileExtensions="ece" ecorePackage="Ece.ecore#/">
+    <genClasses ecoreClass="Ece.ecore#//DroolsModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//DroolsModel/statements"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Statement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Statement/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Statement/fluent"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Event/eventName"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Fluent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Fluent/fluentName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/valuePart"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//ToRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ToRule/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//StringExpr"/>
+    <genClasses ecoreClass="Ece.ecore#//BoolExpr"/>
+    <genClasses ecoreClass="Ece.ecore#//Or">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Or/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Or/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//And"/>
+    <genClasses ecoreClass="Ece.ecore#//Equality">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Equality/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Comparison">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Comparison/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Comparison/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Comparison/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//FloatExpr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//FloatExpr/valueDirect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//FloatExpr/valueOfFluent"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//PlusOrMinus"/>
+    <genClasses ecoreClass="Ece.ecore#//MulOrDiv"/>
+    <genClasses ecoreClass="Ece.ecore#//Primary">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Primary/valueDirect"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//FluentWhoseValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//FluentWhoseValue/fluentWhoseValueName"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Str">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Str/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//InRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//InRule/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//InRule/currentTime"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//ExpFluent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//ExpFluent/fluentName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpFluent/valuePart"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpFluent/timePart"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Plus"/>
+    <genClasses ecoreClass="Ece.ecore#//Minus"/>
+  </genPackages>
+</genmodel:GenModel>

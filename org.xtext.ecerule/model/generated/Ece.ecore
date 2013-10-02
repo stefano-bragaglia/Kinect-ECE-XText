@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ece" nsURI="http://www.xtext.org/ecerule/Ece" nsPrefix="ece">
+  <eClassifiers xsi:type="ecore:EClass" name="DroolsModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Event"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fluent" upperBound="-1"
+        eType="#//Fluent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Event">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fluent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fluentName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valuePart" eType="#//ToRule"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToRule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//StringExpr"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StringExpr" eSuperTypes="#//Equality"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BoolExpr"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//BoolExpr">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//And" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//And" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//Or"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Equality" eSuperTypes="#//And">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comparison">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//PlusOrMinus"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//PlusOrMinus"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FloatExpr" eSuperTypes="#//Equality">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueDirect" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valueOfFluent" eType="#//FluentWhoseValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlusOrMinus" eSuperTypes="#//Comparison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MulOrDiv" eSuperTypes="#//PlusOrMinus"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Primary" eSuperTypes="#//MulOrDiv">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueDirect" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FluentWhoseValue" eSuperTypes="#//StringExpr">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fluentWhoseValueName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Str" eSuperTypes="#//StringExpr">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InRule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpFluent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fluentName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valuePart" eType="#//ToRule"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timePart" eType="#//InRule"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Plus" eSuperTypes="#//PlusOrMinus"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Minus" eSuperTypes="#//PlusOrMinus"/>
+</ecore:EPackage>
