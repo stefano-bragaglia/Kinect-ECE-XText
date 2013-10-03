@@ -156,6 +156,23 @@ public class EceSwitch<T> extends Switch<T>
       {
         Comparison comparison = (Comparison)theEObject;
         T result = caseComparison(comparison);
+        if (result == null) result = caseAnd(comparison);
+        if (result == null) result = caseOr(comparison);
+        if (result == null) result = caseBoolExpr(comparison);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.SWITCH_EXPR:
+      {
+        switchExpr switchExpr = (switchExpr)theEObject;
+        T result = caseswitchExpr(switchExpr);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.MUTATION_EXPR:
+      {
+        MutationExpr mutationExpr = (MutationExpr)theEObject;
+        T result = caseMutationExpr(mutationExpr);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -175,6 +192,9 @@ public class EceSwitch<T> extends Switch<T>
         PlusOrMinus plusOrMinus = (PlusOrMinus)theEObject;
         T result = casePlusOrMinus(plusOrMinus);
         if (result == null) result = caseComparison(plusOrMinus);
+        if (result == null) result = caseAnd(plusOrMinus);
+        if (result == null) result = caseOr(plusOrMinus);
+        if (result == null) result = caseBoolExpr(plusOrMinus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -184,6 +204,9 @@ public class EceSwitch<T> extends Switch<T>
         T result = caseMulOrDiv(mulOrDiv);
         if (result == null) result = casePlusOrMinus(mulOrDiv);
         if (result == null) result = caseComparison(mulOrDiv);
+        if (result == null) result = caseAnd(mulOrDiv);
+        if (result == null) result = caseOr(mulOrDiv);
+        if (result == null) result = caseBoolExpr(mulOrDiv);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -194,6 +217,9 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseMulOrDiv(primary);
         if (result == null) result = casePlusOrMinus(primary);
         if (result == null) result = caseComparison(primary);
+        if (result == null) result = caseAnd(primary);
+        if (result == null) result = caseOr(primary);
+        if (result == null) result = caseBoolExpr(primary);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -228,10 +254,10 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EcePackage.EXP_FLUENT:
+      case EcePackage.CONDITION_RULE:
       {
-        ExpFluent expFluent = (ExpFluent)theEObject;
-        T result = caseExpFluent(expFluent);
+        ConditionRule conditionRule = (ConditionRule)theEObject;
+        T result = caseConditionRule(conditionRule);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -241,6 +267,9 @@ public class EceSwitch<T> extends Switch<T>
         T result = casePlus(plus);
         if (result == null) result = casePlusOrMinus(plus);
         if (result == null) result = caseComparison(plus);
+        if (result == null) result = caseAnd(plus);
+        if (result == null) result = caseOr(plus);
+        if (result == null) result = caseBoolExpr(plus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -250,6 +279,9 @@ public class EceSwitch<T> extends Switch<T>
         T result = caseMinus(minus);
         if (result == null) result = casePlusOrMinus(minus);
         if (result == null) result = caseComparison(minus);
+        if (result == null) result = caseAnd(minus);
+        if (result == null) result = caseOr(minus);
+        if (result == null) result = caseBoolExpr(minus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -434,6 +466,38 @@ public class EceSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>switch Expr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>switch Expr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseswitchExpr(switchExpr object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Mutation Expr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mutation Expr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMutationExpr(MutationExpr object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Float Expr</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -546,17 +610,17 @@ public class EceSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Exp Fluent</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Condition Rule</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Exp Fluent</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Condition Rule</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseExpFluent(ExpFluent object)
+  public T caseConditionRule(ConditionRule object)
   {
     return null;
   }

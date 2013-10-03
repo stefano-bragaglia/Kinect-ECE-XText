@@ -122,6 +122,24 @@ public interface EceFactory extends EFactory
   Comparison createComparison();
 
   /**
+   * Returns a new object of class '<em>switch Expr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>switch Expr</em>'.
+   * @generated
+   */
+  switchExpr createswitchExpr();
+
+  /**
+   * Returns a new object of class '<em>Mutation Expr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mutation Expr</em>'.
+   * @generated
+   */
+  MutationExpr createMutationExpr();
+
+  /**
    * Returns a new object of class '<em>Float Expr</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -185,13 +203,13 @@ public interface EceFactory extends EFactory
   InRule createInRule();
 
   /**
-   * Returns a new object of class '<em>Exp Fluent</em>'.
+   * Returns a new object of class '<em>Condition Rule</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exp Fluent</em>'.
+   * @return a new object of class '<em>Condition Rule</em>'.
    * @generated
    */
-  ExpFluent createExpFluent();
+  ConditionRule createConditionRule();
 
   /**
    * Returns a new object of class '<em>Plus</em>'.

@@ -12,6 +12,7 @@ package org.xtext.ecerule.ece;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.ecerule.ece.FloatExpr#getValueDirect <em>Value Direct</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.FloatExpr#getValueCalculated <em>Value Calculated</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.FloatExpr#getValueOfFluent <em>Value Of Fluent</em>}</li>
  * </ul>
  * </p>
@@ -31,12 +32,12 @@ public interface FloatExpr extends Equality
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value Direct</em>' attribute.
-   * @see #setValueDirect(float)
+   * @see #setValueDirect(int)
    * @see org.xtext.ecerule.ece.EcePackage#getFloatExpr_ValueDirect()
    * @model
    * @generated
    */
-  float getValueDirect();
+  int getValueDirect();
 
   /**
    * Sets the value of the '{@link org.xtext.ecerule.ece.FloatExpr#getValueDirect <em>Value Direct</em>}' attribute.
@@ -46,7 +47,33 @@ public interface FloatExpr extends Equality
    * @see #getValueDirect()
    * @generated
    */
-  void setValueDirect(float value);
+  void setValueDirect(int value);
+
+  /**
+   * Returns the value of the '<em><b>Value Calculated</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Value Calculated</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Value Calculated</em>' containment reference.
+   * @see #setValueCalculated(PlusOrMinus)
+   * @see org.xtext.ecerule.ece.EcePackage#getFloatExpr_ValueCalculated()
+   * @model containment="true"
+   * @generated
+   */
+  PlusOrMinus getValueCalculated();
+
+  /**
+   * Sets the value of the '{@link org.xtext.ecerule.ece.FloatExpr#getValueCalculated <em>Value Calculated</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value Calculated</em>' containment reference.
+   * @see #getValueCalculated()
+   * @generated
+   */
+  void setValueCalculated(PlusOrMinus value);
 
   /**
    * Returns the value of the '<em><b>Value Of Fluent</b></em>' containment reference.

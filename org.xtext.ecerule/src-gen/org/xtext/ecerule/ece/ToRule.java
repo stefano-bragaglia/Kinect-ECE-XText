@@ -31,12 +31,12 @@ public interface ToRule extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Expression</em>' containment reference.
-   * @see #setExpression(StringExpr)
+   * @see #setExpression(EObject)
    * @see org.xtext.ecerule.ece.EcePackage#getToRule_Expression()
    * @model containment="true"
    * @generated
    */
-  StringExpr getExpression();
+  EObject getExpression();
 
   /**
    * Sets the value of the '{@link org.xtext.ecerule.ece.ToRule#getExpression <em>Expression</em>}' containment reference.
@@ -46,6 +46,6 @@ public interface ToRule extends EObject
    * @see #getExpression()
    * @generated
    */
-  void setExpression(StringExpr value);
+  void setExpression(EObject value);
 
 } // ToRule

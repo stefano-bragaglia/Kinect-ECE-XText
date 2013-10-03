@@ -20,8 +20,8 @@ Event:
 Fluent:
 	fluentName=ID	
 	('to' valuePart = ToRule)
-	//('in' timePart = InRule)? 
-	//('if' condPart = ConditionRule)?
+	('in' timePart = InRule)? 
+	('if' condPart = ConditionRule)?
 ;
 
 
@@ -31,25 +31,20 @@ Fluent:
 //TO RULE ******************************************************************
 ToRule:
 	expression = StringExpr 
-//	|expression = BoolExpr 
-//	|(expression = switchExpr) //switch BoolExpr
-//	|(expression = FloatExpr) 
-//	|(expression = MutationExpr)//mutation FloatExpr
+	|=>expression = BoolExpr 
+	|(expression = switchExpr) //switch BoolExpr
+	|=>(expression = FloatExpr) 
+	|(expression = MutationExpr)//mutation FloatExpr
 ;
-
-
-
-
-
 
 
 StringExpr:
-	Str |
-	FluentWhoseValue
+	Str 
+	|FluentWhoseValue
 ;
 
 BoolExpr:
-	'true'|'false'| Or 
+	value='true'|value='false'| Or 
 ;
 
 Or:
@@ -58,11 +53,11 @@ Or:
 
 And:
 	Equality ({And.left=current} "AND" right=Equality)* 
-//	|Equality ({And.left=current} "AND" right=Comparison)* 
-//	|Comparison ({And.left=current} "AND" right=Comparison)* 
-//	|Comparison ({And.left=current} "AND" right=Equality)* 
-//	|Equality ({And.left=current} "AND" right=BoolExpr)* 
-//	|Comparison ({And.left=current} "AND" right=BoolExpr)*
+	|=>Equality ({And.left=current} "AND" right=Comparison)* 
+	|=>Comparison ({And.left=current} "AND" right=Comparison)* 
+	|=>Comparison ({And.left=current} "AND" right=Equality)* 
+//	|=>Equality ({And.left=current} "AND" right=BoolExpr)* 
+//	|=>Comparison ({And.left=current} "AND" right=BoolExpr)*
 ;
 
 
@@ -70,8 +65,8 @@ Equality:
 	FloatExpr (
 		{Equality.left=current} op=("=="|"!=")
 		right=FloatExpr
-	)* |
-	StringExpr (
+	) 
+	|=>StringExpr (
 		{Equality.left=current} op=("=="|"!=")
 		right=StringExpr
 	)* 
@@ -86,19 +81,19 @@ Comparison:
 ;
 
 
-//switchExpr:
-//	value="switch"
-//;
+switchExpr:
+	value="switch"
+;
 
-//MutationExpr:
-//	value=('+'|'-'|'*'|'/'|'^') FLOAT
-//;
+MutationExpr:
+	value=('+'|'-'|'*'|'/'|'^') FLOAT
+;
 
 
 FloatExpr:
-	valueDirect=FLOAT 
-//	|valueCalculated=PlusOrMinus 
-	|valueOfFluent=FluentWhoseValue
+	=>valueDirect=INT
+	|valueCalculated=PlusOrMinus 
+	|=>valueOfFluent=FluentWhoseValue
 ;
 
 terminal FLOAT returns ecore::EFloat: ('0'..'9')*'.'('0'..'9')+;
@@ -119,8 +114,8 @@ MulOrDiv:
 ;
 
 Primary:
-	valueDirect=FLOAT 
-	//|valueOfFluent=FluentWhoseValue
+	valueDirect=INT 
+	|valueOfFluent=FluentWhoseValue
 ;
 
 
@@ -142,23 +137,23 @@ InRule:
 
 
 //CONDITION RULE ***********************************************************
-//ConditionRule:
-//	condition = BoolExpr
-//;
-
-
-
-
-
-
-
-
-
-ExpFluent:
-	fluentName=ID	
-	('to' valuePart = ToRule)
-	('in' timePart = InRule)? 
+ConditionRule:
+	condition = BoolExpr
 ;
+
+
+
+
+
+
+
+
+
+//ExpFluent:
+//	fluentName=ID	
+//	('to' valuePart = ToRule)
+//	('in' timePart = InRule)? 
+//;
 
 
 

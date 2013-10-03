@@ -75,6 +75,8 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.AND: return createAnd();
       case EcePackage.EQUALITY: return createEquality();
       case EcePackage.COMPARISON: return createComparison();
+      case EcePackage.SWITCH_EXPR: return createswitchExpr();
+      case EcePackage.MUTATION_EXPR: return createMutationExpr();
       case EcePackage.FLOAT_EXPR: return createFloatExpr();
       case EcePackage.PLUS_OR_MINUS: return createPlusOrMinus();
       case EcePackage.MUL_OR_DIV: return createMulOrDiv();
@@ -82,7 +84,7 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.FLUENT_WHOSE_VALUE: return createFluentWhoseValue();
       case EcePackage.STR: return createStr();
       case EcePackage.IN_RULE: return createInRule();
-      case EcePackage.EXP_FLUENT: return createExpFluent();
+      case EcePackage.CONDITION_RULE: return createConditionRule();
       case EcePackage.PLUS: return createPlus();
       case EcePackage.MINUS: return createMinus();
       default:
@@ -216,6 +218,28 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public switchExpr createswitchExpr()
+  {
+    switchExprImpl switchExpr = new switchExprImpl();
+    return switchExpr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MutationExpr createMutationExpr()
+  {
+    MutationExprImpl mutationExpr = new MutationExprImpl();
+    return mutationExpr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public FloatExpr createFloatExpr()
   {
     FloatExprImpl floatExpr = new FloatExprImpl();
@@ -293,10 +317,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ExpFluent createExpFluent()
+  public ConditionRule createConditionRule()
   {
-    ExpFluentImpl expFluent = new ExpFluentImpl();
-    return expFluent;
+    ConditionRuleImpl conditionRule = new ConditionRuleImpl();
+    return conditionRule;
   }
 
   /**

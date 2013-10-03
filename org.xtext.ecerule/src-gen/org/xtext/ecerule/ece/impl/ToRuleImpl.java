@@ -6,13 +6,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.ecerule.ece.EcePackage;
-import org.xtext.ecerule.ece.StringExpr;
 import org.xtext.ecerule.ece.ToRule;
 
 /**
@@ -38,7 +38,7 @@ public class ToRuleImpl extends MinimalEObjectImpl.Container implements ToRule
    * @generated
    * @ordered
    */
-  protected StringExpr expression;
+  protected EObject expression;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,7 +66,7 @@ public class ToRuleImpl extends MinimalEObjectImpl.Container implements ToRule
    * <!-- end-user-doc -->
    * @generated
    */
-  public StringExpr getExpression()
+  public EObject getExpression()
   {
     return expression;
   }
@@ -76,9 +76,9 @@ public class ToRuleImpl extends MinimalEObjectImpl.Container implements ToRule
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetExpression(StringExpr newExpression, NotificationChain msgs)
+  public NotificationChain basicSetExpression(EObject newExpression, NotificationChain msgs)
   {
-    StringExpr oldExpression = expression;
+    EObject oldExpression = expression;
     expression = newExpression;
     if (eNotificationRequired())
     {
@@ -93,7 +93,7 @@ public class ToRuleImpl extends MinimalEObjectImpl.Container implements ToRule
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExpression(StringExpr newExpression)
+  public void setExpression(EObject newExpression)
   {
     if (newExpression != expression)
     {
@@ -152,7 +152,7 @@ public class ToRuleImpl extends MinimalEObjectImpl.Container implements ToRule
     switch (featureID)
     {
       case EcePackage.TO_RULE__EXPRESSION:
-        setExpression((StringExpr)newValue);
+        setExpression((EObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,7 +169,7 @@ public class ToRuleImpl extends MinimalEObjectImpl.Container implements ToRule
     switch (featureID)
     {
       case EcePackage.TO_RULE__EXPRESSION:
-        setExpression((StringExpr)null);
+        setExpression((EObject)null);
         return;
     }
     super.eUnset(featureID);

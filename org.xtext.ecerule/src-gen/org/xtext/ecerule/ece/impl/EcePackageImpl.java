@@ -12,18 +12,19 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.xtext.ecerule.ece.And;
 import org.xtext.ecerule.ece.BoolExpr;
 import org.xtext.ecerule.ece.Comparison;
+import org.xtext.ecerule.ece.ConditionRule;
 import org.xtext.ecerule.ece.DroolsModel;
 import org.xtext.ecerule.ece.EceFactory;
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.Equality;
 import org.xtext.ecerule.ece.Event;
-import org.xtext.ecerule.ece.ExpFluent;
 import org.xtext.ecerule.ece.FloatExpr;
 import org.xtext.ecerule.ece.Fluent;
 import org.xtext.ecerule.ece.FluentWhoseValue;
 import org.xtext.ecerule.ece.InRule;
 import org.xtext.ecerule.ece.Minus;
 import org.xtext.ecerule.ece.MulOrDiv;
+import org.xtext.ecerule.ece.MutationExpr;
 import org.xtext.ecerule.ece.Or;
 import org.xtext.ecerule.ece.Plus;
 import org.xtext.ecerule.ece.PlusOrMinus;
@@ -32,6 +33,7 @@ import org.xtext.ecerule.ece.Statement;
 import org.xtext.ecerule.ece.Str;
 import org.xtext.ecerule.ece.StringExpr;
 import org.xtext.ecerule.ece.ToRule;
+import org.xtext.ecerule.ece.switchExpr;
 
 /**
  * <!-- begin-user-doc -->
@@ -123,6 +125,20 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass switchExprEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mutationExprEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass floatExprEClass = null;
 
   /**
@@ -172,7 +188,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass expFluentEClass = null;
+  private EClass conditionRuleEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -356,6 +372,26 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getFluent_TimePart()
+  {
+    return (EReference)fluentEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFluent_CondPart()
+  {
+    return (EReference)fluentEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getToRule()
   {
     return toRuleEClass;
@@ -389,6 +425,16 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
   public EClass getBoolExpr()
   {
     return boolExprEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBoolExpr_Value()
+  {
+    return (EAttribute)boolExprEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -436,9 +482,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getEquality()
+  public EAttribute getAnd_Op()
   {
-    return equalityEClass;
+    return (EAttribute)andEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -446,9 +492,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEquality_Op()
+  public EClass getEquality()
   {
-    return (EAttribute)equalityEClass.getEStructuralFeatures().get(0);
+    return equalityEClass;
   }
 
   /**
@@ -466,9 +512,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getComparison_Left()
+  public EClass getswitchExpr()
   {
-    return (EReference)comparisonEClass.getEStructuralFeatures().get(0);
+    return switchExprEClass;
   }
 
   /**
@@ -476,9 +522,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getComparison_Op()
+  public EAttribute getswitchExpr_Value()
   {
-    return (EAttribute)comparisonEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)switchExprEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -486,9 +532,19 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getComparison_Right()
+  public EClass getMutationExpr()
   {
-    return (EReference)comparisonEClass.getEStructuralFeatures().get(2);
+    return mutationExprEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMutationExpr_Value()
+  {
+    return (EAttribute)mutationExprEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -516,9 +572,19 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFloatExpr_ValueOfFluent()
+  public EReference getFloatExpr_ValueCalculated()
   {
     return (EReference)floatExprEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFloatExpr_ValueOfFluent()
+  {
+    return (EReference)floatExprEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -566,6 +632,16 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getPrimary_ValueOfFluent()
+  {
+    return (EReference)primaryEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getFluentWhoseValue()
   {
     return fluentWhoseValueEClass;
@@ -589,16 +665,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
   public EClass getStr()
   {
     return strEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getStr_Value()
-  {
-    return (EAttribute)strEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -636,9 +702,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getExpFluent()
+  public EClass getConditionRule()
   {
-    return expFluentEClass;
+    return conditionRuleEClass;
   }
 
   /**
@@ -646,29 +712,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpFluent_FluentName()
+  public EReference getConditionRule_Condition()
   {
-    return (EAttribute)expFluentEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExpFluent_ValuePart()
-  {
-    return (EReference)expFluentEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExpFluent_TimePart()
-  {
-    return (EReference)expFluentEClass.getEStructuralFeatures().get(2);
+    return (EReference)conditionRuleEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -734,6 +780,8 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     fluentEClass = createEClass(FLUENT);
     createEAttribute(fluentEClass, FLUENT__FLUENT_NAME);
     createEReference(fluentEClass, FLUENT__VALUE_PART);
+    createEReference(fluentEClass, FLUENT__TIME_PART);
+    createEReference(fluentEClass, FLUENT__COND_PART);
 
     toRuleEClass = createEClass(TO_RULE);
     createEReference(toRuleEClass, TO_RULE__EXPRESSION);
@@ -741,23 +789,28 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     stringExprEClass = createEClass(STRING_EXPR);
 
     boolExprEClass = createEClass(BOOL_EXPR);
+    createEAttribute(boolExprEClass, BOOL_EXPR__VALUE);
 
     orEClass = createEClass(OR);
     createEReference(orEClass, OR__LEFT);
     createEReference(orEClass, OR__RIGHT);
 
     andEClass = createEClass(AND);
+    createEAttribute(andEClass, AND__OP);
 
     equalityEClass = createEClass(EQUALITY);
-    createEAttribute(equalityEClass, EQUALITY__OP);
 
     comparisonEClass = createEClass(COMPARISON);
-    createEReference(comparisonEClass, COMPARISON__LEFT);
-    createEAttribute(comparisonEClass, COMPARISON__OP);
-    createEReference(comparisonEClass, COMPARISON__RIGHT);
+
+    switchExprEClass = createEClass(SWITCH_EXPR);
+    createEAttribute(switchExprEClass, SWITCH_EXPR__VALUE);
+
+    mutationExprEClass = createEClass(MUTATION_EXPR);
+    createEAttribute(mutationExprEClass, MUTATION_EXPR__VALUE);
 
     floatExprEClass = createEClass(FLOAT_EXPR);
     createEAttribute(floatExprEClass, FLOAT_EXPR__VALUE_DIRECT);
+    createEReference(floatExprEClass, FLOAT_EXPR__VALUE_CALCULATED);
     createEReference(floatExprEClass, FLOAT_EXPR__VALUE_OF_FLUENT);
 
     plusOrMinusEClass = createEClass(PLUS_OR_MINUS);
@@ -766,21 +819,19 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
 
     primaryEClass = createEClass(PRIMARY);
     createEAttribute(primaryEClass, PRIMARY__VALUE_DIRECT);
+    createEReference(primaryEClass, PRIMARY__VALUE_OF_FLUENT);
 
     fluentWhoseValueEClass = createEClass(FLUENT_WHOSE_VALUE);
     createEAttribute(fluentWhoseValueEClass, FLUENT_WHOSE_VALUE__FLUENT_WHOSE_VALUE_NAME);
 
     strEClass = createEClass(STR);
-    createEAttribute(strEClass, STR__VALUE);
 
     inRuleEClass = createEClass(IN_RULE);
     createEAttribute(inRuleEClass, IN_RULE__TIME);
     createEAttribute(inRuleEClass, IN_RULE__CURRENT_TIME);
 
-    expFluentEClass = createEClass(EXP_FLUENT);
-    createEAttribute(expFluentEClass, EXP_FLUENT__FLUENT_NAME);
-    createEReference(expFluentEClass, EXP_FLUENT__VALUE_PART);
-    createEReference(expFluentEClass, EXP_FLUENT__TIME_PART);
+    conditionRuleEClass = createEClass(CONDITION_RULE);
+    createEReference(conditionRuleEClass, CONDITION_RULE__CONDITION);
 
     plusEClass = createEClass(PLUS);
 
@@ -820,6 +871,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     orEClass.getESuperTypes().add(this.getBoolExpr());
     andEClass.getESuperTypes().add(this.getOr());
     equalityEClass.getESuperTypes().add(this.getAnd());
+    comparisonEClass.getESuperTypes().add(this.getAnd());
     floatExprEClass.getESuperTypes().add(this.getEquality());
     plusOrMinusEClass.getESuperTypes().add(this.getComparison());
     mulOrDivEClass.getESuperTypes().add(this.getPlusOrMinus());
@@ -843,30 +895,37 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     initEClass(fluentEClass, Fluent.class, "Fluent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFluent_FluentName(), ecorePackage.getEString(), "fluentName", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFluent_ValuePart(), this.getToRule(), null, "valuePart", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFluent_TimePart(), this.getInRule(), null, "timePart", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFluent_CondPart(), this.getConditionRule(), null, "condPart", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(toRuleEClass, ToRule.class, "ToRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getToRule_Expression(), this.getStringExpr(), null, "expression", null, 0, 1, ToRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getToRule_Expression(), ecorePackage.getEObject(), null, "expression", null, 0, 1, ToRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stringExprEClass, StringExpr.class, "StringExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(boolExprEClass, BoolExpr.class, "BoolExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBoolExpr_Value(), ecorePackage.getEString(), "value", null, 0, 1, BoolExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(orEClass, Or.class, "Or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getOr_Left(), this.getAnd(), null, "left", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOr_Right(), this.getAnd(), null, "right", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(andEClass, And.class, "And", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAnd_Op(), ecorePackage.getEString(), "op", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(equalityEClass, Equality.class, "Equality", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEquality_Op(), ecorePackage.getEString(), "op", null, 0, 1, Equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(comparisonEClass, Comparison.class, "Comparison", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getComparison_Left(), this.getPlusOrMinus(), null, "left", null, 0, 1, Comparison.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getComparison_Op(), ecorePackage.getEString(), "op", null, 0, 1, Comparison.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getComparison_Right(), this.getPlusOrMinus(), null, "right", null, 0, 1, Comparison.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(switchExprEClass, switchExpr.class, "switchExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getswitchExpr_Value(), ecorePackage.getEString(), "value", null, 0, 1, switchExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(mutationExprEClass, MutationExpr.class, "MutationExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMutationExpr_Value(), ecorePackage.getEString(), "value", null, 0, 1, MutationExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(floatExprEClass, FloatExpr.class, "FloatExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFloatExpr_ValueDirect(), ecorePackage.getEFloat(), "valueDirect", null, 0, 1, FloatExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFloatExpr_ValueDirect(), ecorePackage.getEInt(), "valueDirect", null, 0, 1, FloatExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFloatExpr_ValueCalculated(), this.getPlusOrMinus(), null, "valueCalculated", null, 0, 1, FloatExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFloatExpr_ValueOfFluent(), this.getFluentWhoseValue(), null, "valueOfFluent", null, 0, 1, FloatExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(plusOrMinusEClass, PlusOrMinus.class, "PlusOrMinus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -874,22 +933,20 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     initEClass(mulOrDivEClass, MulOrDiv.class, "MulOrDiv", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(primaryEClass, Primary.class, "Primary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPrimary_ValueDirect(), ecorePackage.getEFloat(), "valueDirect", null, 0, 1, Primary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrimary_ValueDirect(), ecorePackage.getEInt(), "valueDirect", null, 0, 1, Primary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPrimary_ValueOfFluent(), this.getFluentWhoseValue(), null, "valueOfFluent", null, 0, 1, Primary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fluentWhoseValueEClass, FluentWhoseValue.class, "FluentWhoseValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFluentWhoseValue_FluentWhoseValueName(), ecorePackage.getEString(), "fluentWhoseValueName", null, 0, 1, FluentWhoseValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(strEClass, Str.class, "Str", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStr_Value(), ecorePackage.getEString(), "value", null, 0, 1, Str.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(inRuleEClass, InRule.class, "InRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getInRule_Time(), ecorePackage.getEInt(), "time", null, 0, 1, InRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getInRule_CurrentTime(), ecorePackage.getEString(), "currentTime", null, 0, 1, InRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(expFluentEClass, ExpFluent.class, "ExpFluent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getExpFluent_FluentName(), ecorePackage.getEString(), "fluentName", null, 0, 1, ExpFluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpFluent_ValuePart(), this.getToRule(), null, "valuePart", null, 0, 1, ExpFluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpFluent_TimePart(), this.getInRule(), null, "timePart", null, 0, 1, ExpFluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(conditionRuleEClass, ConditionRule.class, "ConditionRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getConditionRule_Condition(), this.getBoolExpr(), null, "condition", null, 0, 1, ConditionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(plusEClass, Plus.class, "Plus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

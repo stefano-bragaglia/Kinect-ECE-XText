@@ -20,48 +20,52 @@
     <genClasses ecoreClass="Ece.ecore#//Fluent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Fluent/fluentName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/valuePart"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/timePart"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/condPart"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//ToRule">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ToRule/expression"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//StringExpr"/>
-    <genClasses ecoreClass="Ece.ecore#//BoolExpr"/>
+    <genClasses ecoreClass="Ece.ecore#//BoolExpr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//BoolExpr/value"/>
+    </genClasses>
     <genClasses ecoreClass="Ece.ecore#//Or">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Or/left"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Or/right"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//And"/>
-    <genClasses ecoreClass="Ece.ecore#//Equality">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Equality/op"/>
+    <genClasses ecoreClass="Ece.ecore#//And">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//And/op"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//Comparison">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Comparison/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Comparison/op"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Comparison/right"/>
+    <genClasses ecoreClass="Ece.ecore#//Equality"/>
+    <genClasses ecoreClass="Ece.ecore#//Comparison"/>
+    <genClasses ecoreClass="Ece.ecore#//switchExpr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//switchExpr/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//MutationExpr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//MutationExpr/value"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//FloatExpr">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//FloatExpr/valueDirect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//FloatExpr/valueCalculated"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//FloatExpr/valueOfFluent"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//PlusOrMinus"/>
     <genClasses ecoreClass="Ece.ecore#//MulOrDiv"/>
     <genClasses ecoreClass="Ece.ecore#//Primary">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Primary/valueDirect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Primary/valueOfFluent"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//FluentWhoseValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//FluentWhoseValue/fluentWhoseValueName"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//Str">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Str/value"/>
-    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Str"/>
     <genClasses ecoreClass="Ece.ecore#//InRule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//InRule/time"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//InRule/currentTime"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//ExpFluent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//ExpFluent/fluentName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpFluent/valuePart"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpFluent/timePart"/>
+    <genClasses ecoreClass="Ece.ecore#//ConditionRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ConditionRule/condition"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//Plus"/>
     <genClasses ecoreClass="Ece.ecore#//Minus"/>
