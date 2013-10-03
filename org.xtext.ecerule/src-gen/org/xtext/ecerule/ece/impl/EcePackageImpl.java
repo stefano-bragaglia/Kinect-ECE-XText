@@ -18,6 +18,7 @@ import org.xtext.ecerule.ece.EceFactory;
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.Equality;
 import org.xtext.ecerule.ece.Event;
+import org.xtext.ecerule.ece.ExpFluent;
 import org.xtext.ecerule.ece.FloatExpr;
 import org.xtext.ecerule.ece.Fluent;
 import org.xtext.ecerule.ece.FluentWhoseValue;
@@ -195,6 +196,13 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass expFluentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass plusEClass = null;
 
   /**
@@ -315,6 +323,16 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
   public EReference getStatement_Fluent()
   {
     return (EReference)statementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStatement_Exp()
+  {
+    return (EReference)statementEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -722,6 +740,46 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getExpFluent()
+  {
+    return expFluentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExpFluent_FluentName()
+  {
+    return (EAttribute)expFluentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExpFluent_ValuePart()
+  {
+    return (EReference)expFluentEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExpFluent_TimePart()
+  {
+    return (EReference)expFluentEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getPlus()
   {
     return plusEClass;
@@ -773,6 +831,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     statementEClass = createEClass(STATEMENT);
     createEReference(statementEClass, STATEMENT__EVENT);
     createEReference(statementEClass, STATEMENT__FLUENT);
+    createEReference(statementEClass, STATEMENT__EXP);
 
     eventEClass = createEClass(EVENT);
     createEAttribute(eventEClass, EVENT__EVENT_NAME);
@@ -833,6 +892,11 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     conditionRuleEClass = createEClass(CONDITION_RULE);
     createEReference(conditionRuleEClass, CONDITION_RULE__CONDITION);
 
+    expFluentEClass = createEClass(EXP_FLUENT);
+    createEAttribute(expFluentEClass, EXP_FLUENT__FLUENT_NAME);
+    createEReference(expFluentEClass, EXP_FLUENT__VALUE_PART);
+    createEReference(expFluentEClass, EXP_FLUENT__TIME_PART);
+
     plusEClass = createEClass(PLUS);
 
     minusEClass = createEClass(MINUS);
@@ -888,6 +952,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getStatement_Event(), this.getEvent(), null, "event", null, 0, 1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getStatement_Fluent(), this.getFluent(), null, "fluent", null, 0, -1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getStatement_Exp(), this.getExpFluent(), null, "exp", null, 0, -1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvent_EventName(), ecorePackage.getEString(), "eventName", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -947,6 +1012,11 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
 
     initEClass(conditionRuleEClass, ConditionRule.class, "ConditionRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getConditionRule_Condition(), this.getBoolExpr(), null, "condition", null, 0, 1, ConditionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(expFluentEClass, ExpFluent.class, "ExpFluent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getExpFluent_FluentName(), ecorePackage.getEString(), "fluentName", null, 0, 1, ExpFluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpFluent_ValuePart(), this.getToRule(), null, "valuePart", null, 0, 1, ExpFluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpFluent_TimePart(), this.getInRule(), null, "timePart", null, 0, 1, ExpFluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(plusEClass, Plus.class, "Plus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

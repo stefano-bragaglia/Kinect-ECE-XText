@@ -53,6 +53,8 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInRuleAccess().getAlternatives(), "rule__InRule__Alternatives");
 					put(grammarAccess.getStatementAccess().getGroup(), "rule__Statement__Group__0");
 					put(grammarAccess.getStatementAccess().getGroup_4(), "rule__Statement__Group_4__0");
+					put(grammarAccess.getStatementAccess().getGroup_5(), "rule__Statement__Group_5__0");
+					put(grammarAccess.getStatementAccess().getGroup_5_2(), "rule__Statement__Group_5_2__0");
 					put(grammarAccess.getFluentAccess().getGroup(), "rule__Fluent__Group__0");
 					put(grammarAccess.getFluentAccess().getGroup_1(), "rule__Fluent__Group_1__0");
 					put(grammarAccess.getFluentAccess().getGroup_2(), "rule__Fluent__Group_2__0");
@@ -81,10 +83,15 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPlusOrMinusAccess().getGroup_1_0_1(), "rule__PlusOrMinus__Group_1_0_1__0");
 					put(grammarAccess.getMulOrDivAccess().getGroup(), "rule__MulOrDiv__Group__0");
 					put(grammarAccess.getMulOrDivAccess().getGroup_1(), "rule__MulOrDiv__Group_1__0");
+					put(grammarAccess.getExpFluentAccess().getGroup(), "rule__ExpFluent__Group__0");
+					put(grammarAccess.getExpFluentAccess().getGroup_1(), "rule__ExpFluent__Group_1__0");
+					put(grammarAccess.getExpFluentAccess().getGroup_2(), "rule__ExpFluent__Group_2__0");
 					put(grammarAccess.getDroolsModelAccess().getStatementsAssignment(), "rule__DroolsModel__StatementsAssignment");
 					put(grammarAccess.getStatementAccess().getEventAssignment_1(), "rule__Statement__EventAssignment_1");
 					put(grammarAccess.getStatementAccess().getFluentAssignment_3(), "rule__Statement__FluentAssignment_3");
 					put(grammarAccess.getStatementAccess().getFluentAssignment_4_1(), "rule__Statement__FluentAssignment_4_1");
+					put(grammarAccess.getStatementAccess().getExpAssignment_5_1(), "rule__Statement__ExpAssignment_5_1");
+					put(grammarAccess.getStatementAccess().getExpAssignment_5_2_1(), "rule__Statement__ExpAssignment_5_2_1");
 					put(grammarAccess.getEventAccess().getEventNameAssignment(), "rule__Event__EventNameAssignment");
 					put(grammarAccess.getFluentAccess().getFluentNameAssignment_0(), "rule__Fluent__FluentNameAssignment_0");
 					put(grammarAccess.getFluentAccess().getValuePartAssignment_1_1(), "rule__Fluent__ValuePartAssignment_1_1");
@@ -123,6 +130,9 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInRuleAccess().getTimeAssignment_0(), "rule__InRule__TimeAssignment_0");
 					put(grammarAccess.getInRuleAccess().getCurrentTimeAssignment_1(), "rule__InRule__CurrentTimeAssignment_1");
 					put(grammarAccess.getConditionRuleAccess().getConditionAssignment(), "rule__ConditionRule__ConditionAssignment");
+					put(grammarAccess.getExpFluentAccess().getFluentNameAssignment_0(), "rule__ExpFluent__FluentNameAssignment_0");
+					put(grammarAccess.getExpFluentAccess().getValuePartAssignment_1_1(), "rule__ExpFluent__ValuePartAssignment_1_1");
+					put(grammarAccess.getExpFluentAccess().getTimePartAssignment_2_1(), "rule__ExpFluent__TimePartAssignment_2_1");
 				}
 			};
 		}

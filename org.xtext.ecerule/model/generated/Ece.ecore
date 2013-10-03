@@ -10,6 +10,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fluent" upperBound="-1"
         eType="#//Fluent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" upperBound="-1" eType="#//ExpFluent"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Event">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -70,6 +72,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConditionRule">
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//BoolExpr"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpFluent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fluentName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valuePart" eType="#//ToRule"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timePart" eType="#//InRule"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Plus" eSuperTypes="#//PlusOrMinus"/>

@@ -212,6 +212,15 @@ public interface EceFactory extends EFactory
   ConditionRule createConditionRule();
 
   /**
+   * Returns a new object of class '<em>Exp Fluent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Exp Fluent</em>'.
+   * @generated
+   */
+  ExpFluent createExpFluent();
+
+  /**
    * Returns a new object of class '<em>Plus</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

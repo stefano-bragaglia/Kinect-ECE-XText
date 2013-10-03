@@ -261,6 +261,13 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EcePackage.EXP_FLUENT:
+      {
+        ExpFluent expFluent = (ExpFluent)theEObject;
+        T result = caseExpFluent(expFluent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EcePackage.PLUS:
       {
         Plus plus = (Plus)theEObject;
@@ -621,6 +628,22 @@ public class EceSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseConditionRule(ConditionRule object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exp Fluent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exp Fluent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpFluent(ExpFluent object)
   {
     return null;
   }

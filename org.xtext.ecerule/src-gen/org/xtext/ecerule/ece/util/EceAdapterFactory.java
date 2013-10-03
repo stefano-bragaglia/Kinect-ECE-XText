@@ -180,6 +180,11 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createConditionRuleAdapter();
       }
       @Override
+      public Adapter caseExpFluent(ExpFluent object)
+      {
+        return createExpFluentAdapter();
+      }
+      @Override
       public Adapter casePlus(Plus object)
       {
         return createPlusAdapter();
@@ -522,6 +527,21 @@ public class EceAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createConditionRuleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ExpFluent <em>Exp Fluent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.ExpFluent
+   * @generated
+   */
+  public Adapter createExpFluentAdapter()
   {
     return null;
   }

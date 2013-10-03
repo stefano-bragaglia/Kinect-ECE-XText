@@ -21,6 +21,7 @@ import org.xtext.ecerule.ece.DroolsModel;
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.Equality;
 import org.xtext.ecerule.ece.Event;
+import org.xtext.ecerule.ece.ExpFluent;
 import org.xtext.ecerule.ece.FloatExpr;
 import org.xtext.ecerule.ece.Fluent;
 import org.xtext.ecerule.ece.FluentWhoseValue;
@@ -120,6 +121,12 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case EcePackage.EVENT:
 				if(context == grammarAccess.getEventRule()) {
 					sequence_Event(context, (Event) semanticObject); 
+					return; 
+				}
+				else break;
+			case EcePackage.EXP_FLUENT:
+				if(context == grammarAccess.getExpFluentRule()) {
+					sequence_ExpFluent(context, (ExpFluent) semanticObject); 
 					return; 
 				}
 				else break;
@@ -406,6 +413,15 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (fluentName=ID valuePart=ToRule timePart=InRule?)
+	 */
+	protected void sequence_ExpFluent(EObject context, ExpFluent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (valueDirect=INT | valueCalculated=PlusOrMinus | valueOfFluent=FluentWhoseValue)
 	 */
 	protected void sequence_FloatExpr(EObject context, FloatExpr semanticObject) {
@@ -496,7 +512,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (event=Event fluent+=Fluent fluent+=Fluent*)
+	 *     (event=Event fluent+=Fluent fluent+=Fluent* (exp+=ExpFluent exp+=ExpFluent*)?)
 	 */
 	protected void sequence_Statement(EObject context, Statement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

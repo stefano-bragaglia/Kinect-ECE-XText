@@ -10,7 +10,7 @@ DroolsModel:
 
 
 Statement:
-	'on' event=Event 'set' fluent+=Fluent (',' fluent+=Fluent)*  /*('expect' exp+=ExpFluent (',' exp+=ExpFluent)*)? */';' 	
+	'on' event=Event 'set' fluent+=Fluent (',' fluent+=Fluent)*  ('expect' exp+=ExpFluent (',' exp+=ExpFluent)*)? ';' 	
 ;
 
 Event:
@@ -147,13 +147,11 @@ ConditionRule:
 
 
 
-
-
-//ExpFluent:
-//	fluentName=ID	
-//	('to' valuePart = ToRule)
-//	('in' timePart = InRule)? 
-//;
+ExpFluent:
+	fluentName=ID	
+	('to' valuePart = ToRule)
+	('in' timePart = InRule)? 
+;
 
 
 

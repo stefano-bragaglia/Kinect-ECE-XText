@@ -13,6 +13,7 @@
     <genClasses ecoreClass="Ece.ecore#//Statement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Statement/event"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Statement/fluent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Statement/exp"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//Event">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Event/eventName"/>
@@ -66,6 +67,11 @@
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//ConditionRule">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ConditionRule/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//ExpFluent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//ExpFluent/fluentName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpFluent/valuePart"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpFluent/timePart"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//Plus"/>
     <genClasses ecoreClass="Ece.ecore#//Minus"/>

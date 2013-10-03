@@ -47,14 +47,21 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cFluentAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cFluentFluentParserRuleCall_4_1_0 = (RuleCall)cFluentAssignment_4_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cExpectKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cExpAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cExpExpFluentParserRuleCall_5_1_0 = (RuleCall)cExpAssignment_5_1.eContents().get(0);
+		private final Group cGroup_5_2 = (Group)cGroup_5.eContents().get(2);
+		private final Keyword cCommaKeyword_5_2_0 = (Keyword)cGroup_5_2.eContents().get(0);
+		private final Assignment cExpAssignment_5_2_1 = (Assignment)cGroup_5_2.eContents().get(1);
+		private final RuleCall cExpExpFluentParserRuleCall_5_2_1_0 = (RuleCall)cExpAssignment_5_2_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Statement:
-		//	"on" event=Event "set" fluent+=Fluent ("," fluent+=Fluent)* / *('expect' exp+=ExpFluent (',' exp+=ExpFluent)*)? * /
-		//	";";
+		//	"on" event=Event "set" fluent+=Fluent ("," fluent+=Fluent)* ("expect" exp+=ExpFluent ("," exp+=ExpFluent)*)? ";";
 		public ParserRule getRule() { return rule; }
 
-		//"on" event=Event "set" fluent+=Fluent ("," fluent+=Fluent)* / *('expect' exp+=ExpFluent (',' exp+=ExpFluent)*)? * / ";"
+		//"on" event=Event "set" fluent+=Fluent ("," fluent+=Fluent)* ("expect" exp+=ExpFluent ("," exp+=ExpFluent)*)? ";"
 		public Group getGroup() { return cGroup; }
 
 		//"on"
@@ -87,8 +94,32 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		//Fluent
 		public RuleCall getFluentFluentParserRuleCall_4_1_0() { return cFluentFluentParserRuleCall_4_1_0; }
 
-		/// *('expect' exp+=ExpFluent (',' exp+=ExpFluent)*)? * / ";"
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		//("expect" exp+=ExpFluent ("," exp+=ExpFluent)*)?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"expect"
+		public Keyword getExpectKeyword_5_0() { return cExpectKeyword_5_0; }
+
+		//exp+=ExpFluent
+		public Assignment getExpAssignment_5_1() { return cExpAssignment_5_1; }
+
+		//ExpFluent
+		public RuleCall getExpExpFluentParserRuleCall_5_1_0() { return cExpExpFluentParserRuleCall_5_1_0; }
+
+		//("," exp+=ExpFluent)*
+		public Group getGroup_5_2() { return cGroup_5_2; }
+
+		//","
+		public Keyword getCommaKeyword_5_2_0() { return cCommaKeyword_5_2_0; }
+
+		//exp+=ExpFluent
+		public Assignment getExpAssignment_5_2_1() { return cExpAssignment_5_2_1; }
+
+		//ExpFluent
+		public RuleCall getExpExpFluentParserRuleCall_5_2_1_0() { return cExpExpFluentParserRuleCall_5_2_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 
 	public class EventElements extends AbstractParserRuleElementFinder {
@@ -906,11 +937,6 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConditionBoolExprParserRuleCall_0 = (RuleCall)cConditionAssignment.eContents().get(0);
 		
 		////CONDITION RULE ***********************************************************
-		////ExpFluent:
-		////	fluentName=ID	
-		////	('to' valuePart = ToRule)
-		////	('in' timePart = InRule)? 
-		////;
 		//ConditionRule:
 		//	condition=BoolExpr;
 		public ParserRule getRule() { return rule; }
@@ -920,6 +946,58 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 
 		//BoolExpr
 		public RuleCall getConditionBoolExprParserRuleCall_0() { return cConditionBoolExprParserRuleCall_0; }
+	}
+
+	public class ExpFluentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExpFluent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cFluentNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cFluentNameIDTerminalRuleCall_0_0 = (RuleCall)cFluentNameAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cToKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cValuePartAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cValuePartToRuleParserRuleCall_1_1_0 = (RuleCall)cValuePartAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cInKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cTimePartAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cTimePartInRuleParserRuleCall_2_1_0 = (RuleCall)cTimePartAssignment_2_1.eContents().get(0);
+		
+		//ExpFluent:
+		//	fluentName=ID ("to" valuePart=ToRule) ("in" timePart=InRule)?;
+		public ParserRule getRule() { return rule; }
+
+		//fluentName=ID ("to" valuePart=ToRule) ("in" timePart=InRule)?
+		public Group getGroup() { return cGroup; }
+
+		//fluentName=ID
+		public Assignment getFluentNameAssignment_0() { return cFluentNameAssignment_0; }
+
+		//ID
+		public RuleCall getFluentNameIDTerminalRuleCall_0_0() { return cFluentNameIDTerminalRuleCall_0_0; }
+
+		//"to" valuePart=ToRule
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"to"
+		public Keyword getToKeyword_1_0() { return cToKeyword_1_0; }
+
+		//valuePart=ToRule
+		public Assignment getValuePartAssignment_1_1() { return cValuePartAssignment_1_1; }
+
+		//ToRule
+		public RuleCall getValuePartToRuleParserRuleCall_1_1_0() { return cValuePartToRuleParserRuleCall_1_1_0; }
+
+		//("in" timePart=InRule)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"in"
+		public Keyword getInKeyword_2_0() { return cInKeyword_2_0; }
+
+		//timePart=InRule
+		public Assignment getTimePartAssignment_2_1() { return cTimePartAssignment_2_1; }
+
+		//InRule
+		public RuleCall getTimePartInRuleParserRuleCall_2_1_0() { return cTimePartInRuleParserRuleCall_2_1_0; }
 	}
 	
 	
@@ -945,6 +1023,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	private StrElements pStr;
 	private InRuleElements pInRule;
 	private ConditionRuleElements pConditionRule;
+	private ExpFluentElements pExpFluent;
 	
 	private final Grammar grammar;
 
@@ -995,8 +1074,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Statement:
-	//	"on" event=Event "set" fluent+=Fluent ("," fluent+=Fluent)* / *('expect' exp+=ExpFluent (',' exp+=ExpFluent)*)? * /
-	//	";";
+	//	"on" event=Event "set" fluent+=Fluent ("," fluent+=Fluent)* ("expect" exp+=ExpFluent ("," exp+=ExpFluent)*)? ";";
 	public StatementElements getStatementAccess() {
 		return (pStatement != null) ? pStatement : (pStatement = new StatementElements());
 	}
@@ -1201,11 +1279,6 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////CONDITION RULE ***********************************************************
-	////ExpFluent:
-	////	fluentName=ID	
-	////	('to' valuePart = ToRule)
-	////	('in' timePart = InRule)? 
-	////;
 	//ConditionRule:
 	//	condition=BoolExpr;
 	public ConditionRuleElements getConditionRuleAccess() {
@@ -1214,6 +1287,16 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getConditionRuleRule() {
 		return getConditionRuleAccess().getRule();
+	}
+
+	//ExpFluent:
+	//	fluentName=ID ("to" valuePart=ToRule) ("in" timePart=InRule)?;
+	public ExpFluentElements getExpFluentAccess() {
+		return (pExpFluent != null) ? pExpFluent : (pExpFluent = new ExpFluentElements());
+	}
+	
+	public ParserRule getExpFluentRule() {
+		return getExpFluentAccess().getRule();
 	}
 
 	//terminal ID:

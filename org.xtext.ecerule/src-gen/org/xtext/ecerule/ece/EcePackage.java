@@ -113,13 +113,22 @@ public interface EcePackage extends EPackage
   int STATEMENT__FLUENT = 1;
 
   /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT__EXP = 2;
+
+  /**
    * The number of structural features of the '<em>Statement</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATEMENT_FEATURE_COUNT = 2;
+  int STATEMENT_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.EventImpl <em>Event</em>}' class.
@@ -1032,6 +1041,52 @@ public interface EcePackage extends EPackage
   int CONDITION_RULE_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ExpFluentImpl <em>Exp Fluent</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.ExpFluentImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpFluent()
+   * @generated
+   */
+  int EXP_FLUENT = 21;
+
+  /**
+   * The feature id for the '<em><b>Fluent Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_FLUENT__FLUENT_NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Value Part</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_FLUENT__VALUE_PART = 1;
+
+  /**
+   * The feature id for the '<em><b>Time Part</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_FLUENT__TIME_PART = 2;
+
+  /**
+   * The number of structural features of the '<em>Exp Fluent</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_FLUENT_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.PlusImpl <em>Plus</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1039,7 +1094,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getPlus()
    * @generated
    */
-  int PLUS = 21;
+  int PLUS = 22;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1094,7 +1149,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMinus()
    * @generated
    */
-  int MINUS = 22;
+  int MINUS = 23;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1194,6 +1249,17 @@ public interface EcePackage extends EPackage
    * @generated
    */
   EReference getStatement_Fluent();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.Statement#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Exp</em>'.
+   * @see org.xtext.ecerule.ece.Statement#getExp()
+   * @see #getStatement()
+   * @generated
+   */
+  EReference getStatement_Exp();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Event <em>Event</em>}'.
@@ -1617,6 +1683,49 @@ public interface EcePackage extends EPackage
   EReference getConditionRule_Condition();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.ExpFluent <em>Exp Fluent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Exp Fluent</em>'.
+   * @see org.xtext.ecerule.ece.ExpFluent
+   * @generated
+   */
+  EClass getExpFluent();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.ExpFluent#getFluentName <em>Fluent Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Fluent Name</em>'.
+   * @see org.xtext.ecerule.ece.ExpFluent#getFluentName()
+   * @see #getExpFluent()
+   * @generated
+   */
+  EAttribute getExpFluent_FluentName();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ExpFluent#getValuePart <em>Value Part</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Value Part</em>'.
+   * @see org.xtext.ecerule.ece.ExpFluent#getValuePart()
+   * @see #getExpFluent()
+   * @generated
+   */
+  EReference getExpFluent_ValuePart();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ExpFluent#getTimePart <em>Time Part</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Time Part</em>'.
+   * @see org.xtext.ecerule.ece.ExpFluent#getTimePart()
+   * @see #getExpFluent()
+   * @generated
+   */
+  EReference getExpFluent_TimePart();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Plus <em>Plus</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1702,6 +1811,14 @@ public interface EcePackage extends EPackage
      * @generated
      */
     EReference STATEMENT__FLUENT = eINSTANCE.getStatement_Fluent();
+
+    /**
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENT__EXP = eINSTANCE.getStatement_Exp();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.EventImpl <em>Event</em>}' class.
@@ -2060,6 +2177,40 @@ public interface EcePackage extends EPackage
      * @generated
      */
     EReference CONDITION_RULE__CONDITION = eINSTANCE.getConditionRule_Condition();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ExpFluentImpl <em>Exp Fluent</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.ExpFluentImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpFluent()
+     * @generated
+     */
+    EClass EXP_FLUENT = eINSTANCE.getExpFluent();
+
+    /**
+     * The meta object literal for the '<em><b>Fluent Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP_FLUENT__FLUENT_NAME = eINSTANCE.getExpFluent_FluentName();
+
+    /**
+     * The meta object literal for the '<em><b>Value Part</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP_FLUENT__VALUE_PART = eINSTANCE.getExpFluent_ValuePart();
+
+    /**
+     * The meta object literal for the '<em><b>Time Part</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP_FLUENT__TIME_PART = eINSTANCE.getExpFluent_TimePart();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.PlusImpl <em>Plus</em>}' class.

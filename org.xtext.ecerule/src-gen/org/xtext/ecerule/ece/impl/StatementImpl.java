@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.Event;
+import org.xtext.ecerule.ece.ExpFluent;
 import org.xtext.ecerule.ece.Fluent;
 import org.xtext.ecerule.ece.Statement;
 
@@ -32,6 +33,7 @@ import org.xtext.ecerule.ece.Statement;
  * <ul>
  *   <li>{@link org.xtext.ecerule.ece.impl.StatementImpl#getEvent <em>Event</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.impl.StatementImpl#getFluent <em>Fluent</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.impl.StatementImpl#getExp <em>Exp</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,6 +60,16 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
    * @ordered
    */
   protected EList<Fluent> fluent;
+
+  /**
+   * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExp()
+   * @generated
+   * @ordered
+   */
+  protected EList<ExpFluent> exp;
 
   /**
    * <!-- begin-user-doc -->
@@ -147,6 +159,20 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<ExpFluent> getExp()
+  {
+    if (exp == null)
+    {
+      exp = new EObjectContainmentEList<ExpFluent>(ExpFluent.class, this, EcePackage.STATEMENT__EXP);
+    }
+    return exp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -156,6 +182,8 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
         return basicSetEvent(null, msgs);
       case EcePackage.STATEMENT__FLUENT:
         return ((InternalEList<?>)getFluent()).basicRemove(otherEnd, msgs);
+      case EcePackage.STATEMENT__EXP:
+        return ((InternalEList<?>)getExp()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -174,6 +202,8 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
         return getEvent();
       case EcePackage.STATEMENT__FLUENT:
         return getFluent();
+      case EcePackage.STATEMENT__EXP:
+        return getExp();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -196,6 +226,10 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
         getFluent().clear();
         getFluent().addAll((Collection<? extends Fluent>)newValue);
         return;
+      case EcePackage.STATEMENT__EXP:
+        getExp().clear();
+        getExp().addAll((Collection<? extends ExpFluent>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -216,6 +250,9 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
       case EcePackage.STATEMENT__FLUENT:
         getFluent().clear();
         return;
+      case EcePackage.STATEMENT__EXP:
+        getExp().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -234,6 +271,8 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
         return event != null;
       case EcePackage.STATEMENT__FLUENT:
         return fluent != null && !fluent.isEmpty();
+      case EcePackage.STATEMENT__EXP:
+        return exp != null && !exp.isEmpty();
     }
     return super.eIsSet(featureID);
   }

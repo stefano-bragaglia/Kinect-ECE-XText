@@ -85,6 +85,7 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.STR: return createStr();
       case EcePackage.IN_RULE: return createInRule();
       case EcePackage.CONDITION_RULE: return createConditionRule();
+      case EcePackage.EXP_FLUENT: return createExpFluent();
       case EcePackage.PLUS: return createPlus();
       case EcePackage.MINUS: return createMinus();
       default:
@@ -321,6 +322,17 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
   {
     ConditionRuleImpl conditionRule = new ConditionRuleImpl();
     return conditionRule;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExpFluent createExpFluent()
+  {
+    ExpFluentImpl expFluent = new ExpFluentImpl();
+    return expFluent;
   }
 
   /**

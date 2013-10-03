@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.ecerule.ece.Statement#getEvent <em>Event</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.Statement#getFluent <em>Fluent</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.Statement#getExp <em>Exp</em>}</li>
  * </ul>
  * </p>
  *
@@ -66,5 +67,21 @@ public interface Statement extends EObject
    * @generated
    */
   EList<Fluent> getFluent();
+
+  /**
+   * Returns the value of the '<em><b>Exp</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.ecerule.ece.ExpFluent}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Exp</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Exp</em>' containment reference list.
+   * @see org.xtext.ecerule.ece.EcePackage#getStatement_Exp()
+   * @model containment="true"
+   * @generated
+   */
+  EList<ExpFluent> getExp();
 
 } // Statement

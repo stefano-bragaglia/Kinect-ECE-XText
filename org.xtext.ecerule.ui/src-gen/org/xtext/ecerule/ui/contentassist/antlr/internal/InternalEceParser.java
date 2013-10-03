@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalEceParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_FLOAT", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'=='", "'!='", "'>='", "'<='", "'>'", "'<'", "'+'", "'-'", "'*'", "'/'", "'^'", "'%'", "'on'", "'set'", "';'", "','", "'to'", "'in'", "'if'", "'OR'", "'AND'", "'true'", "'false'", "'switch'", "'now'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_FLOAT", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'=='", "'!='", "'>='", "'<='", "'>'", "'<'", "'+'", "'-'", "'*'", "'/'", "'^'", "'%'", "'on'", "'set'", "';'", "','", "'expect'", "'to'", "'in'", "'if'", "'OR'", "'AND'", "'true'", "'false'", "'switch'", "'now'"
     };
     public static final int RULE_ID=5;
     public static final int T__29=29;
@@ -54,6 +54,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     public static final int T__18=18;
     public static final int T__36=36;
     public static final int T__17=17;
+    public static final int T__37=37;
     public static final int T__12=12;
     public static final int T__14=14;
     public static final int T__13=13;
@@ -1900,14 +1901,99 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleConditionRule"
 
 
+    // $ANTLR start "entryRuleExpFluent"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:649:1: entryRuleExpFluent : ruleExpFluent EOF ;
+    public final void entryRuleExpFluent() throws RecognitionException {
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:650:1: ( ruleExpFluent EOF )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:651:1: ruleExpFluent EOF
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentRule()); 
+            }
+            pushFollow(FOLLOW_ruleExpFluent_in_entryRuleExpFluent1328);
+            ruleExpFluent();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentRule()); 
+            }
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExpFluent1335); if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleExpFluent"
+
+
+    // $ANTLR start "ruleExpFluent"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:658:1: ruleExpFluent : ( ( rule__ExpFluent__Group__0 ) ) ;
+    public final void ruleExpFluent() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:662:2: ( ( ( rule__ExpFluent__Group__0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:663:1: ( ( rule__ExpFluent__Group__0 ) )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:663:1: ( ( rule__ExpFluent__Group__0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:664:1: ( rule__ExpFluent__Group__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getGroup()); 
+            }
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:665:1: ( rule__ExpFluent__Group__0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:665:2: rule__ExpFluent__Group__0
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__Group__0_in_ruleExpFluent1361);
+            rule__ExpFluent__Group__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getGroup()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleExpFluent"
+
+
     // $ANTLR start "rule__ToRule__Alternatives"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:649:1: rule__ToRule__Alternatives : ( ( ( rule__ToRule__ExpressionAssignment_0 ) ) | ( ( rule__ToRule__ExpressionAssignment_1 ) ) | ( ( rule__ToRule__ExpressionAssignment_2 ) ) | ( ( rule__ToRule__Group_3__0 ) ) | ( ( rule__ToRule__ExpressionAssignment_4 ) ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:677:1: rule__ToRule__Alternatives : ( ( ( rule__ToRule__ExpressionAssignment_0 ) ) | ( ( rule__ToRule__ExpressionAssignment_1 ) ) | ( ( rule__ToRule__ExpressionAssignment_2 ) ) | ( ( rule__ToRule__Group_3__0 ) ) | ( ( rule__ToRule__ExpressionAssignment_4 ) ) );
     public final void rule__ToRule__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:653:1: ( ( ( rule__ToRule__ExpressionAssignment_0 ) ) | ( ( rule__ToRule__ExpressionAssignment_1 ) ) | ( ( rule__ToRule__ExpressionAssignment_2 ) ) | ( ( rule__ToRule__Group_3__0 ) ) | ( ( rule__ToRule__ExpressionAssignment_4 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:681:1: ( ( ( rule__ToRule__ExpressionAssignment_0 ) ) | ( ( rule__ToRule__ExpressionAssignment_1 ) ) | ( ( rule__ToRule__ExpressionAssignment_2 ) ) | ( ( rule__ToRule__Group_3__0 ) ) | ( ( rule__ToRule__ExpressionAssignment_4 ) ) )
             int alt2=5;
             switch ( input.LA(1) ) {
             case RULE_STRING:
@@ -1951,8 +2037,8 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 33:
             case 34:
+            case 35:
                 {
                 alt2=2;
                 }
@@ -1976,7 +2062,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 35:
+            case 36:
                 {
                 alt2=3;
                 }
@@ -2000,18 +2086,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
             switch (alt2) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:654:1: ( ( rule__ToRule__ExpressionAssignment_0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:682:1: ( ( rule__ToRule__ExpressionAssignment_0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:654:1: ( ( rule__ToRule__ExpressionAssignment_0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:655:1: ( rule__ToRule__ExpressionAssignment_0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:682:1: ( ( rule__ToRule__ExpressionAssignment_0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:683:1: ( rule__ToRule__ExpressionAssignment_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getToRuleAccess().getExpressionAssignment_0()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:656:1: ( rule__ToRule__ExpressionAssignment_0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:656:2: rule__ToRule__ExpressionAssignment_0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:684:1: ( rule__ToRule__ExpressionAssignment_0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:684:2: rule__ToRule__ExpressionAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_0_in_rule__ToRule__Alternatives1337);
+                    pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_0_in_rule__ToRule__Alternatives1397);
                     rule__ToRule__ExpressionAssignment_0();
 
                     state._fsp--;
@@ -2029,18 +2115,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:660:6: ( ( rule__ToRule__ExpressionAssignment_1 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:688:6: ( ( rule__ToRule__ExpressionAssignment_1 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:660:6: ( ( rule__ToRule__ExpressionAssignment_1 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:661:1: ( rule__ToRule__ExpressionAssignment_1 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:688:6: ( ( rule__ToRule__ExpressionAssignment_1 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:689:1: ( rule__ToRule__ExpressionAssignment_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getToRuleAccess().getExpressionAssignment_1()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:662:1: ( rule__ToRule__ExpressionAssignment_1 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:662:2: rule__ToRule__ExpressionAssignment_1
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:690:1: ( rule__ToRule__ExpressionAssignment_1 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:690:2: rule__ToRule__ExpressionAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_1_in_rule__ToRule__Alternatives1355);
+                    pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_1_in_rule__ToRule__Alternatives1415);
                     rule__ToRule__ExpressionAssignment_1();
 
                     state._fsp--;
@@ -2058,18 +2144,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:666:6: ( ( rule__ToRule__ExpressionAssignment_2 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:694:6: ( ( rule__ToRule__ExpressionAssignment_2 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:666:6: ( ( rule__ToRule__ExpressionAssignment_2 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:667:1: ( rule__ToRule__ExpressionAssignment_2 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:694:6: ( ( rule__ToRule__ExpressionAssignment_2 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:695:1: ( rule__ToRule__ExpressionAssignment_2 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getToRuleAccess().getExpressionAssignment_2()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:668:1: ( rule__ToRule__ExpressionAssignment_2 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:668:2: rule__ToRule__ExpressionAssignment_2
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:696:1: ( rule__ToRule__ExpressionAssignment_2 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:696:2: rule__ToRule__ExpressionAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_2_in_rule__ToRule__Alternatives1373);
+                    pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_2_in_rule__ToRule__Alternatives1433);
                     rule__ToRule__ExpressionAssignment_2();
 
                     state._fsp--;
@@ -2087,18 +2173,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:672:6: ( ( rule__ToRule__Group_3__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:700:6: ( ( rule__ToRule__Group_3__0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:672:6: ( ( rule__ToRule__Group_3__0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:673:1: ( rule__ToRule__Group_3__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:700:6: ( ( rule__ToRule__Group_3__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:701:1: ( rule__ToRule__Group_3__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getToRuleAccess().getGroup_3()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:674:1: ( rule__ToRule__Group_3__0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:674:2: rule__ToRule__Group_3__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:702:1: ( rule__ToRule__Group_3__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:702:2: rule__ToRule__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__ToRule__Group_3__0_in_rule__ToRule__Alternatives1391);
+                    pushFollow(FOLLOW_rule__ToRule__Group_3__0_in_rule__ToRule__Alternatives1451);
                     rule__ToRule__Group_3__0();
 
                     state._fsp--;
@@ -2116,18 +2202,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:678:6: ( ( rule__ToRule__ExpressionAssignment_4 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:706:6: ( ( rule__ToRule__ExpressionAssignment_4 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:678:6: ( ( rule__ToRule__ExpressionAssignment_4 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:679:1: ( rule__ToRule__ExpressionAssignment_4 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:706:6: ( ( rule__ToRule__ExpressionAssignment_4 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:707:1: ( rule__ToRule__ExpressionAssignment_4 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getToRuleAccess().getExpressionAssignment_4()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:680:1: ( rule__ToRule__ExpressionAssignment_4 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:680:2: rule__ToRule__ExpressionAssignment_4
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:708:1: ( rule__ToRule__ExpressionAssignment_4 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:708:2: rule__ToRule__ExpressionAssignment_4
                     {
-                    pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_4_in_rule__ToRule__Alternatives1409);
+                    pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_4_in_rule__ToRule__Alternatives1469);
                     rule__ToRule__ExpressionAssignment_4();
 
                     state._fsp--;
@@ -2162,13 +2248,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StringExpr__Alternatives"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:689:1: rule__StringExpr__Alternatives : ( ( ruleStr ) | ( ruleFluentWhoseValue ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:717:1: rule__StringExpr__Alternatives : ( ( ruleStr ) | ( ruleFluentWhoseValue ) );
     public final void rule__StringExpr__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:693:1: ( ( ruleStr ) | ( ruleFluentWhoseValue ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:721:1: ( ( ruleStr ) | ( ruleFluentWhoseValue ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -2187,15 +2273,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:694:1: ( ruleStr )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:722:1: ( ruleStr )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:694:1: ( ruleStr )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:695:1: ruleStr
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:722:1: ( ruleStr )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:723:1: ruleStr
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getStringExprAccess().getStrParserRuleCall_0()); 
                     }
-                    pushFollow(FOLLOW_ruleStr_in_rule__StringExpr__Alternatives1442);
+                    pushFollow(FOLLOW_ruleStr_in_rule__StringExpr__Alternatives1502);
                     ruleStr();
 
                     state._fsp--;
@@ -2210,15 +2296,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:700:6: ( ruleFluentWhoseValue )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:728:6: ( ruleFluentWhoseValue )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:700:6: ( ruleFluentWhoseValue )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:701:1: ruleFluentWhoseValue
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:728:6: ( ruleFluentWhoseValue )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:729:1: ruleFluentWhoseValue
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getStringExprAccess().getFluentWhoseValueParserRuleCall_1()); 
                     }
-                    pushFollow(FOLLOW_ruleFluentWhoseValue_in_rule__StringExpr__Alternatives1459);
+                    pushFollow(FOLLOW_ruleFluentWhoseValue_in_rule__StringExpr__Alternatives1519);
                     ruleFluentWhoseValue();
 
                     state._fsp--;
@@ -2250,21 +2336,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolExpr__Alternatives"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:711:1: rule__BoolExpr__Alternatives : ( ( ( rule__BoolExpr__ValueAssignment_0 ) ) | ( ( rule__BoolExpr__ValueAssignment_1 ) ) | ( ruleOr ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:739:1: rule__BoolExpr__Alternatives : ( ( ( rule__BoolExpr__ValueAssignment_0 ) ) | ( ( rule__BoolExpr__ValueAssignment_1 ) ) | ( ruleOr ) );
     public final void rule__BoolExpr__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:715:1: ( ( ( rule__BoolExpr__ValueAssignment_0 ) ) | ( ( rule__BoolExpr__ValueAssignment_1 ) ) | ( ruleOr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:743:1: ( ( ( rule__BoolExpr__ValueAssignment_0 ) ) | ( ( rule__BoolExpr__ValueAssignment_1 ) ) | ( ruleOr ) )
             int alt4=3;
             switch ( input.LA(1) ) {
-            case 33:
+            case 34:
                 {
                 alt4=1;
                 }
                 break;
-            case 34:
+            case 35:
                 {
                 alt4=2;
                 }
@@ -2286,18 +2372,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
             switch (alt4) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:716:1: ( ( rule__BoolExpr__ValueAssignment_0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:744:1: ( ( rule__BoolExpr__ValueAssignment_0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:716:1: ( ( rule__BoolExpr__ValueAssignment_0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:717:1: ( rule__BoolExpr__ValueAssignment_0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:744:1: ( ( rule__BoolExpr__ValueAssignment_0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:745:1: ( rule__BoolExpr__ValueAssignment_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBoolExprAccess().getValueAssignment_0()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:718:1: ( rule__BoolExpr__ValueAssignment_0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:718:2: rule__BoolExpr__ValueAssignment_0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:746:1: ( rule__BoolExpr__ValueAssignment_0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:746:2: rule__BoolExpr__ValueAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__BoolExpr__ValueAssignment_0_in_rule__BoolExpr__Alternatives1491);
+                    pushFollow(FOLLOW_rule__BoolExpr__ValueAssignment_0_in_rule__BoolExpr__Alternatives1551);
                     rule__BoolExpr__ValueAssignment_0();
 
                     state._fsp--;
@@ -2315,18 +2401,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:722:6: ( ( rule__BoolExpr__ValueAssignment_1 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:750:6: ( ( rule__BoolExpr__ValueAssignment_1 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:722:6: ( ( rule__BoolExpr__ValueAssignment_1 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:723:1: ( rule__BoolExpr__ValueAssignment_1 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:750:6: ( ( rule__BoolExpr__ValueAssignment_1 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:751:1: ( rule__BoolExpr__ValueAssignment_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBoolExprAccess().getValueAssignment_1()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:724:1: ( rule__BoolExpr__ValueAssignment_1 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:724:2: rule__BoolExpr__ValueAssignment_1
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:752:1: ( rule__BoolExpr__ValueAssignment_1 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:752:2: rule__BoolExpr__ValueAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__BoolExpr__ValueAssignment_1_in_rule__BoolExpr__Alternatives1509);
+                    pushFollow(FOLLOW_rule__BoolExpr__ValueAssignment_1_in_rule__BoolExpr__Alternatives1569);
                     rule__BoolExpr__ValueAssignment_1();
 
                     state._fsp--;
@@ -2344,15 +2430,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:728:6: ( ruleOr )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:756:6: ( ruleOr )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:728:6: ( ruleOr )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:729:1: ruleOr
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:756:6: ( ruleOr )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:757:1: ruleOr
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBoolExprAccess().getOrParserRuleCall_2()); 
                     }
-                    pushFollow(FOLLOW_ruleOr_in_rule__BoolExpr__Alternatives1527);
+                    pushFollow(FOLLOW_ruleOr_in_rule__BoolExpr__Alternatives1587);
                     ruleOr();
 
                     state._fsp--;
@@ -2384,29 +2470,29 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Alternatives"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:739:1: rule__And__Alternatives : ( ( ( rule__And__Group_0__0 ) ) | ( ( rule__And__Group_1__0 ) ) | ( ( rule__And__Group_2__0 ) ) | ( ( rule__And__Group_3__0 ) ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:767:1: rule__And__Alternatives : ( ( ( rule__And__Group_0__0 ) ) | ( ( rule__And__Group_1__0 ) ) | ( ( rule__And__Group_2__0 ) ) | ( ( rule__And__Group_3__0 ) ) );
     public final void rule__And__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:743:1: ( ( ( rule__And__Group_0__0 ) ) | ( ( rule__And__Group_1__0 ) ) | ( ( rule__And__Group_2__0 ) ) | ( ( rule__And__Group_3__0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:771:1: ( ( ( rule__And__Group_0__0 ) ) | ( ( rule__And__Group_1__0 ) ) | ( ( rule__And__Group_2__0 ) ) | ( ( rule__And__Group_3__0 ) ) )
             int alt5=4;
             alt5 = dfa5.predict(input);
             switch (alt5) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:744:1: ( ( rule__And__Group_0__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:772:1: ( ( rule__And__Group_0__0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:744:1: ( ( rule__And__Group_0__0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:745:1: ( rule__And__Group_0__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:772:1: ( ( rule__And__Group_0__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:773:1: ( rule__And__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getAndAccess().getGroup_0()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:746:1: ( rule__And__Group_0__0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:746:2: rule__And__Group_0__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:774:1: ( rule__And__Group_0__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:774:2: rule__And__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__And__Group_0__0_in_rule__And__Alternatives1559);
+                    pushFollow(FOLLOW_rule__And__Group_0__0_in_rule__And__Alternatives1619);
                     rule__And__Group_0__0();
 
                     state._fsp--;
@@ -2424,18 +2510,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:750:6: ( ( rule__And__Group_1__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:778:6: ( ( rule__And__Group_1__0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:750:6: ( ( rule__And__Group_1__0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:751:1: ( rule__And__Group_1__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:778:6: ( ( rule__And__Group_1__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:779:1: ( rule__And__Group_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getAndAccess().getGroup_1()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:752:1: ( rule__And__Group_1__0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:752:2: rule__And__Group_1__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:780:1: ( rule__And__Group_1__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:780:2: rule__And__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__And__Group_1__0_in_rule__And__Alternatives1577);
+                    pushFollow(FOLLOW_rule__And__Group_1__0_in_rule__And__Alternatives1637);
                     rule__And__Group_1__0();
 
                     state._fsp--;
@@ -2453,18 +2539,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:756:6: ( ( rule__And__Group_2__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:784:6: ( ( rule__And__Group_2__0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:756:6: ( ( rule__And__Group_2__0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:757:1: ( rule__And__Group_2__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:784:6: ( ( rule__And__Group_2__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:785:1: ( rule__And__Group_2__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getAndAccess().getGroup_2()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:758:1: ( rule__And__Group_2__0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:758:2: rule__And__Group_2__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:786:1: ( rule__And__Group_2__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:786:2: rule__And__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__And__Group_2__0_in_rule__And__Alternatives1595);
+                    pushFollow(FOLLOW_rule__And__Group_2__0_in_rule__And__Alternatives1655);
                     rule__And__Group_2__0();
 
                     state._fsp--;
@@ -2482,18 +2568,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:762:6: ( ( rule__And__Group_3__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:790:6: ( ( rule__And__Group_3__0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:762:6: ( ( rule__And__Group_3__0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:763:1: ( rule__And__Group_3__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:790:6: ( ( rule__And__Group_3__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:791:1: ( rule__And__Group_3__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getAndAccess().getGroup_3()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:764:1: ( rule__And__Group_3__0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:764:2: rule__And__Group_3__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:792:1: ( rule__And__Group_3__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:792:2: rule__And__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__And__Group_3__0_in_rule__And__Alternatives1613);
+                    pushFollow(FOLLOW_rule__And__Group_3__0_in_rule__And__Alternatives1673);
                     rule__And__Group_3__0();
 
                     state._fsp--;
@@ -2528,13 +2614,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Alternatives"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:773:1: rule__Equality__Alternatives : ( ( ( rule__Equality__Group_0__0 ) ) | ( ( rule__Equality__Group_1__0 ) ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:801:1: rule__Equality__Alternatives : ( ( ( rule__Equality__Group_0__0 ) ) | ( ( rule__Equality__Group_1__0 ) ) );
     public final void rule__Equality__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:777:1: ( ( ( rule__Equality__Group_0__0 ) ) | ( ( rule__Equality__Group_1__0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:805:1: ( ( ( rule__Equality__Group_0__0 ) ) | ( ( rule__Equality__Group_1__0 ) ) )
             int alt6=2;
             switch ( input.LA(1) ) {
             case RULE_INT:
@@ -2600,9 +2686,9 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                 case 13:
                     {
                     switch ( input.LA(3) ) {
-                    case RULE_INT:
+                    case RULE_STRING:
                         {
-                        alt6=1;
+                        alt6=2;
                         }
                         break;
                     case RULE_ID:
@@ -2624,9 +2710,9 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                         }
                         }
                         break;
-                    case RULE_STRING:
+                    case RULE_INT:
                         {
-                        alt6=2;
+                        alt6=1;
                         }
                         break;
                     default:
@@ -2642,10 +2728,11 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                 case EOF:
                 case 26:
                 case 27:
-                case 29:
+                case 28:
                 case 30:
                 case 31:
                 case 32:
+                case 33:
                     {
                     alt6=2;
                     }
@@ -2675,18 +2762,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
             switch (alt6) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:778:1: ( ( rule__Equality__Group_0__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:806:1: ( ( rule__Equality__Group_0__0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:778:1: ( ( rule__Equality__Group_0__0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:779:1: ( rule__Equality__Group_0__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:806:1: ( ( rule__Equality__Group_0__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:807:1: ( rule__Equality__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getEqualityAccess().getGroup_0()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:780:1: ( rule__Equality__Group_0__0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:780:2: rule__Equality__Group_0__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:808:1: ( rule__Equality__Group_0__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:808:2: rule__Equality__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__Equality__Group_0__0_in_rule__Equality__Alternatives1646);
+                    pushFollow(FOLLOW_rule__Equality__Group_0__0_in_rule__Equality__Alternatives1706);
                     rule__Equality__Group_0__0();
 
                     state._fsp--;
@@ -2704,18 +2791,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:784:6: ( ( rule__Equality__Group_1__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:812:6: ( ( rule__Equality__Group_1__0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:784:6: ( ( rule__Equality__Group_1__0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:785:1: ( rule__Equality__Group_1__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:812:6: ( ( rule__Equality__Group_1__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:813:1: ( rule__Equality__Group_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getEqualityAccess().getGroup_1()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:786:1: ( rule__Equality__Group_1__0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:786:2: rule__Equality__Group_1__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:814:1: ( rule__Equality__Group_1__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:814:2: rule__Equality__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Equality__Group_1__0_in_rule__Equality__Alternatives1664);
+                    pushFollow(FOLLOW_rule__Equality__Group_1__0_in_rule__Equality__Alternatives1724);
                     rule__Equality__Group_1__0();
 
                     state._fsp--;
@@ -2750,13 +2837,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__OpAlternatives_0_1_1_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:795:1: rule__Equality__OpAlternatives_0_1_1_0 : ( ( '==' ) | ( '!=' ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:823:1: rule__Equality__OpAlternatives_0_1_1_0 : ( ( '==' ) | ( '!=' ) );
     public final void rule__Equality__OpAlternatives_0_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:799:1: ( ( '==' ) | ( '!=' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:827:1: ( ( '==' ) | ( '!=' ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -2775,15 +2862,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:800:1: ( '==' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:828:1: ( '==' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:800:1: ( '==' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:801:1: '=='
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:828:1: ( '==' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:829:1: '=='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getEqualityAccess().getOpEqualsSignEqualsSignKeyword_0_1_1_0_0()); 
                     }
-                    match(input,12,FOLLOW_12_in_rule__Equality__OpAlternatives_0_1_1_01698); if (state.failed) return ;
+                    match(input,12,FOLLOW_12_in_rule__Equality__OpAlternatives_0_1_1_01758); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getEqualityAccess().getOpEqualsSignEqualsSignKeyword_0_1_1_0_0()); 
                     }
@@ -2794,15 +2881,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:808:6: ( '!=' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:836:6: ( '!=' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:808:6: ( '!=' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:809:1: '!='
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:836:6: ( '!=' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:837:1: '!='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getEqualityAccess().getOpExclamationMarkEqualsSignKeyword_0_1_1_0_1()); 
                     }
-                    match(input,13,FOLLOW_13_in_rule__Equality__OpAlternatives_0_1_1_01718); if (state.failed) return ;
+                    match(input,13,FOLLOW_13_in_rule__Equality__OpAlternatives_0_1_1_01778); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getEqualityAccess().getOpExclamationMarkEqualsSignKeyword_0_1_1_0_1()); 
                     }
@@ -2830,13 +2917,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__OpAlternatives_1_1_1_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:821:1: rule__Equality__OpAlternatives_1_1_1_0 : ( ( '==' ) | ( '!=' ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:849:1: rule__Equality__OpAlternatives_1_1_1_0 : ( ( '==' ) | ( '!=' ) );
     public final void rule__Equality__OpAlternatives_1_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:825:1: ( ( '==' ) | ( '!=' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:853:1: ( ( '==' ) | ( '!=' ) )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -2855,15 +2942,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:826:1: ( '==' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:854:1: ( '==' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:826:1: ( '==' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:827:1: '=='
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:854:1: ( '==' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:855:1: '=='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getEqualityAccess().getOpEqualsSignEqualsSignKeyword_1_1_1_0_0()); 
                     }
-                    match(input,12,FOLLOW_12_in_rule__Equality__OpAlternatives_1_1_1_01753); if (state.failed) return ;
+                    match(input,12,FOLLOW_12_in_rule__Equality__OpAlternatives_1_1_1_01813); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getEqualityAccess().getOpEqualsSignEqualsSignKeyword_1_1_1_0_0()); 
                     }
@@ -2874,15 +2961,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:834:6: ( '!=' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:862:6: ( '!=' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:834:6: ( '!=' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:835:1: '!='
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:862:6: ( '!=' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:863:1: '!='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getEqualityAccess().getOpExclamationMarkEqualsSignKeyword_1_1_1_0_1()); 
                     }
-                    match(input,13,FOLLOW_13_in_rule__Equality__OpAlternatives_1_1_1_01773); if (state.failed) return ;
+                    match(input,13,FOLLOW_13_in_rule__Equality__OpAlternatives_1_1_1_01833); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getEqualityAccess().getOpExclamationMarkEqualsSignKeyword_1_1_1_0_1()); 
                     }
@@ -2910,13 +2997,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__OpAlternatives_1_1_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:847:1: rule__Comparison__OpAlternatives_1_1_0 : ( ( '>=' ) | ( '<=' ) | ( '>' ) | ( '<' ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:875:1: rule__Comparison__OpAlternatives_1_1_0 : ( ( '>=' ) | ( '<=' ) | ( '>' ) | ( '<' ) );
     public final void rule__Comparison__OpAlternatives_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:851:1: ( ( '>=' ) | ( '<=' ) | ( '>' ) | ( '<' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:879:1: ( ( '>=' ) | ( '<=' ) | ( '>' ) | ( '<' ) )
             int alt9=4;
             switch ( input.LA(1) ) {
             case 14:
@@ -2949,15 +3036,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
             switch (alt9) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:852:1: ( '>=' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:880:1: ( '>=' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:852:1: ( '>=' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:853:1: '>='
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:880:1: ( '>=' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:881:1: '>='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonAccess().getOpGreaterThanSignEqualsSignKeyword_1_1_0_0()); 
                     }
-                    match(input,14,FOLLOW_14_in_rule__Comparison__OpAlternatives_1_1_01808); if (state.failed) return ;
+                    match(input,14,FOLLOW_14_in_rule__Comparison__OpAlternatives_1_1_01868); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getComparisonAccess().getOpGreaterThanSignEqualsSignKeyword_1_1_0_0()); 
                     }
@@ -2968,15 +3055,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:860:6: ( '<=' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:888:6: ( '<=' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:860:6: ( '<=' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:861:1: '<='
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:888:6: ( '<=' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:889:1: '<='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonAccess().getOpLessThanSignEqualsSignKeyword_1_1_0_1()); 
                     }
-                    match(input,15,FOLLOW_15_in_rule__Comparison__OpAlternatives_1_1_01828); if (state.failed) return ;
+                    match(input,15,FOLLOW_15_in_rule__Comparison__OpAlternatives_1_1_01888); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getComparisonAccess().getOpLessThanSignEqualsSignKeyword_1_1_0_1()); 
                     }
@@ -2987,15 +3074,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:868:6: ( '>' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:896:6: ( '>' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:868:6: ( '>' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:869:1: '>'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:896:6: ( '>' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:897:1: '>'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonAccess().getOpGreaterThanSignKeyword_1_1_0_2()); 
                     }
-                    match(input,16,FOLLOW_16_in_rule__Comparison__OpAlternatives_1_1_01848); if (state.failed) return ;
+                    match(input,16,FOLLOW_16_in_rule__Comparison__OpAlternatives_1_1_01908); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getComparisonAccess().getOpGreaterThanSignKeyword_1_1_0_2()); 
                     }
@@ -3006,15 +3093,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:876:6: ( '<' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:904:6: ( '<' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:876:6: ( '<' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:877:1: '<'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:904:6: ( '<' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:905:1: '<'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonAccess().getOpLessThanSignKeyword_1_1_0_3()); 
                     }
-                    match(input,17,FOLLOW_17_in_rule__Comparison__OpAlternatives_1_1_01868); if (state.failed) return ;
+                    match(input,17,FOLLOW_17_in_rule__Comparison__OpAlternatives_1_1_01928); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getComparisonAccess().getOpLessThanSignKeyword_1_1_0_3()); 
                     }
@@ -3042,13 +3129,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MutationExpr__ValueAlternatives_0_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:889:1: rule__MutationExpr__ValueAlternatives_0_0 : ( ( '+' ) | ( '-' ) | ( '*' ) | ( '/' ) | ( '^' ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:917:1: rule__MutationExpr__ValueAlternatives_0_0 : ( ( '+' ) | ( '-' ) | ( '*' ) | ( '/' ) | ( '^' ) );
     public final void rule__MutationExpr__ValueAlternatives_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:893:1: ( ( '+' ) | ( '-' ) | ( '*' ) | ( '/' ) | ( '^' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:921:1: ( ( '+' ) | ( '-' ) | ( '*' ) | ( '/' ) | ( '^' ) )
             int alt10=5;
             switch ( input.LA(1) ) {
             case 18:
@@ -3086,15 +3173,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
             switch (alt10) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:894:1: ( '+' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:922:1: ( '+' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:894:1: ( '+' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:895:1: '+'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:922:1: ( '+' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:923:1: '+'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMutationExprAccess().getValuePlusSignKeyword_0_0_0()); 
                     }
-                    match(input,18,FOLLOW_18_in_rule__MutationExpr__ValueAlternatives_0_01903); if (state.failed) return ;
+                    match(input,18,FOLLOW_18_in_rule__MutationExpr__ValueAlternatives_0_01963); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getMutationExprAccess().getValuePlusSignKeyword_0_0_0()); 
                     }
@@ -3105,15 +3192,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:902:6: ( '-' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:930:6: ( '-' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:902:6: ( '-' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:903:1: '-'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:930:6: ( '-' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:931:1: '-'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMutationExprAccess().getValueHyphenMinusKeyword_0_0_1()); 
                     }
-                    match(input,19,FOLLOW_19_in_rule__MutationExpr__ValueAlternatives_0_01923); if (state.failed) return ;
+                    match(input,19,FOLLOW_19_in_rule__MutationExpr__ValueAlternatives_0_01983); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getMutationExprAccess().getValueHyphenMinusKeyword_0_0_1()); 
                     }
@@ -3124,15 +3211,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:910:6: ( '*' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:938:6: ( '*' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:910:6: ( '*' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:911:1: '*'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:938:6: ( '*' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:939:1: '*'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMutationExprAccess().getValueAsteriskKeyword_0_0_2()); 
                     }
-                    match(input,20,FOLLOW_20_in_rule__MutationExpr__ValueAlternatives_0_01943); if (state.failed) return ;
+                    match(input,20,FOLLOW_20_in_rule__MutationExpr__ValueAlternatives_0_02003); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getMutationExprAccess().getValueAsteriskKeyword_0_0_2()); 
                     }
@@ -3143,15 +3230,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:918:6: ( '/' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:946:6: ( '/' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:918:6: ( '/' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:919:1: '/'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:946:6: ( '/' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:947:1: '/'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMutationExprAccess().getValueSolidusKeyword_0_0_3()); 
                     }
-                    match(input,21,FOLLOW_21_in_rule__MutationExpr__ValueAlternatives_0_01963); if (state.failed) return ;
+                    match(input,21,FOLLOW_21_in_rule__MutationExpr__ValueAlternatives_0_02023); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getMutationExprAccess().getValueSolidusKeyword_0_0_3()); 
                     }
@@ -3162,15 +3249,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:926:6: ( '^' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:954:6: ( '^' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:926:6: ( '^' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:927:1: '^'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:954:6: ( '^' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:955:1: '^'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMutationExprAccess().getValueCircumflexAccentKeyword_0_0_4()); 
                     }
-                    match(input,22,FOLLOW_22_in_rule__MutationExpr__ValueAlternatives_0_01983); if (state.failed) return ;
+                    match(input,22,FOLLOW_22_in_rule__MutationExpr__ValueAlternatives_0_02043); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getMutationExprAccess().getValueCircumflexAccentKeyword_0_0_4()); 
                     }
@@ -3198,13 +3285,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FloatExpr__Alternatives"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:939:1: rule__FloatExpr__Alternatives : ( ( ( rule__FloatExpr__ValueDirectAssignment_0 ) ) | ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) ) | ( ( rule__FloatExpr__ValueOfFluentAssignment_2 ) ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:967:1: rule__FloatExpr__Alternatives : ( ( ( rule__FloatExpr__ValueDirectAssignment_0 ) ) | ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) ) | ( ( rule__FloatExpr__ValueOfFluentAssignment_2 ) ) );
     public final void rule__FloatExpr__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:943:1: ( ( ( rule__FloatExpr__ValueDirectAssignment_0 ) ) | ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) ) | ( ( rule__FloatExpr__ValueOfFluentAssignment_2 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:971:1: ( ( ( rule__FloatExpr__ValueDirectAssignment_0 ) ) | ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) ) | ( ( rule__FloatExpr__ValueOfFluentAssignment_2 ) ) )
             int alt11=3;
             int LA11_0 = input.LA(1);
 
@@ -3251,18 +3338,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:944:1: ( ( rule__FloatExpr__ValueDirectAssignment_0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:972:1: ( ( rule__FloatExpr__ValueDirectAssignment_0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:944:1: ( ( rule__FloatExpr__ValueDirectAssignment_0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:945:1: ( rule__FloatExpr__ValueDirectAssignment_0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:972:1: ( ( rule__FloatExpr__ValueDirectAssignment_0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:973:1: ( rule__FloatExpr__ValueDirectAssignment_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFloatExprAccess().getValueDirectAssignment_0()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:946:1: ( rule__FloatExpr__ValueDirectAssignment_0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:946:2: rule__FloatExpr__ValueDirectAssignment_0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:974:1: ( rule__FloatExpr__ValueDirectAssignment_0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:974:2: rule__FloatExpr__ValueDirectAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__FloatExpr__ValueDirectAssignment_0_in_rule__FloatExpr__Alternatives2017);
+                    pushFollow(FOLLOW_rule__FloatExpr__ValueDirectAssignment_0_in_rule__FloatExpr__Alternatives2077);
                     rule__FloatExpr__ValueDirectAssignment_0();
 
                     state._fsp--;
@@ -3280,18 +3367,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:950:6: ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:978:6: ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:950:6: ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:951:1: ( rule__FloatExpr__ValueCalculatedAssignment_1 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:978:6: ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:979:1: ( rule__FloatExpr__ValueCalculatedAssignment_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFloatExprAccess().getValueCalculatedAssignment_1()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:952:1: ( rule__FloatExpr__ValueCalculatedAssignment_1 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:952:2: rule__FloatExpr__ValueCalculatedAssignment_1
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:980:1: ( rule__FloatExpr__ValueCalculatedAssignment_1 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:980:2: rule__FloatExpr__ValueCalculatedAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__FloatExpr__ValueCalculatedAssignment_1_in_rule__FloatExpr__Alternatives2035);
+                    pushFollow(FOLLOW_rule__FloatExpr__ValueCalculatedAssignment_1_in_rule__FloatExpr__Alternatives2095);
                     rule__FloatExpr__ValueCalculatedAssignment_1();
 
                     state._fsp--;
@@ -3309,18 +3396,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:956:6: ( ( rule__FloatExpr__ValueOfFluentAssignment_2 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:984:6: ( ( rule__FloatExpr__ValueOfFluentAssignment_2 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:956:6: ( ( rule__FloatExpr__ValueOfFluentAssignment_2 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:957:1: ( rule__FloatExpr__ValueOfFluentAssignment_2 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:984:6: ( ( rule__FloatExpr__ValueOfFluentAssignment_2 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:985:1: ( rule__FloatExpr__ValueOfFluentAssignment_2 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFloatExprAccess().getValueOfFluentAssignment_2()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:958:1: ( rule__FloatExpr__ValueOfFluentAssignment_2 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:958:2: rule__FloatExpr__ValueOfFluentAssignment_2
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:986:1: ( rule__FloatExpr__ValueOfFluentAssignment_2 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:986:2: rule__FloatExpr__ValueOfFluentAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__FloatExpr__ValueOfFluentAssignment_2_in_rule__FloatExpr__Alternatives2053);
+                    pushFollow(FOLLOW_rule__FloatExpr__ValueOfFluentAssignment_2_in_rule__FloatExpr__Alternatives2113);
                     rule__FloatExpr__ValueOfFluentAssignment_2();
 
                     state._fsp--;
@@ -3355,13 +3442,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Alternatives_1_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:967:1: rule__PlusOrMinus__Alternatives_1_0 : ( ( ( rule__PlusOrMinus__Group_1_0_0__0 ) ) | ( ( rule__PlusOrMinus__Group_1_0_1__0 ) ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:995:1: rule__PlusOrMinus__Alternatives_1_0 : ( ( ( rule__PlusOrMinus__Group_1_0_0__0 ) ) | ( ( rule__PlusOrMinus__Group_1_0_1__0 ) ) );
     public final void rule__PlusOrMinus__Alternatives_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:971:1: ( ( ( rule__PlusOrMinus__Group_1_0_0__0 ) ) | ( ( rule__PlusOrMinus__Group_1_0_1__0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:999:1: ( ( ( rule__PlusOrMinus__Group_1_0_0__0 ) ) | ( ( rule__PlusOrMinus__Group_1_0_1__0 ) ) )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -3380,18 +3467,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:972:1: ( ( rule__PlusOrMinus__Group_1_0_0__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1000:1: ( ( rule__PlusOrMinus__Group_1_0_0__0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:972:1: ( ( rule__PlusOrMinus__Group_1_0_0__0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:973:1: ( rule__PlusOrMinus__Group_1_0_0__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1000:1: ( ( rule__PlusOrMinus__Group_1_0_0__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1001:1: ( rule__PlusOrMinus__Group_1_0_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPlusOrMinusAccess().getGroup_1_0_0()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:974:1: ( rule__PlusOrMinus__Group_1_0_0__0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:974:2: rule__PlusOrMinus__Group_1_0_0__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1002:1: ( rule__PlusOrMinus__Group_1_0_0__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1002:2: rule__PlusOrMinus__Group_1_0_0__0
                     {
-                    pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_0__0_in_rule__PlusOrMinus__Alternatives_1_02086);
+                    pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_0__0_in_rule__PlusOrMinus__Alternatives_1_02146);
                     rule__PlusOrMinus__Group_1_0_0__0();
 
                     state._fsp--;
@@ -3409,18 +3496,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:978:6: ( ( rule__PlusOrMinus__Group_1_0_1__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1006:6: ( ( rule__PlusOrMinus__Group_1_0_1__0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:978:6: ( ( rule__PlusOrMinus__Group_1_0_1__0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:979:1: ( rule__PlusOrMinus__Group_1_0_1__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1006:6: ( ( rule__PlusOrMinus__Group_1_0_1__0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1007:1: ( rule__PlusOrMinus__Group_1_0_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPlusOrMinusAccess().getGroup_1_0_1()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:980:1: ( rule__PlusOrMinus__Group_1_0_1__0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:980:2: rule__PlusOrMinus__Group_1_0_1__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1008:1: ( rule__PlusOrMinus__Group_1_0_1__0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1008:2: rule__PlusOrMinus__Group_1_0_1__0
                     {
-                    pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_1__0_in_rule__PlusOrMinus__Alternatives_1_02104);
+                    pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_1__0_in_rule__PlusOrMinus__Alternatives_1_02164);
                     rule__PlusOrMinus__Group_1_0_1__0();
 
                     state._fsp--;
@@ -3455,13 +3542,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__OpAlternatives_1_1_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:989:1: rule__MulOrDiv__OpAlternatives_1_1_0 : ( ( '*' ) | ( '/' ) | ( '%' ) | ( '^' ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1017:1: rule__MulOrDiv__OpAlternatives_1_1_0 : ( ( '*' ) | ( '/' ) | ( '%' ) | ( '^' ) );
     public final void rule__MulOrDiv__OpAlternatives_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:993:1: ( ( '*' ) | ( '/' ) | ( '%' ) | ( '^' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1021:1: ( ( '*' ) | ( '/' ) | ( '%' ) | ( '^' ) )
             int alt13=4;
             switch ( input.LA(1) ) {
             case 20:
@@ -3494,15 +3581,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
             switch (alt13) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:994:1: ( '*' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1022:1: ( '*' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:994:1: ( '*' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:995:1: '*'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1022:1: ( '*' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1023:1: '*'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMulOrDivAccess().getOpAsteriskKeyword_1_1_0_0()); 
                     }
-                    match(input,20,FOLLOW_20_in_rule__MulOrDiv__OpAlternatives_1_1_02138); if (state.failed) return ;
+                    match(input,20,FOLLOW_20_in_rule__MulOrDiv__OpAlternatives_1_1_02198); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getMulOrDivAccess().getOpAsteriskKeyword_1_1_0_0()); 
                     }
@@ -3513,15 +3600,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1002:6: ( '/' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1030:6: ( '/' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1002:6: ( '/' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1003:1: '/'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1030:6: ( '/' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1031:1: '/'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMulOrDivAccess().getOpSolidusKeyword_1_1_0_1()); 
                     }
-                    match(input,21,FOLLOW_21_in_rule__MulOrDiv__OpAlternatives_1_1_02158); if (state.failed) return ;
+                    match(input,21,FOLLOW_21_in_rule__MulOrDiv__OpAlternatives_1_1_02218); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getMulOrDivAccess().getOpSolidusKeyword_1_1_0_1()); 
                     }
@@ -3532,15 +3619,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1010:6: ( '%' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1038:6: ( '%' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1010:6: ( '%' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1011:1: '%'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1038:6: ( '%' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1039:1: '%'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMulOrDivAccess().getOpPercentSignKeyword_1_1_0_2()); 
                     }
-                    match(input,23,FOLLOW_23_in_rule__MulOrDiv__OpAlternatives_1_1_02178); if (state.failed) return ;
+                    match(input,23,FOLLOW_23_in_rule__MulOrDiv__OpAlternatives_1_1_02238); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getMulOrDivAccess().getOpPercentSignKeyword_1_1_0_2()); 
                     }
@@ -3551,15 +3638,15 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1018:6: ( '^' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1046:6: ( '^' )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1018:6: ( '^' )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1019:1: '^'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1046:6: ( '^' )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1047:1: '^'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMulOrDivAccess().getOpCircumflexAccentKeyword_1_1_0_3()); 
                     }
-                    match(input,22,FOLLOW_22_in_rule__MulOrDiv__OpAlternatives_1_1_02198); if (state.failed) return ;
+                    match(input,22,FOLLOW_22_in_rule__MulOrDiv__OpAlternatives_1_1_02258); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getMulOrDivAccess().getOpCircumflexAccentKeyword_1_1_0_3()); 
                     }
@@ -3587,13 +3674,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__Alternatives"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1031:1: rule__Primary__Alternatives : ( ( ( rule__Primary__ValueDirectAssignment_0 ) ) | ( ( rule__Primary__ValueOfFluentAssignment_1 ) ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1059:1: rule__Primary__Alternatives : ( ( ( rule__Primary__ValueDirectAssignment_0 ) ) | ( ( rule__Primary__ValueOfFluentAssignment_1 ) ) );
     public final void rule__Primary__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1035:1: ( ( ( rule__Primary__ValueDirectAssignment_0 ) ) | ( ( rule__Primary__ValueOfFluentAssignment_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1063:1: ( ( ( rule__Primary__ValueDirectAssignment_0 ) ) | ( ( rule__Primary__ValueOfFluentAssignment_1 ) ) )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -3612,18 +3699,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             }
             switch (alt14) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1036:1: ( ( rule__Primary__ValueDirectAssignment_0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1064:1: ( ( rule__Primary__ValueDirectAssignment_0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1036:1: ( ( rule__Primary__ValueDirectAssignment_0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1037:1: ( rule__Primary__ValueDirectAssignment_0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1064:1: ( ( rule__Primary__ValueDirectAssignment_0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1065:1: ( rule__Primary__ValueDirectAssignment_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPrimaryAccess().getValueDirectAssignment_0()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1038:1: ( rule__Primary__ValueDirectAssignment_0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1038:2: rule__Primary__ValueDirectAssignment_0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1066:1: ( rule__Primary__ValueDirectAssignment_0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1066:2: rule__Primary__ValueDirectAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Primary__ValueDirectAssignment_0_in_rule__Primary__Alternatives2232);
+                    pushFollow(FOLLOW_rule__Primary__ValueDirectAssignment_0_in_rule__Primary__Alternatives2292);
                     rule__Primary__ValueDirectAssignment_0();
 
                     state._fsp--;
@@ -3641,18 +3728,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1042:6: ( ( rule__Primary__ValueOfFluentAssignment_1 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1070:6: ( ( rule__Primary__ValueOfFluentAssignment_1 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1042:6: ( ( rule__Primary__ValueOfFluentAssignment_1 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1043:1: ( rule__Primary__ValueOfFluentAssignment_1 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1070:6: ( ( rule__Primary__ValueOfFluentAssignment_1 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1071:1: ( rule__Primary__ValueOfFluentAssignment_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPrimaryAccess().getValueOfFluentAssignment_1()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1044:1: ( rule__Primary__ValueOfFluentAssignment_1 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1044:2: rule__Primary__ValueOfFluentAssignment_1
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1072:1: ( rule__Primary__ValueOfFluentAssignment_1 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1072:2: rule__Primary__ValueOfFluentAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Primary__ValueOfFluentAssignment_1_in_rule__Primary__Alternatives2250);
+                    pushFollow(FOLLOW_rule__Primary__ValueOfFluentAssignment_1_in_rule__Primary__Alternatives2310);
                     rule__Primary__ValueOfFluentAssignment_1();
 
                     state._fsp--;
@@ -3687,20 +3774,20 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InRule__Alternatives"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1053:1: rule__InRule__Alternatives : ( ( ( rule__InRule__TimeAssignment_0 ) ) | ( ( rule__InRule__CurrentTimeAssignment_1 ) ) );
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1081:1: rule__InRule__Alternatives : ( ( ( rule__InRule__TimeAssignment_0 ) ) | ( ( rule__InRule__CurrentTimeAssignment_1 ) ) );
     public final void rule__InRule__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1057:1: ( ( ( rule__InRule__TimeAssignment_0 ) ) | ( ( rule__InRule__CurrentTimeAssignment_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1085:1: ( ( ( rule__InRule__TimeAssignment_0 ) ) | ( ( rule__InRule__CurrentTimeAssignment_1 ) ) )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
             if ( (LA15_0==RULE_INT) ) {
                 alt15=1;
             }
-            else if ( (LA15_0==36) ) {
+            else if ( (LA15_0==37) ) {
                 alt15=2;
             }
             else {
@@ -3712,18 +3799,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             }
             switch (alt15) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1058:1: ( ( rule__InRule__TimeAssignment_0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1086:1: ( ( rule__InRule__TimeAssignment_0 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1058:1: ( ( rule__InRule__TimeAssignment_0 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1059:1: ( rule__InRule__TimeAssignment_0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1086:1: ( ( rule__InRule__TimeAssignment_0 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1087:1: ( rule__InRule__TimeAssignment_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getInRuleAccess().getTimeAssignment_0()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1060:1: ( rule__InRule__TimeAssignment_0 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1060:2: rule__InRule__TimeAssignment_0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1088:1: ( rule__InRule__TimeAssignment_0 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1088:2: rule__InRule__TimeAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__InRule__TimeAssignment_0_in_rule__InRule__Alternatives2283);
+                    pushFollow(FOLLOW_rule__InRule__TimeAssignment_0_in_rule__InRule__Alternatives2343);
                     rule__InRule__TimeAssignment_0();
 
                     state._fsp--;
@@ -3741,18 +3828,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1064:6: ( ( rule__InRule__CurrentTimeAssignment_1 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1092:6: ( ( rule__InRule__CurrentTimeAssignment_1 ) )
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1064:6: ( ( rule__InRule__CurrentTimeAssignment_1 ) )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1065:1: ( rule__InRule__CurrentTimeAssignment_1 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1092:6: ( ( rule__InRule__CurrentTimeAssignment_1 ) )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1093:1: ( rule__InRule__CurrentTimeAssignment_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getInRuleAccess().getCurrentTimeAssignment_1()); 
                     }
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1066:1: ( rule__InRule__CurrentTimeAssignment_1 )
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1066:2: rule__InRule__CurrentTimeAssignment_1
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1094:1: ( rule__InRule__CurrentTimeAssignment_1 )
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1094:2: rule__InRule__CurrentTimeAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__InRule__CurrentTimeAssignment_1_in_rule__InRule__Alternatives2301);
+                    pushFollow(FOLLOW_rule__InRule__CurrentTimeAssignment_1_in_rule__InRule__Alternatives2361);
                     rule__InRule__CurrentTimeAssignment_1();
 
                     state._fsp--;
@@ -3787,21 +3874,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1077:1: rule__Statement__Group__0 : rule__Statement__Group__0__Impl rule__Statement__Group__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1105:1: rule__Statement__Group__0 : rule__Statement__Group__0__Impl rule__Statement__Group__1 ;
     public final void rule__Statement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1081:1: ( rule__Statement__Group__0__Impl rule__Statement__Group__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1082:2: rule__Statement__Group__0__Impl rule__Statement__Group__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1109:1: ( rule__Statement__Group__0__Impl rule__Statement__Group__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1110:2: rule__Statement__Group__0__Impl rule__Statement__Group__1
             {
-            pushFollow(FOLLOW_rule__Statement__Group__0__Impl_in_rule__Statement__Group__02332);
+            pushFollow(FOLLOW_rule__Statement__Group__0__Impl_in_rule__Statement__Group__02392);
             rule__Statement__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Statement__Group__1_in_rule__Statement__Group__02335);
+            pushFollow(FOLLOW_rule__Statement__Group__1_in_rule__Statement__Group__02395);
             rule__Statement__Group__1();
 
             state._fsp--;
@@ -3825,22 +3912,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1089:1: rule__Statement__Group__0__Impl : ( 'on' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1117:1: rule__Statement__Group__0__Impl : ( 'on' ) ;
     public final void rule__Statement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1093:1: ( ( 'on' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1094:1: ( 'on' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1121:1: ( ( 'on' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1122:1: ( 'on' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1094:1: ( 'on' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1095:1: 'on'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1122:1: ( 'on' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1123:1: 'on'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getOnKeyword_0()); 
             }
-            match(input,24,FOLLOW_24_in_rule__Statement__Group__0__Impl2363); if (state.failed) return ;
+            match(input,24,FOLLOW_24_in_rule__Statement__Group__0__Impl2423); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStatementAccess().getOnKeyword_0()); 
             }
@@ -3866,21 +3953,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1108:1: rule__Statement__Group__1 : rule__Statement__Group__1__Impl rule__Statement__Group__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1136:1: rule__Statement__Group__1 : rule__Statement__Group__1__Impl rule__Statement__Group__2 ;
     public final void rule__Statement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1112:1: ( rule__Statement__Group__1__Impl rule__Statement__Group__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1113:2: rule__Statement__Group__1__Impl rule__Statement__Group__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1140:1: ( rule__Statement__Group__1__Impl rule__Statement__Group__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1141:2: rule__Statement__Group__1__Impl rule__Statement__Group__2
             {
-            pushFollow(FOLLOW_rule__Statement__Group__1__Impl_in_rule__Statement__Group__12394);
+            pushFollow(FOLLOW_rule__Statement__Group__1__Impl_in_rule__Statement__Group__12454);
             rule__Statement__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Statement__Group__2_in_rule__Statement__Group__12397);
+            pushFollow(FOLLOW_rule__Statement__Group__2_in_rule__Statement__Group__12457);
             rule__Statement__Group__2();
 
             state._fsp--;
@@ -3904,25 +3991,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1120:1: rule__Statement__Group__1__Impl : ( ( rule__Statement__EventAssignment_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1148:1: rule__Statement__Group__1__Impl : ( ( rule__Statement__EventAssignment_1 ) ) ;
     public final void rule__Statement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1124:1: ( ( ( rule__Statement__EventAssignment_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1125:1: ( ( rule__Statement__EventAssignment_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1152:1: ( ( ( rule__Statement__EventAssignment_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1153:1: ( ( rule__Statement__EventAssignment_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1125:1: ( ( rule__Statement__EventAssignment_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1126:1: ( rule__Statement__EventAssignment_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1153:1: ( ( rule__Statement__EventAssignment_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1154:1: ( rule__Statement__EventAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getEventAssignment_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1127:1: ( rule__Statement__EventAssignment_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1127:2: rule__Statement__EventAssignment_1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1155:1: ( rule__Statement__EventAssignment_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1155:2: rule__Statement__EventAssignment_1
             {
-            pushFollow(FOLLOW_rule__Statement__EventAssignment_1_in_rule__Statement__Group__1__Impl2424);
+            pushFollow(FOLLOW_rule__Statement__EventAssignment_1_in_rule__Statement__Group__1__Impl2484);
             rule__Statement__EventAssignment_1();
 
             state._fsp--;
@@ -3955,21 +4042,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1137:1: rule__Statement__Group__2 : rule__Statement__Group__2__Impl rule__Statement__Group__3 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1165:1: rule__Statement__Group__2 : rule__Statement__Group__2__Impl rule__Statement__Group__3 ;
     public final void rule__Statement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1141:1: ( rule__Statement__Group__2__Impl rule__Statement__Group__3 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1142:2: rule__Statement__Group__2__Impl rule__Statement__Group__3
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1169:1: ( rule__Statement__Group__2__Impl rule__Statement__Group__3 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1170:2: rule__Statement__Group__2__Impl rule__Statement__Group__3
             {
-            pushFollow(FOLLOW_rule__Statement__Group__2__Impl_in_rule__Statement__Group__22454);
+            pushFollow(FOLLOW_rule__Statement__Group__2__Impl_in_rule__Statement__Group__22514);
             rule__Statement__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Statement__Group__3_in_rule__Statement__Group__22457);
+            pushFollow(FOLLOW_rule__Statement__Group__3_in_rule__Statement__Group__22517);
             rule__Statement__Group__3();
 
             state._fsp--;
@@ -3993,22 +4080,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1149:1: rule__Statement__Group__2__Impl : ( 'set' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1177:1: rule__Statement__Group__2__Impl : ( 'set' ) ;
     public final void rule__Statement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1153:1: ( ( 'set' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1154:1: ( 'set' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1181:1: ( ( 'set' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1182:1: ( 'set' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1154:1: ( 'set' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1155:1: 'set'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1182:1: ( 'set' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1183:1: 'set'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getSetKeyword_2()); 
             }
-            match(input,25,FOLLOW_25_in_rule__Statement__Group__2__Impl2485); if (state.failed) return ;
+            match(input,25,FOLLOW_25_in_rule__Statement__Group__2__Impl2545); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStatementAccess().getSetKeyword_2()); 
             }
@@ -4034,21 +4121,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__3"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1168:1: rule__Statement__Group__3 : rule__Statement__Group__3__Impl rule__Statement__Group__4 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1196:1: rule__Statement__Group__3 : rule__Statement__Group__3__Impl rule__Statement__Group__4 ;
     public final void rule__Statement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1172:1: ( rule__Statement__Group__3__Impl rule__Statement__Group__4 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1173:2: rule__Statement__Group__3__Impl rule__Statement__Group__4
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1200:1: ( rule__Statement__Group__3__Impl rule__Statement__Group__4 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1201:2: rule__Statement__Group__3__Impl rule__Statement__Group__4
             {
-            pushFollow(FOLLOW_rule__Statement__Group__3__Impl_in_rule__Statement__Group__32516);
+            pushFollow(FOLLOW_rule__Statement__Group__3__Impl_in_rule__Statement__Group__32576);
             rule__Statement__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Statement__Group__4_in_rule__Statement__Group__32519);
+            pushFollow(FOLLOW_rule__Statement__Group__4_in_rule__Statement__Group__32579);
             rule__Statement__Group__4();
 
             state._fsp--;
@@ -4072,25 +4159,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__3__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1180:1: rule__Statement__Group__3__Impl : ( ( rule__Statement__FluentAssignment_3 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1208:1: rule__Statement__Group__3__Impl : ( ( rule__Statement__FluentAssignment_3 ) ) ;
     public final void rule__Statement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1184:1: ( ( ( rule__Statement__FluentAssignment_3 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1185:1: ( ( rule__Statement__FluentAssignment_3 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1212:1: ( ( ( rule__Statement__FluentAssignment_3 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1213:1: ( ( rule__Statement__FluentAssignment_3 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1185:1: ( ( rule__Statement__FluentAssignment_3 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1186:1: ( rule__Statement__FluentAssignment_3 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1213:1: ( ( rule__Statement__FluentAssignment_3 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1214:1: ( rule__Statement__FluentAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getFluentAssignment_3()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1187:1: ( rule__Statement__FluentAssignment_3 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1187:2: rule__Statement__FluentAssignment_3
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1215:1: ( rule__Statement__FluentAssignment_3 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1215:2: rule__Statement__FluentAssignment_3
             {
-            pushFollow(FOLLOW_rule__Statement__FluentAssignment_3_in_rule__Statement__Group__3__Impl2546);
+            pushFollow(FOLLOW_rule__Statement__FluentAssignment_3_in_rule__Statement__Group__3__Impl2606);
             rule__Statement__FluentAssignment_3();
 
             state._fsp--;
@@ -4123,21 +4210,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__4"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1197:1: rule__Statement__Group__4 : rule__Statement__Group__4__Impl rule__Statement__Group__5 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1225:1: rule__Statement__Group__4 : rule__Statement__Group__4__Impl rule__Statement__Group__5 ;
     public final void rule__Statement__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1201:1: ( rule__Statement__Group__4__Impl rule__Statement__Group__5 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1202:2: rule__Statement__Group__4__Impl rule__Statement__Group__5
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1229:1: ( rule__Statement__Group__4__Impl rule__Statement__Group__5 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1230:2: rule__Statement__Group__4__Impl rule__Statement__Group__5
             {
-            pushFollow(FOLLOW_rule__Statement__Group__4__Impl_in_rule__Statement__Group__42576);
+            pushFollow(FOLLOW_rule__Statement__Group__4__Impl_in_rule__Statement__Group__42636);
             rule__Statement__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Statement__Group__5_in_rule__Statement__Group__42579);
+            pushFollow(FOLLOW_rule__Statement__Group__5_in_rule__Statement__Group__42639);
             rule__Statement__Group__5();
 
             state._fsp--;
@@ -4161,22 +4248,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__4__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1209:1: rule__Statement__Group__4__Impl : ( ( rule__Statement__Group_4__0 )* ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1237:1: rule__Statement__Group__4__Impl : ( ( rule__Statement__Group_4__0 )* ) ;
     public final void rule__Statement__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1213:1: ( ( ( rule__Statement__Group_4__0 )* ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1214:1: ( ( rule__Statement__Group_4__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1241:1: ( ( ( rule__Statement__Group_4__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1242:1: ( ( rule__Statement__Group_4__0 )* )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1214:1: ( ( rule__Statement__Group_4__0 )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1215:1: ( rule__Statement__Group_4__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1242:1: ( ( rule__Statement__Group_4__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1243:1: ( rule__Statement__Group_4__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getGroup_4()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1216:1: ( rule__Statement__Group_4__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1244:1: ( rule__Statement__Group_4__0 )*
             loop16:
             do {
                 int alt16=2;
@@ -4189,9 +4276,9 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1216:2: rule__Statement__Group_4__0
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1244:2: rule__Statement__Group_4__0
             	    {
-            	    pushFollow(FOLLOW_rule__Statement__Group_4__0_in_rule__Statement__Group__4__Impl2606);
+            	    pushFollow(FOLLOW_rule__Statement__Group_4__0_in_rule__Statement__Group__4__Impl2666);
             	    rule__Statement__Group_4__0();
 
             	    state._fsp--;
@@ -4230,17 +4317,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__5"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1226:1: rule__Statement__Group__5 : rule__Statement__Group__5__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1254:1: rule__Statement__Group__5 : rule__Statement__Group__5__Impl rule__Statement__Group__6 ;
     public final void rule__Statement__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1230:1: ( rule__Statement__Group__5__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1231:2: rule__Statement__Group__5__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1258:1: ( rule__Statement__Group__5__Impl rule__Statement__Group__6 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1259:2: rule__Statement__Group__5__Impl rule__Statement__Group__6
             {
-            pushFollow(FOLLOW_rule__Statement__Group__5__Impl_in_rule__Statement__Group__52637);
+            pushFollow(FOLLOW_rule__Statement__Group__5__Impl_in_rule__Statement__Group__52697);
             rule__Statement__Group__5__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Statement__Group__6_in_rule__Statement__Group__52700);
+            rule__Statement__Group__6();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4263,24 +4355,45 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__5__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1237:1: rule__Statement__Group__5__Impl : ( ';' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1266:1: rule__Statement__Group__5__Impl : ( ( rule__Statement__Group_5__0 )? ) ;
     public final void rule__Statement__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1241:1: ( ( ';' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1242:1: ( ';' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1270:1: ( ( ( rule__Statement__Group_5__0 )? ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1271:1: ( ( rule__Statement__Group_5__0 )? )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1242:1: ( ';' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1243:1: ';'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1271:1: ( ( rule__Statement__Group_5__0 )? )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1272:1: ( rule__Statement__Group_5__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getStatementAccess().getSemicolonKeyword_5()); 
+               before(grammarAccess.getStatementAccess().getGroup_5()); 
             }
-            match(input,26,FOLLOW_26_in_rule__Statement__Group__5__Impl2665); if (state.failed) return ;
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1273:1: ( rule__Statement__Group_5__0 )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
+
+            if ( (LA17_0==28) ) {
+                alt17=1;
+            }
+            switch (alt17) {
+                case 1 :
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1273:2: rule__Statement__Group_5__0
+                    {
+                    pushFollow(FOLLOW_rule__Statement__Group_5__0_in_rule__Statement__Group__5__Impl2727);
+                    rule__Statement__Group_5__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getStatementAccess().getSemicolonKeyword_5()); 
+               after(grammarAccess.getStatementAccess().getGroup_5()); 
             }
 
             }
@@ -4303,22 +4416,96 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Statement__Group__5__Impl"
 
 
+    // $ANTLR start "rule__Statement__Group__6"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1283:1: rule__Statement__Group__6 : rule__Statement__Group__6__Impl ;
+    public final void rule__Statement__Group__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1287:1: ( rule__Statement__Group__6__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1288:2: rule__Statement__Group__6__Impl
+            {
+            pushFollow(FOLLOW_rule__Statement__Group__6__Impl_in_rule__Statement__Group__62758);
+            rule__Statement__Group__6__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group__6"
+
+
+    // $ANTLR start "rule__Statement__Group__6__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1294:1: rule__Statement__Group__6__Impl : ( ';' ) ;
+    public final void rule__Statement__Group__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1298:1: ( ( ';' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1299:1: ( ';' )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1299:1: ( ';' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1300:1: ';'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStatementAccess().getSemicolonKeyword_6()); 
+            }
+            match(input,26,FOLLOW_26_in_rule__Statement__Group__6__Impl2786); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStatementAccess().getSemicolonKeyword_6()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group__6__Impl"
+
+
     // $ANTLR start "rule__Statement__Group_4__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1268:1: rule__Statement__Group_4__0 : rule__Statement__Group_4__0__Impl rule__Statement__Group_4__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1327:1: rule__Statement__Group_4__0 : rule__Statement__Group_4__0__Impl rule__Statement__Group_4__1 ;
     public final void rule__Statement__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1272:1: ( rule__Statement__Group_4__0__Impl rule__Statement__Group_4__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1273:2: rule__Statement__Group_4__0__Impl rule__Statement__Group_4__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1331:1: ( rule__Statement__Group_4__0__Impl rule__Statement__Group_4__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1332:2: rule__Statement__Group_4__0__Impl rule__Statement__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Statement__Group_4__0__Impl_in_rule__Statement__Group_4__02708);
+            pushFollow(FOLLOW_rule__Statement__Group_4__0__Impl_in_rule__Statement__Group_4__02831);
             rule__Statement__Group_4__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Statement__Group_4__1_in_rule__Statement__Group_4__02711);
+            pushFollow(FOLLOW_rule__Statement__Group_4__1_in_rule__Statement__Group_4__02834);
             rule__Statement__Group_4__1();
 
             state._fsp--;
@@ -4342,22 +4529,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_4__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1280:1: rule__Statement__Group_4__0__Impl : ( ',' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1339:1: rule__Statement__Group_4__0__Impl : ( ',' ) ;
     public final void rule__Statement__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1284:1: ( ( ',' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1285:1: ( ',' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1343:1: ( ( ',' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1344:1: ( ',' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1285:1: ( ',' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1286:1: ','
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1344:1: ( ',' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1345:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getCommaKeyword_4_0()); 
             }
-            match(input,27,FOLLOW_27_in_rule__Statement__Group_4__0__Impl2739); if (state.failed) return ;
+            match(input,27,FOLLOW_27_in_rule__Statement__Group_4__0__Impl2862); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStatementAccess().getCommaKeyword_4_0()); 
             }
@@ -4383,16 +4570,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_4__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1299:1: rule__Statement__Group_4__1 : rule__Statement__Group_4__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1358:1: rule__Statement__Group_4__1 : rule__Statement__Group_4__1__Impl ;
     public final void rule__Statement__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1303:1: ( rule__Statement__Group_4__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1304:2: rule__Statement__Group_4__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1362:1: ( rule__Statement__Group_4__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1363:2: rule__Statement__Group_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__Statement__Group_4__1__Impl_in_rule__Statement__Group_4__12770);
+            pushFollow(FOLLOW_rule__Statement__Group_4__1__Impl_in_rule__Statement__Group_4__12893);
             rule__Statement__Group_4__1__Impl();
 
             state._fsp--;
@@ -4416,25 +4603,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_4__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1310:1: rule__Statement__Group_4__1__Impl : ( ( rule__Statement__FluentAssignment_4_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1369:1: rule__Statement__Group_4__1__Impl : ( ( rule__Statement__FluentAssignment_4_1 ) ) ;
     public final void rule__Statement__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1314:1: ( ( ( rule__Statement__FluentAssignment_4_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1315:1: ( ( rule__Statement__FluentAssignment_4_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1373:1: ( ( ( rule__Statement__FluentAssignment_4_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1374:1: ( ( rule__Statement__FluentAssignment_4_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1315:1: ( ( rule__Statement__FluentAssignment_4_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1316:1: ( rule__Statement__FluentAssignment_4_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1374:1: ( ( rule__Statement__FluentAssignment_4_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1375:1: ( rule__Statement__FluentAssignment_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getFluentAssignment_4_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1317:1: ( rule__Statement__FluentAssignment_4_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1317:2: rule__Statement__FluentAssignment_4_1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1376:1: ( rule__Statement__FluentAssignment_4_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1376:2: rule__Statement__FluentAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__Statement__FluentAssignment_4_1_in_rule__Statement__Group_4__1__Impl2797);
+            pushFollow(FOLLOW_rule__Statement__FluentAssignment_4_1_in_rule__Statement__Group_4__1__Impl2920);
             rule__Statement__FluentAssignment_4_1();
 
             state._fsp--;
@@ -4466,22 +4653,455 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Statement__Group_4__1__Impl"
 
 
+    // $ANTLR start "rule__Statement__Group_5__0"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1390:1: rule__Statement__Group_5__0 : rule__Statement__Group_5__0__Impl rule__Statement__Group_5__1 ;
+    public final void rule__Statement__Group_5__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1394:1: ( rule__Statement__Group_5__0__Impl rule__Statement__Group_5__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1395:2: rule__Statement__Group_5__0__Impl rule__Statement__Group_5__1
+            {
+            pushFollow(FOLLOW_rule__Statement__Group_5__0__Impl_in_rule__Statement__Group_5__02954);
+            rule__Statement__Group_5__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Statement__Group_5__1_in_rule__Statement__Group_5__02957);
+            rule__Statement__Group_5__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group_5__0"
+
+
+    // $ANTLR start "rule__Statement__Group_5__0__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1402:1: rule__Statement__Group_5__0__Impl : ( 'expect' ) ;
+    public final void rule__Statement__Group_5__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1406:1: ( ( 'expect' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1407:1: ( 'expect' )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1407:1: ( 'expect' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1408:1: 'expect'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStatementAccess().getExpectKeyword_5_0()); 
+            }
+            match(input,28,FOLLOW_28_in_rule__Statement__Group_5__0__Impl2985); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStatementAccess().getExpectKeyword_5_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group_5__0__Impl"
+
+
+    // $ANTLR start "rule__Statement__Group_5__1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1421:1: rule__Statement__Group_5__1 : rule__Statement__Group_5__1__Impl rule__Statement__Group_5__2 ;
+    public final void rule__Statement__Group_5__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1425:1: ( rule__Statement__Group_5__1__Impl rule__Statement__Group_5__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1426:2: rule__Statement__Group_5__1__Impl rule__Statement__Group_5__2
+            {
+            pushFollow(FOLLOW_rule__Statement__Group_5__1__Impl_in_rule__Statement__Group_5__13016);
+            rule__Statement__Group_5__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Statement__Group_5__2_in_rule__Statement__Group_5__13019);
+            rule__Statement__Group_5__2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group_5__1"
+
+
+    // $ANTLR start "rule__Statement__Group_5__1__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1433:1: rule__Statement__Group_5__1__Impl : ( ( rule__Statement__ExpAssignment_5_1 ) ) ;
+    public final void rule__Statement__Group_5__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1437:1: ( ( ( rule__Statement__ExpAssignment_5_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1438:1: ( ( rule__Statement__ExpAssignment_5_1 ) )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1438:1: ( ( rule__Statement__ExpAssignment_5_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1439:1: ( rule__Statement__ExpAssignment_5_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStatementAccess().getExpAssignment_5_1()); 
+            }
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1440:1: ( rule__Statement__ExpAssignment_5_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1440:2: rule__Statement__ExpAssignment_5_1
+            {
+            pushFollow(FOLLOW_rule__Statement__ExpAssignment_5_1_in_rule__Statement__Group_5__1__Impl3046);
+            rule__Statement__ExpAssignment_5_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStatementAccess().getExpAssignment_5_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group_5__1__Impl"
+
+
+    // $ANTLR start "rule__Statement__Group_5__2"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1450:1: rule__Statement__Group_5__2 : rule__Statement__Group_5__2__Impl ;
+    public final void rule__Statement__Group_5__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1454:1: ( rule__Statement__Group_5__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1455:2: rule__Statement__Group_5__2__Impl
+            {
+            pushFollow(FOLLOW_rule__Statement__Group_5__2__Impl_in_rule__Statement__Group_5__23076);
+            rule__Statement__Group_5__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group_5__2"
+
+
+    // $ANTLR start "rule__Statement__Group_5__2__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1461:1: rule__Statement__Group_5__2__Impl : ( ( rule__Statement__Group_5_2__0 )* ) ;
+    public final void rule__Statement__Group_5__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1465:1: ( ( ( rule__Statement__Group_5_2__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1466:1: ( ( rule__Statement__Group_5_2__0 )* )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1466:1: ( ( rule__Statement__Group_5_2__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1467:1: ( rule__Statement__Group_5_2__0 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStatementAccess().getGroup_5_2()); 
+            }
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1468:1: ( rule__Statement__Group_5_2__0 )*
+            loop18:
+            do {
+                int alt18=2;
+                int LA18_0 = input.LA(1);
+
+                if ( (LA18_0==27) ) {
+                    alt18=1;
+                }
+
+
+                switch (alt18) {
+            	case 1 :
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1468:2: rule__Statement__Group_5_2__0
+            	    {
+            	    pushFollow(FOLLOW_rule__Statement__Group_5_2__0_in_rule__Statement__Group_5__2__Impl3103);
+            	    rule__Statement__Group_5_2__0();
+
+            	    state._fsp--;
+            	    if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop18;
+                }
+            } while (true);
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStatementAccess().getGroup_5_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group_5__2__Impl"
+
+
+    // $ANTLR start "rule__Statement__Group_5_2__0"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1484:1: rule__Statement__Group_5_2__0 : rule__Statement__Group_5_2__0__Impl rule__Statement__Group_5_2__1 ;
+    public final void rule__Statement__Group_5_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1488:1: ( rule__Statement__Group_5_2__0__Impl rule__Statement__Group_5_2__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1489:2: rule__Statement__Group_5_2__0__Impl rule__Statement__Group_5_2__1
+            {
+            pushFollow(FOLLOW_rule__Statement__Group_5_2__0__Impl_in_rule__Statement__Group_5_2__03140);
+            rule__Statement__Group_5_2__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Statement__Group_5_2__1_in_rule__Statement__Group_5_2__03143);
+            rule__Statement__Group_5_2__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group_5_2__0"
+
+
+    // $ANTLR start "rule__Statement__Group_5_2__0__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1496:1: rule__Statement__Group_5_2__0__Impl : ( ',' ) ;
+    public final void rule__Statement__Group_5_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1500:1: ( ( ',' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1501:1: ( ',' )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1501:1: ( ',' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1502:1: ','
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStatementAccess().getCommaKeyword_5_2_0()); 
+            }
+            match(input,27,FOLLOW_27_in_rule__Statement__Group_5_2__0__Impl3171); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStatementAccess().getCommaKeyword_5_2_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group_5_2__0__Impl"
+
+
+    // $ANTLR start "rule__Statement__Group_5_2__1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1515:1: rule__Statement__Group_5_2__1 : rule__Statement__Group_5_2__1__Impl ;
+    public final void rule__Statement__Group_5_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1519:1: ( rule__Statement__Group_5_2__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1520:2: rule__Statement__Group_5_2__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Statement__Group_5_2__1__Impl_in_rule__Statement__Group_5_2__13202);
+            rule__Statement__Group_5_2__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group_5_2__1"
+
+
+    // $ANTLR start "rule__Statement__Group_5_2__1__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1526:1: rule__Statement__Group_5_2__1__Impl : ( ( rule__Statement__ExpAssignment_5_2_1 ) ) ;
+    public final void rule__Statement__Group_5_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1530:1: ( ( ( rule__Statement__ExpAssignment_5_2_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1531:1: ( ( rule__Statement__ExpAssignment_5_2_1 ) )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1531:1: ( ( rule__Statement__ExpAssignment_5_2_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1532:1: ( rule__Statement__ExpAssignment_5_2_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStatementAccess().getExpAssignment_5_2_1()); 
+            }
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1533:1: ( rule__Statement__ExpAssignment_5_2_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1533:2: rule__Statement__ExpAssignment_5_2_1
+            {
+            pushFollow(FOLLOW_rule__Statement__ExpAssignment_5_2_1_in_rule__Statement__Group_5_2__1__Impl3229);
+            rule__Statement__ExpAssignment_5_2_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStatementAccess().getExpAssignment_5_2_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__Group_5_2__1__Impl"
+
+
     // $ANTLR start "rule__Fluent__Group__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1331:1: rule__Fluent__Group__0 : rule__Fluent__Group__0__Impl rule__Fluent__Group__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1547:1: rule__Fluent__Group__0 : rule__Fluent__Group__0__Impl rule__Fluent__Group__1 ;
     public final void rule__Fluent__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1335:1: ( rule__Fluent__Group__0__Impl rule__Fluent__Group__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1336:2: rule__Fluent__Group__0__Impl rule__Fluent__Group__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1551:1: ( rule__Fluent__Group__0__Impl rule__Fluent__Group__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1552:2: rule__Fluent__Group__0__Impl rule__Fluent__Group__1
             {
-            pushFollow(FOLLOW_rule__Fluent__Group__0__Impl_in_rule__Fluent__Group__02831);
+            pushFollow(FOLLOW_rule__Fluent__Group__0__Impl_in_rule__Fluent__Group__03263);
             rule__Fluent__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Fluent__Group__1_in_rule__Fluent__Group__02834);
+            pushFollow(FOLLOW_rule__Fluent__Group__1_in_rule__Fluent__Group__03266);
             rule__Fluent__Group__1();
 
             state._fsp--;
@@ -4505,25 +5125,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1343:1: rule__Fluent__Group__0__Impl : ( ( rule__Fluent__FluentNameAssignment_0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1559:1: rule__Fluent__Group__0__Impl : ( ( rule__Fluent__FluentNameAssignment_0 ) ) ;
     public final void rule__Fluent__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1347:1: ( ( ( rule__Fluent__FluentNameAssignment_0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1348:1: ( ( rule__Fluent__FluentNameAssignment_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1563:1: ( ( ( rule__Fluent__FluentNameAssignment_0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1564:1: ( ( rule__Fluent__FluentNameAssignment_0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1348:1: ( ( rule__Fluent__FluentNameAssignment_0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1349:1: ( rule__Fluent__FluentNameAssignment_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1564:1: ( ( rule__Fluent__FluentNameAssignment_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1565:1: ( rule__Fluent__FluentNameAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getFluentNameAssignment_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1350:1: ( rule__Fluent__FluentNameAssignment_0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1350:2: rule__Fluent__FluentNameAssignment_0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1566:1: ( rule__Fluent__FluentNameAssignment_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1566:2: rule__Fluent__FluentNameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Fluent__FluentNameAssignment_0_in_rule__Fluent__Group__0__Impl2861);
+            pushFollow(FOLLOW_rule__Fluent__FluentNameAssignment_0_in_rule__Fluent__Group__0__Impl3293);
             rule__Fluent__FluentNameAssignment_0();
 
             state._fsp--;
@@ -4556,21 +5176,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1360:1: rule__Fluent__Group__1 : rule__Fluent__Group__1__Impl rule__Fluent__Group__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1576:1: rule__Fluent__Group__1 : rule__Fluent__Group__1__Impl rule__Fluent__Group__2 ;
     public final void rule__Fluent__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1364:1: ( rule__Fluent__Group__1__Impl rule__Fluent__Group__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1365:2: rule__Fluent__Group__1__Impl rule__Fluent__Group__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1580:1: ( rule__Fluent__Group__1__Impl rule__Fluent__Group__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1581:2: rule__Fluent__Group__1__Impl rule__Fluent__Group__2
             {
-            pushFollow(FOLLOW_rule__Fluent__Group__1__Impl_in_rule__Fluent__Group__12891);
+            pushFollow(FOLLOW_rule__Fluent__Group__1__Impl_in_rule__Fluent__Group__13323);
             rule__Fluent__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Fluent__Group__2_in_rule__Fluent__Group__12894);
+            pushFollow(FOLLOW_rule__Fluent__Group__2_in_rule__Fluent__Group__13326);
             rule__Fluent__Group__2();
 
             state._fsp--;
@@ -4594,25 +5214,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1372:1: rule__Fluent__Group__1__Impl : ( ( rule__Fluent__Group_1__0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1588:1: rule__Fluent__Group__1__Impl : ( ( rule__Fluent__Group_1__0 ) ) ;
     public final void rule__Fluent__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1376:1: ( ( ( rule__Fluent__Group_1__0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1377:1: ( ( rule__Fluent__Group_1__0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1592:1: ( ( ( rule__Fluent__Group_1__0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1593:1: ( ( rule__Fluent__Group_1__0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1377:1: ( ( rule__Fluent__Group_1__0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1378:1: ( rule__Fluent__Group_1__0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1593:1: ( ( rule__Fluent__Group_1__0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1594:1: ( rule__Fluent__Group_1__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getGroup_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1379:1: ( rule__Fluent__Group_1__0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1379:2: rule__Fluent__Group_1__0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1595:1: ( rule__Fluent__Group_1__0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1595:2: rule__Fluent__Group_1__0
             {
-            pushFollow(FOLLOW_rule__Fluent__Group_1__0_in_rule__Fluent__Group__1__Impl2921);
+            pushFollow(FOLLOW_rule__Fluent__Group_1__0_in_rule__Fluent__Group__1__Impl3353);
             rule__Fluent__Group_1__0();
 
             state._fsp--;
@@ -4645,21 +5265,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1389:1: rule__Fluent__Group__2 : rule__Fluent__Group__2__Impl rule__Fluent__Group__3 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1605:1: rule__Fluent__Group__2 : rule__Fluent__Group__2__Impl rule__Fluent__Group__3 ;
     public final void rule__Fluent__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1393:1: ( rule__Fluent__Group__2__Impl rule__Fluent__Group__3 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1394:2: rule__Fluent__Group__2__Impl rule__Fluent__Group__3
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1609:1: ( rule__Fluent__Group__2__Impl rule__Fluent__Group__3 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1610:2: rule__Fluent__Group__2__Impl rule__Fluent__Group__3
             {
-            pushFollow(FOLLOW_rule__Fluent__Group__2__Impl_in_rule__Fluent__Group__22951);
+            pushFollow(FOLLOW_rule__Fluent__Group__2__Impl_in_rule__Fluent__Group__23383);
             rule__Fluent__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Fluent__Group__3_in_rule__Fluent__Group__22954);
+            pushFollow(FOLLOW_rule__Fluent__Group__3_in_rule__Fluent__Group__23386);
             rule__Fluent__Group__3();
 
             state._fsp--;
@@ -4683,33 +5303,33 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1401:1: rule__Fluent__Group__2__Impl : ( ( rule__Fluent__Group_2__0 )? ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1617:1: rule__Fluent__Group__2__Impl : ( ( rule__Fluent__Group_2__0 )? ) ;
     public final void rule__Fluent__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1405:1: ( ( ( rule__Fluent__Group_2__0 )? ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1406:1: ( ( rule__Fluent__Group_2__0 )? )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1621:1: ( ( ( rule__Fluent__Group_2__0 )? ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1622:1: ( ( rule__Fluent__Group_2__0 )? )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1406:1: ( ( rule__Fluent__Group_2__0 )? )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1407:1: ( rule__Fluent__Group_2__0 )?
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1622:1: ( ( rule__Fluent__Group_2__0 )? )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1623:1: ( rule__Fluent__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getGroup_2()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1408:1: ( rule__Fluent__Group_2__0 )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1624:1: ( rule__Fluent__Group_2__0 )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA17_0==29) ) {
-                alt17=1;
+            if ( (LA19_0==30) ) {
+                alt19=1;
             }
-            switch (alt17) {
+            switch (alt19) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1408:2: rule__Fluent__Group_2__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1624:2: rule__Fluent__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Fluent__Group_2__0_in_rule__Fluent__Group__2__Impl2981);
+                    pushFollow(FOLLOW_rule__Fluent__Group_2__0_in_rule__Fluent__Group__2__Impl3413);
                     rule__Fluent__Group_2__0();
 
                     state._fsp--;
@@ -4745,16 +5365,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group__3"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1418:1: rule__Fluent__Group__3 : rule__Fluent__Group__3__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1634:1: rule__Fluent__Group__3 : rule__Fluent__Group__3__Impl ;
     public final void rule__Fluent__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1422:1: ( rule__Fluent__Group__3__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1423:2: rule__Fluent__Group__3__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1638:1: ( rule__Fluent__Group__3__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1639:2: rule__Fluent__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Fluent__Group__3__Impl_in_rule__Fluent__Group__33012);
+            pushFollow(FOLLOW_rule__Fluent__Group__3__Impl_in_rule__Fluent__Group__33444);
             rule__Fluent__Group__3__Impl();
 
             state._fsp--;
@@ -4778,33 +5398,33 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group__3__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1429:1: rule__Fluent__Group__3__Impl : ( ( rule__Fluent__Group_3__0 )? ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1645:1: rule__Fluent__Group__3__Impl : ( ( rule__Fluent__Group_3__0 )? ) ;
     public final void rule__Fluent__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1433:1: ( ( ( rule__Fluent__Group_3__0 )? ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1434:1: ( ( rule__Fluent__Group_3__0 )? )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1649:1: ( ( ( rule__Fluent__Group_3__0 )? ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1650:1: ( ( rule__Fluent__Group_3__0 )? )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1434:1: ( ( rule__Fluent__Group_3__0 )? )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1435:1: ( rule__Fluent__Group_3__0 )?
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1650:1: ( ( rule__Fluent__Group_3__0 )? )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1651:1: ( rule__Fluent__Group_3__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getGroup_3()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1436:1: ( rule__Fluent__Group_3__0 )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1652:1: ( rule__Fluent__Group_3__0 )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA18_0==30) ) {
-                alt18=1;
+            if ( (LA20_0==31) ) {
+                alt20=1;
             }
-            switch (alt18) {
+            switch (alt20) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1436:2: rule__Fluent__Group_3__0
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1652:2: rule__Fluent__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Fluent__Group_3__0_in_rule__Fluent__Group__3__Impl3039);
+                    pushFollow(FOLLOW_rule__Fluent__Group_3__0_in_rule__Fluent__Group__3__Impl3471);
                     rule__Fluent__Group_3__0();
 
                     state._fsp--;
@@ -4840,21 +5460,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1454:1: rule__Fluent__Group_1__0 : rule__Fluent__Group_1__0__Impl rule__Fluent__Group_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1670:1: rule__Fluent__Group_1__0 : rule__Fluent__Group_1__0__Impl rule__Fluent__Group_1__1 ;
     public final void rule__Fluent__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1458:1: ( rule__Fluent__Group_1__0__Impl rule__Fluent__Group_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1459:2: rule__Fluent__Group_1__0__Impl rule__Fluent__Group_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1674:1: ( rule__Fluent__Group_1__0__Impl rule__Fluent__Group_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1675:2: rule__Fluent__Group_1__0__Impl rule__Fluent__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Fluent__Group_1__0__Impl_in_rule__Fluent__Group_1__03078);
+            pushFollow(FOLLOW_rule__Fluent__Group_1__0__Impl_in_rule__Fluent__Group_1__03510);
             rule__Fluent__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Fluent__Group_1__1_in_rule__Fluent__Group_1__03081);
+            pushFollow(FOLLOW_rule__Fluent__Group_1__1_in_rule__Fluent__Group_1__03513);
             rule__Fluent__Group_1__1();
 
             state._fsp--;
@@ -4878,22 +5498,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1466:1: rule__Fluent__Group_1__0__Impl : ( 'to' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1682:1: rule__Fluent__Group_1__0__Impl : ( 'to' ) ;
     public final void rule__Fluent__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1470:1: ( ( 'to' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1471:1: ( 'to' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1686:1: ( ( 'to' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1687:1: ( 'to' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1471:1: ( 'to' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1472:1: 'to'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1687:1: ( 'to' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1688:1: 'to'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getToKeyword_1_0()); 
             }
-            match(input,28,FOLLOW_28_in_rule__Fluent__Group_1__0__Impl3109); if (state.failed) return ;
+            match(input,29,FOLLOW_29_in_rule__Fluent__Group_1__0__Impl3541); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFluentAccess().getToKeyword_1_0()); 
             }
@@ -4919,16 +5539,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1485:1: rule__Fluent__Group_1__1 : rule__Fluent__Group_1__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1701:1: rule__Fluent__Group_1__1 : rule__Fluent__Group_1__1__Impl ;
     public final void rule__Fluent__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1489:1: ( rule__Fluent__Group_1__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1490:2: rule__Fluent__Group_1__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1705:1: ( rule__Fluent__Group_1__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1706:2: rule__Fluent__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Fluent__Group_1__1__Impl_in_rule__Fluent__Group_1__13140);
+            pushFollow(FOLLOW_rule__Fluent__Group_1__1__Impl_in_rule__Fluent__Group_1__13572);
             rule__Fluent__Group_1__1__Impl();
 
             state._fsp--;
@@ -4952,25 +5572,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1496:1: rule__Fluent__Group_1__1__Impl : ( ( rule__Fluent__ValuePartAssignment_1_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1712:1: rule__Fluent__Group_1__1__Impl : ( ( rule__Fluent__ValuePartAssignment_1_1 ) ) ;
     public final void rule__Fluent__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1500:1: ( ( ( rule__Fluent__ValuePartAssignment_1_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1501:1: ( ( rule__Fluent__ValuePartAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1716:1: ( ( ( rule__Fluent__ValuePartAssignment_1_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1717:1: ( ( rule__Fluent__ValuePartAssignment_1_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1501:1: ( ( rule__Fluent__ValuePartAssignment_1_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1502:1: ( rule__Fluent__ValuePartAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1717:1: ( ( rule__Fluent__ValuePartAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1718:1: ( rule__Fluent__ValuePartAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getValuePartAssignment_1_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1503:1: ( rule__Fluent__ValuePartAssignment_1_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1503:2: rule__Fluent__ValuePartAssignment_1_1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1719:1: ( rule__Fluent__ValuePartAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1719:2: rule__Fluent__ValuePartAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Fluent__ValuePartAssignment_1_1_in_rule__Fluent__Group_1__1__Impl3167);
+            pushFollow(FOLLOW_rule__Fluent__ValuePartAssignment_1_1_in_rule__Fluent__Group_1__1__Impl3599);
             rule__Fluent__ValuePartAssignment_1_1();
 
             state._fsp--;
@@ -5003,21 +5623,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_2__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1517:1: rule__Fluent__Group_2__0 : rule__Fluent__Group_2__0__Impl rule__Fluent__Group_2__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1733:1: rule__Fluent__Group_2__0 : rule__Fluent__Group_2__0__Impl rule__Fluent__Group_2__1 ;
     public final void rule__Fluent__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1521:1: ( rule__Fluent__Group_2__0__Impl rule__Fluent__Group_2__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1522:2: rule__Fluent__Group_2__0__Impl rule__Fluent__Group_2__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1737:1: ( rule__Fluent__Group_2__0__Impl rule__Fluent__Group_2__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1738:2: rule__Fluent__Group_2__0__Impl rule__Fluent__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Fluent__Group_2__0__Impl_in_rule__Fluent__Group_2__03201);
+            pushFollow(FOLLOW_rule__Fluent__Group_2__0__Impl_in_rule__Fluent__Group_2__03633);
             rule__Fluent__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Fluent__Group_2__1_in_rule__Fluent__Group_2__03204);
+            pushFollow(FOLLOW_rule__Fluent__Group_2__1_in_rule__Fluent__Group_2__03636);
             rule__Fluent__Group_2__1();
 
             state._fsp--;
@@ -5041,22 +5661,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_2__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1529:1: rule__Fluent__Group_2__0__Impl : ( 'in' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1745:1: rule__Fluent__Group_2__0__Impl : ( 'in' ) ;
     public final void rule__Fluent__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1533:1: ( ( 'in' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1534:1: ( 'in' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1749:1: ( ( 'in' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1750:1: ( 'in' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1534:1: ( 'in' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1535:1: 'in'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1750:1: ( 'in' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1751:1: 'in'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getInKeyword_2_0()); 
             }
-            match(input,29,FOLLOW_29_in_rule__Fluent__Group_2__0__Impl3232); if (state.failed) return ;
+            match(input,30,FOLLOW_30_in_rule__Fluent__Group_2__0__Impl3664); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFluentAccess().getInKeyword_2_0()); 
             }
@@ -5082,16 +5702,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_2__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1548:1: rule__Fluent__Group_2__1 : rule__Fluent__Group_2__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1764:1: rule__Fluent__Group_2__1 : rule__Fluent__Group_2__1__Impl ;
     public final void rule__Fluent__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1552:1: ( rule__Fluent__Group_2__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1553:2: rule__Fluent__Group_2__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1768:1: ( rule__Fluent__Group_2__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1769:2: rule__Fluent__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Fluent__Group_2__1__Impl_in_rule__Fluent__Group_2__13263);
+            pushFollow(FOLLOW_rule__Fluent__Group_2__1__Impl_in_rule__Fluent__Group_2__13695);
             rule__Fluent__Group_2__1__Impl();
 
             state._fsp--;
@@ -5115,25 +5735,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_2__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1559:1: rule__Fluent__Group_2__1__Impl : ( ( rule__Fluent__TimePartAssignment_2_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1775:1: rule__Fluent__Group_2__1__Impl : ( ( rule__Fluent__TimePartAssignment_2_1 ) ) ;
     public final void rule__Fluent__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1563:1: ( ( ( rule__Fluent__TimePartAssignment_2_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1564:1: ( ( rule__Fluent__TimePartAssignment_2_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1779:1: ( ( ( rule__Fluent__TimePartAssignment_2_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1780:1: ( ( rule__Fluent__TimePartAssignment_2_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1564:1: ( ( rule__Fluent__TimePartAssignment_2_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1565:1: ( rule__Fluent__TimePartAssignment_2_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1780:1: ( ( rule__Fluent__TimePartAssignment_2_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1781:1: ( rule__Fluent__TimePartAssignment_2_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getTimePartAssignment_2_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1566:1: ( rule__Fluent__TimePartAssignment_2_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1566:2: rule__Fluent__TimePartAssignment_2_1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1782:1: ( rule__Fluent__TimePartAssignment_2_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1782:2: rule__Fluent__TimePartAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Fluent__TimePartAssignment_2_1_in_rule__Fluent__Group_2__1__Impl3290);
+            pushFollow(FOLLOW_rule__Fluent__TimePartAssignment_2_1_in_rule__Fluent__Group_2__1__Impl3722);
             rule__Fluent__TimePartAssignment_2_1();
 
             state._fsp--;
@@ -5166,21 +5786,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_3__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1580:1: rule__Fluent__Group_3__0 : rule__Fluent__Group_3__0__Impl rule__Fluent__Group_3__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1796:1: rule__Fluent__Group_3__0 : rule__Fluent__Group_3__0__Impl rule__Fluent__Group_3__1 ;
     public final void rule__Fluent__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1584:1: ( rule__Fluent__Group_3__0__Impl rule__Fluent__Group_3__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1585:2: rule__Fluent__Group_3__0__Impl rule__Fluent__Group_3__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1800:1: ( rule__Fluent__Group_3__0__Impl rule__Fluent__Group_3__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1801:2: rule__Fluent__Group_3__0__Impl rule__Fluent__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Fluent__Group_3__0__Impl_in_rule__Fluent__Group_3__03324);
+            pushFollow(FOLLOW_rule__Fluent__Group_3__0__Impl_in_rule__Fluent__Group_3__03756);
             rule__Fluent__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Fluent__Group_3__1_in_rule__Fluent__Group_3__03327);
+            pushFollow(FOLLOW_rule__Fluent__Group_3__1_in_rule__Fluent__Group_3__03759);
             rule__Fluent__Group_3__1();
 
             state._fsp--;
@@ -5204,22 +5824,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_3__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1592:1: rule__Fluent__Group_3__0__Impl : ( 'if' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1808:1: rule__Fluent__Group_3__0__Impl : ( 'if' ) ;
     public final void rule__Fluent__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1596:1: ( ( 'if' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1597:1: ( 'if' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1812:1: ( ( 'if' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1813:1: ( 'if' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1597:1: ( 'if' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1598:1: 'if'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1813:1: ( 'if' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1814:1: 'if'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getIfKeyword_3_0()); 
             }
-            match(input,30,FOLLOW_30_in_rule__Fluent__Group_3__0__Impl3355); if (state.failed) return ;
+            match(input,31,FOLLOW_31_in_rule__Fluent__Group_3__0__Impl3787); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFluentAccess().getIfKeyword_3_0()); 
             }
@@ -5245,16 +5865,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_3__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1611:1: rule__Fluent__Group_3__1 : rule__Fluent__Group_3__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1827:1: rule__Fluent__Group_3__1 : rule__Fluent__Group_3__1__Impl ;
     public final void rule__Fluent__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1615:1: ( rule__Fluent__Group_3__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1616:2: rule__Fluent__Group_3__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1831:1: ( rule__Fluent__Group_3__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1832:2: rule__Fluent__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Fluent__Group_3__1__Impl_in_rule__Fluent__Group_3__13386);
+            pushFollow(FOLLOW_rule__Fluent__Group_3__1__Impl_in_rule__Fluent__Group_3__13818);
             rule__Fluent__Group_3__1__Impl();
 
             state._fsp--;
@@ -5278,25 +5898,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__Group_3__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1622:1: rule__Fluent__Group_3__1__Impl : ( ( rule__Fluent__CondPartAssignment_3_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1838:1: rule__Fluent__Group_3__1__Impl : ( ( rule__Fluent__CondPartAssignment_3_1 ) ) ;
     public final void rule__Fluent__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1626:1: ( ( ( rule__Fluent__CondPartAssignment_3_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1627:1: ( ( rule__Fluent__CondPartAssignment_3_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1842:1: ( ( ( rule__Fluent__CondPartAssignment_3_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1843:1: ( ( rule__Fluent__CondPartAssignment_3_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1627:1: ( ( rule__Fluent__CondPartAssignment_3_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1628:1: ( rule__Fluent__CondPartAssignment_3_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1843:1: ( ( rule__Fluent__CondPartAssignment_3_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1844:1: ( rule__Fluent__CondPartAssignment_3_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getCondPartAssignment_3_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1629:1: ( rule__Fluent__CondPartAssignment_3_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1629:2: rule__Fluent__CondPartAssignment_3_1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1845:1: ( rule__Fluent__CondPartAssignment_3_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1845:2: rule__Fluent__CondPartAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Fluent__CondPartAssignment_3_1_in_rule__Fluent__Group_3__1__Impl3413);
+            pushFollow(FOLLOW_rule__Fluent__CondPartAssignment_3_1_in_rule__Fluent__Group_3__1__Impl3845);
             rule__Fluent__CondPartAssignment_3_1();
 
             state._fsp--;
@@ -5329,16 +5949,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ToRule__Group_3__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1643:1: rule__ToRule__Group_3__0 : rule__ToRule__Group_3__0__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1859:1: rule__ToRule__Group_3__0 : rule__ToRule__Group_3__0__Impl ;
     public final void rule__ToRule__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1647:1: ( rule__ToRule__Group_3__0__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1648:2: rule__ToRule__Group_3__0__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1863:1: ( rule__ToRule__Group_3__0__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1864:2: rule__ToRule__Group_3__0__Impl
             {
-            pushFollow(FOLLOW_rule__ToRule__Group_3__0__Impl_in_rule__ToRule__Group_3__03447);
+            pushFollow(FOLLOW_rule__ToRule__Group_3__0__Impl_in_rule__ToRule__Group_3__03879);
             rule__ToRule__Group_3__0__Impl();
 
             state._fsp--;
@@ -5362,25 +5982,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ToRule__Group_3__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1654:1: rule__ToRule__Group_3__0__Impl : ( ( rule__ToRule__ExpressionAssignment_3_0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1870:1: rule__ToRule__Group_3__0__Impl : ( ( rule__ToRule__ExpressionAssignment_3_0 ) ) ;
     public final void rule__ToRule__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1658:1: ( ( ( rule__ToRule__ExpressionAssignment_3_0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1659:1: ( ( rule__ToRule__ExpressionAssignment_3_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1874:1: ( ( ( rule__ToRule__ExpressionAssignment_3_0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1875:1: ( ( rule__ToRule__ExpressionAssignment_3_0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1659:1: ( ( rule__ToRule__ExpressionAssignment_3_0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1660:1: ( rule__ToRule__ExpressionAssignment_3_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1875:1: ( ( rule__ToRule__ExpressionAssignment_3_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1876:1: ( rule__ToRule__ExpressionAssignment_3_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getToRuleAccess().getExpressionAssignment_3_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1661:1: ( rule__ToRule__ExpressionAssignment_3_0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1661:2: rule__ToRule__ExpressionAssignment_3_0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1877:1: ( rule__ToRule__ExpressionAssignment_3_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1877:2: rule__ToRule__ExpressionAssignment_3_0
             {
-            pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_3_0_in_rule__ToRule__Group_3__0__Impl3474);
+            pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_3_0_in_rule__ToRule__Group_3__0__Impl3906);
             rule__ToRule__ExpressionAssignment_3_0();
 
             state._fsp--;
@@ -5413,21 +6033,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1673:1: rule__Or__Group__0 : rule__Or__Group__0__Impl rule__Or__Group__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1889:1: rule__Or__Group__0 : rule__Or__Group__0__Impl rule__Or__Group__1 ;
     public final void rule__Or__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1677:1: ( rule__Or__Group__0__Impl rule__Or__Group__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1678:2: rule__Or__Group__0__Impl rule__Or__Group__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1893:1: ( rule__Or__Group__0__Impl rule__Or__Group__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1894:2: rule__Or__Group__0__Impl rule__Or__Group__1
             {
-            pushFollow(FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__03506);
+            pushFollow(FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__03938);
             rule__Or__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Or__Group__1_in_rule__Or__Group__03509);
+            pushFollow(FOLLOW_rule__Or__Group__1_in_rule__Or__Group__03941);
             rule__Or__Group__1();
 
             state._fsp--;
@@ -5451,22 +6071,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1685:1: rule__Or__Group__0__Impl : ( ruleAnd ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1901:1: rule__Or__Group__0__Impl : ( ruleAnd ) ;
     public final void rule__Or__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1689:1: ( ( ruleAnd ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1690:1: ( ruleAnd )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1905:1: ( ( ruleAnd ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1906:1: ( ruleAnd )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1690:1: ( ruleAnd )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1691:1: ruleAnd
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1906:1: ( ruleAnd )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1907:1: ruleAnd
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrAccess().getAndParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleAnd_in_rule__Or__Group__0__Impl3536);
+            pushFollow(FOLLOW_ruleAnd_in_rule__Or__Group__0__Impl3968);
             ruleAnd();
 
             state._fsp--;
@@ -5496,16 +6116,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1702:1: rule__Or__Group__1 : rule__Or__Group__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1918:1: rule__Or__Group__1 : rule__Or__Group__1__Impl ;
     public final void rule__Or__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1706:1: ( rule__Or__Group__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1707:2: rule__Or__Group__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1922:1: ( rule__Or__Group__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1923:2: rule__Or__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__13565);
+            pushFollow(FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__13997);
             rule__Or__Group__1__Impl();
 
             state._fsp--;
@@ -5529,37 +6149,37 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1713:1: rule__Or__Group__1__Impl : ( ( rule__Or__Group_1__0 )* ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1929:1: rule__Or__Group__1__Impl : ( ( rule__Or__Group_1__0 )* ) ;
     public final void rule__Or__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1717:1: ( ( ( rule__Or__Group_1__0 )* ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1718:1: ( ( rule__Or__Group_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1933:1: ( ( ( rule__Or__Group_1__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1934:1: ( ( rule__Or__Group_1__0 )* )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1718:1: ( ( rule__Or__Group_1__0 )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1719:1: ( rule__Or__Group_1__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1934:1: ( ( rule__Or__Group_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1935:1: ( rule__Or__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrAccess().getGroup_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1720:1: ( rule__Or__Group_1__0 )*
-            loop19:
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1936:1: ( rule__Or__Group_1__0 )*
+            loop21:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA19_0==31) ) {
-                    alt19=1;
+                if ( (LA21_0==32) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt21) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1720:2: rule__Or__Group_1__0
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1936:2: rule__Or__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Or__Group_1__0_in_rule__Or__Group__1__Impl3592);
+            	    pushFollow(FOLLOW_rule__Or__Group_1__0_in_rule__Or__Group__1__Impl4024);
             	    rule__Or__Group_1__0();
 
             	    state._fsp--;
@@ -5569,7 +6189,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop21;
                 }
             } while (true);
 
@@ -5598,21 +6218,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1734:1: rule__Or__Group_1__0 : rule__Or__Group_1__0__Impl rule__Or__Group_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1950:1: rule__Or__Group_1__0 : rule__Or__Group_1__0__Impl rule__Or__Group_1__1 ;
     public final void rule__Or__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1738:1: ( rule__Or__Group_1__0__Impl rule__Or__Group_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1739:2: rule__Or__Group_1__0__Impl rule__Or__Group_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1954:1: ( rule__Or__Group_1__0__Impl rule__Or__Group_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1955:2: rule__Or__Group_1__0__Impl rule__Or__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Or__Group_1__0__Impl_in_rule__Or__Group_1__03627);
+            pushFollow(FOLLOW_rule__Or__Group_1__0__Impl_in_rule__Or__Group_1__04059);
             rule__Or__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Or__Group_1__1_in_rule__Or__Group_1__03630);
+            pushFollow(FOLLOW_rule__Or__Group_1__1_in_rule__Or__Group_1__04062);
             rule__Or__Group_1__1();
 
             state._fsp--;
@@ -5636,23 +6256,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1746:1: rule__Or__Group_1__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1962:1: rule__Or__Group_1__0__Impl : ( () ) ;
     public final void rule__Or__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1750:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1751:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1966:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1967:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1751:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1752:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1967:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1968:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrAccess().getOrLeftAction_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1753:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1755:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1969:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1971:1: 
             {
             }
 
@@ -5677,21 +6297,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1765:1: rule__Or__Group_1__1 : rule__Or__Group_1__1__Impl rule__Or__Group_1__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1981:1: rule__Or__Group_1__1 : rule__Or__Group_1__1__Impl rule__Or__Group_1__2 ;
     public final void rule__Or__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1769:1: ( rule__Or__Group_1__1__Impl rule__Or__Group_1__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1770:2: rule__Or__Group_1__1__Impl rule__Or__Group_1__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1985:1: ( rule__Or__Group_1__1__Impl rule__Or__Group_1__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1986:2: rule__Or__Group_1__1__Impl rule__Or__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Or__Group_1__1__Impl_in_rule__Or__Group_1__13688);
+            pushFollow(FOLLOW_rule__Or__Group_1__1__Impl_in_rule__Or__Group_1__14120);
             rule__Or__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Or__Group_1__2_in_rule__Or__Group_1__13691);
+            pushFollow(FOLLOW_rule__Or__Group_1__2_in_rule__Or__Group_1__14123);
             rule__Or__Group_1__2();
 
             state._fsp--;
@@ -5715,22 +6335,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1777:1: rule__Or__Group_1__1__Impl : ( 'OR' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1993:1: rule__Or__Group_1__1__Impl : ( 'OR' ) ;
     public final void rule__Or__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1781:1: ( ( 'OR' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1782:1: ( 'OR' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1997:1: ( ( 'OR' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1998:1: ( 'OR' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1782:1: ( 'OR' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1783:1: 'OR'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1998:1: ( 'OR' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1999:1: 'OR'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrAccess().getORKeyword_1_1()); 
             }
-            match(input,31,FOLLOW_31_in_rule__Or__Group_1__1__Impl3719); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_rule__Or__Group_1__1__Impl4151); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOrAccess().getORKeyword_1_1()); 
             }
@@ -5756,16 +6376,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_1__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1796:1: rule__Or__Group_1__2 : rule__Or__Group_1__2__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2012:1: rule__Or__Group_1__2 : rule__Or__Group_1__2__Impl ;
     public final void rule__Or__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1800:1: ( rule__Or__Group_1__2__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1801:2: rule__Or__Group_1__2__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2016:1: ( rule__Or__Group_1__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2017:2: rule__Or__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__Or__Group_1__2__Impl_in_rule__Or__Group_1__23750);
+            pushFollow(FOLLOW_rule__Or__Group_1__2__Impl_in_rule__Or__Group_1__24182);
             rule__Or__Group_1__2__Impl();
 
             state._fsp--;
@@ -5789,25 +6409,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group_1__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1807:1: rule__Or__Group_1__2__Impl : ( ( rule__Or__RightAssignment_1_2 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2023:1: rule__Or__Group_1__2__Impl : ( ( rule__Or__RightAssignment_1_2 ) ) ;
     public final void rule__Or__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1811:1: ( ( ( rule__Or__RightAssignment_1_2 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1812:1: ( ( rule__Or__RightAssignment_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2027:1: ( ( ( rule__Or__RightAssignment_1_2 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2028:1: ( ( rule__Or__RightAssignment_1_2 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1812:1: ( ( rule__Or__RightAssignment_1_2 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1813:1: ( rule__Or__RightAssignment_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2028:1: ( ( rule__Or__RightAssignment_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2029:1: ( rule__Or__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrAccess().getRightAssignment_1_2()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1814:1: ( rule__Or__RightAssignment_1_2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1814:2: rule__Or__RightAssignment_1_2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2030:1: ( rule__Or__RightAssignment_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2030:2: rule__Or__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__Or__RightAssignment_1_2_in_rule__Or__Group_1__2__Impl3777);
+            pushFollow(FOLLOW_rule__Or__RightAssignment_1_2_in_rule__Or__Group_1__2__Impl4209);
             rule__Or__RightAssignment_1_2();
 
             state._fsp--;
@@ -5840,21 +6460,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_0__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1830:1: rule__And__Group_0__0 : rule__And__Group_0__0__Impl rule__And__Group_0__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2046:1: rule__And__Group_0__0 : rule__And__Group_0__0__Impl rule__And__Group_0__1 ;
     public final void rule__And__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1834:1: ( rule__And__Group_0__0__Impl rule__And__Group_0__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1835:2: rule__And__Group_0__0__Impl rule__And__Group_0__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2050:1: ( rule__And__Group_0__0__Impl rule__And__Group_0__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2051:2: rule__And__Group_0__0__Impl rule__And__Group_0__1
             {
-            pushFollow(FOLLOW_rule__And__Group_0__0__Impl_in_rule__And__Group_0__03813);
+            pushFollow(FOLLOW_rule__And__Group_0__0__Impl_in_rule__And__Group_0__04245);
             rule__And__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_0__1_in_rule__And__Group_0__03816);
+            pushFollow(FOLLOW_rule__And__Group_0__1_in_rule__And__Group_0__04248);
             rule__And__Group_0__1();
 
             state._fsp--;
@@ -5878,22 +6498,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_0__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1842:1: rule__And__Group_0__0__Impl : ( ruleEquality ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2058:1: rule__And__Group_0__0__Impl : ( ruleEquality ) ;
     public final void rule__And__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1846:1: ( ( ruleEquality ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1847:1: ( ruleEquality )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2062:1: ( ( ruleEquality ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2063:1: ( ruleEquality )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1847:1: ( ruleEquality )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1848:1: ruleEquality
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2063:1: ( ruleEquality )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2064:1: ruleEquality
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getEqualityParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleEquality_in_rule__And__Group_0__0__Impl3843);
+            pushFollow(FOLLOW_ruleEquality_in_rule__And__Group_0__0__Impl4275);
             ruleEquality();
 
             state._fsp--;
@@ -5923,16 +6543,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_0__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1859:1: rule__And__Group_0__1 : rule__And__Group_0__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2075:1: rule__And__Group_0__1 : rule__And__Group_0__1__Impl ;
     public final void rule__And__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1863:1: ( rule__And__Group_0__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1864:2: rule__And__Group_0__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2079:1: ( rule__And__Group_0__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2080:2: rule__And__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__And__Group_0__1__Impl_in_rule__And__Group_0__13872);
+            pushFollow(FOLLOW_rule__And__Group_0__1__Impl_in_rule__And__Group_0__14304);
             rule__And__Group_0__1__Impl();
 
             state._fsp--;
@@ -5956,37 +6576,37 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_0__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1870:1: rule__And__Group_0__1__Impl : ( ( rule__And__Group_0_1__0 )* ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2086:1: rule__And__Group_0__1__Impl : ( ( rule__And__Group_0_1__0 )* ) ;
     public final void rule__And__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1874:1: ( ( ( rule__And__Group_0_1__0 )* ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1875:1: ( ( rule__And__Group_0_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2090:1: ( ( ( rule__And__Group_0_1__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2091:1: ( ( rule__And__Group_0_1__0 )* )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1875:1: ( ( rule__And__Group_0_1__0 )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1876:1: ( rule__And__Group_0_1__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2091:1: ( ( rule__And__Group_0_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2092:1: ( rule__And__Group_0_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getGroup_0_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1877:1: ( rule__And__Group_0_1__0 )*
-            loop20:
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2093:1: ( rule__And__Group_0_1__0 )*
+            loop22:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                if ( (LA20_0==32) ) {
-                    alt20=1;
+                if ( (LA22_0==33) ) {
+                    alt22=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt22) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1877:2: rule__And__Group_0_1__0
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2093:2: rule__And__Group_0_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__And__Group_0_1__0_in_rule__And__Group_0__1__Impl3899);
+            	    pushFollow(FOLLOW_rule__And__Group_0_1__0_in_rule__And__Group_0__1__Impl4331);
             	    rule__And__Group_0_1__0();
 
             	    state._fsp--;
@@ -5996,7 +6616,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop22;
                 }
             } while (true);
 
@@ -6025,21 +6645,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_0_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1891:1: rule__And__Group_0_1__0 : rule__And__Group_0_1__0__Impl rule__And__Group_0_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2107:1: rule__And__Group_0_1__0 : rule__And__Group_0_1__0__Impl rule__And__Group_0_1__1 ;
     public final void rule__And__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1895:1: ( rule__And__Group_0_1__0__Impl rule__And__Group_0_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1896:2: rule__And__Group_0_1__0__Impl rule__And__Group_0_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2111:1: ( rule__And__Group_0_1__0__Impl rule__And__Group_0_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2112:2: rule__And__Group_0_1__0__Impl rule__And__Group_0_1__1
             {
-            pushFollow(FOLLOW_rule__And__Group_0_1__0__Impl_in_rule__And__Group_0_1__03934);
+            pushFollow(FOLLOW_rule__And__Group_0_1__0__Impl_in_rule__And__Group_0_1__04366);
             rule__And__Group_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_0_1__1_in_rule__And__Group_0_1__03937);
+            pushFollow(FOLLOW_rule__And__Group_0_1__1_in_rule__And__Group_0_1__04369);
             rule__And__Group_0_1__1();
 
             state._fsp--;
@@ -6063,23 +6683,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_0_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1903:1: rule__And__Group_0_1__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2119:1: rule__And__Group_0_1__0__Impl : ( () ) ;
     public final void rule__And__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1907:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1908:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2123:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2124:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1908:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1909:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2124:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2125:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getAndLeftAction_0_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1910:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1912:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2126:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2128:1: 
             {
             }
 
@@ -6104,21 +6724,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_0_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1922:1: rule__And__Group_0_1__1 : rule__And__Group_0_1__1__Impl rule__And__Group_0_1__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2138:1: rule__And__Group_0_1__1 : rule__And__Group_0_1__1__Impl rule__And__Group_0_1__2 ;
     public final void rule__And__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1926:1: ( rule__And__Group_0_1__1__Impl rule__And__Group_0_1__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1927:2: rule__And__Group_0_1__1__Impl rule__And__Group_0_1__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2142:1: ( rule__And__Group_0_1__1__Impl rule__And__Group_0_1__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2143:2: rule__And__Group_0_1__1__Impl rule__And__Group_0_1__2
             {
-            pushFollow(FOLLOW_rule__And__Group_0_1__1__Impl_in_rule__And__Group_0_1__13995);
+            pushFollow(FOLLOW_rule__And__Group_0_1__1__Impl_in_rule__And__Group_0_1__14427);
             rule__And__Group_0_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_0_1__2_in_rule__And__Group_0_1__13998);
+            pushFollow(FOLLOW_rule__And__Group_0_1__2_in_rule__And__Group_0_1__14430);
             rule__And__Group_0_1__2();
 
             state._fsp--;
@@ -6142,22 +6762,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_0_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1934:1: rule__And__Group_0_1__1__Impl : ( 'AND' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2150:1: rule__And__Group_0_1__1__Impl : ( 'AND' ) ;
     public final void rule__And__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1938:1: ( ( 'AND' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1939:1: ( 'AND' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2154:1: ( ( 'AND' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2155:1: ( 'AND' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1939:1: ( 'AND' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1940:1: 'AND'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2155:1: ( 'AND' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2156:1: 'AND'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getANDKeyword_0_1_1()); 
             }
-            match(input,32,FOLLOW_32_in_rule__And__Group_0_1__1__Impl4026); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_rule__And__Group_0_1__1__Impl4458); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAndAccess().getANDKeyword_0_1_1()); 
             }
@@ -6183,16 +6803,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_0_1__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1953:1: rule__And__Group_0_1__2 : rule__And__Group_0_1__2__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2169:1: rule__And__Group_0_1__2 : rule__And__Group_0_1__2__Impl ;
     public final void rule__And__Group_0_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1957:1: ( rule__And__Group_0_1__2__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1958:2: rule__And__Group_0_1__2__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2173:1: ( rule__And__Group_0_1__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2174:2: rule__And__Group_0_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__And__Group_0_1__2__Impl_in_rule__And__Group_0_1__24057);
+            pushFollow(FOLLOW_rule__And__Group_0_1__2__Impl_in_rule__And__Group_0_1__24489);
             rule__And__Group_0_1__2__Impl();
 
             state._fsp--;
@@ -6216,25 +6836,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_0_1__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1964:1: rule__And__Group_0_1__2__Impl : ( ( rule__And__RightAssignment_0_1_2 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2180:1: rule__And__Group_0_1__2__Impl : ( ( rule__And__RightAssignment_0_1_2 ) ) ;
     public final void rule__And__Group_0_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1968:1: ( ( ( rule__And__RightAssignment_0_1_2 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1969:1: ( ( rule__And__RightAssignment_0_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2184:1: ( ( ( rule__And__RightAssignment_0_1_2 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2185:1: ( ( rule__And__RightAssignment_0_1_2 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1969:1: ( ( rule__And__RightAssignment_0_1_2 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1970:1: ( rule__And__RightAssignment_0_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2185:1: ( ( rule__And__RightAssignment_0_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2186:1: ( rule__And__RightAssignment_0_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getRightAssignment_0_1_2()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1971:1: ( rule__And__RightAssignment_0_1_2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1971:2: rule__And__RightAssignment_0_1_2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2187:1: ( rule__And__RightAssignment_0_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2187:2: rule__And__RightAssignment_0_1_2
             {
-            pushFollow(FOLLOW_rule__And__RightAssignment_0_1_2_in_rule__And__Group_0_1__2__Impl4084);
+            pushFollow(FOLLOW_rule__And__RightAssignment_0_1_2_in_rule__And__Group_0_1__2__Impl4516);
             rule__And__RightAssignment_0_1_2();
 
             state._fsp--;
@@ -6267,21 +6887,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1987:1: rule__And__Group_1__0 : rule__And__Group_1__0__Impl rule__And__Group_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2203:1: rule__And__Group_1__0 : rule__And__Group_1__0__Impl rule__And__Group_1__1 ;
     public final void rule__And__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1991:1: ( rule__And__Group_1__0__Impl rule__And__Group_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1992:2: rule__And__Group_1__0__Impl rule__And__Group_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2207:1: ( rule__And__Group_1__0__Impl rule__And__Group_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2208:2: rule__And__Group_1__0__Impl rule__And__Group_1__1
             {
-            pushFollow(FOLLOW_rule__And__Group_1__0__Impl_in_rule__And__Group_1__04120);
+            pushFollow(FOLLOW_rule__And__Group_1__0__Impl_in_rule__And__Group_1__04552);
             rule__And__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_1__1_in_rule__And__Group_1__04123);
+            pushFollow(FOLLOW_rule__And__Group_1__1_in_rule__And__Group_1__04555);
             rule__And__Group_1__1();
 
             state._fsp--;
@@ -6305,25 +6925,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1999:1: rule__And__Group_1__0__Impl : ( ( ruleEquality ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2215:1: rule__And__Group_1__0__Impl : ( ( ruleEquality ) ) ;
     public final void rule__And__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2003:1: ( ( ( ruleEquality ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2004:1: ( ( ruleEquality ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2219:1: ( ( ( ruleEquality ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2220:1: ( ( ruleEquality ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2004:1: ( ( ruleEquality ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2005:1: ( ruleEquality )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2220:1: ( ( ruleEquality ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2221:1: ( ruleEquality )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getEqualityParserRuleCall_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2006:1: ( ruleEquality )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2006:3: ruleEquality
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2222:1: ( ruleEquality )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2222:3: ruleEquality
             {
-            pushFollow(FOLLOW_ruleEquality_in_rule__And__Group_1__0__Impl4151);
+            pushFollow(FOLLOW_ruleEquality_in_rule__And__Group_1__0__Impl4583);
             ruleEquality();
 
             state._fsp--;
@@ -6356,16 +6976,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2016:1: rule__And__Group_1__1 : rule__And__Group_1__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2232:1: rule__And__Group_1__1 : rule__And__Group_1__1__Impl ;
     public final void rule__And__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2020:1: ( rule__And__Group_1__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2021:2: rule__And__Group_1__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2236:1: ( rule__And__Group_1__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2237:2: rule__And__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__And__Group_1__1__Impl_in_rule__And__Group_1__14181);
+            pushFollow(FOLLOW_rule__And__Group_1__1__Impl_in_rule__And__Group_1__14613);
             rule__And__Group_1__1__Impl();
 
             state._fsp--;
@@ -6389,37 +7009,37 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2027:1: rule__And__Group_1__1__Impl : ( ( rule__And__Group_1_1__0 )* ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2243:1: rule__And__Group_1__1__Impl : ( ( rule__And__Group_1_1__0 )* ) ;
     public final void rule__And__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2031:1: ( ( ( rule__And__Group_1_1__0 )* ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2032:1: ( ( rule__And__Group_1_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2247:1: ( ( ( rule__And__Group_1_1__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2248:1: ( ( rule__And__Group_1_1__0 )* )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2032:1: ( ( rule__And__Group_1_1__0 )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2033:1: ( rule__And__Group_1_1__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2248:1: ( ( rule__And__Group_1_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2249:1: ( rule__And__Group_1_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getGroup_1_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2034:1: ( rule__And__Group_1_1__0 )*
-            loop21:
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2250:1: ( rule__And__Group_1_1__0 )*
+            loop23:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( (LA21_0==32) ) {
-                    alt21=1;
+                if ( (LA23_0==33) ) {
+                    alt23=1;
                 }
 
 
-                switch (alt21) {
+                switch (alt23) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2034:2: rule__And__Group_1_1__0
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2250:2: rule__And__Group_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__And__Group_1_1__0_in_rule__And__Group_1__1__Impl4208);
+            	    pushFollow(FOLLOW_rule__And__Group_1_1__0_in_rule__And__Group_1__1__Impl4640);
             	    rule__And__Group_1_1__0();
 
             	    state._fsp--;
@@ -6429,7 +7049,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop23;
                 }
             } while (true);
 
@@ -6458,21 +7078,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_1_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2048:1: rule__And__Group_1_1__0 : rule__And__Group_1_1__0__Impl rule__And__Group_1_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2264:1: rule__And__Group_1_1__0 : rule__And__Group_1_1__0__Impl rule__And__Group_1_1__1 ;
     public final void rule__And__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2052:1: ( rule__And__Group_1_1__0__Impl rule__And__Group_1_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2053:2: rule__And__Group_1_1__0__Impl rule__And__Group_1_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2268:1: ( rule__And__Group_1_1__0__Impl rule__And__Group_1_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2269:2: rule__And__Group_1_1__0__Impl rule__And__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__And__Group_1_1__0__Impl_in_rule__And__Group_1_1__04243);
+            pushFollow(FOLLOW_rule__And__Group_1_1__0__Impl_in_rule__And__Group_1_1__04675);
             rule__And__Group_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_1_1__1_in_rule__And__Group_1_1__04246);
+            pushFollow(FOLLOW_rule__And__Group_1_1__1_in_rule__And__Group_1_1__04678);
             rule__And__Group_1_1__1();
 
             state._fsp--;
@@ -6496,23 +7116,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_1_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2060:1: rule__And__Group_1_1__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2276:1: rule__And__Group_1_1__0__Impl : ( () ) ;
     public final void rule__And__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2064:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2065:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2280:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2281:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2065:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2066:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2281:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2282:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getAndLeftAction_1_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2067:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2069:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2283:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2285:1: 
             {
             }
 
@@ -6537,21 +7157,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_1_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2079:1: rule__And__Group_1_1__1 : rule__And__Group_1_1__1__Impl rule__And__Group_1_1__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2295:1: rule__And__Group_1_1__1 : rule__And__Group_1_1__1__Impl rule__And__Group_1_1__2 ;
     public final void rule__And__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2083:1: ( rule__And__Group_1_1__1__Impl rule__And__Group_1_1__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2084:2: rule__And__Group_1_1__1__Impl rule__And__Group_1_1__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2299:1: ( rule__And__Group_1_1__1__Impl rule__And__Group_1_1__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2300:2: rule__And__Group_1_1__1__Impl rule__And__Group_1_1__2
             {
-            pushFollow(FOLLOW_rule__And__Group_1_1__1__Impl_in_rule__And__Group_1_1__14304);
+            pushFollow(FOLLOW_rule__And__Group_1_1__1__Impl_in_rule__And__Group_1_1__14736);
             rule__And__Group_1_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_1_1__2_in_rule__And__Group_1_1__14307);
+            pushFollow(FOLLOW_rule__And__Group_1_1__2_in_rule__And__Group_1_1__14739);
             rule__And__Group_1_1__2();
 
             state._fsp--;
@@ -6575,22 +7195,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_1_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2091:1: rule__And__Group_1_1__1__Impl : ( 'AND' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2307:1: rule__And__Group_1_1__1__Impl : ( 'AND' ) ;
     public final void rule__And__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2095:1: ( ( 'AND' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2096:1: ( 'AND' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2311:1: ( ( 'AND' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2312:1: ( 'AND' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2096:1: ( 'AND' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2097:1: 'AND'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2312:1: ( 'AND' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2313:1: 'AND'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getANDKeyword_1_1_1()); 
             }
-            match(input,32,FOLLOW_32_in_rule__And__Group_1_1__1__Impl4335); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_rule__And__Group_1_1__1__Impl4767); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAndAccess().getANDKeyword_1_1_1()); 
             }
@@ -6616,16 +7236,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_1_1__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2110:1: rule__And__Group_1_1__2 : rule__And__Group_1_1__2__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2326:1: rule__And__Group_1_1__2 : rule__And__Group_1_1__2__Impl ;
     public final void rule__And__Group_1_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2114:1: ( rule__And__Group_1_1__2__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2115:2: rule__And__Group_1_1__2__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2330:1: ( rule__And__Group_1_1__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2331:2: rule__And__Group_1_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__And__Group_1_1__2__Impl_in_rule__And__Group_1_1__24366);
+            pushFollow(FOLLOW_rule__And__Group_1_1__2__Impl_in_rule__And__Group_1_1__24798);
             rule__And__Group_1_1__2__Impl();
 
             state._fsp--;
@@ -6649,25 +7269,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_1_1__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2121:1: rule__And__Group_1_1__2__Impl : ( ( rule__And__RightAssignment_1_1_2 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2337:1: rule__And__Group_1_1__2__Impl : ( ( rule__And__RightAssignment_1_1_2 ) ) ;
     public final void rule__And__Group_1_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2125:1: ( ( ( rule__And__RightAssignment_1_1_2 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2126:1: ( ( rule__And__RightAssignment_1_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2341:1: ( ( ( rule__And__RightAssignment_1_1_2 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2342:1: ( ( rule__And__RightAssignment_1_1_2 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2126:1: ( ( rule__And__RightAssignment_1_1_2 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2127:1: ( rule__And__RightAssignment_1_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2342:1: ( ( rule__And__RightAssignment_1_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2343:1: ( rule__And__RightAssignment_1_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getRightAssignment_1_1_2()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2128:1: ( rule__And__RightAssignment_1_1_2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2128:2: rule__And__RightAssignment_1_1_2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2344:1: ( rule__And__RightAssignment_1_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2344:2: rule__And__RightAssignment_1_1_2
             {
-            pushFollow(FOLLOW_rule__And__RightAssignment_1_1_2_in_rule__And__Group_1_1__2__Impl4393);
+            pushFollow(FOLLOW_rule__And__RightAssignment_1_1_2_in_rule__And__Group_1_1__2__Impl4825);
             rule__And__RightAssignment_1_1_2();
 
             state._fsp--;
@@ -6700,21 +7320,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_2__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2144:1: rule__And__Group_2__0 : rule__And__Group_2__0__Impl rule__And__Group_2__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2360:1: rule__And__Group_2__0 : rule__And__Group_2__0__Impl rule__And__Group_2__1 ;
     public final void rule__And__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2148:1: ( rule__And__Group_2__0__Impl rule__And__Group_2__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2149:2: rule__And__Group_2__0__Impl rule__And__Group_2__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2364:1: ( rule__And__Group_2__0__Impl rule__And__Group_2__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2365:2: rule__And__Group_2__0__Impl rule__And__Group_2__1
             {
-            pushFollow(FOLLOW_rule__And__Group_2__0__Impl_in_rule__And__Group_2__04429);
+            pushFollow(FOLLOW_rule__And__Group_2__0__Impl_in_rule__And__Group_2__04861);
             rule__And__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_2__1_in_rule__And__Group_2__04432);
+            pushFollow(FOLLOW_rule__And__Group_2__1_in_rule__And__Group_2__04864);
             rule__And__Group_2__1();
 
             state._fsp--;
@@ -6738,25 +7358,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_2__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2156:1: rule__And__Group_2__0__Impl : ( ( ruleComparison ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2372:1: rule__And__Group_2__0__Impl : ( ( ruleComparison ) ) ;
     public final void rule__And__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2160:1: ( ( ( ruleComparison ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2161:1: ( ( ruleComparison ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2376:1: ( ( ( ruleComparison ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2377:1: ( ( ruleComparison ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2161:1: ( ( ruleComparison ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2162:1: ( ruleComparison )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2377:1: ( ( ruleComparison ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2378:1: ( ruleComparison )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getComparisonParserRuleCall_2_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2163:1: ( ruleComparison )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2163:3: ruleComparison
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2379:1: ( ruleComparison )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2379:3: ruleComparison
             {
-            pushFollow(FOLLOW_ruleComparison_in_rule__And__Group_2__0__Impl4460);
+            pushFollow(FOLLOW_ruleComparison_in_rule__And__Group_2__0__Impl4892);
             ruleComparison();
 
             state._fsp--;
@@ -6789,16 +7409,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_2__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2173:1: rule__And__Group_2__1 : rule__And__Group_2__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2389:1: rule__And__Group_2__1 : rule__And__Group_2__1__Impl ;
     public final void rule__And__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2177:1: ( rule__And__Group_2__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2178:2: rule__And__Group_2__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2393:1: ( rule__And__Group_2__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2394:2: rule__And__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__And__Group_2__1__Impl_in_rule__And__Group_2__14490);
+            pushFollow(FOLLOW_rule__And__Group_2__1__Impl_in_rule__And__Group_2__14922);
             rule__And__Group_2__1__Impl();
 
             state._fsp--;
@@ -6822,37 +7442,37 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_2__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2184:1: rule__And__Group_2__1__Impl : ( ( rule__And__Group_2_1__0 )* ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2400:1: rule__And__Group_2__1__Impl : ( ( rule__And__Group_2_1__0 )* ) ;
     public final void rule__And__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2188:1: ( ( ( rule__And__Group_2_1__0 )* ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2189:1: ( ( rule__And__Group_2_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2404:1: ( ( ( rule__And__Group_2_1__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2405:1: ( ( rule__And__Group_2_1__0 )* )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2189:1: ( ( rule__And__Group_2_1__0 )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2190:1: ( rule__And__Group_2_1__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2405:1: ( ( rule__And__Group_2_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2406:1: ( rule__And__Group_2_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getGroup_2_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2191:1: ( rule__And__Group_2_1__0 )*
-            loop22:
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2407:1: ( rule__And__Group_2_1__0 )*
+            loop24:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA22_0==32) ) {
-                    alt22=1;
+                if ( (LA24_0==33) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt24) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2191:2: rule__And__Group_2_1__0
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2407:2: rule__And__Group_2_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__And__Group_2_1__0_in_rule__And__Group_2__1__Impl4517);
+            	    pushFollow(FOLLOW_rule__And__Group_2_1__0_in_rule__And__Group_2__1__Impl4949);
             	    rule__And__Group_2_1__0();
 
             	    state._fsp--;
@@ -6862,7 +7482,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop24;
                 }
             } while (true);
 
@@ -6891,21 +7511,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_2_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2205:1: rule__And__Group_2_1__0 : rule__And__Group_2_1__0__Impl rule__And__Group_2_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2421:1: rule__And__Group_2_1__0 : rule__And__Group_2_1__0__Impl rule__And__Group_2_1__1 ;
     public final void rule__And__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2209:1: ( rule__And__Group_2_1__0__Impl rule__And__Group_2_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2210:2: rule__And__Group_2_1__0__Impl rule__And__Group_2_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2425:1: ( rule__And__Group_2_1__0__Impl rule__And__Group_2_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2426:2: rule__And__Group_2_1__0__Impl rule__And__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__And__Group_2_1__0__Impl_in_rule__And__Group_2_1__04552);
+            pushFollow(FOLLOW_rule__And__Group_2_1__0__Impl_in_rule__And__Group_2_1__04984);
             rule__And__Group_2_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_2_1__1_in_rule__And__Group_2_1__04555);
+            pushFollow(FOLLOW_rule__And__Group_2_1__1_in_rule__And__Group_2_1__04987);
             rule__And__Group_2_1__1();
 
             state._fsp--;
@@ -6929,23 +7549,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_2_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2217:1: rule__And__Group_2_1__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2433:1: rule__And__Group_2_1__0__Impl : ( () ) ;
     public final void rule__And__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2221:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2222:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2437:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2438:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2222:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2223:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2438:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2439:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getAndLeftAction_2_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2224:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2226:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2440:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2442:1: 
             {
             }
 
@@ -6970,21 +7590,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_2_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2236:1: rule__And__Group_2_1__1 : rule__And__Group_2_1__1__Impl rule__And__Group_2_1__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2452:1: rule__And__Group_2_1__1 : rule__And__Group_2_1__1__Impl rule__And__Group_2_1__2 ;
     public final void rule__And__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2240:1: ( rule__And__Group_2_1__1__Impl rule__And__Group_2_1__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2241:2: rule__And__Group_2_1__1__Impl rule__And__Group_2_1__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2456:1: ( rule__And__Group_2_1__1__Impl rule__And__Group_2_1__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2457:2: rule__And__Group_2_1__1__Impl rule__And__Group_2_1__2
             {
-            pushFollow(FOLLOW_rule__And__Group_2_1__1__Impl_in_rule__And__Group_2_1__14613);
+            pushFollow(FOLLOW_rule__And__Group_2_1__1__Impl_in_rule__And__Group_2_1__15045);
             rule__And__Group_2_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_2_1__2_in_rule__And__Group_2_1__14616);
+            pushFollow(FOLLOW_rule__And__Group_2_1__2_in_rule__And__Group_2_1__15048);
             rule__And__Group_2_1__2();
 
             state._fsp--;
@@ -7008,22 +7628,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_2_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2248:1: rule__And__Group_2_1__1__Impl : ( 'AND' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2464:1: rule__And__Group_2_1__1__Impl : ( 'AND' ) ;
     public final void rule__And__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2252:1: ( ( 'AND' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2253:1: ( 'AND' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2468:1: ( ( 'AND' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2469:1: ( 'AND' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2253:1: ( 'AND' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2254:1: 'AND'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2469:1: ( 'AND' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2470:1: 'AND'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getANDKeyword_2_1_1()); 
             }
-            match(input,32,FOLLOW_32_in_rule__And__Group_2_1__1__Impl4644); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_rule__And__Group_2_1__1__Impl5076); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAndAccess().getANDKeyword_2_1_1()); 
             }
@@ -7049,16 +7669,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_2_1__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2267:1: rule__And__Group_2_1__2 : rule__And__Group_2_1__2__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2483:1: rule__And__Group_2_1__2 : rule__And__Group_2_1__2__Impl ;
     public final void rule__And__Group_2_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2271:1: ( rule__And__Group_2_1__2__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2272:2: rule__And__Group_2_1__2__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2487:1: ( rule__And__Group_2_1__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2488:2: rule__And__Group_2_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__And__Group_2_1__2__Impl_in_rule__And__Group_2_1__24675);
+            pushFollow(FOLLOW_rule__And__Group_2_1__2__Impl_in_rule__And__Group_2_1__25107);
             rule__And__Group_2_1__2__Impl();
 
             state._fsp--;
@@ -7082,25 +7702,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_2_1__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2278:1: rule__And__Group_2_1__2__Impl : ( ( rule__And__RightAssignment_2_1_2 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2494:1: rule__And__Group_2_1__2__Impl : ( ( rule__And__RightAssignment_2_1_2 ) ) ;
     public final void rule__And__Group_2_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2282:1: ( ( ( rule__And__RightAssignment_2_1_2 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2283:1: ( ( rule__And__RightAssignment_2_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2498:1: ( ( ( rule__And__RightAssignment_2_1_2 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2499:1: ( ( rule__And__RightAssignment_2_1_2 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2283:1: ( ( rule__And__RightAssignment_2_1_2 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2284:1: ( rule__And__RightAssignment_2_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2499:1: ( ( rule__And__RightAssignment_2_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2500:1: ( rule__And__RightAssignment_2_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getRightAssignment_2_1_2()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2285:1: ( rule__And__RightAssignment_2_1_2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2285:2: rule__And__RightAssignment_2_1_2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2501:1: ( rule__And__RightAssignment_2_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2501:2: rule__And__RightAssignment_2_1_2
             {
-            pushFollow(FOLLOW_rule__And__RightAssignment_2_1_2_in_rule__And__Group_2_1__2__Impl4702);
+            pushFollow(FOLLOW_rule__And__RightAssignment_2_1_2_in_rule__And__Group_2_1__2__Impl5134);
             rule__And__RightAssignment_2_1_2();
 
             state._fsp--;
@@ -7133,21 +7753,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_3__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2301:1: rule__And__Group_3__0 : rule__And__Group_3__0__Impl rule__And__Group_3__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2517:1: rule__And__Group_3__0 : rule__And__Group_3__0__Impl rule__And__Group_3__1 ;
     public final void rule__And__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2305:1: ( rule__And__Group_3__0__Impl rule__And__Group_3__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2306:2: rule__And__Group_3__0__Impl rule__And__Group_3__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2521:1: ( rule__And__Group_3__0__Impl rule__And__Group_3__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2522:2: rule__And__Group_3__0__Impl rule__And__Group_3__1
             {
-            pushFollow(FOLLOW_rule__And__Group_3__0__Impl_in_rule__And__Group_3__04738);
+            pushFollow(FOLLOW_rule__And__Group_3__0__Impl_in_rule__And__Group_3__05170);
             rule__And__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_3__1_in_rule__And__Group_3__04741);
+            pushFollow(FOLLOW_rule__And__Group_3__1_in_rule__And__Group_3__05173);
             rule__And__Group_3__1();
 
             state._fsp--;
@@ -7171,25 +7791,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_3__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2313:1: rule__And__Group_3__0__Impl : ( ( ruleComparison ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2529:1: rule__And__Group_3__0__Impl : ( ( ruleComparison ) ) ;
     public final void rule__And__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2317:1: ( ( ( ruleComparison ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2318:1: ( ( ruleComparison ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2533:1: ( ( ( ruleComparison ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2534:1: ( ( ruleComparison ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2318:1: ( ( ruleComparison ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2319:1: ( ruleComparison )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2534:1: ( ( ruleComparison ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2535:1: ( ruleComparison )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getComparisonParserRuleCall_3_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2320:1: ( ruleComparison )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2320:3: ruleComparison
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2536:1: ( ruleComparison )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2536:3: ruleComparison
             {
-            pushFollow(FOLLOW_ruleComparison_in_rule__And__Group_3__0__Impl4769);
+            pushFollow(FOLLOW_ruleComparison_in_rule__And__Group_3__0__Impl5201);
             ruleComparison();
 
             state._fsp--;
@@ -7222,16 +7842,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_3__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2330:1: rule__And__Group_3__1 : rule__And__Group_3__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2546:1: rule__And__Group_3__1 : rule__And__Group_3__1__Impl ;
     public final void rule__And__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2334:1: ( rule__And__Group_3__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2335:2: rule__And__Group_3__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2550:1: ( rule__And__Group_3__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2551:2: rule__And__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__And__Group_3__1__Impl_in_rule__And__Group_3__14799);
+            pushFollow(FOLLOW_rule__And__Group_3__1__Impl_in_rule__And__Group_3__15231);
             rule__And__Group_3__1__Impl();
 
             state._fsp--;
@@ -7255,37 +7875,37 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_3__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2341:1: rule__And__Group_3__1__Impl : ( ( rule__And__Group_3_1__0 )* ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2557:1: rule__And__Group_3__1__Impl : ( ( rule__And__Group_3_1__0 )* ) ;
     public final void rule__And__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2345:1: ( ( ( rule__And__Group_3_1__0 )* ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2346:1: ( ( rule__And__Group_3_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2561:1: ( ( ( rule__And__Group_3_1__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2562:1: ( ( rule__And__Group_3_1__0 )* )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2346:1: ( ( rule__And__Group_3_1__0 )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2347:1: ( rule__And__Group_3_1__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2562:1: ( ( rule__And__Group_3_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2563:1: ( rule__And__Group_3_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getGroup_3_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2348:1: ( rule__And__Group_3_1__0 )*
-            loop23:
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2564:1: ( rule__And__Group_3_1__0 )*
+            loop25:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt25=2;
+                int LA25_0 = input.LA(1);
 
-                if ( (LA23_0==32) ) {
-                    alt23=1;
+                if ( (LA25_0==33) ) {
+                    alt25=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt25) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2348:2: rule__And__Group_3_1__0
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2564:2: rule__And__Group_3_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__And__Group_3_1__0_in_rule__And__Group_3__1__Impl4826);
+            	    pushFollow(FOLLOW_rule__And__Group_3_1__0_in_rule__And__Group_3__1__Impl5258);
             	    rule__And__Group_3_1__0();
 
             	    state._fsp--;
@@ -7295,7 +7915,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop25;
                 }
             } while (true);
 
@@ -7324,21 +7944,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_3_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2362:1: rule__And__Group_3_1__0 : rule__And__Group_3_1__0__Impl rule__And__Group_3_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2578:1: rule__And__Group_3_1__0 : rule__And__Group_3_1__0__Impl rule__And__Group_3_1__1 ;
     public final void rule__And__Group_3_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2366:1: ( rule__And__Group_3_1__0__Impl rule__And__Group_3_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2367:2: rule__And__Group_3_1__0__Impl rule__And__Group_3_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2582:1: ( rule__And__Group_3_1__0__Impl rule__And__Group_3_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2583:2: rule__And__Group_3_1__0__Impl rule__And__Group_3_1__1
             {
-            pushFollow(FOLLOW_rule__And__Group_3_1__0__Impl_in_rule__And__Group_3_1__04861);
+            pushFollow(FOLLOW_rule__And__Group_3_1__0__Impl_in_rule__And__Group_3_1__05293);
             rule__And__Group_3_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_3_1__1_in_rule__And__Group_3_1__04864);
+            pushFollow(FOLLOW_rule__And__Group_3_1__1_in_rule__And__Group_3_1__05296);
             rule__And__Group_3_1__1();
 
             state._fsp--;
@@ -7362,23 +7982,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_3_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2374:1: rule__And__Group_3_1__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2590:1: rule__And__Group_3_1__0__Impl : ( () ) ;
     public final void rule__And__Group_3_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2378:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2379:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2594:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2595:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2379:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2380:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2595:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2596:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getAndLeftAction_3_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2381:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2383:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2597:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2599:1: 
             {
             }
 
@@ -7403,21 +8023,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_3_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2393:1: rule__And__Group_3_1__1 : rule__And__Group_3_1__1__Impl rule__And__Group_3_1__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2609:1: rule__And__Group_3_1__1 : rule__And__Group_3_1__1__Impl rule__And__Group_3_1__2 ;
     public final void rule__And__Group_3_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2397:1: ( rule__And__Group_3_1__1__Impl rule__And__Group_3_1__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2398:2: rule__And__Group_3_1__1__Impl rule__And__Group_3_1__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2613:1: ( rule__And__Group_3_1__1__Impl rule__And__Group_3_1__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2614:2: rule__And__Group_3_1__1__Impl rule__And__Group_3_1__2
             {
-            pushFollow(FOLLOW_rule__And__Group_3_1__1__Impl_in_rule__And__Group_3_1__14922);
+            pushFollow(FOLLOW_rule__And__Group_3_1__1__Impl_in_rule__And__Group_3_1__15354);
             rule__And__Group_3_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group_3_1__2_in_rule__And__Group_3_1__14925);
+            pushFollow(FOLLOW_rule__And__Group_3_1__2_in_rule__And__Group_3_1__15357);
             rule__And__Group_3_1__2();
 
             state._fsp--;
@@ -7441,22 +8061,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_3_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2405:1: rule__And__Group_3_1__1__Impl : ( 'AND' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2621:1: rule__And__Group_3_1__1__Impl : ( 'AND' ) ;
     public final void rule__And__Group_3_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2409:1: ( ( 'AND' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2410:1: ( 'AND' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2625:1: ( ( 'AND' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2626:1: ( 'AND' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2410:1: ( 'AND' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2411:1: 'AND'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2626:1: ( 'AND' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2627:1: 'AND'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getANDKeyword_3_1_1()); 
             }
-            match(input,32,FOLLOW_32_in_rule__And__Group_3_1__1__Impl4953); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_rule__And__Group_3_1__1__Impl5385); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAndAccess().getANDKeyword_3_1_1()); 
             }
@@ -7482,16 +8102,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_3_1__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2424:1: rule__And__Group_3_1__2 : rule__And__Group_3_1__2__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2640:1: rule__And__Group_3_1__2 : rule__And__Group_3_1__2__Impl ;
     public final void rule__And__Group_3_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2428:1: ( rule__And__Group_3_1__2__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2429:2: rule__And__Group_3_1__2__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2644:1: ( rule__And__Group_3_1__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2645:2: rule__And__Group_3_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__And__Group_3_1__2__Impl_in_rule__And__Group_3_1__24984);
+            pushFollow(FOLLOW_rule__And__Group_3_1__2__Impl_in_rule__And__Group_3_1__25416);
             rule__And__Group_3_1__2__Impl();
 
             state._fsp--;
@@ -7515,25 +8135,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group_3_1__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2435:1: rule__And__Group_3_1__2__Impl : ( ( rule__And__RightAssignment_3_1_2 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2651:1: rule__And__Group_3_1__2__Impl : ( ( rule__And__RightAssignment_3_1_2 ) ) ;
     public final void rule__And__Group_3_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2439:1: ( ( ( rule__And__RightAssignment_3_1_2 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2440:1: ( ( rule__And__RightAssignment_3_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2655:1: ( ( ( rule__And__RightAssignment_3_1_2 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2656:1: ( ( rule__And__RightAssignment_3_1_2 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2440:1: ( ( rule__And__RightAssignment_3_1_2 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2441:1: ( rule__And__RightAssignment_3_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2656:1: ( ( rule__And__RightAssignment_3_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2657:1: ( rule__And__RightAssignment_3_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getRightAssignment_3_1_2()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2442:1: ( rule__And__RightAssignment_3_1_2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2442:2: rule__And__RightAssignment_3_1_2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2658:1: ( rule__And__RightAssignment_3_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2658:2: rule__And__RightAssignment_3_1_2
             {
-            pushFollow(FOLLOW_rule__And__RightAssignment_3_1_2_in_rule__And__Group_3_1__2__Impl5011);
+            pushFollow(FOLLOW_rule__And__RightAssignment_3_1_2_in_rule__And__Group_3_1__2__Impl5443);
             rule__And__RightAssignment_3_1_2();
 
             state._fsp--;
@@ -7566,21 +8186,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_0__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2458:1: rule__Equality__Group_0__0 : rule__Equality__Group_0__0__Impl rule__Equality__Group_0__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2674:1: rule__Equality__Group_0__0 : rule__Equality__Group_0__0__Impl rule__Equality__Group_0__1 ;
     public final void rule__Equality__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2462:1: ( rule__Equality__Group_0__0__Impl rule__Equality__Group_0__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2463:2: rule__Equality__Group_0__0__Impl rule__Equality__Group_0__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2678:1: ( rule__Equality__Group_0__0__Impl rule__Equality__Group_0__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2679:2: rule__Equality__Group_0__0__Impl rule__Equality__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Equality__Group_0__0__Impl_in_rule__Equality__Group_0__05047);
+            pushFollow(FOLLOW_rule__Equality__Group_0__0__Impl_in_rule__Equality__Group_0__05479);
             rule__Equality__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Equality__Group_0__1_in_rule__Equality__Group_0__05050);
+            pushFollow(FOLLOW_rule__Equality__Group_0__1_in_rule__Equality__Group_0__05482);
             rule__Equality__Group_0__1();
 
             state._fsp--;
@@ -7604,22 +8224,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_0__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2470:1: rule__Equality__Group_0__0__Impl : ( ruleFloatExpr ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2686:1: rule__Equality__Group_0__0__Impl : ( ruleFloatExpr ) ;
     public final void rule__Equality__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2474:1: ( ( ruleFloatExpr ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2475:1: ( ruleFloatExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2690:1: ( ( ruleFloatExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2691:1: ( ruleFloatExpr )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2475:1: ( ruleFloatExpr )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2476:1: ruleFloatExpr
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2691:1: ( ruleFloatExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2692:1: ruleFloatExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getFloatExprParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleFloatExpr_in_rule__Equality__Group_0__0__Impl5077);
+            pushFollow(FOLLOW_ruleFloatExpr_in_rule__Equality__Group_0__0__Impl5509);
             ruleFloatExpr();
 
             state._fsp--;
@@ -7649,16 +8269,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_0__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2487:1: rule__Equality__Group_0__1 : rule__Equality__Group_0__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2703:1: rule__Equality__Group_0__1 : rule__Equality__Group_0__1__Impl ;
     public final void rule__Equality__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2491:1: ( rule__Equality__Group_0__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2492:2: rule__Equality__Group_0__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2707:1: ( rule__Equality__Group_0__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2708:2: rule__Equality__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Equality__Group_0__1__Impl_in_rule__Equality__Group_0__15106);
+            pushFollow(FOLLOW_rule__Equality__Group_0__1__Impl_in_rule__Equality__Group_0__15538);
             rule__Equality__Group_0__1__Impl();
 
             state._fsp--;
@@ -7682,25 +8302,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_0__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2498:1: rule__Equality__Group_0__1__Impl : ( ( rule__Equality__Group_0_1__0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2714:1: rule__Equality__Group_0__1__Impl : ( ( rule__Equality__Group_0_1__0 ) ) ;
     public final void rule__Equality__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2502:1: ( ( ( rule__Equality__Group_0_1__0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2503:1: ( ( rule__Equality__Group_0_1__0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2718:1: ( ( ( rule__Equality__Group_0_1__0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2719:1: ( ( rule__Equality__Group_0_1__0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2503:1: ( ( rule__Equality__Group_0_1__0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2504:1: ( rule__Equality__Group_0_1__0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2719:1: ( ( rule__Equality__Group_0_1__0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2720:1: ( rule__Equality__Group_0_1__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getGroup_0_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2505:1: ( rule__Equality__Group_0_1__0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2505:2: rule__Equality__Group_0_1__0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2721:1: ( rule__Equality__Group_0_1__0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2721:2: rule__Equality__Group_0_1__0
             {
-            pushFollow(FOLLOW_rule__Equality__Group_0_1__0_in_rule__Equality__Group_0__1__Impl5133);
+            pushFollow(FOLLOW_rule__Equality__Group_0_1__0_in_rule__Equality__Group_0__1__Impl5565);
             rule__Equality__Group_0_1__0();
 
             state._fsp--;
@@ -7733,21 +8353,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_0_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2519:1: rule__Equality__Group_0_1__0 : rule__Equality__Group_0_1__0__Impl rule__Equality__Group_0_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2735:1: rule__Equality__Group_0_1__0 : rule__Equality__Group_0_1__0__Impl rule__Equality__Group_0_1__1 ;
     public final void rule__Equality__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2523:1: ( rule__Equality__Group_0_1__0__Impl rule__Equality__Group_0_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2524:2: rule__Equality__Group_0_1__0__Impl rule__Equality__Group_0_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2739:1: ( rule__Equality__Group_0_1__0__Impl rule__Equality__Group_0_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2740:2: rule__Equality__Group_0_1__0__Impl rule__Equality__Group_0_1__1
             {
-            pushFollow(FOLLOW_rule__Equality__Group_0_1__0__Impl_in_rule__Equality__Group_0_1__05167);
+            pushFollow(FOLLOW_rule__Equality__Group_0_1__0__Impl_in_rule__Equality__Group_0_1__05599);
             rule__Equality__Group_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Equality__Group_0_1__1_in_rule__Equality__Group_0_1__05170);
+            pushFollow(FOLLOW_rule__Equality__Group_0_1__1_in_rule__Equality__Group_0_1__05602);
             rule__Equality__Group_0_1__1();
 
             state._fsp--;
@@ -7771,23 +8391,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_0_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2531:1: rule__Equality__Group_0_1__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2747:1: rule__Equality__Group_0_1__0__Impl : ( () ) ;
     public final void rule__Equality__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2535:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2536:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2751:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2752:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2536:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2537:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2752:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2753:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getEqualityLeftAction_0_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2538:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2540:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2754:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2756:1: 
             {
             }
 
@@ -7812,21 +8432,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_0_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2550:1: rule__Equality__Group_0_1__1 : rule__Equality__Group_0_1__1__Impl rule__Equality__Group_0_1__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2766:1: rule__Equality__Group_0_1__1 : rule__Equality__Group_0_1__1__Impl rule__Equality__Group_0_1__2 ;
     public final void rule__Equality__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2554:1: ( rule__Equality__Group_0_1__1__Impl rule__Equality__Group_0_1__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2555:2: rule__Equality__Group_0_1__1__Impl rule__Equality__Group_0_1__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2770:1: ( rule__Equality__Group_0_1__1__Impl rule__Equality__Group_0_1__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2771:2: rule__Equality__Group_0_1__1__Impl rule__Equality__Group_0_1__2
             {
-            pushFollow(FOLLOW_rule__Equality__Group_0_1__1__Impl_in_rule__Equality__Group_0_1__15228);
+            pushFollow(FOLLOW_rule__Equality__Group_0_1__1__Impl_in_rule__Equality__Group_0_1__15660);
             rule__Equality__Group_0_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Equality__Group_0_1__2_in_rule__Equality__Group_0_1__15231);
+            pushFollow(FOLLOW_rule__Equality__Group_0_1__2_in_rule__Equality__Group_0_1__15663);
             rule__Equality__Group_0_1__2();
 
             state._fsp--;
@@ -7850,25 +8470,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_0_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2562:1: rule__Equality__Group_0_1__1__Impl : ( ( rule__Equality__OpAssignment_0_1_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2778:1: rule__Equality__Group_0_1__1__Impl : ( ( rule__Equality__OpAssignment_0_1_1 ) ) ;
     public final void rule__Equality__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2566:1: ( ( ( rule__Equality__OpAssignment_0_1_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2567:1: ( ( rule__Equality__OpAssignment_0_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2782:1: ( ( ( rule__Equality__OpAssignment_0_1_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2783:1: ( ( rule__Equality__OpAssignment_0_1_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2567:1: ( ( rule__Equality__OpAssignment_0_1_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2568:1: ( rule__Equality__OpAssignment_0_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2783:1: ( ( rule__Equality__OpAssignment_0_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2784:1: ( rule__Equality__OpAssignment_0_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getOpAssignment_0_1_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2569:1: ( rule__Equality__OpAssignment_0_1_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2569:2: rule__Equality__OpAssignment_0_1_1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2785:1: ( rule__Equality__OpAssignment_0_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2785:2: rule__Equality__OpAssignment_0_1_1
             {
-            pushFollow(FOLLOW_rule__Equality__OpAssignment_0_1_1_in_rule__Equality__Group_0_1__1__Impl5258);
+            pushFollow(FOLLOW_rule__Equality__OpAssignment_0_1_1_in_rule__Equality__Group_0_1__1__Impl5690);
             rule__Equality__OpAssignment_0_1_1();
 
             state._fsp--;
@@ -7901,16 +8521,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_0_1__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2579:1: rule__Equality__Group_0_1__2 : rule__Equality__Group_0_1__2__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2795:1: rule__Equality__Group_0_1__2 : rule__Equality__Group_0_1__2__Impl ;
     public final void rule__Equality__Group_0_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2583:1: ( rule__Equality__Group_0_1__2__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2584:2: rule__Equality__Group_0_1__2__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2799:1: ( rule__Equality__Group_0_1__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2800:2: rule__Equality__Group_0_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__Equality__Group_0_1__2__Impl_in_rule__Equality__Group_0_1__25288);
+            pushFollow(FOLLOW_rule__Equality__Group_0_1__2__Impl_in_rule__Equality__Group_0_1__25720);
             rule__Equality__Group_0_1__2__Impl();
 
             state._fsp--;
@@ -7934,25 +8554,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_0_1__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2590:1: rule__Equality__Group_0_1__2__Impl : ( ( rule__Equality__RightAssignment_0_1_2 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2806:1: rule__Equality__Group_0_1__2__Impl : ( ( rule__Equality__RightAssignment_0_1_2 ) ) ;
     public final void rule__Equality__Group_0_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2594:1: ( ( ( rule__Equality__RightAssignment_0_1_2 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2595:1: ( ( rule__Equality__RightAssignment_0_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2810:1: ( ( ( rule__Equality__RightAssignment_0_1_2 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2811:1: ( ( rule__Equality__RightAssignment_0_1_2 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2595:1: ( ( rule__Equality__RightAssignment_0_1_2 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2596:1: ( rule__Equality__RightAssignment_0_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2811:1: ( ( rule__Equality__RightAssignment_0_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2812:1: ( rule__Equality__RightAssignment_0_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getRightAssignment_0_1_2()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2597:1: ( rule__Equality__RightAssignment_0_1_2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2597:2: rule__Equality__RightAssignment_0_1_2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2813:1: ( rule__Equality__RightAssignment_0_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2813:2: rule__Equality__RightAssignment_0_1_2
             {
-            pushFollow(FOLLOW_rule__Equality__RightAssignment_0_1_2_in_rule__Equality__Group_0_1__2__Impl5315);
+            pushFollow(FOLLOW_rule__Equality__RightAssignment_0_1_2_in_rule__Equality__Group_0_1__2__Impl5747);
             rule__Equality__RightAssignment_0_1_2();
 
             state._fsp--;
@@ -7985,21 +8605,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2613:1: rule__Equality__Group_1__0 : rule__Equality__Group_1__0__Impl rule__Equality__Group_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2829:1: rule__Equality__Group_1__0 : rule__Equality__Group_1__0__Impl rule__Equality__Group_1__1 ;
     public final void rule__Equality__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2617:1: ( rule__Equality__Group_1__0__Impl rule__Equality__Group_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2618:2: rule__Equality__Group_1__0__Impl rule__Equality__Group_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2833:1: ( rule__Equality__Group_1__0__Impl rule__Equality__Group_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2834:2: rule__Equality__Group_1__0__Impl rule__Equality__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Equality__Group_1__0__Impl_in_rule__Equality__Group_1__05351);
+            pushFollow(FOLLOW_rule__Equality__Group_1__0__Impl_in_rule__Equality__Group_1__05783);
             rule__Equality__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Equality__Group_1__1_in_rule__Equality__Group_1__05354);
+            pushFollow(FOLLOW_rule__Equality__Group_1__1_in_rule__Equality__Group_1__05786);
             rule__Equality__Group_1__1();
 
             state._fsp--;
@@ -8023,25 +8643,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2625:1: rule__Equality__Group_1__0__Impl : ( ( ruleStringExpr ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2841:1: rule__Equality__Group_1__0__Impl : ( ( ruleStringExpr ) ) ;
     public final void rule__Equality__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2629:1: ( ( ( ruleStringExpr ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2630:1: ( ( ruleStringExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2845:1: ( ( ( ruleStringExpr ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2846:1: ( ( ruleStringExpr ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2630:1: ( ( ruleStringExpr ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2631:1: ( ruleStringExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2846:1: ( ( ruleStringExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2847:1: ( ruleStringExpr )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getStringExprParserRuleCall_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2632:1: ( ruleStringExpr )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2632:3: ruleStringExpr
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2848:1: ( ruleStringExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2848:3: ruleStringExpr
             {
-            pushFollow(FOLLOW_ruleStringExpr_in_rule__Equality__Group_1__0__Impl5382);
+            pushFollow(FOLLOW_ruleStringExpr_in_rule__Equality__Group_1__0__Impl5814);
             ruleStringExpr();
 
             state._fsp--;
@@ -8074,16 +8694,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2642:1: rule__Equality__Group_1__1 : rule__Equality__Group_1__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2858:1: rule__Equality__Group_1__1 : rule__Equality__Group_1__1__Impl ;
     public final void rule__Equality__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2646:1: ( rule__Equality__Group_1__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2647:2: rule__Equality__Group_1__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2862:1: ( rule__Equality__Group_1__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2863:2: rule__Equality__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Equality__Group_1__1__Impl_in_rule__Equality__Group_1__15412);
+            pushFollow(FOLLOW_rule__Equality__Group_1__1__Impl_in_rule__Equality__Group_1__15844);
             rule__Equality__Group_1__1__Impl();
 
             state._fsp--;
@@ -8107,37 +8727,37 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2653:1: rule__Equality__Group_1__1__Impl : ( ( rule__Equality__Group_1_1__0 )* ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2869:1: rule__Equality__Group_1__1__Impl : ( ( rule__Equality__Group_1_1__0 )* ) ;
     public final void rule__Equality__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2657:1: ( ( ( rule__Equality__Group_1_1__0 )* ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2658:1: ( ( rule__Equality__Group_1_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2873:1: ( ( ( rule__Equality__Group_1_1__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2874:1: ( ( rule__Equality__Group_1_1__0 )* )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2658:1: ( ( rule__Equality__Group_1_1__0 )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2659:1: ( rule__Equality__Group_1_1__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2874:1: ( ( rule__Equality__Group_1_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2875:1: ( rule__Equality__Group_1_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getGroup_1_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2660:1: ( rule__Equality__Group_1_1__0 )*
-            loop24:
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2876:1: ( rule__Equality__Group_1_1__0 )*
+            loop26:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt26=2;
+                int LA26_0 = input.LA(1);
 
-                if ( ((LA24_0>=12 && LA24_0<=13)) ) {
-                    alt24=1;
+                if ( ((LA26_0>=12 && LA26_0<=13)) ) {
+                    alt26=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt26) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2660:2: rule__Equality__Group_1_1__0
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2876:2: rule__Equality__Group_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Equality__Group_1_1__0_in_rule__Equality__Group_1__1__Impl5439);
+            	    pushFollow(FOLLOW_rule__Equality__Group_1_1__0_in_rule__Equality__Group_1__1__Impl5871);
             	    rule__Equality__Group_1_1__0();
 
             	    state._fsp--;
@@ -8147,7 +8767,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop26;
                 }
             } while (true);
 
@@ -8176,21 +8796,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_1_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2674:1: rule__Equality__Group_1_1__0 : rule__Equality__Group_1_1__0__Impl rule__Equality__Group_1_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2890:1: rule__Equality__Group_1_1__0 : rule__Equality__Group_1_1__0__Impl rule__Equality__Group_1_1__1 ;
     public final void rule__Equality__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2678:1: ( rule__Equality__Group_1_1__0__Impl rule__Equality__Group_1_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2679:2: rule__Equality__Group_1_1__0__Impl rule__Equality__Group_1_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2894:1: ( rule__Equality__Group_1_1__0__Impl rule__Equality__Group_1_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2895:2: rule__Equality__Group_1_1__0__Impl rule__Equality__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__Equality__Group_1_1__0__Impl_in_rule__Equality__Group_1_1__05474);
+            pushFollow(FOLLOW_rule__Equality__Group_1_1__0__Impl_in_rule__Equality__Group_1_1__05906);
             rule__Equality__Group_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Equality__Group_1_1__1_in_rule__Equality__Group_1_1__05477);
+            pushFollow(FOLLOW_rule__Equality__Group_1_1__1_in_rule__Equality__Group_1_1__05909);
             rule__Equality__Group_1_1__1();
 
             state._fsp--;
@@ -8214,23 +8834,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_1_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2686:1: rule__Equality__Group_1_1__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2902:1: rule__Equality__Group_1_1__0__Impl : ( () ) ;
     public final void rule__Equality__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2690:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2691:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2906:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2907:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2691:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2692:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2907:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2908:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getEqualityLeftAction_1_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2693:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2695:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2909:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2911:1: 
             {
             }
 
@@ -8255,21 +8875,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_1_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2705:1: rule__Equality__Group_1_1__1 : rule__Equality__Group_1_1__1__Impl rule__Equality__Group_1_1__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2921:1: rule__Equality__Group_1_1__1 : rule__Equality__Group_1_1__1__Impl rule__Equality__Group_1_1__2 ;
     public final void rule__Equality__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2709:1: ( rule__Equality__Group_1_1__1__Impl rule__Equality__Group_1_1__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2710:2: rule__Equality__Group_1_1__1__Impl rule__Equality__Group_1_1__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2925:1: ( rule__Equality__Group_1_1__1__Impl rule__Equality__Group_1_1__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2926:2: rule__Equality__Group_1_1__1__Impl rule__Equality__Group_1_1__2
             {
-            pushFollow(FOLLOW_rule__Equality__Group_1_1__1__Impl_in_rule__Equality__Group_1_1__15535);
+            pushFollow(FOLLOW_rule__Equality__Group_1_1__1__Impl_in_rule__Equality__Group_1_1__15967);
             rule__Equality__Group_1_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Equality__Group_1_1__2_in_rule__Equality__Group_1_1__15538);
+            pushFollow(FOLLOW_rule__Equality__Group_1_1__2_in_rule__Equality__Group_1_1__15970);
             rule__Equality__Group_1_1__2();
 
             state._fsp--;
@@ -8293,25 +8913,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_1_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2717:1: rule__Equality__Group_1_1__1__Impl : ( ( rule__Equality__OpAssignment_1_1_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2933:1: rule__Equality__Group_1_1__1__Impl : ( ( rule__Equality__OpAssignment_1_1_1 ) ) ;
     public final void rule__Equality__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2721:1: ( ( ( rule__Equality__OpAssignment_1_1_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2722:1: ( ( rule__Equality__OpAssignment_1_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2937:1: ( ( ( rule__Equality__OpAssignment_1_1_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2938:1: ( ( rule__Equality__OpAssignment_1_1_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2722:1: ( ( rule__Equality__OpAssignment_1_1_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2723:1: ( rule__Equality__OpAssignment_1_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2938:1: ( ( rule__Equality__OpAssignment_1_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2939:1: ( rule__Equality__OpAssignment_1_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getOpAssignment_1_1_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2724:1: ( rule__Equality__OpAssignment_1_1_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2724:2: rule__Equality__OpAssignment_1_1_1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2940:1: ( rule__Equality__OpAssignment_1_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2940:2: rule__Equality__OpAssignment_1_1_1
             {
-            pushFollow(FOLLOW_rule__Equality__OpAssignment_1_1_1_in_rule__Equality__Group_1_1__1__Impl5565);
+            pushFollow(FOLLOW_rule__Equality__OpAssignment_1_1_1_in_rule__Equality__Group_1_1__1__Impl5997);
             rule__Equality__OpAssignment_1_1_1();
 
             state._fsp--;
@@ -8344,16 +8964,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_1_1__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2734:1: rule__Equality__Group_1_1__2 : rule__Equality__Group_1_1__2__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2950:1: rule__Equality__Group_1_1__2 : rule__Equality__Group_1_1__2__Impl ;
     public final void rule__Equality__Group_1_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2738:1: ( rule__Equality__Group_1_1__2__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2739:2: rule__Equality__Group_1_1__2__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2954:1: ( rule__Equality__Group_1_1__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2955:2: rule__Equality__Group_1_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__Equality__Group_1_1__2__Impl_in_rule__Equality__Group_1_1__25595);
+            pushFollow(FOLLOW_rule__Equality__Group_1_1__2__Impl_in_rule__Equality__Group_1_1__26027);
             rule__Equality__Group_1_1__2__Impl();
 
             state._fsp--;
@@ -8377,25 +8997,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__Group_1_1__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2745:1: rule__Equality__Group_1_1__2__Impl : ( ( rule__Equality__RightAssignment_1_1_2 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2961:1: rule__Equality__Group_1_1__2__Impl : ( ( rule__Equality__RightAssignment_1_1_2 ) ) ;
     public final void rule__Equality__Group_1_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2749:1: ( ( ( rule__Equality__RightAssignment_1_1_2 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2750:1: ( ( rule__Equality__RightAssignment_1_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2965:1: ( ( ( rule__Equality__RightAssignment_1_1_2 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2966:1: ( ( rule__Equality__RightAssignment_1_1_2 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2750:1: ( ( rule__Equality__RightAssignment_1_1_2 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2751:1: ( rule__Equality__RightAssignment_1_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2966:1: ( ( rule__Equality__RightAssignment_1_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2967:1: ( rule__Equality__RightAssignment_1_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getRightAssignment_1_1_2()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2752:1: ( rule__Equality__RightAssignment_1_1_2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2752:2: rule__Equality__RightAssignment_1_1_2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2968:1: ( rule__Equality__RightAssignment_1_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2968:2: rule__Equality__RightAssignment_1_1_2
             {
-            pushFollow(FOLLOW_rule__Equality__RightAssignment_1_1_2_in_rule__Equality__Group_1_1__2__Impl5622);
+            pushFollow(FOLLOW_rule__Equality__RightAssignment_1_1_2_in_rule__Equality__Group_1_1__2__Impl6054);
             rule__Equality__RightAssignment_1_1_2();
 
             state._fsp--;
@@ -8428,21 +9048,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2768:1: rule__Comparison__Group__0 : rule__Comparison__Group__0__Impl rule__Comparison__Group__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2984:1: rule__Comparison__Group__0 : rule__Comparison__Group__0__Impl rule__Comparison__Group__1 ;
     public final void rule__Comparison__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2772:1: ( rule__Comparison__Group__0__Impl rule__Comparison__Group__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2773:2: rule__Comparison__Group__0__Impl rule__Comparison__Group__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2988:1: ( rule__Comparison__Group__0__Impl rule__Comparison__Group__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2989:2: rule__Comparison__Group__0__Impl rule__Comparison__Group__1
             {
-            pushFollow(FOLLOW_rule__Comparison__Group__0__Impl_in_rule__Comparison__Group__05658);
+            pushFollow(FOLLOW_rule__Comparison__Group__0__Impl_in_rule__Comparison__Group__06090);
             rule__Comparison__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Comparison__Group__1_in_rule__Comparison__Group__05661);
+            pushFollow(FOLLOW_rule__Comparison__Group__1_in_rule__Comparison__Group__06093);
             rule__Comparison__Group__1();
 
             state._fsp--;
@@ -8466,22 +9086,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2780:1: rule__Comparison__Group__0__Impl : ( rulePlusOrMinus ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2996:1: rule__Comparison__Group__0__Impl : ( rulePlusOrMinus ) ;
     public final void rule__Comparison__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2784:1: ( ( rulePlusOrMinus ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2785:1: ( rulePlusOrMinus )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3000:1: ( ( rulePlusOrMinus ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3001:1: ( rulePlusOrMinus )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2785:1: ( rulePlusOrMinus )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2786:1: rulePlusOrMinus
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3001:1: ( rulePlusOrMinus )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3002:1: rulePlusOrMinus
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getPlusOrMinusParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_rulePlusOrMinus_in_rule__Comparison__Group__0__Impl5688);
+            pushFollow(FOLLOW_rulePlusOrMinus_in_rule__Comparison__Group__0__Impl6120);
             rulePlusOrMinus();
 
             state._fsp--;
@@ -8511,16 +9131,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2797:1: rule__Comparison__Group__1 : rule__Comparison__Group__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3013:1: rule__Comparison__Group__1 : rule__Comparison__Group__1__Impl ;
     public final void rule__Comparison__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2801:1: ( rule__Comparison__Group__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2802:2: rule__Comparison__Group__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3017:1: ( rule__Comparison__Group__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3018:2: rule__Comparison__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Comparison__Group__1__Impl_in_rule__Comparison__Group__15717);
+            pushFollow(FOLLOW_rule__Comparison__Group__1__Impl_in_rule__Comparison__Group__16149);
             rule__Comparison__Group__1__Impl();
 
             state._fsp--;
@@ -8544,37 +9164,37 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2808:1: rule__Comparison__Group__1__Impl : ( ( rule__Comparison__Group_1__0 )* ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3024:1: rule__Comparison__Group__1__Impl : ( ( rule__Comparison__Group_1__0 )* ) ;
     public final void rule__Comparison__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2812:1: ( ( ( rule__Comparison__Group_1__0 )* ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2813:1: ( ( rule__Comparison__Group_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3028:1: ( ( ( rule__Comparison__Group_1__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3029:1: ( ( rule__Comparison__Group_1__0 )* )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2813:1: ( ( rule__Comparison__Group_1__0 )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2814:1: ( rule__Comparison__Group_1__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3029:1: ( ( rule__Comparison__Group_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3030:1: ( rule__Comparison__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getGroup_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2815:1: ( rule__Comparison__Group_1__0 )*
-            loop25:
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3031:1: ( rule__Comparison__Group_1__0 )*
+            loop27:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt27=2;
+                int LA27_0 = input.LA(1);
 
-                if ( ((LA25_0>=14 && LA25_0<=17)) ) {
-                    alt25=1;
+                if ( ((LA27_0>=14 && LA27_0<=17)) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt27) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2815:2: rule__Comparison__Group_1__0
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3031:2: rule__Comparison__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Comparison__Group_1__0_in_rule__Comparison__Group__1__Impl5744);
+            	    pushFollow(FOLLOW_rule__Comparison__Group_1__0_in_rule__Comparison__Group__1__Impl6176);
             	    rule__Comparison__Group_1__0();
 
             	    state._fsp--;
@@ -8584,7 +9204,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop27;
                 }
             } while (true);
 
@@ -8613,21 +9233,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2829:1: rule__Comparison__Group_1__0 : rule__Comparison__Group_1__0__Impl rule__Comparison__Group_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3045:1: rule__Comparison__Group_1__0 : rule__Comparison__Group_1__0__Impl rule__Comparison__Group_1__1 ;
     public final void rule__Comparison__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2833:1: ( rule__Comparison__Group_1__0__Impl rule__Comparison__Group_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2834:2: rule__Comparison__Group_1__0__Impl rule__Comparison__Group_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3049:1: ( rule__Comparison__Group_1__0__Impl rule__Comparison__Group_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3050:2: rule__Comparison__Group_1__0__Impl rule__Comparison__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Comparison__Group_1__0__Impl_in_rule__Comparison__Group_1__05779);
+            pushFollow(FOLLOW_rule__Comparison__Group_1__0__Impl_in_rule__Comparison__Group_1__06211);
             rule__Comparison__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Comparison__Group_1__1_in_rule__Comparison__Group_1__05782);
+            pushFollow(FOLLOW_rule__Comparison__Group_1__1_in_rule__Comparison__Group_1__06214);
             rule__Comparison__Group_1__1();
 
             state._fsp--;
@@ -8651,23 +9271,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2841:1: rule__Comparison__Group_1__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3057:1: rule__Comparison__Group_1__0__Impl : ( () ) ;
     public final void rule__Comparison__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2845:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2846:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3061:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3062:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2846:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2847:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3062:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3063:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2848:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2850:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3064:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3066:1: 
             {
             }
 
@@ -8692,21 +9312,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2860:1: rule__Comparison__Group_1__1 : rule__Comparison__Group_1__1__Impl rule__Comparison__Group_1__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3076:1: rule__Comparison__Group_1__1 : rule__Comparison__Group_1__1__Impl rule__Comparison__Group_1__2 ;
     public final void rule__Comparison__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2864:1: ( rule__Comparison__Group_1__1__Impl rule__Comparison__Group_1__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2865:2: rule__Comparison__Group_1__1__Impl rule__Comparison__Group_1__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3080:1: ( rule__Comparison__Group_1__1__Impl rule__Comparison__Group_1__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3081:2: rule__Comparison__Group_1__1__Impl rule__Comparison__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Comparison__Group_1__1__Impl_in_rule__Comparison__Group_1__15840);
+            pushFollow(FOLLOW_rule__Comparison__Group_1__1__Impl_in_rule__Comparison__Group_1__16272);
             rule__Comparison__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Comparison__Group_1__2_in_rule__Comparison__Group_1__15843);
+            pushFollow(FOLLOW_rule__Comparison__Group_1__2_in_rule__Comparison__Group_1__16275);
             rule__Comparison__Group_1__2();
 
             state._fsp--;
@@ -8730,25 +9350,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2872:1: rule__Comparison__Group_1__1__Impl : ( ( rule__Comparison__OpAssignment_1_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3088:1: rule__Comparison__Group_1__1__Impl : ( ( rule__Comparison__OpAssignment_1_1 ) ) ;
     public final void rule__Comparison__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2876:1: ( ( ( rule__Comparison__OpAssignment_1_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2877:1: ( ( rule__Comparison__OpAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3092:1: ( ( ( rule__Comparison__OpAssignment_1_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3093:1: ( ( rule__Comparison__OpAssignment_1_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2877:1: ( ( rule__Comparison__OpAssignment_1_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2878:1: ( rule__Comparison__OpAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3093:1: ( ( rule__Comparison__OpAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3094:1: ( rule__Comparison__OpAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getOpAssignment_1_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2879:1: ( rule__Comparison__OpAssignment_1_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2879:2: rule__Comparison__OpAssignment_1_1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3095:1: ( rule__Comparison__OpAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3095:2: rule__Comparison__OpAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Comparison__OpAssignment_1_1_in_rule__Comparison__Group_1__1__Impl5870);
+            pushFollow(FOLLOW_rule__Comparison__OpAssignment_1_1_in_rule__Comparison__Group_1__1__Impl6302);
             rule__Comparison__OpAssignment_1_1();
 
             state._fsp--;
@@ -8781,16 +9401,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group_1__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2889:1: rule__Comparison__Group_1__2 : rule__Comparison__Group_1__2__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3105:1: rule__Comparison__Group_1__2 : rule__Comparison__Group_1__2__Impl ;
     public final void rule__Comparison__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2893:1: ( rule__Comparison__Group_1__2__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2894:2: rule__Comparison__Group_1__2__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3109:1: ( rule__Comparison__Group_1__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3110:2: rule__Comparison__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__Comparison__Group_1__2__Impl_in_rule__Comparison__Group_1__25900);
+            pushFollow(FOLLOW_rule__Comparison__Group_1__2__Impl_in_rule__Comparison__Group_1__26332);
             rule__Comparison__Group_1__2__Impl();
 
             state._fsp--;
@@ -8814,25 +9434,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group_1__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2900:1: rule__Comparison__Group_1__2__Impl : ( ( rule__Comparison__RightAssignment_1_2 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3116:1: rule__Comparison__Group_1__2__Impl : ( ( rule__Comparison__RightAssignment_1_2 ) ) ;
     public final void rule__Comparison__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2904:1: ( ( ( rule__Comparison__RightAssignment_1_2 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2905:1: ( ( rule__Comparison__RightAssignment_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3120:1: ( ( ( rule__Comparison__RightAssignment_1_2 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3121:1: ( ( rule__Comparison__RightAssignment_1_2 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2905:1: ( ( rule__Comparison__RightAssignment_1_2 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2906:1: ( rule__Comparison__RightAssignment_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3121:1: ( ( rule__Comparison__RightAssignment_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3122:1: ( rule__Comparison__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getRightAssignment_1_2()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2907:1: ( rule__Comparison__RightAssignment_1_2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2907:2: rule__Comparison__RightAssignment_1_2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3123:1: ( rule__Comparison__RightAssignment_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3123:2: rule__Comparison__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__Comparison__RightAssignment_1_2_in_rule__Comparison__Group_1__2__Impl5927);
+            pushFollow(FOLLOW_rule__Comparison__RightAssignment_1_2_in_rule__Comparison__Group_1__2__Impl6359);
             rule__Comparison__RightAssignment_1_2();
 
             state._fsp--;
@@ -8865,21 +9485,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MutationExpr__Group__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2923:1: rule__MutationExpr__Group__0 : rule__MutationExpr__Group__0__Impl rule__MutationExpr__Group__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3139:1: rule__MutationExpr__Group__0 : rule__MutationExpr__Group__0__Impl rule__MutationExpr__Group__1 ;
     public final void rule__MutationExpr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2927:1: ( rule__MutationExpr__Group__0__Impl rule__MutationExpr__Group__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2928:2: rule__MutationExpr__Group__0__Impl rule__MutationExpr__Group__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3143:1: ( rule__MutationExpr__Group__0__Impl rule__MutationExpr__Group__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3144:2: rule__MutationExpr__Group__0__Impl rule__MutationExpr__Group__1
             {
-            pushFollow(FOLLOW_rule__MutationExpr__Group__0__Impl_in_rule__MutationExpr__Group__05963);
+            pushFollow(FOLLOW_rule__MutationExpr__Group__0__Impl_in_rule__MutationExpr__Group__06395);
             rule__MutationExpr__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MutationExpr__Group__1_in_rule__MutationExpr__Group__05966);
+            pushFollow(FOLLOW_rule__MutationExpr__Group__1_in_rule__MutationExpr__Group__06398);
             rule__MutationExpr__Group__1();
 
             state._fsp--;
@@ -8903,25 +9523,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MutationExpr__Group__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2935:1: rule__MutationExpr__Group__0__Impl : ( ( rule__MutationExpr__ValueAssignment_0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3151:1: rule__MutationExpr__Group__0__Impl : ( ( rule__MutationExpr__ValueAssignment_0 ) ) ;
     public final void rule__MutationExpr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2939:1: ( ( ( rule__MutationExpr__ValueAssignment_0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2940:1: ( ( rule__MutationExpr__ValueAssignment_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3155:1: ( ( ( rule__MutationExpr__ValueAssignment_0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3156:1: ( ( rule__MutationExpr__ValueAssignment_0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2940:1: ( ( rule__MutationExpr__ValueAssignment_0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2941:1: ( rule__MutationExpr__ValueAssignment_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3156:1: ( ( rule__MutationExpr__ValueAssignment_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3157:1: ( rule__MutationExpr__ValueAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMutationExprAccess().getValueAssignment_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2942:1: ( rule__MutationExpr__ValueAssignment_0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2942:2: rule__MutationExpr__ValueAssignment_0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3158:1: ( rule__MutationExpr__ValueAssignment_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3158:2: rule__MutationExpr__ValueAssignment_0
             {
-            pushFollow(FOLLOW_rule__MutationExpr__ValueAssignment_0_in_rule__MutationExpr__Group__0__Impl5993);
+            pushFollow(FOLLOW_rule__MutationExpr__ValueAssignment_0_in_rule__MutationExpr__Group__0__Impl6425);
             rule__MutationExpr__ValueAssignment_0();
 
             state._fsp--;
@@ -8954,16 +9574,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MutationExpr__Group__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2952:1: rule__MutationExpr__Group__1 : rule__MutationExpr__Group__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3168:1: rule__MutationExpr__Group__1 : rule__MutationExpr__Group__1__Impl ;
     public final void rule__MutationExpr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2956:1: ( rule__MutationExpr__Group__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2957:2: rule__MutationExpr__Group__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3172:1: ( rule__MutationExpr__Group__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3173:2: rule__MutationExpr__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__MutationExpr__Group__1__Impl_in_rule__MutationExpr__Group__16023);
+            pushFollow(FOLLOW_rule__MutationExpr__Group__1__Impl_in_rule__MutationExpr__Group__16455);
             rule__MutationExpr__Group__1__Impl();
 
             state._fsp--;
@@ -8987,22 +9607,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MutationExpr__Group__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2963:1: rule__MutationExpr__Group__1__Impl : ( RULE_FLOAT ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3179:1: rule__MutationExpr__Group__1__Impl : ( RULE_FLOAT ) ;
     public final void rule__MutationExpr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2967:1: ( ( RULE_FLOAT ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2968:1: ( RULE_FLOAT )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3183:1: ( ( RULE_FLOAT ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3184:1: ( RULE_FLOAT )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2968:1: ( RULE_FLOAT )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2969:1: RULE_FLOAT
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3184:1: ( RULE_FLOAT )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3185:1: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMutationExprAccess().getFLOATTerminalRuleCall_1()); 
             }
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MutationExpr__Group__1__Impl6050); if (state.failed) return ;
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__MutationExpr__Group__1__Impl6482); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMutationExprAccess().getFLOATTerminalRuleCall_1()); 
             }
@@ -9028,21 +9648,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2984:1: rule__PlusOrMinus__Group__0 : rule__PlusOrMinus__Group__0__Impl rule__PlusOrMinus__Group__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3200:1: rule__PlusOrMinus__Group__0 : rule__PlusOrMinus__Group__0__Impl rule__PlusOrMinus__Group__1 ;
     public final void rule__PlusOrMinus__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2988:1: ( rule__PlusOrMinus__Group__0__Impl rule__PlusOrMinus__Group__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2989:2: rule__PlusOrMinus__Group__0__Impl rule__PlusOrMinus__Group__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3204:1: ( rule__PlusOrMinus__Group__0__Impl rule__PlusOrMinus__Group__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3205:2: rule__PlusOrMinus__Group__0__Impl rule__PlusOrMinus__Group__1
             {
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group__0__Impl_in_rule__PlusOrMinus__Group__06083);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group__0__Impl_in_rule__PlusOrMinus__Group__06515);
             rule__PlusOrMinus__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group__1_in_rule__PlusOrMinus__Group__06086);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group__1_in_rule__PlusOrMinus__Group__06518);
             rule__PlusOrMinus__Group__1();
 
             state._fsp--;
@@ -9066,22 +9686,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:2996:1: rule__PlusOrMinus__Group__0__Impl : ( ruleMulOrDiv ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3212:1: rule__PlusOrMinus__Group__0__Impl : ( ruleMulOrDiv ) ;
     public final void rule__PlusOrMinus__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3000:1: ( ( ruleMulOrDiv ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3001:1: ( ruleMulOrDiv )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3216:1: ( ( ruleMulOrDiv ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3217:1: ( ruleMulOrDiv )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3001:1: ( ruleMulOrDiv )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3002:1: ruleMulOrDiv
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3217:1: ( ruleMulOrDiv )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3218:1: ruleMulOrDiv
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusOrMinusAccess().getMulOrDivParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleMulOrDiv_in_rule__PlusOrMinus__Group__0__Impl6113);
+            pushFollow(FOLLOW_ruleMulOrDiv_in_rule__PlusOrMinus__Group__0__Impl6545);
             ruleMulOrDiv();
 
             state._fsp--;
@@ -9111,16 +9731,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3013:1: rule__PlusOrMinus__Group__1 : rule__PlusOrMinus__Group__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3229:1: rule__PlusOrMinus__Group__1 : rule__PlusOrMinus__Group__1__Impl ;
     public final void rule__PlusOrMinus__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3017:1: ( rule__PlusOrMinus__Group__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3018:2: rule__PlusOrMinus__Group__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3233:1: ( rule__PlusOrMinus__Group__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3234:2: rule__PlusOrMinus__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group__1__Impl_in_rule__PlusOrMinus__Group__16142);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group__1__Impl_in_rule__PlusOrMinus__Group__16574);
             rule__PlusOrMinus__Group__1__Impl();
 
             state._fsp--;
@@ -9144,37 +9764,37 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3024:1: rule__PlusOrMinus__Group__1__Impl : ( ( rule__PlusOrMinus__Group_1__0 )* ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3240:1: rule__PlusOrMinus__Group__1__Impl : ( ( rule__PlusOrMinus__Group_1__0 )* ) ;
     public final void rule__PlusOrMinus__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3028:1: ( ( ( rule__PlusOrMinus__Group_1__0 )* ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3029:1: ( ( rule__PlusOrMinus__Group_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3244:1: ( ( ( rule__PlusOrMinus__Group_1__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3245:1: ( ( rule__PlusOrMinus__Group_1__0 )* )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3029:1: ( ( rule__PlusOrMinus__Group_1__0 )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3030:1: ( rule__PlusOrMinus__Group_1__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3245:1: ( ( rule__PlusOrMinus__Group_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3246:1: ( rule__PlusOrMinus__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusOrMinusAccess().getGroup_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3031:1: ( rule__PlusOrMinus__Group_1__0 )*
-            loop26:
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3247:1: ( rule__PlusOrMinus__Group_1__0 )*
+            loop28:
             do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
+                int alt28=2;
+                int LA28_0 = input.LA(1);
 
-                if ( ((LA26_0>=18 && LA26_0<=19)) ) {
-                    alt26=1;
+                if ( ((LA28_0>=18 && LA28_0<=19)) ) {
+                    alt28=1;
                 }
 
 
-                switch (alt26) {
+                switch (alt28) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3031:2: rule__PlusOrMinus__Group_1__0
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3247:2: rule__PlusOrMinus__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__PlusOrMinus__Group_1__0_in_rule__PlusOrMinus__Group__1__Impl6169);
+            	    pushFollow(FOLLOW_rule__PlusOrMinus__Group_1__0_in_rule__PlusOrMinus__Group__1__Impl6601);
             	    rule__PlusOrMinus__Group_1__0();
 
             	    state._fsp--;
@@ -9184,7 +9804,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop26;
+            	    break loop28;
                 }
             } while (true);
 
@@ -9213,21 +9833,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3045:1: rule__PlusOrMinus__Group_1__0 : rule__PlusOrMinus__Group_1__0__Impl rule__PlusOrMinus__Group_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3261:1: rule__PlusOrMinus__Group_1__0 : rule__PlusOrMinus__Group_1__0__Impl rule__PlusOrMinus__Group_1__1 ;
     public final void rule__PlusOrMinus__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3049:1: ( rule__PlusOrMinus__Group_1__0__Impl rule__PlusOrMinus__Group_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3050:2: rule__PlusOrMinus__Group_1__0__Impl rule__PlusOrMinus__Group_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3265:1: ( rule__PlusOrMinus__Group_1__0__Impl rule__PlusOrMinus__Group_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3266:2: rule__PlusOrMinus__Group_1__0__Impl rule__PlusOrMinus__Group_1__1
             {
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1__0__Impl_in_rule__PlusOrMinus__Group_1__06204);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1__0__Impl_in_rule__PlusOrMinus__Group_1__06636);
             rule__PlusOrMinus__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1__1_in_rule__PlusOrMinus__Group_1__06207);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1__1_in_rule__PlusOrMinus__Group_1__06639);
             rule__PlusOrMinus__Group_1__1();
 
             state._fsp--;
@@ -9251,25 +9871,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3057:1: rule__PlusOrMinus__Group_1__0__Impl : ( ( rule__PlusOrMinus__Alternatives_1_0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3273:1: rule__PlusOrMinus__Group_1__0__Impl : ( ( rule__PlusOrMinus__Alternatives_1_0 ) ) ;
     public final void rule__PlusOrMinus__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3061:1: ( ( ( rule__PlusOrMinus__Alternatives_1_0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3062:1: ( ( rule__PlusOrMinus__Alternatives_1_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3277:1: ( ( ( rule__PlusOrMinus__Alternatives_1_0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3278:1: ( ( rule__PlusOrMinus__Alternatives_1_0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3062:1: ( ( rule__PlusOrMinus__Alternatives_1_0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3063:1: ( rule__PlusOrMinus__Alternatives_1_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3278:1: ( ( rule__PlusOrMinus__Alternatives_1_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3279:1: ( rule__PlusOrMinus__Alternatives_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusOrMinusAccess().getAlternatives_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3064:1: ( rule__PlusOrMinus__Alternatives_1_0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3064:2: rule__PlusOrMinus__Alternatives_1_0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3280:1: ( rule__PlusOrMinus__Alternatives_1_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3280:2: rule__PlusOrMinus__Alternatives_1_0
             {
-            pushFollow(FOLLOW_rule__PlusOrMinus__Alternatives_1_0_in_rule__PlusOrMinus__Group_1__0__Impl6234);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Alternatives_1_0_in_rule__PlusOrMinus__Group_1__0__Impl6666);
             rule__PlusOrMinus__Alternatives_1_0();
 
             state._fsp--;
@@ -9302,16 +9922,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3074:1: rule__PlusOrMinus__Group_1__1 : rule__PlusOrMinus__Group_1__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3290:1: rule__PlusOrMinus__Group_1__1 : rule__PlusOrMinus__Group_1__1__Impl ;
     public final void rule__PlusOrMinus__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3078:1: ( rule__PlusOrMinus__Group_1__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3079:2: rule__PlusOrMinus__Group_1__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3294:1: ( rule__PlusOrMinus__Group_1__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3295:2: rule__PlusOrMinus__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1__1__Impl_in_rule__PlusOrMinus__Group_1__16264);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1__1__Impl_in_rule__PlusOrMinus__Group_1__16696);
             rule__PlusOrMinus__Group_1__1__Impl();
 
             state._fsp--;
@@ -9335,25 +9955,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3085:1: rule__PlusOrMinus__Group_1__1__Impl : ( ( rule__PlusOrMinus__RightAssignment_1_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3301:1: rule__PlusOrMinus__Group_1__1__Impl : ( ( rule__PlusOrMinus__RightAssignment_1_1 ) ) ;
     public final void rule__PlusOrMinus__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3089:1: ( ( ( rule__PlusOrMinus__RightAssignment_1_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3090:1: ( ( rule__PlusOrMinus__RightAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3305:1: ( ( ( rule__PlusOrMinus__RightAssignment_1_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3306:1: ( ( rule__PlusOrMinus__RightAssignment_1_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3090:1: ( ( rule__PlusOrMinus__RightAssignment_1_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3091:1: ( rule__PlusOrMinus__RightAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3306:1: ( ( rule__PlusOrMinus__RightAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3307:1: ( rule__PlusOrMinus__RightAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusOrMinusAccess().getRightAssignment_1_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3092:1: ( rule__PlusOrMinus__RightAssignment_1_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3092:2: rule__PlusOrMinus__RightAssignment_1_1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3308:1: ( rule__PlusOrMinus__RightAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3308:2: rule__PlusOrMinus__RightAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__PlusOrMinus__RightAssignment_1_1_in_rule__PlusOrMinus__Group_1__1__Impl6291);
+            pushFollow(FOLLOW_rule__PlusOrMinus__RightAssignment_1_1_in_rule__PlusOrMinus__Group_1__1__Impl6723);
             rule__PlusOrMinus__RightAssignment_1_1();
 
             state._fsp--;
@@ -9386,21 +10006,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1_0_0__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3106:1: rule__PlusOrMinus__Group_1_0_0__0 : rule__PlusOrMinus__Group_1_0_0__0__Impl rule__PlusOrMinus__Group_1_0_0__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3322:1: rule__PlusOrMinus__Group_1_0_0__0 : rule__PlusOrMinus__Group_1_0_0__0__Impl rule__PlusOrMinus__Group_1_0_0__1 ;
     public final void rule__PlusOrMinus__Group_1_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3110:1: ( rule__PlusOrMinus__Group_1_0_0__0__Impl rule__PlusOrMinus__Group_1_0_0__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3111:2: rule__PlusOrMinus__Group_1_0_0__0__Impl rule__PlusOrMinus__Group_1_0_0__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3326:1: ( rule__PlusOrMinus__Group_1_0_0__0__Impl rule__PlusOrMinus__Group_1_0_0__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3327:2: rule__PlusOrMinus__Group_1_0_0__0__Impl rule__PlusOrMinus__Group_1_0_0__1
             {
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_0__0__Impl_in_rule__PlusOrMinus__Group_1_0_0__06325);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_0__0__Impl_in_rule__PlusOrMinus__Group_1_0_0__06757);
             rule__PlusOrMinus__Group_1_0_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_0__1_in_rule__PlusOrMinus__Group_1_0_0__06328);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_0__1_in_rule__PlusOrMinus__Group_1_0_0__06760);
             rule__PlusOrMinus__Group_1_0_0__1();
 
             state._fsp--;
@@ -9424,23 +10044,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1_0_0__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3118:1: rule__PlusOrMinus__Group_1_0_0__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3334:1: rule__PlusOrMinus__Group_1_0_0__0__Impl : ( () ) ;
     public final void rule__PlusOrMinus__Group_1_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3122:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3123:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3338:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3339:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3123:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3124:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3339:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3340:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3125:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3127:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3341:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3343:1: 
             {
             }
 
@@ -9465,16 +10085,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1_0_0__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3137:1: rule__PlusOrMinus__Group_1_0_0__1 : rule__PlusOrMinus__Group_1_0_0__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3353:1: rule__PlusOrMinus__Group_1_0_0__1 : rule__PlusOrMinus__Group_1_0_0__1__Impl ;
     public final void rule__PlusOrMinus__Group_1_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3141:1: ( rule__PlusOrMinus__Group_1_0_0__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3142:2: rule__PlusOrMinus__Group_1_0_0__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3357:1: ( rule__PlusOrMinus__Group_1_0_0__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3358:2: rule__PlusOrMinus__Group_1_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_0__1__Impl_in_rule__PlusOrMinus__Group_1_0_0__16386);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_0__1__Impl_in_rule__PlusOrMinus__Group_1_0_0__16818);
             rule__PlusOrMinus__Group_1_0_0__1__Impl();
 
             state._fsp--;
@@ -9498,22 +10118,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1_0_0__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3148:1: rule__PlusOrMinus__Group_1_0_0__1__Impl : ( '+' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3364:1: rule__PlusOrMinus__Group_1_0_0__1__Impl : ( '+' ) ;
     public final void rule__PlusOrMinus__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3152:1: ( ( '+' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3153:1: ( '+' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3368:1: ( ( '+' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3369:1: ( '+' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3153:1: ( '+' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3154:1: '+'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3369:1: ( '+' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3370:1: '+'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusOrMinusAccess().getPlusSignKeyword_1_0_0_1()); 
             }
-            match(input,18,FOLLOW_18_in_rule__PlusOrMinus__Group_1_0_0__1__Impl6414); if (state.failed) return ;
+            match(input,18,FOLLOW_18_in_rule__PlusOrMinus__Group_1_0_0__1__Impl6846); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPlusOrMinusAccess().getPlusSignKeyword_1_0_0_1()); 
             }
@@ -9539,21 +10159,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1_0_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3171:1: rule__PlusOrMinus__Group_1_0_1__0 : rule__PlusOrMinus__Group_1_0_1__0__Impl rule__PlusOrMinus__Group_1_0_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3387:1: rule__PlusOrMinus__Group_1_0_1__0 : rule__PlusOrMinus__Group_1_0_1__0__Impl rule__PlusOrMinus__Group_1_0_1__1 ;
     public final void rule__PlusOrMinus__Group_1_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3175:1: ( rule__PlusOrMinus__Group_1_0_1__0__Impl rule__PlusOrMinus__Group_1_0_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3176:2: rule__PlusOrMinus__Group_1_0_1__0__Impl rule__PlusOrMinus__Group_1_0_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3391:1: ( rule__PlusOrMinus__Group_1_0_1__0__Impl rule__PlusOrMinus__Group_1_0_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3392:2: rule__PlusOrMinus__Group_1_0_1__0__Impl rule__PlusOrMinus__Group_1_0_1__1
             {
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_1__0__Impl_in_rule__PlusOrMinus__Group_1_0_1__06449);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_1__0__Impl_in_rule__PlusOrMinus__Group_1_0_1__06881);
             rule__PlusOrMinus__Group_1_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_1__1_in_rule__PlusOrMinus__Group_1_0_1__06452);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_1__1_in_rule__PlusOrMinus__Group_1_0_1__06884);
             rule__PlusOrMinus__Group_1_0_1__1();
 
             state._fsp--;
@@ -9577,23 +10197,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1_0_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3183:1: rule__PlusOrMinus__Group_1_0_1__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3399:1: rule__PlusOrMinus__Group_1_0_1__0__Impl : ( () ) ;
     public final void rule__PlusOrMinus__Group_1_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3187:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3188:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3403:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3404:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3188:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3189:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3404:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3405:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3190:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3192:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3406:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3408:1: 
             {
             }
 
@@ -9618,16 +10238,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1_0_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3202:1: rule__PlusOrMinus__Group_1_0_1__1 : rule__PlusOrMinus__Group_1_0_1__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3418:1: rule__PlusOrMinus__Group_1_0_1__1 : rule__PlusOrMinus__Group_1_0_1__1__Impl ;
     public final void rule__PlusOrMinus__Group_1_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3206:1: ( rule__PlusOrMinus__Group_1_0_1__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3207:2: rule__PlusOrMinus__Group_1_0_1__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3422:1: ( rule__PlusOrMinus__Group_1_0_1__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3423:2: rule__PlusOrMinus__Group_1_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_1__1__Impl_in_rule__PlusOrMinus__Group_1_0_1__16510);
+            pushFollow(FOLLOW_rule__PlusOrMinus__Group_1_0_1__1__Impl_in_rule__PlusOrMinus__Group_1_0_1__16942);
             rule__PlusOrMinus__Group_1_0_1__1__Impl();
 
             state._fsp--;
@@ -9651,22 +10271,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__Group_1_0_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3213:1: rule__PlusOrMinus__Group_1_0_1__1__Impl : ( '-' ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3429:1: rule__PlusOrMinus__Group_1_0_1__1__Impl : ( '-' ) ;
     public final void rule__PlusOrMinus__Group_1_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3217:1: ( ( '-' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3218:1: ( '-' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3433:1: ( ( '-' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3434:1: ( '-' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3218:1: ( '-' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3219:1: '-'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3434:1: ( '-' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3435:1: '-'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusOrMinusAccess().getHyphenMinusKeyword_1_0_1_1()); 
             }
-            match(input,19,FOLLOW_19_in_rule__PlusOrMinus__Group_1_0_1__1__Impl6538); if (state.failed) return ;
+            match(input,19,FOLLOW_19_in_rule__PlusOrMinus__Group_1_0_1__1__Impl6970); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPlusOrMinusAccess().getHyphenMinusKeyword_1_0_1_1()); 
             }
@@ -9692,21 +10312,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__Group__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3236:1: rule__MulOrDiv__Group__0 : rule__MulOrDiv__Group__0__Impl rule__MulOrDiv__Group__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3452:1: rule__MulOrDiv__Group__0 : rule__MulOrDiv__Group__0__Impl rule__MulOrDiv__Group__1 ;
     public final void rule__MulOrDiv__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3240:1: ( rule__MulOrDiv__Group__0__Impl rule__MulOrDiv__Group__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3241:2: rule__MulOrDiv__Group__0__Impl rule__MulOrDiv__Group__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3456:1: ( rule__MulOrDiv__Group__0__Impl rule__MulOrDiv__Group__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3457:2: rule__MulOrDiv__Group__0__Impl rule__MulOrDiv__Group__1
             {
-            pushFollow(FOLLOW_rule__MulOrDiv__Group__0__Impl_in_rule__MulOrDiv__Group__06573);
+            pushFollow(FOLLOW_rule__MulOrDiv__Group__0__Impl_in_rule__MulOrDiv__Group__07005);
             rule__MulOrDiv__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MulOrDiv__Group__1_in_rule__MulOrDiv__Group__06576);
+            pushFollow(FOLLOW_rule__MulOrDiv__Group__1_in_rule__MulOrDiv__Group__07008);
             rule__MulOrDiv__Group__1();
 
             state._fsp--;
@@ -9730,22 +10350,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__Group__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3248:1: rule__MulOrDiv__Group__0__Impl : ( rulePrimary ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3464:1: rule__MulOrDiv__Group__0__Impl : ( rulePrimary ) ;
     public final void rule__MulOrDiv__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3252:1: ( ( rulePrimary ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3253:1: ( rulePrimary )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3468:1: ( ( rulePrimary ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3469:1: ( rulePrimary )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3253:1: ( rulePrimary )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3254:1: rulePrimary
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3469:1: ( rulePrimary )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3470:1: rulePrimary
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMulOrDivAccess().getPrimaryParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_rulePrimary_in_rule__MulOrDiv__Group__0__Impl6603);
+            pushFollow(FOLLOW_rulePrimary_in_rule__MulOrDiv__Group__0__Impl7035);
             rulePrimary();
 
             state._fsp--;
@@ -9775,16 +10395,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__Group__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3265:1: rule__MulOrDiv__Group__1 : rule__MulOrDiv__Group__1__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3481:1: rule__MulOrDiv__Group__1 : rule__MulOrDiv__Group__1__Impl ;
     public final void rule__MulOrDiv__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3269:1: ( rule__MulOrDiv__Group__1__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3270:2: rule__MulOrDiv__Group__1__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3485:1: ( rule__MulOrDiv__Group__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3486:2: rule__MulOrDiv__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__MulOrDiv__Group__1__Impl_in_rule__MulOrDiv__Group__16632);
+            pushFollow(FOLLOW_rule__MulOrDiv__Group__1__Impl_in_rule__MulOrDiv__Group__17064);
             rule__MulOrDiv__Group__1__Impl();
 
             state._fsp--;
@@ -9808,37 +10428,37 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__Group__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3276:1: rule__MulOrDiv__Group__1__Impl : ( ( rule__MulOrDiv__Group_1__0 )* ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3492:1: rule__MulOrDiv__Group__1__Impl : ( ( rule__MulOrDiv__Group_1__0 )* ) ;
     public final void rule__MulOrDiv__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3280:1: ( ( ( rule__MulOrDiv__Group_1__0 )* ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3281:1: ( ( rule__MulOrDiv__Group_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3496:1: ( ( ( rule__MulOrDiv__Group_1__0 )* ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3497:1: ( ( rule__MulOrDiv__Group_1__0 )* )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3281:1: ( ( rule__MulOrDiv__Group_1__0 )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3282:1: ( rule__MulOrDiv__Group_1__0 )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3497:1: ( ( rule__MulOrDiv__Group_1__0 )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3498:1: ( rule__MulOrDiv__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMulOrDivAccess().getGroup_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3283:1: ( rule__MulOrDiv__Group_1__0 )*
-            loop27:
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3499:1: ( rule__MulOrDiv__Group_1__0 )*
+            loop29:
             do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( ((LA27_0>=20 && LA27_0<=23)) ) {
-                    alt27=1;
+                if ( ((LA29_0>=20 && LA29_0<=23)) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt27) {
+                switch (alt29) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3283:2: rule__MulOrDiv__Group_1__0
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3499:2: rule__MulOrDiv__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__MulOrDiv__Group_1__0_in_rule__MulOrDiv__Group__1__Impl6659);
+            	    pushFollow(FOLLOW_rule__MulOrDiv__Group_1__0_in_rule__MulOrDiv__Group__1__Impl7091);
             	    rule__MulOrDiv__Group_1__0();
 
             	    state._fsp--;
@@ -9848,7 +10468,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop27;
+            	    break loop29;
                 }
             } while (true);
 
@@ -9877,21 +10497,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__Group_1__0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3297:1: rule__MulOrDiv__Group_1__0 : rule__MulOrDiv__Group_1__0__Impl rule__MulOrDiv__Group_1__1 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3513:1: rule__MulOrDiv__Group_1__0 : rule__MulOrDiv__Group_1__0__Impl rule__MulOrDiv__Group_1__1 ;
     public final void rule__MulOrDiv__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3301:1: ( rule__MulOrDiv__Group_1__0__Impl rule__MulOrDiv__Group_1__1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3302:2: rule__MulOrDiv__Group_1__0__Impl rule__MulOrDiv__Group_1__1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3517:1: ( rule__MulOrDiv__Group_1__0__Impl rule__MulOrDiv__Group_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3518:2: rule__MulOrDiv__Group_1__0__Impl rule__MulOrDiv__Group_1__1
             {
-            pushFollow(FOLLOW_rule__MulOrDiv__Group_1__0__Impl_in_rule__MulOrDiv__Group_1__06694);
+            pushFollow(FOLLOW_rule__MulOrDiv__Group_1__0__Impl_in_rule__MulOrDiv__Group_1__07126);
             rule__MulOrDiv__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MulOrDiv__Group_1__1_in_rule__MulOrDiv__Group_1__06697);
+            pushFollow(FOLLOW_rule__MulOrDiv__Group_1__1_in_rule__MulOrDiv__Group_1__07129);
             rule__MulOrDiv__Group_1__1();
 
             state._fsp--;
@@ -9915,23 +10535,23 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__Group_1__0__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3309:1: rule__MulOrDiv__Group_1__0__Impl : ( () ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3525:1: rule__MulOrDiv__Group_1__0__Impl : ( () ) ;
     public final void rule__MulOrDiv__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3313:1: ( ( () ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3314:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3529:1: ( ( () ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3530:1: ( () )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3314:1: ( () )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3315:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3530:1: ( () )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3531:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3316:1: ()
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3318:1: 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3532:1: ()
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3534:1: 
             {
             }
 
@@ -9956,21 +10576,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__Group_1__1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3328:1: rule__MulOrDiv__Group_1__1 : rule__MulOrDiv__Group_1__1__Impl rule__MulOrDiv__Group_1__2 ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3544:1: rule__MulOrDiv__Group_1__1 : rule__MulOrDiv__Group_1__1__Impl rule__MulOrDiv__Group_1__2 ;
     public final void rule__MulOrDiv__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3332:1: ( rule__MulOrDiv__Group_1__1__Impl rule__MulOrDiv__Group_1__2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3333:2: rule__MulOrDiv__Group_1__1__Impl rule__MulOrDiv__Group_1__2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3548:1: ( rule__MulOrDiv__Group_1__1__Impl rule__MulOrDiv__Group_1__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3549:2: rule__MulOrDiv__Group_1__1__Impl rule__MulOrDiv__Group_1__2
             {
-            pushFollow(FOLLOW_rule__MulOrDiv__Group_1__1__Impl_in_rule__MulOrDiv__Group_1__16755);
+            pushFollow(FOLLOW_rule__MulOrDiv__Group_1__1__Impl_in_rule__MulOrDiv__Group_1__17187);
             rule__MulOrDiv__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MulOrDiv__Group_1__2_in_rule__MulOrDiv__Group_1__16758);
+            pushFollow(FOLLOW_rule__MulOrDiv__Group_1__2_in_rule__MulOrDiv__Group_1__17190);
             rule__MulOrDiv__Group_1__2();
 
             state._fsp--;
@@ -9994,25 +10614,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__Group_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3340:1: rule__MulOrDiv__Group_1__1__Impl : ( ( rule__MulOrDiv__OpAssignment_1_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3556:1: rule__MulOrDiv__Group_1__1__Impl : ( ( rule__MulOrDiv__OpAssignment_1_1 ) ) ;
     public final void rule__MulOrDiv__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3344:1: ( ( ( rule__MulOrDiv__OpAssignment_1_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3345:1: ( ( rule__MulOrDiv__OpAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3560:1: ( ( ( rule__MulOrDiv__OpAssignment_1_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3561:1: ( ( rule__MulOrDiv__OpAssignment_1_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3345:1: ( ( rule__MulOrDiv__OpAssignment_1_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3346:1: ( rule__MulOrDiv__OpAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3561:1: ( ( rule__MulOrDiv__OpAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3562:1: ( rule__MulOrDiv__OpAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMulOrDivAccess().getOpAssignment_1_1()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3347:1: ( rule__MulOrDiv__OpAssignment_1_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3347:2: rule__MulOrDiv__OpAssignment_1_1
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3563:1: ( rule__MulOrDiv__OpAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3563:2: rule__MulOrDiv__OpAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__MulOrDiv__OpAssignment_1_1_in_rule__MulOrDiv__Group_1__1__Impl6785);
+            pushFollow(FOLLOW_rule__MulOrDiv__OpAssignment_1_1_in_rule__MulOrDiv__Group_1__1__Impl7217);
             rule__MulOrDiv__OpAssignment_1_1();
 
             state._fsp--;
@@ -10045,16 +10665,16 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__Group_1__2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3357:1: rule__MulOrDiv__Group_1__2 : rule__MulOrDiv__Group_1__2__Impl ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3573:1: rule__MulOrDiv__Group_1__2 : rule__MulOrDiv__Group_1__2__Impl ;
     public final void rule__MulOrDiv__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3361:1: ( rule__MulOrDiv__Group_1__2__Impl )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3362:2: rule__MulOrDiv__Group_1__2__Impl
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3577:1: ( rule__MulOrDiv__Group_1__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3578:2: rule__MulOrDiv__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__MulOrDiv__Group_1__2__Impl_in_rule__MulOrDiv__Group_1__26815);
+            pushFollow(FOLLOW_rule__MulOrDiv__Group_1__2__Impl_in_rule__MulOrDiv__Group_1__27247);
             rule__MulOrDiv__Group_1__2__Impl();
 
             state._fsp--;
@@ -10078,25 +10698,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__Group_1__2__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3368:1: rule__MulOrDiv__Group_1__2__Impl : ( ( rule__MulOrDiv__RightAssignment_1_2 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3584:1: rule__MulOrDiv__Group_1__2__Impl : ( ( rule__MulOrDiv__RightAssignment_1_2 ) ) ;
     public final void rule__MulOrDiv__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3372:1: ( ( ( rule__MulOrDiv__RightAssignment_1_2 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3373:1: ( ( rule__MulOrDiv__RightAssignment_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3588:1: ( ( ( rule__MulOrDiv__RightAssignment_1_2 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3589:1: ( ( rule__MulOrDiv__RightAssignment_1_2 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3373:1: ( ( rule__MulOrDiv__RightAssignment_1_2 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3374:1: ( rule__MulOrDiv__RightAssignment_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3589:1: ( ( rule__MulOrDiv__RightAssignment_1_2 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3590:1: ( rule__MulOrDiv__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMulOrDivAccess().getRightAssignment_1_2()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3375:1: ( rule__MulOrDiv__RightAssignment_1_2 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3375:2: rule__MulOrDiv__RightAssignment_1_2
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3591:1: ( rule__MulOrDiv__RightAssignment_1_2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3591:2: rule__MulOrDiv__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__MulOrDiv__RightAssignment_1_2_in_rule__MulOrDiv__Group_1__2__Impl6842);
+            pushFollow(FOLLOW_rule__MulOrDiv__RightAssignment_1_2_in_rule__MulOrDiv__Group_1__2__Impl7274);
             rule__MulOrDiv__RightAssignment_1_2();
 
             state._fsp--;
@@ -10128,23 +10748,622 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MulOrDiv__Group_1__2__Impl"
 
 
+    // $ANTLR start "rule__ExpFluent__Group__0"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3607:1: rule__ExpFluent__Group__0 : rule__ExpFluent__Group__0__Impl rule__ExpFluent__Group__1 ;
+    public final void rule__ExpFluent__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3611:1: ( rule__ExpFluent__Group__0__Impl rule__ExpFluent__Group__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3612:2: rule__ExpFluent__Group__0__Impl rule__ExpFluent__Group__1
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__Group__0__Impl_in_rule__ExpFluent__Group__07310);
+            rule__ExpFluent__Group__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__ExpFluent__Group__1_in_rule__ExpFluent__Group__07313);
+            rule__ExpFluent__Group__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group__0"
+
+
+    // $ANTLR start "rule__ExpFluent__Group__0__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3619:1: rule__ExpFluent__Group__0__Impl : ( ( rule__ExpFluent__FluentNameAssignment_0 ) ) ;
+    public final void rule__ExpFluent__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3623:1: ( ( ( rule__ExpFluent__FluentNameAssignment_0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3624:1: ( ( rule__ExpFluent__FluentNameAssignment_0 ) )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3624:1: ( ( rule__ExpFluent__FluentNameAssignment_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3625:1: ( rule__ExpFluent__FluentNameAssignment_0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getFluentNameAssignment_0()); 
+            }
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3626:1: ( rule__ExpFluent__FluentNameAssignment_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3626:2: rule__ExpFluent__FluentNameAssignment_0
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__FluentNameAssignment_0_in_rule__ExpFluent__Group__0__Impl7340);
+            rule__ExpFluent__FluentNameAssignment_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getFluentNameAssignment_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group__0__Impl"
+
+
+    // $ANTLR start "rule__ExpFluent__Group__1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3636:1: rule__ExpFluent__Group__1 : rule__ExpFluent__Group__1__Impl rule__ExpFluent__Group__2 ;
+    public final void rule__ExpFluent__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3640:1: ( rule__ExpFluent__Group__1__Impl rule__ExpFluent__Group__2 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3641:2: rule__ExpFluent__Group__1__Impl rule__ExpFluent__Group__2
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__Group__1__Impl_in_rule__ExpFluent__Group__17370);
+            rule__ExpFluent__Group__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__ExpFluent__Group__2_in_rule__ExpFluent__Group__17373);
+            rule__ExpFluent__Group__2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group__1"
+
+
+    // $ANTLR start "rule__ExpFluent__Group__1__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3648:1: rule__ExpFluent__Group__1__Impl : ( ( rule__ExpFluent__Group_1__0 ) ) ;
+    public final void rule__ExpFluent__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3652:1: ( ( ( rule__ExpFluent__Group_1__0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3653:1: ( ( rule__ExpFluent__Group_1__0 ) )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3653:1: ( ( rule__ExpFluent__Group_1__0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3654:1: ( rule__ExpFluent__Group_1__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getGroup_1()); 
+            }
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3655:1: ( rule__ExpFluent__Group_1__0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3655:2: rule__ExpFluent__Group_1__0
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__Group_1__0_in_rule__ExpFluent__Group__1__Impl7400);
+            rule__ExpFluent__Group_1__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getGroup_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group__1__Impl"
+
+
+    // $ANTLR start "rule__ExpFluent__Group__2"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3665:1: rule__ExpFluent__Group__2 : rule__ExpFluent__Group__2__Impl ;
+    public final void rule__ExpFluent__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3669:1: ( rule__ExpFluent__Group__2__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3670:2: rule__ExpFluent__Group__2__Impl
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__Group__2__Impl_in_rule__ExpFluent__Group__27430);
+            rule__ExpFluent__Group__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group__2"
+
+
+    // $ANTLR start "rule__ExpFluent__Group__2__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3676:1: rule__ExpFluent__Group__2__Impl : ( ( rule__ExpFluent__Group_2__0 )? ) ;
+    public final void rule__ExpFluent__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3680:1: ( ( ( rule__ExpFluent__Group_2__0 )? ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3681:1: ( ( rule__ExpFluent__Group_2__0 )? )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3681:1: ( ( rule__ExpFluent__Group_2__0 )? )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3682:1: ( rule__ExpFluent__Group_2__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getGroup_2()); 
+            }
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3683:1: ( rule__ExpFluent__Group_2__0 )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
+
+            if ( (LA30_0==30) ) {
+                alt30=1;
+            }
+            switch (alt30) {
+                case 1 :
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3683:2: rule__ExpFluent__Group_2__0
+                    {
+                    pushFollow(FOLLOW_rule__ExpFluent__Group_2__0_in_rule__ExpFluent__Group__2__Impl7457);
+                    rule__ExpFluent__Group_2__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getGroup_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group__2__Impl"
+
+
+    // $ANTLR start "rule__ExpFluent__Group_1__0"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3699:1: rule__ExpFluent__Group_1__0 : rule__ExpFluent__Group_1__0__Impl rule__ExpFluent__Group_1__1 ;
+    public final void rule__ExpFluent__Group_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3703:1: ( rule__ExpFluent__Group_1__0__Impl rule__ExpFluent__Group_1__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3704:2: rule__ExpFluent__Group_1__0__Impl rule__ExpFluent__Group_1__1
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__Group_1__0__Impl_in_rule__ExpFluent__Group_1__07494);
+            rule__ExpFluent__Group_1__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__ExpFluent__Group_1__1_in_rule__ExpFluent__Group_1__07497);
+            rule__ExpFluent__Group_1__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group_1__0"
+
+
+    // $ANTLR start "rule__ExpFluent__Group_1__0__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3711:1: rule__ExpFluent__Group_1__0__Impl : ( 'to' ) ;
+    public final void rule__ExpFluent__Group_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3715:1: ( ( 'to' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3716:1: ( 'to' )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3716:1: ( 'to' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3717:1: 'to'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getToKeyword_1_0()); 
+            }
+            match(input,29,FOLLOW_29_in_rule__ExpFluent__Group_1__0__Impl7525); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getToKeyword_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group_1__0__Impl"
+
+
+    // $ANTLR start "rule__ExpFluent__Group_1__1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3730:1: rule__ExpFluent__Group_1__1 : rule__ExpFluent__Group_1__1__Impl ;
+    public final void rule__ExpFluent__Group_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3734:1: ( rule__ExpFluent__Group_1__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3735:2: rule__ExpFluent__Group_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__Group_1__1__Impl_in_rule__ExpFluent__Group_1__17556);
+            rule__ExpFluent__Group_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group_1__1"
+
+
+    // $ANTLR start "rule__ExpFluent__Group_1__1__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3741:1: rule__ExpFluent__Group_1__1__Impl : ( ( rule__ExpFluent__ValuePartAssignment_1_1 ) ) ;
+    public final void rule__ExpFluent__Group_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3745:1: ( ( ( rule__ExpFluent__ValuePartAssignment_1_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3746:1: ( ( rule__ExpFluent__ValuePartAssignment_1_1 ) )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3746:1: ( ( rule__ExpFluent__ValuePartAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3747:1: ( rule__ExpFluent__ValuePartAssignment_1_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getValuePartAssignment_1_1()); 
+            }
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3748:1: ( rule__ExpFluent__ValuePartAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3748:2: rule__ExpFluent__ValuePartAssignment_1_1
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__ValuePartAssignment_1_1_in_rule__ExpFluent__Group_1__1__Impl7583);
+            rule__ExpFluent__ValuePartAssignment_1_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getValuePartAssignment_1_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group_1__1__Impl"
+
+
+    // $ANTLR start "rule__ExpFluent__Group_2__0"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3762:1: rule__ExpFluent__Group_2__0 : rule__ExpFluent__Group_2__0__Impl rule__ExpFluent__Group_2__1 ;
+    public final void rule__ExpFluent__Group_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3766:1: ( rule__ExpFluent__Group_2__0__Impl rule__ExpFluent__Group_2__1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3767:2: rule__ExpFluent__Group_2__0__Impl rule__ExpFluent__Group_2__1
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__Group_2__0__Impl_in_rule__ExpFluent__Group_2__07617);
+            rule__ExpFluent__Group_2__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__ExpFluent__Group_2__1_in_rule__ExpFluent__Group_2__07620);
+            rule__ExpFluent__Group_2__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group_2__0"
+
+
+    // $ANTLR start "rule__ExpFluent__Group_2__0__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3774:1: rule__ExpFluent__Group_2__0__Impl : ( 'in' ) ;
+    public final void rule__ExpFluent__Group_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3778:1: ( ( 'in' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3779:1: ( 'in' )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3779:1: ( 'in' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3780:1: 'in'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getInKeyword_2_0()); 
+            }
+            match(input,30,FOLLOW_30_in_rule__ExpFluent__Group_2__0__Impl7648); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getInKeyword_2_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group_2__0__Impl"
+
+
+    // $ANTLR start "rule__ExpFluent__Group_2__1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3793:1: rule__ExpFluent__Group_2__1 : rule__ExpFluent__Group_2__1__Impl ;
+    public final void rule__ExpFluent__Group_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3797:1: ( rule__ExpFluent__Group_2__1__Impl )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3798:2: rule__ExpFluent__Group_2__1__Impl
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__Group_2__1__Impl_in_rule__ExpFluent__Group_2__17679);
+            rule__ExpFluent__Group_2__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group_2__1"
+
+
+    // $ANTLR start "rule__ExpFluent__Group_2__1__Impl"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3804:1: rule__ExpFluent__Group_2__1__Impl : ( ( rule__ExpFluent__TimePartAssignment_2_1 ) ) ;
+    public final void rule__ExpFluent__Group_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3808:1: ( ( ( rule__ExpFluent__TimePartAssignment_2_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3809:1: ( ( rule__ExpFluent__TimePartAssignment_2_1 ) )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3809:1: ( ( rule__ExpFluent__TimePartAssignment_2_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3810:1: ( rule__ExpFluent__TimePartAssignment_2_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getTimePartAssignment_2_1()); 
+            }
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3811:1: ( rule__ExpFluent__TimePartAssignment_2_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3811:2: rule__ExpFluent__TimePartAssignment_2_1
+            {
+            pushFollow(FOLLOW_rule__ExpFluent__TimePartAssignment_2_1_in_rule__ExpFluent__Group_2__1__Impl7706);
+            rule__ExpFluent__TimePartAssignment_2_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getTimePartAssignment_2_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__Group_2__1__Impl"
+
+
     // $ANTLR start "rule__DroolsModel__StatementsAssignment"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3392:1: rule__DroolsModel__StatementsAssignment : ( ruleStatement ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3826:1: rule__DroolsModel__StatementsAssignment : ( ruleStatement ) ;
     public final void rule__DroolsModel__StatementsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3396:1: ( ( ruleStatement ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3397:1: ( ruleStatement )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3830:1: ( ( ruleStatement ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3831:1: ( ruleStatement )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3397:1: ( ruleStatement )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3398:1: ruleStatement
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3831:1: ( ruleStatement )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3832:1: ruleStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDroolsModelAccess().getStatementsStatementParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleStatement_in_rule__DroolsModel__StatementsAssignment6883);
+            pushFollow(FOLLOW_ruleStatement_in_rule__DroolsModel__StatementsAssignment7745);
             ruleStatement();
 
             state._fsp--;
@@ -10174,22 +11393,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__EventAssignment_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3407:1: rule__Statement__EventAssignment_1 : ( ruleEvent ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3841:1: rule__Statement__EventAssignment_1 : ( ruleEvent ) ;
     public final void rule__Statement__EventAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3411:1: ( ( ruleEvent ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3412:1: ( ruleEvent )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3845:1: ( ( ruleEvent ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3846:1: ( ruleEvent )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3412:1: ( ruleEvent )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3413:1: ruleEvent
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3846:1: ( ruleEvent )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3847:1: ruleEvent
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getEventEventParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleEvent_in_rule__Statement__EventAssignment_16914);
+            pushFollow(FOLLOW_ruleEvent_in_rule__Statement__EventAssignment_17776);
             ruleEvent();
 
             state._fsp--;
@@ -10219,22 +11438,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__FluentAssignment_3"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3422:1: rule__Statement__FluentAssignment_3 : ( ruleFluent ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3856:1: rule__Statement__FluentAssignment_3 : ( ruleFluent ) ;
     public final void rule__Statement__FluentAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3426:1: ( ( ruleFluent ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3427:1: ( ruleFluent )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3860:1: ( ( ruleFluent ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3861:1: ( ruleFluent )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3427:1: ( ruleFluent )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3428:1: ruleFluent
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3861:1: ( ruleFluent )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3862:1: ruleFluent
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getFluentFluentParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleFluent_in_rule__Statement__FluentAssignment_36945);
+            pushFollow(FOLLOW_ruleFluent_in_rule__Statement__FluentAssignment_37807);
             ruleFluent();
 
             state._fsp--;
@@ -10264,22 +11483,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__FluentAssignment_4_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3437:1: rule__Statement__FluentAssignment_4_1 : ( ruleFluent ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3871:1: rule__Statement__FluentAssignment_4_1 : ( ruleFluent ) ;
     public final void rule__Statement__FluentAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3441:1: ( ( ruleFluent ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3442:1: ( ruleFluent )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3875:1: ( ( ruleFluent ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3876:1: ( ruleFluent )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3442:1: ( ruleFluent )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3443:1: ruleFluent
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3876:1: ( ruleFluent )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3877:1: ruleFluent
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getFluentFluentParserRuleCall_4_1_0()); 
             }
-            pushFollow(FOLLOW_ruleFluent_in_rule__Statement__FluentAssignment_4_16976);
+            pushFollow(FOLLOW_ruleFluent_in_rule__Statement__FluentAssignment_4_17838);
             ruleFluent();
 
             state._fsp--;
@@ -10308,23 +11527,113 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Statement__FluentAssignment_4_1"
 
 
+    // $ANTLR start "rule__Statement__ExpAssignment_5_1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3886:1: rule__Statement__ExpAssignment_5_1 : ( ruleExpFluent ) ;
+    public final void rule__Statement__ExpAssignment_5_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3890:1: ( ( ruleExpFluent ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3891:1: ( ruleExpFluent )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3891:1: ( ruleExpFluent )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3892:1: ruleExpFluent
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStatementAccess().getExpExpFluentParserRuleCall_5_1_0()); 
+            }
+            pushFollow(FOLLOW_ruleExpFluent_in_rule__Statement__ExpAssignment_5_17869);
+            ruleExpFluent();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStatementAccess().getExpExpFluentParserRuleCall_5_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__ExpAssignment_5_1"
+
+
+    // $ANTLR start "rule__Statement__ExpAssignment_5_2_1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3901:1: rule__Statement__ExpAssignment_5_2_1 : ( ruleExpFluent ) ;
+    public final void rule__Statement__ExpAssignment_5_2_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3905:1: ( ( ruleExpFluent ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3906:1: ( ruleExpFluent )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3906:1: ( ruleExpFluent )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3907:1: ruleExpFluent
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStatementAccess().getExpExpFluentParserRuleCall_5_2_1_0()); 
+            }
+            pushFollow(FOLLOW_ruleExpFluent_in_rule__Statement__ExpAssignment_5_2_17900);
+            ruleExpFluent();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStatementAccess().getExpExpFluentParserRuleCall_5_2_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Statement__ExpAssignment_5_2_1"
+
+
     // $ANTLR start "rule__Event__EventNameAssignment"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3452:1: rule__Event__EventNameAssignment : ( RULE_ID ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3916:1: rule__Event__EventNameAssignment : ( RULE_ID ) ;
     public final void rule__Event__EventNameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3456:1: ( ( RULE_ID ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3457:1: ( RULE_ID )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3920:1: ( ( RULE_ID ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3921:1: ( RULE_ID )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3457:1: ( RULE_ID )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3458:1: RULE_ID
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3921:1: ( RULE_ID )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3922:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEventAccess().getEventNameIDTerminalRuleCall_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Event__EventNameAssignment7007); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Event__EventNameAssignment7931); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEventAccess().getEventNameIDTerminalRuleCall_0()); 
             }
@@ -10350,22 +11659,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__FluentNameAssignment_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3467:1: rule__Fluent__FluentNameAssignment_0 : ( RULE_ID ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3931:1: rule__Fluent__FluentNameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Fluent__FluentNameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3471:1: ( ( RULE_ID ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3472:1: ( RULE_ID )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3935:1: ( ( RULE_ID ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3936:1: ( RULE_ID )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3472:1: ( RULE_ID )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3473:1: RULE_ID
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3936:1: ( RULE_ID )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3937:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getFluentNameIDTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Fluent__FluentNameAssignment_07038); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Fluent__FluentNameAssignment_07962); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFluentAccess().getFluentNameIDTerminalRuleCall_0_0()); 
             }
@@ -10391,22 +11700,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__ValuePartAssignment_1_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3482:1: rule__Fluent__ValuePartAssignment_1_1 : ( ruleToRule ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3946:1: rule__Fluent__ValuePartAssignment_1_1 : ( ruleToRule ) ;
     public final void rule__Fluent__ValuePartAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3486:1: ( ( ruleToRule ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3487:1: ( ruleToRule )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3950:1: ( ( ruleToRule ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3951:1: ( ruleToRule )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3487:1: ( ruleToRule )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3488:1: ruleToRule
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3951:1: ( ruleToRule )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3952:1: ruleToRule
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getValuePartToRuleParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleToRule_in_rule__Fluent__ValuePartAssignment_1_17069);
+            pushFollow(FOLLOW_ruleToRule_in_rule__Fluent__ValuePartAssignment_1_17993);
             ruleToRule();
 
             state._fsp--;
@@ -10436,22 +11745,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__TimePartAssignment_2_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3497:1: rule__Fluent__TimePartAssignment_2_1 : ( ruleInRule ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3961:1: rule__Fluent__TimePartAssignment_2_1 : ( ruleInRule ) ;
     public final void rule__Fluent__TimePartAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3501:1: ( ( ruleInRule ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3502:1: ( ruleInRule )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3965:1: ( ( ruleInRule ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3966:1: ( ruleInRule )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3502:1: ( ruleInRule )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3503:1: ruleInRule
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3966:1: ( ruleInRule )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3967:1: ruleInRule
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getTimePartInRuleParserRuleCall_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleInRule_in_rule__Fluent__TimePartAssignment_2_17100);
+            pushFollow(FOLLOW_ruleInRule_in_rule__Fluent__TimePartAssignment_2_18024);
             ruleInRule();
 
             state._fsp--;
@@ -10481,22 +11790,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fluent__CondPartAssignment_3_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3512:1: rule__Fluent__CondPartAssignment_3_1 : ( ruleConditionRule ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3976:1: rule__Fluent__CondPartAssignment_3_1 : ( ruleConditionRule ) ;
     public final void rule__Fluent__CondPartAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3516:1: ( ( ruleConditionRule ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3517:1: ( ruleConditionRule )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3980:1: ( ( ruleConditionRule ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3981:1: ( ruleConditionRule )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3517:1: ( ruleConditionRule )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3518:1: ruleConditionRule
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3981:1: ( ruleConditionRule )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3982:1: ruleConditionRule
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentAccess().getCondPartConditionRuleParserRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleConditionRule_in_rule__Fluent__CondPartAssignment_3_17131);
+            pushFollow(FOLLOW_ruleConditionRule_in_rule__Fluent__CondPartAssignment_3_18055);
             ruleConditionRule();
 
             state._fsp--;
@@ -10526,22 +11835,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ToRule__ExpressionAssignment_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3527:1: rule__ToRule__ExpressionAssignment_0 : ( ruleStringExpr ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3991:1: rule__ToRule__ExpressionAssignment_0 : ( ruleStringExpr ) ;
     public final void rule__ToRule__ExpressionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3531:1: ( ( ruleStringExpr ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3532:1: ( ruleStringExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3995:1: ( ( ruleStringExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3996:1: ( ruleStringExpr )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3532:1: ( ruleStringExpr )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3533:1: ruleStringExpr
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3996:1: ( ruleStringExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3997:1: ruleStringExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getToRuleAccess().getExpressionStringExprParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleStringExpr_in_rule__ToRule__ExpressionAssignment_07162);
+            pushFollow(FOLLOW_ruleStringExpr_in_rule__ToRule__ExpressionAssignment_08086);
             ruleStringExpr();
 
             state._fsp--;
@@ -10571,22 +11880,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ToRule__ExpressionAssignment_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3542:1: rule__ToRule__ExpressionAssignment_1 : ( ruleBoolExpr ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4006:1: rule__ToRule__ExpressionAssignment_1 : ( ruleBoolExpr ) ;
     public final void rule__ToRule__ExpressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3546:1: ( ( ruleBoolExpr ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3547:1: ( ruleBoolExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4010:1: ( ( ruleBoolExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4011:1: ( ruleBoolExpr )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3547:1: ( ruleBoolExpr )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3548:1: ruleBoolExpr
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4011:1: ( ruleBoolExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4012:1: ruleBoolExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getToRuleAccess().getExpressionBoolExprParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleBoolExpr_in_rule__ToRule__ExpressionAssignment_17193);
+            pushFollow(FOLLOW_ruleBoolExpr_in_rule__ToRule__ExpressionAssignment_18117);
             ruleBoolExpr();
 
             state._fsp--;
@@ -10616,22 +11925,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ToRule__ExpressionAssignment_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3557:1: rule__ToRule__ExpressionAssignment_2 : ( ruleswitchExpr ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4021:1: rule__ToRule__ExpressionAssignment_2 : ( ruleswitchExpr ) ;
     public final void rule__ToRule__ExpressionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3561:1: ( ( ruleswitchExpr ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3562:1: ( ruleswitchExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4025:1: ( ( ruleswitchExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4026:1: ( ruleswitchExpr )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3562:1: ( ruleswitchExpr )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3563:1: ruleswitchExpr
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4026:1: ( ruleswitchExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4027:1: ruleswitchExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getToRuleAccess().getExpressionSwitchExprParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleswitchExpr_in_rule__ToRule__ExpressionAssignment_27224);
+            pushFollow(FOLLOW_ruleswitchExpr_in_rule__ToRule__ExpressionAssignment_28148);
             ruleswitchExpr();
 
             state._fsp--;
@@ -10661,22 +11970,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ToRule__ExpressionAssignment_3_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3572:1: rule__ToRule__ExpressionAssignment_3_0 : ( ruleFloatExpr ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4036:1: rule__ToRule__ExpressionAssignment_3_0 : ( ruleFloatExpr ) ;
     public final void rule__ToRule__ExpressionAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3576:1: ( ( ruleFloatExpr ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3577:1: ( ruleFloatExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4040:1: ( ( ruleFloatExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4041:1: ( ruleFloatExpr )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3577:1: ( ruleFloatExpr )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3578:1: ruleFloatExpr
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4041:1: ( ruleFloatExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4042:1: ruleFloatExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getToRuleAccess().getExpressionFloatExprParserRuleCall_3_0_0()); 
             }
-            pushFollow(FOLLOW_ruleFloatExpr_in_rule__ToRule__ExpressionAssignment_3_07255);
+            pushFollow(FOLLOW_ruleFloatExpr_in_rule__ToRule__ExpressionAssignment_3_08179);
             ruleFloatExpr();
 
             state._fsp--;
@@ -10706,22 +12015,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ToRule__ExpressionAssignment_4"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3587:1: rule__ToRule__ExpressionAssignment_4 : ( ruleMutationExpr ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4051:1: rule__ToRule__ExpressionAssignment_4 : ( ruleMutationExpr ) ;
     public final void rule__ToRule__ExpressionAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3591:1: ( ( ruleMutationExpr ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3592:1: ( ruleMutationExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4055:1: ( ( ruleMutationExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4056:1: ( ruleMutationExpr )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3592:1: ( ruleMutationExpr )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3593:1: ruleMutationExpr
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4056:1: ( ruleMutationExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4057:1: ruleMutationExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getToRuleAccess().getExpressionMutationExprParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleMutationExpr_in_rule__ToRule__ExpressionAssignment_47286);
+            pushFollow(FOLLOW_ruleMutationExpr_in_rule__ToRule__ExpressionAssignment_48210);
             ruleMutationExpr();
 
             state._fsp--;
@@ -10751,28 +12060,28 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolExpr__ValueAssignment_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3602:1: rule__BoolExpr__ValueAssignment_0 : ( ( 'true' ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4066:1: rule__BoolExpr__ValueAssignment_0 : ( ( 'true' ) ) ;
     public final void rule__BoolExpr__ValueAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3606:1: ( ( ( 'true' ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3607:1: ( ( 'true' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4070:1: ( ( ( 'true' ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4071:1: ( ( 'true' ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3607:1: ( ( 'true' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3608:1: ( 'true' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getBoolExprAccess().getValueTrueKeyword_0_0()); 
-            }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3609:1: ( 'true' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3610:1: 'true'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4071:1: ( ( 'true' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4072:1: ( 'true' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolExprAccess().getValueTrueKeyword_0_0()); 
             }
-            match(input,33,FOLLOW_33_in_rule__BoolExpr__ValueAssignment_07322); if (state.failed) return ;
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4073:1: ( 'true' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4074:1: 'true'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getBoolExprAccess().getValueTrueKeyword_0_0()); 
+            }
+            match(input,34,FOLLOW_34_in_rule__BoolExpr__ValueAssignment_08246); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBoolExprAccess().getValueTrueKeyword_0_0()); 
             }
@@ -10804,28 +12113,28 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoolExpr__ValueAssignment_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3625:1: rule__BoolExpr__ValueAssignment_1 : ( ( 'false' ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4089:1: rule__BoolExpr__ValueAssignment_1 : ( ( 'false' ) ) ;
     public final void rule__BoolExpr__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3629:1: ( ( ( 'false' ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3630:1: ( ( 'false' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4093:1: ( ( ( 'false' ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4094:1: ( ( 'false' ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3630:1: ( ( 'false' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3631:1: ( 'false' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getBoolExprAccess().getValueFalseKeyword_1_0()); 
-            }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3632:1: ( 'false' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3633:1: 'false'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4094:1: ( ( 'false' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4095:1: ( 'false' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolExprAccess().getValueFalseKeyword_1_0()); 
             }
-            match(input,34,FOLLOW_34_in_rule__BoolExpr__ValueAssignment_17366); if (state.failed) return ;
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4096:1: ( 'false' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4097:1: 'false'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getBoolExprAccess().getValueFalseKeyword_1_0()); 
+            }
+            match(input,35,FOLLOW_35_in_rule__BoolExpr__ValueAssignment_18290); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBoolExprAccess().getValueFalseKeyword_1_0()); 
             }
@@ -10857,22 +12166,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__RightAssignment_1_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3648:1: rule__Or__RightAssignment_1_2 : ( ruleAnd ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4112:1: rule__Or__RightAssignment_1_2 : ( ruleAnd ) ;
     public final void rule__Or__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3652:1: ( ( ruleAnd ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3653:1: ( ruleAnd )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4116:1: ( ( ruleAnd ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4117:1: ( ruleAnd )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3653:1: ( ruleAnd )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3654:1: ruleAnd
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4117:1: ( ruleAnd )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4118:1: ruleAnd
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrAccess().getRightAndParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleAnd_in_rule__Or__RightAssignment_1_27405);
+            pushFollow(FOLLOW_ruleAnd_in_rule__Or__RightAssignment_1_28329);
             ruleAnd();
 
             state._fsp--;
@@ -10902,22 +12211,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__RightAssignment_0_1_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3663:1: rule__And__RightAssignment_0_1_2 : ( ruleEquality ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4127:1: rule__And__RightAssignment_0_1_2 : ( ruleEquality ) ;
     public final void rule__And__RightAssignment_0_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3667:1: ( ( ruleEquality ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3668:1: ( ruleEquality )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4131:1: ( ( ruleEquality ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4132:1: ( ruleEquality )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3668:1: ( ruleEquality )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3669:1: ruleEquality
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4132:1: ( ruleEquality )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4133:1: ruleEquality
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getRightEqualityParserRuleCall_0_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleEquality_in_rule__And__RightAssignment_0_1_27436);
+            pushFollow(FOLLOW_ruleEquality_in_rule__And__RightAssignment_0_1_28360);
             ruleEquality();
 
             state._fsp--;
@@ -10947,22 +12256,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__RightAssignment_1_1_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3678:1: rule__And__RightAssignment_1_1_2 : ( ruleComparison ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4142:1: rule__And__RightAssignment_1_1_2 : ( ruleComparison ) ;
     public final void rule__And__RightAssignment_1_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3682:1: ( ( ruleComparison ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3683:1: ( ruleComparison )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4146:1: ( ( ruleComparison ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4147:1: ( ruleComparison )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3683:1: ( ruleComparison )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3684:1: ruleComparison
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4147:1: ( ruleComparison )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4148:1: ruleComparison
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getRightComparisonParserRuleCall_1_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleComparison_in_rule__And__RightAssignment_1_1_27467);
+            pushFollow(FOLLOW_ruleComparison_in_rule__And__RightAssignment_1_1_28391);
             ruleComparison();
 
             state._fsp--;
@@ -10992,22 +12301,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__RightAssignment_2_1_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3693:1: rule__And__RightAssignment_2_1_2 : ( ruleComparison ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4157:1: rule__And__RightAssignment_2_1_2 : ( ruleComparison ) ;
     public final void rule__And__RightAssignment_2_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3697:1: ( ( ruleComparison ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3698:1: ( ruleComparison )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4161:1: ( ( ruleComparison ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4162:1: ( ruleComparison )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3698:1: ( ruleComparison )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3699:1: ruleComparison
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4162:1: ( ruleComparison )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4163:1: ruleComparison
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getRightComparisonParserRuleCall_2_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleComparison_in_rule__And__RightAssignment_2_1_27498);
+            pushFollow(FOLLOW_ruleComparison_in_rule__And__RightAssignment_2_1_28422);
             ruleComparison();
 
             state._fsp--;
@@ -11037,22 +12346,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__RightAssignment_3_1_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3708:1: rule__And__RightAssignment_3_1_2 : ( ruleEquality ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4172:1: rule__And__RightAssignment_3_1_2 : ( ruleEquality ) ;
     public final void rule__And__RightAssignment_3_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3712:1: ( ( ruleEquality ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3713:1: ( ruleEquality )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4176:1: ( ( ruleEquality ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4177:1: ( ruleEquality )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3713:1: ( ruleEquality )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3714:1: ruleEquality
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4177:1: ( ruleEquality )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4178:1: ruleEquality
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getRightEqualityParserRuleCall_3_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleEquality_in_rule__And__RightAssignment_3_1_27529);
+            pushFollow(FOLLOW_ruleEquality_in_rule__And__RightAssignment_3_1_28453);
             ruleEquality();
 
             state._fsp--;
@@ -11082,25 +12391,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__OpAssignment_0_1_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3723:1: rule__Equality__OpAssignment_0_1_1 : ( ( rule__Equality__OpAlternatives_0_1_1_0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4187:1: rule__Equality__OpAssignment_0_1_1 : ( ( rule__Equality__OpAlternatives_0_1_1_0 ) ) ;
     public final void rule__Equality__OpAssignment_0_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3727:1: ( ( ( rule__Equality__OpAlternatives_0_1_1_0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3728:1: ( ( rule__Equality__OpAlternatives_0_1_1_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4191:1: ( ( ( rule__Equality__OpAlternatives_0_1_1_0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4192:1: ( ( rule__Equality__OpAlternatives_0_1_1_0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3728:1: ( ( rule__Equality__OpAlternatives_0_1_1_0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3729:1: ( rule__Equality__OpAlternatives_0_1_1_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4192:1: ( ( rule__Equality__OpAlternatives_0_1_1_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4193:1: ( rule__Equality__OpAlternatives_0_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getOpAlternatives_0_1_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3730:1: ( rule__Equality__OpAlternatives_0_1_1_0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3730:2: rule__Equality__OpAlternatives_0_1_1_0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4194:1: ( rule__Equality__OpAlternatives_0_1_1_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4194:2: rule__Equality__OpAlternatives_0_1_1_0
             {
-            pushFollow(FOLLOW_rule__Equality__OpAlternatives_0_1_1_0_in_rule__Equality__OpAssignment_0_1_17560);
+            pushFollow(FOLLOW_rule__Equality__OpAlternatives_0_1_1_0_in_rule__Equality__OpAssignment_0_1_18484);
             rule__Equality__OpAlternatives_0_1_1_0();
 
             state._fsp--;
@@ -11133,22 +12442,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__RightAssignment_0_1_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3739:1: rule__Equality__RightAssignment_0_1_2 : ( ruleFloatExpr ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4203:1: rule__Equality__RightAssignment_0_1_2 : ( ruleFloatExpr ) ;
     public final void rule__Equality__RightAssignment_0_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3743:1: ( ( ruleFloatExpr ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3744:1: ( ruleFloatExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4207:1: ( ( ruleFloatExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4208:1: ( ruleFloatExpr )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3744:1: ( ruleFloatExpr )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3745:1: ruleFloatExpr
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4208:1: ( ruleFloatExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4209:1: ruleFloatExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getRightFloatExprParserRuleCall_0_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleFloatExpr_in_rule__Equality__RightAssignment_0_1_27593);
+            pushFollow(FOLLOW_ruleFloatExpr_in_rule__Equality__RightAssignment_0_1_28517);
             ruleFloatExpr();
 
             state._fsp--;
@@ -11178,25 +12487,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__OpAssignment_1_1_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3754:1: rule__Equality__OpAssignment_1_1_1 : ( ( rule__Equality__OpAlternatives_1_1_1_0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4218:1: rule__Equality__OpAssignment_1_1_1 : ( ( rule__Equality__OpAlternatives_1_1_1_0 ) ) ;
     public final void rule__Equality__OpAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3758:1: ( ( ( rule__Equality__OpAlternatives_1_1_1_0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3759:1: ( ( rule__Equality__OpAlternatives_1_1_1_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4222:1: ( ( ( rule__Equality__OpAlternatives_1_1_1_0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4223:1: ( ( rule__Equality__OpAlternatives_1_1_1_0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3759:1: ( ( rule__Equality__OpAlternatives_1_1_1_0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3760:1: ( rule__Equality__OpAlternatives_1_1_1_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4223:1: ( ( rule__Equality__OpAlternatives_1_1_1_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4224:1: ( rule__Equality__OpAlternatives_1_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getOpAlternatives_1_1_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3761:1: ( rule__Equality__OpAlternatives_1_1_1_0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3761:2: rule__Equality__OpAlternatives_1_1_1_0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4225:1: ( rule__Equality__OpAlternatives_1_1_1_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4225:2: rule__Equality__OpAlternatives_1_1_1_0
             {
-            pushFollow(FOLLOW_rule__Equality__OpAlternatives_1_1_1_0_in_rule__Equality__OpAssignment_1_1_17624);
+            pushFollow(FOLLOW_rule__Equality__OpAlternatives_1_1_1_0_in_rule__Equality__OpAssignment_1_1_18548);
             rule__Equality__OpAlternatives_1_1_1_0();
 
             state._fsp--;
@@ -11229,22 +12538,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Equality__RightAssignment_1_1_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3770:1: rule__Equality__RightAssignment_1_1_2 : ( ruleStringExpr ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4234:1: rule__Equality__RightAssignment_1_1_2 : ( ruleStringExpr ) ;
     public final void rule__Equality__RightAssignment_1_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3774:1: ( ( ruleStringExpr ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3775:1: ( ruleStringExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4238:1: ( ( ruleStringExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4239:1: ( ruleStringExpr )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3775:1: ( ruleStringExpr )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3776:1: ruleStringExpr
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4239:1: ( ruleStringExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4240:1: ruleStringExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualityAccess().getRightStringExprParserRuleCall_1_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleStringExpr_in_rule__Equality__RightAssignment_1_1_27657);
+            pushFollow(FOLLOW_ruleStringExpr_in_rule__Equality__RightAssignment_1_1_28581);
             ruleStringExpr();
 
             state._fsp--;
@@ -11274,25 +12583,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__OpAssignment_1_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3785:1: rule__Comparison__OpAssignment_1_1 : ( ( rule__Comparison__OpAlternatives_1_1_0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4249:1: rule__Comparison__OpAssignment_1_1 : ( ( rule__Comparison__OpAlternatives_1_1_0 ) ) ;
     public final void rule__Comparison__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3789:1: ( ( ( rule__Comparison__OpAlternatives_1_1_0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3790:1: ( ( rule__Comparison__OpAlternatives_1_1_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4253:1: ( ( ( rule__Comparison__OpAlternatives_1_1_0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4254:1: ( ( rule__Comparison__OpAlternatives_1_1_0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3790:1: ( ( rule__Comparison__OpAlternatives_1_1_0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3791:1: ( rule__Comparison__OpAlternatives_1_1_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4254:1: ( ( rule__Comparison__OpAlternatives_1_1_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4255:1: ( rule__Comparison__OpAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getOpAlternatives_1_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3792:1: ( rule__Comparison__OpAlternatives_1_1_0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3792:2: rule__Comparison__OpAlternatives_1_1_0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4256:1: ( rule__Comparison__OpAlternatives_1_1_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4256:2: rule__Comparison__OpAlternatives_1_1_0
             {
-            pushFollow(FOLLOW_rule__Comparison__OpAlternatives_1_1_0_in_rule__Comparison__OpAssignment_1_17688);
+            pushFollow(FOLLOW_rule__Comparison__OpAlternatives_1_1_0_in_rule__Comparison__OpAssignment_1_18612);
             rule__Comparison__OpAlternatives_1_1_0();
 
             state._fsp--;
@@ -11325,22 +12634,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__RightAssignment_1_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3801:1: rule__Comparison__RightAssignment_1_2 : ( rulePlusOrMinus ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4265:1: rule__Comparison__RightAssignment_1_2 : ( rulePlusOrMinus ) ;
     public final void rule__Comparison__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3805:1: ( ( rulePlusOrMinus ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3806:1: ( rulePlusOrMinus )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4269:1: ( ( rulePlusOrMinus ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4270:1: ( rulePlusOrMinus )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3806:1: ( rulePlusOrMinus )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3807:1: rulePlusOrMinus
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4270:1: ( rulePlusOrMinus )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4271:1: rulePlusOrMinus
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getRightPlusOrMinusParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_rulePlusOrMinus_in_rule__Comparison__RightAssignment_1_27721);
+            pushFollow(FOLLOW_rulePlusOrMinus_in_rule__Comparison__RightAssignment_1_28645);
             rulePlusOrMinus();
 
             state._fsp--;
@@ -11370,28 +12679,28 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchExpr__ValueAssignment"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3816:1: rule__SwitchExpr__ValueAssignment : ( ( 'switch' ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4280:1: rule__SwitchExpr__ValueAssignment : ( ( 'switch' ) ) ;
     public final void rule__SwitchExpr__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3820:1: ( ( ( 'switch' ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3821:1: ( ( 'switch' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4284:1: ( ( ( 'switch' ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4285:1: ( ( 'switch' ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3821:1: ( ( 'switch' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3822:1: ( 'switch' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSwitchExprAccess().getValueSwitchKeyword_0()); 
-            }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3823:1: ( 'switch' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3824:1: 'switch'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4285:1: ( ( 'switch' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4286:1: ( 'switch' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchExprAccess().getValueSwitchKeyword_0()); 
             }
-            match(input,35,FOLLOW_35_in_rule__SwitchExpr__ValueAssignment7757); if (state.failed) return ;
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4287:1: ( 'switch' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4288:1: 'switch'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getSwitchExprAccess().getValueSwitchKeyword_0()); 
+            }
+            match(input,36,FOLLOW_36_in_rule__SwitchExpr__ValueAssignment8681); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSwitchExprAccess().getValueSwitchKeyword_0()); 
             }
@@ -11423,25 +12732,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MutationExpr__ValueAssignment_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3839:1: rule__MutationExpr__ValueAssignment_0 : ( ( rule__MutationExpr__ValueAlternatives_0_0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4303:1: rule__MutationExpr__ValueAssignment_0 : ( ( rule__MutationExpr__ValueAlternatives_0_0 ) ) ;
     public final void rule__MutationExpr__ValueAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3843:1: ( ( ( rule__MutationExpr__ValueAlternatives_0_0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3844:1: ( ( rule__MutationExpr__ValueAlternatives_0_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4307:1: ( ( ( rule__MutationExpr__ValueAlternatives_0_0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4308:1: ( ( rule__MutationExpr__ValueAlternatives_0_0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3844:1: ( ( rule__MutationExpr__ValueAlternatives_0_0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3845:1: ( rule__MutationExpr__ValueAlternatives_0_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4308:1: ( ( rule__MutationExpr__ValueAlternatives_0_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4309:1: ( rule__MutationExpr__ValueAlternatives_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMutationExprAccess().getValueAlternatives_0_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3846:1: ( rule__MutationExpr__ValueAlternatives_0_0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3846:2: rule__MutationExpr__ValueAlternatives_0_0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4310:1: ( rule__MutationExpr__ValueAlternatives_0_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4310:2: rule__MutationExpr__ValueAlternatives_0_0
             {
-            pushFollow(FOLLOW_rule__MutationExpr__ValueAlternatives_0_0_in_rule__MutationExpr__ValueAssignment_07796);
+            pushFollow(FOLLOW_rule__MutationExpr__ValueAlternatives_0_0_in_rule__MutationExpr__ValueAssignment_08720);
             rule__MutationExpr__ValueAlternatives_0_0();
 
             state._fsp--;
@@ -11474,22 +12783,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FloatExpr__ValueDirectAssignment_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3855:1: rule__FloatExpr__ValueDirectAssignment_0 : ( RULE_INT ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4319:1: rule__FloatExpr__ValueDirectAssignment_0 : ( RULE_INT ) ;
     public final void rule__FloatExpr__ValueDirectAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3859:1: ( ( RULE_INT ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3860:1: ( RULE_INT )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4323:1: ( ( RULE_INT ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4324:1: ( RULE_INT )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3860:1: ( RULE_INT )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3861:1: RULE_INT
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4324:1: ( RULE_INT )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4325:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFloatExprAccess().getValueDirectINTTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__FloatExpr__ValueDirectAssignment_07829); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__FloatExpr__ValueDirectAssignment_08753); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFloatExprAccess().getValueDirectINTTerminalRuleCall_0_0()); 
             }
@@ -11515,22 +12824,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FloatExpr__ValueCalculatedAssignment_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3870:1: rule__FloatExpr__ValueCalculatedAssignment_1 : ( rulePlusOrMinus ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4334:1: rule__FloatExpr__ValueCalculatedAssignment_1 : ( rulePlusOrMinus ) ;
     public final void rule__FloatExpr__ValueCalculatedAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3874:1: ( ( rulePlusOrMinus ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3875:1: ( rulePlusOrMinus )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4338:1: ( ( rulePlusOrMinus ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4339:1: ( rulePlusOrMinus )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3875:1: ( rulePlusOrMinus )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3876:1: rulePlusOrMinus
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4339:1: ( rulePlusOrMinus )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4340:1: rulePlusOrMinus
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFloatExprAccess().getValueCalculatedPlusOrMinusParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_rulePlusOrMinus_in_rule__FloatExpr__ValueCalculatedAssignment_17860);
+            pushFollow(FOLLOW_rulePlusOrMinus_in_rule__FloatExpr__ValueCalculatedAssignment_18784);
             rulePlusOrMinus();
 
             state._fsp--;
@@ -11560,22 +12869,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FloatExpr__ValueOfFluentAssignment_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3885:1: rule__FloatExpr__ValueOfFluentAssignment_2 : ( ruleFluentWhoseValue ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4349:1: rule__FloatExpr__ValueOfFluentAssignment_2 : ( ruleFluentWhoseValue ) ;
     public final void rule__FloatExpr__ValueOfFluentAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3889:1: ( ( ruleFluentWhoseValue ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3890:1: ( ruleFluentWhoseValue )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4353:1: ( ( ruleFluentWhoseValue ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4354:1: ( ruleFluentWhoseValue )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3890:1: ( ruleFluentWhoseValue )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3891:1: ruleFluentWhoseValue
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4354:1: ( ruleFluentWhoseValue )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4355:1: ruleFluentWhoseValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFloatExprAccess().getValueOfFluentFluentWhoseValueParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleFluentWhoseValue_in_rule__FloatExpr__ValueOfFluentAssignment_27891);
+            pushFollow(FOLLOW_ruleFluentWhoseValue_in_rule__FloatExpr__ValueOfFluentAssignment_28815);
             ruleFluentWhoseValue();
 
             state._fsp--;
@@ -11605,22 +12914,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PlusOrMinus__RightAssignment_1_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3900:1: rule__PlusOrMinus__RightAssignment_1_1 : ( ruleMulOrDiv ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4364:1: rule__PlusOrMinus__RightAssignment_1_1 : ( ruleMulOrDiv ) ;
     public final void rule__PlusOrMinus__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3904:1: ( ( ruleMulOrDiv ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3905:1: ( ruleMulOrDiv )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4368:1: ( ( ruleMulOrDiv ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4369:1: ( ruleMulOrDiv )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3905:1: ( ruleMulOrDiv )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3906:1: ruleMulOrDiv
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4369:1: ( ruleMulOrDiv )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4370:1: ruleMulOrDiv
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusOrMinusAccess().getRightMulOrDivParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleMulOrDiv_in_rule__PlusOrMinus__RightAssignment_1_17922);
+            pushFollow(FOLLOW_ruleMulOrDiv_in_rule__PlusOrMinus__RightAssignment_1_18846);
             ruleMulOrDiv();
 
             state._fsp--;
@@ -11650,25 +12959,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__OpAssignment_1_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3915:1: rule__MulOrDiv__OpAssignment_1_1 : ( ( rule__MulOrDiv__OpAlternatives_1_1_0 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4379:1: rule__MulOrDiv__OpAssignment_1_1 : ( ( rule__MulOrDiv__OpAlternatives_1_1_0 ) ) ;
     public final void rule__MulOrDiv__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3919:1: ( ( ( rule__MulOrDiv__OpAlternatives_1_1_0 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3920:1: ( ( rule__MulOrDiv__OpAlternatives_1_1_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4383:1: ( ( ( rule__MulOrDiv__OpAlternatives_1_1_0 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4384:1: ( ( rule__MulOrDiv__OpAlternatives_1_1_0 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3920:1: ( ( rule__MulOrDiv__OpAlternatives_1_1_0 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3921:1: ( rule__MulOrDiv__OpAlternatives_1_1_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4384:1: ( ( rule__MulOrDiv__OpAlternatives_1_1_0 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4385:1: ( rule__MulOrDiv__OpAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMulOrDivAccess().getOpAlternatives_1_1_0()); 
             }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3922:1: ( rule__MulOrDiv__OpAlternatives_1_1_0 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3922:2: rule__MulOrDiv__OpAlternatives_1_1_0
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4386:1: ( rule__MulOrDiv__OpAlternatives_1_1_0 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4386:2: rule__MulOrDiv__OpAlternatives_1_1_0
             {
-            pushFollow(FOLLOW_rule__MulOrDiv__OpAlternatives_1_1_0_in_rule__MulOrDiv__OpAssignment_1_17953);
+            pushFollow(FOLLOW_rule__MulOrDiv__OpAlternatives_1_1_0_in_rule__MulOrDiv__OpAssignment_1_18877);
             rule__MulOrDiv__OpAlternatives_1_1_0();
 
             state._fsp--;
@@ -11701,22 +13010,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MulOrDiv__RightAssignment_1_2"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3931:1: rule__MulOrDiv__RightAssignment_1_2 : ( rulePrimary ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4395:1: rule__MulOrDiv__RightAssignment_1_2 : ( rulePrimary ) ;
     public final void rule__MulOrDiv__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3935:1: ( ( rulePrimary ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3936:1: ( rulePrimary )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4399:1: ( ( rulePrimary ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4400:1: ( rulePrimary )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3936:1: ( rulePrimary )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3937:1: rulePrimary
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4400:1: ( rulePrimary )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4401:1: rulePrimary
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMulOrDivAccess().getRightPrimaryParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_rulePrimary_in_rule__MulOrDiv__RightAssignment_1_27986);
+            pushFollow(FOLLOW_rulePrimary_in_rule__MulOrDiv__RightAssignment_1_28910);
             rulePrimary();
 
             state._fsp--;
@@ -11746,22 +13055,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__ValueDirectAssignment_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3946:1: rule__Primary__ValueDirectAssignment_0 : ( RULE_INT ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4410:1: rule__Primary__ValueDirectAssignment_0 : ( RULE_INT ) ;
     public final void rule__Primary__ValueDirectAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3950:1: ( ( RULE_INT ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3951:1: ( RULE_INT )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4414:1: ( ( RULE_INT ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4415:1: ( RULE_INT )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3951:1: ( RULE_INT )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3952:1: RULE_INT
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4415:1: ( RULE_INT )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4416:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryAccess().getValueDirectINTTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Primary__ValueDirectAssignment_08017); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Primary__ValueDirectAssignment_08941); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryAccess().getValueDirectINTTerminalRuleCall_0_0()); 
             }
@@ -11787,22 +13096,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__ValueOfFluentAssignment_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3961:1: rule__Primary__ValueOfFluentAssignment_1 : ( ruleFluentWhoseValue ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4425:1: rule__Primary__ValueOfFluentAssignment_1 : ( ruleFluentWhoseValue ) ;
     public final void rule__Primary__ValueOfFluentAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3965:1: ( ( ruleFluentWhoseValue ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3966:1: ( ruleFluentWhoseValue )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4429:1: ( ( ruleFluentWhoseValue ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4430:1: ( ruleFluentWhoseValue )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3966:1: ( ruleFluentWhoseValue )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3967:1: ruleFluentWhoseValue
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4430:1: ( ruleFluentWhoseValue )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4431:1: ruleFluentWhoseValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryAccess().getValueOfFluentFluentWhoseValueParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleFluentWhoseValue_in_rule__Primary__ValueOfFluentAssignment_18048);
+            pushFollow(FOLLOW_ruleFluentWhoseValue_in_rule__Primary__ValueOfFluentAssignment_18972);
             ruleFluentWhoseValue();
 
             state._fsp--;
@@ -11832,22 +13141,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FluentWhoseValue__FluentWhoseValueNameAssignment"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3976:1: rule__FluentWhoseValue__FluentWhoseValueNameAssignment : ( RULE_ID ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4440:1: rule__FluentWhoseValue__FluentWhoseValueNameAssignment : ( RULE_ID ) ;
     public final void rule__FluentWhoseValue__FluentWhoseValueNameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3980:1: ( ( RULE_ID ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3981:1: ( RULE_ID )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4444:1: ( ( RULE_ID ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4445:1: ( RULE_ID )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3981:1: ( RULE_ID )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3982:1: RULE_ID
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4445:1: ( RULE_ID )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4446:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFluentWhoseValueAccess().getFluentWhoseValueNameIDTerminalRuleCall_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FluentWhoseValue__FluentWhoseValueNameAssignment8079); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FluentWhoseValue__FluentWhoseValueNameAssignment9003); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFluentWhoseValueAccess().getFluentWhoseValueNameIDTerminalRuleCall_0()); 
             }
@@ -11873,22 +13182,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Str__ValueAssignment"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3991:1: rule__Str__ValueAssignment : ( RULE_STRING ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4455:1: rule__Str__ValueAssignment : ( RULE_STRING ) ;
     public final void rule__Str__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3995:1: ( ( RULE_STRING ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3996:1: ( RULE_STRING )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4459:1: ( ( RULE_STRING ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4460:1: ( RULE_STRING )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3996:1: ( RULE_STRING )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:3997:1: RULE_STRING
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4460:1: ( RULE_STRING )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4461:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStrAccess().getValueSTRINGTerminalRuleCall_0()); 
             }
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Str__ValueAssignment8110); if (state.failed) return ;
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Str__ValueAssignment9034); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStrAccess().getValueSTRINGTerminalRuleCall_0()); 
             }
@@ -11914,22 +13223,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InRule__TimeAssignment_0"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4006:1: rule__InRule__TimeAssignment_0 : ( RULE_INT ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4470:1: rule__InRule__TimeAssignment_0 : ( RULE_INT ) ;
     public final void rule__InRule__TimeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4010:1: ( ( RULE_INT ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4011:1: ( RULE_INT )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4474:1: ( ( RULE_INT ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4475:1: ( RULE_INT )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4011:1: ( RULE_INT )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4012:1: RULE_INT
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4475:1: ( RULE_INT )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4476:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInRuleAccess().getTimeINTTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__InRule__TimeAssignment_08141); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__InRule__TimeAssignment_09065); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInRuleAccess().getTimeINTTerminalRuleCall_0_0()); 
             }
@@ -11955,28 +13264,28 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InRule__CurrentTimeAssignment_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4021:1: rule__InRule__CurrentTimeAssignment_1 : ( ( 'now' ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4485:1: rule__InRule__CurrentTimeAssignment_1 : ( ( 'now' ) ) ;
     public final void rule__InRule__CurrentTimeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4025:1: ( ( ( 'now' ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4026:1: ( ( 'now' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4489:1: ( ( ( 'now' ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4490:1: ( ( 'now' ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4026:1: ( ( 'now' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4027:1: ( 'now' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getInRuleAccess().getCurrentTimeNowKeyword_1_0()); 
-            }
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4028:1: ( 'now' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4029:1: 'now'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4490:1: ( ( 'now' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4491:1: ( 'now' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInRuleAccess().getCurrentTimeNowKeyword_1_0()); 
             }
-            match(input,36,FOLLOW_36_in_rule__InRule__CurrentTimeAssignment_18177); if (state.failed) return ;
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4492:1: ( 'now' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4493:1: 'now'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getInRuleAccess().getCurrentTimeNowKeyword_1_0()); 
+            }
+            match(input,37,FOLLOW_37_in_rule__InRule__CurrentTimeAssignment_19101); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInRuleAccess().getCurrentTimeNowKeyword_1_0()); 
             }
@@ -12008,22 +13317,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRule__ConditionAssignment"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4044:1: rule__ConditionRule__ConditionAssignment : ( ruleBoolExpr ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4508:1: rule__ConditionRule__ConditionAssignment : ( ruleBoolExpr ) ;
     public final void rule__ConditionRule__ConditionAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4048:1: ( ( ruleBoolExpr ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4049:1: ( ruleBoolExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4512:1: ( ( ruleBoolExpr ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4513:1: ( ruleBoolExpr )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4049:1: ( ruleBoolExpr )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4050:1: ruleBoolExpr
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4513:1: ( ruleBoolExpr )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4514:1: ruleBoolExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionRuleAccess().getConditionBoolExprParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleBoolExpr_in_rule__ConditionRule__ConditionAssignment8216);
+            pushFollow(FOLLOW_ruleBoolExpr_in_rule__ConditionRule__ConditionAssignment9140);
             ruleBoolExpr();
 
             state._fsp--;
@@ -12051,21 +13360,152 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end "rule__ConditionRule__ConditionAssignment"
 
+
+    // $ANTLR start "rule__ExpFluent__FluentNameAssignment_0"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4523:1: rule__ExpFluent__FluentNameAssignment_0 : ( RULE_ID ) ;
+    public final void rule__ExpFluent__FluentNameAssignment_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4527:1: ( ( RULE_ID ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4528:1: ( RULE_ID )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4528:1: ( RULE_ID )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4529:1: RULE_ID
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getFluentNameIDTerminalRuleCall_0_0()); 
+            }
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ExpFluent__FluentNameAssignment_09171); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getFluentNameIDTerminalRuleCall_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__FluentNameAssignment_0"
+
+
+    // $ANTLR start "rule__ExpFluent__ValuePartAssignment_1_1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4538:1: rule__ExpFluent__ValuePartAssignment_1_1 : ( ruleToRule ) ;
+    public final void rule__ExpFluent__ValuePartAssignment_1_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4542:1: ( ( ruleToRule ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4543:1: ( ruleToRule )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4543:1: ( ruleToRule )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4544:1: ruleToRule
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getValuePartToRuleParserRuleCall_1_1_0()); 
+            }
+            pushFollow(FOLLOW_ruleToRule_in_rule__ExpFluent__ValuePartAssignment_1_19202);
+            ruleToRule();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getValuePartToRuleParserRuleCall_1_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__ValuePartAssignment_1_1"
+
+
+    // $ANTLR start "rule__ExpFluent__TimePartAssignment_2_1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4553:1: rule__ExpFluent__TimePartAssignment_2_1 : ( ruleInRule ) ;
+    public final void rule__ExpFluent__TimePartAssignment_2_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4557:1: ( ( ruleInRule ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4558:1: ( ruleInRule )
+            {
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4558:1: ( ruleInRule )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4559:1: ruleInRule
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpFluentAccess().getTimePartInRuleParserRuleCall_2_1_0()); 
+            }
+            pushFollow(FOLLOW_ruleInRule_in_rule__ExpFluent__TimePartAssignment_2_19233);
+            ruleInRule();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpFluentAccess().getTimePartInRuleParserRuleCall_2_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ExpFluent__TimePartAssignment_2_1"
+
     // $ANTLR start synpred2_InternalEce
     public final void synpred2_InternalEce_fragment() throws RecognitionException {   
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:654:1: ( ( ( rule__ToRule__ExpressionAssignment_0 ) ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:654:1: ( ( rule__ToRule__ExpressionAssignment_0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:682:1: ( ( ( rule__ToRule__ExpressionAssignment_0 ) ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:682:1: ( ( rule__ToRule__ExpressionAssignment_0 ) )
         {
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:654:1: ( ( rule__ToRule__ExpressionAssignment_0 ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:655:1: ( rule__ToRule__ExpressionAssignment_0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:682:1: ( ( rule__ToRule__ExpressionAssignment_0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:683:1: ( rule__ToRule__ExpressionAssignment_0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getToRuleAccess().getExpressionAssignment_0()); 
         }
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:656:1: ( rule__ToRule__ExpressionAssignment_0 )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:656:2: rule__ToRule__ExpressionAssignment_0
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:684:1: ( rule__ToRule__ExpressionAssignment_0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:684:2: rule__ToRule__ExpressionAssignment_0
         {
-        pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_0_in_synpred2_InternalEce1337);
+        pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_0_in_synpred2_InternalEce1397);
         rule__ToRule__ExpressionAssignment_0();
 
         state._fsp--;
@@ -12083,19 +13523,19 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred3_InternalEce
     public final void synpred3_InternalEce_fragment() throws RecognitionException {   
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:660:6: ( ( ( rule__ToRule__ExpressionAssignment_1 ) ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:660:6: ( ( rule__ToRule__ExpressionAssignment_1 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:688:6: ( ( ( rule__ToRule__ExpressionAssignment_1 ) ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:688:6: ( ( rule__ToRule__ExpressionAssignment_1 ) )
         {
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:660:6: ( ( rule__ToRule__ExpressionAssignment_1 ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:661:1: ( rule__ToRule__ExpressionAssignment_1 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:688:6: ( ( rule__ToRule__ExpressionAssignment_1 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:689:1: ( rule__ToRule__ExpressionAssignment_1 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getToRuleAccess().getExpressionAssignment_1()); 
         }
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:662:1: ( rule__ToRule__ExpressionAssignment_1 )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:662:2: rule__ToRule__ExpressionAssignment_1
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:690:1: ( rule__ToRule__ExpressionAssignment_1 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:690:2: rule__ToRule__ExpressionAssignment_1
         {
-        pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_1_in_synpred3_InternalEce1355);
+        pushFollow(FOLLOW_rule__ToRule__ExpressionAssignment_1_in_synpred3_InternalEce1415);
         rule__ToRule__ExpressionAssignment_1();
 
         state._fsp--;
@@ -12113,19 +13553,19 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred5_InternalEce
     public final void synpred5_InternalEce_fragment() throws RecognitionException {   
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:672:6: ( ( ( rule__ToRule__Group_3__0 ) ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:672:6: ( ( rule__ToRule__Group_3__0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:700:6: ( ( ( rule__ToRule__Group_3__0 ) ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:700:6: ( ( rule__ToRule__Group_3__0 ) )
         {
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:672:6: ( ( rule__ToRule__Group_3__0 ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:673:1: ( rule__ToRule__Group_3__0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:700:6: ( ( rule__ToRule__Group_3__0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:701:1: ( rule__ToRule__Group_3__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getToRuleAccess().getGroup_3()); 
         }
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:674:1: ( rule__ToRule__Group_3__0 )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:674:2: rule__ToRule__Group_3__0
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:702:1: ( rule__ToRule__Group_3__0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:702:2: rule__ToRule__Group_3__0
         {
-        pushFollow(FOLLOW_rule__ToRule__Group_3__0_in_synpred5_InternalEce1391);
+        pushFollow(FOLLOW_rule__ToRule__Group_3__0_in_synpred5_InternalEce1451);
         rule__ToRule__Group_3__0();
 
         state._fsp--;
@@ -12143,19 +13583,19 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred9_InternalEce
     public final void synpred9_InternalEce_fragment() throws RecognitionException {   
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:744:1: ( ( ( rule__And__Group_0__0 ) ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:744:1: ( ( rule__And__Group_0__0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:772:1: ( ( ( rule__And__Group_0__0 ) ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:772:1: ( ( rule__And__Group_0__0 ) )
         {
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:744:1: ( ( rule__And__Group_0__0 ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:745:1: ( rule__And__Group_0__0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:772:1: ( ( rule__And__Group_0__0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:773:1: ( rule__And__Group_0__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getAndAccess().getGroup_0()); 
         }
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:746:1: ( rule__And__Group_0__0 )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:746:2: rule__And__Group_0__0
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:774:1: ( rule__And__Group_0__0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:774:2: rule__And__Group_0__0
         {
-        pushFollow(FOLLOW_rule__And__Group_0__0_in_synpred9_InternalEce1559);
+        pushFollow(FOLLOW_rule__And__Group_0__0_in_synpred9_InternalEce1619);
         rule__And__Group_0__0();
 
         state._fsp--;
@@ -12173,19 +13613,19 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred10_InternalEce
     public final void synpred10_InternalEce_fragment() throws RecognitionException {   
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:750:6: ( ( ( rule__And__Group_1__0 ) ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:750:6: ( ( rule__And__Group_1__0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:778:6: ( ( ( rule__And__Group_1__0 ) ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:778:6: ( ( rule__And__Group_1__0 ) )
         {
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:750:6: ( ( rule__And__Group_1__0 ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:751:1: ( rule__And__Group_1__0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:778:6: ( ( rule__And__Group_1__0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:779:1: ( rule__And__Group_1__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getAndAccess().getGroup_1()); 
         }
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:752:1: ( rule__And__Group_1__0 )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:752:2: rule__And__Group_1__0
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:780:1: ( rule__And__Group_1__0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:780:2: rule__And__Group_1__0
         {
-        pushFollow(FOLLOW_rule__And__Group_1__0_in_synpred10_InternalEce1577);
+        pushFollow(FOLLOW_rule__And__Group_1__0_in_synpred10_InternalEce1637);
         rule__And__Group_1__0();
 
         state._fsp--;
@@ -12203,19 +13643,19 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred11_InternalEce
     public final void synpred11_InternalEce_fragment() throws RecognitionException {   
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:756:6: ( ( ( rule__And__Group_2__0 ) ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:756:6: ( ( rule__And__Group_2__0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:784:6: ( ( ( rule__And__Group_2__0 ) ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:784:6: ( ( rule__And__Group_2__0 ) )
         {
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:756:6: ( ( rule__And__Group_2__0 ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:757:1: ( rule__And__Group_2__0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:784:6: ( ( rule__And__Group_2__0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:785:1: ( rule__And__Group_2__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getAndAccess().getGroup_2()); 
         }
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:758:1: ( rule__And__Group_2__0 )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:758:2: rule__And__Group_2__0
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:786:1: ( rule__And__Group_2__0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:786:2: rule__And__Group_2__0
         {
-        pushFollow(FOLLOW_rule__And__Group_2__0_in_synpred11_InternalEce1595);
+        pushFollow(FOLLOW_rule__And__Group_2__0_in_synpred11_InternalEce1655);
         rule__And__Group_2__0();
 
         state._fsp--;
@@ -12233,19 +13673,19 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred12_InternalEce
     public final void synpred12_InternalEce_fragment() throws RecognitionException {   
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:778:1: ( ( ( rule__Equality__Group_0__0 ) ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:778:1: ( ( rule__Equality__Group_0__0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:806:1: ( ( ( rule__Equality__Group_0__0 ) ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:806:1: ( ( rule__Equality__Group_0__0 ) )
         {
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:778:1: ( ( rule__Equality__Group_0__0 ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:779:1: ( rule__Equality__Group_0__0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:806:1: ( ( rule__Equality__Group_0__0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:807:1: ( rule__Equality__Group_0__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getEqualityAccess().getGroup_0()); 
         }
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:780:1: ( rule__Equality__Group_0__0 )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:780:2: rule__Equality__Group_0__0
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:808:1: ( rule__Equality__Group_0__0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:808:2: rule__Equality__Group_0__0
         {
-        pushFollow(FOLLOW_rule__Equality__Group_0__0_in_synpred12_InternalEce1646);
+        pushFollow(FOLLOW_rule__Equality__Group_0__0_in_synpred12_InternalEce1706);
         rule__Equality__Group_0__0();
 
         state._fsp--;
@@ -12263,19 +13703,19 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred22_InternalEce
     public final void synpred22_InternalEce_fragment() throws RecognitionException {   
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:944:1: ( ( ( rule__FloatExpr__ValueDirectAssignment_0 ) ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:944:1: ( ( rule__FloatExpr__ValueDirectAssignment_0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:972:1: ( ( ( rule__FloatExpr__ValueDirectAssignment_0 ) ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:972:1: ( ( rule__FloatExpr__ValueDirectAssignment_0 ) )
         {
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:944:1: ( ( rule__FloatExpr__ValueDirectAssignment_0 ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:945:1: ( rule__FloatExpr__ValueDirectAssignment_0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:972:1: ( ( rule__FloatExpr__ValueDirectAssignment_0 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:973:1: ( rule__FloatExpr__ValueDirectAssignment_0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getFloatExprAccess().getValueDirectAssignment_0()); 
         }
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:946:1: ( rule__FloatExpr__ValueDirectAssignment_0 )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:946:2: rule__FloatExpr__ValueDirectAssignment_0
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:974:1: ( rule__FloatExpr__ValueDirectAssignment_0 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:974:2: rule__FloatExpr__ValueDirectAssignment_0
         {
-        pushFollow(FOLLOW_rule__FloatExpr__ValueDirectAssignment_0_in_synpred22_InternalEce2017);
+        pushFollow(FOLLOW_rule__FloatExpr__ValueDirectAssignment_0_in_synpred22_InternalEce2077);
         rule__FloatExpr__ValueDirectAssignment_0();
 
         state._fsp--;
@@ -12293,19 +13733,19 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred23_InternalEce
     public final void synpred23_InternalEce_fragment() throws RecognitionException {   
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:950:6: ( ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:950:6: ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:978:6: ( ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:978:6: ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) )
         {
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:950:6: ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:951:1: ( rule__FloatExpr__ValueCalculatedAssignment_1 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:978:6: ( ( rule__FloatExpr__ValueCalculatedAssignment_1 ) )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:979:1: ( rule__FloatExpr__ValueCalculatedAssignment_1 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getFloatExprAccess().getValueCalculatedAssignment_1()); 
         }
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:952:1: ( rule__FloatExpr__ValueCalculatedAssignment_1 )
-        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:952:2: rule__FloatExpr__ValueCalculatedAssignment_1
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:980:1: ( rule__FloatExpr__ValueCalculatedAssignment_1 )
+        // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:980:2: rule__FloatExpr__ValueCalculatedAssignment_1
         {
-        pushFollow(FOLLOW_rule__FloatExpr__ValueCalculatedAssignment_1_in_synpred23_InternalEce2035);
+        pushFollow(FOLLOW_rule__FloatExpr__ValueCalculatedAssignment_1_in_synpred23_InternalEce2095);
         rule__FloatExpr__ValueCalculatedAssignment_1();
 
         state._fsp--;
@@ -12457,22 +13897,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     static final String DFA5_eofS =
         "\34\uffff";
     static final String DFA5_minS =
-        "\1\5\1\14\2\0\10\5\4\uffff\4\14\2\0\4\5\2\14";
+        "\1\5\1\14\2\0\10\5\4\uffff\2\0\4\14\4\5\2\14";
     static final String DFA5_maxS =
-        "\1\7\1\27\2\0\10\6\4\uffff\4\27\2\0\4\6\2\27";
+        "\1\7\1\27\2\0\10\6\4\uffff\2\0\4\27\4\6\2\27";
     static final String DFA5_acceptS =
         "\14\uffff\1\3\1\4\1\1\1\2\14\uffff";
     static final String DFA5_specialS =
-        "\1\uffff\1\3\1\0\1\1\20\uffff\1\4\1\2\6\uffff}>";
+        "\1\uffff\1\3\1\4\1\1\14\uffff\1\2\1\0\12\uffff}>";
     static final String[] DFA5_transitionS = {
             "\1\2\1\1\1\3",
-            "\1\12\1\13\4\uffff\1\10\1\11\1\4\1\5\1\7\1\6",
+            "\1\4\1\5\4\uffff\1\12\1\13\1\6\1\7\1\11\1\10",
             "\1\uffff",
             "\1\uffff",
             "\1\21\1\20",
             "\1\21\1\20",
-            "\1\21\1\20",
-            "\1\21\1\20",
+            "\1\23\1\22",
+            "\1\23\1\22",
             "\1\23\1\22",
             "\1\23\1\22",
             "\1\25\1\24",
@@ -12481,18 +13921,18 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             "",
             "",
             "",
-            "\1\12\1\13\4\uffff\1\10\1\11\1\4\1\5\1\7\1\6",
-            "\1\12\1\13\4\uffff\1\10\1\11\1\4\1\5\1\7\1\6",
-            "\1\12\1\13\4\uffff\1\10\1\11\1\26\1\27\1\31\1\30",
-            "\1\12\1\13\4\uffff\1\10\1\11\1\26\1\27\1\31\1\30",
             "\1\uffff",
             "\1\uffff",
+            "\1\4\1\5\4\uffff\1\12\1\13\1\6\1\7\1\11\1\10",
+            "\1\4\1\5\4\uffff\1\12\1\13\1\6\1\7\1\11\1\10",
+            "\1\4\1\5\4\uffff\1\12\1\13\1\26\1\27\1\31\1\30",
+            "\1\4\1\5\4\uffff\1\12\1\13\1\26\1\27\1\31\1\30",
             "\1\33\1\32",
             "\1\33\1\32",
             "\1\33\1\32",
             "\1\33\1\32",
-            "\1\12\1\13\4\uffff\1\10\1\11\1\26\1\27\1\31\1\30",
-            "\1\12\1\13\4\uffff\1\10\1\11\1\26\1\27\1\31\1\30"
+            "\1\4\1\5\4\uffff\1\12\1\13\1\26\1\27\1\31\1\30",
+            "\1\4\1\5\4\uffff\1\12\1\13\1\26\1\27\1\31\1\30"
     };
 
     static final short[] DFA5_eot = DFA.unpackEncodedString(DFA5_eotS);
@@ -12525,29 +13965,25 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             this.transition = DFA5_transition;
         }
         public String getDescription() {
-            return "739:1: rule__And__Alternatives : ( ( ( rule__And__Group_0__0 ) ) | ( ( rule__And__Group_1__0 ) ) | ( ( rule__And__Group_2__0 ) ) | ( ( rule__And__Group_3__0 ) ) );";
+            return "767:1: rule__And__Alternatives : ( ( ( rule__And__Group_0__0 ) ) | ( ( rule__And__Group_1__0 ) ) | ( ( rule__And__Group_2__0 ) ) | ( ( rule__And__Group_3__0 ) ) );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA5_2 = input.LA(1);
+                        int LA5_17 = input.LA(1);
 
                          
-                        int index5_2 = input.index();
+                        int index5_17 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred9_InternalEce()) ) {s = 14;}
 
                         else if ( (synpred10_InternalEce()) ) {s = 15;}
 
-                        else if ( (synpred11_InternalEce()) ) {s = 12;}
-
-                        else if ( (true) ) {s = 13;}
-
                          
-                        input.seek(index5_2);
+                        input.seek(index5_17);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
@@ -12566,10 +14002,10 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA5_21 = input.LA(1);
+                        int LA5_16 = input.LA(1);
 
                          
-                        int index5_21 = input.index();
+                        int index5_16 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred9_InternalEce()) ) {s = 14;}
@@ -12577,7 +14013,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                         else if ( (synpred10_InternalEce()) ) {s = 15;}
 
                          
-                        input.seek(index5_21);
+                        input.seek(index5_16);
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
@@ -12587,21 +14023,21 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                         int index5_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA5_1==20) ) {s = 4;}
+                        if ( (LA5_1==12) ) {s = 4;}
 
-                        else if ( (LA5_1==21) ) {s = 5;}
+                        else if ( (LA5_1==13) ) {s = 5;}
 
-                        else if ( (LA5_1==23) ) {s = 6;}
+                        else if ( (LA5_1==20) ) {s = 6;}
 
-                        else if ( (LA5_1==22) ) {s = 7;}
+                        else if ( (LA5_1==21) ) {s = 7;}
 
-                        else if ( (LA5_1==18) ) {s = 8;}
+                        else if ( (LA5_1==23) ) {s = 8;}
 
-                        else if ( (LA5_1==19) ) {s = 9;}
+                        else if ( (LA5_1==22) ) {s = 9;}
 
-                        else if ( (LA5_1==12) ) {s = 10;}
+                        else if ( (LA5_1==18) ) {s = 10;}
 
-                        else if ( (LA5_1==13) ) {s = 11;}
+                        else if ( (LA5_1==19) ) {s = 11;}
 
                         else if ( (synpred11_InternalEce()) ) {s = 12;}
 
@@ -12612,18 +14048,22 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA5_20 = input.LA(1);
+                        int LA5_2 = input.LA(1);
 
                          
-                        int index5_20 = input.index();
+                        int index5_2 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred9_InternalEce()) ) {s = 14;}
 
                         else if ( (synpred10_InternalEce()) ) {s = 15;}
 
+                        else if ( (synpred11_InternalEce()) ) {s = 12;}
+
+                        else if ( (true) ) {s = 13;}
+
                          
-                        input.seek(index5_20);
+                        input.seek(index5_2);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -12699,279 +14139,321 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleConditionRule_in_entryRuleConditionRule1268 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleConditionRule1275 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ConditionRule__ConditionAssignment_in_ruleConditionRule1301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_0_in_rule__ToRule__Alternatives1337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_1_in_rule__ToRule__Alternatives1355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_2_in_rule__ToRule__Alternatives1373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ToRule__Group_3__0_in_rule__ToRule__Alternatives1391 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_4_in_rule__ToRule__Alternatives1409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStr_in_rule__StringExpr__Alternatives1442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFluentWhoseValue_in_rule__StringExpr__Alternatives1459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BoolExpr__ValueAssignment_0_in_rule__BoolExpr__Alternatives1491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BoolExpr__ValueAssignment_1_in_rule__BoolExpr__Alternatives1509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOr_in_rule__BoolExpr__Alternatives1527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_0__0_in_rule__And__Alternatives1559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_1__0_in_rule__And__Alternatives1577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_2__0_in_rule__And__Alternatives1595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_3__0_in_rule__And__Alternatives1613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0__0_in_rule__Equality__Alternatives1646 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_1__0_in_rule__Equality__Alternatives1664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Equality__OpAlternatives_0_1_1_01698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Equality__OpAlternatives_0_1_1_01718 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Equality__OpAlternatives_1_1_1_01753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Equality__OpAlternatives_1_1_1_01773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Comparison__OpAlternatives_1_1_01808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Comparison__OpAlternatives_1_1_01828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Comparison__OpAlternatives_1_1_01848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Comparison__OpAlternatives_1_1_01868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__MutationExpr__ValueAlternatives_0_01903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__MutationExpr__ValueAlternatives_0_01923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__MutationExpr__ValueAlternatives_0_01943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__MutationExpr__ValueAlternatives_0_01963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__MutationExpr__ValueAlternatives_0_01983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FloatExpr__ValueDirectAssignment_0_in_rule__FloatExpr__Alternatives2017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FloatExpr__ValueCalculatedAssignment_1_in_rule__FloatExpr__Alternatives2035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FloatExpr__ValueOfFluentAssignment_2_in_rule__FloatExpr__Alternatives2053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_0__0_in_rule__PlusOrMinus__Alternatives_1_02086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_1__0_in_rule__PlusOrMinus__Alternatives_1_02104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__MulOrDiv__OpAlternatives_1_1_02138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__MulOrDiv__OpAlternatives_1_1_02158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__MulOrDiv__OpAlternatives_1_1_02178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__MulOrDiv__OpAlternatives_1_1_02198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Primary__ValueDirectAssignment_0_in_rule__Primary__Alternatives2232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Primary__ValueOfFluentAssignment_1_in_rule__Primary__Alternatives2250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InRule__TimeAssignment_0_in_rule__InRule__Alternatives2283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InRule__CurrentTimeAssignment_1_in_rule__InRule__Alternatives2301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group__0__Impl_in_rule__Statement__Group__02332 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Statement__Group__1_in_rule__Statement__Group__02335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Statement__Group__0__Impl2363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group__1__Impl_in_rule__Statement__Group__12394 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Statement__Group__2_in_rule__Statement__Group__12397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__EventAssignment_1_in_rule__Statement__Group__1__Impl2424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group__2__Impl_in_rule__Statement__Group__22454 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Statement__Group__3_in_rule__Statement__Group__22457 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Statement__Group__2__Impl2485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group__3__Impl_in_rule__Statement__Group__32516 = new BitSet(new long[]{0x000000000C000000L});
-    public static final BitSet FOLLOW_rule__Statement__Group__4_in_rule__Statement__Group__32519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__FluentAssignment_3_in_rule__Statement__Group__3__Impl2546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group__4__Impl_in_rule__Statement__Group__42576 = new BitSet(new long[]{0x000000000C000000L});
-    public static final BitSet FOLLOW_rule__Statement__Group__5_in_rule__Statement__Group__42579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_4__0_in_rule__Statement__Group__4__Impl2606 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group__5__Impl_in_rule__Statement__Group__52637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Statement__Group__5__Impl2665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_4__0__Impl_in_rule__Statement__Group_4__02708 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Statement__Group_4__1_in_rule__Statement__Group_4__02711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Statement__Group_4__0__Impl2739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_4__1__Impl_in_rule__Statement__Group_4__12770 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__FluentAssignment_4_1_in_rule__Statement__Group_4__1__Impl2797 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group__0__Impl_in_rule__Fluent__Group__02831 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__Fluent__Group__1_in_rule__Fluent__Group__02834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__FluentNameAssignment_0_in_rule__Fluent__Group__0__Impl2861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group__1__Impl_in_rule__Fluent__Group__12891 = new BitSet(new long[]{0x0000000060000000L});
-    public static final BitSet FOLLOW_rule__Fluent__Group__2_in_rule__Fluent__Group__12894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_1__0_in_rule__Fluent__Group__1__Impl2921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group__2__Impl_in_rule__Fluent__Group__22951 = new BitSet(new long[]{0x0000000060000000L});
-    public static final BitSet FOLLOW_rule__Fluent__Group__3_in_rule__Fluent__Group__22954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_2__0_in_rule__Fluent__Group__2__Impl2981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group__3__Impl_in_rule__Fluent__Group__33012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_3__0_in_rule__Fluent__Group__3__Impl3039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_1__0__Impl_in_rule__Fluent__Group_1__03078 = new BitSet(new long[]{0x0000000E007C00E0L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_1__1_in_rule__Fluent__Group_1__03081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Fluent__Group_1__0__Impl3109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_1__1__Impl_in_rule__Fluent__Group_1__13140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__ValuePartAssignment_1_1_in_rule__Fluent__Group_1__1__Impl3167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_2__0__Impl_in_rule__Fluent__Group_2__03201 = new BitSet(new long[]{0x0000001000000040L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_2__1_in_rule__Fluent__Group_2__03204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Fluent__Group_2__0__Impl3232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_2__1__Impl_in_rule__Fluent__Group_2__13263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__TimePartAssignment_2_1_in_rule__Fluent__Group_2__1__Impl3290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_3__0__Impl_in_rule__Fluent__Group_3__03324 = new BitSet(new long[]{0x00000006000000E0L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_3__1_in_rule__Fluent__Group_3__03327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Fluent__Group_3__0__Impl3355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__Group_3__1__Impl_in_rule__Fluent__Group_3__13386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fluent__CondPartAssignment_3_1_in_rule__Fluent__Group_3__1__Impl3413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ToRule__Group_3__0__Impl_in_rule__ToRule__Group_3__03447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_3_0_in_rule__ToRule__Group_3__0__Impl3474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__03506 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__Or__Group__1_in_rule__Or__Group__03509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnd_in_rule__Or__Group__0__Impl3536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__13565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group_1__0_in_rule__Or__Group__1__Impl3592 = new BitSet(new long[]{0x0000000080000002L});
-    public static final BitSet FOLLOW_rule__Or__Group_1__0__Impl_in_rule__Or__Group_1__03627 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__Or__Group_1__1_in_rule__Or__Group_1__03630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group_1__1__Impl_in_rule__Or__Group_1__13688 = new BitSet(new long[]{0x00000006000000E0L});
-    public static final BitSet FOLLOW_rule__Or__Group_1__2_in_rule__Or__Group_1__13691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Or__Group_1__1__Impl3719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group_1__2__Impl_in_rule__Or__Group_1__23750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__RightAssignment_1_2_in_rule__Or__Group_1__2__Impl3777 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_0__0__Impl_in_rule__And__Group_0__03813 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__And__Group_0__1_in_rule__And__Group_0__03816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEquality_in_rule__And__Group_0__0__Impl3843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_0__1__Impl_in_rule__And__Group_0__13872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_0_1__0_in_rule__And__Group_0__1__Impl3899 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_rule__And__Group_0_1__0__Impl_in_rule__And__Group_0_1__03934 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__And__Group_0_1__1_in_rule__And__Group_0_1__03937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_0_1__1__Impl_in_rule__And__Group_0_1__13995 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_rule__And__Group_0_1__2_in_rule__And__Group_0_1__13998 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__And__Group_0_1__1__Impl4026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_0_1__2__Impl_in_rule__And__Group_0_1__24057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__RightAssignment_0_1_2_in_rule__And__Group_0_1__2__Impl4084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_1__0__Impl_in_rule__And__Group_1__04120 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__And__Group_1__1_in_rule__And__Group_1__04123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEquality_in_rule__And__Group_1__0__Impl4151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_1__1__Impl_in_rule__And__Group_1__14181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_1_1__0_in_rule__And__Group_1__1__Impl4208 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_rule__And__Group_1_1__0__Impl_in_rule__And__Group_1_1__04243 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__And__Group_1_1__1_in_rule__And__Group_1_1__04246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_1_1__1__Impl_in_rule__And__Group_1_1__14304 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_rule__And__Group_1_1__2_in_rule__And__Group_1_1__14307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__And__Group_1_1__1__Impl4335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_1_1__2__Impl_in_rule__And__Group_1_1__24366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__RightAssignment_1_1_2_in_rule__And__Group_1_1__2__Impl4393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_2__0__Impl_in_rule__And__Group_2__04429 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__And__Group_2__1_in_rule__And__Group_2__04432 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparison_in_rule__And__Group_2__0__Impl4460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_2__1__Impl_in_rule__And__Group_2__14490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_2_1__0_in_rule__And__Group_2__1__Impl4517 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_rule__And__Group_2_1__0__Impl_in_rule__And__Group_2_1__04552 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__And__Group_2_1__1_in_rule__And__Group_2_1__04555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_2_1__1__Impl_in_rule__And__Group_2_1__14613 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_rule__And__Group_2_1__2_in_rule__And__Group_2_1__14616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__And__Group_2_1__1__Impl4644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_2_1__2__Impl_in_rule__And__Group_2_1__24675 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__RightAssignment_2_1_2_in_rule__And__Group_2_1__2__Impl4702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_3__0__Impl_in_rule__And__Group_3__04738 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__And__Group_3__1_in_rule__And__Group_3__04741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparison_in_rule__And__Group_3__0__Impl4769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_3__1__Impl_in_rule__And__Group_3__14799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_3_1__0_in_rule__And__Group_3__1__Impl4826 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_rule__And__Group_3_1__0__Impl_in_rule__And__Group_3_1__04861 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__And__Group_3_1__1_in_rule__And__Group_3_1__04864 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_3_1__1__Impl_in_rule__And__Group_3_1__14922 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_rule__And__Group_3_1__2_in_rule__And__Group_3_1__14925 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__And__Group_3_1__1__Impl4953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_3_1__2__Impl_in_rule__And__Group_3_1__24984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__RightAssignment_3_1_2_in_rule__And__Group_3_1__2__Impl5011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0__0__Impl_in_rule__Equality__Group_0__05047 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0__1_in_rule__Equality__Group_0__05050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFloatExpr_in_rule__Equality__Group_0__0__Impl5077 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0__1__Impl_in_rule__Equality__Group_0__15106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0_1__0_in_rule__Equality__Group_0__1__Impl5133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0_1__0__Impl_in_rule__Equality__Group_0_1__05167 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0_1__1_in_rule__Equality__Group_0_1__05170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0_1__1__Impl_in_rule__Equality__Group_0_1__15228 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0_1__2_in_rule__Equality__Group_0_1__15231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__OpAssignment_0_1_1_in_rule__Equality__Group_0_1__1__Impl5258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0_1__2__Impl_in_rule__Equality__Group_0_1__25288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__RightAssignment_0_1_2_in_rule__Equality__Group_0_1__2__Impl5315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_1__0__Impl_in_rule__Equality__Group_1__05351 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_rule__Equality__Group_1__1_in_rule__Equality__Group_1__05354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringExpr_in_rule__Equality__Group_1__0__Impl5382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_1__1__Impl_in_rule__Equality__Group_1__15412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_1_1__0_in_rule__Equality__Group_1__1__Impl5439 = new BitSet(new long[]{0x0000000000003002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_1_1__0__Impl_in_rule__Equality__Group_1_1__05474 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_rule__Equality__Group_1_1__1_in_rule__Equality__Group_1_1__05477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_1_1__1__Impl_in_rule__Equality__Group_1_1__15535 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_rule__Equality__Group_1_1__2_in_rule__Equality__Group_1_1__15538 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__OpAssignment_1_1_1_in_rule__Equality__Group_1_1__1__Impl5565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_1_1__2__Impl_in_rule__Equality__Group_1_1__25595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__RightAssignment_1_1_2_in_rule__Equality__Group_1_1__2__Impl5622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__Group__0__Impl_in_rule__Comparison__Group__05658 = new BitSet(new long[]{0x000000000003C000L});
-    public static final BitSet FOLLOW_rule__Comparison__Group__1_in_rule__Comparison__Group__05661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePlusOrMinus_in_rule__Comparison__Group__0__Impl5688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__Group__1__Impl_in_rule__Comparison__Group__15717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__Group_1__0_in_rule__Comparison__Group__1__Impl5744 = new BitSet(new long[]{0x000000000003C002L});
-    public static final BitSet FOLLOW_rule__Comparison__Group_1__0__Impl_in_rule__Comparison__Group_1__05779 = new BitSet(new long[]{0x000000000003C000L});
-    public static final BitSet FOLLOW_rule__Comparison__Group_1__1_in_rule__Comparison__Group_1__05782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__Group_1__1__Impl_in_rule__Comparison__Group_1__15840 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_rule__Comparison__Group_1__2_in_rule__Comparison__Group_1__15843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__OpAssignment_1_1_in_rule__Comparison__Group_1__1__Impl5870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__Group_1__2__Impl_in_rule__Comparison__Group_1__25900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__RightAssignment_1_2_in_rule__Comparison__Group_1__2__Impl5927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MutationExpr__Group__0__Impl_in_rule__MutationExpr__Group__05963 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__MutationExpr__Group__1_in_rule__MutationExpr__Group__05966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MutationExpr__ValueAssignment_0_in_rule__MutationExpr__Group__0__Impl5993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MutationExpr__Group__1__Impl_in_rule__MutationExpr__Group__16023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MutationExpr__Group__1__Impl6050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group__0__Impl_in_rule__PlusOrMinus__Group__06083 = new BitSet(new long[]{0x00000000000C0000L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group__1_in_rule__PlusOrMinus__Group__06086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMulOrDiv_in_rule__PlusOrMinus__Group__0__Impl6113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group__1__Impl_in_rule__PlusOrMinus__Group__16142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1__0_in_rule__PlusOrMinus__Group__1__Impl6169 = new BitSet(new long[]{0x00000000000C0002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1__0__Impl_in_rule__PlusOrMinus__Group_1__06204 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1__1_in_rule__PlusOrMinus__Group_1__06207 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Alternatives_1_0_in_rule__PlusOrMinus__Group_1__0__Impl6234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1__1__Impl_in_rule__PlusOrMinus__Group_1__16264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__RightAssignment_1_1_in_rule__PlusOrMinus__Group_1__1__Impl6291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_0__0__Impl_in_rule__PlusOrMinus__Group_1_0_0__06325 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_0__1_in_rule__PlusOrMinus__Group_1_0_0__06328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_0__1__Impl_in_rule__PlusOrMinus__Group_1_0_0__16386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__PlusOrMinus__Group_1_0_0__1__Impl6414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_1__0__Impl_in_rule__PlusOrMinus__Group_1_0_1__06449 = new BitSet(new long[]{0x00000000000C0000L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_1__1_in_rule__PlusOrMinus__Group_1_0_1__06452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_1__1__Impl_in_rule__PlusOrMinus__Group_1_0_1__16510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__PlusOrMinus__Group_1_0_1__1__Impl6538 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__Group__0__Impl_in_rule__MulOrDiv__Group__06573 = new BitSet(new long[]{0x0000000000F00000L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__Group__1_in_rule__MulOrDiv__Group__06576 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimary_in_rule__MulOrDiv__Group__0__Impl6603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__Group__1__Impl_in_rule__MulOrDiv__Group__16632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__0_in_rule__MulOrDiv__Group__1__Impl6659 = new BitSet(new long[]{0x0000000000F00002L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__0__Impl_in_rule__MulOrDiv__Group_1__06694 = new BitSet(new long[]{0x0000000000F00000L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__1_in_rule__MulOrDiv__Group_1__06697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__1__Impl_in_rule__MulOrDiv__Group_1__16755 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__2_in_rule__MulOrDiv__Group_1__16758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__OpAssignment_1_1_in_rule__MulOrDiv__Group_1__1__Impl6785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__2__Impl_in_rule__MulOrDiv__Group_1__26815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__RightAssignment_1_2_in_rule__MulOrDiv__Group_1__2__Impl6842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_rule__DroolsModel__StatementsAssignment6883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvent_in_rule__Statement__EventAssignment_16914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFluent_in_rule__Statement__FluentAssignment_36945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFluent_in_rule__Statement__FluentAssignment_4_16976 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Event__EventNameAssignment7007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Fluent__FluentNameAssignment_07038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleToRule_in_rule__Fluent__ValuePartAssignment_1_17069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInRule_in_rule__Fluent__TimePartAssignment_2_17100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConditionRule_in_rule__Fluent__CondPartAssignment_3_17131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringExpr_in_rule__ToRule__ExpressionAssignment_07162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolExpr_in_rule__ToRule__ExpressionAssignment_17193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleswitchExpr_in_rule__ToRule__ExpressionAssignment_27224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFloatExpr_in_rule__ToRule__ExpressionAssignment_3_07255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMutationExpr_in_rule__ToRule__ExpressionAssignment_47286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__BoolExpr__ValueAssignment_07322 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__BoolExpr__ValueAssignment_17366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnd_in_rule__Or__RightAssignment_1_27405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEquality_in_rule__And__RightAssignment_0_1_27436 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparison_in_rule__And__RightAssignment_1_1_27467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparison_in_rule__And__RightAssignment_2_1_27498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEquality_in_rule__And__RightAssignment_3_1_27529 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__OpAlternatives_0_1_1_0_in_rule__Equality__OpAssignment_0_1_17560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFloatExpr_in_rule__Equality__RightAssignment_0_1_27593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__OpAlternatives_1_1_1_0_in_rule__Equality__OpAssignment_1_1_17624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringExpr_in_rule__Equality__RightAssignment_1_1_27657 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__OpAlternatives_1_1_0_in_rule__Comparison__OpAssignment_1_17688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePlusOrMinus_in_rule__Comparison__RightAssignment_1_27721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__SwitchExpr__ValueAssignment7757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MutationExpr__ValueAlternatives_0_0_in_rule__MutationExpr__ValueAssignment_07796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__FloatExpr__ValueDirectAssignment_07829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePlusOrMinus_in_rule__FloatExpr__ValueCalculatedAssignment_17860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFluentWhoseValue_in_rule__FloatExpr__ValueOfFluentAssignment_27891 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMulOrDiv_in_rule__PlusOrMinus__RightAssignment_1_17922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MulOrDiv__OpAlternatives_1_1_0_in_rule__MulOrDiv__OpAssignment_1_17953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimary_in_rule__MulOrDiv__RightAssignment_1_27986 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Primary__ValueDirectAssignment_08017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFluentWhoseValue_in_rule__Primary__ValueOfFluentAssignment_18048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FluentWhoseValue__FluentWhoseValueNameAssignment8079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Str__ValueAssignment8110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__InRule__TimeAssignment_08141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__InRule__CurrentTimeAssignment_18177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolExpr_in_rule__ConditionRule__ConditionAssignment8216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_0_in_synpred2_InternalEce1337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_1_in_synpred3_InternalEce1355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ToRule__Group_3__0_in_synpred5_InternalEce1391 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_0__0_in_synpred9_InternalEce1559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_1__0_in_synpred10_InternalEce1577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group_2__0_in_synpred11_InternalEce1595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Equality__Group_0__0_in_synpred12_InternalEce1646 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FloatExpr__ValueDirectAssignment_0_in_synpred22_InternalEce2017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FloatExpr__ValueCalculatedAssignment_1_in_synpred23_InternalEce2035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpFluent_in_entryRuleExpFluent1328 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExpFluent1335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group__0_in_ruleExpFluent1361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_0_in_rule__ToRule__Alternatives1397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_1_in_rule__ToRule__Alternatives1415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_2_in_rule__ToRule__Alternatives1433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ToRule__Group_3__0_in_rule__ToRule__Alternatives1451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_4_in_rule__ToRule__Alternatives1469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStr_in_rule__StringExpr__Alternatives1502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFluentWhoseValue_in_rule__StringExpr__Alternatives1519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BoolExpr__ValueAssignment_0_in_rule__BoolExpr__Alternatives1551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BoolExpr__ValueAssignment_1_in_rule__BoolExpr__Alternatives1569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOr_in_rule__BoolExpr__Alternatives1587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_0__0_in_rule__And__Alternatives1619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_1__0_in_rule__And__Alternatives1637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_2__0_in_rule__And__Alternatives1655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_3__0_in_rule__And__Alternatives1673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0__0_in_rule__Equality__Alternatives1706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_1__0_in_rule__Equality__Alternatives1724 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Equality__OpAlternatives_0_1_1_01758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Equality__OpAlternatives_0_1_1_01778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Equality__OpAlternatives_1_1_1_01813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Equality__OpAlternatives_1_1_1_01833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Comparison__OpAlternatives_1_1_01868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Comparison__OpAlternatives_1_1_01888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Comparison__OpAlternatives_1_1_01908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Comparison__OpAlternatives_1_1_01928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__MutationExpr__ValueAlternatives_0_01963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__MutationExpr__ValueAlternatives_0_01983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__MutationExpr__ValueAlternatives_0_02003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__MutationExpr__ValueAlternatives_0_02023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__MutationExpr__ValueAlternatives_0_02043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FloatExpr__ValueDirectAssignment_0_in_rule__FloatExpr__Alternatives2077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FloatExpr__ValueCalculatedAssignment_1_in_rule__FloatExpr__Alternatives2095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FloatExpr__ValueOfFluentAssignment_2_in_rule__FloatExpr__Alternatives2113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_0__0_in_rule__PlusOrMinus__Alternatives_1_02146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_1__0_in_rule__PlusOrMinus__Alternatives_1_02164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__MulOrDiv__OpAlternatives_1_1_02198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__MulOrDiv__OpAlternatives_1_1_02218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__MulOrDiv__OpAlternatives_1_1_02238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__MulOrDiv__OpAlternatives_1_1_02258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__ValueDirectAssignment_0_in_rule__Primary__Alternatives2292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Primary__ValueOfFluentAssignment_1_in_rule__Primary__Alternatives2310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InRule__TimeAssignment_0_in_rule__InRule__Alternatives2343 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InRule__CurrentTimeAssignment_1_in_rule__InRule__Alternatives2361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group__0__Impl_in_rule__Statement__Group__02392 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Statement__Group__1_in_rule__Statement__Group__02395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Statement__Group__0__Impl2423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group__1__Impl_in_rule__Statement__Group__12454 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Statement__Group__2_in_rule__Statement__Group__12457 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__EventAssignment_1_in_rule__Statement__Group__1__Impl2484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group__2__Impl_in_rule__Statement__Group__22514 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Statement__Group__3_in_rule__Statement__Group__22517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Statement__Group__2__Impl2545 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group__3__Impl_in_rule__Statement__Group__32576 = new BitSet(new long[]{0x000000001C000000L});
+    public static final BitSet FOLLOW_rule__Statement__Group__4_in_rule__Statement__Group__32579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__FluentAssignment_3_in_rule__Statement__Group__3__Impl2606 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group__4__Impl_in_rule__Statement__Group__42636 = new BitSet(new long[]{0x000000001C000000L});
+    public static final BitSet FOLLOW_rule__Statement__Group__5_in_rule__Statement__Group__42639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_4__0_in_rule__Statement__Group__4__Impl2666 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group__5__Impl_in_rule__Statement__Group__52697 = new BitSet(new long[]{0x000000001C000000L});
+    public static final BitSet FOLLOW_rule__Statement__Group__6_in_rule__Statement__Group__52700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_5__0_in_rule__Statement__Group__5__Impl2727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group__6__Impl_in_rule__Statement__Group__62758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Statement__Group__6__Impl2786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_4__0__Impl_in_rule__Statement__Group_4__02831 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Statement__Group_4__1_in_rule__Statement__Group_4__02834 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Statement__Group_4__0__Impl2862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_4__1__Impl_in_rule__Statement__Group_4__12893 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__FluentAssignment_4_1_in_rule__Statement__Group_4__1__Impl2920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_5__0__Impl_in_rule__Statement__Group_5__02954 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Statement__Group_5__1_in_rule__Statement__Group_5__02957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Statement__Group_5__0__Impl2985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_5__1__Impl_in_rule__Statement__Group_5__13016 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__Statement__Group_5__2_in_rule__Statement__Group_5__13019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__ExpAssignment_5_1_in_rule__Statement__Group_5__1__Impl3046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_5__2__Impl_in_rule__Statement__Group_5__23076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_5_2__0_in_rule__Statement__Group_5__2__Impl3103 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_5_2__0__Impl_in_rule__Statement__Group_5_2__03140 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Statement__Group_5_2__1_in_rule__Statement__Group_5_2__03143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Statement__Group_5_2__0__Impl3171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_5_2__1__Impl_in_rule__Statement__Group_5_2__13202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__ExpAssignment_5_2_1_in_rule__Statement__Group_5_2__1__Impl3229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group__0__Impl_in_rule__Fluent__Group__03263 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__Fluent__Group__1_in_rule__Fluent__Group__03266 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__FluentNameAssignment_0_in_rule__Fluent__Group__0__Impl3293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group__1__Impl_in_rule__Fluent__Group__13323 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_rule__Fluent__Group__2_in_rule__Fluent__Group__13326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_1__0_in_rule__Fluent__Group__1__Impl3353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group__2__Impl_in_rule__Fluent__Group__23383 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_rule__Fluent__Group__3_in_rule__Fluent__Group__23386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_2__0_in_rule__Fluent__Group__2__Impl3413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group__3__Impl_in_rule__Fluent__Group__33444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_3__0_in_rule__Fluent__Group__3__Impl3471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_1__0__Impl_in_rule__Fluent__Group_1__03510 = new BitSet(new long[]{0x0000001C007C00E0L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_1__1_in_rule__Fluent__Group_1__03513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Fluent__Group_1__0__Impl3541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_1__1__Impl_in_rule__Fluent__Group_1__13572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__ValuePartAssignment_1_1_in_rule__Fluent__Group_1__1__Impl3599 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_2__0__Impl_in_rule__Fluent__Group_2__03633 = new BitSet(new long[]{0x0000002000000040L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_2__1_in_rule__Fluent__Group_2__03636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Fluent__Group_2__0__Impl3664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_2__1__Impl_in_rule__Fluent__Group_2__13695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__TimePartAssignment_2_1_in_rule__Fluent__Group_2__1__Impl3722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_3__0__Impl_in_rule__Fluent__Group_3__03756 = new BitSet(new long[]{0x0000000C000000E0L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_3__1_in_rule__Fluent__Group_3__03759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Fluent__Group_3__0__Impl3787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__Group_3__1__Impl_in_rule__Fluent__Group_3__13818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fluent__CondPartAssignment_3_1_in_rule__Fluent__Group_3__1__Impl3845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ToRule__Group_3__0__Impl_in_rule__ToRule__Group_3__03879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_3_0_in_rule__ToRule__Group_3__0__Impl3906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__03938 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Or__Group__1_in_rule__Or__Group__03941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnd_in_rule__Or__Group__0__Impl3968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__13997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group_1__0_in_rule__Or__Group__1__Impl4024 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_rule__Or__Group_1__0__Impl_in_rule__Or__Group_1__04059 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Or__Group_1__1_in_rule__Or__Group_1__04062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group_1__1__Impl_in_rule__Or__Group_1__14120 = new BitSet(new long[]{0x0000000C000000E0L});
+    public static final BitSet FOLLOW_rule__Or__Group_1__2_in_rule__Or__Group_1__14123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Or__Group_1__1__Impl4151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group_1__2__Impl_in_rule__Or__Group_1__24182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__RightAssignment_1_2_in_rule__Or__Group_1__2__Impl4209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_0__0__Impl_in_rule__And__Group_0__04245 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__And__Group_0__1_in_rule__And__Group_0__04248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEquality_in_rule__And__Group_0__0__Impl4275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_0__1__Impl_in_rule__And__Group_0__14304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_0_1__0_in_rule__And__Group_0__1__Impl4331 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_rule__And__Group_0_1__0__Impl_in_rule__And__Group_0_1__04366 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__And__Group_0_1__1_in_rule__And__Group_0_1__04369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_0_1__1__Impl_in_rule__And__Group_0_1__14427 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_rule__And__Group_0_1__2_in_rule__And__Group_0_1__14430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__And__Group_0_1__1__Impl4458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_0_1__2__Impl_in_rule__And__Group_0_1__24489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__RightAssignment_0_1_2_in_rule__And__Group_0_1__2__Impl4516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_1__0__Impl_in_rule__And__Group_1__04552 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__And__Group_1__1_in_rule__And__Group_1__04555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEquality_in_rule__And__Group_1__0__Impl4583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_1__1__Impl_in_rule__And__Group_1__14613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_1_1__0_in_rule__And__Group_1__1__Impl4640 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_rule__And__Group_1_1__0__Impl_in_rule__And__Group_1_1__04675 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__And__Group_1_1__1_in_rule__And__Group_1_1__04678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_1_1__1__Impl_in_rule__And__Group_1_1__14736 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_rule__And__Group_1_1__2_in_rule__And__Group_1_1__14739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__And__Group_1_1__1__Impl4767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_1_1__2__Impl_in_rule__And__Group_1_1__24798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__RightAssignment_1_1_2_in_rule__And__Group_1_1__2__Impl4825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_2__0__Impl_in_rule__And__Group_2__04861 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__And__Group_2__1_in_rule__And__Group_2__04864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparison_in_rule__And__Group_2__0__Impl4892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_2__1__Impl_in_rule__And__Group_2__14922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_2_1__0_in_rule__And__Group_2__1__Impl4949 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_rule__And__Group_2_1__0__Impl_in_rule__And__Group_2_1__04984 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__And__Group_2_1__1_in_rule__And__Group_2_1__04987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_2_1__1__Impl_in_rule__And__Group_2_1__15045 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_rule__And__Group_2_1__2_in_rule__And__Group_2_1__15048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__And__Group_2_1__1__Impl5076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_2_1__2__Impl_in_rule__And__Group_2_1__25107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__RightAssignment_2_1_2_in_rule__And__Group_2_1__2__Impl5134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_3__0__Impl_in_rule__And__Group_3__05170 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__And__Group_3__1_in_rule__And__Group_3__05173 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparison_in_rule__And__Group_3__0__Impl5201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_3__1__Impl_in_rule__And__Group_3__15231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_3_1__0_in_rule__And__Group_3__1__Impl5258 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_rule__And__Group_3_1__0__Impl_in_rule__And__Group_3_1__05293 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__And__Group_3_1__1_in_rule__And__Group_3_1__05296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_3_1__1__Impl_in_rule__And__Group_3_1__15354 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_rule__And__Group_3_1__2_in_rule__And__Group_3_1__15357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__And__Group_3_1__1__Impl5385 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_3_1__2__Impl_in_rule__And__Group_3_1__25416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__RightAssignment_3_1_2_in_rule__And__Group_3_1__2__Impl5443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0__0__Impl_in_rule__Equality__Group_0__05479 = new BitSet(new long[]{0x0000000000003000L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0__1_in_rule__Equality__Group_0__05482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFloatExpr_in_rule__Equality__Group_0__0__Impl5509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0__1__Impl_in_rule__Equality__Group_0__15538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0_1__0_in_rule__Equality__Group_0__1__Impl5565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0_1__0__Impl_in_rule__Equality__Group_0_1__05599 = new BitSet(new long[]{0x0000000000003000L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0_1__1_in_rule__Equality__Group_0_1__05602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0_1__1__Impl_in_rule__Equality__Group_0_1__15660 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0_1__2_in_rule__Equality__Group_0_1__15663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__OpAssignment_0_1_1_in_rule__Equality__Group_0_1__1__Impl5690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0_1__2__Impl_in_rule__Equality__Group_0_1__25720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__RightAssignment_0_1_2_in_rule__Equality__Group_0_1__2__Impl5747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_1__0__Impl_in_rule__Equality__Group_1__05783 = new BitSet(new long[]{0x0000000000003000L});
+    public static final BitSet FOLLOW_rule__Equality__Group_1__1_in_rule__Equality__Group_1__05786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringExpr_in_rule__Equality__Group_1__0__Impl5814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_1__1__Impl_in_rule__Equality__Group_1__15844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_1_1__0_in_rule__Equality__Group_1__1__Impl5871 = new BitSet(new long[]{0x0000000000003002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_1_1__0__Impl_in_rule__Equality__Group_1_1__05906 = new BitSet(new long[]{0x0000000000003000L});
+    public static final BitSet FOLLOW_rule__Equality__Group_1_1__1_in_rule__Equality__Group_1_1__05909 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_1_1__1__Impl_in_rule__Equality__Group_1_1__15967 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_rule__Equality__Group_1_1__2_in_rule__Equality__Group_1_1__15970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__OpAssignment_1_1_1_in_rule__Equality__Group_1_1__1__Impl5997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_1_1__2__Impl_in_rule__Equality__Group_1_1__26027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__RightAssignment_1_1_2_in_rule__Equality__Group_1_1__2__Impl6054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__Group__0__Impl_in_rule__Comparison__Group__06090 = new BitSet(new long[]{0x000000000003C000L});
+    public static final BitSet FOLLOW_rule__Comparison__Group__1_in_rule__Comparison__Group__06093 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePlusOrMinus_in_rule__Comparison__Group__0__Impl6120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__Group__1__Impl_in_rule__Comparison__Group__16149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__Group_1__0_in_rule__Comparison__Group__1__Impl6176 = new BitSet(new long[]{0x000000000003C002L});
+    public static final BitSet FOLLOW_rule__Comparison__Group_1__0__Impl_in_rule__Comparison__Group_1__06211 = new BitSet(new long[]{0x000000000003C000L});
+    public static final BitSet FOLLOW_rule__Comparison__Group_1__1_in_rule__Comparison__Group_1__06214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__Group_1__1__Impl_in_rule__Comparison__Group_1__16272 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_rule__Comparison__Group_1__2_in_rule__Comparison__Group_1__16275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__OpAssignment_1_1_in_rule__Comparison__Group_1__1__Impl6302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__Group_1__2__Impl_in_rule__Comparison__Group_1__26332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__RightAssignment_1_2_in_rule__Comparison__Group_1__2__Impl6359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MutationExpr__Group__0__Impl_in_rule__MutationExpr__Group__06395 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__MutationExpr__Group__1_in_rule__MutationExpr__Group__06398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MutationExpr__ValueAssignment_0_in_rule__MutationExpr__Group__0__Impl6425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MutationExpr__Group__1__Impl_in_rule__MutationExpr__Group__16455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__MutationExpr__Group__1__Impl6482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group__0__Impl_in_rule__PlusOrMinus__Group__06515 = new BitSet(new long[]{0x00000000000C0000L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group__1_in_rule__PlusOrMinus__Group__06518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMulOrDiv_in_rule__PlusOrMinus__Group__0__Impl6545 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group__1__Impl_in_rule__PlusOrMinus__Group__16574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1__0_in_rule__PlusOrMinus__Group__1__Impl6601 = new BitSet(new long[]{0x00000000000C0002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1__0__Impl_in_rule__PlusOrMinus__Group_1__06636 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1__1_in_rule__PlusOrMinus__Group_1__06639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Alternatives_1_0_in_rule__PlusOrMinus__Group_1__0__Impl6666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1__1__Impl_in_rule__PlusOrMinus__Group_1__16696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__RightAssignment_1_1_in_rule__PlusOrMinus__Group_1__1__Impl6723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_0__0__Impl_in_rule__PlusOrMinus__Group_1_0_0__06757 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_0__1_in_rule__PlusOrMinus__Group_1_0_0__06760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_0__1__Impl_in_rule__PlusOrMinus__Group_1_0_0__16818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__PlusOrMinus__Group_1_0_0__1__Impl6846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_1__0__Impl_in_rule__PlusOrMinus__Group_1_0_1__06881 = new BitSet(new long[]{0x00000000000C0000L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_1__1_in_rule__PlusOrMinus__Group_1_0_1__06884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PlusOrMinus__Group_1_0_1__1__Impl_in_rule__PlusOrMinus__Group_1_0_1__16942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__PlusOrMinus__Group_1_0_1__1__Impl6970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__Group__0__Impl_in_rule__MulOrDiv__Group__07005 = new BitSet(new long[]{0x0000000000F00000L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__Group__1_in_rule__MulOrDiv__Group__07008 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimary_in_rule__MulOrDiv__Group__0__Impl7035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__Group__1__Impl_in_rule__MulOrDiv__Group__17064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__0_in_rule__MulOrDiv__Group__1__Impl7091 = new BitSet(new long[]{0x0000000000F00002L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__0__Impl_in_rule__MulOrDiv__Group_1__07126 = new BitSet(new long[]{0x0000000000F00000L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__1_in_rule__MulOrDiv__Group_1__07129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__1__Impl_in_rule__MulOrDiv__Group_1__17187 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__2_in_rule__MulOrDiv__Group_1__17190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__OpAssignment_1_1_in_rule__MulOrDiv__Group_1__1__Impl7217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__Group_1__2__Impl_in_rule__MulOrDiv__Group_1__27247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__RightAssignment_1_2_in_rule__MulOrDiv__Group_1__2__Impl7274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group__0__Impl_in_rule__ExpFluent__Group__07310 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group__1_in_rule__ExpFluent__Group__07313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__FluentNameAssignment_0_in_rule__ExpFluent__Group__0__Impl7340 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group__1__Impl_in_rule__ExpFluent__Group__17370 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group__2_in_rule__ExpFluent__Group__17373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group_1__0_in_rule__ExpFluent__Group__1__Impl7400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group__2__Impl_in_rule__ExpFluent__Group__27430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group_2__0_in_rule__ExpFluent__Group__2__Impl7457 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group_1__0__Impl_in_rule__ExpFluent__Group_1__07494 = new BitSet(new long[]{0x0000001C007C00E0L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group_1__1_in_rule__ExpFluent__Group_1__07497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__ExpFluent__Group_1__0__Impl7525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group_1__1__Impl_in_rule__ExpFluent__Group_1__17556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__ValuePartAssignment_1_1_in_rule__ExpFluent__Group_1__1__Impl7583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group_2__0__Impl_in_rule__ExpFluent__Group_2__07617 = new BitSet(new long[]{0x0000002000000040L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group_2__1_in_rule__ExpFluent__Group_2__07620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__ExpFluent__Group_2__0__Impl7648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__Group_2__1__Impl_in_rule__ExpFluent__Group_2__17679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpFluent__TimePartAssignment_2_1_in_rule__ExpFluent__Group_2__1__Impl7706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_rule__DroolsModel__StatementsAssignment7745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvent_in_rule__Statement__EventAssignment_17776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFluent_in_rule__Statement__FluentAssignment_37807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFluent_in_rule__Statement__FluentAssignment_4_17838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpFluent_in_rule__Statement__ExpAssignment_5_17869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpFluent_in_rule__Statement__ExpAssignment_5_2_17900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Event__EventNameAssignment7931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Fluent__FluentNameAssignment_07962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleToRule_in_rule__Fluent__ValuePartAssignment_1_17993 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInRule_in_rule__Fluent__TimePartAssignment_2_18024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConditionRule_in_rule__Fluent__CondPartAssignment_3_18055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringExpr_in_rule__ToRule__ExpressionAssignment_08086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolExpr_in_rule__ToRule__ExpressionAssignment_18117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleswitchExpr_in_rule__ToRule__ExpressionAssignment_28148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFloatExpr_in_rule__ToRule__ExpressionAssignment_3_08179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMutationExpr_in_rule__ToRule__ExpressionAssignment_48210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__BoolExpr__ValueAssignment_08246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__BoolExpr__ValueAssignment_18290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnd_in_rule__Or__RightAssignment_1_28329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEquality_in_rule__And__RightAssignment_0_1_28360 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparison_in_rule__And__RightAssignment_1_1_28391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparison_in_rule__And__RightAssignment_2_1_28422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEquality_in_rule__And__RightAssignment_3_1_28453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__OpAlternatives_0_1_1_0_in_rule__Equality__OpAssignment_0_1_18484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFloatExpr_in_rule__Equality__RightAssignment_0_1_28517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__OpAlternatives_1_1_1_0_in_rule__Equality__OpAssignment_1_1_18548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringExpr_in_rule__Equality__RightAssignment_1_1_28581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__OpAlternatives_1_1_0_in_rule__Comparison__OpAssignment_1_18612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePlusOrMinus_in_rule__Comparison__RightAssignment_1_28645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__SwitchExpr__ValueAssignment8681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MutationExpr__ValueAlternatives_0_0_in_rule__MutationExpr__ValueAssignment_08720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__FloatExpr__ValueDirectAssignment_08753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePlusOrMinus_in_rule__FloatExpr__ValueCalculatedAssignment_18784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFluentWhoseValue_in_rule__FloatExpr__ValueOfFluentAssignment_28815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMulOrDiv_in_rule__PlusOrMinus__RightAssignment_1_18846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MulOrDiv__OpAlternatives_1_1_0_in_rule__MulOrDiv__OpAssignment_1_18877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimary_in_rule__MulOrDiv__RightAssignment_1_28910 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Primary__ValueDirectAssignment_08941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFluentWhoseValue_in_rule__Primary__ValueOfFluentAssignment_18972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FluentWhoseValue__FluentWhoseValueNameAssignment9003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Str__ValueAssignment9034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__InRule__TimeAssignment_09065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__InRule__CurrentTimeAssignment_19101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolExpr_in_rule__ConditionRule__ConditionAssignment9140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ExpFluent__FluentNameAssignment_09171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleToRule_in_rule__ExpFluent__ValuePartAssignment_1_19202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInRule_in_rule__ExpFluent__TimePartAssignment_2_19233 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_0_in_synpred2_InternalEce1397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ToRule__ExpressionAssignment_1_in_synpred3_InternalEce1415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ToRule__Group_3__0_in_synpred5_InternalEce1451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_0__0_in_synpred9_InternalEce1619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_1__0_in_synpred10_InternalEce1637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group_2__0_in_synpred11_InternalEce1655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Equality__Group_0__0_in_synpred12_InternalEce1706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FloatExpr__ValueDirectAssignment_0_in_synpred22_InternalEce2077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FloatExpr__ValueCalculatedAssignment_1_in_synpred23_InternalEce2095 = new BitSet(new long[]{0x0000000000000002L});
 
 }
