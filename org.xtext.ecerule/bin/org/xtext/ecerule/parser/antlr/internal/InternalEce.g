@@ -156,7 +156,11 @@ ruleStatement returns [EObject current=null]
 	    }
 
 )
-))
+)	otherlv_3=';' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getStatementAccess().getSemicolonKeyword_3());
+    }
+)
 ;
 
 
@@ -343,7 +347,7 @@ ruleContextsList returns [EObject current=null]
 	    }
 
 )
-))*)
+)))
 ;
 
 
@@ -551,22 +555,231 @@ ruleExpContext returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-(
-		lv_dafare_0_0=	'dafare' 
+(	otherlv_0='expect' 
     {
-        newLeafNode(lv_dafare_0_0, grammarAccess.getExpContextAccess().getDafareDafareKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getExpContextAccess().getExpectKeyword_0());
     }
- 
-	    {
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getExpContextAccess().getFinalConditionConditionRuleParserRuleCall_1_0()); 
+	    }
+		lv_finalCondition_1_0=ruleConditionRule		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getExpContextRule());
+	            $current = createModelElementForParent(grammarAccess.getExpContextRule());
 	        }
-       		setWithLastConsumed($current, "dafare", lv_dafare_0_0, "dafare");
+       		set(
+       			$current, 
+       			"finalCondition",
+        		lv_finalCondition_1_0, 
+        		"ConditionRule");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getExpContextAccess().getAllenOpAllenOpParserRuleCall_2_0_0()); 
+	    }
+		lv_allenOp_2_0=ruleAllenOp		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getExpContextRule());
+	        }
+       		set(
+       			$current, 
+       			"allenOp",
+        		lv_allenOp_2_0, 
+        		"AllenOp");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getExpContextAccess().getTimeTimeParserRuleCall_2_1_0()); 
+	    }
+		lv_time_3_0=ruleTime		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getExpContextRule());
+	        }
+       		set(
+       			$current, 
+       			"time",
+        		lv_time_3_0, 
+        		"Time");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?(	otherlv_4='if' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getExpContextAccess().getIfKeyword_3_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getExpContextAccess().getInitialConditionConditionRuleParserRuleCall_3_1_0()); 
+	    }
+		lv_initialCondition_5_0=ruleConditionRule		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getExpContextRule());
+	        }
+       		set(
+       			$current, 
+       			"initialCondition",
+        		lv_initialCondition_5_0, 
+        		"ConditionRule");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?)
+;
+
+
+
+
+
+// Entry rule entryRuleTime
+entryRuleTime returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTimeRule()); }
+	 iv_ruleTime=ruleTime 
+	 { $current=$iv_ruleTime.current; } 
+	 EOF 
+;
+
+// Rule Time
+ruleTime returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+(
+		lv_t_0_0=RULE_INT
+		{
+			newLeafNode(lv_t_0_0, grammarAccess.getTimeAccess().getTINTTerminalRuleCall_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTimeRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"t",
+        		lv_t_0_0, 
+        		"INT");
 	    }
 
 )
 )
+;
+
+
+
+
+
+// Entry rule entryRuleAllenOp
+entryRuleAllenOp returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getAllenOpRule()); }
+	 iv_ruleAllenOp=ruleAllenOp 
+	 { $current=$iv_ruleAllenOp.current; } 
+	 EOF 
+;
+
+// Rule AllenOp
+ruleAllenOp returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getAllenOpAccess().getAllenOperatorAction_0(),
+            $current);
+    }
+)(
+(
+(
+		lv_value_1_1=	'before' 
+    {
+        newLeafNode(lv_value_1_1, grammarAccess.getAllenOpAccess().getValueBeforeKeyword_1_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAllenOpRule());
+	        }
+       		setWithLastConsumed($current, "value", lv_value_1_1, null);
+	    }
+
+    |		lv_value_1_2=	'meets' 
+    {
+        newLeafNode(lv_value_1_2, grammarAccess.getAllenOpAccess().getValueMeetsKeyword_1_0_1());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAllenOpRule());
+	        }
+       		setWithLastConsumed($current, "value", lv_value_1_2, null);
+	    }
+
+    |		lv_value_1_3=	'overlaps' 
+    {
+        newLeafNode(lv_value_1_3, grammarAccess.getAllenOpAccess().getValueOverlapsKeyword_1_0_2());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAllenOpRule());
+	        }
+       		setWithLastConsumed($current, "value", lv_value_1_3, null);
+	    }
+
+    |		lv_value_1_4=	'starts' 
+    {
+        newLeafNode(lv_value_1_4, grammarAccess.getAllenOpAccess().getValueStartsKeyword_1_0_3());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAllenOpRule());
+	        }
+       		setWithLastConsumed($current, "value", lv_value_1_4, null);
+	    }
+
+    |		lv_value_1_5=	'finishes' 
+    {
+        newLeafNode(lv_value_1_5, grammarAccess.getAllenOpAccess().getValueFinishesKeyword_1_0_4());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAllenOpRule());
+	        }
+       		setWithLastConsumed($current, "value", lv_value_1_5, null);
+	    }
+
+    |		lv_value_1_6=	'during' 
+    {
+        newLeafNode(lv_value_1_6, grammarAccess.getAllenOpAccess().getValueDuringKeyword_1_0_5());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAllenOpRule());
+	        }
+       		setWithLastConsumed($current, "value", lv_value_1_6, null);
+	    }
+
+)
+
+)
+))
 ;
 
 
@@ -1519,7 +1732,40 @@ ruleAtomic returns [EObject current=null]
 	}
 
 )
-)))
+))
+    |((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getAtomicAccess().getFluentRefAction_4_0(),
+            $current);
+    }
+)	otherlv_9='[' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getAtomicAccess().getLeftSquareBracketKeyword_4_1());
+    }
+(
+(
+		lv_value_10_0=RULE_ID
+		{
+			newLeafNode(lv_value_10_0, grammarAccess.getAtomicAccess().getValueIDTerminalRuleCall_4_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAtomicRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"value",
+        		lv_value_10_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_11=']' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getAtomicAccess().getRightSquareBracketKeyword_4_3());
+    }
+))
 ;
 
 

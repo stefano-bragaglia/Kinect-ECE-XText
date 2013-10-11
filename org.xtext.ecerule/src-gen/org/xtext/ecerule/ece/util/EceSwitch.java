@@ -135,6 +135,20 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EcePackage.TIME:
+      {
+        Time time = (Time)theEObject;
+        T result = caseTime(time);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.ALLEN_OP:
+      {
+        AllenOp allenOp = (AllenOp)theEObject;
+        T result = caseAllenOp(allenOp);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EcePackage.FLUENT:
       {
         Fluent fluent = (Fluent)theEObject;
@@ -169,6 +183,14 @@ public class EceSwitch<T> extends Switch<T>
         T result = caseExpression(expression);
         if (result == null) result = caseConditionRule(expression);
         if (result == null) result = caseToRule(expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.ALLEN_OPERATOR:
+      {
+        AllenOperator allenOperator = (AllenOperator)theEObject;
+        T result = caseAllenOperator(allenOperator);
+        if (result == null) result = caseAllenOp(allenOperator);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -289,6 +311,16 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(featureRef);
         if (result == null) result = caseConditionRule(featureRef);
         if (result == null) result = caseToRule(featureRef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.FLUENT_REF:
+      {
+        FluentRef fluentRef = (FluentRef)theEObject;
+        T result = caseFluentRef(fluentRef);
+        if (result == null) result = caseExpression(fluentRef);
+        if (result == null) result = caseConditionRule(fluentRef);
+        if (result == null) result = caseToRule(fluentRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -441,6 +473,38 @@ public class EceSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Time</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Time</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTime(Time object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Allen Op</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Allen Op</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAllenOp(AllenOp object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Fluent</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -516,6 +580,22 @@ public class EceSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExpression(Expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Allen Operator</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Allen Operator</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAllenOperator(AllenOperator object)
   {
     return null;
   }
@@ -708,6 +788,22 @@ public class EceSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFeatureRef(FeatureRef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Fluent Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Fluent Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFluentRef(FluentRef object)
   {
     return null;
   }

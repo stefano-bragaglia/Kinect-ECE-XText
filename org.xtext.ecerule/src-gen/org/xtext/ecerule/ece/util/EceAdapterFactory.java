@@ -120,6 +120,16 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createExpContextAdapter();
       }
       @Override
+      public Adapter caseTime(Time object)
+      {
+        return createTimeAdapter();
+      }
+      @Override
+      public Adapter caseAllenOp(AllenOp object)
+      {
+        return createAllenOpAdapter();
+      }
+      @Override
       public Adapter caseFluent(Fluent object)
       {
         return createFluentAdapter();
@@ -143,6 +153,11 @@ public class EceAdapterFactory extends AdapterFactoryImpl
       public Adapter caseExpression(Expression object)
       {
         return createExpressionAdapter();
+      }
+      @Override
+      public Adapter caseAllenOperator(AllenOperator object)
+      {
+        return createAllenOperatorAdapter();
       }
       @Override
       public Adapter caseOr(Or object)
@@ -203,6 +218,11 @@ public class EceAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFeatureRef(FeatureRef object)
       {
         return createFeatureRefAdapter();
+      }
+      @Override
+      public Adapter caseFluentRef(FluentRef object)
+      {
+        return createFluentRefAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -362,6 +382,36 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Time <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.Time
+   * @generated
+   */
+  public Adapter createTimeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.AllenOp <em>Allen Op</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.AllenOp
+   * @generated
+   */
+  public Adapter createAllenOpAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Fluent <em>Fluent</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -432,6 +482,21 @@ public class EceAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.AllenOperator <em>Allen Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.AllenOperator
+   * @generated
+   */
+  public Adapter createAllenOperatorAdapter()
   {
     return null;
   }
@@ -612,6 +677,21 @@ public class EceAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFeatureRefAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.FluentRef <em>Fluent Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.FluentRef
+   * @generated
+   */
+  public Adapter createFluentRefAdapter()
   {
     return null;
   }

@@ -1,0 +1,3 @@
+on BilanciaMisura (lettura, tara) 	set peso to (lettura-tara)*100 in 26 if tara<=16 ,
+									set totPesate to [totPesate] + (lettura-tara)*100 if (lettura-tara)*100>60,
+									expect [totPesate] >= (lettura-tara)*100 before 264 if [totPesate]>=0 ;

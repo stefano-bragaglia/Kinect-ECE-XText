@@ -318,13 +318,40 @@ public interface EcePackage extends EPackage
   int EXP_CONTEXT = 8;
 
   /**
-   * The feature id for the '<em><b>Dafare</b></em>' attribute.
+   * The feature id for the '<em><b>Final Condition</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP_CONTEXT__DAFARE = 0;
+  int EXP_CONTEXT__FINAL_CONDITION = 0;
+
+  /**
+   * The feature id for the '<em><b>Allen Op</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_CONTEXT__ALLEN_OP = 1;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_CONTEXT__TIME = 2;
+
+  /**
+   * The feature id for the '<em><b>Initial Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_CONTEXT__INITIAL_CONDITION = 3;
 
   /**
    * The number of structural features of the '<em>Exp Context</em>' class.
@@ -333,7 +360,54 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP_CONTEXT_FEATURE_COUNT = 1;
+  int EXP_CONTEXT_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.TimeImpl <em>Time</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.TimeImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getTime()
+   * @generated
+   */
+  int TIME = 9;
+
+  /**
+   * The feature id for the '<em><b>T</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIME__T = 0;
+
+  /**
+   * The number of structural features of the '<em>Time</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIME_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.AllenOpImpl <em>Allen Op</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.AllenOpImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getAllenOp()
+   * @generated
+   */
+  int ALLEN_OP = 10;
+
+  /**
+   * The number of structural features of the '<em>Allen Op</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALLEN_OP_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.FluentImpl <em>Fluent</em>}' class.
@@ -343,7 +417,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFluent()
    * @generated
    */
-  int FLUENT = 9;
+  int FLUENT = 11;
 
   /**
    * The feature id for the '<em><b>Fluent Name</b></em>' attribute.
@@ -398,7 +472,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getConditionRule()
    * @generated
    */
-  int CONDITION_RULE = 10;
+  int CONDITION_RULE = 12;
 
   /**
    * The number of structural features of the '<em>Condition Rule</em>' class.
@@ -417,7 +491,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getToRule()
    * @generated
    */
-  int TO_RULE = 11;
+  int TO_RULE = 13;
 
   /**
    * The number of structural features of the '<em>To Rule</em>' class.
@@ -436,7 +510,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInRule()
    * @generated
    */
-  int IN_RULE = 12;
+  int IN_RULE = 14;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -464,7 +538,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 13;
+  int EXPRESSION = 15;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -494,6 +568,34 @@ public interface EcePackage extends EPackage
   int EXPRESSION_FEATURE_COUNT = CONDITION_RULE_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.AllenOperatorImpl <em>Allen Operator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.AllenOperatorImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getAllenOperator()
+   * @generated
+   */
+  int ALLEN_OPERATOR = 16;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALLEN_OPERATOR__VALUE = ALLEN_OP_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Allen Operator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALLEN_OPERATOR_FEATURE_COUNT = ALLEN_OP_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.OrImpl <em>Or</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -501,7 +603,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getOr()
    * @generated
    */
-  int OR = 14;
+  int OR = 17;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -556,7 +658,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getAnd()
    * @generated
    */
-  int AND = 15;
+  int AND = 18;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -611,7 +713,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEquality()
    * @generated
    */
-  int EQUALITY = 16;
+  int EQUALITY = 19;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -675,7 +777,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getComparison()
    * @generated
    */
-  int COMPARISON = 17;
+  int COMPARISON = 20;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -739,7 +841,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getPlus()
    * @generated
    */
-  int PLUS = 18;
+  int PLUS = 21;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -794,7 +896,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMinus()
    * @generated
    */
-  int MINUS = 19;
+  int MINUS = 22;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -849,7 +951,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMulOrDiv()
    * @generated
    */
-  int MUL_OR_DIV = 20;
+  int MUL_OR_DIV = 23;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -913,7 +1015,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getNot()
    * @generated
    */
-  int NOT = 21;
+  int NOT = 24;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -950,7 +1052,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFloatConstant()
    * @generated
    */
-  int FLOAT_CONSTANT = 22;
+  int FLOAT_CONSTANT = 25;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -996,7 +1098,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getIntConstant()
    * @generated
    */
-  int INT_CONSTANT = 23;
+  int INT_CONSTANT = 26;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1042,7 +1144,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getBoolConstant()
    * @generated
    */
-  int BOOL_CONSTANT = 24;
+  int BOOL_CONSTANT = 27;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1088,7 +1190,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFeatureRef()
    * @generated
    */
-  int FEATURE_REF = 25;
+  int FEATURE_REF = 28;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1125,6 +1227,52 @@ public interface EcePackage extends EPackage
    * @ordered
    */
   int FEATURE_REF_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.FluentRefImpl <em>Fluent Ref</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.FluentRefImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFluentRef()
+   * @generated
+   */
+  int FLUENT_REF = 29;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLUENT_REF__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLUENT_REF__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLUENT_REF__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Fluent Ref</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLUENT_REF_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 
   /**
@@ -1339,15 +1487,79 @@ public interface EcePackage extends EPackage
   EClass getExpContext();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.ExpContext#getDafare <em>Dafare</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ExpContext#getFinalCondition <em>Final Condition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Dafare</em>'.
-   * @see org.xtext.ecerule.ece.ExpContext#getDafare()
+   * @return the meta object for the containment reference '<em>Final Condition</em>'.
+   * @see org.xtext.ecerule.ece.ExpContext#getFinalCondition()
    * @see #getExpContext()
    * @generated
    */
-  EAttribute getExpContext_Dafare();
+  EReference getExpContext_FinalCondition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ExpContext#getAllenOp <em>Allen Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Allen Op</em>'.
+   * @see org.xtext.ecerule.ece.ExpContext#getAllenOp()
+   * @see #getExpContext()
+   * @generated
+   */
+  EReference getExpContext_AllenOp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ExpContext#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Time</em>'.
+   * @see org.xtext.ecerule.ece.ExpContext#getTime()
+   * @see #getExpContext()
+   * @generated
+   */
+  EReference getExpContext_Time();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ExpContext#getInitialCondition <em>Initial Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Initial Condition</em>'.
+   * @see org.xtext.ecerule.ece.ExpContext#getInitialCondition()
+   * @see #getExpContext()
+   * @generated
+   */
+  EReference getExpContext_InitialCondition();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.Time <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Time</em>'.
+   * @see org.xtext.ecerule.ece.Time
+   * @generated
+   */
+  EClass getTime();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.Time#getT <em>T</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>T</em>'.
+   * @see org.xtext.ecerule.ece.Time#getT()
+   * @see #getTime()
+   * @generated
+   */
+  EAttribute getTime_T();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.AllenOp <em>Allen Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Allen Op</em>'.
+   * @see org.xtext.ecerule.ece.AllenOp
+   * @generated
+   */
+  EClass getAllenOp();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Fluent <em>Fluent</em>}'.
@@ -1475,6 +1687,27 @@ public interface EcePackage extends EPackage
    * @generated
    */
   EReference getExpression_Expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.AllenOperator <em>Allen Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Allen Operator</em>'.
+   * @see org.xtext.ecerule.ece.AllenOperator
+   * @generated
+   */
+  EClass getAllenOperator();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.AllenOperator#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.ecerule.ece.AllenOperator#getValue()
+   * @see #getAllenOperator()
+   * @generated
+   */
+  EAttribute getAllenOperator_Value();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Or <em>Or</em>}'.
@@ -1828,6 +2061,27 @@ public interface EcePackage extends EPackage
   EReference getFeatureRef_Param();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.FluentRef <em>Fluent Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Fluent Ref</em>'.
+   * @see org.xtext.ecerule.ece.FluentRef
+   * @generated
+   */
+  EClass getFluentRef();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.FluentRef#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.ecerule.ece.FluentRef#getValue()
+   * @see #getFluentRef()
+   * @generated
+   */
+  EAttribute getFluentRef_Value();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2029,12 +2283,64 @@ public interface EcePackage extends EPackage
     EClass EXP_CONTEXT = eINSTANCE.getExpContext();
 
     /**
-     * The meta object literal for the '<em><b>Dafare</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Final Condition</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXP_CONTEXT__DAFARE = eINSTANCE.getExpContext_Dafare();
+    EReference EXP_CONTEXT__FINAL_CONDITION = eINSTANCE.getExpContext_FinalCondition();
+
+    /**
+     * The meta object literal for the '<em><b>Allen Op</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP_CONTEXT__ALLEN_OP = eINSTANCE.getExpContext_AllenOp();
+
+    /**
+     * The meta object literal for the '<em><b>Time</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP_CONTEXT__TIME = eINSTANCE.getExpContext_Time();
+
+    /**
+     * The meta object literal for the '<em><b>Initial Condition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP_CONTEXT__INITIAL_CONDITION = eINSTANCE.getExpContext_InitialCondition();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.TimeImpl <em>Time</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.TimeImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getTime()
+     * @generated
+     */
+    EClass TIME = eINSTANCE.getTime();
+
+    /**
+     * The meta object literal for the '<em><b>T</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TIME__T = eINSTANCE.getTime_T();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.AllenOpImpl <em>Allen Op</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.AllenOpImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getAllenOp()
+     * @generated
+     */
+    EClass ALLEN_OP = eINSTANCE.getAllenOp();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.FluentImpl <em>Fluent</em>}' class.
@@ -2141,6 +2447,24 @@ public interface EcePackage extends EPackage
      * @generated
      */
     EReference EXPRESSION__EXPRESSION = eINSTANCE.getExpression_Expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.AllenOperatorImpl <em>Allen Operator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.AllenOperatorImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getAllenOperator()
+     * @generated
+     */
+    EClass ALLEN_OPERATOR = eINSTANCE.getAllenOperator();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ALLEN_OPERATOR__VALUE = eINSTANCE.getAllenOperator_Value();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.OrImpl <em>Or</em>}' class.
@@ -2429,6 +2753,24 @@ public interface EcePackage extends EPackage
      * @generated
      */
     EReference FEATURE_REF__PARAM = eINSTANCE.getFeatureRef_Param();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.FluentRefImpl <em>Fluent Ref</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.FluentRefImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFluentRef()
+     * @generated
+     */
+    EClass FLUENT_REF = eINSTANCE.getFluentRef();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FLUENT_REF__VALUE = eINSTANCE.getFluentRef_Value();
 
   }
 

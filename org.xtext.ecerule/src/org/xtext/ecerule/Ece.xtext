@@ -7,7 +7,7 @@ DroolsModel:
 	statements+=Statement*;
 
 Statement:
-	'on' event=Event contextsList=ContextsList;
+	'on' event=Event contextsList=ContextsList ';';
 
 Event:
 	eventName=ID 
@@ -17,7 +17,7 @@ EventFeature:
 	name=ID;
 
 ContextsList:
-	ecContextsList=EcContextsList (',' expContextsList=ExpContextsList)*;
+	ecContextsList=EcContextsList (',' expContextsList=ExpContextsList);
 
 
 EcContextsList:
@@ -40,51 +40,21 @@ EcContext:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // EXP CONTEXT *****************************************************************
 ExpContext:
-	dafare="dafare"
+	'expect' finalCondition=ConditionRule (allenOp=AllenOp time=Time)? ('if' initialCondition=ConditionRule)?
+;
+
+Time:
+	t=INT
+;
+
+AllenOp:
+	{AllenOperator} value=('before'|'meets'|'overlaps'|'starts'|'finishes'|'during') 
 ;
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	
@@ -163,10 +133,13 @@ Primary returns Expression:
 Atomic returns Expression:
 	{FloatConstant} value=FLOAT |
 	{IntConstant} value=INT |
-//	{StringConstant} value=STRING |
-	{BoolConstant} value=('true'|'false') 
-	|{FeatureRef} param = [EventFeature]
+//	{StringConstant} value=STRING | 
+	{BoolConstant} value=('true'|'false') |
+	{FeatureRef} param = [EventFeature] |
+	{FluentRef} '['value=ID']'
 ;
+
+
 
 
 terminal FLOAT returns ecore::EFloat: ('0'..'9')*'.'('0'..'9')+;

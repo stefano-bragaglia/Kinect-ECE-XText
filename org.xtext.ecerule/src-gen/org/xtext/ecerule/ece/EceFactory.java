@@ -104,6 +104,24 @@ public interface EceFactory extends EFactory
   ExpContext createExpContext();
 
   /**
+   * Returns a new object of class '<em>Time</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Time</em>'.
+   * @generated
+   */
+  Time createTime();
+
+  /**
+   * Returns a new object of class '<em>Allen Op</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Allen Op</em>'.
+   * @generated
+   */
+  AllenOp createAllenOp();
+
+  /**
    * Returns a new object of class '<em>Fluent</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -147,6 +165,15 @@ public interface EceFactory extends EFactory
    * @generated
    */
   Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>Allen Operator</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Allen Operator</em>'.
+   * @generated
+   */
+  AllenOperator createAllenOperator();
 
   /**
    * Returns a new object of class '<em>Or</em>'.
@@ -255,6 +282,15 @@ public interface EceFactory extends EFactory
    * @generated
    */
   FeatureRef createFeatureRef();
+
+  /**
+   * Returns a new object of class '<em>Fluent Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fluent Ref</em>'.
+   * @generated
+   */
+  FluentRef createFluentRef();
 
   /**
    * Returns the package supported by this factory.

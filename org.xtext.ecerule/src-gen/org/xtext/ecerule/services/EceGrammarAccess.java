@@ -42,12 +42,13 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cEventEventParserRuleCall_1_0 = (RuleCall)cEventAssignment_1.eContents().get(0);
 		private final Assignment cContextsListAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cContextsListContextsListParserRuleCall_2_0 = (RuleCall)cContextsListAssignment_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Statement:
-		//	"on" event=Event contextsList=ContextsList;
+		//	"on" event=Event contextsList=ContextsList ";";
 		public ParserRule getRule() { return rule; }
 
-		//"on" event=Event contextsList=ContextsList
+		//"on" event=Event contextsList=ContextsList ";"
 		public Group getGroup() { return cGroup; }
 
 		//"on"
@@ -64,6 +65,9 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ContextsList
 		public RuleCall getContextsListContextsListParserRuleCall_2_0() { return cContextsListContextsListParserRuleCall_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class EventElements extends AbstractParserRuleElementFinder {
@@ -149,10 +153,10 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cExpContextsListExpContextsListParserRuleCall_1_1_0 = (RuleCall)cExpContextsListAssignment_1_1.eContents().get(0);
 		
 		//ContextsList:
-		//	ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)*;
+		//	ecContextsList=EcContextsList ("," expContextsList=ExpContextsList);
 		public ParserRule getRule() { return rule; }
 
-		//ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)*
+		//ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)
 		public Group getGroup() { return cGroup; }
 
 		//ecContextsList=EcContextsList
@@ -161,7 +165,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		//EcContextsList
 		public RuleCall getEcContextsListEcContextsListParserRuleCall_0_0() { return cEcContextsListEcContextsListParserRuleCall_0_0; }
 
-		//("," expContextsList=ExpContextsList)*
+		//"," expContextsList=ExpContextsList
 		public Group getGroup_1() { return cGroup_1; }
 
 		//","
@@ -289,19 +293,127 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ExpContextElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExpContext");
-		private final Assignment cDafareAssignment = (Assignment)rule.eContents().get(1);
-		private final Keyword cDafareDafareKeyword_0 = (Keyword)cDafareAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cExpectKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cFinalConditionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFinalConditionConditionRuleParserRuleCall_1_0 = (RuleCall)cFinalConditionAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cAllenOpAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cAllenOpAllenOpParserRuleCall_2_0_0 = (RuleCall)cAllenOpAssignment_2_0.eContents().get(0);
+		private final Assignment cTimeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cTimeTimeParserRuleCall_2_1_0 = (RuleCall)cTimeAssignment_2_1.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cIfKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cInitialConditionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cInitialConditionConditionRuleParserRuleCall_3_1_0 = (RuleCall)cInitialConditionAssignment_3_1.eContents().get(0);
 		
 		//// EXP CONTEXT *****************************************************************
 		// ExpContext:
-		//	dafare="dafare";
+		//	"expect" finalCondition=ConditionRule (allenOp=AllenOp time=Time)? ("if" initialCondition=ConditionRule)?;
 		public ParserRule getRule() { return rule; }
 
-		//dafare="dafare"
-		public Assignment getDafareAssignment() { return cDafareAssignment; }
+		//"expect" finalCondition=ConditionRule (allenOp=AllenOp time=Time)? ("if" initialCondition=ConditionRule)?
+		public Group getGroup() { return cGroup; }
 
-		//"dafare"
-		public Keyword getDafareDafareKeyword_0() { return cDafareDafareKeyword_0; }
+		//"expect"
+		public Keyword getExpectKeyword_0() { return cExpectKeyword_0; }
+
+		//finalCondition=ConditionRule
+		public Assignment getFinalConditionAssignment_1() { return cFinalConditionAssignment_1; }
+
+		//ConditionRule
+		public RuleCall getFinalConditionConditionRuleParserRuleCall_1_0() { return cFinalConditionConditionRuleParserRuleCall_1_0; }
+
+		//(allenOp=AllenOp time=Time)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//allenOp=AllenOp
+		public Assignment getAllenOpAssignment_2_0() { return cAllenOpAssignment_2_0; }
+
+		//AllenOp
+		public RuleCall getAllenOpAllenOpParserRuleCall_2_0_0() { return cAllenOpAllenOpParserRuleCall_2_0_0; }
+
+		//time=Time
+		public Assignment getTimeAssignment_2_1() { return cTimeAssignment_2_1; }
+
+		//Time
+		public RuleCall getTimeTimeParserRuleCall_2_1_0() { return cTimeTimeParserRuleCall_2_1_0; }
+
+		//("if" initialCondition=ConditionRule)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"if"
+		public Keyword getIfKeyword_3_0() { return cIfKeyword_3_0; }
+
+		//initialCondition=ConditionRule
+		public Assignment getInitialConditionAssignment_3_1() { return cInitialConditionAssignment_3_1; }
+
+		//ConditionRule
+		public RuleCall getInitialConditionConditionRuleParserRuleCall_3_1_0() { return cInitialConditionConditionRuleParserRuleCall_3_1_0; }
+	}
+
+	public class TimeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Time");
+		private final Assignment cTAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cTINTTerminalRuleCall_0 = (RuleCall)cTAssignment.eContents().get(0);
+		
+		//Time:
+		//	t=INT;
+		public ParserRule getRule() { return rule; }
+
+		//t=INT
+		public Assignment getTAssignment() { return cTAssignment; }
+
+		//INT
+		public RuleCall getTINTTerminalRuleCall_0() { return cTINTTerminalRuleCall_0; }
+	}
+
+	public class AllenOpElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AllenOp");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cAllenOperatorAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Alternatives cValueAlternatives_1_0 = (Alternatives)cValueAssignment_1.eContents().get(0);
+		private final Keyword cValueBeforeKeyword_1_0_0 = (Keyword)cValueAlternatives_1_0.eContents().get(0);
+		private final Keyword cValueMeetsKeyword_1_0_1 = (Keyword)cValueAlternatives_1_0.eContents().get(1);
+		private final Keyword cValueOverlapsKeyword_1_0_2 = (Keyword)cValueAlternatives_1_0.eContents().get(2);
+		private final Keyword cValueStartsKeyword_1_0_3 = (Keyword)cValueAlternatives_1_0.eContents().get(3);
+		private final Keyword cValueFinishesKeyword_1_0_4 = (Keyword)cValueAlternatives_1_0.eContents().get(4);
+		private final Keyword cValueDuringKeyword_1_0_5 = (Keyword)cValueAlternatives_1_0.eContents().get(5);
+		
+		//AllenOp:
+		//	{AllenOperator} value=("before" | "meets" | "overlaps" | "starts" | "finishes" | "during");
+		public ParserRule getRule() { return rule; }
+
+		//{AllenOperator} value=("before" | "meets" | "overlaps" | "starts" | "finishes" | "during")
+		public Group getGroup() { return cGroup; }
+
+		//{AllenOperator}
+		public Action getAllenOperatorAction_0() { return cAllenOperatorAction_0; }
+
+		//value=("before" | "meets" | "overlaps" | "starts" | "finishes" | "during")
+		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+
+		//"before" | "meets" | "overlaps" | "starts" | "finishes" | "during"
+		public Alternatives getValueAlternatives_1_0() { return cValueAlternatives_1_0; }
+
+		//"before"
+		public Keyword getValueBeforeKeyword_1_0_0() { return cValueBeforeKeyword_1_0_0; }
+
+		//"meets"
+		public Keyword getValueMeetsKeyword_1_0_1() { return cValueMeetsKeyword_1_0_1; }
+
+		//"overlaps"
+		public Keyword getValueOverlapsKeyword_1_0_2() { return cValueOverlapsKeyword_1_0_2; }
+
+		//"starts"
+		public Keyword getValueStartsKeyword_1_0_3() { return cValueStartsKeyword_1_0_3; }
+
+		//"finishes"
+		public Keyword getValueFinishesKeyword_1_0_4() { return cValueFinishesKeyword_1_0_4; }
+
+		//"during"
+		public Keyword getValueDuringKeyword_1_0_5() { return cValueDuringKeyword_1_0_5; }
 	}
 
 	public class FluentElements extends AbstractParserRuleElementFinder {
@@ -812,14 +924,20 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cParamAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final CrossReference cParamEventFeatureCrossReference_3_1_0 = (CrossReference)cParamAssignment_3_1.eContents().get(0);
 		private final RuleCall cParamEventFeatureIDTerminalRuleCall_3_1_0_1 = (RuleCall)cParamEventFeatureCrossReference_3_1_0.eContents().get(1);
+		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
+		private final Action cFluentRefAction_4_0 = (Action)cGroup_4.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cValueAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cValueIDTerminalRuleCall_4_2_0 = (RuleCall)cValueAssignment_4_2.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
 		
 		//Atomic returns Expression:
-		//	{FloatConstant} value=FLOAT | {IntConstant} value=INT | //	{StringConstant} value=STRING |
-		//	{BoolConstant} value=("true" | "false") | {FeatureRef} param=[EventFeature];
+		//	{FloatConstant} value=FLOAT | {IntConstant} value=INT | //	{StringConstant} value=STRING | 
+		//	{BoolConstant} value=("true" | "false") | {FeatureRef} param=[EventFeature] | {FluentRef} "[" value=ID "]";
 		public ParserRule getRule() { return rule; }
 
-		//{FloatConstant} value=FLOAT | {IntConstant} value=INT | //	{StringConstant} value=STRING |
-		//{BoolConstant} value=("true" | "false") | {FeatureRef} param=[EventFeature]
+		//{FloatConstant} value=FLOAT | {IntConstant} value=INT | //	{StringConstant} value=STRING | 
+		//{BoolConstant} value=("true" | "false") | {FeatureRef} param=[EventFeature] | {FluentRef} "[" value=ID "]"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//{FloatConstant} value=FLOAT
@@ -846,11 +964,11 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getValueINTTerminalRuleCall_1_1_0() { return cValueINTTerminalRuleCall_1_1_0; }
 
-		////	{StringConstant} value=STRING |
+		////	{StringConstant} value=STRING | 
 		//{BoolConstant} value=("true" | "false")
 		public Group getGroup_2() { return cGroup_2; }
 
-		////	{StringConstant} value=STRING |
+		////	{StringConstant} value=STRING | 
 		//{BoolConstant}
 		public Action getBoolConstantAction_2_0() { return cBoolConstantAction_2_0; }
 
@@ -880,6 +998,24 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getParamEventFeatureIDTerminalRuleCall_3_1_0_1() { return cParamEventFeatureIDTerminalRuleCall_3_1_0_1; }
+
+		//{FluentRef} "[" value=ID "]"
+		public Group getGroup_4() { return cGroup_4; }
+
+		//{FluentRef}
+		public Action getFluentRefAction_4_0() { return cFluentRefAction_4_0; }
+
+		//"["
+		public Keyword getLeftSquareBracketKeyword_4_1() { return cLeftSquareBracketKeyword_4_1; }
+
+		//value=ID
+		public Assignment getValueAssignment_4_2() { return cValueAssignment_4_2; }
+
+		//ID
+		public RuleCall getValueIDTerminalRuleCall_4_2_0() { return cValueIDTerminalRuleCall_4_2_0; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_4_3() { return cRightSquareBracketKeyword_4_3; }
 	}
 	
 	
@@ -892,6 +1028,8 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	private ExpContextsListElements pExpContextsList;
 	private EcContextElements pEcContext;
 	private ExpContextElements pExpContext;
+	private TimeElements pTime;
+	private AllenOpElements pAllenOp;
 	private FluentElements pFluent;
 	private ConditionRuleElements pConditionRule;
 	private ToRuleElements pToRule;
@@ -956,7 +1094,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Statement:
-	//	"on" event=Event contextsList=ContextsList;
+	//	"on" event=Event contextsList=ContextsList ";";
 	public StatementElements getStatementAccess() {
 		return (pStatement != null) ? pStatement : (pStatement = new StatementElements());
 	}
@@ -986,7 +1124,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ContextsList:
-	//	ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)*;
+	//	ecContextsList=EcContextsList ("," expContextsList=ExpContextsList);
 	public ContextsListElements getContextsListAccess() {
 		return (pContextsList != null) ? pContextsList : (pContextsList = new ContextsListElements());
 	}
@@ -1028,13 +1166,33 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// EXP CONTEXT *****************************************************************
 	// ExpContext:
-	//	dafare="dafare";
+	//	"expect" finalCondition=ConditionRule (allenOp=AllenOp time=Time)? ("if" initialCondition=ConditionRule)?;
 	public ExpContextElements getExpContextAccess() {
 		return (pExpContext != null) ? pExpContext : (pExpContext = new ExpContextElements());
 	}
 	
 	public ParserRule getExpContextRule() {
 		return getExpContextAccess().getRule();
+	}
+
+	//Time:
+	//	t=INT;
+	public TimeElements getTimeAccess() {
+		return (pTime != null) ? pTime : (pTime = new TimeElements());
+	}
+	
+	public ParserRule getTimeRule() {
+		return getTimeAccess().getRule();
+	}
+
+	//AllenOp:
+	//	{AllenOperator} value=("before" | "meets" | "overlaps" | "starts" | "finishes" | "during");
+	public AllenOpElements getAllenOpAccess() {
+		return (pAllenOp != null) ? pAllenOp : (pAllenOp = new AllenOpElements());
+	}
+	
+	public ParserRule getAllenOpRule() {
+		return getAllenOpAccess().getRule();
 	}
 
 	//Fluent:
@@ -1160,8 +1318,8 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Atomic returns Expression:
-	//	{FloatConstant} value=FLOAT | {IntConstant} value=INT | //	{StringConstant} value=STRING |
-	//	{BoolConstant} value=("true" | "false") | {FeatureRef} param=[EventFeature];
+	//	{FloatConstant} value=FLOAT | {IntConstant} value=INT | //	{StringConstant} value=STRING | 
+	//	{BoolConstant} value=("true" | "false") | {FeatureRef} param=[EventFeature] | {FluentRef} "[" value=ID "]";
 	public AtomicElements getAtomicAccess() {
 		return (pAtomic != null) ? pAtomic : (pAtomic = new AtomicElements());
 	}

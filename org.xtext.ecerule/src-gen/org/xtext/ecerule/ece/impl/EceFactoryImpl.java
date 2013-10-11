@@ -73,11 +73,14 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.EXP_CONTEXTS_LIST: return createExpContextsList();
       case EcePackage.EC_CONTEXT: return createEcContext();
       case EcePackage.EXP_CONTEXT: return createExpContext();
+      case EcePackage.TIME: return createTime();
+      case EcePackage.ALLEN_OP: return createAllenOp();
       case EcePackage.FLUENT: return createFluent();
       case EcePackage.CONDITION_RULE: return createConditionRule();
       case EcePackage.TO_RULE: return createToRule();
       case EcePackage.IN_RULE: return createInRule();
       case EcePackage.EXPRESSION: return createExpression();
+      case EcePackage.ALLEN_OPERATOR: return createAllenOperator();
       case EcePackage.OR: return createOr();
       case EcePackage.AND: return createAnd();
       case EcePackage.EQUALITY: return createEquality();
@@ -90,6 +93,7 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.INT_CONSTANT: return createIntConstant();
       case EcePackage.BOOL_CONSTANT: return createBoolConstant();
       case EcePackage.FEATURE_REF: return createFeatureRef();
+      case EcePackage.FLUENT_REF: return createFluentRef();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -199,6 +203,28 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Time createTime()
+  {
+    TimeImpl time = new TimeImpl();
+    return time;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AllenOp createAllenOp()
+  {
+    AllenOpImpl allenOp = new AllenOpImpl();
+    return allenOp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Fluent createFluent()
   {
     FluentImpl fluent = new FluentImpl();
@@ -247,6 +273,17 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
   {
     ExpressionImpl expression = new ExpressionImpl();
     return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AllenOperator createAllenOperator()
+  {
+    AllenOperatorImpl allenOperator = new AllenOperatorImpl();
+    return allenOperator;
   }
 
   /**
@@ -379,6 +416,17 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
   {
     FeatureRefImpl featureRef = new FeatureRefImpl();
     return featureRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FluentRef createFluentRef()
+  {
+    FluentRefImpl fluentRef = new FluentRefImpl();
+    return fluentRef;
   }
 
   /**

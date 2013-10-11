@@ -13,6 +13,7 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEOb
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.ecerule.ece.AllenOperator;
 import org.xtext.ecerule.ece.And;
 import org.xtext.ecerule.ece.BoolConstant;
 import org.xtext.ecerule.ece.Comparison;
@@ -30,6 +31,7 @@ import org.xtext.ecerule.ece.Expression;
 import org.xtext.ecerule.ece.FeatureRef;
 import org.xtext.ecerule.ece.FloatConstant;
 import org.xtext.ecerule.ece.Fluent;
+import org.xtext.ecerule.ece.FluentRef;
 import org.xtext.ecerule.ece.InRule;
 import org.xtext.ecerule.ece.IntConstant;
 import org.xtext.ecerule.ece.Minus;
@@ -38,6 +40,7 @@ import org.xtext.ecerule.ece.Not;
 import org.xtext.ecerule.ece.Or;
 import org.xtext.ecerule.ece.Plus;
 import org.xtext.ecerule.ece.Statement;
+import org.xtext.ecerule.ece.Time;
 import org.xtext.ecerule.services.EceGrammarAccess;
 
 @SuppressWarnings("all")
@@ -48,6 +51,12 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == EcePackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case EcePackage.ALLEN_OPERATOR:
+				if(context == grammarAccess.getAllenOpRule()) {
+					sequence_AllenOp(context, (AllenOperator) semanticObject); 
+					return; 
+				}
+				else break;
 			case EcePackage.AND:
 				if(context == grammarAccess.getAndRule() ||
 				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
@@ -235,6 +244,27 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case EcePackage.FLUENT_REF:
+				if(context == grammarAccess.getAndRule() ||
+				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
+				   context == grammarAccess.getAtomicRule() ||
+				   context == grammarAccess.getComparisonRule() ||
+				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0() ||
+				   context == grammarAccess.getEqualityRule() ||
+				   context == grammarAccess.getEqualityAccess().getEqualityLeftAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMulOrDivRule() ||
+				   context == grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0() ||
+				   context == grammarAccess.getOrRule() ||
+				   context == grammarAccess.getOrAccess().getOrLeftAction_1_0() ||
+				   context == grammarAccess.getPlusOrMinusRule() ||
+				   context == grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0() ||
+				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getPrimaryRule()) {
+					sequence_Atomic(context, (FluentRef) semanticObject); 
+					return; 
+				}
+				else break;
 			case EcePackage.IN_RULE:
 				if(context == grammarAccess.getInRuleRule()) {
 					sequence_InRule(context, (InRule) semanticObject); 
@@ -368,9 +398,31 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case EcePackage.TIME:
+				if(context == grammarAccess.getTimeRule()) {
+					sequence_Time(context, (Time) semanticObject); 
+					return; 
+				}
+				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         value='before' | 
+	 *         value='meets' | 
+	 *         value='overlaps' | 
+	 *         value='starts' | 
+	 *         value='finishes' | 
+	 *         value='during'
+	 *     )
+	 */
+	protected void sequence_AllenOp(EObject context, AllenOperator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -410,6 +462,15 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     value=ID
+	 */
+	protected void sequence_Atomic(EObject context, FluentRef semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     value=INT
 	 */
 	protected void sequence_Atomic(EObject context, IntConstant semanticObject) {
@@ -437,10 +498,20 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (ecContextsList=EcContextsList expContextsList=ExpContextsList*)
+	 *     (ecContextsList=EcContextsList expContextsList=ExpContextsList)
 	 */
 	protected void sequence_ContextsList(EObject context, ContextsList semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.CONTEXTS_LIST__EC_CONTEXTS_LIST) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.CONTEXTS_LIST__EC_CONTEXTS_LIST));
+			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.CONTEXTS_LIST__EXP_CONTEXTS_LIST) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.CONTEXTS_LIST__EXP_CONTEXTS_LIST));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getContextsListAccess().getEcContextsListEcContextsListParserRuleCall_0_0(), semanticObject.getEcContextsList());
+		feeder.accept(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_1_1_0(), semanticObject.getExpContextsList());
+		feeder.finish();
 	}
 	
 	
@@ -507,17 +578,10 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     dafare='dafare'
+	 *     (finalCondition=ConditionRule (allenOp=AllenOp time=Time)? initialCondition=ConditionRule?)
 	 */
 	protected void sequence_ExpContext(EObject context, ExpContext semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.EXP_CONTEXT__DAFARE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.EXP_CONTEXT__DAFARE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getExpContextAccess().getDafareDafareKeyword_0(), semanticObject.getDafare());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -615,6 +679,22 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getStatementAccess().getEventEventParserRuleCall_1_0(), semanticObject.getEvent());
 		feeder.accept(grammarAccess.getStatementAccess().getContextsListContextsListParserRuleCall_2_0(), semanticObject.getContextsList());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     t=INT
+	 */
+	protected void sequence_Time(EObject context, Time semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.TIME__T) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.TIME__T));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getTimeAccess().getTINTTerminalRuleCall_0(), semanticObject.getT());
 		feeder.finish();
 	}
 	

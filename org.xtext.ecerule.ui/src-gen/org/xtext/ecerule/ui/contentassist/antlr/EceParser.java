@@ -37,6 +37,7 @@ public class EceParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getAllenOpAccess().getValueAlternatives_1_0(), "rule__AllenOp__ValueAlternatives_1_0");
 					put(grammarAccess.getEqualityAccess().getOpAlternatives_1_1_0(), "rule__Equality__OpAlternatives_1_1_0");
 					put(grammarAccess.getComparisonAccess().getOpAlternatives_1_1_0(), "rule__Comparison__OpAlternatives_1_1_0");
 					put(grammarAccess.getPlusOrMinusAccess().getAlternatives_1_0(), "rule__PlusOrMinus__Alternatives_1_0");
@@ -56,6 +57,10 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpContextsListAccess().getGroup_1(), "rule__ExpContextsList__Group_1__0");
 					put(grammarAccess.getEcContextAccess().getGroup(), "rule__EcContext__Group__0");
 					put(grammarAccess.getEcContextAccess().getGroup_2(), "rule__EcContext__Group_2__0");
+					put(grammarAccess.getExpContextAccess().getGroup(), "rule__ExpContext__Group__0");
+					put(grammarAccess.getExpContextAccess().getGroup_2(), "rule__ExpContext__Group_2__0");
+					put(grammarAccess.getExpContextAccess().getGroup_3(), "rule__ExpContext__Group_3__0");
+					put(grammarAccess.getAllenOpAccess().getGroup(), "rule__AllenOp__Group__0");
 					put(grammarAccess.getFluentAccess().getGroup(), "rule__Fluent__Group__0");
 					put(grammarAccess.getFluentAccess().getGroup_1(), "rule__Fluent__Group_1__0");
 					put(grammarAccess.getFluentAccess().getGroup_2(), "rule__Fluent__Group_2__0");
@@ -82,6 +87,7 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtomicAccess().getGroup_1(), "rule__Atomic__Group_1__0");
 					put(grammarAccess.getAtomicAccess().getGroup_2(), "rule__Atomic__Group_2__0");
 					put(grammarAccess.getAtomicAccess().getGroup_3(), "rule__Atomic__Group_3__0");
+					put(grammarAccess.getAtomicAccess().getGroup_4(), "rule__Atomic__Group_4__0");
 					put(grammarAccess.getDroolsModelAccess().getStatementsAssignment(), "rule__DroolsModel__StatementsAssignment");
 					put(grammarAccess.getStatementAccess().getEventAssignment_1(), "rule__Statement__EventAssignment_1");
 					put(grammarAccess.getStatementAccess().getContextsListAssignment_2(), "rule__Statement__ContextsListAssignment_2");
@@ -97,7 +103,12 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpContextsListAccess().getExpContextsAssignment_1_1(), "rule__ExpContextsList__ExpContextsAssignment_1_1");
 					put(grammarAccess.getEcContextAccess().getFluentAssignment_1(), "rule__EcContext__FluentAssignment_1");
 					put(grammarAccess.getEcContextAccess().getFluentAssignment_2_1(), "rule__EcContext__FluentAssignment_2_1");
-					put(grammarAccess.getExpContextAccess().getDafareAssignment(), "rule__ExpContext__DafareAssignment");
+					put(grammarAccess.getExpContextAccess().getFinalConditionAssignment_1(), "rule__ExpContext__FinalConditionAssignment_1");
+					put(grammarAccess.getExpContextAccess().getAllenOpAssignment_2_0(), "rule__ExpContext__AllenOpAssignment_2_0");
+					put(grammarAccess.getExpContextAccess().getTimeAssignment_2_1(), "rule__ExpContext__TimeAssignment_2_1");
+					put(grammarAccess.getExpContextAccess().getInitialConditionAssignment_3_1(), "rule__ExpContext__InitialConditionAssignment_3_1");
+					put(grammarAccess.getTimeAccess().getTAssignment(), "rule__Time__TAssignment");
+					put(grammarAccess.getAllenOpAccess().getValueAssignment_1(), "rule__AllenOp__ValueAssignment_1");
 					put(grammarAccess.getFluentAccess().getFluentNameAssignment_0(), "rule__Fluent__FluentNameAssignment_0");
 					put(grammarAccess.getFluentAccess().getValuePartAssignment_1_1(), "rule__Fluent__ValuePartAssignment_1_1");
 					put(grammarAccess.getFluentAccess().getTimePartAssignment_2_1(), "rule__Fluent__TimePartAssignment_2_1");
@@ -119,6 +130,7 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtomicAccess().getValueAssignment_1_1(), "rule__Atomic__ValueAssignment_1_1");
 					put(grammarAccess.getAtomicAccess().getValueAssignment_2_1(), "rule__Atomic__ValueAssignment_2_1");
 					put(grammarAccess.getAtomicAccess().getParamAssignment_3_1(), "rule__Atomic__ParamAssignment_3_1");
+					put(grammarAccess.getAtomicAccess().getValueAssignment_4_2(), "rule__Atomic__ValueAssignment_4_2");
 				}
 			};
 		}

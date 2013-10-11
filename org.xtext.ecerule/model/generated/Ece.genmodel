@@ -35,8 +35,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//EcContext/fluent"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//ExpContext">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//ExpContext/dafare"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpContext/finalCondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpContext/allenOp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpContext/time"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpContext/initialCondition"/>
     </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Time">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Time/t"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//AllenOp"/>
     <genClasses ecoreClass="Ece.ecore#//Fluent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Fluent/fluentName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/valuePart"/>
@@ -51,6 +58,9 @@
     <genClasses ecoreClass="Ece.ecore#//Expression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Expression/condition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Expression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//AllenOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//AllenOperator/value"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//Or">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Or/left"/>
@@ -95,6 +105,9 @@
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//FeatureRef">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ece.ecore#//FeatureRef/param"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//FluentRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//FluentRef/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
