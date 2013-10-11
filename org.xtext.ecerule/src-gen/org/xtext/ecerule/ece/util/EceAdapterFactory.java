@@ -90,9 +90,44 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createEventAdapter();
       }
       @Override
+      public Adapter caseEventFeature(EventFeature object)
+      {
+        return createEventFeatureAdapter();
+      }
+      @Override
+      public Adapter caseContextsList(ContextsList object)
+      {
+        return createContextsListAdapter();
+      }
+      @Override
+      public Adapter caseEcContextsList(EcContextsList object)
+      {
+        return createEcContextsListAdapter();
+      }
+      @Override
+      public Adapter caseExpContextsList(ExpContextsList object)
+      {
+        return createExpContextsListAdapter();
+      }
+      @Override
+      public Adapter caseEcContext(EcContext object)
+      {
+        return createEcContextAdapter();
+      }
+      @Override
+      public Adapter caseExpContext(ExpContext object)
+      {
+        return createExpContextAdapter();
+      }
+      @Override
       public Adapter caseFluent(Fluent object)
       {
         return createFluentAdapter();
+      }
+      @Override
+      public Adapter caseConditionRule(ConditionRule object)
+      {
+        return createConditionRuleAdapter();
       }
       @Override
       public Adapter caseToRule(ToRule object)
@@ -100,14 +135,14 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createToRuleAdapter();
       }
       @Override
-      public Adapter caseStringExpr(StringExpr object)
+      public Adapter caseInRule(InRule object)
       {
-        return createStringExprAdapter();
+        return createInRuleAdapter();
       }
       @Override
-      public Adapter caseBoolExpr(BoolExpr object)
+      public Adapter caseExpression(Expression object)
       {
-        return createBoolExprAdapter();
+        return createExpressionAdapter();
       }
       @Override
       public Adapter caseOr(Or object)
@@ -130,61 +165,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createComparisonAdapter();
       }
       @Override
-      public Adapter caseswitchExpr(switchExpr object)
-      {
-        return createswitchExprAdapter();
-      }
-      @Override
-      public Adapter caseMutationExpr(MutationExpr object)
-      {
-        return createMutationExprAdapter();
-      }
-      @Override
-      public Adapter caseFloatExpr(FloatExpr object)
-      {
-        return createFloatExprAdapter();
-      }
-      @Override
-      public Adapter casePlusOrMinus(PlusOrMinus object)
-      {
-        return createPlusOrMinusAdapter();
-      }
-      @Override
-      public Adapter caseMulOrDiv(MulOrDiv object)
-      {
-        return createMulOrDivAdapter();
-      }
-      @Override
-      public Adapter casePrimary(Primary object)
-      {
-        return createPrimaryAdapter();
-      }
-      @Override
-      public Adapter caseFluentWhoseValue(FluentWhoseValue object)
-      {
-        return createFluentWhoseValueAdapter();
-      }
-      @Override
-      public Adapter caseStr(Str object)
-      {
-        return createStrAdapter();
-      }
-      @Override
-      public Adapter caseInRule(InRule object)
-      {
-        return createInRuleAdapter();
-      }
-      @Override
-      public Adapter caseConditionRule(ConditionRule object)
-      {
-        return createConditionRuleAdapter();
-      }
-      @Override
-      public Adapter caseExpFluent(ExpFluent object)
-      {
-        return createExpFluentAdapter();
-      }
-      @Override
       public Adapter casePlus(Plus object)
       {
         return createPlusAdapter();
@@ -193,6 +173,36 @@ public class EceAdapterFactory extends AdapterFactoryImpl
       public Adapter caseMinus(Minus object)
       {
         return createMinusAdapter();
+      }
+      @Override
+      public Adapter caseMulOrDiv(MulOrDiv object)
+      {
+        return createMulOrDivAdapter();
+      }
+      @Override
+      public Adapter caseNot(Not object)
+      {
+        return createNotAdapter();
+      }
+      @Override
+      public Adapter caseFloatConstant(FloatConstant object)
+      {
+        return createFloatConstantAdapter();
+      }
+      @Override
+      public Adapter caseIntConstant(IntConstant object)
+      {
+        return createIntConstantAdapter();
+      }
+      @Override
+      public Adapter caseBoolConstant(BoolConstant object)
+      {
+        return createBoolConstantAdapter();
+      }
+      @Override
+      public Adapter caseFeatureRef(FeatureRef object)
+      {
+        return createFeatureRefAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -262,6 +272,96 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.EventFeature <em>Event Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.EventFeature
+   * @generated
+   */
+  public Adapter createEventFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ContextsList <em>Contexts List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.ContextsList
+   * @generated
+   */
+  public Adapter createContextsListAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.EcContextsList <em>Ec Contexts List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.EcContextsList
+   * @generated
+   */
+  public Adapter createEcContextsListAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ExpContextsList <em>Exp Contexts List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.ExpContextsList
+   * @generated
+   */
+  public Adapter createExpContextsListAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.EcContext <em>Ec Context</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.EcContext
+   * @generated
+   */
+  public Adapter createEcContextAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ExpContext <em>Exp Context</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.ExpContext
+   * @generated
+   */
+  public Adapter createExpContextAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Fluent <em>Fluent</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -272,6 +372,21 @@ public class EceAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFluentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ConditionRule <em>Condition Rule</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.ConditionRule
+   * @generated
+   */
+  public Adapter createConditionRuleAdapter()
   {
     return null;
   }
@@ -292,31 +407,31 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.StringExpr <em>String Expr</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InRule <em>In Rule</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.ecerule.ece.StringExpr
+   * @see org.xtext.ecerule.ece.InRule
    * @generated
    */
-  public Adapter createStringExprAdapter()
+  public Adapter createInRuleAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.BoolExpr <em>Bool Expr</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Expression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.ecerule.ece.BoolExpr
+   * @see org.xtext.ecerule.ece.Expression
    * @generated
    */
-  public Adapter createBoolExprAdapter()
+  public Adapter createExpressionAdapter()
   {
     return null;
   }
@@ -382,171 +497,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.switchExpr <em>switch Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.switchExpr
-   * @generated
-   */
-  public Adapter createswitchExprAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.MutationExpr <em>Mutation Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.MutationExpr
-   * @generated
-   */
-  public Adapter createMutationExprAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.FloatExpr <em>Float Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.FloatExpr
-   * @generated
-   */
-  public Adapter createFloatExprAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.PlusOrMinus <em>Plus Or Minus</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.PlusOrMinus
-   * @generated
-   */
-  public Adapter createPlusOrMinusAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.MulOrDiv <em>Mul Or Div</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.MulOrDiv
-   * @generated
-   */
-  public Adapter createMulOrDivAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Primary <em>Primary</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.Primary
-   * @generated
-   */
-  public Adapter createPrimaryAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.FluentWhoseValue <em>Fluent Whose Value</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.FluentWhoseValue
-   * @generated
-   */
-  public Adapter createFluentWhoseValueAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Str <em>Str</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.Str
-   * @generated
-   */
-  public Adapter createStrAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InRule <em>In Rule</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.InRule
-   * @generated
-   */
-  public Adapter createInRuleAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ConditionRule <em>Condition Rule</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.ConditionRule
-   * @generated
-   */
-  public Adapter createConditionRuleAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ExpFluent <em>Exp Fluent</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.ExpFluent
-   * @generated
-   */
-  public Adapter createExpFluentAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Plus <em>Plus</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -572,6 +522,96 @@ public class EceAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMinusAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.MulOrDiv <em>Mul Or Div</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.MulOrDiv
+   * @generated
+   */
+  public Adapter createMulOrDivAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Not <em>Not</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.Not
+   * @generated
+   */
+  public Adapter createNotAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.FloatConstant <em>Float Constant</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.FloatConstant
+   * @generated
+   */
+  public Adapter createFloatConstantAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.IntConstant <em>Int Constant</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.IntConstant
+   * @generated
+   */
+  public Adapter createIntConstantAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.BoolConstant <em>Bool Constant</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.BoolConstant
+   * @generated
+   */
+  public Adapter createBoolConstantAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.FeatureRef <em>Feature Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.FeatureRef
+   * @generated
+   */
+  public Adapter createFeatureRefAdapter()
   {
     return null;
   }

@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.xtext.ecerule.ece.And;
 import org.xtext.ecerule.ece.EcePackage;
+import org.xtext.ecerule.ece.Expression;
 import org.xtext.ecerule.ece.Or;
 
 /**
@@ -28,7 +28,7 @@ import org.xtext.ecerule.ece.Or;
  *
  * @generated
  */
-public class OrImpl extends BoolExprImpl implements Or
+public class OrImpl extends ExpressionImpl implements Or
 {
   /**
    * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
@@ -38,7 +38,7 @@ public class OrImpl extends BoolExprImpl implements Or
    * @generated
    * @ordered
    */
-  protected And left;
+  protected Expression left;
 
   /**
    * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
@@ -48,7 +48,7 @@ public class OrImpl extends BoolExprImpl implements Or
    * @generated
    * @ordered
    */
-  protected And right;
+  protected Expression right;
 
   /**
    * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public class OrImpl extends BoolExprImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
-  public And getLeft()
+  public Expression getLeft()
   {
     return left;
   }
@@ -86,9 +86,9 @@ public class OrImpl extends BoolExprImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(And newLeft, NotificationChain msgs)
+  public NotificationChain basicSetLeft(Expression newLeft, NotificationChain msgs)
   {
-    And oldLeft = left;
+    Expression oldLeft = left;
     left = newLeft;
     if (eNotificationRequired())
     {
@@ -103,7 +103,7 @@ public class OrImpl extends BoolExprImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLeft(And newLeft)
+  public void setLeft(Expression newLeft)
   {
     if (newLeft != left)
     {
@@ -124,7 +124,7 @@ public class OrImpl extends BoolExprImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
-  public And getRight()
+  public Expression getRight()
   {
     return right;
   }
@@ -134,9 +134,9 @@ public class OrImpl extends BoolExprImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRight(And newRight, NotificationChain msgs)
+  public NotificationChain basicSetRight(Expression newRight, NotificationChain msgs)
   {
-    And oldRight = right;
+    Expression oldRight = right;
     right = newRight;
     if (eNotificationRequired())
     {
@@ -151,7 +151,7 @@ public class OrImpl extends BoolExprImpl implements Or
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRight(And newRight)
+  public void setRight(Expression newRight)
   {
     if (newRight != right)
     {
@@ -214,10 +214,10 @@ public class OrImpl extends BoolExprImpl implements Or
     switch (featureID)
     {
       case EcePackage.OR__LEFT:
-        setLeft((And)newValue);
+        setLeft((Expression)newValue);
         return;
       case EcePackage.OR__RIGHT:
-        setRight((And)newValue);
+        setRight((Expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -234,10 +234,10 @@ public class OrImpl extends BoolExprImpl implements Or
     switch (featureID)
     {
       case EcePackage.OR__LEFT:
-        setLeft((And)null);
+        setLeft((Expression)null);
         return;
       case EcePackage.OR__RIGHT:
-        setRight((And)null);
+        setRight((Expression)null);
         return;
     }
     super.eUnset(featureID);

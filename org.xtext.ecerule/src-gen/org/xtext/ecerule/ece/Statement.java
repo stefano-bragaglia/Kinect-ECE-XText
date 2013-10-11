@@ -2,8 +2,6 @@
  */
 package org.xtext.ecerule.ece;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,8 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.ecerule.ece.Statement#getEvent <em>Event</em>}</li>
- *   <li>{@link org.xtext.ecerule.ece.Statement#getFluent <em>Fluent</em>}</li>
- *   <li>{@link org.xtext.ecerule.ece.Statement#getExp <em>Exp</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.Statement#getContextsList <em>Contexts List</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,35 +50,29 @@ public interface Statement extends EObject
   void setEvent(Event value);
 
   /**
-   * Returns the value of the '<em><b>Fluent</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.ecerule.ece.Fluent}.
+   * Returns the value of the '<em><b>Contexts List</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Fluent</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Contexts List</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Fluent</em>' containment reference list.
-   * @see org.xtext.ecerule.ece.EcePackage#getStatement_Fluent()
+   * @return the value of the '<em>Contexts List</em>' containment reference.
+   * @see #setContextsList(ContextsList)
+   * @see org.xtext.ecerule.ece.EcePackage#getStatement_ContextsList()
    * @model containment="true"
    * @generated
    */
-  EList<Fluent> getFluent();
+  ContextsList getContextsList();
 
   /**
-   * Returns the value of the '<em><b>Exp</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.ecerule.ece.ExpFluent}.
+   * Sets the value of the '{@link org.xtext.ecerule.ece.Statement#getContextsList <em>Contexts List</em>}' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Exp</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Exp</em>' containment reference list.
-   * @see org.xtext.ecerule.ece.EcePackage#getStatement_Exp()
-   * @model containment="true"
+   * @param value the new value of the '<em>Contexts List</em>' containment reference.
+   * @see #getContextsList()
    * @generated
    */
-  EList<ExpFluent> getExp();
+  void setContextsList(ContextsList value);
 
 } // Statement

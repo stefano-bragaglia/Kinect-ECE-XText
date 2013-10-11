@@ -50,6 +50,60 @@ public interface EceFactory extends EFactory
   Event createEvent();
 
   /**
+   * Returns a new object of class '<em>Event Feature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Event Feature</em>'.
+   * @generated
+   */
+  EventFeature createEventFeature();
+
+  /**
+   * Returns a new object of class '<em>Contexts List</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Contexts List</em>'.
+   * @generated
+   */
+  ContextsList createContextsList();
+
+  /**
+   * Returns a new object of class '<em>Ec Contexts List</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ec Contexts List</em>'.
+   * @generated
+   */
+  EcContextsList createEcContextsList();
+
+  /**
+   * Returns a new object of class '<em>Exp Contexts List</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Exp Contexts List</em>'.
+   * @generated
+   */
+  ExpContextsList createExpContextsList();
+
+  /**
+   * Returns a new object of class '<em>Ec Context</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ec Context</em>'.
+   * @generated
+   */
+  EcContext createEcContext();
+
+  /**
+   * Returns a new object of class '<em>Exp Context</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Exp Context</em>'.
+   * @generated
+   */
+  ExpContext createExpContext();
+
+  /**
    * Returns a new object of class '<em>Fluent</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -57,6 +111,15 @@ public interface EceFactory extends EFactory
    * @generated
    */
   Fluent createFluent();
+
+  /**
+   * Returns a new object of class '<em>Condition Rule</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Condition Rule</em>'.
+   * @generated
+   */
+  ConditionRule createConditionRule();
 
   /**
    * Returns a new object of class '<em>To Rule</em>'.
@@ -68,22 +131,22 @@ public interface EceFactory extends EFactory
   ToRule createToRule();
 
   /**
-   * Returns a new object of class '<em>String Expr</em>'.
+   * Returns a new object of class '<em>In Rule</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>String Expr</em>'.
+   * @return a new object of class '<em>In Rule</em>'.
    * @generated
    */
-  StringExpr createStringExpr();
+  InRule createInRule();
 
   /**
-   * Returns a new object of class '<em>Bool Expr</em>'.
+   * Returns a new object of class '<em>Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Bool Expr</em>'.
+   * @return a new object of class '<em>Expression</em>'.
    * @generated
    */
-  BoolExpr createBoolExpr();
+  Expression createExpression();
 
   /**
    * Returns a new object of class '<em>Or</em>'.
@@ -122,105 +185,6 @@ public interface EceFactory extends EFactory
   Comparison createComparison();
 
   /**
-   * Returns a new object of class '<em>switch Expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>switch Expr</em>'.
-   * @generated
-   */
-  switchExpr createswitchExpr();
-
-  /**
-   * Returns a new object of class '<em>Mutation Expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Mutation Expr</em>'.
-   * @generated
-   */
-  MutationExpr createMutationExpr();
-
-  /**
-   * Returns a new object of class '<em>Float Expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Float Expr</em>'.
-   * @generated
-   */
-  FloatExpr createFloatExpr();
-
-  /**
-   * Returns a new object of class '<em>Plus Or Minus</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Plus Or Minus</em>'.
-   * @generated
-   */
-  PlusOrMinus createPlusOrMinus();
-
-  /**
-   * Returns a new object of class '<em>Mul Or Div</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Mul Or Div</em>'.
-   * @generated
-   */
-  MulOrDiv createMulOrDiv();
-
-  /**
-   * Returns a new object of class '<em>Primary</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Primary</em>'.
-   * @generated
-   */
-  Primary createPrimary();
-
-  /**
-   * Returns a new object of class '<em>Fluent Whose Value</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fluent Whose Value</em>'.
-   * @generated
-   */
-  FluentWhoseValue createFluentWhoseValue();
-
-  /**
-   * Returns a new object of class '<em>Str</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Str</em>'.
-   * @generated
-   */
-  Str createStr();
-
-  /**
-   * Returns a new object of class '<em>In Rule</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>In Rule</em>'.
-   * @generated
-   */
-  InRule createInRule();
-
-  /**
-   * Returns a new object of class '<em>Condition Rule</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Condition Rule</em>'.
-   * @generated
-   */
-  ConditionRule createConditionRule();
-
-  /**
-   * Returns a new object of class '<em>Exp Fluent</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exp Fluent</em>'.
-   * @generated
-   */
-  ExpFluent createExpFluent();
-
-  /**
    * Returns a new object of class '<em>Plus</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -237,6 +201,60 @@ public interface EceFactory extends EFactory
    * @generated
    */
   Minus createMinus();
+
+  /**
+   * Returns a new object of class '<em>Mul Or Div</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mul Or Div</em>'.
+   * @generated
+   */
+  MulOrDiv createMulOrDiv();
+
+  /**
+   * Returns a new object of class '<em>Not</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Not</em>'.
+   * @generated
+   */
+  Not createNot();
+
+  /**
+   * Returns a new object of class '<em>Float Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Float Constant</em>'.
+   * @generated
+   */
+  FloatConstant createFloatConstant();
+
+  /**
+   * Returns a new object of class '<em>Int Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Constant</em>'.
+   * @generated
+   */
+  IntConstant createIntConstant();
+
+  /**
+   * Returns a new object of class '<em>Bool Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bool Constant</em>'.
+   * @generated
+   */
+  BoolConstant createBoolConstant();
+
+  /**
+   * Returns a new object of class '<em>Feature Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Feature Ref</em>'.
+   * @generated
+   */
+  FeatureRef createFeatureRef();
 
   /**
    * Returns the package supported by this factory.

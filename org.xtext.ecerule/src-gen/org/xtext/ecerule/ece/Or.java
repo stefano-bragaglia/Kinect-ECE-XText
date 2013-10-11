@@ -20,7 +20,7 @@ package org.xtext.ecerule.ece;
  * @model
  * @generated
  */
-public interface Or extends BoolExpr
+public interface Or extends Expression
 {
   /**
    * Returns the value of the '<em><b>Left</b></em>' containment reference.
@@ -31,12 +31,12 @@ public interface Or extends BoolExpr
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(And)
+   * @see #setLeft(Expression)
    * @see org.xtext.ecerule.ece.EcePackage#getOr_Left()
    * @model containment="true"
    * @generated
    */
-  And getLeft();
+  Expression getLeft();
 
   /**
    * Sets the value of the '{@link org.xtext.ecerule.ece.Or#getLeft <em>Left</em>}' containment reference.
@@ -46,7 +46,7 @@ public interface Or extends BoolExpr
    * @see #getLeft()
    * @generated
    */
-  void setLeft(And value);
+  void setLeft(Expression value);
 
   /**
    * Returns the value of the '<em><b>Right</b></em>' containment reference.
@@ -57,12 +57,12 @@ public interface Or extends BoolExpr
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Right</em>' containment reference.
-   * @see #setRight(And)
+   * @see #setRight(Expression)
    * @see org.xtext.ecerule.ece.EcePackage#getOr_Right()
    * @model containment="true"
    * @generated
    */
-  And getRight();
+  Expression getRight();
 
   /**
    * Sets the value of the '{@link org.xtext.ecerule.ece.Or#getRight <em>Right</em>}' containment reference.
@@ -72,6 +72,6 @@ public interface Or extends BoolExpr
    * @see #getRight()
    * @generated
    */
-  void setRight(And value);
+  void setRight(Expression value);
 
 } // Or

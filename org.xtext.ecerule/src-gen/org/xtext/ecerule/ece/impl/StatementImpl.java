@@ -2,12 +2,8 @@
  */
 package org.xtext.ecerule.ece.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -15,13 +11,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.xtext.ecerule.ece.ContextsList;
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.Event;
-import org.xtext.ecerule.ece.ExpFluent;
-import org.xtext.ecerule.ece.Fluent;
 import org.xtext.ecerule.ece.Statement;
 
 /**
@@ -32,8 +24,7 @@ import org.xtext.ecerule.ece.Statement;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.ecerule.ece.impl.StatementImpl#getEvent <em>Event</em>}</li>
- *   <li>{@link org.xtext.ecerule.ece.impl.StatementImpl#getFluent <em>Fluent</em>}</li>
- *   <li>{@link org.xtext.ecerule.ece.impl.StatementImpl#getExp <em>Exp</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.impl.StatementImpl#getContextsList <em>Contexts List</em>}</li>
  * </ul>
  * </p>
  *
@@ -52,24 +43,14 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
   protected Event event;
 
   /**
-   * The cached value of the '{@link #getFluent() <em>Fluent</em>}' containment reference list.
+   * The cached value of the '{@link #getContextsList() <em>Contexts List</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFluent()
+   * @see #getContextsList()
    * @generated
    * @ordered
    */
-  protected EList<Fluent> fluent;
-
-  /**
-   * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExp()
-   * @generated
-   * @ordered
-   */
-  protected EList<ExpFluent> exp;
+  protected ContextsList contextsList;
 
   /**
    * <!-- begin-user-doc -->
@@ -145,13 +126,9 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Fluent> getFluent()
+  public ContextsList getContextsList()
   {
-    if (fluent == null)
-    {
-      fluent = new EObjectContainmentEList<Fluent>(Fluent.class, this, EcePackage.STATEMENT__FLUENT);
-    }
-    return fluent;
+    return contextsList;
   }
 
   /**
@@ -159,13 +136,37 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ExpFluent> getExp()
+  public NotificationChain basicSetContextsList(ContextsList newContextsList, NotificationChain msgs)
   {
-    if (exp == null)
+    ContextsList oldContextsList = contextsList;
+    contextsList = newContextsList;
+    if (eNotificationRequired())
     {
-      exp = new EObjectContainmentEList<ExpFluent>(ExpFluent.class, this, EcePackage.STATEMENT__EXP);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EcePackage.STATEMENT__CONTEXTS_LIST, oldContextsList, newContextsList);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return exp;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setContextsList(ContextsList newContextsList)
+  {
+    if (newContextsList != contextsList)
+    {
+      NotificationChain msgs = null;
+      if (contextsList != null)
+        msgs = ((InternalEObject)contextsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EcePackage.STATEMENT__CONTEXTS_LIST, null, msgs);
+      if (newContextsList != null)
+        msgs = ((InternalEObject)newContextsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EcePackage.STATEMENT__CONTEXTS_LIST, null, msgs);
+      msgs = basicSetContextsList(newContextsList, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.STATEMENT__CONTEXTS_LIST, newContextsList, newContextsList));
   }
 
   /**
@@ -180,10 +181,8 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
     {
       case EcePackage.STATEMENT__EVENT:
         return basicSetEvent(null, msgs);
-      case EcePackage.STATEMENT__FLUENT:
-        return ((InternalEList<?>)getFluent()).basicRemove(otherEnd, msgs);
-      case EcePackage.STATEMENT__EXP:
-        return ((InternalEList<?>)getExp()).basicRemove(otherEnd, msgs);
+      case EcePackage.STATEMENT__CONTEXTS_LIST:
+        return basicSetContextsList(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -200,10 +199,8 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
     {
       case EcePackage.STATEMENT__EVENT:
         return getEvent();
-      case EcePackage.STATEMENT__FLUENT:
-        return getFluent();
-      case EcePackage.STATEMENT__EXP:
-        return getExp();
+      case EcePackage.STATEMENT__CONTEXTS_LIST:
+        return getContextsList();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -213,7 +210,6 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -222,13 +218,8 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
       case EcePackage.STATEMENT__EVENT:
         setEvent((Event)newValue);
         return;
-      case EcePackage.STATEMENT__FLUENT:
-        getFluent().clear();
-        getFluent().addAll((Collection<? extends Fluent>)newValue);
-        return;
-      case EcePackage.STATEMENT__EXP:
-        getExp().clear();
-        getExp().addAll((Collection<? extends ExpFluent>)newValue);
+      case EcePackage.STATEMENT__CONTEXTS_LIST:
+        setContextsList((ContextsList)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -247,11 +238,8 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
       case EcePackage.STATEMENT__EVENT:
         setEvent((Event)null);
         return;
-      case EcePackage.STATEMENT__FLUENT:
-        getFluent().clear();
-        return;
-      case EcePackage.STATEMENT__EXP:
-        getExp().clear();
+      case EcePackage.STATEMENT__CONTEXTS_LIST:
+        setContextsList((ContextsList)null);
         return;
     }
     super.eUnset(featureID);
@@ -269,10 +257,8 @@ public class StatementImpl extends MinimalEObjectImpl.Container implements State
     {
       case EcePackage.STATEMENT__EVENT:
         return event != null;
-      case EcePackage.STATEMENT__FLUENT:
-        return fluent != null && !fluent.isEmpty();
-      case EcePackage.STATEMENT__EXP:
-        return exp != null && !exp.isEmpty();
+      case EcePackage.STATEMENT__CONTEXTS_LIST:
+        return contextsList != null;
     }
     return super.eIsSet(featureID);
   }

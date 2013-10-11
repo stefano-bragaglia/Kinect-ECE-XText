@@ -104,22 +104,13 @@ public interface EcePackage extends EPackage
   int STATEMENT__EVENT = 0;
 
   /**
-   * The feature id for the '<em><b>Fluent</b></em>' containment reference list.
+   * The feature id for the '<em><b>Contexts List</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATEMENT__FLUENT = 1;
-
-  /**
-   * The feature id for the '<em><b>Exp</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT__EXP = 2;
+  int STATEMENT__CONTEXTS_LIST = 1;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -128,7 +119,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATEMENT_FEATURE_COUNT = 3;
+  int STATEMENT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.EventImpl <em>Event</em>}' class.
@@ -150,13 +141,199 @@ public interface EcePackage extends EPackage
   int EVENT__EVENT_NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Param</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVENT__PARAM = 1;
+
+  /**
    * The number of structural features of the '<em>Event</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EVENT_FEATURE_COUNT = 1;
+  int EVENT_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.EventFeatureImpl <em>Event Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.EventFeatureImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEventFeature()
+   * @generated
+   */
+  int EVENT_FEATURE = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVENT_FEATURE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Event Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVENT_FEATURE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ContextsListImpl <em>Contexts List</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.ContextsListImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getContextsList()
+   * @generated
+   */
+  int CONTEXTS_LIST = 4;
+
+  /**
+   * The feature id for the '<em><b>Ec Contexts List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTEXTS_LIST__EC_CONTEXTS_LIST = 0;
+
+  /**
+   * The feature id for the '<em><b>Exp Contexts List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTEXTS_LIST__EXP_CONTEXTS_LIST = 1;
+
+  /**
+   * The number of structural features of the '<em>Contexts List</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTEXTS_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.EcContextsListImpl <em>Ec Contexts List</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.EcContextsListImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEcContextsList()
+   * @generated
+   */
+  int EC_CONTEXTS_LIST = 5;
+
+  /**
+   * The feature id for the '<em><b>Ec Contexts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EC_CONTEXTS_LIST__EC_CONTEXTS = 0;
+
+  /**
+   * The number of structural features of the '<em>Ec Contexts List</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EC_CONTEXTS_LIST_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ExpContextsListImpl <em>Exp Contexts List</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.ExpContextsListImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpContextsList()
+   * @generated
+   */
+  int EXP_CONTEXTS_LIST = 6;
+
+  /**
+   * The feature id for the '<em><b>Exp Contexts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_CONTEXTS_LIST__EXP_CONTEXTS = 0;
+
+  /**
+   * The number of structural features of the '<em>Exp Contexts List</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_CONTEXTS_LIST_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.EcContextImpl <em>Ec Context</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.EcContextImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEcContext()
+   * @generated
+   */
+  int EC_CONTEXT = 7;
+
+  /**
+   * The feature id for the '<em><b>Fluent</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EC_CONTEXT__FLUENT = 0;
+
+  /**
+   * The number of structural features of the '<em>Ec Context</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EC_CONTEXT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ExpContextImpl <em>Exp Context</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.ExpContextImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpContext()
+   * @generated
+   */
+  int EXP_CONTEXT = 8;
+
+  /**
+   * The feature id for the '<em><b>Dafare</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_CONTEXT__DAFARE = 0;
+
+  /**
+   * The number of structural features of the '<em>Exp Context</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_CONTEXT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.FluentImpl <em>Fluent</em>}' class.
@@ -166,7 +343,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFluent()
    * @generated
    */
-  int FLUENT = 3;
+  int FLUENT = 9;
 
   /**
    * The feature id for the '<em><b>Fluent Name</b></em>' attribute.
@@ -214,6 +391,25 @@ public interface EcePackage extends EPackage
   int FLUENT_FEATURE_COUNT = 4;
 
   /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ConditionRuleImpl <em>Condition Rule</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.ConditionRuleImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getConditionRule()
+   * @generated
+   */
+  int CONDITION_RULE = 10;
+
+  /**
+   * The number of structural features of the '<em>Condition Rule</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_RULE_FEATURE_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ToRuleImpl <em>To Rule</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -221,16 +417,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getToRule()
    * @generated
    */
-  int TO_RULE = 4;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TO_RULE__EXPRESSION = 0;
+  int TO_RULE = 11;
 
   /**
    * The number of structural features of the '<em>To Rule</em>' class.
@@ -239,741 +426,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int TO_RULE_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.BoolExprImpl <em>Bool Expr</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.BoolExprImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getBoolExpr()
-   * @generated
-   */
-  int BOOL_EXPR = 6;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOL_EXPR__VALUE = 0;
-
-  /**
-   * The number of structural features of the '<em>Bool Expr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOL_EXPR_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.OrImpl <em>Or</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.OrImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getOr()
-   * @generated
-   */
-  int OR = 7;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OR__VALUE = BOOL_EXPR__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OR__LEFT = BOOL_EXPR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OR__RIGHT = BOOL_EXPR_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Or</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OR_FEATURE_COUNT = BOOL_EXPR_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.AndImpl <em>And</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.AndImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getAnd()
-   * @generated
-   */
-  int AND = 8;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND__VALUE = OR__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND__LEFT = OR__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND__RIGHT = OR__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND__OP = OR_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>And</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND_FEATURE_COUNT = OR_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.EqualityImpl <em>Equality</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.EqualityImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEquality()
-   * @generated
-   */
-  int EQUALITY = 9;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EQUALITY__VALUE = AND__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EQUALITY__LEFT = AND__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EQUALITY__RIGHT = AND__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EQUALITY__OP = AND__OP;
-
-  /**
-   * The number of structural features of the '<em>Equality</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EQUALITY_FEATURE_COUNT = AND_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.StringExprImpl <em>String Expr</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.StringExprImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getStringExpr()
-   * @generated
-   */
-  int STRING_EXPR = 5;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_EXPR__VALUE = EQUALITY__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_EXPR__LEFT = EQUALITY__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_EXPR__RIGHT = EQUALITY__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_EXPR__OP = EQUALITY__OP;
-
-  /**
-   * The number of structural features of the '<em>String Expr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_EXPR_FEATURE_COUNT = EQUALITY_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ComparisonImpl <em>Comparison</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.ComparisonImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getComparison()
-   * @generated
-   */
-  int COMPARISON = 10;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARISON__VALUE = AND__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARISON__LEFT = AND__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARISON__RIGHT = AND__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARISON__OP = AND__OP;
-
-  /**
-   * The number of structural features of the '<em>Comparison</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARISON_FEATURE_COUNT = AND_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.switchExprImpl <em>switch Expr</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.switchExprImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getswitchExpr()
-   * @generated
-   */
-  int SWITCH_EXPR = 11;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SWITCH_EXPR__VALUE = 0;
-
-  /**
-   * The number of structural features of the '<em>switch Expr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SWITCH_EXPR_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.MutationExprImpl <em>Mutation Expr</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.MutationExprImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMutationExpr()
-   * @generated
-   */
-  int MUTATION_EXPR = 12;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MUTATION_EXPR__VALUE = 0;
-
-  /**
-   * The number of structural features of the '<em>Mutation Expr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MUTATION_EXPR_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.FloatExprImpl <em>Float Expr</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.FloatExprImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFloatExpr()
-   * @generated
-   */
-  int FLOAT_EXPR = 13;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLOAT_EXPR__VALUE = EQUALITY__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLOAT_EXPR__LEFT = EQUALITY__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLOAT_EXPR__RIGHT = EQUALITY__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLOAT_EXPR__OP = EQUALITY__OP;
-
-  /**
-   * The feature id for the '<em><b>Value Direct</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLOAT_EXPR__VALUE_DIRECT = EQUALITY_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Value Calculated</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLOAT_EXPR__VALUE_CALCULATED = EQUALITY_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Value Of Fluent</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLOAT_EXPR__VALUE_OF_FLUENT = EQUALITY_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>Float Expr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLOAT_EXPR_FEATURE_COUNT = EQUALITY_FEATURE_COUNT + 3;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.PlusOrMinusImpl <em>Plus Or Minus</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.PlusOrMinusImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getPlusOrMinus()
-   * @generated
-   */
-  int PLUS_OR_MINUS = 14;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS_OR_MINUS__VALUE = COMPARISON__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS_OR_MINUS__LEFT = COMPARISON__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS_OR_MINUS__RIGHT = COMPARISON__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS_OR_MINUS__OP = COMPARISON__OP;
-
-  /**
-   * The number of structural features of the '<em>Plus Or Minus</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS_OR_MINUS_FEATURE_COUNT = COMPARISON_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.MulOrDivImpl <em>Mul Or Div</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.MulOrDivImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMulOrDiv()
-   * @generated
-   */
-  int MUL_OR_DIV = 15;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MUL_OR_DIV__VALUE = PLUS_OR_MINUS__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MUL_OR_DIV__LEFT = PLUS_OR_MINUS__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MUL_OR_DIV__RIGHT = PLUS_OR_MINUS__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MUL_OR_DIV__OP = PLUS_OR_MINUS__OP;
-
-  /**
-   * The number of structural features of the '<em>Mul Or Div</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MUL_OR_DIV_FEATURE_COUNT = PLUS_OR_MINUS_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.PrimaryImpl <em>Primary</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.PrimaryImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getPrimary()
-   * @generated
-   */
-  int PRIMARY = 16;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PRIMARY__VALUE = MUL_OR_DIV__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PRIMARY__LEFT = MUL_OR_DIV__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PRIMARY__RIGHT = MUL_OR_DIV__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PRIMARY__OP = MUL_OR_DIV__OP;
-
-  /**
-   * The feature id for the '<em><b>Value Direct</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PRIMARY__VALUE_DIRECT = MUL_OR_DIV_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Value Of Fluent</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PRIMARY__VALUE_OF_FLUENT = MUL_OR_DIV_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Primary</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PRIMARY_FEATURE_COUNT = MUL_OR_DIV_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.FluentWhoseValueImpl <em>Fluent Whose Value</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.FluentWhoseValueImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFluentWhoseValue()
-   * @generated
-   */
-  int FLUENT_WHOSE_VALUE = 17;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLUENT_WHOSE_VALUE__VALUE = STRING_EXPR__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLUENT_WHOSE_VALUE__LEFT = STRING_EXPR__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLUENT_WHOSE_VALUE__RIGHT = STRING_EXPR__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLUENT_WHOSE_VALUE__OP = STRING_EXPR__OP;
-
-  /**
-   * The feature id for the '<em><b>Fluent Whose Value Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLUENT_WHOSE_VALUE__FLUENT_WHOSE_VALUE_NAME = STRING_EXPR_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Fluent Whose Value</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLUENT_WHOSE_VALUE_FEATURE_COUNT = STRING_EXPR_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.StrImpl <em>Str</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.StrImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getStr()
-   * @generated
-   */
-  int STR = 18;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STR__VALUE = STRING_EXPR__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STR__LEFT = STRING_EXPR__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STR__RIGHT = STRING_EXPR__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STR__OP = STRING_EXPR__OP;
-
-  /**
-   * The number of structural features of the '<em>Str</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STR_FEATURE_COUNT = STRING_EXPR_FEATURE_COUNT + 0;
+  int TO_RULE_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.InRuleImpl <em>In Rule</em>}' class.
@@ -983,7 +436,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInRule()
    * @generated
    */
-  int IN_RULE = 19;
+  int IN_RULE = 12;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -995,32 +448,23 @@ public interface EcePackage extends EPackage
   int IN_RULE__TIME = 0;
 
   /**
-   * The feature id for the '<em><b>Current Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_RULE__CURRENT_TIME = 1;
-
-  /**
    * The number of structural features of the '<em>In Rule</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IN_RULE_FEATURE_COUNT = 2;
+  int IN_RULE_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ConditionRuleImpl <em>Condition Rule</em>}' class.
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ExpressionImpl <em>Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.ConditionRuleImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getConditionRule()
+   * @see org.xtext.ecerule.ece.impl.ExpressionImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpression()
    * @generated
    */
-  int CONDITION_RULE = 20;
+  int EXPRESSION = 13;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1029,62 +473,263 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONDITION_RULE__CONDITION = 0;
+  int EXPRESSION__CONDITION = CONDITION_RULE_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Condition Rule</em>' class.
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITION_RULE_FEATURE_COUNT = 1;
+  int EXPRESSION__EXPRESSION = CONDITION_RULE_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ExpFluentImpl <em>Exp Fluent</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.ExpFluentImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpFluent()
-   * @generated
-   */
-  int EXP_FLUENT = 21;
-
-  /**
-   * The feature id for the '<em><b>Fluent Name</b></em>' attribute.
+   * The number of structural features of the '<em>Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP_FLUENT__FLUENT_NAME = 0;
+  int EXPRESSION_FEATURE_COUNT = CONDITION_RULE_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Value Part</b></em>' containment reference.
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.OrImpl <em>Or</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.OrImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getOr()
+   * @generated
+   */
+  int OR = 14;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP_FLUENT__VALUE_PART = 1;
+  int OR__CONDITION = EXPRESSION__CONDITION;
 
   /**
-   * The feature id for the '<em><b>Time Part</b></em>' containment reference.
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP_FLUENT__TIME_PART = 2;
+  int OR__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
-   * The number of structural features of the '<em>Exp Fluent</em>' class.
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP_FLUENT_FEATURE_COUNT = 3;
+  int OR__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OR__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Or</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.AndImpl <em>And</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.AndImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getAnd()
+   * @generated
+   */
+  int AND = 15;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>And</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.EqualityImpl <em>Equality</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.EqualityImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEquality()
+   * @generated
+   */
+  int EQUALITY = 16;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY__OP = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Equality</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ComparisonImpl <em>Comparison</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.ComparisonImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getComparison()
+   * @generated
+   */
+  int COMPARISON = 17;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPARISON__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPARISON__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPARISON__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPARISON__OP = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPARISON__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Comparison</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPARISON_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.PlusImpl <em>Plus</em>}' class.
@@ -1094,16 +739,25 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getPlus()
    * @generated
    */
-  int PLUS = 22;
+  int PLUS = 18;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PLUS__VALUE = PLUS_OR_MINUS__VALUE;
+  int PLUS__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUS__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1112,7 +766,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int PLUS__LEFT = PLUS_OR_MINUS__LEFT;
+  int PLUS__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1121,16 +775,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int PLUS__RIGHT = PLUS_OR_MINUS__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS__OP = PLUS_OR_MINUS__OP;
+  int PLUS__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Plus</em>' class.
@@ -1139,7 +784,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int PLUS_FEATURE_COUNT = PLUS_OR_MINUS_FEATURE_COUNT + 0;
+  int PLUS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.MinusImpl <em>Minus</em>}' class.
@@ -1149,16 +794,25 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMinus()
    * @generated
    */
-  int MINUS = 23;
+  int MINUS = 19;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MINUS__VALUE = PLUS_OR_MINUS__VALUE;
+  int MINUS__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MINUS__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1167,7 +821,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINUS__LEFT = PLUS_OR_MINUS__LEFT;
+  int MINUS__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1176,16 +830,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINUS__RIGHT = PLUS_OR_MINUS__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MINUS__OP = PLUS_OR_MINUS__OP;
+  int MINUS__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Minus</em>' class.
@@ -1194,7 +839,292 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINUS_FEATURE_COUNT = PLUS_OR_MINUS_FEATURE_COUNT + 0;
+  int MINUS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.MulOrDivImpl <em>Mul Or Div</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.MulOrDivImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMulOrDiv()
+   * @generated
+   */
+  int MUL_OR_DIV = 20;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MUL_OR_DIV__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MUL_OR_DIV__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MUL_OR_DIV__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MUL_OR_DIV__OP = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MUL_OR_DIV__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Mul Or Div</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MUL_OR_DIV_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.NotImpl <em>Not</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.NotImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getNot()
+   * @generated
+   */
+  int NOT = 21;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The number of structural features of the '<em>Not</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.FloatConstantImpl <em>Float Constant</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.FloatConstantImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFloatConstant()
+   * @generated
+   */
+  int FLOAT_CONSTANT = 22;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLOAT_CONSTANT__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLOAT_CONSTANT__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLOAT_CONSTANT__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Float Constant</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLOAT_CONSTANT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.IntConstantImpl <em>Int Constant</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.IntConstantImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getIntConstant()
+   * @generated
+   */
+  int INT_CONSTANT = 23;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_CONSTANT__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_CONSTANT__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_CONSTANT__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Int Constant</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_CONSTANT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.BoolConstantImpl <em>Bool Constant</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.BoolConstantImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getBoolConstant()
+   * @generated
+   */
+  int BOOL_CONSTANT = 24;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOL_CONSTANT__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOL_CONSTANT__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOL_CONSTANT__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Bool Constant</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOL_CONSTANT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.FeatureRefImpl <em>Feature Ref</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.FeatureRefImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFeatureRef()
+   * @generated
+   */
+  int FEATURE_REF = 25;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE_REF__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE_REF__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Param</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE_REF__PARAM = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Feature Ref</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE_REF_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 
   /**
@@ -1240,26 +1170,15 @@ public interface EcePackage extends EPackage
   EReference getStatement_Event();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.Statement#getFluent <em>Fluent</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Statement#getContextsList <em>Contexts List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Fluent</em>'.
-   * @see org.xtext.ecerule.ece.Statement#getFluent()
+   * @return the meta object for the containment reference '<em>Contexts List</em>'.
+   * @see org.xtext.ecerule.ece.Statement#getContextsList()
    * @see #getStatement()
    * @generated
    */
-  EReference getStatement_Fluent();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.Statement#getExp <em>Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Exp</em>'.
-   * @see org.xtext.ecerule.ece.Statement#getExp()
-   * @see #getStatement()
-   * @generated
-   */
-  EReference getStatement_Exp();
+  EReference getStatement_ContextsList();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Event <em>Event</em>}'.
@@ -1281,6 +1200,154 @@ public interface EcePackage extends EPackage
    * @generated
    */
   EAttribute getEvent_EventName();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.Event#getParam <em>Param</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Param</em>'.
+   * @see org.xtext.ecerule.ece.Event#getParam()
+   * @see #getEvent()
+   * @generated
+   */
+  EReference getEvent_Param();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.EventFeature <em>Event Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Event Feature</em>'.
+   * @see org.xtext.ecerule.ece.EventFeature
+   * @generated
+   */
+  EClass getEventFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.EventFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.ecerule.ece.EventFeature#getName()
+   * @see #getEventFeature()
+   * @generated
+   */
+  EAttribute getEventFeature_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.ContextsList <em>Contexts List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Contexts List</em>'.
+   * @see org.xtext.ecerule.ece.ContextsList
+   * @generated
+   */
+  EClass getContextsList();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ContextsList#getEcContextsList <em>Ec Contexts List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Ec Contexts List</em>'.
+   * @see org.xtext.ecerule.ece.ContextsList#getEcContextsList()
+   * @see #getContextsList()
+   * @generated
+   */
+  EReference getContextsList_EcContextsList();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ContextsList#getExpContextsList <em>Exp Contexts List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Contexts List</em>'.
+   * @see org.xtext.ecerule.ece.ContextsList#getExpContextsList()
+   * @see #getContextsList()
+   * @generated
+   */
+  EReference getContextsList_ExpContextsList();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.EcContextsList <em>Ec Contexts List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ec Contexts List</em>'.
+   * @see org.xtext.ecerule.ece.EcContextsList
+   * @generated
+   */
+  EClass getEcContextsList();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.EcContextsList#getEcContexts <em>Ec Contexts</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Ec Contexts</em>'.
+   * @see org.xtext.ecerule.ece.EcContextsList#getEcContexts()
+   * @see #getEcContextsList()
+   * @generated
+   */
+  EReference getEcContextsList_EcContexts();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.ExpContextsList <em>Exp Contexts List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Exp Contexts List</em>'.
+   * @see org.xtext.ecerule.ece.ExpContextsList
+   * @generated
+   */
+  EClass getExpContextsList();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.ExpContextsList#getExpContexts <em>Exp Contexts</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Exp Contexts</em>'.
+   * @see org.xtext.ecerule.ece.ExpContextsList#getExpContexts()
+   * @see #getExpContextsList()
+   * @generated
+   */
+  EReference getExpContextsList_ExpContexts();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.EcContext <em>Ec Context</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ec Context</em>'.
+   * @see org.xtext.ecerule.ece.EcContext
+   * @generated
+   */
+  EClass getEcContext();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.EcContext#getFluent <em>Fluent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Fluent</em>'.
+   * @see org.xtext.ecerule.ece.EcContext#getFluent()
+   * @see #getEcContext()
+   * @generated
+   */
+  EReference getEcContext_Fluent();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.ExpContext <em>Exp Context</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Exp Context</em>'.
+   * @see org.xtext.ecerule.ece.ExpContext
+   * @generated
+   */
+  EClass getExpContext();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.ExpContext#getDafare <em>Dafare</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Dafare</em>'.
+   * @see org.xtext.ecerule.ece.ExpContext#getDafare()
+   * @see #getExpContext()
+   * @generated
+   */
+  EAttribute getExpContext_Dafare();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Fluent <em>Fluent</em>}'.
@@ -1337,6 +1404,16 @@ public interface EcePackage extends EPackage
   EReference getFluent_CondPart();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.ConditionRule <em>Condition Rule</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Condition Rule</em>'.
+   * @see org.xtext.ecerule.ece.ConditionRule
+   * @generated
+   */
+  EClass getConditionRule();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.ToRule <em>To Rule</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1347,46 +1424,57 @@ public interface EcePackage extends EPackage
   EClass getToRule();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ToRule#getExpression <em>Expression</em>}'.
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.InRule <em>In Rule</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>In Rule</em>'.
+   * @see org.xtext.ecerule.ece.InRule
+   * @generated
+   */
+  EClass getInRule();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.InRule#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Time</em>'.
+   * @see org.xtext.ecerule.ece.InRule#getTime()
+   * @see #getInRule()
+   * @generated
+   */
+  EAttribute getInRule_Time();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.Expression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Expression</em>'.
+   * @see org.xtext.ecerule.ece.Expression
+   * @generated
+   */
+  EClass getExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Expression#getCondition <em>Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Condition</em>'.
+   * @see org.xtext.ecerule.ece.Expression#getCondition()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Condition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Expression#getExpression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.xtext.ecerule.ece.ToRule#getExpression()
-   * @see #getToRule()
+   * @see org.xtext.ecerule.ece.Expression#getExpression()
+   * @see #getExpression()
    * @generated
    */
-  EReference getToRule_Expression();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.StringExpr <em>String Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>String Expr</em>'.
-   * @see org.xtext.ecerule.ece.StringExpr
-   * @generated
-   */
-  EClass getStringExpr();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.BoolExpr <em>Bool Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Bool Expr</em>'.
-   * @see org.xtext.ecerule.ece.BoolExpr
-   * @generated
-   */
-  EClass getBoolExpr();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.BoolExpr#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.xtext.ecerule.ece.BoolExpr#getValue()
-   * @see #getBoolExpr()
-   * @generated
-   */
-  EAttribute getBoolExpr_Value();
+  EReference getExpression_Expression();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Or <em>Or</em>}'.
@@ -1431,15 +1519,26 @@ public interface EcePackage extends EPackage
   EClass getAnd();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.And#getOp <em>Op</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.And#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see org.xtext.ecerule.ece.And#getOp()
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.ecerule.ece.And#getLeft()
    * @see #getAnd()
    * @generated
    */
-  EAttribute getAnd_Op();
+  EReference getAnd_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.And#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.ecerule.ece.And#getRight()
+   * @see #getAnd()
+   * @generated
+   */
+  EReference getAnd_Right();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Equality <em>Equality</em>}'.
@@ -1452,6 +1551,39 @@ public interface EcePackage extends EPackage
   EClass getEquality();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Equality#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.ecerule.ece.Equality#getLeft()
+   * @see #getEquality()
+   * @generated
+   */
+  EReference getEquality_Left();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.Equality#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see org.xtext.ecerule.ece.Equality#getOp()
+   * @see #getEquality()
+   * @generated
+   */
+  EAttribute getEquality_Op();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Equality#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.ecerule.ece.Equality#getRight()
+   * @see #getEquality()
+   * @generated
+   */
+  EReference getEquality_Right();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Comparison <em>Comparison</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1462,268 +1594,37 @@ public interface EcePackage extends EPackage
   EClass getComparison();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.switchExpr <em>switch Expr</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Comparison#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>switch Expr</em>'.
-   * @see org.xtext.ecerule.ece.switchExpr
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.ecerule.ece.Comparison#getLeft()
+   * @see #getComparison()
    * @generated
    */
-  EClass getswitchExpr();
+  EReference getComparison_Left();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.switchExpr#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.Comparison#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.xtext.ecerule.ece.switchExpr#getValue()
-   * @see #getswitchExpr()
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see org.xtext.ecerule.ece.Comparison#getOp()
+   * @see #getComparison()
    * @generated
    */
-  EAttribute getswitchExpr_Value();
+  EAttribute getComparison_Op();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.MutationExpr <em>Mutation Expr</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Comparison#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Mutation Expr</em>'.
-   * @see org.xtext.ecerule.ece.MutationExpr
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.ecerule.ece.Comparison#getRight()
+   * @see #getComparison()
    * @generated
    */
-  EClass getMutationExpr();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.MutationExpr#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.xtext.ecerule.ece.MutationExpr#getValue()
-   * @see #getMutationExpr()
-   * @generated
-   */
-  EAttribute getMutationExpr_Value();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.FloatExpr <em>Float Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Float Expr</em>'.
-   * @see org.xtext.ecerule.ece.FloatExpr
-   * @generated
-   */
-  EClass getFloatExpr();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.FloatExpr#getValueDirect <em>Value Direct</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value Direct</em>'.
-   * @see org.xtext.ecerule.ece.FloatExpr#getValueDirect()
-   * @see #getFloatExpr()
-   * @generated
-   */
-  EAttribute getFloatExpr_ValueDirect();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.FloatExpr#getValueCalculated <em>Value Calculated</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Value Calculated</em>'.
-   * @see org.xtext.ecerule.ece.FloatExpr#getValueCalculated()
-   * @see #getFloatExpr()
-   * @generated
-   */
-  EReference getFloatExpr_ValueCalculated();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.FloatExpr#getValueOfFluent <em>Value Of Fluent</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Value Of Fluent</em>'.
-   * @see org.xtext.ecerule.ece.FloatExpr#getValueOfFluent()
-   * @see #getFloatExpr()
-   * @generated
-   */
-  EReference getFloatExpr_ValueOfFluent();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.PlusOrMinus <em>Plus Or Minus</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Plus Or Minus</em>'.
-   * @see org.xtext.ecerule.ece.PlusOrMinus
-   * @generated
-   */
-  EClass getPlusOrMinus();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.MulOrDiv <em>Mul Or Div</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Mul Or Div</em>'.
-   * @see org.xtext.ecerule.ece.MulOrDiv
-   * @generated
-   */
-  EClass getMulOrDiv();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.Primary <em>Primary</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Primary</em>'.
-   * @see org.xtext.ecerule.ece.Primary
-   * @generated
-   */
-  EClass getPrimary();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.Primary#getValueDirect <em>Value Direct</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value Direct</em>'.
-   * @see org.xtext.ecerule.ece.Primary#getValueDirect()
-   * @see #getPrimary()
-   * @generated
-   */
-  EAttribute getPrimary_ValueDirect();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Primary#getValueOfFluent <em>Value Of Fluent</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Value Of Fluent</em>'.
-   * @see org.xtext.ecerule.ece.Primary#getValueOfFluent()
-   * @see #getPrimary()
-   * @generated
-   */
-  EReference getPrimary_ValueOfFluent();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.FluentWhoseValue <em>Fluent Whose Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Fluent Whose Value</em>'.
-   * @see org.xtext.ecerule.ece.FluentWhoseValue
-   * @generated
-   */
-  EClass getFluentWhoseValue();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.FluentWhoseValue#getFluentWhoseValueName <em>Fluent Whose Value Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fluent Whose Value Name</em>'.
-   * @see org.xtext.ecerule.ece.FluentWhoseValue#getFluentWhoseValueName()
-   * @see #getFluentWhoseValue()
-   * @generated
-   */
-  EAttribute getFluentWhoseValue_FluentWhoseValueName();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.Str <em>Str</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Str</em>'.
-   * @see org.xtext.ecerule.ece.Str
-   * @generated
-   */
-  EClass getStr();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.InRule <em>In Rule</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>In Rule</em>'.
-   * @see org.xtext.ecerule.ece.InRule
-   * @generated
-   */
-  EClass getInRule();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.InRule#getTime <em>Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Time</em>'.
-   * @see org.xtext.ecerule.ece.InRule#getTime()
-   * @see #getInRule()
-   * @generated
-   */
-  EAttribute getInRule_Time();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.InRule#getCurrentTime <em>Current Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Current Time</em>'.
-   * @see org.xtext.ecerule.ece.InRule#getCurrentTime()
-   * @see #getInRule()
-   * @generated
-   */
-  EAttribute getInRule_CurrentTime();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.ConditionRule <em>Condition Rule</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Condition Rule</em>'.
-   * @see org.xtext.ecerule.ece.ConditionRule
-   * @generated
-   */
-  EClass getConditionRule();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ConditionRule#getCondition <em>Condition</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Condition</em>'.
-   * @see org.xtext.ecerule.ece.ConditionRule#getCondition()
-   * @see #getConditionRule()
-   * @generated
-   */
-  EReference getConditionRule_Condition();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.ExpFluent <em>Exp Fluent</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Exp Fluent</em>'.
-   * @see org.xtext.ecerule.ece.ExpFluent
-   * @generated
-   */
-  EClass getExpFluent();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.ExpFluent#getFluentName <em>Fluent Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fluent Name</em>'.
-   * @see org.xtext.ecerule.ece.ExpFluent#getFluentName()
-   * @see #getExpFluent()
-   * @generated
-   */
-  EAttribute getExpFluent_FluentName();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ExpFluent#getValuePart <em>Value Part</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Value Part</em>'.
-   * @see org.xtext.ecerule.ece.ExpFluent#getValuePart()
-   * @see #getExpFluent()
-   * @generated
-   */
-  EReference getExpFluent_ValuePart();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.ExpFluent#getTimePart <em>Time Part</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Time Part</em>'.
-   * @see org.xtext.ecerule.ece.ExpFluent#getTimePart()
-   * @see #getExpFluent()
-   * @generated
-   */
-  EReference getExpFluent_TimePart();
+  EReference getComparison_Right();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Plus <em>Plus</em>}'.
@@ -1736,6 +1637,28 @@ public interface EcePackage extends EPackage
   EClass getPlus();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Plus#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.ecerule.ece.Plus#getLeft()
+   * @see #getPlus()
+   * @generated
+   */
+  EReference getPlus_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Plus#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.ecerule.ece.Plus#getRight()
+   * @see #getPlus()
+   * @generated
+   */
+  EReference getPlus_Right();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Minus <em>Minus</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1744,6 +1667,165 @@ public interface EcePackage extends EPackage
    * @generated
    */
   EClass getMinus();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Minus#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.ecerule.ece.Minus#getLeft()
+   * @see #getMinus()
+   * @generated
+   */
+  EReference getMinus_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Minus#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.ecerule.ece.Minus#getRight()
+   * @see #getMinus()
+   * @generated
+   */
+  EReference getMinus_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.MulOrDiv <em>Mul Or Div</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Mul Or Div</em>'.
+   * @see org.xtext.ecerule.ece.MulOrDiv
+   * @generated
+   */
+  EClass getMulOrDiv();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.MulOrDiv#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.ecerule.ece.MulOrDiv#getLeft()
+   * @see #getMulOrDiv()
+   * @generated
+   */
+  EReference getMulOrDiv_Left();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.MulOrDiv#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see org.xtext.ecerule.ece.MulOrDiv#getOp()
+   * @see #getMulOrDiv()
+   * @generated
+   */
+  EAttribute getMulOrDiv_Op();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.MulOrDiv#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.ecerule.ece.MulOrDiv#getRight()
+   * @see #getMulOrDiv()
+   * @generated
+   */
+  EReference getMulOrDiv_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.Not <em>Not</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Not</em>'.
+   * @see org.xtext.ecerule.ece.Not
+   * @generated
+   */
+  EClass getNot();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.FloatConstant <em>Float Constant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Float Constant</em>'.
+   * @see org.xtext.ecerule.ece.FloatConstant
+   * @generated
+   */
+  EClass getFloatConstant();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.FloatConstant#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.ecerule.ece.FloatConstant#getValue()
+   * @see #getFloatConstant()
+   * @generated
+   */
+  EAttribute getFloatConstant_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.IntConstant <em>Int Constant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Int Constant</em>'.
+   * @see org.xtext.ecerule.ece.IntConstant
+   * @generated
+   */
+  EClass getIntConstant();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.IntConstant#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.ecerule.ece.IntConstant#getValue()
+   * @see #getIntConstant()
+   * @generated
+   */
+  EAttribute getIntConstant_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.BoolConstant <em>Bool Constant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bool Constant</em>'.
+   * @see org.xtext.ecerule.ece.BoolConstant
+   * @generated
+   */
+  EClass getBoolConstant();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.BoolConstant#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.ecerule.ece.BoolConstant#getValue()
+   * @see #getBoolConstant()
+   * @generated
+   */
+  EAttribute getBoolConstant_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.FeatureRef <em>Feature Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Feature Ref</em>'.
+   * @see org.xtext.ecerule.ece.FeatureRef
+   * @generated
+   */
+  EClass getFeatureRef();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.ecerule.ece.FeatureRef#getParam <em>Param</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Param</em>'.
+   * @see org.xtext.ecerule.ece.FeatureRef#getParam()
+   * @see #getFeatureRef()
+   * @generated
+   */
+  EReference getFeatureRef_Param();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1805,20 +1887,12 @@ public interface EcePackage extends EPackage
     EReference STATEMENT__EVENT = eINSTANCE.getStatement_Event();
 
     /**
-     * The meta object literal for the '<em><b>Fluent</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Contexts List</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference STATEMENT__FLUENT = eINSTANCE.getStatement_Fluent();
-
-    /**
-     * The meta object literal for the '<em><b>Exp</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference STATEMENT__EXP = eINSTANCE.getStatement_Exp();
+    EReference STATEMENT__CONTEXTS_LIST = eINSTANCE.getStatement_ContextsList();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.EventImpl <em>Event</em>}' class.
@@ -1837,6 +1911,130 @@ public interface EcePackage extends EPackage
      * @generated
      */
     EAttribute EVENT__EVENT_NAME = eINSTANCE.getEvent_EventName();
+
+    /**
+     * The meta object literal for the '<em><b>Param</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EVENT__PARAM = eINSTANCE.getEvent_Param();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.EventFeatureImpl <em>Event Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.EventFeatureImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEventFeature()
+     * @generated
+     */
+    EClass EVENT_FEATURE = eINSTANCE.getEventFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EVENT_FEATURE__NAME = eINSTANCE.getEventFeature_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ContextsListImpl <em>Contexts List</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.ContextsListImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getContextsList()
+     * @generated
+     */
+    EClass CONTEXTS_LIST = eINSTANCE.getContextsList();
+
+    /**
+     * The meta object literal for the '<em><b>Ec Contexts List</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTEXTS_LIST__EC_CONTEXTS_LIST = eINSTANCE.getContextsList_EcContextsList();
+
+    /**
+     * The meta object literal for the '<em><b>Exp Contexts List</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTEXTS_LIST__EXP_CONTEXTS_LIST = eINSTANCE.getContextsList_ExpContextsList();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.EcContextsListImpl <em>Ec Contexts List</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.EcContextsListImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEcContextsList()
+     * @generated
+     */
+    EClass EC_CONTEXTS_LIST = eINSTANCE.getEcContextsList();
+
+    /**
+     * The meta object literal for the '<em><b>Ec Contexts</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EC_CONTEXTS_LIST__EC_CONTEXTS = eINSTANCE.getEcContextsList_EcContexts();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ExpContextsListImpl <em>Exp Contexts List</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.ExpContextsListImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpContextsList()
+     * @generated
+     */
+    EClass EXP_CONTEXTS_LIST = eINSTANCE.getExpContextsList();
+
+    /**
+     * The meta object literal for the '<em><b>Exp Contexts</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP_CONTEXTS_LIST__EXP_CONTEXTS = eINSTANCE.getExpContextsList_ExpContexts();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.EcContextImpl <em>Ec Context</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.EcContextImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEcContext()
+     * @generated
+     */
+    EClass EC_CONTEXT = eINSTANCE.getEcContext();
+
+    /**
+     * The meta object literal for the '<em><b>Fluent</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EC_CONTEXT__FLUENT = eINSTANCE.getEcContext_Fluent();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ExpContextImpl <em>Exp Context</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.ExpContextImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpContext()
+     * @generated
+     */
+    EClass EXP_CONTEXT = eINSTANCE.getExpContext();
+
+    /**
+     * The meta object literal for the '<em><b>Dafare</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP_CONTEXT__DAFARE = eINSTANCE.getExpContext_Dafare();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.FluentImpl <em>Fluent</em>}' class.
@@ -1881,6 +2079,16 @@ public interface EcePackage extends EPackage
     EReference FLUENT__COND_PART = eINSTANCE.getFluent_CondPart();
 
     /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ConditionRuleImpl <em>Condition Rule</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.ConditionRuleImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getConditionRule()
+     * @generated
+     */
+    EClass CONDITION_RULE = eINSTANCE.getConditionRule();
+
+    /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ToRuleImpl <em>To Rule</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1891,40 +2099,48 @@ public interface EcePackage extends EPackage
     EClass TO_RULE = eINSTANCE.getToRule();
 
     /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.InRuleImpl <em>In Rule</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.InRuleImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInRule()
+     * @generated
+     */
+    EClass IN_RULE = eINSTANCE.getInRule();
+
+    /**
+     * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IN_RULE__TIME = eINSTANCE.getInRule_Time();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ExpressionImpl <em>Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.ExpressionImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpression()
+     * @generated
+     */
+    EClass EXPRESSION = eINSTANCE.getExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__CONDITION = eINSTANCE.getExpression_Condition();
+
+    /**
      * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TO_RULE__EXPRESSION = eINSTANCE.getToRule_Expression();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.StringExprImpl <em>String Expr</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.StringExprImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getStringExpr()
-     * @generated
-     */
-    EClass STRING_EXPR = eINSTANCE.getStringExpr();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.BoolExprImpl <em>Bool Expr</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.BoolExprImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getBoolExpr()
-     * @generated
-     */
-    EClass BOOL_EXPR = eINSTANCE.getBoolExpr();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BOOL_EXPR__VALUE = eINSTANCE.getBoolExpr_Value();
+    EReference EXPRESSION__EXPRESSION = eINSTANCE.getExpression_Expression();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.OrImpl <em>Or</em>}' class.
@@ -1963,12 +2179,20 @@ public interface EcePackage extends EPackage
     EClass AND = eINSTANCE.getAnd();
 
     /**
-     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute AND__OP = eINSTANCE.getAnd_Op();
+    EReference AND__LEFT = eINSTANCE.getAnd_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AND__RIGHT = eINSTANCE.getAnd_Right();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.EqualityImpl <em>Equality</em>}' class.
@@ -1981,6 +2205,30 @@ public interface EcePackage extends EPackage
     EClass EQUALITY = eINSTANCE.getEquality();
 
     /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EQUALITY__LEFT = eINSTANCE.getEquality_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EQUALITY__OP = eINSTANCE.getEquality_Op();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EQUALITY__RIGHT = eINSTANCE.getEquality_Right();
+
+    /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ComparisonImpl <em>Comparison</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1991,226 +2239,28 @@ public interface EcePackage extends EPackage
     EClass COMPARISON = eINSTANCE.getComparison();
 
     /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.switchExprImpl <em>switch Expr</em>}' class.
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.switchExprImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getswitchExpr()
      * @generated
      */
-    EClass SWITCH_EXPR = eINSTANCE.getswitchExpr();
+    EReference COMPARISON__LEFT = eINSTANCE.getComparison_Left();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SWITCH_EXPR__VALUE = eINSTANCE.getswitchExpr_Value();
+    EAttribute COMPARISON__OP = eINSTANCE.getComparison_Op();
 
     /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.MutationExprImpl <em>Mutation Expr</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.MutationExprImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMutationExpr()
-     * @generated
-     */
-    EClass MUTATION_EXPR = eINSTANCE.getMutationExpr();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MUTATION_EXPR__VALUE = eINSTANCE.getMutationExpr_Value();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.FloatExprImpl <em>Float Expr</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.FloatExprImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFloatExpr()
-     * @generated
-     */
-    EClass FLOAT_EXPR = eINSTANCE.getFloatExpr();
-
-    /**
-     * The meta object literal for the '<em><b>Value Direct</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FLOAT_EXPR__VALUE_DIRECT = eINSTANCE.getFloatExpr_ValueDirect();
-
-    /**
-     * The meta object literal for the '<em><b>Value Calculated</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FLOAT_EXPR__VALUE_CALCULATED = eINSTANCE.getFloatExpr_ValueCalculated();
-
-    /**
-     * The meta object literal for the '<em><b>Value Of Fluent</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FLOAT_EXPR__VALUE_OF_FLUENT = eINSTANCE.getFloatExpr_ValueOfFluent();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.PlusOrMinusImpl <em>Plus Or Minus</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.PlusOrMinusImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getPlusOrMinus()
-     * @generated
-     */
-    EClass PLUS_OR_MINUS = eINSTANCE.getPlusOrMinus();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.MulOrDivImpl <em>Mul Or Div</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.MulOrDivImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMulOrDiv()
-     * @generated
-     */
-    EClass MUL_OR_DIV = eINSTANCE.getMulOrDiv();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.PrimaryImpl <em>Primary</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.PrimaryImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getPrimary()
-     * @generated
-     */
-    EClass PRIMARY = eINSTANCE.getPrimary();
-
-    /**
-     * The meta object literal for the '<em><b>Value Direct</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PRIMARY__VALUE_DIRECT = eINSTANCE.getPrimary_ValueDirect();
-
-    /**
-     * The meta object literal for the '<em><b>Value Of Fluent</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PRIMARY__VALUE_OF_FLUENT = eINSTANCE.getPrimary_ValueOfFluent();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.FluentWhoseValueImpl <em>Fluent Whose Value</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.FluentWhoseValueImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFluentWhoseValue()
-     * @generated
-     */
-    EClass FLUENT_WHOSE_VALUE = eINSTANCE.getFluentWhoseValue();
-
-    /**
-     * The meta object literal for the '<em><b>Fluent Whose Value Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FLUENT_WHOSE_VALUE__FLUENT_WHOSE_VALUE_NAME = eINSTANCE.getFluentWhoseValue_FluentWhoseValueName();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.StrImpl <em>Str</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.StrImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getStr()
-     * @generated
-     */
-    EClass STR = eINSTANCE.getStr();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.InRuleImpl <em>In Rule</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.InRuleImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInRule()
-     * @generated
-     */
-    EClass IN_RULE = eINSTANCE.getInRule();
-
-    /**
-     * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute IN_RULE__TIME = eINSTANCE.getInRule_Time();
-
-    /**
-     * The meta object literal for the '<em><b>Current Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute IN_RULE__CURRENT_TIME = eINSTANCE.getInRule_CurrentTime();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ConditionRuleImpl <em>Condition Rule</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.ConditionRuleImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getConditionRule()
-     * @generated
-     */
-    EClass CONDITION_RULE = eINSTANCE.getConditionRule();
-
-    /**
-     * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONDITION_RULE__CONDITION = eINSTANCE.getConditionRule_Condition();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ExpFluentImpl <em>Exp Fluent</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.ExpFluentImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getExpFluent()
-     * @generated
-     */
-    EClass EXP_FLUENT = eINSTANCE.getExpFluent();
-
-    /**
-     * The meta object literal for the '<em><b>Fluent Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP_FLUENT__FLUENT_NAME = eINSTANCE.getExpFluent_FluentName();
-
-    /**
-     * The meta object literal for the '<em><b>Value Part</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP_FLUENT__VALUE_PART = eINSTANCE.getExpFluent_ValuePart();
-
-    /**
-     * The meta object literal for the '<em><b>Time Part</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP_FLUENT__TIME_PART = eINSTANCE.getExpFluent_TimePart();
+    EReference COMPARISON__RIGHT = eINSTANCE.getComparison_Right();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.PlusImpl <em>Plus</em>}' class.
@@ -2223,6 +2273,22 @@ public interface EcePackage extends EPackage
     EClass PLUS = eINSTANCE.getPlus();
 
     /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PLUS__LEFT = eINSTANCE.getPlus_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PLUS__RIGHT = eINSTANCE.getPlus_Right();
+
+    /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.MinusImpl <em>Minus</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2231,6 +2297,138 @@ public interface EcePackage extends EPackage
      * @generated
      */
     EClass MINUS = eINSTANCE.getMinus();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MINUS__LEFT = eINSTANCE.getMinus_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MINUS__RIGHT = eINSTANCE.getMinus_Right();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.MulOrDivImpl <em>Mul Or Div</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.MulOrDivImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMulOrDiv()
+     * @generated
+     */
+    EClass MUL_OR_DIV = eINSTANCE.getMulOrDiv();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MUL_OR_DIV__LEFT = eINSTANCE.getMulOrDiv_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MUL_OR_DIV__OP = eINSTANCE.getMulOrDiv_Op();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MUL_OR_DIV__RIGHT = eINSTANCE.getMulOrDiv_Right();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.NotImpl <em>Not</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.NotImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getNot()
+     * @generated
+     */
+    EClass NOT = eINSTANCE.getNot();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.FloatConstantImpl <em>Float Constant</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.FloatConstantImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFloatConstant()
+     * @generated
+     */
+    EClass FLOAT_CONSTANT = eINSTANCE.getFloatConstant();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FLOAT_CONSTANT__VALUE = eINSTANCE.getFloatConstant_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.IntConstantImpl <em>Int Constant</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.IntConstantImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getIntConstant()
+     * @generated
+     */
+    EClass INT_CONSTANT = eINSTANCE.getIntConstant();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INT_CONSTANT__VALUE = eINSTANCE.getIntConstant_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.BoolConstantImpl <em>Bool Constant</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.BoolConstantImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getBoolConstant()
+     * @generated
+     */
+    EClass BOOL_CONSTANT = eINSTANCE.getBoolConstant();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BOOL_CONSTANT__VALUE = eINSTANCE.getBoolConstant_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.FeatureRefImpl <em>Feature Ref</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.FeatureRefImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFeatureRef()
+     * @generated
+     */
+    EClass FEATURE_REF = eINSTANCE.getFeatureRef();
+
+    /**
+     * The meta object literal for the '<em><b>Param</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FEATURE_REF__PARAM = eINSTANCE.getFeatureRef_Param();
 
   }
 

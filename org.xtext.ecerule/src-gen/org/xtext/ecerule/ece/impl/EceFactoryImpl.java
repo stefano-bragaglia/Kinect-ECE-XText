@@ -67,27 +67,29 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.DROOLS_MODEL: return createDroolsModel();
       case EcePackage.STATEMENT: return createStatement();
       case EcePackage.EVENT: return createEvent();
+      case EcePackage.EVENT_FEATURE: return createEventFeature();
+      case EcePackage.CONTEXTS_LIST: return createContextsList();
+      case EcePackage.EC_CONTEXTS_LIST: return createEcContextsList();
+      case EcePackage.EXP_CONTEXTS_LIST: return createExpContextsList();
+      case EcePackage.EC_CONTEXT: return createEcContext();
+      case EcePackage.EXP_CONTEXT: return createExpContext();
       case EcePackage.FLUENT: return createFluent();
+      case EcePackage.CONDITION_RULE: return createConditionRule();
       case EcePackage.TO_RULE: return createToRule();
-      case EcePackage.STRING_EXPR: return createStringExpr();
-      case EcePackage.BOOL_EXPR: return createBoolExpr();
+      case EcePackage.IN_RULE: return createInRule();
+      case EcePackage.EXPRESSION: return createExpression();
       case EcePackage.OR: return createOr();
       case EcePackage.AND: return createAnd();
       case EcePackage.EQUALITY: return createEquality();
       case EcePackage.COMPARISON: return createComparison();
-      case EcePackage.SWITCH_EXPR: return createswitchExpr();
-      case EcePackage.MUTATION_EXPR: return createMutationExpr();
-      case EcePackage.FLOAT_EXPR: return createFloatExpr();
-      case EcePackage.PLUS_OR_MINUS: return createPlusOrMinus();
-      case EcePackage.MUL_OR_DIV: return createMulOrDiv();
-      case EcePackage.PRIMARY: return createPrimary();
-      case EcePackage.FLUENT_WHOSE_VALUE: return createFluentWhoseValue();
-      case EcePackage.STR: return createStr();
-      case EcePackage.IN_RULE: return createInRule();
-      case EcePackage.CONDITION_RULE: return createConditionRule();
-      case EcePackage.EXP_FLUENT: return createExpFluent();
       case EcePackage.PLUS: return createPlus();
       case EcePackage.MINUS: return createMinus();
+      case EcePackage.MUL_OR_DIV: return createMulOrDiv();
+      case EcePackage.NOT: return createNot();
+      case EcePackage.FLOAT_CONSTANT: return createFloatConstant();
+      case EcePackage.INT_CONSTANT: return createIntConstant();
+      case EcePackage.BOOL_CONSTANT: return createBoolConstant();
+      case EcePackage.FEATURE_REF: return createFeatureRef();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -131,10 +133,87 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public EventFeature createEventFeature()
+  {
+    EventFeatureImpl eventFeature = new EventFeatureImpl();
+    return eventFeature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ContextsList createContextsList()
+  {
+    ContextsListImpl contextsList = new ContextsListImpl();
+    return contextsList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EcContextsList createEcContextsList()
+  {
+    EcContextsListImpl ecContextsList = new EcContextsListImpl();
+    return ecContextsList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExpContextsList createExpContextsList()
+  {
+    ExpContextsListImpl expContextsList = new ExpContextsListImpl();
+    return expContextsList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EcContext createEcContext()
+  {
+    EcContextImpl ecContext = new EcContextImpl();
+    return ecContext;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExpContext createExpContext()
+  {
+    ExpContextImpl expContext = new ExpContextImpl();
+    return expContext;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Fluent createFluent()
   {
     FluentImpl fluent = new FluentImpl();
     return fluent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConditionRule createConditionRule()
+  {
+    ConditionRuleImpl conditionRule = new ConditionRuleImpl();
+    return conditionRule;
   }
 
   /**
@@ -153,10 +232,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public StringExpr createStringExpr()
+  public InRule createInRule()
   {
-    StringExprImpl stringExpr = new StringExprImpl();
-    return stringExpr;
+    InRuleImpl inRule = new InRuleImpl();
+    return inRule;
   }
 
   /**
@@ -164,10 +243,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public BoolExpr createBoolExpr()
+  public Expression createExpression()
   {
-    BoolExprImpl boolExpr = new BoolExprImpl();
-    return boolExpr;
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
   }
 
   /**
@@ -219,10 +298,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public switchExpr createswitchExpr()
+  public Plus createPlus()
   {
-    switchExprImpl switchExpr = new switchExprImpl();
-    return switchExpr;
+    PlusImpl plus = new PlusImpl();
+    return plus;
   }
 
   /**
@@ -230,32 +309,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public MutationExpr createMutationExpr()
+  public Minus createMinus()
   {
-    MutationExprImpl mutationExpr = new MutationExprImpl();
-    return mutationExpr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FloatExpr createFloatExpr()
-  {
-    FloatExprImpl floatExpr = new FloatExprImpl();
-    return floatExpr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PlusOrMinus createPlusOrMinus()
-  {
-    PlusOrMinusImpl plusOrMinus = new PlusOrMinusImpl();
-    return plusOrMinus;
+    MinusImpl minus = new MinusImpl();
+    return minus;
   }
 
   /**
@@ -274,10 +331,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Primary createPrimary()
+  public Not createNot()
   {
-    PrimaryImpl primary = new PrimaryImpl();
-    return primary;
+    NotImpl not = new NotImpl();
+    return not;
   }
 
   /**
@@ -285,10 +342,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FluentWhoseValue createFluentWhoseValue()
+  public FloatConstant createFloatConstant()
   {
-    FluentWhoseValueImpl fluentWhoseValue = new FluentWhoseValueImpl();
-    return fluentWhoseValue;
+    FloatConstantImpl floatConstant = new FloatConstantImpl();
+    return floatConstant;
   }
 
   /**
@@ -296,10 +353,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Str createStr()
+  public IntConstant createIntConstant()
   {
-    StrImpl str = new StrImpl();
-    return str;
+    IntConstantImpl intConstant = new IntConstantImpl();
+    return intConstant;
   }
 
   /**
@@ -307,10 +364,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public InRule createInRule()
+  public BoolConstant createBoolConstant()
   {
-    InRuleImpl inRule = new InRuleImpl();
-    return inRule;
+    BoolConstantImpl boolConstant = new BoolConstantImpl();
+    return boolConstant;
   }
 
   /**
@@ -318,43 +375,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ConditionRule createConditionRule()
+  public FeatureRef createFeatureRef()
   {
-    ConditionRuleImpl conditionRule = new ConditionRuleImpl();
-    return conditionRule;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ExpFluent createExpFluent()
-  {
-    ExpFluentImpl expFluent = new ExpFluentImpl();
-    return expFluent;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Plus createPlus()
-  {
-    PlusImpl plus = new PlusImpl();
-    return plus;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Minus createMinus()
-  {
-    MinusImpl minus = new MinusImpl();
-    return minus;
+    FeatureRefImpl featureRef = new FeatureRefImpl();
+    return featureRef;
   }
 
   /**

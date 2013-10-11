@@ -2,15 +2,25 @@
  */
 package org.xtext.ecerule.ece.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.Event;
+import org.xtext.ecerule.ece.EventFeature;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,6 +30,7 @@ import org.xtext.ecerule.ece.Event;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.ecerule.ece.impl.EventImpl#getEventName <em>Event Name</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.impl.EventImpl#getParam <em>Param</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,6 +57,16 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
    * @ordered
    */
   protected String eventName = EVENT_NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getParam() <em>Param</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getParam()
+   * @generated
+   * @ordered
+   */
+  protected EList<EventFeature> param;
 
   /**
    * <!-- begin-user-doc -->
@@ -96,6 +117,36 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<EventFeature> getParam()
+  {
+    if (param == null)
+    {
+      param = new EObjectContainmentEList<EventFeature>(EventFeature.class, this, EcePackage.EVENT__PARAM);
+    }
+    return param;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EcePackage.EVENT__PARAM:
+        return ((InternalEList<?>)getParam()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -103,6 +154,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
     {
       case EcePackage.EVENT__EVENT_NAME:
         return getEventName();
+      case EcePackage.EVENT__PARAM:
+        return getParam();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -112,6 +165,7 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -119,6 +173,10 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
     {
       case EcePackage.EVENT__EVENT_NAME:
         setEventName((String)newValue);
+        return;
+      case EcePackage.EVENT__PARAM:
+        getParam().clear();
+        getParam().addAll((Collection<? extends EventFeature>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,6 +195,9 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
       case EcePackage.EVENT__EVENT_NAME:
         setEventName(EVENT_NAME_EDEFAULT);
         return;
+      case EcePackage.EVENT__PARAM:
+        getParam().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -153,6 +214,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
     {
       case EcePackage.EVENT__EVENT_NAME:
         return EVENT_NAME_EDEFAULT == null ? eventName != null : !EVENT_NAME_EDEFAULT.equals(eventName);
+      case EcePackage.EVENT__PARAM:
+        return param != null && !param.isEmpty();
     }
     return super.eIsSet(featureID);
   }

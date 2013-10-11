@@ -1,21 +1,97 @@
 grammar org.xtext.ecerule.Ece with org.eclipse.xtext.common.Terminals
 
 generate ece "http://www.xtext.org/ecerule/Ece"
-
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 DroolsModel:
-	statements += Statement*
-;
-
+	statements+=Statement*;
 
 Statement:
-	'on' event=Event 'set' fluent+=Fluent (',' fluent+=Fluent)*  ('expect' exp+=ExpFluent (',' exp+=ExpFluent)*)? ';' 	
-;
+	'on' event=Event contextsList=ContextsList;
 
 Event:
-	eventName=ID		
+	eventName=ID 
+	('(' param+=EventFeature (',' param+=EventFeature)* ')')?;
+
+EventFeature:
+	name=ID;
+
+ContextsList:
+	ecContextsList=EcContextsList (',' expContextsList=ExpContextsList)*;
+
+
+EcContextsList:
+	ecContexts+=EcContext (',' ecContexts+=EcContext)*;
+	
+ExpContextsList:
+	expContexts+=ExpContext (',' expContexts+=ExpContext)*
 ;
+
+
+
+
+// EC CONTEXT ******************************************************************
+EcContext:
+	'set' fluent+=Fluent (',' fluent+=Fluent)* 
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// EXP CONTEXT *****************************************************************
+ExpContext:
+	dafare="dafare"
+;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 Fluent:
 	fluentName=ID	
@@ -24,136 +100,73 @@ Fluent:
 	('if' condPart = ConditionRule)?
 ;
 
+ConditionRule:
+	({Expression} condition = Expression)
+;
 
-
-
-
-//TO RULE ******************************************************************
 ToRule:
-	expression = StringExpr 
-	|=>expression = BoolExpr 
-	|(expression = switchExpr) //switch BoolExpr
-	|=>(expression = FloatExpr) 
-	|(expression = MutationExpr)//mutation FloatExpr
+	({Expression} expression = PlusOrMinus)
+;
+
+InRule:	
+	time=INT	
+//	|currentTime='now'
 ;
 
 
-StringExpr:
-	Str 
-	|FluentWhoseValue
-;
 
-BoolExpr:
-	value='true'|value='false'| Or 
-;
+// LEFT_ASSOCIATIVITY
+Expression: Or;
 
-Or:
+Or returns Expression:
 	And ({Or.left=current} "OR" right=And)* 
 ;
 
-And:
+And returns Expression:
 	Equality ({And.left=current} "AND" right=Equality)* 
-	|=>Equality ({And.left=current} "AND" right=Comparison)* 
-	|=>Comparison ({And.left=current} "AND" right=Comparison)* 
-	|=>Comparison ({And.left=current} "AND" right=Equality)* 
-//	|=>Equality ({And.left=current} "AND" right=BoolExpr)* 
-//	|=>Comparison ({And.left=current} "AND" right=BoolExpr)*
 ;
 
-
-Equality:
-	FloatExpr (
+Equality returns Expression:
+	Comparison (
 		{Equality.left=current} op=("=="|"!=")
-		right=FloatExpr
-	) 
-	|=>StringExpr (
-		{Equality.left=current} op=("=="|"!=")
-		right=StringExpr
+		right=Comparison
 	)* 
 ;
 
-
-Comparison:
+Comparison returns Expression:
 	PlusOrMinus (
 		{Comparison.left=current} op=(">="|"<="|">"|"<")
 		right=PlusOrMinus
 	)* 
 ;
 
-
-switchExpr:
-	value="switch"
-;
-
-MutationExpr:
-	value=('+'|'-'|'*'|'/'|'^') FLOAT
-;
-
-
-FloatExpr:
-	=>valueDirect=INT
-	|valueCalculated=PlusOrMinus 
-	|=>valueOfFluent=FluentWhoseValue
-;
-
-terminal FLOAT returns ecore::EFloat: ('0'..'9')*'.'('0'..'9')+;
-
-
-PlusOrMinus:
+PlusOrMinus returns Expression:
 	MulOrDiv (
 	({Plus.left=current} '+' | {Minus.left=current} '-')
 	right=MulOrDiv
 	)* 
 ;
 
-MulOrDiv:
+MulOrDiv returns Expression:
 	Primary (
 		{MulOrDiv.left=current} op=('*'|'/'|'%'|'^')
 		right=Primary
 	)*
 ;
 
-Primary:
-	valueDirect=INT 
-	|valueOfFluent=FluentWhoseValue
+Primary returns Expression:
+	'(' Expression ')' |
+	{Not} "!" expression=Primary |
+	Atomic
+;
+
+Atomic returns Expression:
+	{FloatConstant} value=FLOAT |
+	{IntConstant} value=INT |
+//	{StringConstant} value=STRING |
+	{BoolConstant} value=('true'|'false') 
+	|{FeatureRef} param = [EventFeature]
 ;
 
 
-
-FluentWhoseValue: //in una fase successiva verrà tradotto in valore numerico/bool/stringa?
-	fluentWhoseValueName=ID
-;
-
-Str:
-	value=STRING
-;
-
-
-//IN RULE ******************************************************************
-InRule:	
-	time=INT|	
-	currentTime='now'
-;
-
-
-//CONDITION RULE ***********************************************************
-ConditionRule:
-	condition = BoolExpr
-;
-
-
-
-
-
-
-
-ExpFluent:
-	fluentName=ID	
-	('to' valuePart = ToRule)
-	('in' timePart = InRule)? 
-;
-
-
-
-
-
+terminal FLOAT returns ecore::EFloat: ('0'..'9')*'.'('0'..'9')+;

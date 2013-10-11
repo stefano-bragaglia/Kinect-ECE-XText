@@ -93,164 +93,52 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EcePackage.EVENT_FEATURE:
+      {
+        EventFeature eventFeature = (EventFeature)theEObject;
+        T result = caseEventFeature(eventFeature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.CONTEXTS_LIST:
+      {
+        ContextsList contextsList = (ContextsList)theEObject;
+        T result = caseContextsList(contextsList);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.EC_CONTEXTS_LIST:
+      {
+        EcContextsList ecContextsList = (EcContextsList)theEObject;
+        T result = caseEcContextsList(ecContextsList);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.EXP_CONTEXTS_LIST:
+      {
+        ExpContextsList expContextsList = (ExpContextsList)theEObject;
+        T result = caseExpContextsList(expContextsList);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.EC_CONTEXT:
+      {
+        EcContext ecContext = (EcContext)theEObject;
+        T result = caseEcContext(ecContext);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.EXP_CONTEXT:
+      {
+        ExpContext expContext = (ExpContext)theEObject;
+        T result = caseExpContext(expContext);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EcePackage.FLUENT:
       {
         Fluent fluent = (Fluent)theEObject;
         T result = caseFluent(fluent);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.TO_RULE:
-      {
-        ToRule toRule = (ToRule)theEObject;
-        T result = caseToRule(toRule);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.STRING_EXPR:
-      {
-        StringExpr stringExpr = (StringExpr)theEObject;
-        T result = caseStringExpr(stringExpr);
-        if (result == null) result = caseEquality(stringExpr);
-        if (result == null) result = caseAnd(stringExpr);
-        if (result == null) result = caseOr(stringExpr);
-        if (result == null) result = caseBoolExpr(stringExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.BOOL_EXPR:
-      {
-        BoolExpr boolExpr = (BoolExpr)theEObject;
-        T result = caseBoolExpr(boolExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.OR:
-      {
-        Or or = (Or)theEObject;
-        T result = caseOr(or);
-        if (result == null) result = caseBoolExpr(or);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.AND:
-      {
-        And and = (And)theEObject;
-        T result = caseAnd(and);
-        if (result == null) result = caseOr(and);
-        if (result == null) result = caseBoolExpr(and);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.EQUALITY:
-      {
-        Equality equality = (Equality)theEObject;
-        T result = caseEquality(equality);
-        if (result == null) result = caseAnd(equality);
-        if (result == null) result = caseOr(equality);
-        if (result == null) result = caseBoolExpr(equality);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.COMPARISON:
-      {
-        Comparison comparison = (Comparison)theEObject;
-        T result = caseComparison(comparison);
-        if (result == null) result = caseAnd(comparison);
-        if (result == null) result = caseOr(comparison);
-        if (result == null) result = caseBoolExpr(comparison);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.SWITCH_EXPR:
-      {
-        switchExpr switchExpr = (switchExpr)theEObject;
-        T result = caseswitchExpr(switchExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.MUTATION_EXPR:
-      {
-        MutationExpr mutationExpr = (MutationExpr)theEObject;
-        T result = caseMutationExpr(mutationExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.FLOAT_EXPR:
-      {
-        FloatExpr floatExpr = (FloatExpr)theEObject;
-        T result = caseFloatExpr(floatExpr);
-        if (result == null) result = caseEquality(floatExpr);
-        if (result == null) result = caseAnd(floatExpr);
-        if (result == null) result = caseOr(floatExpr);
-        if (result == null) result = caseBoolExpr(floatExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.PLUS_OR_MINUS:
-      {
-        PlusOrMinus plusOrMinus = (PlusOrMinus)theEObject;
-        T result = casePlusOrMinus(plusOrMinus);
-        if (result == null) result = caseComparison(plusOrMinus);
-        if (result == null) result = caseAnd(plusOrMinus);
-        if (result == null) result = caseOr(plusOrMinus);
-        if (result == null) result = caseBoolExpr(plusOrMinus);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.MUL_OR_DIV:
-      {
-        MulOrDiv mulOrDiv = (MulOrDiv)theEObject;
-        T result = caseMulOrDiv(mulOrDiv);
-        if (result == null) result = casePlusOrMinus(mulOrDiv);
-        if (result == null) result = caseComparison(mulOrDiv);
-        if (result == null) result = caseAnd(mulOrDiv);
-        if (result == null) result = caseOr(mulOrDiv);
-        if (result == null) result = caseBoolExpr(mulOrDiv);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.PRIMARY:
-      {
-        Primary primary = (Primary)theEObject;
-        T result = casePrimary(primary);
-        if (result == null) result = caseMulOrDiv(primary);
-        if (result == null) result = casePlusOrMinus(primary);
-        if (result == null) result = caseComparison(primary);
-        if (result == null) result = caseAnd(primary);
-        if (result == null) result = caseOr(primary);
-        if (result == null) result = caseBoolExpr(primary);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.FLUENT_WHOSE_VALUE:
-      {
-        FluentWhoseValue fluentWhoseValue = (FluentWhoseValue)theEObject;
-        T result = caseFluentWhoseValue(fluentWhoseValue);
-        if (result == null) result = caseStringExpr(fluentWhoseValue);
-        if (result == null) result = caseEquality(fluentWhoseValue);
-        if (result == null) result = caseAnd(fluentWhoseValue);
-        if (result == null) result = caseOr(fluentWhoseValue);
-        if (result == null) result = caseBoolExpr(fluentWhoseValue);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.STR:
-      {
-        Str str = (Str)theEObject;
-        T result = caseStr(str);
-        if (result == null) result = caseStringExpr(str);
-        if (result == null) result = caseEquality(str);
-        if (result == null) result = caseAnd(str);
-        if (result == null) result = caseOr(str);
-        if (result == null) result = caseBoolExpr(str);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.IN_RULE:
-      {
-        InRule inRule = (InRule)theEObject;
-        T result = caseInRule(inRule);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -261,10 +149,66 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EcePackage.EXP_FLUENT:
+      case EcePackage.TO_RULE:
       {
-        ExpFluent expFluent = (ExpFluent)theEObject;
-        T result = caseExpFluent(expFluent);
+        ToRule toRule = (ToRule)theEObject;
+        T result = caseToRule(toRule);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.IN_RULE:
+      {
+        InRule inRule = (InRule)theEObject;
+        T result = caseInRule(inRule);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.EXPRESSION:
+      {
+        Expression expression = (Expression)theEObject;
+        T result = caseExpression(expression);
+        if (result == null) result = caseConditionRule(expression);
+        if (result == null) result = caseToRule(expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.OR:
+      {
+        Or or = (Or)theEObject;
+        T result = caseOr(or);
+        if (result == null) result = caseExpression(or);
+        if (result == null) result = caseConditionRule(or);
+        if (result == null) result = caseToRule(or);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.AND:
+      {
+        And and = (And)theEObject;
+        T result = caseAnd(and);
+        if (result == null) result = caseExpression(and);
+        if (result == null) result = caseConditionRule(and);
+        if (result == null) result = caseToRule(and);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.EQUALITY:
+      {
+        Equality equality = (Equality)theEObject;
+        T result = caseEquality(equality);
+        if (result == null) result = caseExpression(equality);
+        if (result == null) result = caseConditionRule(equality);
+        if (result == null) result = caseToRule(equality);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.COMPARISON:
+      {
+        Comparison comparison = (Comparison)theEObject;
+        T result = caseComparison(comparison);
+        if (result == null) result = caseExpression(comparison);
+        if (result == null) result = caseConditionRule(comparison);
+        if (result == null) result = caseToRule(comparison);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -272,11 +216,9 @@ public class EceSwitch<T> extends Switch<T>
       {
         Plus plus = (Plus)theEObject;
         T result = casePlus(plus);
-        if (result == null) result = casePlusOrMinus(plus);
-        if (result == null) result = caseComparison(plus);
-        if (result == null) result = caseAnd(plus);
-        if (result == null) result = caseOr(plus);
-        if (result == null) result = caseBoolExpr(plus);
+        if (result == null) result = caseExpression(plus);
+        if (result == null) result = caseConditionRule(plus);
+        if (result == null) result = caseToRule(plus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -284,11 +226,69 @@ public class EceSwitch<T> extends Switch<T>
       {
         Minus minus = (Minus)theEObject;
         T result = caseMinus(minus);
-        if (result == null) result = casePlusOrMinus(minus);
-        if (result == null) result = caseComparison(minus);
-        if (result == null) result = caseAnd(minus);
-        if (result == null) result = caseOr(minus);
-        if (result == null) result = caseBoolExpr(minus);
+        if (result == null) result = caseExpression(minus);
+        if (result == null) result = caseConditionRule(minus);
+        if (result == null) result = caseToRule(minus);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.MUL_OR_DIV:
+      {
+        MulOrDiv mulOrDiv = (MulOrDiv)theEObject;
+        T result = caseMulOrDiv(mulOrDiv);
+        if (result == null) result = caseExpression(mulOrDiv);
+        if (result == null) result = caseConditionRule(mulOrDiv);
+        if (result == null) result = caseToRule(mulOrDiv);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.NOT:
+      {
+        Not not = (Not)theEObject;
+        T result = caseNot(not);
+        if (result == null) result = caseExpression(not);
+        if (result == null) result = caseConditionRule(not);
+        if (result == null) result = caseToRule(not);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.FLOAT_CONSTANT:
+      {
+        FloatConstant floatConstant = (FloatConstant)theEObject;
+        T result = caseFloatConstant(floatConstant);
+        if (result == null) result = caseExpression(floatConstant);
+        if (result == null) result = caseConditionRule(floatConstant);
+        if (result == null) result = caseToRule(floatConstant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.INT_CONSTANT:
+      {
+        IntConstant intConstant = (IntConstant)theEObject;
+        T result = caseIntConstant(intConstant);
+        if (result == null) result = caseExpression(intConstant);
+        if (result == null) result = caseConditionRule(intConstant);
+        if (result == null) result = caseToRule(intConstant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.BOOL_CONSTANT:
+      {
+        BoolConstant boolConstant = (BoolConstant)theEObject;
+        T result = caseBoolConstant(boolConstant);
+        if (result == null) result = caseExpression(boolConstant);
+        if (result == null) result = caseConditionRule(boolConstant);
+        if (result == null) result = caseToRule(boolConstant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.FEATURE_REF:
+      {
+        FeatureRef featureRef = (FeatureRef)theEObject;
+        T result = caseFeatureRef(featureRef);
+        if (result == null) result = caseExpression(featureRef);
+        if (result == null) result = caseConditionRule(featureRef);
+        if (result == null) result = caseToRule(featureRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -345,6 +345,102 @@ public class EceSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Event Feature</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Event Feature</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEventFeature(EventFeature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Contexts List</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Contexts List</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContextsList(ContextsList object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ec Contexts List</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ec Contexts List</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEcContextsList(EcContextsList object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exp Contexts List</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exp Contexts List</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpContextsList(ExpContextsList object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ec Context</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ec Context</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEcContext(EcContext object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exp Context</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exp Context</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpContext(ExpContext object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Fluent</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -356,6 +452,22 @@ public class EceSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFluent(Fluent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Condition Rule</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Condition Rule</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConditionRule(ConditionRule object)
   {
     return null;
   }
@@ -377,33 +489,33 @@ public class EceSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>String Expr</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>In Rule</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>String Expr</em>'.
+   * @return the result of interpreting the object as an instance of '<em>In Rule</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStringExpr(StringExpr object)
+  public T caseInRule(InRule object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Bool Expr</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Bool Expr</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBoolExpr(BoolExpr object)
+  public T caseExpression(Expression object)
   {
     return null;
   }
@@ -473,182 +585,6 @@ public class EceSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>switch Expr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>switch Expr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseswitchExpr(switchExpr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Mutation Expr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Mutation Expr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMutationExpr(MutationExpr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Float Expr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Float Expr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFloatExpr(FloatExpr object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Plus Or Minus</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Plus Or Minus</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePlusOrMinus(PlusOrMinus object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Mul Or Div</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Mul Or Div</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMulOrDiv(MulOrDiv object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Primary</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Primary</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePrimary(Primary object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Fluent Whose Value</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Fluent Whose Value</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFluentWhoseValue(FluentWhoseValue object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Str</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Str</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseStr(Str object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>In Rule</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>In Rule</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInRule(InRule object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Condition Rule</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Condition Rule</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseConditionRule(ConditionRule object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Exp Fluent</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Exp Fluent</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExpFluent(ExpFluent object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Plus</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -676,6 +612,102 @@ public class EceSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMinus(Minus object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Mul Or Div</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mul Or Div</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMulOrDiv(MulOrDiv object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Not</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Not</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNot(Not object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Float Constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Float Constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFloatConstant(FloatConstant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Int Constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Int Constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntConstant(IntConstant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bool Constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bool Constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBoolConstant(BoolConstant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Feature Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Feature Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFeatureRef(FeatureRef object)
   {
     return null;
   }
