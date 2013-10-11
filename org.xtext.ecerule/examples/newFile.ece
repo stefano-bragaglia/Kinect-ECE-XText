@@ -1,3 +1,15 @@
+//Saliamo sulla bilancia(sulla quale preventivamente abbiamo inserito la nostra tara)
+//
+//La misura della bilancia (composta dalla lettura effettiva e dalla tara) comporta (all'istante 26) il settaggio del fluente 'peso'
+//al valore della lettura-tara  con aggiustamento (*100) per cambiare l'unità di misura (esempio da hg a g); questo viene fatto solo 
+//se la tara è <=16.
+//Inoltre lo stesso evento comporta l'aggiornamento del valore totale delle pesate, aggiornandolo al suo nuovo valore, solo se pesiamo 
+//almeno 60
+//Mi aspetto che dopo 264, la somma di tutte le pesate sia maggiore dell'ultima pesata, sempre se inizialmente tale somma era >=0
+
+
+
 on BilanciaMisura (lettura, tara) 	set peso to (lettura-tara)*100 in 26 if tara<=16 ,
 									set totPesate to [totPesate] + (lettura-tara)*100 if (lettura-tara)*100>60,
-									expect [totPesate] >= (lettura-tara)*100 before 264 if [totPesate]>=0 ;
+									expect [totPesate] >= (lettura-tara)*100 finishes 264 if [totPesate]>=0 ;
+									
