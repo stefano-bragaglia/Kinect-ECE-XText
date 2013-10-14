@@ -7,8 +7,8 @@
     editorPluginID="org.xtext.ecerule.editor" runtimeVersion="2.9">
   <genPackages prefix="Ece" basePackage="org.xtext.ecerule" disposableProviderFactory="true"
       fileExtensions="ece" ecorePackage="Ece.ecore#/">
-    <genClasses ecoreClass="Ece.ecore#//DroolsModel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//DroolsModel/statements"/>
+    <genClasses ecoreClass="Ece.ecore#//EceModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//EceModel/statements"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//Statement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Statement/event"/>

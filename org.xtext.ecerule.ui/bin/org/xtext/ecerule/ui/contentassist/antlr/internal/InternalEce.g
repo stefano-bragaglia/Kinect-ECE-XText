@@ -56,25 +56,25 @@ import org.xtext.ecerule.services.EceGrammarAccess;
 
 
 
-// Entry rule entryRuleDroolsModel
-entryRuleDroolsModel 
+// Entry rule entryRuleEceModel
+entryRuleEceModel 
 :
-{ before(grammarAccess.getDroolsModelRule()); }
-	 ruleDroolsModel
-{ after(grammarAccess.getDroolsModelRule()); } 
+{ before(grammarAccess.getEceModelRule()); }
+	 ruleEceModel
+{ after(grammarAccess.getEceModelRule()); } 
 	 EOF 
 ;
 
-// Rule DroolsModel
-ruleDroolsModel
+// Rule EceModel
+ruleEceModel
     @init {
 		int stackSize = keepStackSize();
     }
 	:
 (
-{ before(grammarAccess.getDroolsModelAccess().getStatementsAssignment()); }
-(rule__DroolsModel__StatementsAssignment)*
-{ after(grammarAccess.getDroolsModelAccess().getStatementsAssignment()); }
+{ before(grammarAccess.getEceModelAccess().getStatementsAssignment()); }
+(rule__EceModel__StatementsAssignment)*
+{ after(grammarAccess.getEceModelAccess().getStatementsAssignment()); }
 )
 
 ;
@@ -1440,7 +1440,7 @@ rule__ContextsList__Group__1__Impl
 :
 (
 { before(grammarAccess.getContextsListAccess().getGroup_1()); }
-(rule__ContextsList__Group_1__0)
+(rule__ContextsList__Group_1__0)?
 { after(grammarAccess.getContextsListAccess().getGroup_1()); }
 )
 
@@ -4277,14 +4277,14 @@ finally {
 
 
 
-rule__DroolsModel__StatementsAssignment
+rule__EceModel__StatementsAssignment
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getDroolsModelAccess().getStatementsStatementParserRuleCall_0()); }
-	ruleStatement{ after(grammarAccess.getDroolsModelAccess().getStatementsStatementParserRuleCall_0()); }
+{ before(grammarAccess.getEceModelAccess().getStatementsStatementParserRuleCall_0()); }
+	ruleStatement{ after(grammarAccess.getEceModelAccess().getStatementsStatementParserRuleCall_0()); }
 )
 
 ;

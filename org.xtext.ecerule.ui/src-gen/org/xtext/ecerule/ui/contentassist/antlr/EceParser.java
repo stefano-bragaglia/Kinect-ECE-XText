@@ -88,7 +88,7 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtomicAccess().getGroup_2(), "rule__Atomic__Group_2__0");
 					put(grammarAccess.getAtomicAccess().getGroup_3(), "rule__Atomic__Group_3__0");
 					put(grammarAccess.getAtomicAccess().getGroup_4(), "rule__Atomic__Group_4__0");
-					put(grammarAccess.getDroolsModelAccess().getStatementsAssignment(), "rule__DroolsModel__StatementsAssignment");
+					put(grammarAccess.getEceModelAccess().getStatementsAssignment(), "rule__EceModel__StatementsAssignment");
 					put(grammarAccess.getStatementAccess().getEventAssignment_1(), "rule__Statement__EventAssignment_1");
 					put(grammarAccess.getStatementAccess().getContextsListAssignment_2(), "rule__Statement__ContextsListAssignment_2");
 					put(grammarAccess.getEventAccess().getEventNameAssignment_0(), "rule__Event__EventNameAssignment_0");
@@ -141,7 +141,7 @@ public class EceParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			org.xtext.ecerule.ui.contentassist.antlr.internal.InternalEceParser typedParser = (org.xtext.ecerule.ui.contentassist.antlr.internal.InternalEceParser) parser;
-			typedParser.entryRuleDroolsModel();
+			typedParser.entryRuleEceModel();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

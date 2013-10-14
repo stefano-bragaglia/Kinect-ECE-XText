@@ -75,9 +75,9 @@ public class EceAdapterFactory extends AdapterFactoryImpl
     new EceSwitch<Adapter>()
     {
       @Override
-      public Adapter caseDroolsModel(DroolsModel object)
+      public Adapter caseEceModel(EceModel object)
       {
-        return createDroolsModelAdapter();
+        return createEceModelAdapter();
       }
       @Override
       public Adapter caseStatement(Statement object)
@@ -247,16 +247,16 @@ public class EceAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.DroolsModel <em>Drools Model</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.EceModel <em>Model</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.ecerule.ece.DroolsModel
+   * @see org.xtext.ecerule.ece.EceModel
    * @generated
    */
-  public Adapter createDroolsModelAdapter()
+  public Adapter createEceModelAdapter()
   {
     return null;
   }

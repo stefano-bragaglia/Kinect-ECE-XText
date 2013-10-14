@@ -16,10 +16,10 @@ import org.xtext.ecerule.ece.BoolConstant;
 import org.xtext.ecerule.ece.Comparison;
 import org.xtext.ecerule.ece.ConditionRule;
 import org.xtext.ecerule.ece.ContextsList;
-import org.xtext.ecerule.ece.DroolsModel;
 import org.xtext.ecerule.ece.EcContext;
 import org.xtext.ecerule.ece.EcContextsList;
 import org.xtext.ecerule.ece.EceFactory;
+import org.xtext.ecerule.ece.EceModel;
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.Equality;
 import org.xtext.ecerule.ece.Event;
@@ -55,7 +55,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass droolsModelEClass = null;
+  private EClass eceModelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -328,9 +328,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDroolsModel()
+  public EClass getEceModel()
   {
-    return droolsModelEClass;
+    return eceModelEClass;
   }
 
   /**
@@ -338,9 +338,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDroolsModel_Statements()
+  public EReference getEceModel_Statements()
   {
-    return (EReference)droolsModelEClass.getEStructuralFeatures().get(0);
+    return (EReference)eceModelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1113,8 +1113,8 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     isCreated = true;
 
     // Create classes and their features
-    droolsModelEClass = createEClass(DROOLS_MODEL);
-    createEReference(droolsModelEClass, DROOLS_MODEL__STATEMENTS);
+    eceModelEClass = createEClass(ECE_MODEL);
+    createEReference(eceModelEClass, ECE_MODEL__STATEMENTS);
 
     statementEClass = createEClass(STATEMENT);
     createEReference(statementEClass, STATEMENT__EVENT);
@@ -1267,8 +1267,8 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     fluentRefEClass.getESuperTypes().add(this.getExpression());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(droolsModelEClass, DroolsModel.class, "DroolsModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDroolsModel_Statements(), this.getStatement(), null, "statements", null, 0, -1, DroolsModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(eceModelEClass, EceModel.class, "EceModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEceModel_Statements(), this.getStatement(), null, "statements", null, 0, -1, EceModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getStatement_Event(), this.getEvent(), null, "event", null, 0, 1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

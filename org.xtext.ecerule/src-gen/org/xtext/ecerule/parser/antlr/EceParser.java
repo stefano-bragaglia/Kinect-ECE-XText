@@ -25,7 +25,7 @@ public class EceParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrParse
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "DroolsModel";
+		return "EceModel";
 	}
 	
 	public EceGrammarAccess getGrammarAccess() {

@@ -64,7 +64,7 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
   {
     switch (eClass.getClassifierID())
     {
-      case EcePackage.DROOLS_MODEL: return createDroolsModel();
+      case EcePackage.ECE_MODEL: return createEceModel();
       case EcePackage.STATEMENT: return createStatement();
       case EcePackage.EVENT: return createEvent();
       case EcePackage.EVENT_FEATURE: return createEventFeature();
@@ -104,10 +104,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DroolsModel createDroolsModel()
+  public EceModel createEceModel()
   {
-    DroolsModelImpl droolsModel = new DroolsModelImpl();
-    return droolsModel;
+    EceModelImpl eceModel = new EceModelImpl();
+    return eceModel;
   }
 
   /**

@@ -18,12 +18,12 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class DroolsModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DroolsModel");
+	public class EceModelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EceModel");
 		private final Assignment cStatementsAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cStatementsStatementParserRuleCall_0 = (RuleCall)cStatementsAssignment.eContents().get(0);
 		
-		//DroolsModel:
+		//EceModel:
 		//	statements+=Statement*;
 		public ParserRule getRule() { return rule; }
 
@@ -153,10 +153,10 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cExpContextsListExpContextsListParserRuleCall_1_1_0 = (RuleCall)cExpContextsListAssignment_1_1.eContents().get(0);
 		
 		//ContextsList:
-		//	ecContextsList=EcContextsList ("," expContextsList=ExpContextsList);
+		//	ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)?;
 		public ParserRule getRule() { return rule; }
 
-		//ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)
+		//ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)?
 		public Group getGroup() { return cGroup; }
 
 		//ecContextsList=EcContextsList
@@ -165,7 +165,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		//EcContextsList
 		public RuleCall getEcContextsListEcContextsListParserRuleCall_0_0() { return cEcContextsListEcContextsListParserRuleCall_0_0; }
 
-		//"," expContextsList=ExpContextsList
+		//("," expContextsList=ExpContextsList)?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//","
@@ -1019,7 +1019,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
-	private DroolsModelElements pDroolsModel;
+	private EceModelElements pEceModel;
 	private StatementElements pStatement;
 	private EventElements pEvent;
 	private EventFeatureElements pEventFeature;
@@ -1083,14 +1083,14 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//DroolsModel:
+	//EceModel:
 	//	statements+=Statement*;
-	public DroolsModelElements getDroolsModelAccess() {
-		return (pDroolsModel != null) ? pDroolsModel : (pDroolsModel = new DroolsModelElements());
+	public EceModelElements getEceModelAccess() {
+		return (pEceModel != null) ? pEceModel : (pEceModel = new EceModelElements());
 	}
 	
-	public ParserRule getDroolsModelRule() {
-		return getDroolsModelAccess().getRule();
+	public ParserRule getEceModelRule() {
+		return getEceModelAccess().getRule();
 	}
 
 	//Statement:
@@ -1124,7 +1124,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ContextsList:
-	//	ecContextsList=EcContextsList ("," expContextsList=ExpContextsList);
+	//	ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)?;
 	public ContextsListElements getContextsListAccess() {
 		return (pContextsList != null) ? pContextsList : (pContextsList = new ContextsListElements());
 	}

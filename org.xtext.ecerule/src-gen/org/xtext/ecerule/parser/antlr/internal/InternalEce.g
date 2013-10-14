@@ -44,7 +44,7 @@ import org.xtext.ecerule.services.EceGrammarAccess;
     
     @Override
     protected String getFirstRuleName() {
-    	return "DroolsModel";	
+    	return "EceModel";	
    	}
    	
    	@Override
@@ -63,28 +63,28 @@ import org.xtext.ecerule.services.EceGrammarAccess;
 
 
 
-// Entry rule entryRuleDroolsModel
-entryRuleDroolsModel returns [EObject current=null] 
+// Entry rule entryRuleEceModel
+entryRuleEceModel returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getDroolsModelRule()); }
-	 iv_ruleDroolsModel=ruleDroolsModel 
-	 { $current=$iv_ruleDroolsModel.current; } 
+	{ newCompositeNode(grammarAccess.getEceModelRule()); }
+	 iv_ruleEceModel=ruleEceModel 
+	 { $current=$iv_ruleEceModel.current; } 
 	 EOF 
 ;
 
-// Rule DroolsModel
-ruleDroolsModel returns [EObject current=null] 
+// Rule EceModel
+ruleEceModel returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getDroolsModelAccess().getStatementsStatementParserRuleCall_0()); 
+	        newCompositeNode(grammarAccess.getEceModelAccess().getStatementsStatementParserRuleCall_0()); 
 	    }
 		lv_statements_0_0=ruleStatement		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getDroolsModelRule());
+	            $current = createModelElementForParent(grammarAccess.getEceModelRule());
 	        }
        		add(
        			$current, 
@@ -347,7 +347,7 @@ ruleContextsList returns [EObject current=null]
 	    }
 
 )
-)))
+))?)
 ;
 
 

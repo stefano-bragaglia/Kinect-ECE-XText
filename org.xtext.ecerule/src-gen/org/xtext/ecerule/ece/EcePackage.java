@@ -57,14 +57,14 @@ public interface EcePackage extends EPackage
   EcePackage eINSTANCE = org.xtext.ecerule.ece.impl.EcePackageImpl.init();
 
   /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.DroolsModelImpl <em>Drools Model</em>}' class.
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.EceModelImpl <em>Model</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.DroolsModelImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getDroolsModel()
+   * @see org.xtext.ecerule.ece.impl.EceModelImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEceModel()
    * @generated
    */
-  int DROOLS_MODEL = 0;
+  int ECE_MODEL = 0;
 
   /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference list.
@@ -73,16 +73,16 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int DROOLS_MODEL__STATEMENTS = 0;
+  int ECE_MODEL__STATEMENTS = 0;
 
   /**
-   * The number of structural features of the '<em>Drools Model</em>' class.
+   * The number of structural features of the '<em>Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DROOLS_MODEL_FEATURE_COUNT = 1;
+  int ECE_MODEL_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.StatementImpl <em>Statement</em>}' class.
@@ -1276,25 +1276,25 @@ public interface EcePackage extends EPackage
 
 
   /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.DroolsModel <em>Drools Model</em>}'.
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.EceModel <em>Model</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Drools Model</em>'.
-   * @see org.xtext.ecerule.ece.DroolsModel
+   * @return the meta object for class '<em>Model</em>'.
+   * @see org.xtext.ecerule.ece.EceModel
    * @generated
    */
-  EClass getDroolsModel();
+  EClass getEceModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.DroolsModel#getStatements <em>Statements</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.EceModel#getStatements <em>Statements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Statements</em>'.
-   * @see org.xtext.ecerule.ece.DroolsModel#getStatements()
-   * @see #getDroolsModel()
+   * @see org.xtext.ecerule.ece.EceModel#getStatements()
+   * @see #getEceModel()
    * @generated
    */
-  EReference getDroolsModel_Statements();
+  EReference getEceModel_Statements();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Statement <em>Statement</em>}'.
@@ -2105,14 +2105,14 @@ public interface EcePackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.DroolsModelImpl <em>Drools Model</em>}' class.
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.EceModelImpl <em>Model</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.DroolsModelImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getDroolsModel()
+     * @see org.xtext.ecerule.ece.impl.EceModelImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEceModel()
      * @generated
      */
-    EClass DROOLS_MODEL = eINSTANCE.getDroolsModel();
+    EClass ECE_MODEL = eINSTANCE.getEceModel();
 
     /**
      * The meta object literal for the '<em><b>Statements</b></em>' containment reference list feature.
@@ -2120,7 +2120,7 @@ public interface EcePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DROOLS_MODEL__STATEMENTS = eINSTANCE.getDroolsModel_Statements();
+    EReference ECE_MODEL__STATEMENTS = eINSTANCE.getEceModel_Statements();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.StatementImpl <em>Statement</em>}' class.

@@ -16,24 +16,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.ecerule.ece.DroolsModel;
+import org.xtext.ecerule.ece.EceModel;
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.Statement;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Drools Model</b></em>'.
+ * An implementation of the model object '<em><b>Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.ecerule.ece.impl.DroolsModelImpl#getStatements <em>Statements</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.impl.EceModelImpl#getStatements <em>Statements</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DroolsModelImpl extends MinimalEObjectImpl.Container implements DroolsModel
+public class EceModelImpl extends MinimalEObjectImpl.Container implements EceModel
 {
   /**
    * The cached value of the '{@link #getStatements() <em>Statements</em>}' containment reference list.
@@ -50,7 +50,7 @@ public class DroolsModelImpl extends MinimalEObjectImpl.Container implements Dro
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DroolsModelImpl()
+  protected EceModelImpl()
   {
     super();
   }
@@ -63,7 +63,7 @@ public class DroolsModelImpl extends MinimalEObjectImpl.Container implements Dro
   @Override
   protected EClass eStaticClass()
   {
-    return EcePackage.Literals.DROOLS_MODEL;
+    return EcePackage.Literals.ECE_MODEL;
   }
 
   /**
@@ -75,7 +75,7 @@ public class DroolsModelImpl extends MinimalEObjectImpl.Container implements Dro
   {
     if (statements == null)
     {
-      statements = new EObjectContainmentEList<Statement>(Statement.class, this, EcePackage.DROOLS_MODEL__STATEMENTS);
+      statements = new EObjectContainmentEList<Statement>(Statement.class, this, EcePackage.ECE_MODEL__STATEMENTS);
     }
     return statements;
   }
@@ -90,7 +90,7 @@ public class DroolsModelImpl extends MinimalEObjectImpl.Container implements Dro
   {
     switch (featureID)
     {
-      case EcePackage.DROOLS_MODEL__STATEMENTS:
+      case EcePackage.ECE_MODEL__STATEMENTS:
         return ((InternalEList<?>)getStatements()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -106,7 +106,7 @@ public class DroolsModelImpl extends MinimalEObjectImpl.Container implements Dro
   {
     switch (featureID)
     {
-      case EcePackage.DROOLS_MODEL__STATEMENTS:
+      case EcePackage.ECE_MODEL__STATEMENTS:
         return getStatements();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -123,7 +123,7 @@ public class DroolsModelImpl extends MinimalEObjectImpl.Container implements Dro
   {
     switch (featureID)
     {
-      case EcePackage.DROOLS_MODEL__STATEMENTS:
+      case EcePackage.ECE_MODEL__STATEMENTS:
         getStatements().clear();
         getStatements().addAll((Collection<? extends Statement>)newValue);
         return;
@@ -141,7 +141,7 @@ public class DroolsModelImpl extends MinimalEObjectImpl.Container implements Dro
   {
     switch (featureID)
     {
-      case EcePackage.DROOLS_MODEL__STATEMENTS:
+      case EcePackage.ECE_MODEL__STATEMENTS:
         getStatements().clear();
         return;
     }
@@ -158,10 +158,10 @@ public class DroolsModelImpl extends MinimalEObjectImpl.Container implements Dro
   {
     switch (featureID)
     {
-      case EcePackage.DROOLS_MODEL__STATEMENTS:
+      case EcePackage.ECE_MODEL__STATEMENTS:
         return statements != null && !statements.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //DroolsModelImpl
+} //EceModelImpl

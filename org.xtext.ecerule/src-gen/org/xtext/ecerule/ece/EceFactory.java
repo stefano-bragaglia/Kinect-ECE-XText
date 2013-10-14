@@ -23,13 +23,13 @@ public interface EceFactory extends EFactory
   EceFactory eINSTANCE = org.xtext.ecerule.ece.impl.EceFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Drools Model</em>'.
+   * Returns a new object of class '<em>Model</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Drools Model</em>'.
+   * @return a new object of class '<em>Model</em>'.
    * @generated
    */
-  DroolsModel createDroolsModel();
+  EceModel createEceModel();
 
   /**
    * Returns a new object of class '<em>Statement</em>'.
