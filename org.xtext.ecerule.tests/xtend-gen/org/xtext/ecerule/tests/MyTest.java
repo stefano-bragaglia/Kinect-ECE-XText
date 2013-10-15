@@ -29,7 +29,7 @@ public class MyTest {
   public void testParsingLite() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("on EventoNome set FluenteNome to 52, expect (true);");
+      _builder.append("on EventoPompaApre set FluenteLivello to 52, expect (true);");
       _builder.newLine();
       EceModel _parse = this._parseHelper.parse(_builder);
       this._validationTestHelper.assertNoErrors(_parse);
