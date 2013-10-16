@@ -9,14 +9,18 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.xtext.ecerule.EceInjectorProvider
 import org.xtext.ecerule.ece.EceModel
+//import  org.eclipse.xtext.xbase.compiler.CompilationTestHelper
 
 
 @RunWith(typeof(XtextRunner))
 @InjectWith(typeof(EceInjectorProvider))
+
+
 class MyTest {
 	
 	@Inject extension ParseHelper<EceModel>
 	@Inject extension ValidationTestHelper
+//	@Inject extension CompilationTestHelper
 
 	@Test
 	def void testParsingLite() {
@@ -40,6 +44,9 @@ class MyTest {
 //			on EventoPompaApre set FluenteLivello to 52, expect (true);
 //		'''.assertCompilesTo(
 //		'''
+//		public class EventoPompaApre {
+//			
+//		}
 //
 //		''')
 //	}

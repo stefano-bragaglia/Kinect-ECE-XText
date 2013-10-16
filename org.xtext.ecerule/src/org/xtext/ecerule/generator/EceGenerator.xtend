@@ -23,20 +23,10 @@ class EceGenerator implements IGenerator {
 	def CharSequence compile(Statement stm){
 		'''
 		public class «stm.event.eventName» {
-			private Event event
 			
 			
 			
 			
-			
-			
-			
-			
-			public class Event {
-				public Event(){
-				
-				}
-			}
 		}
 		
 		

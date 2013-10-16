@@ -100,14 +100,14 @@ Equality returns Expression:
 	Comparison (
 		{Equality.left=current} op=("=="|"!=")
 		right=Comparison
-	)* 
+	) 
 ;
 
 Comparison returns Expression:
 	PlusOrMinus (
 		{Comparison.left=current} op=(">="|"<="|">"|"<")
 		right=PlusOrMinus
-	)* 
+	) 
 ;
 
 PlusOrMinus returns Expression:

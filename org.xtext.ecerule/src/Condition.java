@@ -1,4 +1,9 @@
+import java.util.List;
+
 
 public class Condition {
-	//TODO
+	private List<Or> orList;
+
+
+	
 }
