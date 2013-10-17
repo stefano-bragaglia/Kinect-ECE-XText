@@ -4,7 +4,7 @@
     editorDirectory="/org.xtext.ecerule.editor/src" modelPluginID="org.xtext.ecerule"
     forceOverwrite="true" modelName="Ece" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.ecerule.edit"
-    editorPluginID="org.xtext.ecerule.editor" runtimeVersion="2.9">
+    editorPluginID="org.xtext.ecerule.editor" runtimeVersion="2.10">
   <genPackages prefix="Ece" basePackage="org.xtext.ecerule" disposableProviderFactory="true"
       fileExtensions="ece" ecorePackage="Ece.ecore#/">
     <genClasses ecoreClass="Ece.ecore#//EceModel">
