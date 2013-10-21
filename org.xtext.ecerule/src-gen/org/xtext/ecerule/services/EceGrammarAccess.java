@@ -77,19 +77,19 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cEventNameIDTerminalRuleCall_0_0 = (RuleCall)cEventNameAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cLeftParenthesisKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cParamAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cParamEventFeatureParserRuleCall_1_1_0 = (RuleCall)cParamAssignment_1_1.eContents().get(0);
+		private final Assignment cParamsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cParamsEventFeatureParserRuleCall_1_1_0 = (RuleCall)cParamsAssignment_1_1.eContents().get(0);
 		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
 		private final Keyword cCommaKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
-		private final Assignment cParamAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
-		private final RuleCall cParamEventFeatureParserRuleCall_1_2_1_0 = (RuleCall)cParamAssignment_1_2_1.eContents().get(0);
+		private final Assignment cParamsAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cParamsEventFeatureParserRuleCall_1_2_1_0 = (RuleCall)cParamsAssignment_1_2_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		
 		//Event:
-		//	eventName=ID ("(" param+=EventFeature ("," param+=EventFeature)* ")")?;
+		//	eventName=ID ("(" params+=EventFeature ("," params+=EventFeature)* ")")?;
 		public ParserRule getRule() { return rule; }
 
-		//eventName=ID ("(" param+=EventFeature ("," param+=EventFeature)* ")")?
+		//eventName=ID ("(" params+=EventFeature ("," params+=EventFeature)* ")")?
 		public Group getGroup() { return cGroup; }
 
 		//eventName=ID
@@ -98,29 +98,29 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getEventNameIDTerminalRuleCall_0_0() { return cEventNameIDTerminalRuleCall_0_0; }
 
-		//("(" param+=EventFeature ("," param+=EventFeature)* ")")?
+		//("(" params+=EventFeature ("," params+=EventFeature)* ")")?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_1_0() { return cLeftParenthesisKeyword_1_0; }
 
-		//param+=EventFeature
-		public Assignment getParamAssignment_1_1() { return cParamAssignment_1_1; }
+		//params+=EventFeature
+		public Assignment getParamsAssignment_1_1() { return cParamsAssignment_1_1; }
 
 		//EventFeature
-		public RuleCall getParamEventFeatureParserRuleCall_1_1_0() { return cParamEventFeatureParserRuleCall_1_1_0; }
+		public RuleCall getParamsEventFeatureParserRuleCall_1_1_0() { return cParamsEventFeatureParserRuleCall_1_1_0; }
 
-		//("," param+=EventFeature)*
+		//("," params+=EventFeature)*
 		public Group getGroup_1_2() { return cGroup_1_2; }
 
 		//","
 		public Keyword getCommaKeyword_1_2_0() { return cCommaKeyword_1_2_0; }
 
-		//param+=EventFeature
-		public Assignment getParamAssignment_1_2_1() { return cParamAssignment_1_2_1; }
+		//params+=EventFeature
+		public Assignment getParamsAssignment_1_2_1() { return cParamsAssignment_1_2_1; }
 
 		//EventFeature
-		public RuleCall getParamEventFeatureParserRuleCall_1_2_1_0() { return cParamEventFeatureParserRuleCall_1_2_1_0; }
+		public RuleCall getParamsEventFeatureParserRuleCall_1_2_1_0() { return cParamsEventFeatureParserRuleCall_1_2_1_0; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_1_3() { return cRightParenthesisKeyword_1_3; }
@@ -1104,7 +1104,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Event:
-	//	eventName=ID ("(" param+=EventFeature ("," param+=EventFeature)* ")")?;
+	//	eventName=ID ("(" params+=EventFeature ("," params+=EventFeature)* ")")?;
 	public EventElements getEventAccess() {
 		return (pEvent != null) ? pEvent : (pEvent = new EventElements());
 	}

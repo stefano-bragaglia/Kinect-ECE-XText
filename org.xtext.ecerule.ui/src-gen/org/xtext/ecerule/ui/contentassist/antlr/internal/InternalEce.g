@@ -1252,9 +1252,9 @@ rule__Event__Group_1__1__Impl
     }
 :
 (
-{ before(grammarAccess.getEventAccess().getParamAssignment_1_1()); }
-(rule__Event__ParamAssignment_1_1)
-{ after(grammarAccess.getEventAccess().getParamAssignment_1_1()); }
+{ before(grammarAccess.getEventAccess().getParamsAssignment_1_1()); }
+(rule__Event__ParamsAssignment_1_1)
+{ after(grammarAccess.getEventAccess().getParamsAssignment_1_1()); }
 )
 
 ;
@@ -1378,9 +1378,9 @@ rule__Event__Group_1_2__1__Impl
     }
 :
 (
-{ before(grammarAccess.getEventAccess().getParamAssignment_1_2_1()); }
-(rule__Event__ParamAssignment_1_2_1)
-{ after(grammarAccess.getEventAccess().getParamAssignment_1_2_1()); }
+{ before(grammarAccess.getEventAccess().getParamsAssignment_1_2_1()); }
+(rule__Event__ParamsAssignment_1_2_1)
+{ after(grammarAccess.getEventAccess().getParamsAssignment_1_2_1()); }
 )
 
 ;
@@ -4337,14 +4337,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Event__ParamAssignment_1_1
+rule__Event__ParamsAssignment_1_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getEventAccess().getParamEventFeatureParserRuleCall_1_1_0()); }
-	ruleEventFeature{ after(grammarAccess.getEventAccess().getParamEventFeatureParserRuleCall_1_1_0()); }
+{ before(grammarAccess.getEventAccess().getParamsEventFeatureParserRuleCall_1_1_0()); }
+	ruleEventFeature{ after(grammarAccess.getEventAccess().getParamsEventFeatureParserRuleCall_1_1_0()); }
 )
 
 ;
@@ -4352,14 +4352,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Event__ParamAssignment_1_2_1
+rule__Event__ParamsAssignment_1_2_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getEventAccess().getParamEventFeatureParserRuleCall_1_2_1_0()); }
-	ruleEventFeature{ after(grammarAccess.getEventAccess().getParamEventFeatureParserRuleCall_1_2_1_0()); }
+{ before(grammarAccess.getEventAccess().getParamsEventFeatureParserRuleCall_1_2_1_0()); }
+	ruleEventFeature{ after(grammarAccess.getEventAccess().getParamsEventFeatureParserRuleCall_1_2_1_0()); }
 )
 
 ;

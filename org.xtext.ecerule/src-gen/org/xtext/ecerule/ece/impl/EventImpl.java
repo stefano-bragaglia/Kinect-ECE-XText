@@ -30,7 +30,7 @@ import org.xtext.ecerule.ece.EventFeature;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.ecerule.ece.impl.EventImpl#getEventName <em>Event Name</em>}</li>
- *   <li>{@link org.xtext.ecerule.ece.impl.EventImpl#getParam <em>Param</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.impl.EventImpl#getParams <em>Params</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,14 +59,14 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
   protected String eventName = EVENT_NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getParam() <em>Param</em>}' containment reference list.
+   * The cached value of the '{@link #getParams() <em>Params</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParam()
+   * @see #getParams()
    * @generated
    * @ordered
    */
-  protected EList<EventFeature> param;
+  protected EList<EventFeature> params;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,13 +117,13 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<EventFeature> getParam()
+  public EList<EventFeature> getParams()
   {
-    if (param == null)
+    if (params == null)
     {
-      param = new EObjectContainmentEList<EventFeature>(EventFeature.class, this, EcePackage.EVENT__PARAM);
+      params = new EObjectContainmentEList<EventFeature>(EventFeature.class, this, EcePackage.EVENT__PARAMS);
     }
-    return param;
+    return params;
   }
 
   /**
@@ -136,8 +136,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
   {
     switch (featureID)
     {
-      case EcePackage.EVENT__PARAM:
-        return ((InternalEList<?>)getParam()).basicRemove(otherEnd, msgs);
+      case EcePackage.EVENT__PARAMS:
+        return ((InternalEList<?>)getParams()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -154,8 +154,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
     {
       case EcePackage.EVENT__EVENT_NAME:
         return getEventName();
-      case EcePackage.EVENT__PARAM:
-        return getParam();
+      case EcePackage.EVENT__PARAMS:
+        return getParams();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -174,9 +174,9 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
       case EcePackage.EVENT__EVENT_NAME:
         setEventName((String)newValue);
         return;
-      case EcePackage.EVENT__PARAM:
-        getParam().clear();
-        getParam().addAll((Collection<? extends EventFeature>)newValue);
+      case EcePackage.EVENT__PARAMS:
+        getParams().clear();
+        getParams().addAll((Collection<? extends EventFeature>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -195,8 +195,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
       case EcePackage.EVENT__EVENT_NAME:
         setEventName(EVENT_NAME_EDEFAULT);
         return;
-      case EcePackage.EVENT__PARAM:
-        getParam().clear();
+      case EcePackage.EVENT__PARAMS:
+        getParams().clear();
         return;
     }
     super.eUnset(featureID);
@@ -214,8 +214,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
     {
       case EcePackage.EVENT__EVENT_NAME:
         return EVENT_NAME_EDEFAULT == null ? eventName != null : !EVENT_NAME_EDEFAULT.equals(eventName);
-      case EcePackage.EVENT__PARAM:
-        return param != null && !param.isEmpty();
+      case EcePackage.EVENT__PARAMS:
+        return params != null && !params.isEmpty();
     }
     return super.eIsSet(featureID);
   }

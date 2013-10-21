@@ -141,13 +141,13 @@ public interface EcePackage extends EPackage
   int EVENT__EVENT_NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Param</b></em>' containment reference list.
+   * The feature id for the '<em><b>Params</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EVENT__PARAM = 1;
+  int EVENT__PARAMS = 1;
 
   /**
    * The number of structural features of the '<em>Event</em>' class.
@@ -1350,15 +1350,15 @@ public interface EcePackage extends EPackage
   EAttribute getEvent_EventName();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.Event#getParam <em>Param</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.ecerule.ece.Event#getParams <em>Params</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Param</em>'.
-   * @see org.xtext.ecerule.ece.Event#getParam()
+   * @return the meta object for the containment reference list '<em>Params</em>'.
+   * @see org.xtext.ecerule.ece.Event#getParams()
    * @see #getEvent()
    * @generated
    */
-  EReference getEvent_Param();
+  EReference getEvent_Params();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.EventFeature <em>Event Feature</em>}'.
@@ -2167,12 +2167,12 @@ public interface EcePackage extends EPackage
     EAttribute EVENT__EVENT_NAME = eINSTANCE.getEvent_EventName();
 
     /**
-     * The meta object literal for the '<em><b>Param</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Params</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EVENT__PARAM = eINSTANCE.getEvent_Param();
+    EReference EVENT__PARAMS = eINSTANCE.getEvent_Params();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.EventFeatureImpl <em>Event Feature</em>}' class.

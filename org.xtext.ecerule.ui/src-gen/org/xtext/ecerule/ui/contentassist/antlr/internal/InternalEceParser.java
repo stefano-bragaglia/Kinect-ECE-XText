@@ -3499,31 +3499,31 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Event__Group_1__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1249:1: rule__Event__Group_1__1__Impl : ( ( rule__Event__ParamAssignment_1_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1249:1: rule__Event__Group_1__1__Impl : ( ( rule__Event__ParamsAssignment_1_1 ) ) ;
     public final void rule__Event__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1253:1: ( ( ( rule__Event__ParamAssignment_1_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1254:1: ( ( rule__Event__ParamAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1253:1: ( ( ( rule__Event__ParamsAssignment_1_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1254:1: ( ( rule__Event__ParamsAssignment_1_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1254:1: ( ( rule__Event__ParamAssignment_1_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1255:1: ( rule__Event__ParamAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1254:1: ( ( rule__Event__ParamsAssignment_1_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1255:1: ( rule__Event__ParamsAssignment_1_1 )
             {
-             before(grammarAccess.getEventAccess().getParamAssignment_1_1()); 
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1256:1: ( rule__Event__ParamAssignment_1_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1256:2: rule__Event__ParamAssignment_1_1
+             before(grammarAccess.getEventAccess().getParamsAssignment_1_1()); 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1256:1: ( rule__Event__ParamsAssignment_1_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1256:2: rule__Event__ParamsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Event__ParamAssignment_1_1_in_rule__Event__Group_1__1__Impl2630);
-            rule__Event__ParamAssignment_1_1();
+            pushFollow(FOLLOW_rule__Event__ParamsAssignment_1_1_in_rule__Event__Group_1__1__Impl2630);
+            rule__Event__ParamsAssignment_1_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getEventAccess().getParamAssignment_1_1()); 
+             after(grammarAccess.getEventAccess().getParamsAssignment_1_1()); 
 
             }
 
@@ -3827,31 +3827,31 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Event__Group_1_2__1__Impl"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1375:1: rule__Event__Group_1_2__1__Impl : ( ( rule__Event__ParamAssignment_1_2_1 ) ) ;
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1375:1: rule__Event__Group_1_2__1__Impl : ( ( rule__Event__ParamsAssignment_1_2_1 ) ) ;
     public final void rule__Event__Group_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1379:1: ( ( ( rule__Event__ParamAssignment_1_2_1 ) ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1380:1: ( ( rule__Event__ParamAssignment_1_2_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1379:1: ( ( ( rule__Event__ParamsAssignment_1_2_1 ) ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1380:1: ( ( rule__Event__ParamsAssignment_1_2_1 ) )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1380:1: ( ( rule__Event__ParamAssignment_1_2_1 ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1381:1: ( rule__Event__ParamAssignment_1_2_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1380:1: ( ( rule__Event__ParamsAssignment_1_2_1 ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1381:1: ( rule__Event__ParamsAssignment_1_2_1 )
             {
-             before(grammarAccess.getEventAccess().getParamAssignment_1_2_1()); 
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1382:1: ( rule__Event__ParamAssignment_1_2_1 )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1382:2: rule__Event__ParamAssignment_1_2_1
+             before(grammarAccess.getEventAccess().getParamsAssignment_1_2_1()); 
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1382:1: ( rule__Event__ParamsAssignment_1_2_1 )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:1382:2: rule__Event__ParamsAssignment_1_2_1
             {
-            pushFollow(FOLLOW_rule__Event__ParamAssignment_1_2_1_in_rule__Event__Group_1_2__1__Impl2877);
-            rule__Event__ParamAssignment_1_2_1();
+            pushFollow(FOLLOW_rule__Event__ParamsAssignment_1_2_1_in_rule__Event__Group_1_2__1__Impl2877);
+            rule__Event__ParamsAssignment_1_2_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getEventAccess().getParamAssignment_1_2_1()); 
+             after(grammarAccess.getEventAccess().getParamsAssignment_1_2_1()); 
 
             }
 
@@ -11495,9 +11495,9 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Event__EventNameAssignment_0"
 
 
-    // $ANTLR start "rule__Event__ParamAssignment_1_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4340:1: rule__Event__ParamAssignment_1_1 : ( ruleEventFeature ) ;
-    public final void rule__Event__ParamAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Event__ParamsAssignment_1_1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4340:1: rule__Event__ParamsAssignment_1_1 : ( ruleEventFeature ) ;
+    public final void rule__Event__ParamsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -11508,13 +11508,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4345:1: ( ruleEventFeature )
             // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4346:1: ruleEventFeature
             {
-             before(grammarAccess.getEventAccess().getParamEventFeatureParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleEventFeature_in_rule__Event__ParamAssignment_1_18688);
+             before(grammarAccess.getEventAccess().getParamsEventFeatureParserRuleCall_1_1_0()); 
+            pushFollow(FOLLOW_ruleEventFeature_in_rule__Event__ParamsAssignment_1_18688);
             ruleEventFeature();
 
             state._fsp--;
 
-             after(grammarAccess.getEventAccess().getParamEventFeatureParserRuleCall_1_1_0()); 
+             after(grammarAccess.getEventAccess().getParamsEventFeatureParserRuleCall_1_1_0()); 
 
             }
 
@@ -11533,12 +11533,12 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Event__ParamAssignment_1_1"
+    // $ANTLR end "rule__Event__ParamsAssignment_1_1"
 
 
-    // $ANTLR start "rule__Event__ParamAssignment_1_2_1"
-    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4355:1: rule__Event__ParamAssignment_1_2_1 : ( ruleEventFeature ) ;
-    public final void rule__Event__ParamAssignment_1_2_1() throws RecognitionException {
+    // $ANTLR start "rule__Event__ParamsAssignment_1_2_1"
+    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4355:1: rule__Event__ParamsAssignment_1_2_1 : ( ruleEventFeature ) ;
+    public final void rule__Event__ParamsAssignment_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -11549,13 +11549,13 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4360:1: ( ruleEventFeature )
             // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4361:1: ruleEventFeature
             {
-             before(grammarAccess.getEventAccess().getParamEventFeatureParserRuleCall_1_2_1_0()); 
-            pushFollow(FOLLOW_ruleEventFeature_in_rule__Event__ParamAssignment_1_2_18719);
+             before(grammarAccess.getEventAccess().getParamsEventFeatureParserRuleCall_1_2_1_0()); 
+            pushFollow(FOLLOW_ruleEventFeature_in_rule__Event__ParamsAssignment_1_2_18719);
             ruleEventFeature();
 
             state._fsp--;
 
-             after(grammarAccess.getEventAccess().getParamEventFeatureParserRuleCall_1_2_1_0()); 
+             after(grammarAccess.getEventAccess().getParamsEventFeatureParserRuleCall_1_2_1_0()); 
 
             }
 
@@ -11574,7 +11574,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Event__ParamAssignment_1_2_1"
+    // $ANTLR end "rule__Event__ParamsAssignment_1_2_1"
 
 
     // $ANTLR start "rule__EventFeature__NameAssignment"
@@ -13225,7 +13225,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_32_in_rule__Event__Group_1__0__Impl2569 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Event__Group_1__1__Impl_in_rule__Event__Group_1__12600 = new BitSet(new long[]{0x0000000600000000L});
     public static final BitSet FOLLOW_rule__Event__Group_1__2_in_rule__Event__Group_1__12603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Event__ParamAssignment_1_1_in_rule__Event__Group_1__1__Impl2630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Event__ParamsAssignment_1_1_in_rule__Event__Group_1__1__Impl2630 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Event__Group_1__2__Impl_in_rule__Event__Group_1__22660 = new BitSet(new long[]{0x0000000600000000L});
     public static final BitSet FOLLOW_rule__Event__Group_1__3_in_rule__Event__Group_1__22663 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Event__Group_1_2__0_in_rule__Event__Group_1__2__Impl2690 = new BitSet(new long[]{0x0000000400000002L});
@@ -13235,7 +13235,7 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Event__Group_1_2__1_in_rule__Event__Group_1_2__02791 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_34_in_rule__Event__Group_1_2__0__Impl2819 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Event__Group_1_2__1__Impl_in_rule__Event__Group_1_2__12850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Event__ParamAssignment_1_2_1_in_rule__Event__Group_1_2__1__Impl2877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Event__ParamsAssignment_1_2_1_in_rule__Event__Group_1_2__1__Impl2877 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ContextsList__Group__0__Impl_in_rule__ContextsList__Group__02911 = new BitSet(new long[]{0x0000000400000000L});
     public static final BitSet FOLLOW_rule__ContextsList__Group__1_in_rule__ContextsList__Group__02914 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ContextsList__EcContextsListAssignment_0_in_rule__ContextsList__Group__0__Impl2941 = new BitSet(new long[]{0x0000000000000002L});
@@ -13461,8 +13461,8 @@ public class InternalEceParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleEvent_in_rule__Statement__EventAssignment_18595 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleContextsList_in_rule__Statement__ContextsListAssignment_28626 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__Event__EventNameAssignment_08657 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEventFeature_in_rule__Event__ParamAssignment_1_18688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEventFeature_in_rule__Event__ParamAssignment_1_2_18719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEventFeature_in_rule__Event__ParamsAssignment_1_18688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEventFeature_in_rule__Event__ParamsAssignment_1_2_18719 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__EventFeature__NameAssignment8750 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleEcContextsList_in_rule__ContextsList__EcContextsListAssignment_08781 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExpContextsList_in_rule__ContextsList__ExpContextsListAssignment_1_18812 = new BitSet(new long[]{0x0000000000000002L});

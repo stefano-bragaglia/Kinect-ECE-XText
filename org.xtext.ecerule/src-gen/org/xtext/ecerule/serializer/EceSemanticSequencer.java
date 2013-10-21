@@ -559,7 +559,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (eventName=ID (param+=EventFeature param+=EventFeature*)?)
+	 *     (eventName=ID (params+=EventFeature params+=EventFeature*)?)
 	 */
 	protected void sequence_Event(EObject context, Event semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

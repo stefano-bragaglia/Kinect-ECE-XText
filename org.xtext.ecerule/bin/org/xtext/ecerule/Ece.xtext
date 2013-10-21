@@ -11,7 +11,7 @@ Statement:
 
 Event:
 	eventName=ID 
-	('(' param+=EventFeature (',' param+=EventFeature)* ')')?;
+	('(' params+=EventFeature (',' params+=EventFeature)* ')')?;
 
 EventFeature:
 	name=ID;

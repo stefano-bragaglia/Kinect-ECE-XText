@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.ecerule.ece.Event#getEventName <em>Event Name</em>}</li>
- *   <li>{@link org.xtext.ecerule.ece.Event#getParam <em>Param</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.Event#getParams <em>Params</em>}</li>
  * </ul>
  * </p>
  *
@@ -52,19 +52,19 @@ public interface Event extends EObject
   void setEventName(String value);
 
   /**
-   * Returns the value of the '<em><b>Param</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Params</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.ecerule.ece.EventFeature}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Param</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Params</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Param</em>' containment reference list.
-   * @see org.xtext.ecerule.ece.EcePackage#getEvent_Param()
+   * @return the value of the '<em>Params</em>' containment reference list.
+   * @see org.xtext.ecerule.ece.EcePackage#getEvent_Params()
    * @model containment="true"
    * @generated
    */
-  EList<EventFeature> getParam();
+  EList<EventFeature> getParams();
 
 } // Event

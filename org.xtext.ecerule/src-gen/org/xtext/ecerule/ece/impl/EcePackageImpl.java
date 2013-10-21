@@ -398,7 +398,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEvent_Param()
+  public EReference getEvent_Params()
   {
     return (EReference)eventEClass.getEStructuralFeatures().get(1);
   }
@@ -1122,7 +1122,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
 
     eventEClass = createEClass(EVENT);
     createEAttribute(eventEClass, EVENT__EVENT_NAME);
-    createEReference(eventEClass, EVENT__PARAM);
+    createEReference(eventEClass, EVENT__PARAMS);
 
     eventFeatureEClass = createEClass(EVENT_FEATURE);
     createEAttribute(eventFeatureEClass, EVENT_FEATURE__NAME);
@@ -1276,7 +1276,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
 
     initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvent_EventName(), ecorePackage.getEString(), "eventName", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEvent_Param(), this.getEventFeature(), null, "param", null, 0, -1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEvent_Params(), this.getEventFeature(), null, "params", null, 0, -1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eventFeatureEClass, EventFeature.class, "EventFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEventFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, EventFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

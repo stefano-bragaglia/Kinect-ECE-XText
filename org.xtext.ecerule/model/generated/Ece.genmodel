@@ -16,7 +16,7 @@
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//Event">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Event/eventName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Event/param"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Event/params"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//EventFeature">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//EventFeature/name"/>

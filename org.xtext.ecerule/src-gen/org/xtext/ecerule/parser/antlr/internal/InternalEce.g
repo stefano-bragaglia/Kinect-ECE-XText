@@ -206,16 +206,16 @@ ruleEvent returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getEventAccess().getParamEventFeatureParserRuleCall_1_1_0()); 
+	        newCompositeNode(grammarAccess.getEventAccess().getParamsEventFeatureParserRuleCall_1_1_0()); 
 	    }
-		lv_param_2_0=ruleEventFeature		{
+		lv_params_2_0=ruleEventFeature		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getEventRule());
 	        }
        		add(
        			$current, 
-       			"param",
-        		lv_param_2_0, 
+       			"params",
+        		lv_params_2_0, 
         		"EventFeature");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -228,16 +228,16 @@ ruleEvent returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getEventAccess().getParamEventFeatureParserRuleCall_1_2_1_0()); 
+	        newCompositeNode(grammarAccess.getEventAccess().getParamsEventFeatureParserRuleCall_1_2_1_0()); 
 	    }
-		lv_param_4_0=ruleEventFeature		{
+		lv_params_4_0=ruleEventFeature		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getEventRule());
 	        }
        		add(
        			$current, 
-       			"param",
-        		lv_param_4_0, 
+       			"params",
+        		lv_params_4_0, 
         		"EventFeature");
 	        afterParserOrEnumRuleCall();
 	    }
