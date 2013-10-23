@@ -73,13 +73,15 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.EXP_CONTEXTS_LIST: return createExpContextsList();
       case EcePackage.EC_CONTEXT: return createEcContext();
       case EcePackage.EXP_CONTEXT: return createExpContext();
-      case EcePackage.TIME: return createTime();
       case EcePackage.ALLEN_OP: return createAllenOp();
       case EcePackage.FLUENT: return createFluent();
       case EcePackage.CONDITION_RULE: return createConditionRule();
       case EcePackage.TO_RULE: return createToRule();
       case EcePackage.IN_RULE: return createInRule();
       case EcePackage.EXPRESSION: return createExpression();
+      case EcePackage.REFERENCE_TYPE: return createReferenceType();
+      case EcePackage.AT_EXPR: return createAtExpr();
+      case EcePackage.IN_EXPR: return createInExpr();
       case EcePackage.ALLEN_OPERATOR: return createAllenOperator();
       case EcePackage.OR: return createOr();
       case EcePackage.AND: return createAnd();
@@ -92,8 +94,13 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.FLOAT_CONSTANT: return createFloatConstant();
       case EcePackage.INT_CONSTANT: return createIntConstant();
       case EcePackage.BOOL_CONSTANT: return createBoolConstant();
-      case EcePackage.FEATURE_REF: return createFeatureRef();
-      case EcePackage.FLUENT_REF: return createFluentRef();
+      case EcePackage.REFERENCE: return createReference();
+      case EcePackage.AT_TIME_PLUS_OR_MIN: return createAtTimePlusOrMin();
+      case EcePackage.AT_TIME_INT_CONSTANT: return createAtTimeIntConstant();
+      case EcePackage.AT_TIME_CURRENT_TIME: return createAtTimeCurrentTime();
+      case EcePackage.IN_TIME_PLUS_OR_MIN: return createInTimePlusOrMin();
+      case EcePackage.IN_TIME_INT_CONSTANT: return createInTimeIntConstant();
+      case EcePackage.IN_TIME_CURRENT_TIME: return createInTimeCurrentTime();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -203,17 +210,6 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Time createTime()
-  {
-    TimeImpl time = new TimeImpl();
-    return time;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public AllenOp createAllenOp()
   {
     AllenOpImpl allenOp = new AllenOpImpl();
@@ -273,6 +269,39 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
   {
     ExpressionImpl expression = new ExpressionImpl();
     return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ReferenceType createReferenceType()
+  {
+    ReferenceTypeImpl referenceType = new ReferenceTypeImpl();
+    return referenceType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtExpr createAtExpr()
+  {
+    AtExprImpl atExpr = new AtExprImpl();
+    return atExpr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InExpr createInExpr()
+  {
+    InExprImpl inExpr = new InExprImpl();
+    return inExpr;
   }
 
   /**
@@ -412,10 +441,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FeatureRef createFeatureRef()
+  public Reference createReference()
   {
-    FeatureRefImpl featureRef = new FeatureRefImpl();
-    return featureRef;
+    ReferenceImpl reference = new ReferenceImpl();
+    return reference;
   }
 
   /**
@@ -423,10 +452,65 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FluentRef createFluentRef()
+  public AtTimePlusOrMin createAtTimePlusOrMin()
   {
-    FluentRefImpl fluentRef = new FluentRefImpl();
-    return fluentRef;
+    AtTimePlusOrMinImpl atTimePlusOrMin = new AtTimePlusOrMinImpl();
+    return atTimePlusOrMin;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtTimeIntConstant createAtTimeIntConstant()
+  {
+    AtTimeIntConstantImpl atTimeIntConstant = new AtTimeIntConstantImpl();
+    return atTimeIntConstant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtTimeCurrentTime createAtTimeCurrentTime()
+  {
+    AtTimeCurrentTimeImpl atTimeCurrentTime = new AtTimeCurrentTimeImpl();
+    return atTimeCurrentTime;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InTimePlusOrMin createInTimePlusOrMin()
+  {
+    InTimePlusOrMinImpl inTimePlusOrMin = new InTimePlusOrMinImpl();
+    return inTimePlusOrMin;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InTimeIntConstant createInTimeIntConstant()
+  {
+    InTimeIntConstantImpl inTimeIntConstant = new InTimeIntConstantImpl();
+    return inTimeIntConstant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InTimeCurrentTime createInTimeCurrentTime()
+  {
+    InTimeCurrentTimeImpl inTimeCurrentTime = new InTimeCurrentTimeImpl();
+    return inTimeCurrentTime;
   }
 
   /**

@@ -7,52 +7,51 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.ecerule.ece.EcePackage;
-import org.xtext.ecerule.ece.Time;
+import org.xtext.ecerule.ece.InTimeCurrentTime;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Time</b></em>'.
+ * An implementation of the model object '<em><b>In Time Current Time</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.ecerule.ece.impl.TimeImpl#getT <em>T</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.impl.InTimeCurrentTimeImpl#getInTimeValue <em>In Time Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TimeImpl extends MinimalEObjectImpl.Container implements Time
+public class InTimeCurrentTimeImpl extends InExprImpl implements InTimeCurrentTime
 {
   /**
-   * The default value of the '{@link #getT() <em>T</em>}' attribute.
+   * The default value of the '{@link #getInTimeValue() <em>In Time Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getT()
+   * @see #getInTimeValue()
    * @generated
    * @ordered
    */
-  protected static final int T_EDEFAULT = 0;
+  protected static final String IN_TIME_VALUE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getT() <em>T</em>}' attribute.
+   * The cached value of the '{@link #getInTimeValue() <em>In Time Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getT()
+   * @see #getInTimeValue()
    * @generated
    * @ordered
    */
-  protected int t = T_EDEFAULT;
+  protected String inTimeValue = IN_TIME_VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TimeImpl()
+  protected InTimeCurrentTimeImpl()
   {
     super();
   }
@@ -65,7 +64,7 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time
   @Override
   protected EClass eStaticClass()
   {
-    return EcePackage.Literals.TIME;
+    return EcePackage.Literals.IN_TIME_CURRENT_TIME;
   }
 
   /**
@@ -73,9 +72,9 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getT()
+  public String getInTimeValue()
   {
-    return t;
+    return inTimeValue;
   }
 
   /**
@@ -83,12 +82,12 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setT(int newT)
+  public void setInTimeValue(String newInTimeValue)
   {
-    int oldT = t;
-    t = newT;
+    String oldInTimeValue = inTimeValue;
+    inTimeValue = newInTimeValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.TIME__T, oldT, t));
+      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.IN_TIME_CURRENT_TIME__IN_TIME_VALUE, oldInTimeValue, inTimeValue));
   }
 
   /**
@@ -101,8 +100,8 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time
   {
     switch (featureID)
     {
-      case EcePackage.TIME__T:
-        return getT();
+      case EcePackage.IN_TIME_CURRENT_TIME__IN_TIME_VALUE:
+        return getInTimeValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +116,8 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time
   {
     switch (featureID)
     {
-      case EcePackage.TIME__T:
-        setT((Integer)newValue);
+      case EcePackage.IN_TIME_CURRENT_TIME__IN_TIME_VALUE:
+        setInTimeValue((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +133,8 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time
   {
     switch (featureID)
     {
-      case EcePackage.TIME__T:
-        setT(T_EDEFAULT);
+      case EcePackage.IN_TIME_CURRENT_TIME__IN_TIME_VALUE:
+        setInTimeValue(IN_TIME_VALUE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +150,8 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time
   {
     switch (featureID)
     {
-      case EcePackage.TIME__T:
-        return t != T_EDEFAULT;
+      case EcePackage.IN_TIME_CURRENT_TIME__IN_TIME_VALUE:
+        return IN_TIME_VALUE_EDEFAULT == null ? inTimeValue != null : !IN_TIME_VALUE_EDEFAULT.equals(inTimeValue);
     }
     return super.eIsSet(featureID);
   }
@@ -168,10 +167,10 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (t: ");
-    result.append(t);
+    result.append(" (inTimeValue: ");
+    result.append(inTimeValue);
     result.append(')');
     return result.toString();
   }
 
-} //TimeImpl
+} //InTimeCurrentTimeImpl

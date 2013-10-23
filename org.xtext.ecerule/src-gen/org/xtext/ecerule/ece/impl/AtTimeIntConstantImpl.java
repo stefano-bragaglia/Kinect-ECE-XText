@@ -5,45 +5,53 @@ package org.xtext.ecerule.ece.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.ecerule.ece.AtTimeIntConstant;
 import org.xtext.ecerule.ece.EcePackage;
-import org.xtext.ecerule.ece.EventFeature;
-import org.xtext.ecerule.ece.FeatureRef;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Feature Ref</b></em>'.
+ * An implementation of the model object '<em><b>At Time Int Constant</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.ecerule.ece.impl.FeatureRefImpl#getParam <em>Param</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.impl.AtTimeIntConstantImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FeatureRefImpl extends ExpressionImpl implements FeatureRef
+public class AtTimeIntConstantImpl extends AtExprImpl implements AtTimeIntConstant
 {
   /**
-   * The cached value of the '{@link #getParam() <em>Param</em>}' reference.
+   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParam()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected EventFeature param;
+  protected static final int VALUE_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected int value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FeatureRefImpl()
+  protected AtTimeIntConstantImpl()
   {
     super();
   }
@@ -56,7 +64,7 @@ public class FeatureRefImpl extends ExpressionImpl implements FeatureRef
   @Override
   protected EClass eStaticClass()
   {
-    return EcePackage.Literals.FEATURE_REF;
+    return EcePackage.Literals.AT_TIME_INT_CONSTANT;
   }
 
   /**
@@ -64,19 +72,9 @@ public class FeatureRefImpl extends ExpressionImpl implements FeatureRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public EventFeature getParam()
+  public int getValue()
   {
-    if (param != null && param.eIsProxy())
-    {
-      InternalEObject oldParam = (InternalEObject)param;
-      param = (EventFeature)eResolveProxy(oldParam);
-      if (param != oldParam)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EcePackage.FEATURE_REF__PARAM, oldParam, param));
-      }
-    }
-    return param;
+    return value;
   }
 
   /**
@@ -84,22 +82,12 @@ public class FeatureRefImpl extends ExpressionImpl implements FeatureRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public EventFeature basicGetParam()
+  public void setValue(int newValue)
   {
-    return param;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setParam(EventFeature newParam)
-  {
-    EventFeature oldParam = param;
-    param = newParam;
+    int oldValue = value;
+    value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.FEATURE_REF__PARAM, oldParam, param));
+      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.AT_TIME_INT_CONSTANT__VALUE, oldValue, value));
   }
 
   /**
@@ -112,9 +100,8 @@ public class FeatureRefImpl extends ExpressionImpl implements FeatureRef
   {
     switch (featureID)
     {
-      case EcePackage.FEATURE_REF__PARAM:
-        if (resolve) return getParam();
-        return basicGetParam();
+      case EcePackage.AT_TIME_INT_CONSTANT__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -129,8 +116,8 @@ public class FeatureRefImpl extends ExpressionImpl implements FeatureRef
   {
     switch (featureID)
     {
-      case EcePackage.FEATURE_REF__PARAM:
-        setParam((EventFeature)newValue);
+      case EcePackage.AT_TIME_INT_CONSTANT__VALUE:
+        setValue((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -146,8 +133,8 @@ public class FeatureRefImpl extends ExpressionImpl implements FeatureRef
   {
     switch (featureID)
     {
-      case EcePackage.FEATURE_REF__PARAM:
-        setParam((EventFeature)null);
+      case EcePackage.AT_TIME_INT_CONSTANT__VALUE:
+        setValue(VALUE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -163,10 +150,27 @@ public class FeatureRefImpl extends ExpressionImpl implements FeatureRef
   {
     switch (featureID)
     {
-      case EcePackage.FEATURE_REF__PARAM:
-        return param != null;
+      case EcePackage.AT_TIME_INT_CONSTANT__VALUE:
+        return value != VALUE_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
 
-} //FeatureRefImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (value: ");
+    result.append(value);
+    result.append(')');
+    return result.toString();
+  }
+
+} //AtTimeIntConstantImpl

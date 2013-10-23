@@ -5,21 +5,21 @@ package org.xtext.ecerule.ece;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Fluent Ref</b></em>'.
+ * A representation of the model object '<em><b>At Time Int Constant</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.ecerule.ece.FluentRef#getValue <em>Value</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.AtTimeIntConstant#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.xtext.ecerule.ece.EcePackage#getFluentRef()
+ * @see org.xtext.ecerule.ece.EcePackage#getAtTimeIntConstant()
  * @model
  * @generated
  */
-public interface FluentRef extends Expression
+public interface AtTimeIntConstant extends AtExpr
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.
@@ -30,21 +30,21 @@ public interface FluentRef extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value</em>' attribute.
-   * @see #setValue(String)
-   * @see org.xtext.ecerule.ece.EcePackage#getFluentRef_Value()
+   * @see #setValue(int)
+   * @see org.xtext.ecerule.ece.EcePackage#getAtTimeIntConstant_Value()
    * @model
    * @generated
    */
-  String getValue();
+  int getValue();
 
   /**
-   * Sets the value of the '{@link org.xtext.ecerule.ece.FluentRef#getValue <em>Value</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.ecerule.ece.AtTimeIntConstant#getValue <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Value</em>' attribute.
    * @see #getValue()
    * @generated
    */
-  void setValue(String value);
+  void setValue(int value);
 
-} // FluentRef
+} // AtTimeIntConstant

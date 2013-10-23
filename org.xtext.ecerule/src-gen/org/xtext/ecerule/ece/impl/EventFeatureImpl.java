@@ -7,7 +7,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.EventFeature;
@@ -25,7 +24,7 @@ import org.xtext.ecerule.ece.EventFeature;
  *
  * @generated
  */
-public class EventFeatureImpl extends MinimalEObjectImpl.Container implements EventFeature
+public class EventFeatureImpl extends ReferenceTypeImpl implements EventFeature
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

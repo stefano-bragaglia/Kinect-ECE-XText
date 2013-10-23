@@ -97,6 +97,7 @@ public class EceSwitch<T> extends Switch<T>
       {
         EventFeature eventFeature = (EventFeature)theEObject;
         T result = caseEventFeature(eventFeature);
+        if (result == null) result = caseReferenceType(eventFeature);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -135,13 +136,6 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EcePackage.TIME:
-      {
-        Time time = (Time)theEObject;
-        T result = caseTime(time);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case EcePackage.ALLEN_OP:
       {
         AllenOp allenOp = (AllenOp)theEObject;
@@ -153,6 +147,7 @@ public class EceSwitch<T> extends Switch<T>
       {
         Fluent fluent = (Fluent)theEObject;
         T result = caseFluent(fluent);
+        if (result == null) result = caseReferenceType(fluent);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -183,6 +178,27 @@ public class EceSwitch<T> extends Switch<T>
         T result = caseExpression(expression);
         if (result == null) result = caseConditionRule(expression);
         if (result == null) result = caseToRule(expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.REFERENCE_TYPE:
+      {
+        ReferenceType referenceType = (ReferenceType)theEObject;
+        T result = caseReferenceType(referenceType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.AT_EXPR:
+      {
+        AtExpr atExpr = (AtExpr)theEObject;
+        T result = caseAtExpr(atExpr);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.IN_EXPR:
+      {
+        InExpr inExpr = (InExpr)theEObject;
+        T result = caseInExpr(inExpr);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -304,23 +320,61 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EcePackage.FEATURE_REF:
+      case EcePackage.REFERENCE:
       {
-        FeatureRef featureRef = (FeatureRef)theEObject;
-        T result = caseFeatureRef(featureRef);
-        if (result == null) result = caseExpression(featureRef);
-        if (result == null) result = caseConditionRule(featureRef);
-        if (result == null) result = caseToRule(featureRef);
+        Reference reference = (Reference)theEObject;
+        T result = caseReference(reference);
+        if (result == null) result = caseExpression(reference);
+        if (result == null) result = caseConditionRule(reference);
+        if (result == null) result = caseToRule(reference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EcePackage.FLUENT_REF:
+      case EcePackage.AT_TIME_PLUS_OR_MIN:
       {
-        FluentRef fluentRef = (FluentRef)theEObject;
-        T result = caseFluentRef(fluentRef);
-        if (result == null) result = caseExpression(fluentRef);
-        if (result == null) result = caseConditionRule(fluentRef);
-        if (result == null) result = caseToRule(fluentRef);
+        AtTimePlusOrMin atTimePlusOrMin = (AtTimePlusOrMin)theEObject;
+        T result = caseAtTimePlusOrMin(atTimePlusOrMin);
+        if (result == null) result = caseAtExpr(atTimePlusOrMin);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.AT_TIME_INT_CONSTANT:
+      {
+        AtTimeIntConstant atTimeIntConstant = (AtTimeIntConstant)theEObject;
+        T result = caseAtTimeIntConstant(atTimeIntConstant);
+        if (result == null) result = caseAtExpr(atTimeIntConstant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.AT_TIME_CURRENT_TIME:
+      {
+        AtTimeCurrentTime atTimeCurrentTime = (AtTimeCurrentTime)theEObject;
+        T result = caseAtTimeCurrentTime(atTimeCurrentTime);
+        if (result == null) result = caseAtExpr(atTimeCurrentTime);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.IN_TIME_PLUS_OR_MIN:
+      {
+        InTimePlusOrMin inTimePlusOrMin = (InTimePlusOrMin)theEObject;
+        T result = caseInTimePlusOrMin(inTimePlusOrMin);
+        if (result == null) result = caseInExpr(inTimePlusOrMin);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.IN_TIME_INT_CONSTANT:
+      {
+        InTimeIntConstant inTimeIntConstant = (InTimeIntConstant)theEObject;
+        T result = caseInTimeIntConstant(inTimeIntConstant);
+        if (result == null) result = caseInExpr(inTimeIntConstant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.IN_TIME_CURRENT_TIME:
+      {
+        InTimeCurrentTime inTimeCurrentTime = (InTimeCurrentTime)theEObject;
+        T result = caseInTimeCurrentTime(inTimeCurrentTime);
+        if (result == null) result = caseInExpr(inTimeCurrentTime);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -473,22 +527,6 @@ public class EceSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Time</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Time</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTime(Time object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Allen Op</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -580,6 +618,54 @@ public class EceSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExpression(Expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Reference Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Reference Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseReferenceType(ReferenceType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>At Expr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>At Expr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtExpr(AtExpr object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>In Expr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>In Expr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInExpr(InExpr object)
   {
     return null;
   }
@@ -777,33 +863,113 @@ public class EceSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Feature Ref</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Reference</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Feature Ref</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Reference</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFeatureRef(FeatureRef object)
+  public T caseReference(Reference object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Fluent Ref</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>At Time Plus Or Min</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Fluent Ref</em>'.
+   * @return the result of interpreting the object as an instance of '<em>At Time Plus Or Min</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFluentRef(FluentRef object)
+  public T caseAtTimePlusOrMin(AtTimePlusOrMin object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>At Time Int Constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>At Time Int Constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtTimeIntConstant(AtTimeIntConstant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>At Time Current Time</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>At Time Current Time</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtTimeCurrentTime(AtTimeCurrentTime object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>In Time Plus Or Min</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>In Time Plus Or Min</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInTimePlusOrMin(InTimePlusOrMin object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>In Time Int Constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>In Time Int Constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInTimeIntConstant(InTimeIntConstant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>In Time Current Time</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>In Time Current Time</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInTimeCurrentTime(InTimeCurrentTime object)
   {
     return null;
   }

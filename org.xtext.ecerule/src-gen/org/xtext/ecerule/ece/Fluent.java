@@ -2,7 +2,6 @@
  */
 package org.xtext.ecerule.ece;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Fluent extends EObject
+public interface Fluent extends ReferenceType
 {
   /**
    * Returns the value of the '<em><b>Fluent Name</b></em>' attribute.

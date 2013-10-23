@@ -447,11 +447,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:29:7: ( 'on' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:29:9: 'on'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:29:7: ( '-' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:29:9: '-'
             {
-            match("on"); 
-
+            match('-'); 
 
             }
 
@@ -468,10 +467,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:30:7: ( ';' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:30:9: ';'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:30:7: ( '+' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:30:9: '+'
             {
-            match(';'); 
+            match('+'); 
 
             }
 
@@ -488,10 +487,11 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:31:7: ( '(' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:31:9: '('
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:31:7: ( 'on' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:31:9: 'on'
             {
-            match('('); 
+            match("on"); 
+
 
             }
 
@@ -508,10 +508,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:32:7: ( ')' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:32:9: ')'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:32:7: ( ';' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:32:9: ';'
             {
-            match(')'); 
+            match(';'); 
 
             }
 
@@ -528,10 +528,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:33:7: ( ',' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:33:9: ','
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:33:7: ( '(' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:33:9: '('
             {
-            match(','); 
+            match('('); 
 
             }
 
@@ -548,11 +548,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:34:7: ( 'set' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:34:9: 'set'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:34:7: ( ')' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:34:9: ')'
             {
-            match("set"); 
-
+            match(')'); 
 
             }
 
@@ -569,11 +568,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:35:7: ( 'expect' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:35:9: 'expect'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:35:7: ( ',' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:35:9: ','
             {
-            match("expect"); 
-
+            match(','); 
 
             }
 
@@ -590,10 +588,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:36:7: ( 'if' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:36:9: 'if'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:36:7: ( 'set' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:36:9: 'set'
             {
-            match("if"); 
+            match("set"); 
 
 
             }
@@ -611,10 +609,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:37:7: ( 'to' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:37:9: 'to'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:37:7: ( 'expect' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:37:9: 'expect'
             {
-            match("to"); 
+            match("expect"); 
 
 
             }
@@ -632,10 +630,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:38:7: ( 'in' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:38:9: 'in'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:38:7: ( 'if' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:38:9: 'if'
             {
-            match("in"); 
+            match("if"); 
 
 
             }
@@ -653,10 +651,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:39:7: ( 'OR' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:39:9: 'OR'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:39:7: ( 'to' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:39:9: 'to'
             {
-            match("OR"); 
+            match("to"); 
 
 
             }
@@ -674,10 +672,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:40:7: ( 'AND' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:40:9: 'AND'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:40:7: ( 'in' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:40:9: 'in'
             {
-            match("AND"); 
+            match("in"); 
 
 
             }
@@ -695,10 +693,11 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:41:7: ( '+' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:41:9: '+'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:41:7: ( 'OR' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:41:9: 'OR'
             {
-            match('+'); 
+            match("OR"); 
+
 
             }
 
@@ -715,10 +714,11 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:42:7: ( '-' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:42:9: '-'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:42:7: ( 'AND' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:42:9: 'AND'
             {
-            match('-'); 
+            match("AND"); 
+
 
             }
 
@@ -755,10 +755,11 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:44:7: ( '[' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:44:9: '['
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:44:7: ( 'at' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:44:9: 'at'
             {
-            match('['); 
+            match("at"); 
+
 
             }
 
@@ -775,10 +776,11 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:45:7: ( ']' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:45:9: ']'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:45:7: ( 'now' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:45:9: 'now'
             {
-            match(']'); 
+            match("now"); 
+
 
             }
 
@@ -795,10 +797,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = RULE_FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4935:12: ( ( '0' .. '9' )* '.' ( '0' .. '9' )+ )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4935:14: ( '0' .. '9' )* '.' ( '0' .. '9' )+
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6082:12: ( ( '0' .. '9' )* '.' ( '0' .. '9' )+ )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6082:14: ( '0' .. '9' )* '.' ( '0' .. '9' )+
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4935:14: ( '0' .. '9' )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6082:14: ( '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -811,7 +813,7 @@ public class InternalEceLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4935:15: '0' .. '9'
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6082:15: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -824,7 +826,7 @@ public class InternalEceLexer extends Lexer {
             } while (true);
 
             match('.'); 
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4935:30: ( '0' .. '9' )+
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6082:30: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -838,7 +840,7 @@ public class InternalEceLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4935:31: '0' .. '9'
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6082:31: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -870,10 +872,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4937:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4937:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6084:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6084:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4937:11: ( '^' )?
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6084:11: ( '^' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -882,7 +884,7 @@ public class InternalEceLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4937:11: '^'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6084:11: '^'
                     {
                     match('^'); 
 
@@ -900,7 +902,7 @@ public class InternalEceLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4937:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6084:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -949,10 +951,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4939:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4939:12: ( '0' .. '9' )+
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6086:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6086:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4939:12: ( '0' .. '9' )+
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6086:12: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -966,7 +968,7 @@ public class InternalEceLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4939:13: '0' .. '9'
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6086:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -998,10 +1000,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1019,10 +1021,10 @@ public class InternalEceLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -1038,7 +1040,7 @@ public class InternalEceLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1054,7 +1056,7 @@ public class InternalEceLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1079,10 +1081,10 @@ public class InternalEceLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -1098,7 +1100,7 @@ public class InternalEceLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1114,7 +1116,7 @@ public class InternalEceLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4941:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6088:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1157,12 +1159,12 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4943:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4943:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6090:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6090:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4943:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6090:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -1187,7 +1189,7 @@ public class InternalEceLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4943:52: .
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6090:52: .
             	    {
             	    matchAny(); 
 
@@ -1217,12 +1219,12 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4945:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4945:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6092:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6092:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4945:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6092:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1235,7 +1237,7 @@ public class InternalEceLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4945:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6092:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1255,7 +1257,7 @@ public class InternalEceLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4945:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6092:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1264,9 +1266,9 @@ public class InternalEceLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4945:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6092:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4945:41: ( '\\r' )?
+                    // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6092:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1275,7 +1277,7 @@ public class InternalEceLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4945:41: '\\r'
+                            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6092:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1307,10 +1309,10 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4947:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4947:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6094:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6094:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4947:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6094:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1364,8 +1366,8 @@ public class InternalEceLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4949:16: ( . )
-            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:4949:18: .
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6096:16: ( . )
+            // ../org.xtext.ecerule.ui/src-gen/org/xtext/ecerule/ui/contentassist/antlr/internal/InternalEce.g:6096:18: .
             {
             matchAny(); 
 
@@ -1694,52 +1696,53 @@ public class InternalEceLexer extends Lexer {
     protected DFA14 dfa14 = new DFA14(this);
     static final String DFA14_eotS =
         "\1\uffff\6\44\1\42\1\57\1\61\1\63\1\uffff\1\67\1\uffff\1\71\1\44"+
-        "\4\uffff\4\44\4\uffff\1\111\1\42\1\uffff\2\42\2\uffff\1\44\1\uffff"+
-        "\2\44\1\121\5\44\15\uffff\1\44\1\130\4\uffff\1\44\1\132\1\133\1"+
-        "\134\1\44\5\uffff\1\111\3\uffff\3\44\1\uffff\1\44\1\142\4\44\1\uffff"+
-        "\1\44\3\uffff\1\150\4\44\1\uffff\3\44\1\160\1\44\1\uffff\1\44\1"+
-        "\163\3\44\1\167\1\44\1\uffff\1\44\1\172\1\uffff\1\44\1\174\1\44"+
-        "\1\uffff\1\176\1\177\1\uffff\1\44\1\uffff\1\44\2\uffff\1\u0082\1"+
-        "\u0083\2\uffff";
+        "\6\uffff\6\44\1\111\1\42\1\uffff\2\42\2\uffff\1\44\1\uffff\2\44"+
+        "\1\121\5\44\15\uffff\1\44\1\130\6\uffff\1\44\1\132\1\133\1\134\1"+
+        "\44\1\136\1\44\1\uffff\1\111\3\uffff\3\44\1\uffff\1\44\1\144\4\44"+
+        "\1\uffff\1\44\3\uffff\1\152\1\uffff\1\153\4\44\1\uffff\3\44\1\163"+
+        "\1\44\2\uffff\1\44\1\166\3\44\1\172\1\44\1\uffff\1\44\1\175\1\uffff"+
+        "\1\44\1\177\1\44\1\uffff\1\u0081\1\u0082\1\uffff\1\44\1\uffff\1"+
+        "\44\2\uffff\1\u0085\1\u0086\2\uffff";
     static final String DFA14_eofS =
-        "\u0084\uffff";
+        "\u0087\uffff";
     static final String DFA14_minS =
         "\1\0\2\145\1\156\1\145\1\141\1\165\4\75\1\uffff\1\52\1\uffff\1"+
-        "\101\1\157\4\uffff\1\170\1\146\1\122\1\116\4\uffff\1\56\1\60\1\uffff"+
-        "\2\0\2\uffff\1\146\1\uffff\2\145\1\60\1\141\1\164\1\156\1\154\1"+
-        "\162\15\uffff\1\165\1\60\4\uffff\1\160\3\60\1\104\5\uffff\1\56\3"+
-        "\uffff\1\157\1\164\1\162\1\uffff\1\162\1\60\1\151\1\163\1\151\1"+
-        "\145\1\uffff\1\145\3\uffff\1\60\1\162\1\163\1\154\1\164\1\uffff"+
-        "\1\163\1\145\1\156\1\60\1\143\1\uffff\1\145\1\60\1\141\1\163\1\150"+
-        "\1\60\1\147\1\uffff\1\164\1\60\1\uffff\1\160\1\60\1\145\1\uffff"+
-        "\2\60\1\uffff\1\163\1\uffff\1\163\2\uffff\2\60\2\uffff";
+        "\101\1\157\6\uffff\1\170\1\146\1\122\1\116\1\164\1\157\1\56\1\60"+
+        "\1\uffff\2\0\2\uffff\1\146\1\uffff\2\145\1\60\1\141\1\164\1\156"+
+        "\1\154\1\162\15\uffff\1\165\1\60\6\uffff\1\160\3\60\1\104\1\60\1"+
+        "\167\1\uffff\1\56\3\uffff\1\157\1\164\1\162\1\uffff\1\162\1\60\1"+
+        "\151\1\163\1\151\1\145\1\uffff\1\145\3\uffff\1\60\1\uffff\1\60\1"+
+        "\162\1\163\1\154\1\164\1\uffff\1\163\1\145\1\156\1\60\1\143\2\uffff"+
+        "\1\145\1\60\1\141\1\163\1\150\1\60\1\147\1\uffff\1\164\1\60\1\uffff"+
+        "\1\160\1\60\1\145\1\uffff\2\60\1\uffff\1\163\1\uffff\1\163\2\uffff"+
+        "\2\60\2\uffff";
     static final String DFA14_maxS =
         "\1\uffff\2\145\1\166\1\164\1\151\1\165\4\75\1\uffff\1\57\1\uffff"+
-        "\1\172\1\162\4\uffff\1\170\1\156\1\122\1\116\4\uffff\2\71\1\uffff"+
-        "\2\uffff\2\uffff\1\146\1\uffff\2\145\1\172\1\141\1\164\1\156\1\154"+
-        "\1\162\15\uffff\1\165\1\172\4\uffff\1\160\3\172\1\104\5\uffff\1"+
-        "\71\3\uffff\1\157\1\164\1\162\1\uffff\1\162\1\172\1\151\1\163\1"+
-        "\151\1\145\1\uffff\1\145\3\uffff\1\172\1\162\1\163\1\154\1\164\1"+
-        "\uffff\1\163\1\145\1\156\1\172\1\143\1\uffff\1\145\1\172\1\141\1"+
-        "\163\1\150\1\172\1\147\1\uffff\1\164\1\172\1\uffff\1\160\1\172\1"+
-        "\145\1\uffff\2\172\1\uffff\1\163\1\uffff\1\163\2\uffff\2\172\2\uffff";
+        "\1\172\1\162\6\uffff\1\170\1\156\1\122\1\116\1\164\1\157\2\71\1"+
+        "\uffff\2\uffff\2\uffff\1\146\1\uffff\2\145\1\172\1\141\1\164\1\156"+
+        "\1\154\1\162\15\uffff\1\165\1\172\6\uffff\1\160\3\172\1\104\1\172"+
+        "\1\167\1\uffff\1\71\3\uffff\1\157\1\164\1\162\1\uffff\1\162\1\172"+
+        "\1\151\1\163\1\151\1\145\1\uffff\1\145\3\uffff\1\172\1\uffff\1\172"+
+        "\1\162\1\163\1\154\1\164\1\uffff\1\163\1\145\1\156\1\172\1\143\2"+
+        "\uffff\1\145\1\172\1\141\1\163\1\150\1\172\1\147\1\uffff\1\164\1"+
+        "\172\1\uffff\1\160\1\172\1\145\1\uffff\2\172\1\uffff\1\163\1\uffff"+
+        "\1\163\2\uffff\2\172\2\uffff";
     static final String DFA14_acceptS =
-        "\13\uffff\1\15\1\uffff\1\17\2\uffff\1\24\1\25\1\26\1\27\4\uffff"+
-        "\1\37\1\40\1\42\1\43\2\uffff\1\45\2\uffff\1\52\1\53\1\uffff\1\45"+
-        "\10\uffff\1\7\1\10\1\41\1\11\1\13\1\12\1\14\1\15\1\50\1\51\1\16"+
-        "\1\17\1\20\2\uffff\1\24\1\25\1\26\1\27\5\uffff\1\37\1\40\1\42\1"+
-        "\43\1\46\1\uffff\1\44\1\47\1\52\3\uffff\1\23\6\uffff\1\33\1\uffff"+
-        "\1\32\1\34\1\35\5\uffff\1\30\5\uffff\1\36\7\uffff\1\21\2\uffff\1"+
-        "\2\3\uffff\1\22\2\uffff\1\1\1\uffff\1\4\1\uffff\1\6\1\31\2\uffff"+
-        "\1\3\1\5";
+        "\13\uffff\1\15\1\uffff\1\17\2\uffff\1\23\1\24\1\26\1\27\1\30\1"+
+        "\31\10\uffff\1\45\2\uffff\1\52\1\53\1\uffff\1\45\10\uffff\1\7\1"+
+        "\10\1\41\1\11\1\13\1\12\1\14\1\15\1\50\1\51\1\16\1\17\1\20\2\uffff"+
+        "\1\23\1\24\1\26\1\27\1\30\1\31\7\uffff\1\46\1\uffff\1\44\1\47\1"+
+        "\52\3\uffff\1\25\6\uffff\1\35\1\uffff\1\34\1\36\1\37\1\uffff\1\42"+
+        "\5\uffff\1\32\5\uffff\1\40\1\43\7\uffff\1\21\2\uffff\1\2\3\uffff"+
+        "\1\22\2\uffff\1\1\1\uffff\1\4\1\uffff\1\6\1\33\2\uffff\1\3\1\5";
     static final String DFA14_specialS =
-        "\1\1\36\uffff\1\0\1\2\143\uffff}>";
+        "\1\1\36\uffff\1\0\1\2\146\uffff}>";
     static final String[] DFA14_transitionS = {
             "\11\42\2\41\2\42\1\41\22\42\1\41\1\10\1\37\2\42\1\15\1\42\1"+
-            "\40\1\21\1\22\1\13\1\30\1\23\1\31\1\35\1\14\12\34\1\42\1\20"+
-            "\1\12\1\7\1\11\2\42\1\27\15\36\1\26\13\36\1\32\1\42\1\33\1\16"+
-            "\1\36\1\42\1\36\1\1\1\36\1\6\1\24\1\5\2\36\1\25\3\36\1\2\1\36"+
-            "\1\3\3\36\1\4\1\17\6\36\uff85\42",
+            "\40\1\23\1\24\1\13\1\21\1\25\1\20\1\35\1\14\12\34\1\42\1\22"+
+            "\1\12\1\7\1\11\2\42\1\31\15\36\1\30\13\36\3\42\1\16\1\36\1\42"+
+            "\1\32\1\1\1\36\1\6\1\26\1\5\2\36\1\27\3\36\1\2\1\33\1\3\3\36"+
+            "\1\4\1\17\6\36\uff85\42",
             "\1\43",
             "\1\45",
             "\1\47\7\uffff\1\46",
@@ -1759,14 +1762,14 @@ public class InternalEceLexer extends Lexer {
             "",
             "",
             "",
-            "\1\100",
-            "\1\101\7\uffff\1\102",
-            "\1\103",
-            "\1\104",
             "",
             "",
-            "",
-            "",
+            "\1\102",
+            "\1\103\7\uffff\1\104",
+            "\1\105",
+            "\1\106",
+            "\1\107",
+            "\1\110",
             "\1\113\1\uffff\12\112",
             "\12\113",
             "",
@@ -1803,68 +1806,71 @@ public class InternalEceLexer extends Lexer {
             "",
             "",
             "",
+            "",
+            "",
             "\1\131",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\135",
-            "",
-            "",
-            "",
-            "",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\137",
             "",
             "\1\113\1\uffff\12\112",
             "",
             "",
             "",
-            "\1\136",
-            "\1\137",
             "\1\140",
-            "",
             "\1\141",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\142",
+            "",
             "\1\143",
-            "\1\144",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\145",
             "\1\146",
-            "",
             "\1\147",
+            "\1\150",
+            "",
+            "\1\151",
             "",
             "",
             "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\151",
-            "\1\152",
-            "\1\153",
-            "\1\154",
             "",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\154",
             "\1\155",
             "\1\156",
             "\1\157",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\161",
             "",
+            "\1\160",
+            "\1\161",
             "\1\162",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\164",
-            "\1\165",
-            "\1\166",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\170",
             "",
+            "",
+            "\1\165",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\167",
+            "\1\170",
             "\1\171",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "",
             "\1\173",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\175",
             "",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\174",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "",
+            "\1\176",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\u0080",
             "",
-            "\1\u0081",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "",
+            "\1\u0083",
+            "",
+            "\1\u0084",
             "",
             "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
@@ -1953,35 +1959,35 @@ public class InternalEceLexer extends Lexer {
 
                         else if ( (LA14_0=='t') ) {s = 15;}
 
-                        else if ( (LA14_0==';') ) {s = 16;}
+                        else if ( (LA14_0=='-') ) {s = 16;}
 
-                        else if ( (LA14_0=='(') ) {s = 17;}
+                        else if ( (LA14_0=='+') ) {s = 17;}
 
-                        else if ( (LA14_0==')') ) {s = 18;}
+                        else if ( (LA14_0==';') ) {s = 18;}
 
-                        else if ( (LA14_0==',') ) {s = 19;}
+                        else if ( (LA14_0=='(') ) {s = 19;}
 
-                        else if ( (LA14_0=='e') ) {s = 20;}
+                        else if ( (LA14_0==')') ) {s = 20;}
 
-                        else if ( (LA14_0=='i') ) {s = 21;}
+                        else if ( (LA14_0==',') ) {s = 21;}
 
-                        else if ( (LA14_0=='O') ) {s = 22;}
+                        else if ( (LA14_0=='e') ) {s = 22;}
 
-                        else if ( (LA14_0=='A') ) {s = 23;}
+                        else if ( (LA14_0=='i') ) {s = 23;}
 
-                        else if ( (LA14_0=='+') ) {s = 24;}
+                        else if ( (LA14_0=='O') ) {s = 24;}
 
-                        else if ( (LA14_0=='-') ) {s = 25;}
+                        else if ( (LA14_0=='A') ) {s = 25;}
 
-                        else if ( (LA14_0=='[') ) {s = 26;}
+                        else if ( (LA14_0=='a') ) {s = 26;}
 
-                        else if ( (LA14_0==']') ) {s = 27;}
+                        else if ( (LA14_0=='n') ) {s = 27;}
 
                         else if ( ((LA14_0>='0' && LA14_0<='9')) ) {s = 28;}
 
                         else if ( (LA14_0=='.') ) {s = 29;}
 
-                        else if ( ((LA14_0>='B' && LA14_0<='N')||(LA14_0>='P' && LA14_0<='Z')||LA14_0=='_'||LA14_0=='a'||LA14_0=='c'||(LA14_0>='g' && LA14_0<='h')||(LA14_0>='j' && LA14_0<='l')||LA14_0=='n'||(LA14_0>='p' && LA14_0<='r')||(LA14_0>='u' && LA14_0<='z')) ) {s = 30;}
+                        else if ( ((LA14_0>='B' && LA14_0<='N')||(LA14_0>='P' && LA14_0<='Z')||LA14_0=='_'||LA14_0=='c'||(LA14_0>='g' && LA14_0<='h')||(LA14_0>='j' && LA14_0<='l')||(LA14_0>='p' && LA14_0<='r')||(LA14_0>='u' && LA14_0<='z')) ) {s = 30;}
 
                         else if ( (LA14_0=='\"') ) {s = 31;}
 
@@ -1989,7 +1995,7 @@ public class InternalEceLexer extends Lexer {
 
                         else if ( ((LA14_0>='\t' && LA14_0<='\n')||LA14_0=='\r'||LA14_0==' ') ) {s = 33;}
 
-                        else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||(LA14_0>='#' && LA14_0<='$')||LA14_0=='&'||LA14_0==':'||(LA14_0>='?' && LA14_0<='@')||LA14_0=='\\'||LA14_0=='`'||(LA14_0>='{' && LA14_0<='\uFFFF')) ) {s = 34;}
+                        else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||(LA14_0>='#' && LA14_0<='$')||LA14_0=='&'||LA14_0==':'||(LA14_0>='?' && LA14_0<='@')||(LA14_0>='[' && LA14_0<=']')||LA14_0=='`'||(LA14_0>='{' && LA14_0<='\uFFFF')) ) {s = 34;}
 
                         if ( s>=0 ) return s;
                         break;

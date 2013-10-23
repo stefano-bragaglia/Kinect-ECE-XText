@@ -12,6 +12,10 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.xtext.ecerule.ece.AllenOp;
 import org.xtext.ecerule.ece.AllenOperator;
 import org.xtext.ecerule.ece.And;
+import org.xtext.ecerule.ece.AtExpr;
+import org.xtext.ecerule.ece.AtTimeCurrentTime;
+import org.xtext.ecerule.ece.AtTimeIntConstant;
+import org.xtext.ecerule.ece.AtTimePlusOrMin;
 import org.xtext.ecerule.ece.BoolConstant;
 import org.xtext.ecerule.ece.Comparison;
 import org.xtext.ecerule.ece.ConditionRule;
@@ -27,19 +31,22 @@ import org.xtext.ecerule.ece.EventFeature;
 import org.xtext.ecerule.ece.ExpContext;
 import org.xtext.ecerule.ece.ExpContextsList;
 import org.xtext.ecerule.ece.Expression;
-import org.xtext.ecerule.ece.FeatureRef;
 import org.xtext.ecerule.ece.FloatConstant;
 import org.xtext.ecerule.ece.Fluent;
-import org.xtext.ecerule.ece.FluentRef;
+import org.xtext.ecerule.ece.InExpr;
 import org.xtext.ecerule.ece.InRule;
+import org.xtext.ecerule.ece.InTimeCurrentTime;
+import org.xtext.ecerule.ece.InTimeIntConstant;
+import org.xtext.ecerule.ece.InTimePlusOrMin;
 import org.xtext.ecerule.ece.IntConstant;
 import org.xtext.ecerule.ece.Minus;
 import org.xtext.ecerule.ece.MulOrDiv;
 import org.xtext.ecerule.ece.Not;
 import org.xtext.ecerule.ece.Or;
 import org.xtext.ecerule.ece.Plus;
+import org.xtext.ecerule.ece.Reference;
+import org.xtext.ecerule.ece.ReferenceType;
 import org.xtext.ecerule.ece.Statement;
-import org.xtext.ecerule.ece.Time;
 import org.xtext.ecerule.ece.ToRule;
 
 /**
@@ -118,13 +125,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass timeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass allenOpEClass = null;
 
   /**
@@ -161,6 +161,27 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * @generated
    */
   private EClass expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass referenceTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass atExprEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass inExprEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -251,14 +272,49 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass featureRefEClass = null;
+  private EClass referenceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass fluentRefEClass = null;
+  private EClass atTimePlusOrMinEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass atTimeIntConstantEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass atTimeCurrentTimeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass inTimePlusOrMinEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass inTimeIntConstantEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass inTimeCurrentTimeEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -568,26 +624,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getTime()
-  {
-    return timeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getTime_T()
-  {
-    return (EAttribute)timeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getAllenOp()
   {
     return allenOpEClass;
@@ -711,6 +747,36 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
   public EReference getExpression_Expression()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getReferenceType()
+  {
+    return referenceTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAtExpr()
+  {
+    return atExprEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInExpr()
+  {
+    return inExprEClass;
   }
 
   /**
@@ -1048,9 +1114,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getFeatureRef()
+  public EClass getReference()
   {
-    return featureRefEClass;
+    return referenceEClass;
   }
 
   /**
@@ -1058,9 +1124,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFeatureRef_Param()
+  public EReference getReference_Ref()
   {
-    return (EReference)featureRefEClass.getEStructuralFeatures().get(0);
+    return (EReference)referenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1068,9 +1134,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getFluentRef()
+  public EReference getReference_FluentValueSample()
   {
-    return fluentRefEClass;
+    return (EReference)referenceEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1078,9 +1144,159 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFluentRef_Value()
+  public EClass getAtTimePlusOrMin()
   {
-    return (EAttribute)fluentRefEClass.getEStructuralFeatures().get(0);
+    return atTimePlusOrMinEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAtTimePlusOrMin_Left()
+  {
+    return (EReference)atTimePlusOrMinEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtTimePlusOrMin_Op()
+  {
+    return (EAttribute)atTimePlusOrMinEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAtTimePlusOrMin_Right()
+  {
+    return (EReference)atTimePlusOrMinEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAtTimeIntConstant()
+  {
+    return atTimeIntConstantEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtTimeIntConstant_Value()
+  {
+    return (EAttribute)atTimeIntConstantEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAtTimeCurrentTime()
+  {
+    return atTimeCurrentTimeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtTimeCurrentTime_AtTimeValue()
+  {
+    return (EAttribute)atTimeCurrentTimeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInTimePlusOrMin()
+  {
+    return inTimePlusOrMinEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInTimePlusOrMin_Left()
+  {
+    return (EReference)inTimePlusOrMinEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInTimePlusOrMin_Op()
+  {
+    return (EAttribute)inTimePlusOrMinEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInTimePlusOrMin_Right()
+  {
+    return (EReference)inTimePlusOrMinEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInTimeIntConstant()
+  {
+    return inTimeIntConstantEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInTimeIntConstant_Value()
+  {
+    return (EAttribute)inTimeIntConstantEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInTimeCurrentTime()
+  {
+    return inTimeCurrentTimeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInTimeCurrentTime_InTimeValue()
+  {
+    return (EAttribute)inTimeCurrentTimeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1146,9 +1362,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     createEReference(expContextEClass, EXP_CONTEXT__TIME);
     createEReference(expContextEClass, EXP_CONTEXT__INITIAL_CONDITION);
 
-    timeEClass = createEClass(TIME);
-    createEAttribute(timeEClass, TIME__T);
-
     allenOpEClass = createEClass(ALLEN_OP);
 
     fluentEClass = createEClass(FLUENT);
@@ -1167,6 +1380,12 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     expressionEClass = createEClass(EXPRESSION);
     createEReference(expressionEClass, EXPRESSION__CONDITION);
     createEReference(expressionEClass, EXPRESSION__EXPRESSION);
+
+    referenceTypeEClass = createEClass(REFERENCE_TYPE);
+
+    atExprEClass = createEClass(AT_EXPR);
+
+    inExprEClass = createEClass(IN_EXPR);
 
     allenOperatorEClass = createEClass(ALLEN_OPERATOR);
     createEAttribute(allenOperatorEClass, ALLEN_OPERATOR__VALUE);
@@ -1213,11 +1432,31 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     boolConstantEClass = createEClass(BOOL_CONSTANT);
     createEAttribute(boolConstantEClass, BOOL_CONSTANT__VALUE);
 
-    featureRefEClass = createEClass(FEATURE_REF);
-    createEReference(featureRefEClass, FEATURE_REF__PARAM);
+    referenceEClass = createEClass(REFERENCE);
+    createEReference(referenceEClass, REFERENCE__REF);
+    createEReference(referenceEClass, REFERENCE__FLUENT_VALUE_SAMPLE);
 
-    fluentRefEClass = createEClass(FLUENT_REF);
-    createEAttribute(fluentRefEClass, FLUENT_REF__VALUE);
+    atTimePlusOrMinEClass = createEClass(AT_TIME_PLUS_OR_MIN);
+    createEReference(atTimePlusOrMinEClass, AT_TIME_PLUS_OR_MIN__LEFT);
+    createEAttribute(atTimePlusOrMinEClass, AT_TIME_PLUS_OR_MIN__OP);
+    createEReference(atTimePlusOrMinEClass, AT_TIME_PLUS_OR_MIN__RIGHT);
+
+    atTimeIntConstantEClass = createEClass(AT_TIME_INT_CONSTANT);
+    createEAttribute(atTimeIntConstantEClass, AT_TIME_INT_CONSTANT__VALUE);
+
+    atTimeCurrentTimeEClass = createEClass(AT_TIME_CURRENT_TIME);
+    createEAttribute(atTimeCurrentTimeEClass, AT_TIME_CURRENT_TIME__AT_TIME_VALUE);
+
+    inTimePlusOrMinEClass = createEClass(IN_TIME_PLUS_OR_MIN);
+    createEReference(inTimePlusOrMinEClass, IN_TIME_PLUS_OR_MIN__LEFT);
+    createEAttribute(inTimePlusOrMinEClass, IN_TIME_PLUS_OR_MIN__OP);
+    createEReference(inTimePlusOrMinEClass, IN_TIME_PLUS_OR_MIN__RIGHT);
+
+    inTimeIntConstantEClass = createEClass(IN_TIME_INT_CONSTANT);
+    createEAttribute(inTimeIntConstantEClass, IN_TIME_INT_CONSTANT__VALUE);
+
+    inTimeCurrentTimeEClass = createEClass(IN_TIME_CURRENT_TIME);
+    createEAttribute(inTimeCurrentTimeEClass, IN_TIME_CURRENT_TIME__IN_TIME_VALUE);
   }
 
   /**
@@ -1249,6 +1488,8 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    eventFeatureEClass.getESuperTypes().add(this.getReferenceType());
+    fluentEClass.getESuperTypes().add(this.getReferenceType());
     expressionEClass.getESuperTypes().add(this.getConditionRule());
     expressionEClass.getESuperTypes().add(this.getToRule());
     allenOperatorEClass.getESuperTypes().add(this.getAllenOp());
@@ -1263,8 +1504,13 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     floatConstantEClass.getESuperTypes().add(this.getExpression());
     intConstantEClass.getESuperTypes().add(this.getExpression());
     boolConstantEClass.getESuperTypes().add(this.getExpression());
-    featureRefEClass.getESuperTypes().add(this.getExpression());
-    fluentRefEClass.getESuperTypes().add(this.getExpression());
+    referenceEClass.getESuperTypes().add(this.getExpression());
+    atTimePlusOrMinEClass.getESuperTypes().add(this.getAtExpr());
+    atTimeIntConstantEClass.getESuperTypes().add(this.getAtExpr());
+    atTimeCurrentTimeEClass.getESuperTypes().add(this.getAtExpr());
+    inTimePlusOrMinEClass.getESuperTypes().add(this.getInExpr());
+    inTimeIntConstantEClass.getESuperTypes().add(this.getInExpr());
+    inTimeCurrentTimeEClass.getESuperTypes().add(this.getInExpr());
 
     // Initialize classes and features; add operations and parameters
     initEClass(eceModelEClass, EceModel.class, "EceModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1297,11 +1543,8 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     initEClass(expContextEClass, ExpContext.class, "ExpContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExpContext_FinalCondition(), this.getConditionRule(), null, "finalCondition", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpContext_AllenOp(), this.getAllenOp(), null, "allenOp", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpContext_Time(), this.getTime(), null, "time", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpContext_Time(), this.getAtExpr(), null, "time", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpContext_InitialCondition(), this.getConditionRule(), null, "initialCondition", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(timeEClass, Time.class, "Time", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTime_T(), ecorePackage.getEInt(), "t", null, 0, 1, Time.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(allenOpEClass, AllenOp.class, "AllenOp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1321,6 +1564,12 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExpression_Condition(), this.getExpression(), null, "condition", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(referenceTypeEClass, ReferenceType.class, "ReferenceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(atExprEClass, AtExpr.class, "AtExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(inExprEClass, InExpr.class, "InExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(allenOperatorEClass, AllenOperator.class, "AllenOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAllenOperator_Value(), ecorePackage.getEString(), "value", null, 0, 1, AllenOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1367,11 +1616,31 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     initEClass(boolConstantEClass, BoolConstant.class, "BoolConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBoolConstant_Value(), ecorePackage.getEString(), "value", null, 0, 1, BoolConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(featureRefEClass, FeatureRef.class, "FeatureRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFeatureRef_Param(), this.getEventFeature(), null, "param", null, 0, 1, FeatureRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(referenceEClass, Reference.class, "Reference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getReference_Ref(), this.getReferenceType(), null, "ref", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getReference_FluentValueSample(), this.getAtExpr(), null, "fluentValueSample", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(fluentRefEClass, FluentRef.class, "FluentRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFluentRef_Value(), ecorePackage.getEString(), "value", null, 0, 1, FluentRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(atTimePlusOrMinEClass, AtTimePlusOrMin.class, "AtTimePlusOrMin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAtTimePlusOrMin_Left(), this.getAtExpr(), null, "left", null, 0, 1, AtTimePlusOrMin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAtTimePlusOrMin_Op(), ecorePackage.getEString(), "op", null, 0, 1, AtTimePlusOrMin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAtTimePlusOrMin_Right(), this.getAtExpr(), null, "right", null, 0, 1, AtTimePlusOrMin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(atTimeIntConstantEClass, AtTimeIntConstant.class, "AtTimeIntConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtTimeIntConstant_Value(), ecorePackage.getEInt(), "value", null, 0, 1, AtTimeIntConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(atTimeCurrentTimeEClass, AtTimeCurrentTime.class, "AtTimeCurrentTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtTimeCurrentTime_AtTimeValue(), ecorePackage.getEString(), "atTimeValue", null, 0, 1, AtTimeCurrentTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(inTimePlusOrMinEClass, InTimePlusOrMin.class, "InTimePlusOrMin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInTimePlusOrMin_Left(), this.getInExpr(), null, "left", null, 0, 1, InTimePlusOrMin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getInTimePlusOrMin_Op(), ecorePackage.getEString(), "op", null, 0, 1, InTimePlusOrMin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInTimePlusOrMin_Right(), this.getInExpr(), null, "right", null, 0, 1, InTimePlusOrMin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(inTimeIntConstantEClass, InTimeIntConstant.class, "InTimeIntConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInTimeIntConstant_Value(), ecorePackage.getEInt(), "value", null, 0, 1, InTimeIntConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(inTimeCurrentTimeEClass, InTimeCurrentTime.class, "InTimeCurrentTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInTimeCurrentTime_InTimeValue(), ecorePackage.getEString(), "inTimeValue", null, 0, 1, InTimeCurrentTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

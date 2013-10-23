@@ -120,11 +120,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createExpContextAdapter();
       }
       @Override
-      public Adapter caseTime(Time object)
-      {
-        return createTimeAdapter();
-      }
-      @Override
       public Adapter caseAllenOp(AllenOp object)
       {
         return createAllenOpAdapter();
@@ -153,6 +148,21 @@ public class EceAdapterFactory extends AdapterFactoryImpl
       public Adapter caseExpression(Expression object)
       {
         return createExpressionAdapter();
+      }
+      @Override
+      public Adapter caseReferenceType(ReferenceType object)
+      {
+        return createReferenceTypeAdapter();
+      }
+      @Override
+      public Adapter caseAtExpr(AtExpr object)
+      {
+        return createAtExprAdapter();
+      }
+      @Override
+      public Adapter caseInExpr(InExpr object)
+      {
+        return createInExprAdapter();
       }
       @Override
       public Adapter caseAllenOperator(AllenOperator object)
@@ -215,14 +225,39 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createBoolConstantAdapter();
       }
       @Override
-      public Adapter caseFeatureRef(FeatureRef object)
+      public Adapter caseReference(Reference object)
       {
-        return createFeatureRefAdapter();
+        return createReferenceAdapter();
       }
       @Override
-      public Adapter caseFluentRef(FluentRef object)
+      public Adapter caseAtTimePlusOrMin(AtTimePlusOrMin object)
       {
-        return createFluentRefAdapter();
+        return createAtTimePlusOrMinAdapter();
+      }
+      @Override
+      public Adapter caseAtTimeIntConstant(AtTimeIntConstant object)
+      {
+        return createAtTimeIntConstantAdapter();
+      }
+      @Override
+      public Adapter caseAtTimeCurrentTime(AtTimeCurrentTime object)
+      {
+        return createAtTimeCurrentTimeAdapter();
+      }
+      @Override
+      public Adapter caseInTimePlusOrMin(InTimePlusOrMin object)
+      {
+        return createInTimePlusOrMinAdapter();
+      }
+      @Override
+      public Adapter caseInTimeIntConstant(InTimeIntConstant object)
+      {
+        return createInTimeIntConstantAdapter();
+      }
+      @Override
+      public Adapter caseInTimeCurrentTime(InTimeCurrentTime object)
+      {
+        return createInTimeCurrentTimeAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -382,21 +417,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Time <em>Time</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.Time
-   * @generated
-   */
-  public Adapter createTimeAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.AllenOp <em>Allen Op</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -482,6 +502,51 @@ public class EceAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ReferenceType <em>Reference Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.ReferenceType
+   * @generated
+   */
+  public Adapter createReferenceTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.AtExpr <em>At Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.AtExpr
+   * @generated
+   */
+  public Adapter createAtExprAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InExpr <em>In Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.InExpr
+   * @generated
+   */
+  public Adapter createInExprAdapter()
   {
     return null;
   }
@@ -667,31 +732,106 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.FeatureRef <em>Feature Ref</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Reference <em>Reference</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.ecerule.ece.FeatureRef
+   * @see org.xtext.ecerule.ece.Reference
    * @generated
    */
-  public Adapter createFeatureRefAdapter()
+  public Adapter createReferenceAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.FluentRef <em>Fluent Ref</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.AtTimePlusOrMin <em>At Time Plus Or Min</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.ecerule.ece.FluentRef
+   * @see org.xtext.ecerule.ece.AtTimePlusOrMin
    * @generated
    */
-  public Adapter createFluentRefAdapter()
+  public Adapter createAtTimePlusOrMinAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.AtTimeIntConstant <em>At Time Int Constant</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.AtTimeIntConstant
+   * @generated
+   */
+  public Adapter createAtTimeIntConstantAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.AtTimeCurrentTime <em>At Time Current Time</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.AtTimeCurrentTime
+   * @generated
+   */
+  public Adapter createAtTimeCurrentTimeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InTimePlusOrMin <em>In Time Plus Or Min</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.InTimePlusOrMin
+   * @generated
+   */
+  public Adapter createInTimePlusOrMinAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InTimeIntConstant <em>In Time Int Constant</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.InTimeIntConstant
+   * @generated
+   */
+  public Adapter createInTimeIntConstantAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InTimeCurrentTime <em>In Time Current Time</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.InTimeCurrentTime
+   * @generated
+   */
+  public Adapter createInTimeCurrentTimeAdapter()
   {
     return null;
   }

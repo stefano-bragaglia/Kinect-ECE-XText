@@ -17,12 +17,20 @@ import org.xtext.ecerule.services.EceGrammarAccess;
 public class EceSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected EceGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_AtTimePrimary_LeftParenthesisKeyword_0_0_a;
+	protected AbstractElementAlias match_AtTimePrimary_LeftParenthesisKeyword_0_0_p;
+	protected AbstractElementAlias match_InTimePrimary_LeftParenthesisKeyword_0_0_a;
+	protected AbstractElementAlias match_InTimePrimary_LeftParenthesisKeyword_0_0_p;
 	protected AbstractElementAlias match_Primary_LeftParenthesisKeyword_0_0_a;
 	protected AbstractElementAlias match_Primary_LeftParenthesisKeyword_0_0_p;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (EceGrammarAccess) access;
+		match_AtTimePrimary_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getAtTimePrimaryAccess().getLeftParenthesisKeyword_0_0());
+		match_AtTimePrimary_LeftParenthesisKeyword_0_0_p = new TokenAlias(true, false, grammarAccess.getAtTimePrimaryAccess().getLeftParenthesisKeyword_0_0());
+		match_InTimePrimary_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getInTimePrimaryAccess().getLeftParenthesisKeyword_0_0());
+		match_InTimePrimary_LeftParenthesisKeyword_0_0_p = new TokenAlias(true, false, grammarAccess.getInTimePrimaryAccess().getLeftParenthesisKeyword_0_0());
 		match_Primary_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_0_0());
 		match_Primary_LeftParenthesisKeyword_0_0_p = new TokenAlias(true, false, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_0_0());
 	}
@@ -39,7 +47,15 @@ public class EceSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Primary_LeftParenthesisKeyword_0_0_a.equals(syntax))
+			if(match_AtTimePrimary_LeftParenthesisKeyword_0_0_a.equals(syntax))
+				emit_AtTimePrimary_LeftParenthesisKeyword_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_AtTimePrimary_LeftParenthesisKeyword_0_0_p.equals(syntax))
+				emit_AtTimePrimary_LeftParenthesisKeyword_0_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_InTimePrimary_LeftParenthesisKeyword_0_0_a.equals(syntax))
+				emit_InTimePrimary_LeftParenthesisKeyword_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_InTimePrimary_LeftParenthesisKeyword_0_0_p.equals(syntax))
+				emit_InTimePrimary_LeftParenthesisKeyword_0_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Primary_LeftParenthesisKeyword_0_0_a.equals(syntax))
 				emit_Primary_LeftParenthesisKeyword_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Primary_LeftParenthesisKeyword_0_0_p.equals(syntax))
 				emit_Primary_LeftParenthesisKeyword_0_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -47,6 +63,38 @@ public class EceSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
+	/**
+	 * Syntax:
+	 *     '('*
+	 */
+	protected void emit_AtTimePrimary_LeftParenthesisKeyword_0_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     '('+
+	 */
+	protected void emit_AtTimePrimary_LeftParenthesisKeyword_0_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     '('*
+	 */
+	protected void emit_InTimePrimary_LeftParenthesisKeyword_0_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     '('+
+	 */
+	protected void emit_InTimePrimary_LeftParenthesisKeyword_0_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 	/**
 	 * Syntax:
 	 *     '('*

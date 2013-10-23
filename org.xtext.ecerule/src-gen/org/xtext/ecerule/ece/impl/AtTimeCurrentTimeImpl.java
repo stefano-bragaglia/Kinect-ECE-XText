@@ -8,50 +8,50 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.ecerule.ece.AtTimeCurrentTime;
 import org.xtext.ecerule.ece.EcePackage;
-import org.xtext.ecerule.ece.FluentRef;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Fluent Ref</b></em>'.
+ * An implementation of the model object '<em><b>At Time Current Time</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.ecerule.ece.impl.FluentRefImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.impl.AtTimeCurrentTimeImpl#getAtTimeValue <em>At Time Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FluentRefImpl extends ExpressionImpl implements FluentRef
+public class AtTimeCurrentTimeImpl extends AtExprImpl implements AtTimeCurrentTime
 {
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The default value of the '{@link #getAtTimeValue() <em>At Time Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getAtTimeValue()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
+  protected static final String AT_TIME_VALUE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getAtTimeValue() <em>At Time Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getAtTimeValue()
    * @generated
    * @ordered
    */
-  protected String value = VALUE_EDEFAULT;
+  protected String atTimeValue = AT_TIME_VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FluentRefImpl()
+  protected AtTimeCurrentTimeImpl()
   {
     super();
   }
@@ -64,7 +64,7 @@ public class FluentRefImpl extends ExpressionImpl implements FluentRef
   @Override
   protected EClass eStaticClass()
   {
-    return EcePackage.Literals.FLUENT_REF;
+    return EcePackage.Literals.AT_TIME_CURRENT_TIME;
   }
 
   /**
@@ -72,9 +72,9 @@ public class FluentRefImpl extends ExpressionImpl implements FluentRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue()
+  public String getAtTimeValue()
   {
-    return value;
+    return atTimeValue;
   }
 
   /**
@@ -82,12 +82,12 @@ public class FluentRefImpl extends ExpressionImpl implements FluentRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue)
+  public void setAtTimeValue(String newAtTimeValue)
   {
-    String oldValue = value;
-    value = newValue;
+    String oldAtTimeValue = atTimeValue;
+    atTimeValue = newAtTimeValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.FLUENT_REF__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.AT_TIME_CURRENT_TIME__AT_TIME_VALUE, oldAtTimeValue, atTimeValue));
   }
 
   /**
@@ -100,8 +100,8 @@ public class FluentRefImpl extends ExpressionImpl implements FluentRef
   {
     switch (featureID)
     {
-      case EcePackage.FLUENT_REF__VALUE:
-        return getValue();
+      case EcePackage.AT_TIME_CURRENT_TIME__AT_TIME_VALUE:
+        return getAtTimeValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -116,8 +116,8 @@ public class FluentRefImpl extends ExpressionImpl implements FluentRef
   {
     switch (featureID)
     {
-      case EcePackage.FLUENT_REF__VALUE:
-        setValue((String)newValue);
+      case EcePackage.AT_TIME_CURRENT_TIME__AT_TIME_VALUE:
+        setAtTimeValue((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,8 +133,8 @@ public class FluentRefImpl extends ExpressionImpl implements FluentRef
   {
     switch (featureID)
     {
-      case EcePackage.FLUENT_REF__VALUE:
-        setValue(VALUE_EDEFAULT);
+      case EcePackage.AT_TIME_CURRENT_TIME__AT_TIME_VALUE:
+        setAtTimeValue(AT_TIME_VALUE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -150,8 +150,8 @@ public class FluentRefImpl extends ExpressionImpl implements FluentRef
   {
     switch (featureID)
     {
-      case EcePackage.FLUENT_REF__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+      case EcePackage.AT_TIME_CURRENT_TIME__AT_TIME_VALUE:
+        return AT_TIME_VALUE_EDEFAULT == null ? atTimeValue != null : !AT_TIME_VALUE_EDEFAULT.equals(atTimeValue);
     }
     return super.eIsSet(featureID);
   }
@@ -167,10 +167,10 @@ public class FluentRefImpl extends ExpressionImpl implements FluentRef
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (value: ");
-    result.append(value);
+    result.append(" (atTimeValue: ");
+    result.append(atTimeValue);
     result.append(')');
     return result.toString();
   }
 
-} //FluentRefImpl
+} //AtTimeCurrentTimeImpl

@@ -104,15 +104,6 @@ public interface EceFactory extends EFactory
   ExpContext createExpContext();
 
   /**
-   * Returns a new object of class '<em>Time</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Time</em>'.
-   * @generated
-   */
-  Time createTime();
-
-  /**
    * Returns a new object of class '<em>Allen Op</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -165,6 +156,33 @@ public interface EceFactory extends EFactory
    * @generated
    */
   Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>Reference Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Reference Type</em>'.
+   * @generated
+   */
+  ReferenceType createReferenceType();
+
+  /**
+   * Returns a new object of class '<em>At Expr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>At Expr</em>'.
+   * @generated
+   */
+  AtExpr createAtExpr();
+
+  /**
+   * Returns a new object of class '<em>In Expr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>In Expr</em>'.
+   * @generated
+   */
+  InExpr createInExpr();
 
   /**
    * Returns a new object of class '<em>Allen Operator</em>'.
@@ -275,22 +293,67 @@ public interface EceFactory extends EFactory
   BoolConstant createBoolConstant();
 
   /**
-   * Returns a new object of class '<em>Feature Ref</em>'.
+   * Returns a new object of class '<em>Reference</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Feature Ref</em>'.
+   * @return a new object of class '<em>Reference</em>'.
    * @generated
    */
-  FeatureRef createFeatureRef();
+  Reference createReference();
 
   /**
-   * Returns a new object of class '<em>Fluent Ref</em>'.
+   * Returns a new object of class '<em>At Time Plus Or Min</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fluent Ref</em>'.
+   * @return a new object of class '<em>At Time Plus Or Min</em>'.
    * @generated
    */
-  FluentRef createFluentRef();
+  AtTimePlusOrMin createAtTimePlusOrMin();
+
+  /**
+   * Returns a new object of class '<em>At Time Int Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>At Time Int Constant</em>'.
+   * @generated
+   */
+  AtTimeIntConstant createAtTimeIntConstant();
+
+  /**
+   * Returns a new object of class '<em>At Time Current Time</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>At Time Current Time</em>'.
+   * @generated
+   */
+  AtTimeCurrentTime createAtTimeCurrentTime();
+
+  /**
+   * Returns a new object of class '<em>In Time Plus Or Min</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>In Time Plus Or Min</em>'.
+   * @generated
+   */
+  InTimePlusOrMin createInTimePlusOrMin();
+
+  /**
+   * Returns a new object of class '<em>In Time Int Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>In Time Int Constant</em>'.
+   * @generated
+   */
+  InTimeIntConstant createInTimeIntConstant();
+
+  /**
+   * Returns a new object of class '<em>In Time Current Time</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>In Time Current Time</em>'.
+   * @generated
+   */
+  InTimeCurrentTime createInTimeCurrentTime();
 
   /**
    * Returns the package supported by this factory.

@@ -12,10 +12,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.ecerule.ece.AllenOp;
+import org.xtext.ecerule.ece.AtExpr;
 import org.xtext.ecerule.ece.ConditionRule;
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.ExpContext;
-import org.xtext.ecerule.ece.Time;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
    * @generated
    * @ordered
    */
-  protected Time time;
+  protected AtExpr time;
 
   /**
    * The cached value of the '{@link #getInitialCondition() <em>Initial Condition</em>}' containment reference.
@@ -197,7 +197,7 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
    * <!-- end-user-doc -->
    * @generated
    */
-  public Time getTime()
+  public AtExpr getTime()
   {
     return time;
   }
@@ -207,9 +207,9 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTime(Time newTime, NotificationChain msgs)
+  public NotificationChain basicSetTime(AtExpr newTime, NotificationChain msgs)
   {
-    Time oldTime = time;
+    AtExpr oldTime = time;
     time = newTime;
     if (eNotificationRequired())
     {
@@ -224,7 +224,7 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTime(Time newTime)
+  public void setTime(AtExpr newTime)
   {
     if (newTime != time)
     {
@@ -349,7 +349,7 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
         setAllenOp((AllenOp)newValue);
         return;
       case EcePackage.EXP_CONTEXT__TIME:
-        setTime((Time)newValue);
+        setTime((AtExpr)newValue);
         return;
       case EcePackage.EXP_CONTEXT__INITIAL_CONDITION:
         setInitialCondition((ConditionRule)newValue);
@@ -375,7 +375,7 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
         setAllenOp((AllenOp)null);
         return;
       case EcePackage.EXP_CONTEXT__TIME:
-        setTime((Time)null);
+        setTime((AtExpr)null);
         return;
       case EcePackage.EXP_CONTEXT__INITIAL_CONDITION:
         setInitialCondition((ConditionRule)null);

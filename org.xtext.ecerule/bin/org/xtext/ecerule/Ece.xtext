@@ -10,7 +10,7 @@ Statement:
 	'on' event=Event contextsList=ContextsList ';';
 
 Event:
-	eventName=ID 
+	eventName=ID
 	('(' params+=EventFeature (',' params+=EventFeature)* ')')?;
 
 EventFeature:
@@ -19,127 +19,113 @@ EventFeature:
 ContextsList:
 	ecContextsList=EcContextsList (',' expContextsList=ExpContextsList)?;
 
-
 EcContextsList:
 	ecContexts+=EcContext (',' ecContexts+=EcContext)*;
-	
+
 ExpContextsList:
-	expContexts+=ExpContext (',' expContexts+=ExpContext)*
-;
-
-
-
+	expContexts+=ExpContext (',' expContexts+=ExpContext)*;
 
 // EC CONTEXT ******************************************************************
-EcContext:
-	'set' fluent+=Fluent (',' fluent+=Fluent)* 
-;
-
-
-
-
-
+ EcContext:
+	'set' fluent+=Fluent (',' fluent+=Fluent)*;
 
 // EXP CONTEXT *****************************************************************
-ExpContext:
-	'expect' finalCondition=ConditionRule (allenOp=AllenOp time=Time)? ('if' initialCondition=ConditionRule)?
-;
+ ExpContext:
+	'expect' finalCondition=ConditionRule (allenOp=AllenOp time=AtTimePrimary)? ('if' initialCondition=ConditionRule)?;
 
-Time:
-	t=INT
-;
 
 AllenOp:
-	{AllenOperator} value=('before'|'meets'|'overlaps'|'starts'|'finishes'|'during') 
-;
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
+	{AllenOperator} value=('before' | 'meets' | 'overlaps' | 'starts' | 'finishes' | 'during');
 
 Fluent:
-	fluentName=ID	
-	('to' valuePart = ToRule)
-	('in' timePart = InRule)? 
-	('if' condPart = ConditionRule)?
-;
+	fluentName=ID
+	('to' valuePart=ToRule)
+	('in' timePart=InRule)?
+	('if' condPart=ConditionRule)?;
 
 ConditionRule:
-	({Expression} condition = Expression)
-;
+	({Expression} condition=Expression);
 
 ToRule:
-	({Expression} expression = PlusOrMinus)
+	({Expression} expression=PlusOrMinus);
+
+InRule:
+	time=INT
+	//	|currentTime='now'
 ;
-
-InRule:	
-	time=INT	
-//	|currentTime='now'
-;
-
-
 
 // LEFT_ASSOCIATIVITY
-Expression: Or;
+Expression:
+	Or;
 
 Or returns Expression:
-	And ({Or.left=current} "OR" right=And)* 
-;
+	And ({Or.left=current} "OR" right=And)*;
 
 And returns Expression:
-	Equality ({And.left=current} "AND" right=Equality)* 
-;
+	Equality ({And.left=current} "AND" right=Equality)*;
 
 Equality returns Expression:
-	Comparison (
-		{Equality.left=current} op=("=="|"!=")
-		right=Comparison
-	)* 
-;
+	Comparison ({Equality.left=current} op=("==" | "!=")
+	right=Comparison)*;
 
 Comparison returns Expression:
-	PlusOrMinus (
-		{Comparison.left=current} op=(">="|"<="|">"|"<")
-		right=PlusOrMinus
-	)* 
-;
+	PlusOrMinus ({Comparison.left=current} op=(">=" | "<=" | ">" | "<")
+	right=PlusOrMinus)*;
 
 PlusOrMinus returns Expression:
-	MulOrDiv (
-	({Plus.left=current} '+' | {Minus.left=current} '-')
-	right=MulOrDiv
-	)* 
-;
+	MulOrDiv (({Plus.left=current} '+' | {Minus.left=current} '-')
+	right=MulOrDiv)*;
 
 MulOrDiv returns Expression:
-	Primary (
-		{MulOrDiv.left=current} op=('*'|'/'|'%'|'^')
-		right=Primary
-	)*
-;
+	Primary ({MulOrDiv.left=current} op=('*' | '/' | '%' | '^')
+	right=Primary)*;
 
 Primary returns Expression:
 	'(' Expression ')' |
 	{Not} "!" expression=Primary |
-	Atomic
-;
+	Atomic;
 
 Atomic returns Expression:
 	{FloatConstant} value=FLOAT |
 	{IntConstant} value=INT |
-//	{StringConstant} value=STRING | 
-	{BoolConstant} value=('true'|'false') |
-	{FeatureRef} param = [EventFeature] |
-	{FluentRef} '['value=ID']'
+	{BoolConstant} value=('true' | 'false')
+	| {Reference} ref=[ReferenceType|ID] ('at' fluentValueSample=AtTimePrimary)?
+	//	|{CurrentTime} value='now'
 ;
 
+ReferenceType:
+	EventFeature | Fluent;
 
+AtTimeExpression returns AtExpr:
+	AtTimePrimary ({AtTimePlusOrMin.left=current} op=('-' | '+')
+	right=AtTimePrimary)*;
 
+AtTimePrimary returns AtExpr:
+	'(' AtTimeExpression ')' |
+	AtTimeAtomic;
 
-terminal FLOAT returns ecore::EFloat: ('0'..'9')*'.'('0'..'9')+;
+AtTimeAtomic returns AtExpr:
+	{AtTimeIntConstant} /*('+'|'-')?*/ value=INT
+	| {AtTimeCurrentTime} atTimeValue='now'
+	//	|long
+;
+
+InExpr:
+	InTimeExpression;
+
+InTimeExpression returns InExpr:
+	InTimePrimary ({InTimePlusOrMin.left=current} op=('-' | '+')
+	right=InTimePrimary)*;
+
+InTimePrimary returns InExpr:
+	'(' InExpr ')' |
+	InTimeAtomic;
+
+InTimeAtomic returns InExpr:
+	{InTimeIntConstant} /*('+'|'-')?*/ value=INT
+	| {InTimeCurrentTime} inTimeValue='now'
+	//	|long
+;
+
+terminal FLOAT returns ecore::EFloat:
+	('0'..'9')* '.' ('0'..'9')+;

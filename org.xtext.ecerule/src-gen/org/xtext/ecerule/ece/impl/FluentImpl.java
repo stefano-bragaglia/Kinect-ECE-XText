@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.ecerule.ece.ConditionRule;
 import org.xtext.ecerule.ece.EcePackage;
@@ -33,7 +32,7 @@ import org.xtext.ecerule.ece.ToRule;
  *
  * @generated
  */
-public class FluentImpl extends MinimalEObjectImpl.Container implements Fluent
+public class FluentImpl extends ReferenceTypeImpl implements Fluent
 {
   /**
    * The default value of the '{@link #getFluentName() <em>Fluent Name</em>}' attribute.

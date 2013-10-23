@@ -2,7 +2,6 @@
  */
 package org.xtext.ecerule.ece;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface EventFeature extends EObject
+public interface EventFeature extends ReferenceType
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

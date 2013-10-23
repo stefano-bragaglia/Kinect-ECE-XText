@@ -45,6 +45,13 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimaryAccess().getAlternatives(), "rule__Primary__Alternatives");
 					put(grammarAccess.getAtomicAccess().getAlternatives(), "rule__Atomic__Alternatives");
 					put(grammarAccess.getAtomicAccess().getValueAlternatives_2_1_0(), "rule__Atomic__ValueAlternatives_2_1_0");
+					put(grammarAccess.getReferenceTypeAccess().getAlternatives(), "rule__ReferenceType__Alternatives");
+					put(grammarAccess.getAtTimeExpressionAccess().getOpAlternatives_1_1_0(), "rule__AtTimeExpression__OpAlternatives_1_1_0");
+					put(grammarAccess.getAtTimePrimaryAccess().getAlternatives(), "rule__AtTimePrimary__Alternatives");
+					put(grammarAccess.getAtTimeAtomicAccess().getAlternatives(), "rule__AtTimeAtomic__Alternatives");
+					put(grammarAccess.getInTimeExpressionAccess().getOpAlternatives_1_1_0(), "rule__InTimeExpression__OpAlternatives_1_1_0");
+					put(grammarAccess.getInTimePrimaryAccess().getAlternatives(), "rule__InTimePrimary__Alternatives");
+					put(grammarAccess.getInTimeAtomicAccess().getAlternatives(), "rule__InTimeAtomic__Alternatives");
 					put(grammarAccess.getStatementAccess().getGroup(), "rule__Statement__Group__0");
 					put(grammarAccess.getEventAccess().getGroup(), "rule__Event__Group__0");
 					put(grammarAccess.getEventAccess().getGroup_1(), "rule__Event__Group_1__0");
@@ -87,7 +94,17 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtomicAccess().getGroup_1(), "rule__Atomic__Group_1__0");
 					put(grammarAccess.getAtomicAccess().getGroup_2(), "rule__Atomic__Group_2__0");
 					put(grammarAccess.getAtomicAccess().getGroup_3(), "rule__Atomic__Group_3__0");
-					put(grammarAccess.getAtomicAccess().getGroup_4(), "rule__Atomic__Group_4__0");
+					put(grammarAccess.getAtomicAccess().getGroup_3_2(), "rule__Atomic__Group_3_2__0");
+					put(grammarAccess.getAtTimeExpressionAccess().getGroup(), "rule__AtTimeExpression__Group__0");
+					put(grammarAccess.getAtTimeExpressionAccess().getGroup_1(), "rule__AtTimeExpression__Group_1__0");
+					put(grammarAccess.getAtTimePrimaryAccess().getGroup_0(), "rule__AtTimePrimary__Group_0__0");
+					put(grammarAccess.getAtTimeAtomicAccess().getGroup_0(), "rule__AtTimeAtomic__Group_0__0");
+					put(grammarAccess.getAtTimeAtomicAccess().getGroup_1(), "rule__AtTimeAtomic__Group_1__0");
+					put(grammarAccess.getInTimeExpressionAccess().getGroup(), "rule__InTimeExpression__Group__0");
+					put(grammarAccess.getInTimeExpressionAccess().getGroup_1(), "rule__InTimeExpression__Group_1__0");
+					put(grammarAccess.getInTimePrimaryAccess().getGroup_0(), "rule__InTimePrimary__Group_0__0");
+					put(grammarAccess.getInTimeAtomicAccess().getGroup_0(), "rule__InTimeAtomic__Group_0__0");
+					put(grammarAccess.getInTimeAtomicAccess().getGroup_1(), "rule__InTimeAtomic__Group_1__0");
 					put(grammarAccess.getEceModelAccess().getStatementsAssignment(), "rule__EceModel__StatementsAssignment");
 					put(grammarAccess.getStatementAccess().getEventAssignment_1(), "rule__Statement__EventAssignment_1");
 					put(grammarAccess.getStatementAccess().getContextsListAssignment_2(), "rule__Statement__ContextsListAssignment_2");
@@ -107,7 +124,6 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpContextAccess().getAllenOpAssignment_2_0(), "rule__ExpContext__AllenOpAssignment_2_0");
 					put(grammarAccess.getExpContextAccess().getTimeAssignment_2_1(), "rule__ExpContext__TimeAssignment_2_1");
 					put(grammarAccess.getExpContextAccess().getInitialConditionAssignment_3_1(), "rule__ExpContext__InitialConditionAssignment_3_1");
-					put(grammarAccess.getTimeAccess().getTAssignment(), "rule__Time__TAssignment");
 					put(grammarAccess.getAllenOpAccess().getValueAssignment_1(), "rule__AllenOp__ValueAssignment_1");
 					put(grammarAccess.getFluentAccess().getFluentNameAssignment_0(), "rule__Fluent__FluentNameAssignment_0");
 					put(grammarAccess.getFluentAccess().getValuePartAssignment_1_1(), "rule__Fluent__ValuePartAssignment_1_1");
@@ -129,8 +145,16 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtomicAccess().getValueAssignment_0_1(), "rule__Atomic__ValueAssignment_0_1");
 					put(grammarAccess.getAtomicAccess().getValueAssignment_1_1(), "rule__Atomic__ValueAssignment_1_1");
 					put(grammarAccess.getAtomicAccess().getValueAssignment_2_1(), "rule__Atomic__ValueAssignment_2_1");
-					put(grammarAccess.getAtomicAccess().getParamAssignment_3_1(), "rule__Atomic__ParamAssignment_3_1");
-					put(grammarAccess.getAtomicAccess().getValueAssignment_4_2(), "rule__Atomic__ValueAssignment_4_2");
+					put(grammarAccess.getAtomicAccess().getRefAssignment_3_1(), "rule__Atomic__RefAssignment_3_1");
+					put(grammarAccess.getAtomicAccess().getFluentValueSampleAssignment_3_2_1(), "rule__Atomic__FluentValueSampleAssignment_3_2_1");
+					put(grammarAccess.getAtTimeExpressionAccess().getOpAssignment_1_1(), "rule__AtTimeExpression__OpAssignment_1_1");
+					put(grammarAccess.getAtTimeExpressionAccess().getRightAssignment_1_2(), "rule__AtTimeExpression__RightAssignment_1_2");
+					put(grammarAccess.getAtTimeAtomicAccess().getValueAssignment_0_1(), "rule__AtTimeAtomic__ValueAssignment_0_1");
+					put(grammarAccess.getAtTimeAtomicAccess().getAtTimeValueAssignment_1_1(), "rule__AtTimeAtomic__AtTimeValueAssignment_1_1");
+					put(grammarAccess.getInTimeExpressionAccess().getOpAssignment_1_1(), "rule__InTimeExpression__OpAssignment_1_1");
+					put(grammarAccess.getInTimeExpressionAccess().getRightAssignment_1_2(), "rule__InTimeExpression__RightAssignment_1_2");
+					put(grammarAccess.getInTimeAtomicAccess().getValueAssignment_0_1(), "rule__InTimeAtomic__ValueAssignment_0_1");
+					put(grammarAccess.getInTimeAtomicAccess().getInTimeValueAssignment_1_1(), "rule__InTimeAtomic__InTimeValueAssignment_1_1");
 				}
 			};
 		}
