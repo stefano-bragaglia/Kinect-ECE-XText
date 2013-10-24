@@ -10,7 +10,8 @@ Require-Bundle: org.xtext.ecerule,
  org.eclipse.core.runtime,
  org.eclipse.xtext.junit4,
  org.eclipse.ui.workbench;resolution:=optional,
- org.eclipse.xtext.xbase.junit;bundle-version="2.4.3"
+ org.eclipse.xtext.xbase.junit;bundle-version="2.4.3",
+ org.eclipse.jdt.core;bundle-version="3.9.1"
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib,
  org.hamcrest.core,

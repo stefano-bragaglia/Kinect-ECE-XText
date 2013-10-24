@@ -17,7 +17,7 @@ EventFeature:
 	name=ID;
 
 ContextsList:
-	(ecContextsList=EcContextsList) (',' expContextsList=ExpContextsList)?;
+	(ecContextsList=EcContextsList)? (',' expContextsList=ExpContextsList)?;
 
 EcContextsList:
 	ecContexts+=EcContext (',' ecContexts+=EcContext)*;

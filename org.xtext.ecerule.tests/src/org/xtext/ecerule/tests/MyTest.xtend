@@ -9,6 +9,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.xtext.ecerule.EceInjectorProvider
 import org.xtext.ecerule.ece.EceModel
+import org.eclipse.xtext.xbase.compiler.CompilationTestHelper
+
 //import  org.eclipse.xtext.xbase.compiler.CompilationTestHelper
 
 
@@ -20,7 +22,7 @@ class MyTest {
 	
 	@Inject extension ParseHelper<EceModel>
 	@Inject extension ValidationTestHelper
-//	@Inject extension CompilationTestHelper
+	@Inject extension CompilationTestHelper
 
 	@Test
 	def void testParsingLite() {
@@ -29,26 +31,43 @@ class MyTest {
 		'''.parse.assertNoErrors
 	}
 
-	@Test
-	def void testParsingSimplePro() {
-		'''
-			on BilanciaMisura (lettura, tara) 	set peso to (lettura-tara)*100 in 26 if tara<=16 ,
-										set totPesate to [totPesate] + (lettura-tara)*100 if (lettura-tara)*100>60,
-										expect [totPesate] >= (lettura-tara)*100 finishes 264 if [totPesate]>=0 ;
-		'''.parse.assertNoErrors
-	}
-
 //	@Test
-//	def void testGeneratedCode() {
+//	def void testParsingSimplePro() {
 //		'''
-//			on EventoPompaApre set FluenteLivello to 52, expect (true);
-//		'''.assertCompilesTo(
-//		'''
-//		public class EventoPompaApre {
-//			
-//		}
-//
-//		''')
+//			on BilanciaMisura (lettura, tara) 	set peso to (lettura-tara)*100 in 26 if tara<=16 ,
+//										set totPesate to [totPesate] + (lettura-tara)*100 if (lettura-tara)*100>60,
+//										expect [totPesate] >= (lettura-tara)*100 finishes 264 if [totPesate]>=0 ;
+//		'''.parse.assertNoErrors
 //	}
+
+	@Test def void testGeneratedCode() {
+		'''
+		on BilanciaMisuraEasy set peso to true, expect false;
+		'''.assertCompilesTo(
+		'''
+import org.xtext.ecerule.model.*;
+
+public class MainEce {
+	public static void main (String[] args) {	
+		Model model = new Model();
+	Statement statement = new Statement();
+Event event = new Event();
+String eventName = "BilanciaMisuraEasy";
+event.setEventName(eventName);
+statement.setEvent(event);
+ 								
+
+ExpContext expContext = new ExpContext();
+//default compileCond			//default compileCond							
+statement.addExpContext(expContext);
+
+		
+
+							model.add("StmBilanciaMisuraEasy", statement);
+		
+	}	
+}
+		''')
+	}
 
 }

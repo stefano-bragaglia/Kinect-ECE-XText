@@ -6,6 +6,7 @@ import org.eclipse.xtext.junit4.InjectWith;
 import org.eclipse.xtext.junit4.XtextRunner;
 import org.eclipse.xtext.junit4.util.ParseHelper;
 import org.eclipse.xtext.junit4.validation.ValidationTestHelper;
+import org.eclipse.xtext.xbase.compiler.CompilationTestHelper;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.junit.Test;
@@ -25,6 +26,10 @@ public class MyTest {
   @Extension
   private ValidationTestHelper _validationTestHelper;
   
+  @Inject
+  @Extension
+  private CompilationTestHelper _compilationTestHelper;
+  
   @Test
   public void testParsingLite() {
     try {
@@ -39,19 +44,58 @@ public class MyTest {
   }
   
   @Test
-  public void testParsingSimplePro() {
+  public void testGeneratedCode() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("on BilanciaMisura (lettura, tara) \tset peso to (lettura-tara)*100 in 26 if tara<=16 ,");
+      _builder.append("on BilanciaMisuraEasy set peso to true, expect false;");
       _builder.newLine();
-      _builder.append("\t\t\t\t\t\t\t");
-      _builder.append("set totPesate to [totPesate] + (lettura-tara)*100 if (lettura-tara)*100>60,");
-      _builder.newLine();
-      _builder.append("\t\t\t\t\t\t\t");
-      _builder.append("expect [totPesate] >= (lettura-tara)*100 finishes 264 if [totPesate]>=0 ;");
-      _builder.newLine();
-      EceModel _parse = this._parseHelper.parse(_builder);
-      this._validationTestHelper.assertNoErrors(_parse);
+      StringConcatenation _builder_1 = new StringConcatenation();
+      _builder_1.append("import org.xtext.ecerule.model.*;");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("public class MainEce {");
+      _builder_1.newLine();
+      _builder_1.append("\t");
+      _builder_1.append("public static void main (String[] args) {\t");
+      _builder_1.newLine();
+      _builder_1.append("\t\t");
+      _builder_1.append("Model model = new Model();");
+      _builder_1.newLine();
+      _builder_1.append("\t");
+      _builder_1.append("Statement statement = new Statement();");
+      _builder_1.newLine();
+      _builder_1.append("Event event = new Event();");
+      _builder_1.newLine();
+      _builder_1.append("String eventName = \"BilanciaMisuraEasy\";");
+      _builder_1.newLine();
+      _builder_1.append("event.setEventName(eventName);");
+      _builder_1.newLine();
+      _builder_1.append("statement.setEvent(event);");
+      _builder_1.newLine();
+      _builder_1.append(" \t\t\t\t\t\t\t\t");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("ExpContext expContext = new ExpContext();");
+      _builder_1.newLine();
+      _builder_1.append("//default compileCond\t\t\t//default compileCond\t\t\t\t\t\t\t");
+      _builder_1.newLine();
+      _builder_1.append("statement.addExpContext(expContext);");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("\t\t");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("\t\t\t\t\t\t\t");
+      _builder_1.append("model.add(\"StmBilanciaMisuraEasy\", statement);");
+      _builder_1.newLine();
+      _builder_1.append("\t\t");
+      _builder_1.newLine();
+      _builder_1.append("\t");
+      _builder_1.append("}\t");
+      _builder_1.newLine();
+      _builder_1.append("}");
+      _builder_1.newLine();
+      this._compilationTestHelper.assertCompilesTo(_builder, _builder_1);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }

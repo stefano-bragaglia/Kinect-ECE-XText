@@ -96,10 +96,6 @@ public class EceGenerator implements IGenerator {
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.newLine();
     return _builder;
   }
   

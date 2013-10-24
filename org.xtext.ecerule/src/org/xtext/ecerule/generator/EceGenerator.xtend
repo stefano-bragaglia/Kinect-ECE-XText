@@ -55,8 +55,6 @@ class EceGenerator implements IGenerator {
 					
 				}	
 			}
-				
-				
 		'''
 	}
 	
