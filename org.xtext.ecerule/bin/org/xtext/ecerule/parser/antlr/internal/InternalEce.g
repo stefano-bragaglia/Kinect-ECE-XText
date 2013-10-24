@@ -325,7 +325,7 @@ ruleContextsList returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_1=',' 
+)?(	otherlv_1=',' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getContextsListAccess().getCommaKeyword_1_0());
     }
@@ -763,9 +763,9 @@ ruleFluent returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_fluentName_0_0=RULE_ID
+		lv_name_0_0=RULE_ID
 		{
-			newLeafNode(lv_fluentName_0_0, grammarAccess.getFluentAccess().getFluentNameIDTerminalRuleCall_0_0()); 
+			newLeafNode(lv_name_0_0, grammarAccess.getFluentAccess().getNameIDTerminalRuleCall_0_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -773,8 +773,8 @@ ruleFluent returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"fluentName",
-        		lv_fluentName_0_0, 
+       			"name",
+        		lv_name_0_0, 
         		"ID");
 	    }
 

@@ -1717,7 +1717,7 @@ rule__ContextsList__Group__0__Impl
 :
 (
 { before(grammarAccess.getContextsListAccess().getEcContextsListAssignment_0()); }
-(rule__ContextsList__EcContextsListAssignment_0)
+(rule__ContextsList__EcContextsListAssignment_0)?
 { after(grammarAccess.getContextsListAccess().getEcContextsListAssignment_0()); }
 )
 
@@ -2557,9 +2557,9 @@ rule__Fluent__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getFluentAccess().getFluentNameAssignment_0()); }
-(rule__Fluent__FluentNameAssignment_0)
-{ after(grammarAccess.getFluentAccess().getFluentNameAssignment_0()); }
+{ before(grammarAccess.getFluentAccess().getNameAssignment_0()); }
+(rule__Fluent__NameAssignment_0)
+{ after(grammarAccess.getFluentAccess().getNameAssignment_0()); }
 )
 
 ;
@@ -5602,14 +5602,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Fluent__FluentNameAssignment_0
+rule__Fluent__NameAssignment_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getFluentAccess().getFluentNameIDTerminalRuleCall_0_0()); }
-	RULE_ID{ after(grammarAccess.getFluentAccess().getFluentNameIDTerminalRuleCall_0_0()); }
+{ before(grammarAccess.getFluentAccess().getNameIDTerminalRuleCall_0_0()); }
+	RULE_ID{ after(grammarAccess.getFluentAccess().getNameIDTerminalRuleCall_0_0()); }
 )
 
 ;

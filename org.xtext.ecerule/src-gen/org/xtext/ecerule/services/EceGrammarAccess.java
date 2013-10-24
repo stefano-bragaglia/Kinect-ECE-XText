@@ -153,13 +153,13 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cExpContextsListExpContextsListParserRuleCall_1_1_0 = (RuleCall)cExpContextsListAssignment_1_1.eContents().get(0);
 		
 		//ContextsList:
-		//	ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)?;
+		//	ecContextsList=EcContextsList? ("," expContextsList=ExpContextsList)?;
 		public ParserRule getRule() { return rule; }
 
-		//ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)?
+		//ecContextsList=EcContextsList? ("," expContextsList=ExpContextsList)?
 		public Group getGroup() { return cGroup; }
 
-		//ecContextsList=EcContextsList
+		//ecContextsList=EcContextsList?
 		public Assignment getEcContextsListAssignment_0() { return cEcContextsListAssignment_0; }
 
 		//EcContextsList
@@ -403,8 +403,8 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	public class FluentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Fluent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cFluentNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cFluentNameIDTerminalRuleCall_0_0 = (RuleCall)cFluentNameAssignment_0.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cToKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cValuePartAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
@@ -419,17 +419,17 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCondPartConditionRuleParserRuleCall_3_1_0 = (RuleCall)cCondPartAssignment_3_1.eContents().get(0);
 		
 		//Fluent:
-		//	fluentName=ID ("to" valuePart=ToRule) ("in" timePart=InRule)? ("if" condPart=ConditionRule)?;
+		//	name=ID ("to" valuePart=ToRule) ("in" timePart=InRule)? ("if" condPart=ConditionRule)?;
 		public ParserRule getRule() { return rule; }
 
-		//fluentName=ID ("to" valuePart=ToRule) ("in" timePart=InRule)? ("if" condPart=ConditionRule)?
+		//name=ID ("to" valuePart=ToRule) ("in" timePart=InRule)? ("if" condPart=ConditionRule)?
 		public Group getGroup() { return cGroup; }
 
-		//fluentName=ID
-		public Assignment getFluentNameAssignment_0() { return cFluentNameAssignment_0; }
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//ID
-		public RuleCall getFluentNameIDTerminalRuleCall_0_0() { return cFluentNameIDTerminalRuleCall_0_0; }
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
 
 		//"to" valuePart=ToRule
 		public Group getGroup_1() { return cGroup_1; }
@@ -1388,7 +1388,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ContextsList:
-	//	ecContextsList=EcContextsList ("," expContextsList=ExpContextsList)?;
+	//	ecContextsList=EcContextsList? ("," expContextsList=ExpContextsList)?;
 	public ContextsListElements getContextsListAccess() {
 		return (pContextsList != null) ? pContextsList : (pContextsList = new ContextsListElements());
 	}
@@ -1450,7 +1450,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Fluent:
-	//	fluentName=ID ("to" valuePart=ToRule) ("in" timePart=InRule)? ("if" condPart=ConditionRule)?;
+	//	name=ID ("to" valuePart=ToRule) ("in" timePart=InRule)? ("if" condPart=ConditionRule)?;
 	public FluentElements getFluentAccess() {
 		return (pFluent != null) ? pFluent : (pFluent = new FluentElements());
 	}

@@ -17,7 +17,7 @@ EventFeature:
 	name=ID;
 
 ContextsList:
-	ecContextsList=EcContextsList (',' expContextsList=ExpContextsList)?;
+	(ecContextsList=EcContextsList) (',' expContextsList=ExpContextsList)?;
 
 EcContextsList:
 	ecContexts+=EcContext (',' ecContexts+=EcContext)*;
@@ -38,7 +38,7 @@ AllenOp:
 	{AllenOperator} value=('before' | 'meets' | 'overlaps' | 'starts' | 'finishes' | 'during');
 
 Fluent:
-	fluentName=ID
+	name=ID
 	('to' valuePart=ToRule)
 	('in' timePart=InRule)?
 	('if' condPart=ConditionRule)?;

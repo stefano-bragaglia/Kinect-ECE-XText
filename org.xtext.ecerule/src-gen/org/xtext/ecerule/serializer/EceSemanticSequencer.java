@@ -564,7 +564,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (ecContextsList=EcContextsList expContextsList=ExpContextsList?)
+	 *     (ecContextsList=EcContextsList? expContextsList=ExpContextsList?)
 	 */
 	protected void sequence_ContextsList(EObject context, ContextsList semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -613,8 +613,8 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_EventFeature(EObject context, EventFeature semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.EVENT_FEATURE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.EVENT_FEATURE__NAME));
+			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.REFERENCE_TYPE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.REFERENCE_TYPE__NAME));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -652,7 +652,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (fluentName=ID valuePart=ToRule timePart=InRule? condPart=ConditionRule?)
+	 *     (name=ID valuePart=ToRule timePart=InRule? condPart=ConditionRule?)
 	 */
 	protected void sequence_Fluent(EObject context, Fluent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

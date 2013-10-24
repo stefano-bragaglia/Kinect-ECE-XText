@@ -18,9 +18,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Event/eventName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Event/params"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//EventFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//EventFeature/name"/>
-    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//EventFeature"/>
     <genClasses ecoreClass="Ece.ecore#//ContextsList">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ContextsList/ecContextsList"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ContextsList/expContextsList"/>
@@ -42,7 +40,6 @@
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//AllenOp"/>
     <genClasses ecoreClass="Ece.ecore#//Fluent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Fluent/fluentName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/valuePart"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/timePart"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/condPart"/>
@@ -56,7 +53,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Expression/condition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Expression/expression"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//ReferenceType"/>
+    <genClasses ecoreClass="Ece.ecore#//ReferenceType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//ReferenceType/name"/>
+    </genClasses>
     <genClasses ecoreClass="Ece.ecore#//AtExpr"/>
     <genClasses ecoreClass="Ece.ecore#//InExpr"/>
     <genClasses ecoreClass="Ece.ecore#//AllenOperator">

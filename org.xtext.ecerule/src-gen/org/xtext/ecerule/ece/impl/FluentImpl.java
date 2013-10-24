@@ -23,7 +23,6 @@ import org.xtext.ecerule.ece.ToRule;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.ecerule.ece.impl.FluentImpl#getFluentName <em>Fluent Name</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.impl.FluentImpl#getValuePart <em>Value Part</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.impl.FluentImpl#getTimePart <em>Time Part</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.impl.FluentImpl#getCondPart <em>Cond Part</em>}</li>
@@ -34,26 +33,6 @@ import org.xtext.ecerule.ece.ToRule;
  */
 public class FluentImpl extends ReferenceTypeImpl implements Fluent
 {
-  /**
-   * The default value of the '{@link #getFluentName() <em>Fluent Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFluentName()
-   * @generated
-   * @ordered
-   */
-  protected static final String FLUENT_NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getFluentName() <em>Fluent Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFluentName()
-   * @generated
-   * @ordered
-   */
-  protected String fluentName = FLUENT_NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getValuePart() <em>Value Part</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -103,29 +82,6 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
   protected EClass eStaticClass()
   {
     return EcePackage.Literals.FLUENT;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getFluentName()
-  {
-    return fluentName;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setFluentName(String newFluentName)
-  {
-    String oldFluentName = fluentName;
-    fluentName = newFluentName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.FLUENT__FLUENT_NAME, oldFluentName, fluentName));
   }
 
   /**
@@ -302,8 +258,6 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
   {
     switch (featureID)
     {
-      case EcePackage.FLUENT__FLUENT_NAME:
-        return getFluentName();
       case EcePackage.FLUENT__VALUE_PART:
         return getValuePart();
       case EcePackage.FLUENT__TIME_PART:
@@ -324,9 +278,6 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
   {
     switch (featureID)
     {
-      case EcePackage.FLUENT__FLUENT_NAME:
-        setFluentName((String)newValue);
-        return;
       case EcePackage.FLUENT__VALUE_PART:
         setValuePart((ToRule)newValue);
         return;
@@ -350,9 +301,6 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
   {
     switch (featureID)
     {
-      case EcePackage.FLUENT__FLUENT_NAME:
-        setFluentName(FLUENT_NAME_EDEFAULT);
-        return;
       case EcePackage.FLUENT__VALUE_PART:
         setValuePart((ToRule)null);
         return;
@@ -376,8 +324,6 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
   {
     switch (featureID)
     {
-      case EcePackage.FLUENT__FLUENT_NAME:
-        return FLUENT_NAME_EDEFAULT == null ? fluentName != null : !FLUENT_NAME_EDEFAULT.equals(fluentName);
       case EcePackage.FLUENT__VALUE_PART:
         return valuePart != null;
       case EcePackage.FLUENT__TIME_PART:
@@ -386,23 +332,6 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
         return condPart != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (fluentName: ");
-    result.append(fluentName);
-    result.append(')');
-    return result.toString();
   }
 
 } //FluentImpl

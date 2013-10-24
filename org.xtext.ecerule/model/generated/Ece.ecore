@@ -16,9 +16,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="params" upperBound="-1"
         eType="#//EventFeature" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EventFeature" eSuperTypes="#//ReferenceType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventFeature" eSuperTypes="#//ReferenceType"/>
   <eClassifiers xsi:type="ecore:EClass" name="ContextsList">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ecContextsList" eType="#//EcContextsList"
         containment="true"/>
@@ -49,7 +47,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AllenOp"/>
   <eClassifiers xsi:type="ecore:EClass" name="Fluent" eSuperTypes="#//ReferenceType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fluentName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valuePart" eType="#//ToRule"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="timePart" eType="#//InRule"
@@ -68,7 +65,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//Expression"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReferenceType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtExpr"/>
   <eClassifiers xsi:type="ecore:EClass" name="InExpr"/>
   <eClassifiers xsi:type="ecore:EClass" name="AllenOperator" eSuperTypes="#//AllenOp">

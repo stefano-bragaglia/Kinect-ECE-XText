@@ -11,7 +11,6 @@ package org.xtext.ecerule.ece;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.ecerule.ece.Fluent#getFluentName <em>Fluent Name</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.Fluent#getValuePart <em>Value Part</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.Fluent#getTimePart <em>Time Part</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.Fluent#getCondPart <em>Cond Part</em>}</li>
@@ -24,32 +23,6 @@ package org.xtext.ecerule.ece;
  */
 public interface Fluent extends ReferenceType
 {
-  /**
-   * Returns the value of the '<em><b>Fluent Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Fluent Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Fluent Name</em>' attribute.
-   * @see #setFluentName(String)
-   * @see org.xtext.ecerule.ece.EcePackage#getFluent_FluentName()
-   * @model
-   * @generated
-   */
-  String getFluentName();
-
-  /**
-   * Sets the value of the '{@link org.xtext.ecerule.ece.Fluent#getFluentName <em>Fluent Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Fluent Name</em>' attribute.
-   * @see #getFluentName()
-   * @generated
-   */
-  void setFluentName(String value);
-
   /**
    * Returns the value of the '<em><b>Value Part</b></em>' containment reference.
    * <!-- begin-user-doc -->

@@ -69,7 +69,7 @@ public class AbstractEceProposalProvider extends org.eclipse.xtext.common.ui.con
 		// subclasses may override
 		// subclasses may override
 	}
-	public void completeFluent_FluentName(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+	public void completeFluent_Name(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
 	public void completeFluent_ValuePart(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {

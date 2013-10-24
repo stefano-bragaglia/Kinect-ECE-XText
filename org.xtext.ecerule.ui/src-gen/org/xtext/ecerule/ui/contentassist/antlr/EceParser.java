@@ -125,7 +125,7 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpContextAccess().getTimeAssignment_2_1(), "rule__ExpContext__TimeAssignment_2_1");
 					put(grammarAccess.getExpContextAccess().getInitialConditionAssignment_3_1(), "rule__ExpContext__InitialConditionAssignment_3_1");
 					put(grammarAccess.getAllenOpAccess().getValueAssignment_1(), "rule__AllenOp__ValueAssignment_1");
-					put(grammarAccess.getFluentAccess().getFluentNameAssignment_0(), "rule__Fluent__FluentNameAssignment_0");
+					put(grammarAccess.getFluentAccess().getNameAssignment_0(), "rule__Fluent__NameAssignment_0");
 					put(grammarAccess.getFluentAccess().getValuePartAssignment_1_1(), "rule__Fluent__ValuePartAssignment_1_1");
 					put(grammarAccess.getFluentAccess().getTimePartAssignment_2_1(), "rule__Fluent__TimePartAssignment_2_1");
 					put(grammarAccess.getFluentAccess().getCondPartAssignment_3_1(), "rule__Fluent__CondPartAssignment_3_1");

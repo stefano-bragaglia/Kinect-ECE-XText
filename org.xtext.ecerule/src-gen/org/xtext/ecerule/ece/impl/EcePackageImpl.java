@@ -474,16 +474,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEventFeature_Name()
-  {
-    return (EAttribute)eventFeatureEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getContextsList()
   {
     return contextsListEClass;
@@ -644,19 +634,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFluent_FluentName()
-  {
-    return (EAttribute)fluentEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getFluent_ValuePart()
   {
-    return (EReference)fluentEClass.getEStructuralFeatures().get(1);
+    return (EReference)fluentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -666,7 +646,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    */
   public EReference getFluent_TimePart()
   {
-    return (EReference)fluentEClass.getEStructuralFeatures().get(2);
+    return (EReference)fluentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -676,7 +656,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    */
   public EReference getFluent_CondPart()
   {
-    return (EReference)fluentEClass.getEStructuralFeatures().get(3);
+    return (EReference)fluentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -757,6 +737,16 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
   public EClass getReferenceType()
   {
     return referenceTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getReferenceType_Name()
+  {
+    return (EAttribute)referenceTypeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1341,7 +1331,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     createEReference(eventEClass, EVENT__PARAMS);
 
     eventFeatureEClass = createEClass(EVENT_FEATURE);
-    createEAttribute(eventFeatureEClass, EVENT_FEATURE__NAME);
 
     contextsListEClass = createEClass(CONTEXTS_LIST);
     createEReference(contextsListEClass, CONTEXTS_LIST__EC_CONTEXTS_LIST);
@@ -1365,7 +1354,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     allenOpEClass = createEClass(ALLEN_OP);
 
     fluentEClass = createEClass(FLUENT);
-    createEAttribute(fluentEClass, FLUENT__FLUENT_NAME);
     createEReference(fluentEClass, FLUENT__VALUE_PART);
     createEReference(fluentEClass, FLUENT__TIME_PART);
     createEReference(fluentEClass, FLUENT__COND_PART);
@@ -1382,6 +1370,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     createEReference(expressionEClass, EXPRESSION__EXPRESSION);
 
     referenceTypeEClass = createEClass(REFERENCE_TYPE);
+    createEAttribute(referenceTypeEClass, REFERENCE_TYPE__NAME);
 
     atExprEClass = createEClass(AT_EXPR);
 
@@ -1525,7 +1514,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     initEReference(getEvent_Params(), this.getEventFeature(), null, "params", null, 0, -1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eventFeatureEClass, EventFeature.class, "EventFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEventFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, EventFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contextsListEClass, ContextsList.class, "ContextsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getContextsList_EcContextsList(), this.getEcContextsList(), null, "ecContextsList", null, 0, 1, ContextsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1549,7 +1537,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     initEClass(allenOpEClass, AllenOp.class, "AllenOp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(fluentEClass, Fluent.class, "Fluent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFluent_FluentName(), ecorePackage.getEString(), "fluentName", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFluent_ValuePart(), this.getToRule(), null, "valuePart", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFluent_TimePart(), this.getInRule(), null, "timePart", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFluent_CondPart(), this.getConditionRule(), null, "condPart", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1566,6 +1553,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     initEReference(getExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(referenceTypeEClass, ReferenceType.class, "ReferenceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getReferenceType_Name(), ecorePackage.getEString(), "name", null, 0, 1, ReferenceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atExprEClass, AtExpr.class, "AtExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

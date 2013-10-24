@@ -169,13 +169,22 @@ public interface EcePackage extends EPackage
   int REFERENCE_TYPE = 15;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REFERENCE_TYPE__NAME = 0;
+
+  /**
    * The number of structural features of the '<em>Reference Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFERENCE_TYPE_FEATURE_COUNT = 0;
+  int REFERENCE_TYPE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.EventFeatureImpl <em>Event Feature</em>}' class.
@@ -194,7 +203,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT_FEATURE__NAME = REFERENCE_TYPE_FEATURE_COUNT + 0;
+  int EVENT_FEATURE__NAME = REFERENCE_TYPE__NAME;
 
   /**
    * The number of structural features of the '<em>Event Feature</em>' class.
@@ -203,7 +212,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT_FEATURE_FEATURE_COUNT = REFERENCE_TYPE_FEATURE_COUNT + 1;
+  int EVENT_FEATURE_FEATURE_COUNT = REFERENCE_TYPE_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ContextsListImpl <em>Contexts List</em>}' class.
@@ -411,13 +420,13 @@ public interface EcePackage extends EPackage
   int FLUENT = 10;
 
   /**
-   * The feature id for the '<em><b>Fluent Name</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FLUENT__FLUENT_NAME = REFERENCE_TYPE_FEATURE_COUNT + 0;
+  int FLUENT__NAME = REFERENCE_TYPE__NAME;
 
   /**
    * The feature id for the '<em><b>Value Part</b></em>' containment reference.
@@ -426,7 +435,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int FLUENT__VALUE_PART = REFERENCE_TYPE_FEATURE_COUNT + 1;
+  int FLUENT__VALUE_PART = REFERENCE_TYPE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Time Part</b></em>' containment reference.
@@ -435,7 +444,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int FLUENT__TIME_PART = REFERENCE_TYPE_FEATURE_COUNT + 2;
+  int FLUENT__TIME_PART = REFERENCE_TYPE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Cond Part</b></em>' containment reference.
@@ -444,7 +453,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int FLUENT__COND_PART = REFERENCE_TYPE_FEATURE_COUNT + 3;
+  int FLUENT__COND_PART = REFERENCE_TYPE_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Fluent</em>' class.
@@ -453,7 +462,7 @@ public interface EcePackage extends EPackage
    * @generated
    * @ordered
    */
-  int FLUENT_FEATURE_COUNT = REFERENCE_TYPE_FEATURE_COUNT + 4;
+  int FLUENT_FEATURE_COUNT = REFERENCE_TYPE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ConditionRuleImpl <em>Condition Rule</em>}' class.
@@ -1567,17 +1576,6 @@ public interface EcePackage extends EPackage
   EClass getEventFeature();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.EventFeature#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.ecerule.ece.EventFeature#getName()
-   * @see #getEventFeature()
-   * @generated
-   */
-  EAttribute getEventFeature_Name();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.ContextsList <em>Contexts List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1747,17 +1745,6 @@ public interface EcePackage extends EPackage
   EClass getFluent();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.Fluent#getFluentName <em>Fluent Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fluent Name</em>'.
-   * @see org.xtext.ecerule.ece.Fluent#getFluentName()
-   * @see #getFluent()
-   * @generated
-   */
-  EAttribute getFluent_FluentName();
-
-  /**
    * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.Fluent#getValuePart <em>Value Part</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1872,6 +1859,17 @@ public interface EcePackage extends EPackage
    * @generated
    */
   EClass getReferenceType();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.ReferenceType#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.ecerule.ece.ReferenceType#getName()
+   * @see #getReferenceType()
+   * @generated
+   */
+  EAttribute getReferenceType_Name();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.AtExpr <em>At Expr</em>}'.
@@ -2550,14 +2548,6 @@ public interface EcePackage extends EPackage
     EClass EVENT_FEATURE = eINSTANCE.getEventFeature();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EVENT_FEATURE__NAME = eINSTANCE.getEventFeature_Name();
-
-    /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ContextsListImpl <em>Contexts List</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2700,14 +2690,6 @@ public interface EcePackage extends EPackage
     EClass FLUENT = eINSTANCE.getFluent();
 
     /**
-     * The meta object literal for the '<em><b>Fluent Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FLUENT__FLUENT_NAME = eINSTANCE.getFluent_FluentName();
-
-    /**
      * The meta object literal for the '<em><b>Value Part</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2804,6 +2786,14 @@ public interface EcePackage extends EPackage
      * @generated
      */
     EClass REFERENCE_TYPE = eINSTANCE.getReferenceType();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REFERENCE_TYPE__NAME = eINSTANCE.getReferenceType_Name();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.AtExprImpl <em>At Expr</em>}' class.
