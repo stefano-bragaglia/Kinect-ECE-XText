@@ -33,6 +33,7 @@ import org.xtext.ecerule.ece.impl.FloatConstantImpl;
 import org.xtext.ecerule.ece.impl.FluentImpl;
 import org.xtext.ecerule.ece.impl.IntConstantImpl;
 import org.xtext.ecerule.ece.impl.NotImpl;
+import org.xtext.ecerule.ece.impl.OrImpl;
 import org.xtext.ecerule.ece.impl.ReferenceTypeImpl;
 
 /**
@@ -63,13 +64,34 @@ public class EceGenerator implements IGenerator {
     _builder.append("public static void main (String[] args) {\t");
     _builder.newLine();
     _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("public Statement statement;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("public Event event;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("public String eventName;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("public ExpressionDescr exprContainer;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("public ConditionDescr condContainer;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("public ExpContext expContext;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
     _builder.append("Model model = new Model();");
     _builder.newLine();
     {
       EList<Statement> _statements = eceModel.getStatements();
       for(final Statement stm : _statements) {
-        _builder.append("\t");
-        _builder.append("Statement statement = new Statement();");
+        _builder.append("statement = new Statement();");
         _builder.newLine();
         CharSequence _compileEvent = this.compileEvent(stm);
         _builder.append(_compileEvent, "");
@@ -80,11 +102,11 @@ public class EceGenerator implements IGenerator {
         _builder.append("\t");
         _builder.append("\t\t\t\t\t\t");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t\t\t\t\t");
+        _builder.append("\t\t\t\t\t\t");
         _builder.append("model.add(\"Stm");
         Event _event = stm.getEvent();
         String _eventName = _event.getEventName();
-        _builder.append(_eventName, "							");
+        _builder.append(_eventName, "						");
         _builder.append("\", statement);");
         _builder.newLineIfNotEmpty();
       }
@@ -101,9 +123,9 @@ public class EceGenerator implements IGenerator {
   
   public CharSequence compileEvent(final Statement stm) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("Event event = new Event();");
+    _builder.append("event = new Event();");
     _builder.newLine();
-    _builder.append("String eventName = \"");
+    _builder.append("eventName = \"");
     Event _event = stm.getEvent();
     String _eventName = _event.getEventName();
     _builder.append(_eventName, "");
@@ -149,23 +171,12 @@ public class EceGenerator implements IGenerator {
   
   public CharSequence compileExpContext(final ExpContext expContext, final Statement statement) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("ExpContext expContext = new ExpContext();");
+    _builder.append("expContext = new ExpContext();");
     _builder.newLine();
-    ConditionRule _initialCondition = expContext.getInitialCondition();
-    CharSequence _compileCond = this.compileCond(_initialCondition, statement, "Initial");
-    _builder.append(_compileCond, "");
-    _builder.append("\t");
-    _builder.append("\t\t");
     ConditionRule _finalCondition = expContext.getFinalCondition();
-    CharSequence _compileCond_1 = this.compileCond(_finalCondition, statement, "Final");
-    _builder.append(_compileCond_1, "");
+    CharSequence _compileCond = this.compileCond(((ExpressionImpl) _finalCondition), statement, "Final");
+    _builder.append(_compileCond, "");
     _builder.append("\t\t");
-    _builder.append("\t\t");
-    AllenOp _allenOp = expContext.getAllenOp();
-    AtExpr _time = expContext.getTime();
-    Object _compileTime = this.compileTime(_allenOp, _time);
-    _builder.append(_compileTime, "");
-    _builder.append("\t");
     _builder.append("\t\t");
     _builder.newLineIfNotEmpty();
     _builder.append("statement.addExpContext(expContext);");
@@ -174,169 +185,328 @@ public class EceGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compileCond(final ConditionRule cond, final Statement statement, final String condType) {
-    CharSequence _switchResult = null;
-    boolean _matched = false;
-    if (!_matched) {
-      if (cond instanceof NotImpl) {
-        final NotImpl _notImpl = (NotImpl)cond;
-        _matched=true;
-        StringConcatenation _builder = new StringConcatenation();
-        {
-          Expression _expression = _notImpl.getExpression();
-          EClass _eClass = _expression.eClass();
-          String _name = _eClass.getName();
-          boolean _equals = _name.equals("Constant");
-          if (_equals) {
-            _builder.append(" ");
-            _builder.append("\t\t\t\t\tConditionDescr CondValue_Not = new NotDescr( ");
-            Expression _expression_1 = _notImpl.getExpression();
-            CharSequence _compileTerminalLeft = this.compileTerminalLeft(((ExpressionImpl) _expression_1), statement);
-            _builder.append(_compileTerminalLeft, "");
-            _builder.append(");");
-            _builder.newLineIfNotEmpty();
-          } else {
-            _builder.append(" ");
-            _builder.append("\t\t\t\t\tConditionDescr CondValue_Not = new NotDescr(");
-            Expression _expression_2 = _notImpl.getExpression();
-            CharSequence _compileRecExpr = this.compileRecExpr(((ExpressionImpl) _expression_2), statement);
-            _builder.append(_compileRecExpr, "");
-            _builder.append(");");
-            _builder.newLineIfNotEmpty();
+  public CharSequence compileCond(final ExpressionImpl condExpr, final Statement statement, final String condType) {
+    CharSequence _xblockexpression = null;
+    {
+      Expression cond = condExpr.getCondition();
+      CharSequence _switchResult = null;
+      boolean _matched = false;
+      if (!_matched) {
+        if (cond instanceof NotImpl) {
+          final NotImpl _notImpl = (NotImpl)cond;
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          {
+            Expression _expression = _notImpl.getExpression();
+            EClass _eClass = _expression.eClass();
+            String _name = _eClass.getName();
+            boolean _equals = _name.equals("Constant");
+            if (_equals) {
+              _builder.append(" ");
+              _builder.append("\t\t\t\t\tcondContainer = new NotDescr( ");
+              Expression _expression_1 = _notImpl.getExpression();
+              CharSequence _compileTerminalLeft = this.compileTerminalLeft(((ExpressionImpl) _expression_1), statement);
+              _builder.append(_compileTerminalLeft, "");
+              _builder.append(");");
+              _builder.newLineIfNotEmpty();
+            } else {
+              _builder.append(" ");
+              _builder.append("\t\t\t\t\tcondContainer = new NotDescr(");
+              Expression _expression_2 = _notImpl.getExpression();
+              CharSequence _compileRecExpr = this.compileRecExpr(((ExpressionImpl) _expression_2), statement);
+              _builder.append(_compileRecExpr, "");
+              _builder.append(");");
+              _builder.newLineIfNotEmpty();
+            }
           }
+          _builder.newLine();
+          _builder.append("expContext.set");
+          _builder.append(condType, "");
+          _builder.append("Condition(condContainer);");
+          _builder.newLineIfNotEmpty();
+          _builder.newLine();
+          _switchResult = _builder;
         }
-        _builder.newLine();
-        _builder.append("expContext.set");
-        _builder.append(condType, "");
-        _builder.append("Condition(CondValue_Not);");
-        _builder.newLineIfNotEmpty();
-        _builder.newLine();
-        _switchResult = _builder;
       }
-    }
-    if (!_matched) {
-      if (cond instanceof ComparisonImpl) {
-        final ComparisonImpl _comparisonImpl = (ComparisonImpl)cond;
-        _matched=true;
-        StringConcatenation _builder = new StringConcatenation();
-        {
-          String _op = _comparisonImpl.getOp();
-          boolean _equals = _op.equals(">=");
-          if (_equals) {
-            {
-              boolean _and = false;
-              Expression _left = _comparisonImpl.getLeft();
-              EClass _eClass = _left.eClass();
-              String _name = _eClass.getName();
-              boolean _contains = _name.contains("Constant");
-              if (!_contains) {
-                _and = false;
-              } else {
-                Expression _right = _comparisonImpl.getRight();
-                EClass _eClass_1 = _right.eClass();
-                String _name_1 = _eClass_1.getName();
-                boolean _contains_1 = _name_1.contains("Constant");
-                _and = (_contains && _contains_1);
-              }
-              if (_and) {
-                _builder.append("ConditionDescr CondValue_MoreEquals = new MoreEqualsDescr( ");
-                Expression _left_1 = _comparisonImpl.getLeft();
-                CharSequence _compileTerminalLeft = this.compileTerminalLeft(((ExpressionImpl) _left_1), statement);
-                _builder.append(_compileTerminalLeft, "");
-                _builder.append(",");
-                Expression _right_1 = _comparisonImpl.getRight();
-                CharSequence _compileTerminalRight = this.compileTerminalRight(((ExpressionImpl) _right_1), statement);
-                _builder.append(_compileTerminalRight, "");
-                _builder.append(");");
-                _builder.newLineIfNotEmpty();
-              } else {
-                {
-                  Expression _left_2 = _comparisonImpl.getLeft();
-                  EClass _eClass_2 = _left_2.eClass();
-                  String _name_2 = _eClass_2.getName();
-                  boolean _contains_2 = _name_2.contains("Constant");
-                  if (_contains_2) {
-                    _builder.append("ConditionDescr CondValue_MoreEquals = new MoreEqualsDescr(");
-                    Expression _left_3 = _comparisonImpl.getLeft();
-                    CharSequence _compileTerminalLeft_1 = this.compileTerminalLeft(((ExpressionImpl) _left_3), statement);
-                    _builder.append(_compileTerminalLeft_1, "");
-                    _builder.append(",");
-                    Expression _right_2 = _comparisonImpl.getRight();
-                    CharSequence _compileRecExpr = this.compileRecExpr(((ExpressionImpl) _right_2), statement);
-                    _builder.append(_compileRecExpr, "");
-                    _builder.append(");");
-                    _builder.newLineIfNotEmpty();
-                  }
+      if (!_matched) {
+        if (cond instanceof OrImpl) {
+          final OrImpl _orImpl = (OrImpl)cond;
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          {
+            boolean _and = false;
+            Expression _left = _orImpl.getLeft();
+            EClass _eClass = _left.eClass();
+            String _name = _eClass.getName();
+            boolean _contains = _name.contains("Constant");
+            if (!_contains) {
+              _and = false;
+            } else {
+              Expression _right = _orImpl.getRight();
+              EClass _eClass_1 = _right.eClass();
+              String _name_1 = _eClass_1.getName();
+              boolean _contains_1 = _name_1.contains("Constant");
+              _and = (_contains && _contains_1);
+            }
+            if (_and) {
+              _builder.append("condContainer = new OrDescr( ");
+              Expression _left_1 = _orImpl.getLeft();
+              CharSequence _compileTerminalLeft = this.compileTerminalLeft(((ExpressionImpl) _left_1), statement);
+              _builder.append(_compileTerminalLeft, "");
+              _builder.append(",");
+              Expression _right_1 = _orImpl.getRight();
+              CharSequence _compileTerminalRight = this.compileTerminalRight(((ExpressionImpl) _right_1), statement);
+              _builder.append(_compileTerminalRight, "");
+              _builder.append(");");
+              _builder.newLineIfNotEmpty();
+            } else {
+              {
+                Expression _left_2 = _orImpl.getLeft();
+                EClass _eClass_2 = _left_2.eClass();
+                String _name_2 = _eClass_2.getName();
+                boolean _contains_2 = _name_2.contains("Constant");
+                if (_contains_2) {
+                  _builder.append("condContainer = new OrDescr(");
+                  Expression _left_3 = _orImpl.getLeft();
+                  CharSequence _compileTerminalLeft_1 = this.compileTerminalLeft(((ExpressionImpl) _left_3), statement);
+                  _builder.append(_compileTerminalLeft_1, "");
+                  _builder.append(",");
+                  Expression _right_2 = _orImpl.getRight();
+                  CharSequence _compileRecExpr = this.compileRecExpr(((ExpressionImpl) _right_2), statement);
+                  _builder.append(_compileRecExpr, "");
+                  _builder.append(");");
+                  _builder.newLineIfNotEmpty();
                 }
-                {
-                  Expression _left_4 = _comparisonImpl.getLeft();
-                  EClass _eClass_3 = _left_4.eClass();
-                  String _name_3 = _eClass_3.getName();
-                  boolean _contains_3 = _name_3.contains("Constant");
-                  boolean _not = (!_contains_3);
-                  if (_not) {
-                    _builder.append("ConditionDescr CondValue_MoreEquals = new MoreEqualsDescr(");
-                    Expression _left_5 = _comparisonImpl.getLeft();
-                    CharSequence _compileRecExpr_1 = this.compileRecExpr(((ExpressionImpl) _left_5), statement);
-                    _builder.append(_compileRecExpr_1, "");
-                    _builder.append(",");
-                    Expression _right_3 = _comparisonImpl.getRight();
-                    CharSequence _compileRecExpr_2 = this.compileRecExpr(((ExpressionImpl) _right_3), statement);
-                    _builder.append(_compileRecExpr_2, "");
-                    _builder.append(");");
-                    _builder.newLineIfNotEmpty();
-                  }
+              }
+              {
+                Expression _left_4 = _orImpl.getLeft();
+                EClass _eClass_3 = _left_4.eClass();
+                String _name_3 = _eClass_3.getName();
+                boolean _contains_3 = _name_3.contains("Constant");
+                boolean _not = (!_contains_3);
+                if (_not) {
+                  _builder.append("condContainer = new OrDescr(");
+                  Expression _left_5 = _orImpl.getLeft();
+                  CharSequence _compileRecExpr_1 = this.compileRecExpr(((ExpressionImpl) _left_5), statement);
+                  _builder.append(_compileRecExpr_1, "");
+                  _builder.append(",");
+                  Expression _right_3 = _orImpl.getRight();
+                  CharSequence _compileRecExpr_2 = this.compileRecExpr(((ExpressionImpl) _right_3), statement);
+                  _builder.append(_compileRecExpr_2, "");
+                  _builder.append(");");
+                  _builder.newLineIfNotEmpty();
                 }
               }
             }
-            _builder.append("expContext.set");
-            _builder.append(condType, "");
-            _builder.append("Condition(CondValue_MoreEquals);\t\t\t\t");
-            _builder.newLineIfNotEmpty();
-            _builder.newLine();
-          } else {
-            String _op_1 = _comparisonImpl.getOp();
-            boolean _equals_1 = _op_1.equals("<=");
-            if (_equals_1) {
+          }
+          _builder.newLine();
+          _builder.append("expContext.set");
+          _builder.append(condType, "");
+          _builder.append("Condition(condContainer);");
+          _builder.newLineIfNotEmpty();
+          _switchResult = _builder;
+        }
+      }
+      if (!_matched) {
+        if (cond instanceof AndImpl) {
+          final AndImpl _andImpl = (AndImpl)cond;
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          {
+            boolean _and = false;
+            Expression _left = _andImpl.getLeft();
+            EClass _eClass = _left.eClass();
+            String _name = _eClass.getName();
+            boolean _contains = _name.contains("Constant");
+            if (!_contains) {
+              _and = false;
+            } else {
+              Expression _right = _andImpl.getRight();
+              EClass _eClass_1 = _right.eClass();
+              String _name_1 = _eClass_1.getName();
+              boolean _contains_1 = _name_1.contains("Constant");
+              _and = (_contains && _contains_1);
+            }
+            if (_and) {
+              _builder.append("condContainer = new AndDescr( ");
+              Expression _left_1 = _andImpl.getLeft();
+              CharSequence _compileTerminalLeft = this.compileTerminalLeft(((ExpressionImpl) _left_1), statement);
+              _builder.append(_compileTerminalLeft, "");
+              _builder.append(",");
+              Expression _right_1 = _andImpl.getRight();
+              CharSequence _compileTerminalRight = this.compileTerminalRight(((ExpressionImpl) _right_1), statement);
+              _builder.append(_compileTerminalRight, "");
+              _builder.append(");");
+              _builder.newLineIfNotEmpty();
+            } else {
+              {
+                Expression _left_2 = _andImpl.getLeft();
+                EClass _eClass_2 = _left_2.eClass();
+                String _name_2 = _eClass_2.getName();
+                boolean _contains_2 = _name_2.contains("Constant");
+                if (_contains_2) {
+                  _builder.append("condContainer = new AndDescr(");
+                  Expression _left_3 = _andImpl.getLeft();
+                  CharSequence _compileTerminalLeft_1 = this.compileTerminalLeft(((ExpressionImpl) _left_3), statement);
+                  _builder.append(_compileTerminalLeft_1, "");
+                  _builder.append(",");
+                  Expression _right_2 = _andImpl.getRight();
+                  CharSequence _compileRecExpr = this.compileRecExpr(((ExpressionImpl) _right_2), statement);
+                  _builder.append(_compileRecExpr, "");
+                  _builder.append(");");
+                  _builder.newLineIfNotEmpty();
+                }
+              }
+              {
+                Expression _left_4 = _andImpl.getLeft();
+                EClass _eClass_3 = _left_4.eClass();
+                String _name_3 = _eClass_3.getName();
+                boolean _contains_3 = _name_3.contains("Constant");
+                boolean _not = (!_contains_3);
+                if (_not) {
+                  _builder.append("condContainer = new AndDescr(");
+                  Expression _left_5 = _andImpl.getLeft();
+                  CharSequence _compileRecExpr_1 = this.compileRecExpr(((ExpressionImpl) _left_5), statement);
+                  _builder.append(_compileRecExpr_1, "");
+                  _builder.append(",");
+                  Expression _right_3 = _andImpl.getRight();
+                  CharSequence _compileRecExpr_2 = this.compileRecExpr(((ExpressionImpl) _right_3), statement);
+                  _builder.append(_compileRecExpr_2, "");
+                  _builder.append(");");
+                  _builder.newLineIfNotEmpty();
+                }
+              }
+            }
+          }
+          _builder.newLine();
+          _builder.append("expContext.set");
+          _builder.append(condType, "");
+          _builder.append("Condition(condContainer);");
+          _builder.newLineIfNotEmpty();
+          _builder.newLine();
+          _switchResult = _builder;
+        }
+      }
+      if (!_matched) {
+        if (cond instanceof EqualityImpl) {
+          final EqualityImpl _equalityImpl = (EqualityImpl)cond;
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          {
+            String _op = _equalityImpl.getOp();
+            boolean _equals = _op.equals("==");
+            if (_equals) {
+              {
+                boolean _and = false;
+                Expression _left = _equalityImpl.getLeft();
+                EClass _eClass = _left.eClass();
+                String _name = _eClass.getName();
+                boolean _contains = _name.contains("Constant");
+                if (!_contains) {
+                  _and = false;
+                } else {
+                  Expression _right = _equalityImpl.getRight();
+                  EClass _eClass_1 = _right.eClass();
+                  String _name_1 = _eClass_1.getName();
+                  boolean _contains_1 = _name_1.contains("Constant");
+                  _and = (_contains && _contains_1);
+                }
+                if (_and) {
+                  _builder.append("condContainer = new SameDescr( ");
+                  Expression _left_1 = _equalityImpl.getLeft();
+                  CharSequence _compileTerminalLeft = this.compileTerminalLeft(((ExpressionImpl) _left_1), statement);
+                  _builder.append(_compileTerminalLeft, "");
+                  _builder.append(",");
+                  Expression _right_1 = _equalityImpl.getRight();
+                  CharSequence _compileTerminalRight = this.compileTerminalRight(((ExpressionImpl) _right_1), statement);
+                  _builder.append(_compileTerminalRight, "");
+                  _builder.append(");");
+                  _builder.newLineIfNotEmpty();
+                } else {
+                  {
+                    Expression _left_2 = _equalityImpl.getLeft();
+                    EClass _eClass_2 = _left_2.eClass();
+                    String _name_2 = _eClass_2.getName();
+                    boolean _contains_2 = _name_2.contains("Constant");
+                    if (_contains_2) {
+                      _builder.append("condContainer = new SameDescr(");
+                      Expression _left_3 = _equalityImpl.getLeft();
+                      CharSequence _compileTerminalLeft_1 = this.compileTerminalLeft(((ExpressionImpl) _left_3), statement);
+                      _builder.append(_compileTerminalLeft_1, "");
+                      _builder.append(",");
+                      Expression _right_2 = _equalityImpl.getRight();
+                      CharSequence _compileRecExpr = this.compileRecExpr(((ExpressionImpl) _right_2), statement);
+                      _builder.append(_compileRecExpr, "");
+                      _builder.append(");");
+                      _builder.newLineIfNotEmpty();
+                    }
+                  }
+                  {
+                    Expression _left_4 = _equalityImpl.getLeft();
+                    EClass _eClass_3 = _left_4.eClass();
+                    String _name_3 = _eClass_3.getName();
+                    boolean _contains_3 = _name_3.contains("Constant");
+                    boolean _not = (!_contains_3);
+                    if (_not) {
+                      _builder.append("condContainer = new SameDescr(");
+                      Expression _left_5 = _equalityImpl.getLeft();
+                      CharSequence _compileRecExpr_1 = this.compileRecExpr(((ExpressionImpl) _left_5), statement);
+                      _builder.append(_compileRecExpr_1, "");
+                      _builder.append(",");
+                      Expression _right_3 = _equalityImpl.getRight();
+                      CharSequence _compileRecExpr_2 = this.compileRecExpr(((ExpressionImpl) _right_3), statement);
+                      _builder.append(_compileRecExpr_2, "");
+                      _builder.append(");");
+                      _builder.newLineIfNotEmpty();
+                    }
+                  }
+                }
+              }
+              _builder.append("expContext.set");
+              _builder.append(condType, "");
+              _builder.append("Condition(condContainer);");
+              _builder.newLineIfNotEmpty();
+              _builder.newLine();
+            } else {
               {
                 boolean _and_1 = false;
-                Expression _left_6 = _comparisonImpl.getLeft();
+                Expression _left_6 = _equalityImpl.getLeft();
                 EClass _eClass_4 = _left_6.eClass();
                 String _name_4 = _eClass_4.getName();
                 boolean _contains_4 = _name_4.contains("Constant");
                 if (!_contains_4) {
                   _and_1 = false;
                 } else {
-                  Expression _right_4 = _comparisonImpl.getRight();
+                  Expression _right_4 = _equalityImpl.getRight();
                   EClass _eClass_5 = _right_4.eClass();
                   String _name_5 = _eClass_5.getName();
                   boolean _contains_5 = _name_5.contains("Constant");
                   _and_1 = (_contains_4 && _contains_5);
                 }
                 if (_and_1) {
-                  _builder.append("ConditionDescr CondValue_LessEquals = new LessEqualsDescr( ");
-                  Expression _left_7 = _comparisonImpl.getLeft();
+                  _builder.append("condContainer = new DifferentDescr( ");
+                  Expression _left_7 = _equalityImpl.getLeft();
                   CharSequence _compileTerminalLeft_2 = this.compileTerminalLeft(((ExpressionImpl) _left_7), statement);
                   _builder.append(_compileTerminalLeft_2, "");
                   _builder.append(",");
-                  Expression _right_5 = _comparisonImpl.getRight();
+                  Expression _right_5 = _equalityImpl.getRight();
                   CharSequence _compileTerminalRight_1 = this.compileTerminalRight(((ExpressionImpl) _right_5), statement);
                   _builder.append(_compileTerminalRight_1, "");
                   _builder.append(");");
                   _builder.newLineIfNotEmpty();
                 } else {
                   {
-                    Expression _left_8 = _comparisonImpl.getLeft();
+                    Expression _left_8 = _equalityImpl.getLeft();
                     EClass _eClass_6 = _left_8.eClass();
                     String _name_6 = _eClass_6.getName();
                     boolean _contains_6 = _name_6.contains("Constant");
                     if (_contains_6) {
-                      _builder.append("ConditionDescr CondValue_LessEquals = new LessEqualsDescr(");
-                      Expression _left_9 = _comparisonImpl.getLeft();
+                      _builder.append("condContainer = new DifferentDescr(");
+                      Expression _left_9 = _equalityImpl.getLeft();
                       CharSequence _compileTerminalLeft_3 = this.compileTerminalLeft(((ExpressionImpl) _left_9), statement);
                       _builder.append(_compileTerminalLeft_3, "");
                       _builder.append(",");
-                      Expression _right_6 = _comparisonImpl.getRight();
+                      Expression _right_6 = _equalityImpl.getRight();
                       CharSequence _compileRecExpr_3 = this.compileRecExpr(((ExpressionImpl) _right_6), statement);
                       _builder.append(_compileRecExpr_3, "");
                       _builder.append(");");
@@ -344,18 +514,18 @@ public class EceGenerator implements IGenerator {
                     }
                   }
                   {
-                    Expression _left_10 = _comparisonImpl.getLeft();
+                    Expression _left_10 = _equalityImpl.getLeft();
                     EClass _eClass_7 = _left_10.eClass();
                     String _name_7 = _eClass_7.getName();
                     boolean _contains_7 = _name_7.contains("Constant");
                     boolean _not_1 = (!_contains_7);
                     if (_not_1) {
-                      _builder.append("ConditionDescr CondValue_LessEquals = new LessEqualsDescr(");
-                      Expression _left_11 = _comparisonImpl.getLeft();
+                      _builder.append("condContainer = new DifferentDescr(");
+                      Expression _left_11 = _equalityImpl.getLeft();
                       CharSequence _compileRecExpr_4 = this.compileRecExpr(((ExpressionImpl) _left_11), statement);
                       _builder.append(_compileRecExpr_4, "");
                       _builder.append(",");
-                      Expression _right_7 = _comparisonImpl.getRight();
+                      Expression _right_7 = _equalityImpl.getRight();
                       CharSequence _compileRecExpr_5 = this.compileRecExpr(((ExpressionImpl) _right_7), statement);
                       _builder.append(_compileRecExpr_5, "");
                       _builder.append(");");
@@ -366,73 +536,157 @@ public class EceGenerator implements IGenerator {
               }
               _builder.append("expContext.set");
               _builder.append(condType, "");
-              _builder.append("Condition(CondValue_LessEquals);");
+              _builder.append("Condition(condContainer);");
+              _builder.newLineIfNotEmpty();
+            }
+          }
+          _switchResult = _builder;
+        }
+      }
+      if (!_matched) {
+        if (cond instanceof ComparisonImpl) {
+          final ComparisonImpl _comparisonImpl = (ComparisonImpl)cond;
+          _matched=true;
+          StringConcatenation _builder = new StringConcatenation();
+          {
+            String _op = _comparisonImpl.getOp();
+            boolean _equals = _op.equals(">=");
+            if (_equals) {
+              {
+                boolean _and = false;
+                Expression _left = _comparisonImpl.getLeft();
+                EClass _eClass = _left.eClass();
+                String _name = _eClass.getName();
+                boolean _contains = _name.contains("Constant");
+                if (!_contains) {
+                  _and = false;
+                } else {
+                  Expression _right = _comparisonImpl.getRight();
+                  EClass _eClass_1 = _right.eClass();
+                  String _name_1 = _eClass_1.getName();
+                  boolean _contains_1 = _name_1.contains("Constant");
+                  _and = (_contains && _contains_1);
+                }
+                if (_and) {
+                  _builder.append("condContainer = new MoreEqualsDescr( ");
+                  Expression _left_1 = _comparisonImpl.getLeft();
+                  CharSequence _compileTerminalLeft = this.compileTerminalLeft(((ExpressionImpl) _left_1), statement);
+                  _builder.append(_compileTerminalLeft, "");
+                  _builder.append(",");
+                  Expression _right_1 = _comparisonImpl.getRight();
+                  CharSequence _compileTerminalRight = this.compileTerminalRight(((ExpressionImpl) _right_1), statement);
+                  _builder.append(_compileTerminalRight, "");
+                  _builder.append(");");
+                  _builder.newLineIfNotEmpty();
+                } else {
+                  {
+                    Expression _left_2 = _comparisonImpl.getLeft();
+                    EClass _eClass_2 = _left_2.eClass();
+                    String _name_2 = _eClass_2.getName();
+                    boolean _contains_2 = _name_2.contains("Constant");
+                    if (_contains_2) {
+                      _builder.append("condContainer = new MoreEqualsDescr(");
+                      Expression _left_3 = _comparisonImpl.getLeft();
+                      CharSequence _compileTerminalLeft_1 = this.compileTerminalLeft(((ExpressionImpl) _left_3), statement);
+                      _builder.append(_compileTerminalLeft_1, "");
+                      _builder.append(",");
+                      Expression _right_2 = _comparisonImpl.getRight();
+                      CharSequence _compileRecExpr = this.compileRecExpr(((ExpressionImpl) _right_2), statement);
+                      _builder.append(_compileRecExpr, "");
+                      _builder.append(");");
+                      _builder.newLineIfNotEmpty();
+                    }
+                  }
+                  {
+                    Expression _left_4 = _comparisonImpl.getLeft();
+                    EClass _eClass_3 = _left_4.eClass();
+                    String _name_3 = _eClass_3.getName();
+                    boolean _contains_3 = _name_3.contains("Constant");
+                    boolean _not = (!_contains_3);
+                    if (_not) {
+                      _builder.append("condContainer = new MoreEqualsDescr(");
+                      Expression _left_5 = _comparisonImpl.getLeft();
+                      CharSequence _compileRecExpr_1 = this.compileRecExpr(((ExpressionImpl) _left_5), statement);
+                      _builder.append(_compileRecExpr_1, "");
+                      _builder.append(",");
+                      Expression _right_3 = _comparisonImpl.getRight();
+                      CharSequence _compileRecExpr_2 = this.compileRecExpr(((ExpressionImpl) _right_3), statement);
+                      _builder.append(_compileRecExpr_2, "");
+                      _builder.append(");");
+                      _builder.newLineIfNotEmpty();
+                    }
+                  }
+                }
+              }
+              _builder.append("expContext.set");
+              _builder.append(condType, "");
+              _builder.append("Condition(condContainer);\t\t\t\t");
               _builder.newLineIfNotEmpty();
               _builder.newLine();
             } else {
-              String _op_2 = _comparisonImpl.getOp();
-              boolean _equals_2 = _op_2.equals(">");
-              if (_equals_2) {
+              String _op_1 = _comparisonImpl.getOp();
+              boolean _equals_1 = _op_1.equals("<=");
+              if (_equals_1) {
                 {
-                  boolean _and_2 = false;
-                  Expression _left_12 = _comparisonImpl.getLeft();
-                  EClass _eClass_8 = _left_12.eClass();
-                  String _name_8 = _eClass_8.getName();
-                  boolean _contains_8 = _name_8.contains("Constant");
-                  if (!_contains_8) {
-                    _and_2 = false;
+                  boolean _and_1 = false;
+                  Expression _left_6 = _comparisonImpl.getLeft();
+                  EClass _eClass_4 = _left_6.eClass();
+                  String _name_4 = _eClass_4.getName();
+                  boolean _contains_4 = _name_4.contains("Constant");
+                  if (!_contains_4) {
+                    _and_1 = false;
                   } else {
-                    Expression _right_8 = _comparisonImpl.getRight();
-                    EClass _eClass_9 = _right_8.eClass();
-                    String _name_9 = _eClass_9.getName();
-                    boolean _contains_9 = _name_9.contains("Constant");
-                    _and_2 = (_contains_8 && _contains_9);
+                    Expression _right_4 = _comparisonImpl.getRight();
+                    EClass _eClass_5 = _right_4.eClass();
+                    String _name_5 = _eClass_5.getName();
+                    boolean _contains_5 = _name_5.contains("Constant");
+                    _and_1 = (_contains_4 && _contains_5);
                   }
-                  if (_and_2) {
-                    _builder.append("ConditionDescr CondValue_More = new MoreDescr( ");
-                    Expression _left_13 = _comparisonImpl.getLeft();
-                    CharSequence _compileTerminalLeft_4 = this.compileTerminalLeft(((ExpressionImpl) _left_13), statement);
-                    _builder.append(_compileTerminalLeft_4, "");
+                  if (_and_1) {
+                    _builder.append("condContainer = new LessEqualsDescr( ");
+                    Expression _left_7 = _comparisonImpl.getLeft();
+                    CharSequence _compileTerminalLeft_2 = this.compileTerminalLeft(((ExpressionImpl) _left_7), statement);
+                    _builder.append(_compileTerminalLeft_2, "");
                     _builder.append(",");
-                    Expression _right_9 = _comparisonImpl.getRight();
-                    CharSequence _compileTerminalRight_2 = this.compileTerminalRight(((ExpressionImpl) _right_9), statement);
-                    _builder.append(_compileTerminalRight_2, "");
+                    Expression _right_5 = _comparisonImpl.getRight();
+                    CharSequence _compileTerminalRight_1 = this.compileTerminalRight(((ExpressionImpl) _right_5), statement);
+                    _builder.append(_compileTerminalRight_1, "");
                     _builder.append(");");
                     _builder.newLineIfNotEmpty();
                   } else {
                     {
-                      Expression _left_14 = _comparisonImpl.getLeft();
-                      EClass _eClass_10 = _left_14.eClass();
-                      String _name_10 = _eClass_10.getName();
-                      boolean _contains_10 = _name_10.contains("Constant");
-                      if (_contains_10) {
-                        _builder.append("ConditionDescr CondValue_More = new MoreDescr(");
-                        Expression _left_15 = _comparisonImpl.getLeft();
-                        CharSequence _compileTerminalLeft_5 = this.compileTerminalLeft(((ExpressionImpl) _left_15), statement);
-                        _builder.append(_compileTerminalLeft_5, "");
+                      Expression _left_8 = _comparisonImpl.getLeft();
+                      EClass _eClass_6 = _left_8.eClass();
+                      String _name_6 = _eClass_6.getName();
+                      boolean _contains_6 = _name_6.contains("Constant");
+                      if (_contains_6) {
+                        _builder.append("condContainer = new LessEqualsDescr(");
+                        Expression _left_9 = _comparisonImpl.getLeft();
+                        CharSequence _compileTerminalLeft_3 = this.compileTerminalLeft(((ExpressionImpl) _left_9), statement);
+                        _builder.append(_compileTerminalLeft_3, "");
                         _builder.append(",");
-                        Expression _right_10 = _comparisonImpl.getRight();
-                        CharSequence _compileRecExpr_6 = this.compileRecExpr(((ExpressionImpl) _right_10), statement);
-                        _builder.append(_compileRecExpr_6, "");
+                        Expression _right_6 = _comparisonImpl.getRight();
+                        CharSequence _compileRecExpr_3 = this.compileRecExpr(((ExpressionImpl) _right_6), statement);
+                        _builder.append(_compileRecExpr_3, "");
                         _builder.append(");");
                         _builder.newLineIfNotEmpty();
                       }
                     }
                     {
-                      Expression _left_16 = _comparisonImpl.getLeft();
-                      EClass _eClass_11 = _left_16.eClass();
-                      String _name_11 = _eClass_11.getName();
-                      boolean _contains_11 = _name_11.contains("Constant");
-                      boolean _not_2 = (!_contains_11);
-                      if (_not_2) {
-                        _builder.append("ConditionDescr CondValue_More = new MoreDescr(");
-                        Expression _left_17 = _comparisonImpl.getLeft();
-                        CharSequence _compileRecExpr_7 = this.compileRecExpr(((ExpressionImpl) _left_17), statement);
-                        _builder.append(_compileRecExpr_7, "");
+                      Expression _left_10 = _comparisonImpl.getLeft();
+                      EClass _eClass_7 = _left_10.eClass();
+                      String _name_7 = _eClass_7.getName();
+                      boolean _contains_7 = _name_7.contains("Constant");
+                      boolean _not_1 = (!_contains_7);
+                      if (_not_1) {
+                        _builder.append("condContainer = new LessEqualsDescr(");
+                        Expression _left_11 = _comparisonImpl.getLeft();
+                        CharSequence _compileRecExpr_4 = this.compileRecExpr(((ExpressionImpl) _left_11), statement);
+                        _builder.append(_compileRecExpr_4, "");
                         _builder.append(",");
-                        Expression _right_11 = _comparisonImpl.getRight();
-                        CharSequence _compileRecExpr_8 = this.compileRecExpr(((ExpressionImpl) _right_11), statement);
-                        _builder.append(_compileRecExpr_8, "");
+                        Expression _right_7 = _comparisonImpl.getRight();
+                        CharSequence _compileRecExpr_5 = this.compileRecExpr(((ExpressionImpl) _right_7), statement);
+                        _builder.append(_compileRecExpr_5, "");
                         _builder.append(");");
                         _builder.newLineIfNotEmpty();
                       }
@@ -441,95 +695,178 @@ public class EceGenerator implements IGenerator {
                 }
                 _builder.append("expContext.set");
                 _builder.append(condType, "");
-                _builder.append("Condition(CondValue_More);");
+                _builder.append("Condition(condContainer);");
                 _builder.newLineIfNotEmpty();
-                _builder.append("\t\t\t");
                 _builder.newLine();
               } else {
-                {
-                  boolean _and_3 = false;
-                  Expression _left_18 = _comparisonImpl.getLeft();
-                  EClass _eClass_12 = _left_18.eClass();
-                  String _name_12 = _eClass_12.getName();
-                  boolean _contains_12 = _name_12.contains("Constant");
-                  if (!_contains_12) {
-                    _and_3 = false;
-                  } else {
-                    Expression _right_12 = _comparisonImpl.getRight();
-                    EClass _eClass_13 = _right_12.eClass();
-                    String _name_13 = _eClass_13.getName();
-                    boolean _contains_13 = _name_13.contains("Constant");
-                    _and_3 = (_contains_12 && _contains_13);
-                  }
-                  if (_and_3) {
-                    _builder.append("ConditionDescr CondValue_Less = new LessDescr(");
-                    Expression _left_19 = _comparisonImpl.getLeft();
-                    CharSequence _compileTerminalLeft_6 = this.compileTerminalLeft(((ExpressionImpl) _left_19), statement);
-                    _builder.append(_compileTerminalLeft_6, "");
-                    _builder.append(",");
-                    Expression _right_13 = _comparisonImpl.getRight();
-                    CharSequence _compileTerminalRight_3 = this.compileTerminalRight(((ExpressionImpl) _right_13), statement);
-                    _builder.append(_compileTerminalRight_3, "");
-                    _builder.append(");");
-                    _builder.newLineIfNotEmpty();
-                  } else {
-                    {
-                      Expression _left_20 = _comparisonImpl.getLeft();
-                      EClass _eClass_14 = _left_20.eClass();
-                      String _name_14 = _eClass_14.getName();
-                      boolean _contains_14 = _name_14.contains("Constant");
-                      if (_contains_14) {
-                        _builder.append("ConditionDescr CondValue_Less = new LessDescr(");
-                        Expression _left_21 = _comparisonImpl.getLeft();
-                        CharSequence _compileTerminalLeft_7 = this.compileTerminalLeft(((ExpressionImpl) _left_21), statement);
-                        _builder.append(_compileTerminalLeft_7, "");
-                        _builder.append(",");
-                        Expression _right_14 = _comparisonImpl.getRight();
-                        CharSequence _compileRecExpr_9 = this.compileRecExpr(((ExpressionImpl) _right_14), statement);
-                        _builder.append(_compileRecExpr_9, "");
-                        _builder.append(");");
-                        _builder.newLineIfNotEmpty();
+                String _op_2 = _comparisonImpl.getOp();
+                boolean _equals_2 = _op_2.equals(">");
+                if (_equals_2) {
+                  {
+                    boolean _and_2 = false;
+                    Expression _left_12 = _comparisonImpl.getLeft();
+                    EClass _eClass_8 = _left_12.eClass();
+                    String _name_8 = _eClass_8.getName();
+                    boolean _contains_8 = _name_8.contains("Constant");
+                    if (!_contains_8) {
+                      _and_2 = false;
+                    } else {
+                      Expression _right_8 = _comparisonImpl.getRight();
+                      EClass _eClass_9 = _right_8.eClass();
+                      String _name_9 = _eClass_9.getName();
+                      boolean _contains_9 = _name_9.contains("Constant");
+                      _and_2 = (_contains_8 && _contains_9);
+                    }
+                    if (_and_2) {
+                      _builder.append("condContainer = new MoreDescr( ");
+                      Expression _left_13 = _comparisonImpl.getLeft();
+                      CharSequence _compileTerminalLeft_4 = this.compileTerminalLeft(((ExpressionImpl) _left_13), statement);
+                      _builder.append(_compileTerminalLeft_4, "");
+                      _builder.append(",");
+                      Expression _right_9 = _comparisonImpl.getRight();
+                      CharSequence _compileTerminalRight_2 = this.compileTerminalRight(((ExpressionImpl) _right_9), statement);
+                      _builder.append(_compileTerminalRight_2, "");
+                      _builder.append(");");
+                      _builder.newLineIfNotEmpty();
+                    } else {
+                      {
+                        Expression _left_14 = _comparisonImpl.getLeft();
+                        EClass _eClass_10 = _left_14.eClass();
+                        String _name_10 = _eClass_10.getName();
+                        boolean _contains_10 = _name_10.contains("Constant");
+                        if (_contains_10) {
+                          _builder.append("condContainer = new MoreDescr(");
+                          Expression _left_15 = _comparisonImpl.getLeft();
+                          CharSequence _compileTerminalLeft_5 = this.compileTerminalLeft(((ExpressionImpl) _left_15), statement);
+                          _builder.append(_compileTerminalLeft_5, "");
+                          _builder.append(",");
+                          Expression _right_10 = _comparisonImpl.getRight();
+                          CharSequence _compileRecExpr_6 = this.compileRecExpr(((ExpressionImpl) _right_10), statement);
+                          _builder.append(_compileRecExpr_6, "");
+                          _builder.append(");");
+                          _builder.newLineIfNotEmpty();
+                        }
+                      }
+                      {
+                        Expression _left_16 = _comparisonImpl.getLeft();
+                        EClass _eClass_11 = _left_16.eClass();
+                        String _name_11 = _eClass_11.getName();
+                        boolean _contains_11 = _name_11.contains("Constant");
+                        boolean _not_2 = (!_contains_11);
+                        if (_not_2) {
+                          _builder.append("condContainer = new MoreDescr(");
+                          Expression _left_17 = _comparisonImpl.getLeft();
+                          CharSequence _compileRecExpr_7 = this.compileRecExpr(((ExpressionImpl) _left_17), statement);
+                          _builder.append(_compileRecExpr_7, "");
+                          _builder.append(",");
+                          Expression _right_11 = _comparisonImpl.getRight();
+                          CharSequence _compileRecExpr_8 = this.compileRecExpr(((ExpressionImpl) _right_11), statement);
+                          _builder.append(_compileRecExpr_8, "");
+                          _builder.append(");");
+                          _builder.newLineIfNotEmpty();
+                        }
                       }
                     }
-                    {
-                      Expression _left_22 = _comparisonImpl.getLeft();
-                      EClass _eClass_15 = _left_22.eClass();
-                      String _name_15 = _eClass_15.getName();
-                      boolean _contains_15 = _name_15.contains("Constant");
-                      boolean _not_3 = (!_contains_15);
-                      if (_not_3) {
-                        _builder.append("ConditionDescr CondValue_Less = new LessDescr(");
-                        Expression _left_23 = _comparisonImpl.getLeft();
-                        CharSequence _compileRecExpr_10 = this.compileRecExpr(((ExpressionImpl) _left_23), statement);
-                        _builder.append(_compileRecExpr_10, "");
-                        _builder.append(",");
-                        Expression _right_15 = _comparisonImpl.getRight();
-                        CharSequence _compileRecExpr_11 = this.compileRecExpr(((ExpressionImpl) _right_15), statement);
-                        _builder.append(_compileRecExpr_11, "");
-                        _builder.append(");");
-                        _builder.newLineIfNotEmpty();
+                  }
+                  _builder.append("expContext.set");
+                  _builder.append(condType, "");
+                  _builder.append("Condition(condContainer);");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t\t\t");
+                  _builder.newLine();
+                } else {
+                  {
+                    boolean _and_3 = false;
+                    Expression _left_18 = _comparisonImpl.getLeft();
+                    EClass _eClass_12 = _left_18.eClass();
+                    String _name_12 = _eClass_12.getName();
+                    boolean _contains_12 = _name_12.contains("Constant");
+                    if (!_contains_12) {
+                      _and_3 = false;
+                    } else {
+                      Expression _right_12 = _comparisonImpl.getRight();
+                      EClass _eClass_13 = _right_12.eClass();
+                      String _name_13 = _eClass_13.getName();
+                      boolean _contains_13 = _name_13.contains("Constant");
+                      _and_3 = (_contains_12 && _contains_13);
+                    }
+                    if (_and_3) {
+                      _builder.append("condContainer = new LessDescr(");
+                      Expression _left_19 = _comparisonImpl.getLeft();
+                      CharSequence _compileTerminalLeft_6 = this.compileTerminalLeft(((ExpressionImpl) _left_19), statement);
+                      _builder.append(_compileTerminalLeft_6, "");
+                      _builder.append(",");
+                      Expression _right_13 = _comparisonImpl.getRight();
+                      CharSequence _compileTerminalRight_3 = this.compileTerminalRight(((ExpressionImpl) _right_13), statement);
+                      _builder.append(_compileTerminalRight_3, "");
+                      _builder.append(");");
+                      _builder.newLineIfNotEmpty();
+                    } else {
+                      {
+                        Expression _left_20 = _comparisonImpl.getLeft();
+                        EClass _eClass_14 = _left_20.eClass();
+                        String _name_14 = _eClass_14.getName();
+                        boolean _contains_14 = _name_14.contains("Constant");
+                        if (_contains_14) {
+                          _builder.append("condContainer = new LessDescr(");
+                          Expression _left_21 = _comparisonImpl.getLeft();
+                          CharSequence _compileTerminalLeft_7 = this.compileTerminalLeft(((ExpressionImpl) _left_21), statement);
+                          _builder.append(_compileTerminalLeft_7, "");
+                          _builder.append(",");
+                          Expression _right_14 = _comparisonImpl.getRight();
+                          CharSequence _compileRecExpr_9 = this.compileRecExpr(((ExpressionImpl) _right_14), statement);
+                          _builder.append(_compileRecExpr_9, "");
+                          _builder.append(");");
+                          _builder.newLineIfNotEmpty();
+                        }
+                      }
+                      {
+                        Expression _left_22 = _comparisonImpl.getLeft();
+                        EClass _eClass_15 = _left_22.eClass();
+                        String _name_15 = _eClass_15.getName();
+                        boolean _contains_15 = _name_15.contains("Constant");
+                        boolean _not_3 = (!_contains_15);
+                        if (_not_3) {
+                          _builder.append("condContainer = new LessDescr(");
+                          Expression _left_23 = _comparisonImpl.getLeft();
+                          CharSequence _compileRecExpr_10 = this.compileRecExpr(((ExpressionImpl) _left_23), statement);
+                          _builder.append(_compileRecExpr_10, "");
+                          _builder.append(",");
+                          Expression _right_15 = _comparisonImpl.getRight();
+                          CharSequence _compileRecExpr_11 = this.compileRecExpr(((ExpressionImpl) _right_15), statement);
+                          _builder.append(_compileRecExpr_11, "");
+                          _builder.append(");");
+                          _builder.newLineIfNotEmpty();
+                        }
                       }
                     }
                   }
+                  _builder.newLine();
+                  _builder.append("expContext.set");
+                  _builder.append(condType, "");
+                  _builder.append("Condition(condContainer);\t\t\t");
+                  _builder.newLineIfNotEmpty();
                 }
-                _builder.newLine();
-                _builder.append("expContext.set");
-                _builder.append(condType, "");
-                _builder.append("Condition(CondValue_Less);\t\t\t");
-                _builder.newLineIfNotEmpty();
               }
             }
           }
+          _switchResult = _builder;
         }
+      }
+      if (!_matched) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("//default compileCond");
+        _builder.newLine();
+        _builder.append("//TYPE OF condExpr IS---> ");
+        EClass _eClass = cond.eClass();
+        String _name = _eClass.getName();
+        _builder.append(_name, "");
+        _builder.newLineIfNotEmpty();
         _switchResult = _builder;
       }
+      _xblockexpression = (_switchResult);
     }
-    if (!_matched) {
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("//default compileCond");
-      _switchResult = _builder;
-    }
-    return _switchResult;
+    return _xblockexpression;
   }
   
   protected CharSequence _compileTerminalLeft(final ExpressionImpl term, final Statement statement) {

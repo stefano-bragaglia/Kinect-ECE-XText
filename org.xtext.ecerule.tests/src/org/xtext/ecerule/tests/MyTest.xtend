@@ -42,7 +42,7 @@ class MyTest {
 
 	@Test def void testGeneratedCode() {
 		'''
-		on BilanciaMisuraEasy set peso to true, expect false;
+		on BilanciaMisuraEasy set peso to true, expect 10 < 100;
 		'''.assertCompilesTo(
 		'''
 import org.xtext.ecerule.model.*;

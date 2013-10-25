@@ -262,7 +262,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFluentFluentParserRuleCall_2_1_0 = (RuleCall)cFluentAssignment_2_1.eContents().get(0);
 		
 		//// EC CONTEXT ******************************************************************
-		// EcContext:
+		//EcContext:
 		//	"set" fluent+=Fluent ("," fluent+=Fluent)*;
 		public ParserRule getRule() { return rule; }
 
@@ -308,7 +308,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cInitialConditionConditionRuleParserRuleCall_3_1_0 = (RuleCall)cInitialConditionAssignment_3_1.eContents().get(0);
 		
 		//// EXP CONTEXT *****************************************************************
-		// ExpContext:
+		//ExpContext:
 		//	"expect" finalCondition=ConditionRule (allenOp=AllenOp time=AtTimePrimary)? ("if" initialCondition=ConditionRule)?;
 		public ParserRule getRule() { return rule; }
 
@@ -1418,7 +1418,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// EC CONTEXT ******************************************************************
-	// EcContext:
+	//EcContext:
 	//	"set" fluent+=Fluent ("," fluent+=Fluent)*;
 	public EcContextElements getEcContextAccess() {
 		return (pEcContext != null) ? pEcContext : (pEcContext = new EcContextElements());
@@ -1429,7 +1429,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// EXP CONTEXT *****************************************************************
-	// ExpContext:
+	//ExpContext:
 	//	"expect" finalCondition=ConditionRule (allenOp=AllenOp time=AtTimePrimary)? ("if" initialCondition=ConditionRule)?;
 	public ExpContextElements getExpContextAccess() {
 		return (pExpContext != null) ? pExpContext : (pExpContext = new ExpContextElements());

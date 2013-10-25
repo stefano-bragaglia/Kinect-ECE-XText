@@ -20,6 +20,7 @@ import org.xtext.ecerule.ece.impl.FluentImpl
 import org.xtext.ecerule.ece.impl.IntConstantImpl
 import org.xtext.ecerule.ece.impl.NotImpl
 import org.xtext.ecerule.ece.impl.ReferenceTypeImpl
+import org.xtext.ecerule.ece.impl.OrImpl
 
 /**
  * Generates code from your model files on save.
@@ -42,15 +43,23 @@ class EceGenerator implements IGenerator {
 			
 			public class MainEce {
 				public static void main (String[] args) {	
+					
+					public Statement statement;
+					public Event event;
+					public String eventName;
+					public ExpressionDescr exprContainer;
+					public ConditionDescr condContainer;
+					public ExpContext expContext;
+					
 					Model model = new Model();
 					«««per ogni Statement»
 					«FOR stm : eceModel.statements» 
-							Statement statement = new Statement();
+						statement = new Statement();
 						«compileEvent(stm)» 		«««gestisco l'evento
 						«compileContextsList(stm)»	«««gestisco i contesti
 						
-						«««aggiungo lo Statement al Model________________________________________
-							model.add("Stm«stm.event.eventName»", statement);
+						«««aggiungo lo Statement al Model
+						model.add("Stm«stm.event.eventName»", statement);
 					«ENDFOR»
 					
 				}	
@@ -62,8 +71,8 @@ class EceGenerator implements IGenerator {
 	
 	def compileEvent(Statement stm) {
 		'''
-		Event event = new Event();
-		String eventName = "«stm.event.eventName»";
+		event = new Event();
+		eventName = "«stm.event.eventName»";
 		event.setEventName(eventName);
 		«FOR feature : stm.event.params»
 			event.addEventFeature(«feature.name»);
@@ -90,10 +99,10 @@ class EceGenerator implements IGenerator {
 	
 	def compileExpContext(ExpContext expContext, Statement statement) {
 		'''
-		ExpContext expContext = new ExpContext();
-		«compileCond(expContext.initialCondition, statement, "Initial")»	«««gestisci contizione iniziale
-		«compileCond(expContext.finalCondition, statement, "Final")»		«««gestisci contizione finale
-		«compileTime(expContext.allenOp, expContext.time)»	«««gestisci info temporale
+		expContext = new ExpContext();
+«««		«compileCond(expContext.initialCondition as ExpressionImpl, statement, "Initial")»	«««gestisci contizione iniziale
+		«compileCond(expContext.finalCondition as ExpressionImpl, statement, "Final")»		«««gestisci contizione finale
+«««		«compileTime(expContext.allenOp, expContext.time)»	«««gestisci info temporale
 		
 		statement.addExpContext(expContext);
 		
@@ -102,18 +111,97 @@ class EceGenerator implements IGenerator {
 	
 	
 	
-	def compileCond(ConditionRule cond, Statement statement, String condType) {
+	def compileCond(ExpressionImpl condExpr, Statement statement, String condType) {
+		var cond = condExpr.condition;
 		switch cond{
 			NotImpl:{
 				'''
 				«IF cond.expression.eClass.name.equals("Constant")» «««se ho negato una costante
-					ConditionDescr CondValue_Not = new NotDescr( «compileTerminalLeft(cond.expression as ExpressionImpl, statement)»);
+					condContainer = new NotDescr( «compileTerminalLeft(cond.expression as ExpressionImpl, statement)»);
 				«ELSE» «««se ho negato un'espressione
-					ConditionDescr CondValue_Not = new NotDescr(«compileRecExpr(cond.expression as ExpressionImpl, statement)»);
+					condContainer = new NotDescr(«compileRecExpr(cond.expression as ExpressionImpl, statement)»);
 				«ENDIF»
 				
-				expContext.set«condType»Condition(CondValue_Not);
+				expContext.set«condType»Condition(condContainer);
 				
+				'''
+			}
+			
+			OrImpl:{
+				'''
+				«IF cond.left.eClass.name.contains("Constant") && cond.right.eClass.name.contains("Constant")»
+					condContainer = new OrDescr( «compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«
+						»«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
+				«ELSE»
+					«IF cond.left.eClass.name.contains("Constant")»
+						condContainer = new OrDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«
+						»«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+					«ENDIF»
+					«IF !cond.left.eClass.name.contains("Constant")»
+						condContainer = new OrDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«
+						»«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+					«ENDIF»
+				«ENDIF»
+				
+				expContext.set«condType»Condition(condContainer);
+				'''
+			}
+			
+			AndImpl:{
+				'''
+				«IF cond.left.eClass.name.contains("Constant") && cond.right.eClass.name.contains("Constant")»
+					condContainer = new AndDescr( «compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«
+						»«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
+				«ELSE»
+					«IF cond.left.eClass.name.contains("Constant")»
+						condContainer = new AndDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«
+						»«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+					«ENDIF»
+					«IF !cond.left.eClass.name.contains("Constant")»
+						condContainer = new AndDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«
+						»«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+					«ENDIF»
+				«ENDIF»
+				
+				expContext.set«condType»Condition(condContainer);
+				
+				'''
+			}
+			
+			EqualityImpl:{
+				'''
+				«IF cond.op.equals("==")»					««««==
+					«IF cond.left.eClass.name.contains("Constant") && cond.right.eClass.name.contains("Constant")»
+						condContainer = new SameDescr( «compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«
+							»«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
+					«ELSE»
+						«IF cond.left.eClass.name.contains("Constant")»
+							condContainer = new SameDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«
+							»«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+						«ENDIF»
+						«IF !cond.left.eClass.name.contains("Constant")»
+							condContainer = new SameDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«
+							»«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+						«ENDIF»
+					«ENDIF»
+				expContext.set«condType»Condition(condContainer);
+				
+				«ELSE» 										««««!=
+					«IF cond.left.eClass.name.contains("Constant") && cond.right.eClass.name.contains("Constant")»
+						condContainer = new DifferentDescr( «compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«
+							»«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
+					«ELSE»
+						«IF cond.left.eClass.name.contains("Constant")»
+							condContainer = new DifferentDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«
+							»«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+						«ENDIF»
+						«IF !cond.left.eClass.name.contains("Constant")»
+							condContainer = new DifferentDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«
+							»«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+						«ENDIF»
+					«ENDIF»
+				expContext.set«condType»Condition(condContainer);
+				«ENDIF»
 				'''
 			}
 			
@@ -121,61 +209,65 @@ class EceGenerator implements IGenerator {
 				'''
 				«IF cond.op.equals(">=")»					««««>=
 					«IF cond.left.eClass.name.contains("Constant") && cond.right.eClass.name.contains("Constant")»
-					ConditionDescr CondValue_MoreEquals = new MoreEqualsDescr( «compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
+					condContainer = new MoreEqualsDescr( «compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
 					«ELSE»
 						«IF cond.left.eClass.name.contains("Constant")»
-							ConditionDescr CondValue_MoreEquals = new MoreEqualsDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+							condContainer = new MoreEqualsDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
 						«ENDIF»
 						«IF !cond.left.eClass.name.contains("Constant")»
-							ConditionDescr CondValue_MoreEquals = new MoreEqualsDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+							condContainer = new MoreEqualsDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
 						«ENDIF»
 					«ENDIF»
-				expContext.set«condType»Condition(CondValue_MoreEquals);				
+				expContext.set«condType»Condition(condContainer);				
 				
 				«ELSEIF cond.op.equals("<=")» 				««««<=
 					«IF cond.left.eClass.name.contains("Constant") && cond.right.eClass.name.contains("Constant")»
-					ConditionDescr CondValue_LessEquals = new LessEqualsDescr( «compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
+					condContainer = new LessEqualsDescr( «compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
 					«ELSE»
 						«IF cond.left.eClass.name.contains("Constant")»
-							ConditionDescr CondValue_LessEquals = new LessEqualsDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+							condContainer = new LessEqualsDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
 						«ENDIF»
 						«IF !cond.left.eClass.name.contains("Constant")»
-							ConditionDescr CondValue_LessEquals = new LessEqualsDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+							condContainer = new LessEqualsDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
 						«ENDIF»
 					«ENDIF»
-				expContext.set«condType»Condition(CondValue_LessEquals);
+				expContext.set«condType»Condition(condContainer);
 				
 				«ELSEIF cond.op.equals(">")»				««««>
 					«IF cond.left.eClass.name.contains("Constant") && cond.right.eClass.name.contains("Constant")»
-					ConditionDescr CondValue_More = new MoreDescr( «compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
+					condContainer = new MoreDescr( «compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
 					«ELSE»
 						«IF cond.left.eClass.name.contains("Constant")»
-							ConditionDescr CondValue_More = new MoreDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+							condContainer = new MoreDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
 						«ENDIF»
 						«IF !cond.left.eClass.name.contains("Constant")»
-							ConditionDescr CondValue_More = new MoreDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+							condContainer = new MoreDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
 						«ENDIF»
 					«ENDIF»
-				expContext.set«condType»Condition(CondValue_More);
+				expContext.set«condType»Condition(condContainer);
 							
 				«ELSE» 										««««<
 					«IF cond.left.eClass.name.contains("Constant") && cond.right.eClass.name.contains("Constant")»
-					ConditionDescr CondValue_Less = new LessDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
+					condContainer = new LessDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileTerminalRight(cond.right as ExpressionImpl, statement)»);
 					«ELSE»
 						«IF cond.left.eClass.name.contains("Constant")»
-							ConditionDescr CondValue_Less = new LessDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+							condContainer = new LessDescr(«compileTerminalLeft(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
 						«ENDIF»
 						«IF !cond.left.eClass.name.contains("Constant")»
-							ConditionDescr CondValue_Less = new LessDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
+							condContainer = new LessDescr(«compileRecExpr(cond.left as ExpressionImpl, statement)»,«compileRecExpr(cond.right as ExpressionImpl, statement)»);
 						«ENDIF»
 					«ENDIF»
 				
-				expContext.set«condType»Condition(CondValue_Less);			
+				expContext.set«condType»Condition(condContainer);			
 				«ENDIF»
 				'''
 			}
 
-			default: '''//default compileCond'''
+			default: '''
+			//default compileCond
+			//TYPE OF condExpr IS---> «cond.eClass.name»
+			'''
+			
 		}
 		
 			
