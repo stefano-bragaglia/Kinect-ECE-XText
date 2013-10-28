@@ -21,6 +21,10 @@ import org.xtext.ecerule.ece.impl.IntConstantImpl
 import org.xtext.ecerule.ece.impl.NotImpl
 import org.xtext.ecerule.ece.impl.ReferenceTypeImpl
 import org.xtext.ecerule.ece.impl.OrImpl
+import org.xtext.ecerule.ece.impl.PlusImpl
+import org.xtext.ecerule.ece.impl.MinusImpl
+import org.xtext.ecerule.ece.impl.MulOrDivImpl
+import org.xtext.ecerule.ece.impl.ReferenceImpl
 
 /**
  * Generates code from your model files on save.
@@ -86,12 +90,11 @@ class EceGenerator implements IGenerator {
 		'''
 		
 «««		«FOR ecContext : stm.contextsList.ecContextsList.ecContexts»
-«««	
+«««			«compileEceContext(eceContext, stm)»
 «««		«ENDFOR»
 
 		«FOR expContext : stm.contextsList.expContextsList.expContexts»
 			«compileExpContext(expContext, stm)»
-		
 		«ENDFOR»
 		
 		'''
@@ -110,6 +113,7 @@ class EceGenerator implements IGenerator {
 	}
 	
 	
+//*****COMPILE CONDITION*********************************************************************************
 	
 	def compileCond(ExpressionImpl condExpr, Statement statement, String condType) {
 		var cond = condExpr.condition;
@@ -330,6 +334,40 @@ class EceGenerator implements IGenerator {
 		return paramNumTemp;
 	}
 	
+//*****COMPILE RECURSIVE EXPRESSION*********************************************************************************
+
+	
+	
+	
+	
+	def dispatch compileRecExpr (NotImpl conditionExpr, Statement statement){
+		'''
+		«IF conditionExpr.expression.eClass.name.contains("Constant")»
+			new NotDescr( «compileTerminalLeft(conditionExpr.expression as ExpressionImpl, statement)»)
+		«ELSE»
+			new NotDescr(«compileRecExpr(conditionExpr.expression as ExpressionImpl, statement)»)
+		«ENDIF»
+		'''
+	}
+	
+	def dispatch compileRecExpr (OrImpl conditionExpr, Statement statement){
+		'''
+		«IF conditionExpr.left.eClass.name.contains("Constant") && conditionExpr.right.eClass.name.contains("Constant")»
+			new OrDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+			»«compileTerminalLeft(conditionExpr.right as ExpressionImpl, statement)»)
+		«ELSE»
+			«IF conditionExpr.left.eClass.name.contains("Constant")»
+				new OrDescr(«compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+				»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)
+			«ENDIF»
+			«IF !conditionExpr.left.eClass.name.contains("Constant")»
+				new OrDescr(«compileRecExpr(conditionExpr.left as ExpressionImpl, statement)»,«
+				»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)«
+			»«ENDIF»
+		«ENDIF»
+		'''
+	}
+	
 	
 	def dispatch compileRecExpr (AndImpl conditionExpr, Statement statement){
 		'''
@@ -434,6 +472,94 @@ class EceGenerator implements IGenerator {
 				»«ENDIF»
 			«ENDIF»
 		«ENDIF»
+		'''
+	}
+	
+//************************************************************************************************************
+	/** HARD Expression Case */		
+	def dispatch compileRecExpr (IntConstantImpl conditionExpr, Statement statement){
+		'''new NumberDescr(«conditionExpr.value»)'''
+	}
+	def dispatch compileRecExpr (FloatConstantImpl conditionExpr, Statement statement){
+		'''new NumberDescr(«conditionExpr.value»)'''
+	}
+	def dispatch compileRecExpr (BoolConstantImpl conditionExpr, Statement statement){
+		'''new NumberDescr(«conditionExpr.value»)'''
+	}
+	def dispatch compileRecExpr (ReferenceImpl conditionExpr, Statement statement){
+		'''
+		«IF conditionExpr.ref.eClass.name.contains("Feature")»
+			«statement.event.params.get(retrieveParam(conditionExpr.ref.name, statement)).name»
+		«ELSE»
+			new SampleDescr("«conditionExpr.ref.name»")
+		«ENDIF»
+		'''
+	}
+	def dispatch compileRecExpr (PlusImpl conditionExpr, Statement statement){
+		'''
+			«IF conditionExpr.left.eClass.name.contains("Constant") && conditionExpr.right.eClass.name.contains("Constant")»
+				new PlusDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+				»«compileTerminalRight(conditionExpr.right as ExpressionImpl, statement)»)
+			«ELSE»
+				«IF conditionExpr.left.eClass.name.contains("Constant")»
+					new PlusDescr(«compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+					»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)
+				«ENDIF»
+				«IF !conditionExpr.left.eClass.name.contains("Constant")»
+					new PlusDescr(«compileRecExpr(conditionExpr.left as ExpressionImpl, statement)»,«
+					»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)«
+				»«ENDIF»
+			«ENDIF»
+		'''	
+	}
+	def dispatch compileRecExpr (MinusImpl conditionExpr, Statement statement){
+		'''
+			«IF conditionExpr.left.eClass.name.contains("Constant") && conditionExpr.right.eClass.name.contains("Constant")»
+				new MinusDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+				»«compileTerminalRight(conditionExpr.right as ExpressionImpl, statement)»)
+			«ELSE»
+				«IF conditionExpr.left.eClass.name.contains("Constant")»
+					new MinusDescr(«compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+					»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)
+				«ENDIF»
+				«IF !conditionExpr.left.eClass.name.contains("Constant")»
+					new MinusDescr(«compileRecExpr(conditionExpr.left as ExpressionImpl, statement)»,«
+					»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)«
+				»«ENDIF»
+			«ENDIF»
+		'''
+	}
+	def dispatch compileRecExpr (MulOrDivImpl conditionExpr, Statement statement){
+		'''
+			«IF conditionExpr.op.equals("*")»
+				«IF conditionExpr.left.eClass.name.contains("Constant") && conditionExpr.right.eClass.name.contains("Constant")»
+					new TimesDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+					»«compileTerminalRight(conditionExpr.right as ExpressionImpl, statement)»)
+				«ELSE»
+					«IF conditionExpr.left.eClass.name.contains("Constant")»
+						new TimesDescr(«compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+						»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)
+					«ENDIF»
+					«IF !conditionExpr.left.eClass.name.contains("Constant")»
+						new TimesDescr(«compileRecExpr(conditionExpr.left as ExpressionImpl, statement)»,«
+						»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)«
+					»«ENDIF»
+				«ENDIF»
+			«ELSE»
+				«IF conditionExpr.left.eClass.name.contains("Constant") && conditionExpr.right.eClass.name.contains("Constant")»
+					new ObelusDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+					»«compileTerminalRight(conditionExpr.right as ExpressionImpl, statement)»)
+				«ELSE»
+					«IF conditionExpr.left.eClass.name.contains("Constant")»
+						new ObelusDescr(«compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+						»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)
+					«ENDIF»
+					«IF !conditionExpr.left.eClass.name.contains("Constant")»
+						new ObelusDescr(«compileRecExpr(conditionExpr.left as ExpressionImpl, statement)»,«
+						»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)«
+					»«ENDIF»
+				«ENDIF»
+			«ENDIF»
 		'''
 	}
 	

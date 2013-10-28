@@ -47,7 +47,7 @@ public class MyTest {
   public void testGeneratedCode() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("on BilanciaMisuraEasy set peso to true, expect 10 < 100;");
+      _builder.append("on BilanciaMisuraEasy(pesata) set peso to pesata, expect peso == 2 if pesata>100;");
       _builder.newLine();
       StringConcatenation _builder_1 = new StringConcatenation();
       _builder_1.append("import org.xtext.ecerule.model.*;");
