@@ -103,7 +103,7 @@ class EceGenerator implements IGenerator {
 	def compileExpContext(ExpContext expContext, Statement statement) {
 		'''
 		expContext = new ExpContext();
-«««		«compileCond(expContext.initialCondition as ExpressionImpl, statement, "Initial")»	«««gestisci contizione iniziale
+		«compileCond(expContext.initialCondition as ExpressionImpl, statement, "Initial")»	«««gestisci contizione iniziale
 		«compileCond(expContext.finalCondition as ExpressionImpl, statement, "Final")»		«««gestisci contizione finale
 «««		«compileTime(expContext.allenOp, expContext.time)»	«««gestisci info temporale
 		
@@ -328,7 +328,7 @@ class EceGenerator implements IGenerator {
 	def int retrieveParam(String paramName, Statement statement){
 		var paramNumTemp = 100
 		for (p: statement.event.params){
-			if (p.equals(paramName))
+			if (p.name.equals(paramName))
 				paramNumTemp = statement.event.params.indexOf(p)
 		}				
 		return paramNumTemp;

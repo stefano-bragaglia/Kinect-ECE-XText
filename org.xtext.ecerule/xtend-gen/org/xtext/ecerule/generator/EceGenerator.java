@@ -176,9 +176,14 @@ public class EceGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("expContext = new ExpContext();");
     _builder.newLine();
-    ConditionRule _finalCondition = expContext.getFinalCondition();
-    CharSequence _compileCond = this.compileCond(((ExpressionImpl) _finalCondition), statement, "Final");
+    ConditionRule _initialCondition = expContext.getInitialCondition();
+    CharSequence _compileCond = this.compileCond(((ExpressionImpl) _initialCondition), statement, "Initial");
     _builder.append(_compileCond, "");
+    _builder.append("\t");
+    _builder.append("\t\t");
+    ConditionRule _finalCondition = expContext.getFinalCondition();
+    CharSequence _compileCond_1 = this.compileCond(((ExpressionImpl) _finalCondition), statement, "Final");
+    _builder.append(_compileCond_1, "");
     _builder.append("\t\t");
     _builder.append("\t\t");
     _builder.newLineIfNotEmpty();
@@ -1029,7 +1034,8 @@ public class EceGenerator implements IGenerator {
     Event _event = statement.getEvent();
     EList<EventFeature> _params = _event.getParams();
     for (final EventFeature p : _params) {
-      boolean _equals = p.equals(paramName);
+      String _name = p.getName();
+      boolean _equals = _name.equals(paramName);
       if (_equals) {
         Event _event_1 = statement.getEvent();
         EList<EventFeature> _params_1 = _event_1.getParams();

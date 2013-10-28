@@ -27,7 +27,7 @@ class MyTest {
 	@Test
 	def void testParsingLite() {
 		'''
-			on EventoPompaApre set FluenteLivello to 52, expect (true);
+			on BilanciaMisuraEasy(pesata) set peso to pesata if pesata >100, set peso to 88888 if pesata <=100, expect peso == 88888 if pesata>100;
 		'''.parse.assertNoErrors
 	}
 
@@ -42,7 +42,7 @@ class MyTest {
 
 	@Test def void testGeneratedCode() {
 		'''
-		on BilanciaMisuraEasy(pesata) set peso to pesata, expect peso == 2 if pesata>100;
+		on BilanciaMisuraEasy(pesata) set peso to pesata, expect peso == 2 if pesata<30;
 		'''.assertCompilesTo(
 		'''
 import org.xtext.ecerule.model.*;
