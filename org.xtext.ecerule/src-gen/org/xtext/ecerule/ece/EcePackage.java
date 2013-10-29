@@ -513,22 +513,13 @@ public interface EcePackage extends EPackage
   int IN_RULE = 13;
 
   /**
-   * The feature id for the '<em><b>Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_RULE__TIME = 0;
-
-  /**
    * The number of structural features of the '<em>In Rule</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IN_RULE_FEATURE_COUNT = 1;
+  int IN_RULE_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -587,25 +578,6 @@ public interface EcePackage extends EPackage
   int AT_EXPR_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.InExprImpl <em>In Expr</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.InExprImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInExpr()
-   * @generated
-   */
-  int IN_EXPR = 17;
-
-  /**
-   * The number of structural features of the '<em>In Expr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_EXPR_FEATURE_COUNT = 0;
-
-  /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.AllenOperatorImpl <em>Allen Operator</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -613,7 +585,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getAllenOperator()
    * @generated
    */
-  int ALLEN_OPERATOR = 18;
+  int ALLEN_OPERATOR = 17;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -641,7 +613,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getOr()
    * @generated
    */
-  int OR = 19;
+  int OR = 18;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -696,7 +668,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getAnd()
    * @generated
    */
-  int AND = 20;
+  int AND = 19;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -751,7 +723,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getEquality()
    * @generated
    */
-  int EQUALITY = 21;
+  int EQUALITY = 20;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -815,7 +787,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getComparison()
    * @generated
    */
-  int COMPARISON = 22;
+  int COMPARISON = 21;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -879,7 +851,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getPlus()
    * @generated
    */
-  int PLUS = 23;
+  int PLUS = 22;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -934,7 +906,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMinus()
    * @generated
    */
-  int MINUS = 24;
+  int MINUS = 23;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -989,7 +961,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getMulOrDiv()
    * @generated
    */
-  int MUL_OR_DIV = 25;
+  int MUL_OR_DIV = 24;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1053,7 +1025,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getNot()
    * @generated
    */
-  int NOT = 26;
+  int NOT = 25;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1090,7 +1062,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getFloatConstant()
    * @generated
    */
-  int FLOAT_CONSTANT = 27;
+  int FLOAT_CONSTANT = 26;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1136,7 +1108,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getIntConstant()
    * @generated
    */
-  int INT_CONSTANT = 28;
+  int INT_CONSTANT = 27;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1182,7 +1154,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getBoolConstant()
    * @generated
    */
-  int BOOL_CONSTANT = 29;
+  int BOOL_CONSTANT = 28;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1228,7 +1200,7 @@ public interface EcePackage extends EPackage
    * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getReference()
    * @generated
    */
-  int REFERENCE = 30;
+  int REFERENCE = 29;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1274,6 +1246,52 @@ public interface EcePackage extends EPackage
    * @ordered
    */
   int REFERENCE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.CurrentTimeImpl <em>Current Time</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.ecerule.ece.impl.CurrentTimeImpl
+   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getCurrentTime()
+   * @generated
+   */
+  int CURRENT_TIME = 30;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CURRENT_TIME__CONDITION = EXPRESSION__CONDITION;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CURRENT_TIME__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CURRENT_TIME__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Current Time</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CURRENT_TIME_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.ecerule.ece.impl.AtTimePlusOrMinImpl <em>At Time Plus Or Min</em>}' class.
@@ -1376,108 +1394,6 @@ public interface EcePackage extends EPackage
    * @ordered
    */
   int AT_TIME_CURRENT_TIME_FEATURE_COUNT = AT_EXPR_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.InTimePlusOrMinImpl <em>In Time Plus Or Min</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.InTimePlusOrMinImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInTimePlusOrMin()
-   * @generated
-   */
-  int IN_TIME_PLUS_OR_MIN = 34;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_TIME_PLUS_OR_MIN__LEFT = IN_EXPR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_TIME_PLUS_OR_MIN__OP = IN_EXPR_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_TIME_PLUS_OR_MIN__RIGHT = IN_EXPR_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>In Time Plus Or Min</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_TIME_PLUS_OR_MIN_FEATURE_COUNT = IN_EXPR_FEATURE_COUNT + 3;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.InTimeIntConstantImpl <em>In Time Int Constant</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.InTimeIntConstantImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInTimeIntConstant()
-   * @generated
-   */
-  int IN_TIME_INT_CONSTANT = 35;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_TIME_INT_CONSTANT__VALUE = IN_EXPR_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>In Time Int Constant</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_TIME_INT_CONSTANT_FEATURE_COUNT = IN_EXPR_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.ecerule.ece.impl.InTimeCurrentTimeImpl <em>In Time Current Time</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.ecerule.ece.impl.InTimeCurrentTimeImpl
-   * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInTimeCurrentTime()
-   * @generated
-   */
-  int IN_TIME_CURRENT_TIME = 36;
-
-  /**
-   * The feature id for the '<em><b>In Time Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_TIME_CURRENT_TIME__IN_TIME_VALUE = IN_EXPR_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>In Time Current Time</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IN_TIME_CURRENT_TIME_FEATURE_COUNT = IN_EXPR_FEATURE_COUNT + 1;
 
 
   /**
@@ -1808,17 +1724,6 @@ public interface EcePackage extends EPackage
   EClass getInRule();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.InRule#getTime <em>Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Time</em>'.
-   * @see org.xtext.ecerule.ece.InRule#getTime()
-   * @see #getInRule()
-   * @generated
-   */
-  EAttribute getInRule_Time();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.Expression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1880,16 +1785,6 @@ public interface EcePackage extends EPackage
    * @generated
    */
   EClass getAtExpr();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.InExpr <em>In Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>In Expr</em>'.
-   * @see org.xtext.ecerule.ece.InExpr
-   * @generated
-   */
-  EClass getInExpr();
 
   /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.AllenOperator <em>Allen Operator</em>}'.
@@ -2275,6 +2170,27 @@ public interface EcePackage extends EPackage
   EReference getReference_FluentValueSample();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.ecerule.ece.CurrentTime <em>Current Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Current Time</em>'.
+   * @see org.xtext.ecerule.ece.CurrentTime
+   * @generated
+   */
+  EClass getCurrentTime();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.CurrentTime#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.ecerule.ece.CurrentTime#getValue()
+   * @see #getCurrentTime()
+   * @generated
+   */
+  EAttribute getCurrentTime_Value();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.ecerule.ece.AtTimePlusOrMin <em>At Time Plus Or Min</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2358,91 +2274,6 @@ public interface EcePackage extends EPackage
    * @generated
    */
   EAttribute getAtTimeCurrentTime_AtTimeValue();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.InTimePlusOrMin <em>In Time Plus Or Min</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>In Time Plus Or Min</em>'.
-   * @see org.xtext.ecerule.ece.InTimePlusOrMin
-   * @generated
-   */
-  EClass getInTimePlusOrMin();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.InTimePlusOrMin#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.ecerule.ece.InTimePlusOrMin#getLeft()
-   * @see #getInTimePlusOrMin()
-   * @generated
-   */
-  EReference getInTimePlusOrMin_Left();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.InTimePlusOrMin#getOp <em>Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see org.xtext.ecerule.ece.InTimePlusOrMin#getOp()
-   * @see #getInTimePlusOrMin()
-   * @generated
-   */
-  EAttribute getInTimePlusOrMin_Op();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.ecerule.ece.InTimePlusOrMin#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.ecerule.ece.InTimePlusOrMin#getRight()
-   * @see #getInTimePlusOrMin()
-   * @generated
-   */
-  EReference getInTimePlusOrMin_Right();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.InTimeIntConstant <em>In Time Int Constant</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>In Time Int Constant</em>'.
-   * @see org.xtext.ecerule.ece.InTimeIntConstant
-   * @generated
-   */
-  EClass getInTimeIntConstant();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.InTimeIntConstant#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.xtext.ecerule.ece.InTimeIntConstant#getValue()
-   * @see #getInTimeIntConstant()
-   * @generated
-   */
-  EAttribute getInTimeIntConstant_Value();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.ecerule.ece.InTimeCurrentTime <em>In Time Current Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>In Time Current Time</em>'.
-   * @see org.xtext.ecerule.ece.InTimeCurrentTime
-   * @generated
-   */
-  EClass getInTimeCurrentTime();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.ecerule.ece.InTimeCurrentTime#getInTimeValue <em>In Time Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>In Time Value</em>'.
-   * @see org.xtext.ecerule.ece.InTimeCurrentTime#getInTimeValue()
-   * @see #getInTimeCurrentTime()
-   * @generated
-   */
-  EAttribute getInTimeCurrentTime_InTimeValue();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -2744,14 +2575,6 @@ public interface EcePackage extends EPackage
     EClass IN_RULE = eINSTANCE.getInRule();
 
     /**
-     * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute IN_RULE__TIME = eINSTANCE.getInRule_Time();
-
-    /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.ExpressionImpl <em>Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2804,16 +2627,6 @@ public interface EcePackage extends EPackage
      * @generated
      */
     EClass AT_EXPR = eINSTANCE.getAtExpr();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.InExprImpl <em>In Expr</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.InExprImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInExpr()
-     * @generated
-     */
-    EClass IN_EXPR = eINSTANCE.getInExpr();
 
     /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.AllenOperatorImpl <em>Allen Operator</em>}' class.
@@ -3130,6 +2943,24 @@ public interface EcePackage extends EPackage
     EReference REFERENCE__FLUENT_VALUE_SAMPLE = eINSTANCE.getReference_FluentValueSample();
 
     /**
+     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.CurrentTimeImpl <em>Current Time</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.ecerule.ece.impl.CurrentTimeImpl
+     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getCurrentTime()
+     * @generated
+     */
+    EClass CURRENT_TIME = eINSTANCE.getCurrentTime();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CURRENT_TIME__VALUE = eINSTANCE.getCurrentTime_Value();
+
+    /**
      * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.AtTimePlusOrMinImpl <em>At Time Plus Or Min</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3198,76 +3029,6 @@ public interface EcePackage extends EPackage
      * @generated
      */
     EAttribute AT_TIME_CURRENT_TIME__AT_TIME_VALUE = eINSTANCE.getAtTimeCurrentTime_AtTimeValue();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.InTimePlusOrMinImpl <em>In Time Plus Or Min</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.InTimePlusOrMinImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInTimePlusOrMin()
-     * @generated
-     */
-    EClass IN_TIME_PLUS_OR_MIN = eINSTANCE.getInTimePlusOrMin();
-
-    /**
-     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference IN_TIME_PLUS_OR_MIN__LEFT = eINSTANCE.getInTimePlusOrMin_Left();
-
-    /**
-     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute IN_TIME_PLUS_OR_MIN__OP = eINSTANCE.getInTimePlusOrMin_Op();
-
-    /**
-     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference IN_TIME_PLUS_OR_MIN__RIGHT = eINSTANCE.getInTimePlusOrMin_Right();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.InTimeIntConstantImpl <em>In Time Int Constant</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.InTimeIntConstantImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInTimeIntConstant()
-     * @generated
-     */
-    EClass IN_TIME_INT_CONSTANT = eINSTANCE.getInTimeIntConstant();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute IN_TIME_INT_CONSTANT__VALUE = eINSTANCE.getInTimeIntConstant_Value();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.ecerule.ece.impl.InTimeCurrentTimeImpl <em>In Time Current Time</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.ecerule.ece.impl.InTimeCurrentTimeImpl
-     * @see org.xtext.ecerule.ece.impl.EcePackageImpl#getInTimeCurrentTime()
-     * @generated
-     */
-    EClass IN_TIME_CURRENT_TIME = eINSTANCE.getInTimeCurrentTime();
-
-    /**
-     * The meta object literal for the '<em><b>In Time Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute IN_TIME_CURRENT_TIME__IN_TIME_VALUE = eINSTANCE.getInTimeCurrentTime_InTimeValue();
 
   }
 

@@ -31,11 +31,11 @@ ExpContextsList:
 
 // EXP CONTEXT *****************************************************************
  ExpContext:
-	'expect' finalCondition=ConditionRule (allenOp=AllenOp time=AtTimePrimary)? ('if' initialCondition=ConditionRule)?;
+	'expect' finalCondition=ConditionRule (allenOp=AllenOp time=PlusOrMinus)? ('if' initialCondition=ConditionRule)?;
 
 
 AllenOp:
-	{AllenOperator} value=('before' | 'meets' | 'overlaps' | 'starts' | 'finishes' | 'during');
+	{AllenOperator} value=('before' | 'after' | 'in');
 
 Fluent:
 	name=ID
@@ -50,8 +50,7 @@ ToRule:
 	({Expression} expression=PlusOrMinus);
 
 InRule:
-	time=INT
-	//	|currentTime='now'
+	({Expression} expression=PlusOrMinus)
 ;
 
 // LEFT_ASSOCIATIVITY
@@ -90,11 +89,14 @@ Atomic returns Expression:
 	{IntConstant} value=INT |
 	{BoolConstant} value=('true' | 'false')
 	| {Reference} ref=[ReferenceType|ID] ('at' fluentValueSample=AtTimePrimary)?
-	//	|{CurrentTime} value='now'
+	|{CurrentTime} value='now'
 ;
 
 ReferenceType:
 	EventFeature | Fluent;
+
+
+// AT --> tempo del riferimento
 
 AtTimeExpression returns AtExpr:
 	AtTimePrimary ({AtTimePlusOrMin.left=current} op=('-' | '+')
@@ -110,22 +112,26 @@ AtTimeAtomic returns AtExpr:
 	//	|long
 ;
 
-InExpr:
-	InTimeExpression;
 
-InTimeExpression returns InExpr:
-	InTimePrimary ({InTimePlusOrMin.left=current} op=('-' | '+')
-	right=InTimePrimary)*;
 
-InTimePrimary returns InExpr:
-	'(' InExpr ')' |
-	InTimeAtomic;
-
-InTimeAtomic returns InExpr:
-	{InTimeIntConstant} /*('+'|'-')?*/ value=INT
-	| {InTimeCurrentTime} inTimeValue='now'
-	//	|long
-;
+// IN --> tempo settaggio evento o verifica dell'aspettativa
+//
+//InExpr:
+//	InTimeExpression;
+//
+//InTimeExpression returns InExpr:
+//	InTimePrimary ({InTimePlusOrMin.left=current} op=('-' | '+')
+//	right=InTimePrimary)*;
+//
+//InTimePrimary returns InExpr:
+//	'(' InExpr ')' |
+//	InTimeAtomic;
+//
+//InTimeAtomic returns InExpr:
+//	{InTimeIntConstant} /*('+'|'-')?*/ value=INT
+//	| {InTimeCurrentTime} inTimeValue='now'
+//	//	|long
+//;
 
 terminal FLOAT returns ecore::EFloat:
 	('0'..'9')* '.' ('0'..'9')+;

@@ -81,7 +81,6 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.EXPRESSION: return createExpression();
       case EcePackage.REFERENCE_TYPE: return createReferenceType();
       case EcePackage.AT_EXPR: return createAtExpr();
-      case EcePackage.IN_EXPR: return createInExpr();
       case EcePackage.ALLEN_OPERATOR: return createAllenOperator();
       case EcePackage.OR: return createOr();
       case EcePackage.AND: return createAnd();
@@ -95,12 +94,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.INT_CONSTANT: return createIntConstant();
       case EcePackage.BOOL_CONSTANT: return createBoolConstant();
       case EcePackage.REFERENCE: return createReference();
+      case EcePackage.CURRENT_TIME: return createCurrentTime();
       case EcePackage.AT_TIME_PLUS_OR_MIN: return createAtTimePlusOrMin();
       case EcePackage.AT_TIME_INT_CONSTANT: return createAtTimeIntConstant();
       case EcePackage.AT_TIME_CURRENT_TIME: return createAtTimeCurrentTime();
-      case EcePackage.IN_TIME_PLUS_OR_MIN: return createInTimePlusOrMin();
-      case EcePackage.IN_TIME_INT_CONSTANT: return createInTimeIntConstant();
-      case EcePackage.IN_TIME_CURRENT_TIME: return createInTimeCurrentTime();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -298,17 +295,6 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public InExpr createInExpr()
-  {
-    InExprImpl inExpr = new InExprImpl();
-    return inExpr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public AllenOperator createAllenOperator()
   {
     AllenOperatorImpl allenOperator = new AllenOperatorImpl();
@@ -452,6 +438,17 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public CurrentTime createCurrentTime()
+  {
+    CurrentTimeImpl currentTime = new CurrentTimeImpl();
+    return currentTime;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public AtTimePlusOrMin createAtTimePlusOrMin()
   {
     AtTimePlusOrMinImpl atTimePlusOrMin = new AtTimePlusOrMinImpl();
@@ -478,39 +475,6 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
   {
     AtTimeCurrentTimeImpl atTimeCurrentTime = new AtTimeCurrentTimeImpl();
     return atTimeCurrentTime;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InTimePlusOrMin createInTimePlusOrMin()
-  {
-    InTimePlusOrMinImpl inTimePlusOrMin = new InTimePlusOrMinImpl();
-    return inTimePlusOrMin;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InTimeIntConstant createInTimeIntConstant()
-  {
-    InTimeIntConstantImpl inTimeIntConstant = new InTimeIntConstantImpl();
-    return inTimeIntConstant;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InTimeCurrentTime createInTimeCurrentTime()
-  {
-    InTimeCurrentTimeImpl inTimeCurrentTime = new InTimeCurrentTimeImpl();
-    return inTimeCurrentTime;
   }
 
   /**

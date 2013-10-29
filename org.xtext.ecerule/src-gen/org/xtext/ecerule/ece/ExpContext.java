@@ -86,12 +86,12 @@ public interface ExpContext extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Time</em>' containment reference.
-   * @see #setTime(AtExpr)
+   * @see #setTime(Expression)
    * @see org.xtext.ecerule.ece.EcePackage#getExpContext_Time()
    * @model containment="true"
    * @generated
    */
-  AtExpr getTime();
+  Expression getTime();
 
   /**
    * Sets the value of the '{@link org.xtext.ecerule.ece.ExpContext#getTime <em>Time</em>}' containment reference.
@@ -101,7 +101,7 @@ public interface ExpContext extends EObject
    * @see #getTime()
    * @generated
    */
-  void setTime(AtExpr value);
+  void setTime(Expression value);
 
   /**
    * Returns the value of the '<em><b>Initial Condition</b></em>' containment reference.

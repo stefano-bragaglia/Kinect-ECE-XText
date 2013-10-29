@@ -301,7 +301,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cAllenOpAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
 		private final RuleCall cAllenOpAllenOpParserRuleCall_2_0_0 = (RuleCall)cAllenOpAssignment_2_0.eContents().get(0);
 		private final Assignment cTimeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cTimeAtTimePrimaryParserRuleCall_2_1_0 = (RuleCall)cTimeAssignment_2_1.eContents().get(0);
+		private final RuleCall cTimePlusOrMinusParserRuleCall_2_1_0 = (RuleCall)cTimeAssignment_2_1.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cIfKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cInitialConditionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
@@ -309,10 +309,10 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// EXP CONTEXT *****************************************************************
 		//ExpContext:
-		//	"expect" finalCondition=ConditionRule (allenOp=AllenOp time=AtTimePrimary)? ("if" initialCondition=ConditionRule)?;
+		//	"expect" finalCondition=ConditionRule (allenOp=AllenOp time=PlusOrMinus)? ("if" initialCondition=ConditionRule)?;
 		public ParserRule getRule() { return rule; }
 
-		//"expect" finalCondition=ConditionRule (allenOp=AllenOp time=AtTimePrimary)? ("if" initialCondition=ConditionRule)?
+		//"expect" finalCondition=ConditionRule (allenOp=AllenOp time=PlusOrMinus)? ("if" initialCondition=ConditionRule)?
 		public Group getGroup() { return cGroup; }
 
 		//"expect"
@@ -324,7 +324,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		//ConditionRule
 		public RuleCall getFinalConditionConditionRuleParserRuleCall_1_0() { return cFinalConditionConditionRuleParserRuleCall_1_0; }
 
-		//(allenOp=AllenOp time=AtTimePrimary)?
+		//(allenOp=AllenOp time=PlusOrMinus)?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//allenOp=AllenOp
@@ -333,11 +333,11 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		//AllenOp
 		public RuleCall getAllenOpAllenOpParserRuleCall_2_0_0() { return cAllenOpAllenOpParserRuleCall_2_0_0; }
 
-		//time=AtTimePrimary
+		//time=PlusOrMinus
 		public Assignment getTimeAssignment_2_1() { return cTimeAssignment_2_1; }
 
-		//AtTimePrimary
-		public RuleCall getTimeAtTimePrimaryParserRuleCall_2_1_0() { return cTimeAtTimePrimaryParserRuleCall_2_1_0; }
+		//PlusOrMinus
+		public RuleCall getTimePlusOrMinusParserRuleCall_2_1_0() { return cTimePlusOrMinusParserRuleCall_2_1_0; }
 
 		//("if" initialCondition=ConditionRule)?
 		public Group getGroup_3() { return cGroup_3; }
@@ -359,45 +359,33 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final Alternatives cValueAlternatives_1_0 = (Alternatives)cValueAssignment_1.eContents().get(0);
 		private final Keyword cValueBeforeKeyword_1_0_0 = (Keyword)cValueAlternatives_1_0.eContents().get(0);
-		private final Keyword cValueMeetsKeyword_1_0_1 = (Keyword)cValueAlternatives_1_0.eContents().get(1);
-		private final Keyword cValueOverlapsKeyword_1_0_2 = (Keyword)cValueAlternatives_1_0.eContents().get(2);
-		private final Keyword cValueStartsKeyword_1_0_3 = (Keyword)cValueAlternatives_1_0.eContents().get(3);
-		private final Keyword cValueFinishesKeyword_1_0_4 = (Keyword)cValueAlternatives_1_0.eContents().get(4);
-		private final Keyword cValueDuringKeyword_1_0_5 = (Keyword)cValueAlternatives_1_0.eContents().get(5);
+		private final Keyword cValueAfterKeyword_1_0_1 = (Keyword)cValueAlternatives_1_0.eContents().get(1);
+		private final Keyword cValueInKeyword_1_0_2 = (Keyword)cValueAlternatives_1_0.eContents().get(2);
 		
 		//AllenOp:
-		//	{AllenOperator} value=("before" | "meets" | "overlaps" | "starts" | "finishes" | "during");
+		//	{AllenOperator} value=("before" | "after" | "in");
 		public ParserRule getRule() { return rule; }
 
-		//{AllenOperator} value=("before" | "meets" | "overlaps" | "starts" | "finishes" | "during")
+		//{AllenOperator} value=("before" | "after" | "in")
 		public Group getGroup() { return cGroup; }
 
 		//{AllenOperator}
 		public Action getAllenOperatorAction_0() { return cAllenOperatorAction_0; }
 
-		//value=("before" | "meets" | "overlaps" | "starts" | "finishes" | "during")
+		//value=("before" | "after" | "in")
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
 
-		//"before" | "meets" | "overlaps" | "starts" | "finishes" | "during"
+		//"before" | "after" | "in"
 		public Alternatives getValueAlternatives_1_0() { return cValueAlternatives_1_0; }
 
 		//"before"
 		public Keyword getValueBeforeKeyword_1_0_0() { return cValueBeforeKeyword_1_0_0; }
 
-		//"meets"
-		public Keyword getValueMeetsKeyword_1_0_1() { return cValueMeetsKeyword_1_0_1; }
+		//"after"
+		public Keyword getValueAfterKeyword_1_0_1() { return cValueAfterKeyword_1_0_1; }
 
-		//"overlaps"
-		public Keyword getValueOverlapsKeyword_1_0_2() { return cValueOverlapsKeyword_1_0_2; }
-
-		//"starts"
-		public Keyword getValueStartsKeyword_1_0_3() { return cValueStartsKeyword_1_0_3; }
-
-		//"finishes"
-		public Keyword getValueFinishesKeyword_1_0_4() { return cValueFinishesKeyword_1_0_4; }
-
-		//"during"
-		public Keyword getValueDuringKeyword_1_0_5() { return cValueDuringKeyword_1_0_5; }
+		//"in"
+		public Keyword getValueInKeyword_1_0_2() { return cValueInKeyword_1_0_2; }
 	}
 
 	public class FluentElements extends AbstractParserRuleElementFinder {
@@ -518,19 +506,26 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class InRuleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InRule");
-		private final Assignment cTimeAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cTimeINTTerminalRuleCall_0 = (RuleCall)cTimeAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cExpressionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExpressionPlusOrMinusParserRuleCall_1_0 = (RuleCall)cExpressionAssignment_1.eContents().get(0);
 		
-		////	|currentTime='now'
 		//InRule:
-		//	time=INT;
+		//	{Expression} expression=PlusOrMinus;
 		public ParserRule getRule() { return rule; }
 
-		//time=INT
-		public Assignment getTimeAssignment() { return cTimeAssignment; }
+		//{Expression} expression=PlusOrMinus
+		public Group getGroup() { return cGroup; }
 
-		//INT
-		public RuleCall getTimeINTTerminalRuleCall_0() { return cTimeINTTerminalRuleCall_0; }
+		//{Expression}
+		public Action getExpressionAction_0() { return cExpressionAction_0; }
+
+		//expression=PlusOrMinus
+		public Assignment getExpressionAssignment_1() { return cExpressionAssignment_1; }
+
+		//PlusOrMinus
+		public RuleCall getExpressionPlusOrMinusParserRuleCall_1_0() { return cExpressionPlusOrMinusParserRuleCall_1_0; }
 	}
 
 	public class ExpressionElements extends AbstractParserRuleElementFinder {
@@ -912,15 +907,18 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAtKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
 		private final Assignment cFluentValueSampleAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
 		private final RuleCall cFluentValueSampleAtTimePrimaryParserRuleCall_3_2_1_0 = (RuleCall)cFluentValueSampleAssignment_3_2_1.eContents().get(0);
+		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
+		private final Action cCurrentTimeAction_4_0 = (Action)cGroup_4.eContents().get(0);
+		private final Assignment cValueAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final Keyword cValueNowKeyword_4_1_0 = (Keyword)cValueAssignment_4_1.eContents().get(0);
 		
-		////	|{CurrentTime} value='now'
 		//Atomic returns Expression:
 		//	{FloatConstant} value=FLOAT | {IntConstant} value=INT | {BoolConstant} value=("true" | "false") | {Reference}
-		//	ref=[ReferenceType] ("at" fluentValueSample=AtTimePrimary)?;
+		//	ref=[ReferenceType] ("at" fluentValueSample=AtTimePrimary)? | {CurrentTime} value="now";
 		public ParserRule getRule() { return rule; }
 
 		//{FloatConstant} value=FLOAT | {IntConstant} value=INT | {BoolConstant} value=("true" | "false") | {Reference}
-		//ref=[ReferenceType] ("at" fluentValueSample=AtTimePrimary)?
+		//ref=[ReferenceType] ("at" fluentValueSample=AtTimePrimary)? | {CurrentTime} value="now"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//{FloatConstant} value=FLOAT
@@ -991,6 +989,18 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 
 		//AtTimePrimary
 		public RuleCall getFluentValueSampleAtTimePrimaryParserRuleCall_3_2_1_0() { return cFluentValueSampleAtTimePrimaryParserRuleCall_3_2_1_0; }
+
+		//{CurrentTime} value="now"
+		public Group getGroup_4() { return cGroup_4; }
+
+		//{CurrentTime}
+		public Action getCurrentTimeAction_4_0() { return cCurrentTimeAction_4_0; }
+
+		//value="now"
+		public Assignment getValueAssignment_4_1() { return cValueAssignment_4_1; }
+
+		//"now"
+		public Keyword getValueNowKeyword_4_1_0() { return cValueNowKeyword_4_1_0; }
 	}
 
 	public class ReferenceTypeElements extends AbstractParserRuleElementFinder {
@@ -1026,6 +1036,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRightAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cRightAtTimePrimaryParserRuleCall_1_2_0 = (RuleCall)cRightAssignment_1_2.eContents().get(0);
 		
+		//// AT --> tempo del riferimento
 		//AtTimeExpression returns AtExpr:
 		//	AtTimePrimary ({AtTimePlusOrMin.left=current} op=("-" | "+") right=AtTimePrimary)*;
 		public ParserRule getRule() { return rule; }
@@ -1137,143 +1148,6 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		//"now"
 		public Keyword getAtTimeValueNowKeyword_1_1_0() { return cAtTimeValueNowKeyword_1_1_0; }
 	}
-
-	public class InExprElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InExpr");
-		private final RuleCall cInTimeExpressionParserRuleCall = (RuleCall)rule.eContents().get(1);
-		
-		//InExpr:
-		//	InTimeExpression;
-		public ParserRule getRule() { return rule; }
-
-		//InTimeExpression
-		public RuleCall getInTimeExpressionParserRuleCall() { return cInTimeExpressionParserRuleCall; }
-	}
-
-	public class InTimeExpressionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InTimeExpression");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cInTimePrimaryParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Action cInTimePlusOrMinLeftAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Assignment cOpAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final Alternatives cOpAlternatives_1_1_0 = (Alternatives)cOpAssignment_1_1.eContents().get(0);
-		private final Keyword cOpHyphenMinusKeyword_1_1_0_0 = (Keyword)cOpAlternatives_1_1_0.eContents().get(0);
-		private final Keyword cOpPlusSignKeyword_1_1_0_1 = (Keyword)cOpAlternatives_1_1_0.eContents().get(1);
-		private final Assignment cRightAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cRightInTimePrimaryParserRuleCall_1_2_0 = (RuleCall)cRightAssignment_1_2.eContents().get(0);
-		
-		//InTimeExpression returns InExpr:
-		//	InTimePrimary ({InTimePlusOrMin.left=current} op=("-" | "+") right=InTimePrimary)*;
-		public ParserRule getRule() { return rule; }
-
-		//InTimePrimary ({InTimePlusOrMin.left=current} op=("-" | "+") right=InTimePrimary)*
-		public Group getGroup() { return cGroup; }
-
-		//InTimePrimary
-		public RuleCall getInTimePrimaryParserRuleCall_0() { return cInTimePrimaryParserRuleCall_0; }
-
-		//({InTimePlusOrMin.left=current} op=("-" | "+") right=InTimePrimary)*
-		public Group getGroup_1() { return cGroup_1; }
-
-		//{InTimePlusOrMin.left=current}
-		public Action getInTimePlusOrMinLeftAction_1_0() { return cInTimePlusOrMinLeftAction_1_0; }
-
-		//op=("-" | "+")
-		public Assignment getOpAssignment_1_1() { return cOpAssignment_1_1; }
-
-		//"-" | "+"
-		public Alternatives getOpAlternatives_1_1_0() { return cOpAlternatives_1_1_0; }
-
-		//"-"
-		public Keyword getOpHyphenMinusKeyword_1_1_0_0() { return cOpHyphenMinusKeyword_1_1_0_0; }
-
-		//"+"
-		public Keyword getOpPlusSignKeyword_1_1_0_1() { return cOpPlusSignKeyword_1_1_0_1; }
-
-		//right=InTimePrimary
-		public Assignment getRightAssignment_1_2() { return cRightAssignment_1_2; }
-
-		//InTimePrimary
-		public RuleCall getRightInTimePrimaryParserRuleCall_1_2_0() { return cRightInTimePrimaryParserRuleCall_1_2_0; }
-	}
-
-	public class InTimePrimaryElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InTimePrimary");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final RuleCall cInExprParserRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final RuleCall cInTimeAtomicParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//InTimePrimary returns InExpr:
-		//	"(" InExpr ")" | InTimeAtomic;
-		public ParserRule getRule() { return rule; }
-
-		//"(" InExpr ")" | InTimeAtomic
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//"(" InExpr ")"
-		public Group getGroup_0() { return cGroup_0; }
-
-		//"("
-		public Keyword getLeftParenthesisKeyword_0_0() { return cLeftParenthesisKeyword_0_0; }
-
-		//InExpr
-		public RuleCall getInExprParserRuleCall_0_1() { return cInExprParserRuleCall_0_1; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_0_2() { return cRightParenthesisKeyword_0_2; }
-
-		//InTimeAtomic
-		public RuleCall getInTimeAtomicParserRuleCall_1() { return cInTimeAtomicParserRuleCall_1; }
-	}
-
-	public class InTimeAtomicElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InTimeAtomic");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Action cInTimeIntConstantAction_0_0 = (Action)cGroup_0.eContents().get(0);
-		private final Assignment cValueAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cValueINTTerminalRuleCall_0_1_0 = (RuleCall)cValueAssignment_0_1.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Action cInTimeCurrentTimeAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Assignment cInTimeValueAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final Keyword cInTimeValueNowKeyword_1_1_0 = (Keyword)cInTimeValueAssignment_1_1.eContents().get(0);
-		
-		////	|long
-		//InTimeAtomic returns InExpr:
-		//	{InTimeIntConstant} / *('+'|'-')?* / value=INT | {InTimeCurrentTime} inTimeValue="now";
-		public ParserRule getRule() { return rule; }
-
-		//{InTimeIntConstant} / *('+'|'-')?* / value=INT | {InTimeCurrentTime} inTimeValue="now"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//{InTimeIntConstant} / *('+'|'-')?* / value=INT
-		public Group getGroup_0() { return cGroup_0; }
-
-		//{InTimeIntConstant}
-		public Action getInTimeIntConstantAction_0_0() { return cInTimeIntConstantAction_0_0; }
-
-		/// *('+'|'-')?* / value=INT
-		public Assignment getValueAssignment_0_1() { return cValueAssignment_0_1; }
-
-		//INT
-		public RuleCall getValueINTTerminalRuleCall_0_1_0() { return cValueINTTerminalRuleCall_0_1_0; }
-
-		//{InTimeCurrentTime} inTimeValue="now"
-		public Group getGroup_1() { return cGroup_1; }
-
-		//{InTimeCurrentTime}
-		public Action getInTimeCurrentTimeAction_1_0() { return cInTimeCurrentTimeAction_1_0; }
-
-		//inTimeValue="now"
-		public Assignment getInTimeValueAssignment_1_1() { return cInTimeValueAssignment_1_1; }
-
-		//"now"
-		public Keyword getInTimeValueNowKeyword_1_1_0() { return cInTimeValueNowKeyword_1_1_0; }
-	}
 	
 	
 	private EceModelElements pEceModel;
@@ -1303,10 +1177,6 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	private AtTimeExpressionElements pAtTimeExpression;
 	private AtTimePrimaryElements pAtTimePrimary;
 	private AtTimeAtomicElements pAtTimeAtomic;
-	private InExprElements pInExpr;
-	private InTimeExpressionElements pInTimeExpression;
-	private InTimePrimaryElements pInTimePrimary;
-	private InTimeAtomicElements pInTimeAtomic;
 	private TerminalRule tFLOAT;
 	
 	private final Grammar grammar;
@@ -1430,7 +1300,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// EXP CONTEXT *****************************************************************
 	//ExpContext:
-	//	"expect" finalCondition=ConditionRule (allenOp=AllenOp time=AtTimePrimary)? ("if" initialCondition=ConditionRule)?;
+	//	"expect" finalCondition=ConditionRule (allenOp=AllenOp time=PlusOrMinus)? ("if" initialCondition=ConditionRule)?;
 	public ExpContextElements getExpContextAccess() {
 		return (pExpContext != null) ? pExpContext : (pExpContext = new ExpContextElements());
 	}
@@ -1440,7 +1310,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AllenOp:
-	//	{AllenOperator} value=("before" | "meets" | "overlaps" | "starts" | "finishes" | "during");
+	//	{AllenOperator} value=("before" | "after" | "in");
 	public AllenOpElements getAllenOpAccess() {
 		return (pAllenOp != null) ? pAllenOp : (pAllenOp = new AllenOpElements());
 	}
@@ -1479,9 +1349,8 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		return getToRuleAccess().getRule();
 	}
 
-	////	|currentTime='now'
 	//InRule:
-	//	time=INT;
+	//	{Expression} expression=PlusOrMinus;
 	public InRuleElements getInRuleAccess() {
 		return (pInRule != null) ? pInRule : (pInRule = new InRuleElements());
 	}
@@ -1571,10 +1440,9 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		return getPrimaryAccess().getRule();
 	}
 
-	////	|{CurrentTime} value='now'
 	//Atomic returns Expression:
 	//	{FloatConstant} value=FLOAT | {IntConstant} value=INT | {BoolConstant} value=("true" | "false") | {Reference}
-	//	ref=[ReferenceType] ("at" fluentValueSample=AtTimePrimary)?;
+	//	ref=[ReferenceType] ("at" fluentValueSample=AtTimePrimary)? | {CurrentTime} value="now";
 	public AtomicElements getAtomicAccess() {
 		return (pAtomic != null) ? pAtomic : (pAtomic = new AtomicElements());
 	}
@@ -1593,6 +1461,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		return getReferenceTypeAccess().getRule();
 	}
 
+	//// AT --> tempo del riferimento
 	//AtTimeExpression returns AtExpr:
 	//	AtTimePrimary ({AtTimePlusOrMin.left=current} op=("-" | "+") right=AtTimePrimary)*;
 	public AtTimeExpressionElements getAtTimeExpressionAccess() {
@@ -1624,47 +1493,24 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		return getAtTimeAtomicAccess().getRule();
 	}
 
-	//InExpr:
-	//	InTimeExpression;
-	public InExprElements getInExprAccess() {
-		return (pInExpr != null) ? pInExpr : (pInExpr = new InExprElements());
-	}
-	
-	public ParserRule getInExprRule() {
-		return getInExprAccess().getRule();
-	}
-
-	//InTimeExpression returns InExpr:
-	//	InTimePrimary ({InTimePlusOrMin.left=current} op=("-" | "+") right=InTimePrimary)*;
-	public InTimeExpressionElements getInTimeExpressionAccess() {
-		return (pInTimeExpression != null) ? pInTimeExpression : (pInTimeExpression = new InTimeExpressionElements());
-	}
-	
-	public ParserRule getInTimeExpressionRule() {
-		return getInTimeExpressionAccess().getRule();
-	}
-
-	//InTimePrimary returns InExpr:
-	//	"(" InExpr ")" | InTimeAtomic;
-	public InTimePrimaryElements getInTimePrimaryAccess() {
-		return (pInTimePrimary != null) ? pInTimePrimary : (pInTimePrimary = new InTimePrimaryElements());
-	}
-	
-	public ParserRule getInTimePrimaryRule() {
-		return getInTimePrimaryAccess().getRule();
-	}
-
-	////	|long
-	//InTimeAtomic returns InExpr:
-	//	{InTimeIntConstant} / *('+'|'-')?* / value=INT | {InTimeCurrentTime} inTimeValue="now";
-	public InTimeAtomicElements getInTimeAtomicAccess() {
-		return (pInTimeAtomic != null) ? pInTimeAtomic : (pInTimeAtomic = new InTimeAtomicElements());
-	}
-	
-	public ParserRule getInTimeAtomicRule() {
-		return getInTimeAtomicAccess().getRule();
-	}
-
+	//// IN --> tempo settaggio evento o verifica dell'aspettativa
+	////
+	////InExpr:
+	////	InTimeExpression;
+	////
+	////InTimeExpression returns InExpr:
+	////	InTimePrimary ({InTimePlusOrMin.left=current} op=('-' | '+')
+	////	right=InTimePrimary)*;
+	////
+	////InTimePrimary returns InExpr:
+	////	'(' InExpr ')' |
+	////	InTimeAtomic;
+	////
+	////InTimeAtomic returns InExpr:
+	////	{InTimeIntConstant} / *('+'|'-')?* / value=INT
+	////	| {InTimeCurrentTime} inTimeValue='now'
+	////	//	|long
+	////;
 	//terminal FLOAT returns ecore::EFloat:
 	//	"0".."9"* "." "0".."9"+;
 	public TerminalRule getFLOATRule() {

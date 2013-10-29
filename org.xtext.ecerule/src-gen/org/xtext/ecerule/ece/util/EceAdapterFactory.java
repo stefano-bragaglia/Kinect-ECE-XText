@@ -160,11 +160,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createAtExprAdapter();
       }
       @Override
-      public Adapter caseInExpr(InExpr object)
-      {
-        return createInExprAdapter();
-      }
-      @Override
       public Adapter caseAllenOperator(AllenOperator object)
       {
         return createAllenOperatorAdapter();
@@ -230,6 +225,11 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createReferenceAdapter();
       }
       @Override
+      public Adapter caseCurrentTime(CurrentTime object)
+      {
+        return createCurrentTimeAdapter();
+      }
+      @Override
       public Adapter caseAtTimePlusOrMin(AtTimePlusOrMin object)
       {
         return createAtTimePlusOrMinAdapter();
@@ -243,21 +243,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
       public Adapter caseAtTimeCurrentTime(AtTimeCurrentTime object)
       {
         return createAtTimeCurrentTimeAdapter();
-      }
-      @Override
-      public Adapter caseInTimePlusOrMin(InTimePlusOrMin object)
-      {
-        return createInTimePlusOrMinAdapter();
-      }
-      @Override
-      public Adapter caseInTimeIntConstant(InTimeIntConstant object)
-      {
-        return createInTimeIntConstantAdapter();
-      }
-      @Override
-      public Adapter caseInTimeCurrentTime(InTimeCurrentTime object)
-      {
-        return createInTimeCurrentTimeAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -537,21 +522,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InExpr <em>In Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.InExpr
-   * @generated
-   */
-  public Adapter createInExprAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.AllenOperator <em>Allen Operator</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -747,6 +717,21 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.CurrentTime <em>Current Time</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.CurrentTime
+   * @generated
+   */
+  public Adapter createCurrentTimeAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.AtTimePlusOrMin <em>At Time Plus Or Min</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -787,51 +772,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAtTimeCurrentTimeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InTimePlusOrMin <em>In Time Plus Or Min</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.InTimePlusOrMin
-   * @generated
-   */
-  public Adapter createInTimePlusOrMinAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InTimeIntConstant <em>In Time Int Constant</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.InTimeIntConstant
-   * @generated
-   */
-  public Adapter createInTimeIntConstantAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InTimeCurrentTime <em>In Time Current Time</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.InTimeCurrentTime
-   * @generated
-   */
-  public Adapter createInTimeCurrentTimeAdapter()
   {
     return null;
   }

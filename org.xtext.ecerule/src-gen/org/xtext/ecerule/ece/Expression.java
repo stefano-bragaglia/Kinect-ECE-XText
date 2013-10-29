@@ -20,7 +20,7 @@ package org.xtext.ecerule.ece;
  * @model
  * @generated
  */
-public interface Expression extends ConditionRule, ToRule
+public interface Expression extends ConditionRule, ToRule, InRule
 {
   /**
    * Returns the value of the '<em><b>Condition</b></em>' containment reference.

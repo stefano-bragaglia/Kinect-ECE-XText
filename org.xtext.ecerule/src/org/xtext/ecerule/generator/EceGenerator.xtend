@@ -25,6 +25,9 @@ import org.xtext.ecerule.ece.impl.PlusImpl
 import org.xtext.ecerule.ece.impl.MinusImpl
 import org.xtext.ecerule.ece.impl.MulOrDivImpl
 import org.xtext.ecerule.ece.impl.ReferenceImpl
+import org.xtext.ecerule.ece.Expression
+import org.xtext.ecerule.ece.impl.AllenOpImpl
+import org.xtext.ecerule.ece.impl.AllenOperatorImpl
 
 /**
  * Generates code from your model files on save.
@@ -54,6 +57,7 @@ class EceGenerator implements IGenerator {
 					public ExpressionDescr exprContainer;
 					public ConditionDescr condContainer;
 					public ExpContext expContext;
+					public Time time;
 					
 					Model model = new Model();
 					«««per ogni Statement»
@@ -103,17 +107,18 @@ class EceGenerator implements IGenerator {
 	def compileExpContext(ExpContext expContext, Statement statement) {
 		'''
 		expContext = new ExpContext();
-		«compileCond(expContext.initialCondition as ExpressionImpl, statement, "Initial")»	«««gestisci contizione iniziale
-		«compileCond(expContext.finalCondition as ExpressionImpl, statement, "Final")»		«««gestisci contizione finale
-«««		«compileTime(expContext.allenOp, expContext.time)»	«««gestisci info temporale
+		«compileCond(expContext.initialCondition as ExpressionImpl, statement, "Initial")»	«««(1)gestisci contizione iniziale
+		«compileCond(expContext.finalCondition as ExpressionImpl, statement, "Final")»		«««(2)gestisci contizione finale
+		«compileTime(expContext.allenOp as AllenOperatorImpl, expContext.time as ExpressionImpl, statement)»	«««(3)gestisci info temporale
 		
 		statement.addExpContext(expContext);
 		
 		'''
 	}
 	
-	
-//*****COMPILE CONDITION*********************************************************************************
+//************************************************************************************************************	
+//*****COMPILE CONDITION (initail e final)********************************************************************
+//************************************************************************************************************
 	
 	def compileCond(ExpressionImpl condExpr, Statement statement, String condType) {
 		var cond = condExpr.condition;
@@ -274,8 +279,6 @@ class EceGenerator implements IGenerator {
 			
 		}
 		
-			
-		
 	}
 	
 	
@@ -334,12 +337,9 @@ class EceGenerator implements IGenerator {
 		return paramNumTemp;
 	}
 	
+	
 //*****COMPILE RECURSIVE EXPRESSION*********************************************************************************
 
-	
-	
-	
-	
 	def dispatch compileRecExpr (NotImpl conditionExpr, Statement statement){
 		'''
 		«IF conditionExpr.expression.eClass.name.contains("Constant")»
@@ -368,11 +368,10 @@ class EceGenerator implements IGenerator {
 		'''
 	}
 	
-	
 	def dispatch compileRecExpr (AndImpl conditionExpr, Statement statement){
 		'''
 		«IF conditionExpr.left.eClass.name.contains("Constant") && conditionExpr.right.eClass.name.contains("Constant")»
-			new AndDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«compileTerminalLeft(conditionExpr.right as ExpressionImpl, statement)»)
+			new AndDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«compileTerminalRight(conditionExpr.right as ExpressionImpl, statement)»)
 		«ELSE»
 			«IF conditionExpr.left.eClass.name.contains("Constant")»
 				new AndDescr(«compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)
@@ -388,7 +387,7 @@ class EceGenerator implements IGenerator {
 		'''
 		«IF conditionExpr.op.equals("==")»						««««==
 			«IF conditionExpr.left.eClass.name.contains("Constant") && conditionExpr.right.eClass.name.contains("Constant")»
-				new SameDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«compileTerminalLeft(conditionExpr.right as ExpressionImpl, statement)»)
+				new SameDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«compileTerminalRight(conditionExpr.right as ExpressionImpl, statement)»)
 			«ELSE»
 				«IF conditionExpr.left.eClass.name.contains("Constant")»
 					new SameDescr(«compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,
@@ -413,6 +412,7 @@ class EceGenerator implements IGenerator {
 		«ENDIF»
 		'''
 	}
+	
 	def dispatch compileRecExpr (ComparisonImpl conditionExpr, Statement statement){
 		'''
 		«IF conditionExpr.op.equals(">=")»						««««>=
@@ -475,17 +475,18 @@ class EceGenerator implements IGenerator {
 		'''
 	}
 	
-//************************************************************************************************************
-	/** HARD Expression Case */		
 	def dispatch compileRecExpr (IntConstantImpl conditionExpr, Statement statement){
 		'''new NumberDescr(«conditionExpr.value»)'''
 	}
+	
 	def dispatch compileRecExpr (FloatConstantImpl conditionExpr, Statement statement){
 		'''new NumberDescr(«conditionExpr.value»)'''
 	}
+	
 	def dispatch compileRecExpr (BoolConstantImpl conditionExpr, Statement statement){
 		'''new NumberDescr(«conditionExpr.value»)'''
 	}
+	
 	def dispatch compileRecExpr (ReferenceImpl conditionExpr, Statement statement){
 		'''
 		«IF conditionExpr.ref.eClass.name.contains("Feature")»
@@ -495,6 +496,7 @@ class EceGenerator implements IGenerator {
 		«ENDIF»
 		'''
 	}
+	
 	def dispatch compileRecExpr (PlusImpl conditionExpr, Statement statement){
 		'''
 			«IF conditionExpr.left.eClass.name.contains("Constant") && conditionExpr.right.eClass.name.contains("Constant")»
@@ -512,6 +514,7 @@ class EceGenerator implements IGenerator {
 			«ENDIF»
 		'''	
 	}
+	
 	def dispatch compileRecExpr (MinusImpl conditionExpr, Statement statement){
 		'''
 			«IF conditionExpr.left.eClass.name.contains("Constant") && conditionExpr.right.eClass.name.contains("Constant")»
@@ -529,6 +532,7 @@ class EceGenerator implements IGenerator {
 			«ENDIF»
 		'''
 	}
+	
 	def dispatch compileRecExpr (MulOrDivImpl conditionExpr, Statement statement){
 		'''
 			«IF conditionExpr.op.equals("*")»
@@ -567,25 +571,18 @@ class EceGenerator implements IGenerator {
 	
 	
 	
+//************************************************************************************************************	
+//*****COMPILE TIME*******************************************************************************************
+//************************************************************************************************************
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	def compileFinalCond(ConditionRule rule) {
-		//throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	def compileTime(AllenOperatorImpl op, ExpressionImpl expr, Statement statement) {
+		'''
+		time = new Time();
+		time.setllenOp(«op.value»);
+		time.setTimeValue(«compileRecExpr(expr as ExpressionImpl, statement)»);
+		
+		'''
 	}
 	
-	def compileTime(AllenOp op, AtExpr expr) {
-		//throw new UnsupportedOperationException("TODO: auto-generated method stub")
-	}
-
+	
 }

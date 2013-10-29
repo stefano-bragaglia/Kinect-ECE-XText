@@ -46,9 +46,7 @@
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//ConditionRule"/>
     <genClasses ecoreClass="Ece.ecore#//ToRule"/>
-    <genClasses ecoreClass="Ece.ecore#//InRule">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//InRule/time"/>
-    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//InRule"/>
     <genClasses ecoreClass="Ece.ecore#//Expression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Expression/condition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Expression/expression"/>
@@ -57,7 +55,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//ReferenceType/name"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//AtExpr"/>
-    <genClasses ecoreClass="Ece.ecore#//InExpr"/>
     <genClasses ecoreClass="Ece.ecore#//AllenOperator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//AllenOperator/value"/>
     </genClasses>
@@ -106,6 +103,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ece.ecore#//Reference/ref"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Reference/fluentValueSample"/>
     </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//CurrentTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//CurrentTime/value"/>
+    </genClasses>
     <genClasses ecoreClass="Ece.ecore#//AtTimePlusOrMin">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//AtTimePlusOrMin/left"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//AtTimePlusOrMin/op"/>
@@ -116,17 +116,6 @@
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//AtTimeCurrentTime">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//AtTimeCurrentTime/atTimeValue"/>
-    </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//InTimePlusOrMin">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//InTimePlusOrMin/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//InTimePlusOrMin/op"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//InTimePlusOrMin/right"/>
-    </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//InTimeIntConstant">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//InTimeIntConstant/value"/>
-    </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//InTimeCurrentTime">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//InTimeCurrentTime/inTimeValue"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

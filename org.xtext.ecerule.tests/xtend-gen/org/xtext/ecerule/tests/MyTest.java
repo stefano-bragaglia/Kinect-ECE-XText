@@ -31,10 +31,10 @@ public class MyTest {
   private CompilationTestHelper _compilationTestHelper;
   
   @Test
-  public void testParsingLite() {
+  public void testParsing() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("on BilanciaMisuraEasy(pesata) set peso to pesata if pesata >100, set peso to 88888 if pesata <=100, expect peso == 88888 if pesata>100;");
+      _builder.append("on BilanciaMisuraEasy(pesata) set peso to pesata if pesata <=100, set peso to 88888 if pesata >100, expect peso == 88888 before 3600 if pesata>100;");
       _builder.newLine();
       EceModel _parse = this._parseHelper.parse(_builder);
       this._validationTestHelper.assertNoErrors(_parse);
@@ -47,7 +47,7 @@ public class MyTest {
   public void testGeneratedCode() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("on BilanciaMisuraEasy(pesata) set peso to pesata, expect peso == 2 if pesata<30;");
+      _builder.append("on BilanciaMisuraEasy(pesata) set peso to pesata if pesata <=100, set peso to 88888 if pesata >100, expect peso == 88888 before 3600 if pesata>100;");
       _builder.newLine();
       StringConcatenation _builder_1 = new StringConcatenation();
       _builder_1.append("import org.xtext.ecerule.model.*;");

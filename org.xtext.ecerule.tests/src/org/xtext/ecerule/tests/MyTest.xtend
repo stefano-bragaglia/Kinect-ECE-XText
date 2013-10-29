@@ -25,24 +25,16 @@ class MyTest {
 	@Inject extension CompilationTestHelper
 
 	@Test
-	def void testParsingLite() {
+	def void testParsing() {
 		'''
-			on BilanciaMisuraEasy(pesata) set peso to pesata if pesata >100, set peso to 88888 if pesata <=100, expect peso == 88888 if pesata>100;
+		on BilanciaMisuraEasy(pesata) set peso to pesata if pesata <=100, set peso to 88888 if pesata >100, expect peso == 88888 before 3600 if pesata>100;
 		'''.parse.assertNoErrors
 	}
 
-//	@Test
-//	def void testParsingSimplePro() {
-//		'''
-//			on BilanciaMisura (lettura, tara) 	set peso to (lettura-tara)*100 in 26 if tara<=16 ,
-//										set totPesate to [totPesate] + (lettura-tara)*100 if (lettura-tara)*100>60,
-//										expect [totPesate] >= (lettura-tara)*100 finishes 264 if [totPesate]>=0 ;
-//		'''.parse.assertNoErrors
-//	}
 
 	@Test def void testGeneratedCode() {
 		'''
-		on BilanciaMisuraEasy(pesata) set peso to pesata, expect peso == 2 if pesata<30;
+		on BilanciaMisuraEasy(pesata) set peso to pesata if pesata <=100, set peso to 88888 if pesata >100, expect peso == 88888 before 3600 if pesata>100;
 		'''.assertCompilesTo(
 		'''
 import org.xtext.ecerule.model.*;

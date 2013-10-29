@@ -40,7 +40,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allenOp" eType="#//AllenOp"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="time" eType="#//AtExpr"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" eType="#//Expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="initialCondition" eType="#//ConditionRule"
         containment="true"/>
@@ -56,10 +56,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConditionRule"/>
   <eClassifiers xsi:type="ecore:EClass" name="ToRule"/>
-  <eClassifiers xsi:type="ecore:EClass" name="InRule">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//ConditionRule #//ToRule">
+  <eClassifiers xsi:type="ecore:EClass" name="InRule"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//ConditionRule #//ToRule #//InRule">
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//Expression"
@@ -69,7 +67,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtExpr"/>
-  <eClassifiers xsi:type="ecore:EClass" name="InExpr"/>
   <eClassifiers xsi:type="ecore:EClass" name="AllenOperator" eSuperTypes="#//AllenOp">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -133,6 +130,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="fluentValueSample" eType="#//AtExpr"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CurrentTime" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtTimePlusOrMin" eSuperTypes="#//AtExpr">
     <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//AtExpr"
         containment="true"/>
@@ -145,18 +145,5 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtTimeCurrentTime" eSuperTypes="#//AtExpr">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="atTimeValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InTimePlusOrMin" eSuperTypes="#//InExpr">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//InExpr"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//InExpr"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InTimeIntConstant" eSuperTypes="#//InExpr">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InTimeCurrentTime" eSuperTypes="#//InExpr">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inTimeValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

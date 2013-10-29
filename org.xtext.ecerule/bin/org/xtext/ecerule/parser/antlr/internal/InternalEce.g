@@ -598,9 +598,9 @@ ruleExpContext returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getExpContextAccess().getTimeAtTimePrimaryParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getExpContextAccess().getTimePlusOrMinusParserRuleCall_2_1_0()); 
 	    }
-		lv_time_3_0=ruleAtTimePrimary		{
+		lv_time_3_0=rulePlusOrMinus		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getExpContextRule());
 	        }
@@ -608,7 +608,7 @@ ruleExpContext returns [EObject current=null]
        			$current, 
        			"time",
         		lv_time_3_0, 
-        		"AtTimePrimary");
+        		"PlusOrMinus");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -677,9 +677,9 @@ ruleAllenOp returns [EObject current=null]
        		setWithLastConsumed($current, "value", lv_value_1_1, null);
 	    }
 
-    |		lv_value_1_2=	'meets' 
+    |		lv_value_1_2=	'after' 
     {
-        newLeafNode(lv_value_1_2, grammarAccess.getAllenOpAccess().getValueMeetsKeyword_1_0_1());
+        newLeafNode(lv_value_1_2, grammarAccess.getAllenOpAccess().getValueAfterKeyword_1_0_1());
     }
  
 	    {
@@ -689,9 +689,9 @@ ruleAllenOp returns [EObject current=null]
        		setWithLastConsumed($current, "value", lv_value_1_2, null);
 	    }
 
-    |		lv_value_1_3=	'overlaps' 
+    |		lv_value_1_3=	'in' 
     {
-        newLeafNode(lv_value_1_3, grammarAccess.getAllenOpAccess().getValueOverlapsKeyword_1_0_2());
+        newLeafNode(lv_value_1_3, grammarAccess.getAllenOpAccess().getValueInKeyword_1_0_2());
     }
  
 	    {
@@ -699,42 +699,6 @@ ruleAllenOp returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getAllenOpRule());
 	        }
        		setWithLastConsumed($current, "value", lv_value_1_3, null);
-	    }
-
-    |		lv_value_1_4=	'starts' 
-    {
-        newLeafNode(lv_value_1_4, grammarAccess.getAllenOpAccess().getValueStartsKeyword_1_0_3());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getAllenOpRule());
-	        }
-       		setWithLastConsumed($current, "value", lv_value_1_4, null);
-	    }
-
-    |		lv_value_1_5=	'finishes' 
-    {
-        newLeafNode(lv_value_1_5, grammarAccess.getAllenOpAccess().getValueFinishesKeyword_1_0_4());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getAllenOpRule());
-	        }
-       		setWithLastConsumed($current, "value", lv_value_1_5, null);
-	    }
-
-    |		lv_value_1_6=	'during' 
-    {
-        newLeafNode(lv_value_1_6, grammarAccess.getAllenOpAccess().getValueDuringKeyword_1_0_5());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getAllenOpRule());
-	        }
-       		setWithLastConsumed($current, "value", lv_value_1_6, null);
 	    }
 
 )
@@ -956,25 +920,31 @@ ruleInRule returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
+((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getInRuleAccess().getExpressionAction_0(),
+            $current);
+    }
+)(
 (
-(
-		lv_time_0_0=RULE_INT
-		{
-			newLeafNode(lv_time_0_0, grammarAccess.getInRuleAccess().getTimeINTTerminalRuleCall_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getInRuleAccess().getExpressionPlusOrMinusParserRuleCall_1_0()); 
+	    }
+		lv_expression_1_0=rulePlusOrMinus		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInRuleRule());
+	            $current = createModelElementForParent(grammarAccess.getInRuleRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
-       			"time",
-        		lv_time_0_0, 
-        		"INT");
+       			"expression",
+        		lv_expression_1_0, 
+        		"PlusOrMinus");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)
+))
 ;
 
 
@@ -1715,7 +1685,29 @@ ruleAtomic returns [EObject current=null]
 	    }
 
 )
-))?))
+))?)
+    |((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getAtomicAccess().getCurrentTimeAction_4_0(),
+            $current);
+    }
+)(
+(
+		lv_value_11_0=	'now' 
+    {
+        newLeafNode(lv_value_11_0, grammarAccess.getAtomicAccess().getValueNowKeyword_4_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAtomicRule());
+	        }
+       		setWithLastConsumed($current, "value", lv_value_11_0, "now");
+	    }
+
+)
+)))
 ;
 
 
@@ -1913,235 +1905,6 @@ ruleAtTimeAtomic returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getAtTimeAtomicRule());
 	        }
        		setWithLastConsumed($current, "atTimeValue", lv_atTimeValue_3_0, "now");
-	    }
-
-)
-)))
-;
-
-
-
-
-
-// Entry rule entryRuleInExpr
-entryRuleInExpr returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getInExprRule()); }
-	 iv_ruleInExpr=ruleInExpr 
-	 { $current=$iv_ruleInExpr.current; } 
-	 EOF 
-;
-
-// Rule InExpr
-ruleInExpr returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-
-    { 
-        newCompositeNode(grammarAccess.getInExprAccess().getInTimeExpressionParserRuleCall()); 
-    }
-    this_InTimeExpression_0=ruleInTimeExpression
-    { 
-        $current = $this_InTimeExpression_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-;
-
-
-
-
-
-// Entry rule entryRuleInTimeExpression
-entryRuleInTimeExpression returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getInTimeExpressionRule()); }
-	 iv_ruleInTimeExpression=ruleInTimeExpression 
-	 { $current=$iv_ruleInTimeExpression.current; } 
-	 EOF 
-;
-
-// Rule InTimeExpression
-ruleInTimeExpression returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-    { 
-        newCompositeNode(grammarAccess.getInTimeExpressionAccess().getInTimePrimaryParserRuleCall_0()); 
-    }
-    this_InTimePrimary_0=ruleInTimePrimary
-    { 
-        $current = $this_InTimePrimary_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-((
-    {
-        $current = forceCreateModelElementAndSet(
-            grammarAccess.getInTimeExpressionAccess().getInTimePlusOrMinLeftAction_1_0(),
-            $current);
-    }
-)(
-(
-(
-		lv_op_2_1=	'-' 
-    {
-        newLeafNode(lv_op_2_1, grammarAccess.getInTimeExpressionAccess().getOpHyphenMinusKeyword_1_1_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInTimeExpressionRule());
-	        }
-       		setWithLastConsumed($current, "op", lv_op_2_1, null);
-	    }
-
-    |		lv_op_2_2=	'+' 
-    {
-        newLeafNode(lv_op_2_2, grammarAccess.getInTimeExpressionAccess().getOpPlusSignKeyword_1_1_0_1());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInTimeExpressionRule());
-	        }
-       		setWithLastConsumed($current, "op", lv_op_2_2, null);
-	    }
-
-)
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getInTimeExpressionAccess().getRightInTimePrimaryParserRuleCall_1_2_0()); 
-	    }
-		lv_right_3_0=ruleInTimePrimary		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getInTimeExpressionRule());
-	        }
-       		set(
-       			$current, 
-       			"right",
-        		lv_right_3_0, 
-        		"InTimePrimary");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))*)
-;
-
-
-
-
-
-// Entry rule entryRuleInTimePrimary
-entryRuleInTimePrimary returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getInTimePrimaryRule()); }
-	 iv_ruleInTimePrimary=ruleInTimePrimary 
-	 { $current=$iv_ruleInTimePrimary.current; } 
-	 EOF 
-;
-
-// Rule InTimePrimary
-ruleInTimePrimary returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((	otherlv_0='(' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getInTimePrimaryAccess().getLeftParenthesisKeyword_0_0());
-    }
-
-    { 
-        newCompositeNode(grammarAccess.getInTimePrimaryAccess().getInExprParserRuleCall_0_1()); 
-    }
-    this_InExpr_1=ruleInExpr
-    { 
-        $current = $this_InExpr_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-	otherlv_2=')' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getInTimePrimaryAccess().getRightParenthesisKeyword_0_2());
-    }
-)
-    |
-    { 
-        newCompositeNode(grammarAccess.getInTimePrimaryAccess().getInTimeAtomicParserRuleCall_1()); 
-    }
-    this_InTimeAtomic_3=ruleInTimeAtomic
-    { 
-        $current = $this_InTimeAtomic_3.current; 
-        afterParserOrEnumRuleCall();
-    }
-)
-;
-
-
-
-
-
-// Entry rule entryRuleInTimeAtomic
-entryRuleInTimeAtomic returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getInTimeAtomicRule()); }
-	 iv_ruleInTimeAtomic=ruleInTimeAtomic 
-	 { $current=$iv_ruleInTimeAtomic.current; } 
-	 EOF 
-;
-
-// Rule InTimeAtomic
-ruleInTimeAtomic returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(((
-    {
-        $current = forceCreateModelElement(
-            grammarAccess.getInTimeAtomicAccess().getInTimeIntConstantAction_0_0(),
-            $current);
-    }
-)(
-(
-		lv_value_1_0=RULE_INT
-		{
-			newLeafNode(lv_value_1_0, grammarAccess.getInTimeAtomicAccess().getValueINTTerminalRuleCall_0_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInTimeAtomicRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"value",
-        		lv_value_1_0, 
-        		"INT");
-	    }
-
-)
-))
-    |((
-    {
-        $current = forceCreateModelElement(
-            grammarAccess.getInTimeAtomicAccess().getInTimeCurrentTimeAction_1_0(),
-            $current);
-    }
-)(
-(
-		lv_inTimeValue_3_0=	'now' 
-    {
-        newLeafNode(lv_inTimeValue_3_0, grammarAccess.getInTimeAtomicAccess().getInTimeValueNowKeyword_1_1_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInTimeAtomicRule());
-	        }
-       		setWithLastConsumed($current, "inTimeValue", lv_inTimeValue_3_0, "now");
 	    }
 
 )

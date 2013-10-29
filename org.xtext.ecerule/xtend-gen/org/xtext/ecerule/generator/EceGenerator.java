@@ -13,7 +13,6 @@ import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.xtext.ecerule.ece.AllenOp;
-import org.xtext.ecerule.ece.AtExpr;
 import org.xtext.ecerule.ece.ConditionRule;
 import org.xtext.ecerule.ece.ContextsList;
 import org.xtext.ecerule.ece.EceModel;
@@ -24,6 +23,7 @@ import org.xtext.ecerule.ece.ExpContextsList;
 import org.xtext.ecerule.ece.Expression;
 import org.xtext.ecerule.ece.ReferenceType;
 import org.xtext.ecerule.ece.Statement;
+import org.xtext.ecerule.ece.impl.AllenOperatorImpl;
 import org.xtext.ecerule.ece.impl.AndImpl;
 import org.xtext.ecerule.ece.impl.BoolConstantImpl;
 import org.xtext.ecerule.ece.impl.ComparisonImpl;
@@ -87,6 +87,9 @@ public class EceGenerator implements IGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("public ExpContext expContext;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("public Time time;");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.newLine();
@@ -185,6 +188,12 @@ public class EceGenerator implements IGenerator {
     CharSequence _compileCond_1 = this.compileCond(((ExpressionImpl) _finalCondition), statement, "Final");
     _builder.append(_compileCond_1, "");
     _builder.append("\t\t");
+    _builder.append("\t\t");
+    AllenOp _allenOp = expContext.getAllenOp();
+    Expression _time = expContext.getTime();
+    CharSequence _compileTime = this.compileTime(((AllenOperatorImpl) _allenOp), ((ExpressionImpl) _time), statement);
+    _builder.append(_compileTime, "");
+    _builder.append("\t");
     _builder.append("\t\t");
     _builder.newLineIfNotEmpty();
     _builder.append("statement.addExpContext(expContext);");
@@ -1167,8 +1176,8 @@ public class EceGenerator implements IGenerator {
         _builder.append(_compileTerminalLeft, "");
         _builder.append(",");
         Expression _right_1 = conditionExpr.getRight();
-        CharSequence _compileTerminalLeft_1 = this.compileTerminalLeft(((ExpressionImpl) _right_1), statement);
-        _builder.append(_compileTerminalLeft_1, "");
+        CharSequence _compileTerminalRight = this.compileTerminalRight(((ExpressionImpl) _right_1), statement);
+        _builder.append(_compileTerminalRight, "");
         _builder.append(")");
         _builder.newLineIfNotEmpty();
       } else {
@@ -1180,8 +1189,8 @@ public class EceGenerator implements IGenerator {
           if (_contains_2) {
             _builder.append("new AndDescr(");
             Expression _left_3 = conditionExpr.getLeft();
-            CharSequence _compileTerminalLeft_2 = this.compileTerminalLeft(((ExpressionImpl) _left_3), statement);
-            _builder.append(_compileTerminalLeft_2, "");
+            CharSequence _compileTerminalLeft_1 = this.compileTerminalLeft(((ExpressionImpl) _left_3), statement);
+            _builder.append(_compileTerminalLeft_1, "");
             _builder.append(",");
             Expression _right_2 = conditionExpr.getRight();
             Object _compileRecExpr = this.compileRecExpr(((ExpressionImpl) _right_2), statement);
@@ -1242,8 +1251,8 @@ public class EceGenerator implements IGenerator {
             _builder.append(_compileTerminalLeft, "");
             _builder.append(",");
             Expression _right_1 = conditionExpr.getRight();
-            CharSequence _compileTerminalLeft_1 = this.compileTerminalLeft(((ExpressionImpl) _right_1), statement);
-            _builder.append(_compileTerminalLeft_1, "");
+            CharSequence _compileTerminalRight = this.compileTerminalRight(((ExpressionImpl) _right_1), statement);
+            _builder.append(_compileTerminalRight, "");
             _builder.append(")");
             _builder.newLineIfNotEmpty();
           } else {
@@ -1255,8 +1264,8 @@ public class EceGenerator implements IGenerator {
               if (_contains_2) {
                 _builder.append("new SameDescr(");
                 Expression _left_3 = conditionExpr.getLeft();
-                CharSequence _compileTerminalLeft_2 = this.compileTerminalLeft(((ExpressionImpl) _left_3), statement);
-                _builder.append(_compileTerminalLeft_2, "");
+                CharSequence _compileTerminalLeft_1 = this.compileTerminalLeft(((ExpressionImpl) _left_3), statement);
+                _builder.append(_compileTerminalLeft_1, "");
                 _builder.append(",");
                 _builder.newLineIfNotEmpty();
                 Expression _right_2 = conditionExpr.getRight();
@@ -1310,12 +1319,12 @@ public class EceGenerator implements IGenerator {
             if (_and_1) {
               _builder.append("new DifferentDescr( ");
               Expression _left_7 = conditionExpr.getLeft();
-              CharSequence _compileTerminalLeft_3 = this.compileTerminalLeft(((ExpressionImpl) _left_7), statement);
-              _builder.append(_compileTerminalLeft_3, "");
+              CharSequence _compileTerminalLeft_2 = this.compileTerminalLeft(((ExpressionImpl) _left_7), statement);
+              _builder.append(_compileTerminalLeft_2, "");
               _builder.append(",");
               Expression _right_5 = conditionExpr.getRight();
-              CharSequence _compileTerminalLeft_4 = this.compileTerminalLeft(((ExpressionImpl) _right_5), statement);
-              _builder.append(_compileTerminalLeft_4, "");
+              CharSequence _compileTerminalLeft_3 = this.compileTerminalLeft(((ExpressionImpl) _right_5), statement);
+              _builder.append(_compileTerminalLeft_3, "");
               _builder.append(")");
               _builder.newLineIfNotEmpty();
             } else {
@@ -1327,8 +1336,8 @@ public class EceGenerator implements IGenerator {
                 if (_contains_6) {
                   _builder.append("new DifferentDescr(");
                   Expression _left_9 = conditionExpr.getLeft();
-                  CharSequence _compileTerminalLeft_5 = this.compileTerminalLeft(((ExpressionImpl) _left_9), statement);
-                  _builder.append(_compileTerminalLeft_5, "");
+                  CharSequence _compileTerminalLeft_4 = this.compileTerminalLeft(((ExpressionImpl) _left_9), statement);
+                  _builder.append(_compileTerminalLeft_4, "");
                   _builder.append(",");
                   Expression _right_6 = conditionExpr.getRight();
                   Object _compileRecExpr_3 = this.compileRecExpr(((ExpressionImpl) _right_6), statement);
@@ -1658,9 +1667,6 @@ public class EceGenerator implements IGenerator {
     return _builder;
   }
   
-  /**
-   * HARD Expression Case
-   */
   protected CharSequence _compileRecExpr(final IntConstantImpl conditionExpr, final Statement statement) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("new NumberDescr(");
@@ -2003,12 +2009,22 @@ public class EceGenerator implements IGenerator {
     return _builder;
   }
   
-  public Object compileFinalCond(final ConditionRule rule) {
-    return null;
-  }
-  
-  public Object compileTime(final AllenOp op, final AtExpr expr) {
-    return null;
+  public CharSequence compileTime(final AllenOperatorImpl op, final ExpressionImpl expr, final Statement statement) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("time = new Time();");
+    _builder.newLine();
+    _builder.append("time.setllenOp(");
+    String _value = op.getValue();
+    _builder.append(_value, "");
+    _builder.append(");");
+    _builder.newLineIfNotEmpty();
+    _builder.append("time.setTimeValue(");
+    CharSequence _compileRecExpr = this.compileRecExpr(((ExpressionImpl) expr), statement);
+    _builder.append(_compileRecExpr, "");
+    _builder.append(");");
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    return _builder;
   }
   
   public CharSequence compileTerminalLeft(final Container term, final Statement statement) {

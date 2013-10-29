@@ -178,6 +178,7 @@ public class EceSwitch<T> extends Switch<T>
         T result = caseExpression(expression);
         if (result == null) result = caseConditionRule(expression);
         if (result == null) result = caseToRule(expression);
+        if (result == null) result = caseInRule(expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -192,13 +193,6 @@ public class EceSwitch<T> extends Switch<T>
       {
         AtExpr atExpr = (AtExpr)theEObject;
         T result = caseAtExpr(atExpr);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.IN_EXPR:
-      {
-        InExpr inExpr = (InExpr)theEObject;
-        T result = caseInExpr(inExpr);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -217,6 +211,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(or);
         if (result == null) result = caseConditionRule(or);
         if (result == null) result = caseToRule(or);
+        if (result == null) result = caseInRule(or);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -227,6 +222,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(and);
         if (result == null) result = caseConditionRule(and);
         if (result == null) result = caseToRule(and);
+        if (result == null) result = caseInRule(and);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -237,6 +233,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(equality);
         if (result == null) result = caseConditionRule(equality);
         if (result == null) result = caseToRule(equality);
+        if (result == null) result = caseInRule(equality);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -247,6 +244,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(comparison);
         if (result == null) result = caseConditionRule(comparison);
         if (result == null) result = caseToRule(comparison);
+        if (result == null) result = caseInRule(comparison);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -257,6 +255,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(plus);
         if (result == null) result = caseConditionRule(plus);
         if (result == null) result = caseToRule(plus);
+        if (result == null) result = caseInRule(plus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -267,6 +266,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(minus);
         if (result == null) result = caseConditionRule(minus);
         if (result == null) result = caseToRule(minus);
+        if (result == null) result = caseInRule(minus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -277,6 +277,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(mulOrDiv);
         if (result == null) result = caseConditionRule(mulOrDiv);
         if (result == null) result = caseToRule(mulOrDiv);
+        if (result == null) result = caseInRule(mulOrDiv);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -287,6 +288,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(not);
         if (result == null) result = caseConditionRule(not);
         if (result == null) result = caseToRule(not);
+        if (result == null) result = caseInRule(not);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -297,6 +299,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(floatConstant);
         if (result == null) result = caseConditionRule(floatConstant);
         if (result == null) result = caseToRule(floatConstant);
+        if (result == null) result = caseInRule(floatConstant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -307,6 +310,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(intConstant);
         if (result == null) result = caseConditionRule(intConstant);
         if (result == null) result = caseToRule(intConstant);
+        if (result == null) result = caseInRule(intConstant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -317,6 +321,7 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(boolConstant);
         if (result == null) result = caseConditionRule(boolConstant);
         if (result == null) result = caseToRule(boolConstant);
+        if (result == null) result = caseInRule(boolConstant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -327,6 +332,18 @@ public class EceSwitch<T> extends Switch<T>
         if (result == null) result = caseExpression(reference);
         if (result == null) result = caseConditionRule(reference);
         if (result == null) result = caseToRule(reference);
+        if (result == null) result = caseInRule(reference);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EcePackage.CURRENT_TIME:
+      {
+        CurrentTime currentTime = (CurrentTime)theEObject;
+        T result = caseCurrentTime(currentTime);
+        if (result == null) result = caseExpression(currentTime);
+        if (result == null) result = caseConditionRule(currentTime);
+        if (result == null) result = caseToRule(currentTime);
+        if (result == null) result = caseInRule(currentTime);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -351,30 +368,6 @@ public class EceSwitch<T> extends Switch<T>
         AtTimeCurrentTime atTimeCurrentTime = (AtTimeCurrentTime)theEObject;
         T result = caseAtTimeCurrentTime(atTimeCurrentTime);
         if (result == null) result = caseAtExpr(atTimeCurrentTime);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.IN_TIME_PLUS_OR_MIN:
-      {
-        InTimePlusOrMin inTimePlusOrMin = (InTimePlusOrMin)theEObject;
-        T result = caseInTimePlusOrMin(inTimePlusOrMin);
-        if (result == null) result = caseInExpr(inTimePlusOrMin);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.IN_TIME_INT_CONSTANT:
-      {
-        InTimeIntConstant inTimeIntConstant = (InTimeIntConstant)theEObject;
-        T result = caseInTimeIntConstant(inTimeIntConstant);
-        if (result == null) result = caseInExpr(inTimeIntConstant);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EcePackage.IN_TIME_CURRENT_TIME:
-      {
-        InTimeCurrentTime inTimeCurrentTime = (InTimeCurrentTime)theEObject;
-        T result = caseInTimeCurrentTime(inTimeCurrentTime);
-        if (result == null) result = caseInExpr(inTimeCurrentTime);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -655,22 +648,6 @@ public class EceSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>In Expr</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>In Expr</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInExpr(InExpr object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Allen Operator</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -879,6 +856,22 @@ public class EceSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Current Time</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Current Time</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCurrentTime(CurrentTime object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>At Time Plus Or Min</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -922,54 +915,6 @@ public class EceSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAtTimeCurrentTime(AtTimeCurrentTime object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>In Time Plus Or Min</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>In Time Plus Or Min</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInTimePlusOrMin(InTimePlusOrMin object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>In Time Int Constant</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>In Time Int Constant</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInTimeIntConstant(InTimeIntConstant object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>In Time Current Time</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>In Time Current Time</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInTimeCurrentTime(InTimeCurrentTime object)
   {
     return null;
   }

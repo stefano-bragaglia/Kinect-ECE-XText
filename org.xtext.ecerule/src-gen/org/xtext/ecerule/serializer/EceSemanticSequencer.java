@@ -21,6 +21,7 @@ import org.xtext.ecerule.ece.AtTimePlusOrMin;
 import org.xtext.ecerule.ece.BoolConstant;
 import org.xtext.ecerule.ece.Comparison;
 import org.xtext.ecerule.ece.ContextsList;
+import org.xtext.ecerule.ece.CurrentTime;
 import org.xtext.ecerule.ece.EcContext;
 import org.xtext.ecerule.ece.EcContextsList;
 import org.xtext.ecerule.ece.EceModel;
@@ -33,10 +34,6 @@ import org.xtext.ecerule.ece.ExpContextsList;
 import org.xtext.ecerule.ece.Expression;
 import org.xtext.ecerule.ece.FloatConstant;
 import org.xtext.ecerule.ece.Fluent;
-import org.xtext.ecerule.ece.InRule;
-import org.xtext.ecerule.ece.InTimeCurrentTime;
-import org.xtext.ecerule.ece.InTimeIntConstant;
-import org.xtext.ecerule.ece.InTimePlusOrMin;
 import org.xtext.ecerule.ece.IntConstant;
 import org.xtext.ecerule.ece.Minus;
 import org.xtext.ecerule.ece.MulOrDiv;
@@ -154,6 +151,27 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case EcePackage.CURRENT_TIME:
+				if(context == grammarAccess.getAndRule() ||
+				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
+				   context == grammarAccess.getAtomicRule() ||
+				   context == grammarAccess.getComparisonRule() ||
+				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0() ||
+				   context == grammarAccess.getEqualityRule() ||
+				   context == grammarAccess.getEqualityAccess().getEqualityLeftAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMulOrDivRule() ||
+				   context == grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0() ||
+				   context == grammarAccess.getOrRule() ||
+				   context == grammarAccess.getOrAccess().getOrLeftAction_1_0() ||
+				   context == grammarAccess.getPlusOrMinusRule() ||
+				   context == grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0() ||
+				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getPrimaryRule()) {
+					sequence_Atomic(context, (CurrentTime) semanticObject); 
+					return; 
+				}
+				else break;
 			case EcePackage.EC_CONTEXT:
 				if(context == grammarAccess.getEcContextRule()) {
 					sequence_EcContext(context, (EcContext) semanticObject); 
@@ -222,6 +240,10 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					sequence_ConditionRule(context, (Expression) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getInRuleRule()) {
+					sequence_InRule(context, (Expression) semanticObject); 
+					return; 
+				}
 				else if(context == grammarAccess.getToRuleRule()) {
 					sequence_ToRule(context, (Expression) semanticObject); 
 					return; 
@@ -252,41 +274,6 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getFluentRule() ||
 				   context == grammarAccess.getReferenceTypeRule()) {
 					sequence_Fluent(context, (Fluent) semanticObject); 
-					return; 
-				}
-				else break;
-			case EcePackage.IN_RULE:
-				if(context == grammarAccess.getInRuleRule()) {
-					sequence_InRule(context, (InRule) semanticObject); 
-					return; 
-				}
-				else break;
-			case EcePackage.IN_TIME_CURRENT_TIME:
-				if(context == grammarAccess.getInExprRule() ||
-				   context == grammarAccess.getInTimeAtomicRule() ||
-				   context == grammarAccess.getInTimeExpressionRule() ||
-				   context == grammarAccess.getInTimeExpressionAccess().getInTimePlusOrMinLeftAction_1_0() ||
-				   context == grammarAccess.getInTimePrimaryRule()) {
-					sequence_InTimeAtomic(context, (InTimeCurrentTime) semanticObject); 
-					return; 
-				}
-				else break;
-			case EcePackage.IN_TIME_INT_CONSTANT:
-				if(context == grammarAccess.getInExprRule() ||
-				   context == grammarAccess.getInTimeAtomicRule() ||
-				   context == grammarAccess.getInTimeExpressionRule() ||
-				   context == grammarAccess.getInTimeExpressionAccess().getInTimePlusOrMinLeftAction_1_0() ||
-				   context == grammarAccess.getInTimePrimaryRule()) {
-					sequence_InTimeAtomic(context, (InTimeIntConstant) semanticObject); 
-					return; 
-				}
-				else break;
-			case EcePackage.IN_TIME_PLUS_OR_MIN:
-				if(context == grammarAccess.getInExprRule() ||
-				   context == grammarAccess.getInTimeExpressionRule() ||
-				   context == grammarAccess.getInTimeExpressionAccess().getInTimePlusOrMinLeftAction_1_0() ||
-				   context == grammarAccess.getInTimePrimaryRule()) {
-					sequence_InTimeExpression(context, (InTimePlusOrMin) semanticObject); 
 					return; 
 				}
 				else break;
@@ -444,14 +431,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         value='before' | 
-	 *         value='meets' | 
-	 *         value='overlaps' | 
-	 *         value='starts' | 
-	 *         value='finishes' | 
-	 *         value='during'
-	 *     )
+	 *     (value='before' | value='after' | value='in')
 	 */
 	protected void sequence_AllenOp(EObject context, AllenOperator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -513,6 +493,15 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (value='true' | value='false')
 	 */
 	protected void sequence_Atomic(EObject context, BoolConstant semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     value='now'
+	 */
+	protected void sequence_Atomic(EObject context, CurrentTime semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -634,7 +623,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (finalCondition=ConditionRule (allenOp=AllenOp time=AtTimePrimary)? initialCondition=ConditionRule?)
+	 *     (finalCondition=ConditionRule (allenOp=AllenOp time=PlusOrMinus)? initialCondition=ConditionRule?)
 	 */
 	protected void sequence_ExpContext(EObject context, ExpContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -661,57 +650,9 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     time=INT
+	 *     expression=PlusOrMinus
 	 */
-	protected void sequence_InRule(EObject context, InRule semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.IN_RULE__TIME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.IN_RULE__TIME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInRuleAccess().getTimeINTTerminalRuleCall_0(), semanticObject.getTime());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     inTimeValue='now'
-	 */
-	protected void sequence_InTimeAtomic(EObject context, InTimeCurrentTime semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.IN_TIME_CURRENT_TIME__IN_TIME_VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.IN_TIME_CURRENT_TIME__IN_TIME_VALUE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInTimeAtomicAccess().getInTimeValueNowKeyword_1_1_0(), semanticObject.getInTimeValue());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     value=INT
-	 */
-	protected void sequence_InTimeAtomic(EObject context, InTimeIntConstant semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.IN_TIME_INT_CONSTANT__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.IN_TIME_INT_CONSTANT__VALUE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInTimeAtomicAccess().getValueINTTerminalRuleCall_0_1_0(), semanticObject.getValue());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (left=InTimeExpression_InTimePlusOrMin_1_0 (op='-' | op='+') right=InTimePrimary)
-	 */
-	protected void sequence_InTimeExpression(EObject context, InTimePlusOrMin semanticObject) {
+	protected void sequence_InRule(EObject context, Expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
