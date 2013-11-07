@@ -3,6 +3,12 @@
  */
 package org.xtext.ecerule.validation;
 
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.xtext.validation.Check;
+import org.xtext.ecerule.ece.EcePackage;
+import org.xtext.ecerule.ece.Event;
+import org.xtext.ecerule.ece.EventFeature;
+import org.xtext.ecerule.ece.Fluent;
 import org.xtext.ecerule.validation.AbstractEceValidator;
 
 /**
@@ -12,4 +18,36 @@ import org.xtext.ecerule.validation.AbstractEceValidator;
  */
 @SuppressWarnings("all")
 public class EceValidator extends AbstractEceValidator {
+  @Check
+  public void checkEventNameStartsWithCapital(final Event event) {
+    String _eventName = event.getEventName();
+    char _charAt = _eventName.charAt(0);
+    boolean _isLowerCase = Character.isLowerCase(_charAt);
+    if (_isLowerCase) {
+      EAttribute _event_EventName = EcePackage.eINSTANCE.getEvent_EventName();
+      this.warning("Event name should start with a capital", _event_EventName);
+    }
+  }
+  
+  @Check
+  public void checkEventFeatureStartsWithLowercase(final EventFeature evFeat) {
+    String _name = evFeat.getName();
+    char _charAt = _name.charAt(0);
+    boolean _isUpperCase = Character.isUpperCase(_charAt);
+    if (_isUpperCase) {
+      EAttribute _referenceType_Name = EcePackage.eINSTANCE.getReferenceType_Name();
+      this.warning("EventFeature name should start with a lowercase", _referenceType_Name);
+    }
+  }
+  
+  @Check
+  public void checkFluentNameStartsWithCapital(final Fluent fluent) {
+    String _name = fluent.getName();
+    char _charAt = _name.charAt(0);
+    boolean _isLowerCase = Character.isLowerCase(_charAt);
+    if (_isLowerCase) {
+      EAttribute _referenceType_Name = EcePackage.eINSTANCE.getReferenceType_Name();
+      this.warning("Fluent name should start with a capital", _referenceType_Name);
+    }
+  }
 }

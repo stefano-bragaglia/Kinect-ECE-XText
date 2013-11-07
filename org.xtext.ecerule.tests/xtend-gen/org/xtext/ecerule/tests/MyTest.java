@@ -31,7 +31,7 @@ public class MyTest {
   private CompilationTestHelper _compilationTestHelper;
   
   @Test
-  public void testParsing() {
+  public void testErrorParsing() {
     try {
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("on BilanciaMisuraEasy(pesata) set peso to pesata if pesata <=100, set peso to 88888 if pesata >100, expect peso == 88888 before 3600 if pesata>100;");

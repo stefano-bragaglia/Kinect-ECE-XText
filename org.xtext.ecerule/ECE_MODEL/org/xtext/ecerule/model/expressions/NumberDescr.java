@@ -112,5 +112,11 @@ public class NumberDescr implements ExpressionInterface {
 		assert invariant() : "Illegal state in Number,validate(String[])";
 		return true;
 	}
+	
+	
+	//per l'espressione "number" il risultato della validazione è il numero stesso 
+	public double validate(){
+		return this.getValue();
+	}
 
 }

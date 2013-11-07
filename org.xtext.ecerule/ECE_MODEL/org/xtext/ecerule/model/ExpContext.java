@@ -6,6 +6,18 @@ public class ExpContext implements ExpContextInterface {
 	private ConditionInterface initialCondition;
 	private TimeInterface time;
 
+	public ConditionInterface getFinalCondition() {
+		return finalCondition;
+	}
+
+	public ConditionInterface getInitialCondition() {
+		return initialCondition;
+	}
+
+	public TimeInterface getTime() {
+		return time;
+	}
+
 	@Override
 	public void setFinalCondition(ConditionInterface finalCondition) {
 		this.finalCondition = finalCondition;

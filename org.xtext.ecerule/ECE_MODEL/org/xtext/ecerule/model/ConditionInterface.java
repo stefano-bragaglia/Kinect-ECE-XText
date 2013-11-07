@@ -12,5 +12,6 @@ public interface ConditionInterface {
 	 * @return
 	 */
 	public boolean validate(String[] parameters);
+	public boolean validate();
 
 }

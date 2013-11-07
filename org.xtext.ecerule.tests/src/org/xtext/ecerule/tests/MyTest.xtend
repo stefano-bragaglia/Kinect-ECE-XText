@@ -10,6 +10,7 @@ import org.junit.runner.RunWith
 import org.xtext.ecerule.EceInjectorProvider
 import org.xtext.ecerule.ece.EceModel
 import org.eclipse.xtext.xbase.compiler.CompilationTestHelper
+import org.xtext.ecerule.ece.Event
 
 //import  org.eclipse.xtext.xbase.compiler.CompilationTestHelper
 
@@ -25,11 +26,12 @@ class MyTest {
 	@Inject extension CompilationTestHelper
 
 	@Test
-	def void testParsing() {
+	def void testErrorParsing() {
 		'''
 		on BilanciaMisuraEasy(pesata) set peso to pesata if pesata <=100, set peso to 88888 if pesata >100, expect peso == 88888 before 3600 if pesata>100;
 		'''.parse.assertNoErrors
 	}
+	
 
 
 	@Test def void testGeneratedCode() {
