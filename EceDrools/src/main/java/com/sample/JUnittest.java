@@ -111,7 +111,7 @@ public class JUnittest {
 	
 	@SuppressWarnings("restriction")
 	@Test
-	public void testMult() { //divisione
+	public void testMult() { 
 		ExpressionInterface exprContainer = new MultDescr(new NumberDescr(4), new NumberDescr(3));
         double result = exprContainer.validate();
         assertEquals(12, result, 0);
