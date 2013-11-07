@@ -1,0 +1,24 @@
+package com.sample
+ 
+import org.xtext.ecerule.model.*;
+ 
+ 
+rule "Success"
+	when
+		$stm: Statement()
+		$expc: ExpContext() from $stm.expContextList
+		ConditionInterface(this.validate()==true) from $exp.finalCondition
+	then
+		//$stm.setSuccess();
+		
+end
+
+rule "Failure"
+	when
+		$stm: Statement()
+		$expc: ExpContext() from $stm.expContextList
+		ConditionInterface(this.validate()==false) from $exp.finalCondition
+	then
+		//$stm.setFailure();
+end
+	 
