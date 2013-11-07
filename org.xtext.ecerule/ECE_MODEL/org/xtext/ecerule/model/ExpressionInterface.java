@@ -7,5 +7,6 @@ public interface ExpressionInterface {
 	 * @return
 	 */
 	public boolean validate(String[] parameters);
+	public double validate();
 
 }

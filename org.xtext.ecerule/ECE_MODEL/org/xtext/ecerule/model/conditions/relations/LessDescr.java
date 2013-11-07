@@ -22,7 +22,7 @@ public class LessDescr extends RelationDescr implements ConditionInterface {
 		super(exp1, exp2);
 	}
 	
-public boolean validate(){
+	public boolean validate(){
 		
 		NumberDescr nd1 = (NumberDescr)super.getExp1();
 		NumberDescr nd2 = (NumberDescr)super.getExp2();

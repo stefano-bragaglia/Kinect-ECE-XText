@@ -1887,7 +1887,7 @@ public class EceGenerator implements IGenerator {
             _and = (_contains && _contains_1);
           }
           if (_and) {
-            _builder.append("new TimesDescr( ");
+            _builder.append("new MultDescr( ");
             Expression _left_1 = conditionExpr.getLeft();
             CharSequence _compileTerminalLeft = this.compileTerminalLeft(((ExpressionImpl) _left_1), statement);
             _builder.append(_compileTerminalLeft, "");
@@ -1904,7 +1904,7 @@ public class EceGenerator implements IGenerator {
               String _name_2 = _eClass_2.getName();
               boolean _contains_2 = _name_2.contains("Constant");
               if (_contains_2) {
-                _builder.append("new TimesDescr(");
+                _builder.append("new MultDescr(");
                 Expression _left_3 = conditionExpr.getLeft();
                 CharSequence _compileTerminalLeft_1 = this.compileTerminalLeft(((ExpressionImpl) _left_3), statement);
                 _builder.append(_compileTerminalLeft_1, "");
@@ -1923,7 +1923,7 @@ public class EceGenerator implements IGenerator {
               boolean _contains_3 = _name_3.contains("Constant");
               boolean _not = (!_contains_3);
               if (_not) {
-                _builder.append("new TimesDescr(");
+                _builder.append("new MultDescr(");
                 Expression _left_5 = conditionExpr.getLeft();
                 Object _compileRecExpr_1 = this.compileRecExpr(((ExpressionImpl) _left_5), statement);
                 _builder.append(_compileRecExpr_1, "");

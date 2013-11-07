@@ -537,15 +537,15 @@ class EceGenerator implements IGenerator {
 		'''
 			«IF conditionExpr.op.equals("*")»
 				«IF conditionExpr.left.eClass.name.contains("Constant") && conditionExpr.right.eClass.name.contains("Constant")»
-					new TimesDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+					new MultDescr( «compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
 					»«compileTerminalRight(conditionExpr.right as ExpressionImpl, statement)»)
 				«ELSE»
 					«IF conditionExpr.left.eClass.name.contains("Constant")»
-						new TimesDescr(«compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
+						new MultDescr(«compileTerminalLeft(conditionExpr.left as ExpressionImpl, statement)»,«
 						»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)
 					«ENDIF»
 					«IF !conditionExpr.left.eClass.name.contains("Constant")»
-						new TimesDescr(«compileRecExpr(conditionExpr.left as ExpressionImpl, statement)»,«
+						new MultDescr(«compileRecExpr(conditionExpr.left as ExpressionImpl, statement)»,«
 						»«compileRecExpr(conditionExpr.right as ExpressionImpl, statement)»)«
 					»«ENDIF»
 				«ENDIF»
