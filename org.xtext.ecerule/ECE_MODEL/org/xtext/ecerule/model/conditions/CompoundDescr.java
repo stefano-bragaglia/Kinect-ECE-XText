@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.xtext.ecerule.model.ConditionInterface;
+import org.xtext.ecerule.model.ExpressionInterface;
 
 /**
  * TODO forse conviene cambiare il costruttore per accettare ConditionDescr[]
@@ -18,80 +19,68 @@ public abstract class CompoundDescr implements ConditionInterface {
 	/**
 	 * 
 	 */
-	private List<ConditionInterface> conditions;
+	private ConditionInterface cond1;
 
 	/**
 	 * 
 	 */
-	public CompoundDescr() {
-		this.conditions = new ArrayList<>();
-		assert invariant() : "Illegal state in CompoundDescr()";
+	private ConditionInterface cond2;
+
+	/**
+	 * 
+	 */
+	
+	
+	public CompoundDescr(ConditionInterface cond1, ConditionInterface cond2) {
+		if (cond1 == null)
+			throw new IllegalArgumentException(
+					"Illegal 'cond1' exception in CompoundDescr(ConditionInterface, ConditionInterface): "
+							+ cond1);
+		if (cond2 == null)
+			throw new IllegalArgumentException(
+					"Illegal 'cond2' exception in CompoundDescr(ConditionInterface, ConditionInterface): "
+							+ cond2);
+		this.cond1 = cond1;
+		this.cond2 = cond2;
+		assert invariant() : "Illegal state in CompoundDescr(ConditionInterface, ConditionInterface)";
 	}
 
 	/**
 	 * @return
 	 */
 	private boolean invariant() {
-		return (conditions != null);
+		return (cond1 != null && cond2 != null);
 	}
 
-	/**
-	 * 
-	 */
-	public void clear() {
-		conditions.clear();
-		assert invariant() : "Illegal state in CompoundDescr.clear()";
+	
+
+	
+	public ConditionInterface getCond1() {
+		return cond1;
 	}
 
-	/**
-	 * @param condition
-	 */
-	public void add(ConditionInterface condition) {
-		if (condition == null)
-			throw new IllegalArgumentException(
-					"Illegal 'condition' argument in CompoundDescr.add(ConditionDescr): "
-							+ condition);
-		conditions.add(condition);
-		assert invariant() : "Illegal state in CompoundDescr.add(ConditionDescr)";
+	public void setCond1(ConditionInterface cond1) {
+		this.cond1 = cond1;
 	}
 
-	/**
-	 * @param condition
-	 */
-	public void remove(ConditionInterface condition) {
-		if (condition == null)
-			throw new IllegalArgumentException(
-					"Illegal 'condition' argument in CompoundDescr.remove(ConditionDescr): "
-							+ condition);
-		conditions.remove(condition);
-		assert invariant() : "Illegal state in CompoundDescr.remove(ConditionDescr)";
+	public ConditionInterface getCond2() {
+		return cond2;
 	}
 
-	/**
-	 * @return
-	 */
-	public int size() {
-		int result = conditions.size();
-		assert invariant() : "Illegal state in CompoundDescr.size()";
-		return result;
+	public void setCond2(ConditionInterface cond2) {
+		this.cond2 = cond2;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see it.bragaglia.freckles.ConditionDescr#validate(java.lang.String[])
-	 */
+	
 	@Override
 	public boolean validate(String[] parameters) {
-		if (parameters != null)
+		if (parameters == null)
 			throw new IllegalArgumentException(
 					"Illegal 'parameters' argument in CompoundDescr.validate(String[]): "
 							+ parameters);
-		boolean result = false;
-		for (int i = 0; !result && i < conditions.size(); i++)
-			result = conditions.get(i).validate(parameters);
+		boolean result = cond1.validate(parameters) && cond2.validate(parameters);
 		assert invariant() : "Illegal state in CompoundDescr.validate(String[])";
-		return false;
+		return result;
 	}
 
 }
