@@ -59,4 +59,11 @@ public class NotDescr implements ConditionInterface {
 		return result;
 	}
 
+	@Override
+	public boolean validate() {
+		ConditionInterface cond = this.getCondition();
+		boolean value= cond.validate();
+		return !value;
+	}
+
 }
