@@ -93,5 +93,44 @@ public class testCompoundsJunit {
 		result = condContainer.validate();
         assertEquals(result, false);
 	}
+	
+	@SuppressWarnings("restriction")
+	@Test
+	public void testMixed() {	
+		//true AND true OR true --> true
+		ConditionInterface condContainer = new OrDescr(new AndDescr(new LessDescr( new NumberDescr(1),new NumberDescr(3)),new LessDescr( new NumberDescr(3),new NumberDescr(7))),new LessDescr( new NumberDescr(7),new NumberDescr(9)));
+		boolean result = condContainer.validate();
+        assertEquals(result, true);
+        
+        //false AND true OR true --> true
+        condContainer = new OrDescr(new AndDescr(new LessDescr( new NumberDescr(10),new NumberDescr(3)),new LessDescr( new NumberDescr(3),new NumberDescr(7))),new LessDescr( new NumberDescr(7),new NumberDescr(9)));
+		result = condContainer.validate();
+        assertEquals(result, true);
+        
+        //false AND false OR true --> true
+        condContainer = new OrDescr(new AndDescr(new LessDescr( new NumberDescr(10),new NumberDescr(3)),new LessDescr( new NumberDescr(30),new NumberDescr(7))),new LessDescr( new NumberDescr(7),new NumberDescr(9)));
+		result = condContainer.validate();
+        assertEquals(result, true);
+        
+        //false AND false OR false --> false
+        condContainer = new OrDescr(new AndDescr(new LessDescr( new NumberDescr(10),new NumberDescr(3)),new LessDescr( new NumberDescr(30),new NumberDescr(7))),new LessDescr( new NumberDescr(70),new NumberDescr(9)));
+		result = condContainer.validate();
+        assertEquals(result, false);
+        
+        //true OR true AND true --> true
+        condContainer = new OrDescr(new LessDescr( new NumberDescr(1),new NumberDescr(3)),new AndDescr(new LessDescr( new NumberDescr(3),new NumberDescr(7)),new LessDescr( new NumberDescr(7),new NumberDescr(9))));
+        result = condContainer.validate();
+        assertEquals(result, true);
+        
+        //true OR true AND false --> true
+        condContainer = new OrDescr(new LessDescr( new NumberDescr(1),new NumberDescr(3)),new AndDescr(new LessDescr( new NumberDescr(3),new NumberDescr(7)),new LessDescr( new NumberDescr(70),new NumberDescr(9))));
+        result = condContainer.validate();
+        assertEquals(result, true);
+        
+        //false OR true AND false --> false
+        condContainer = new OrDescr(new LessDescr( new NumberDescr(10),new NumberDescr(3)),new AndDescr(new LessDescr( new NumberDescr(3),new NumberDescr(7)),new LessDescr( new NumberDescr(70),new NumberDescr(9))));
+        result = condContainer.validate();
+        assertEquals(result, false);
+	}
 
 }
