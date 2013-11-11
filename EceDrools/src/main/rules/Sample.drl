@@ -7,8 +7,9 @@ rule "Success"
 	when
 		$stm: Statement()
 		$expc: ExpContext() from $stm.expContextList
-		ConditionInterface(this.validate()==true) from $exp.finalCondition
+		ConditionInterface(this.validate()==true) from $expc.finalCondition
 	then
+		System.out.println("Success");
 		//$stm.setSuccess();
 		
 end
@@ -17,8 +18,9 @@ rule "Failure"
 	when
 		$stm: Statement()
 		$expc: ExpContext() from $stm.expContextList
-		ConditionInterface(this.validate()==false) from $exp.finalCondition
+		ConditionInterface(this.validate()==false) from $expc.finalCondition
 	then
+		System.out.println("Failure");
 		//$stm.setFailure();
 end
 	 

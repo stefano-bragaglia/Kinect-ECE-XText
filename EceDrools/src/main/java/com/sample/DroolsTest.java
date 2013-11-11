@@ -31,19 +31,19 @@ public class DroolsTest {
             ConditionInterface condContainer = new MoreEqualsDescr(new NumberDescr(7), new NumberDescr(3));
             
             ExpContext expCtx = new ExpContext();
-            expCtx.setInitialCondition(condContainer);
+            expCtx.setFinalCondition(condContainer);
             Statement stm = new Statement();
             stm.addExpContext(expCtx);
             
 //          ************************************************************
 //			test validate 
-            boolean result = condContainer.validate();
-            System.out.println("Il risultato di 7 >= 2 ?  e': "+result);
+//            boolean result = condContainer.validate();
+//            System.out.println("Il risultato di 7 >= 2 ?  e': "+result);
             
 //          ************************************************************
             
             ksession.insert(stm);
-//          ksession.fireAllRules();
+            ksession.fireAllRules();
             logger.close();
         } catch (Throwable t) {
             t.printStackTrace();
