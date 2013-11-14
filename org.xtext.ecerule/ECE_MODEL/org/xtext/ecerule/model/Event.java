@@ -19,4 +19,16 @@ public class Event implements EventInterface {
 
 	}
 
+	public List<String> getEventFeatureList() {
+		return eventFeatureList;
+	}
+
+	public void setEventFeatureList(List<String> eventFeatureList) {
+		this.eventFeatureList = eventFeatureList;
+	}
+
+	public String getEventName() {
+		return eventName;
+	}
+
 }

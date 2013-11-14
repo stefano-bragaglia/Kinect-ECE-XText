@@ -1,0 +1,31 @@
+//created on: 14-nov-2013
+package com.rules.generationrules
+
+//list any import classes here.
+
+
+
+//declare any global variables here
+
+
+
+
+rule "Success Rule"
+
+    when
+    	$clk:Clock($clkt:clkValue)
+        $exp: Expectation(this.getFinalCondition()==true, this.getExpTimeFC()==$clkt)
+    then
+        $exp.setSuccess();
+
+end
+
+rule "failure Rule"
+
+    when
+    	$clk:Clock($clkt:clkValue)
+        $exp: Expectation(this.getFinalCondition()==false, this.getExpTimeFC()==$clkt)
+    then
+        $exp.setFailure();
+
+end

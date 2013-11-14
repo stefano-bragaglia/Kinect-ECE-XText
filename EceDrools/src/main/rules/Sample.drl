@@ -1,6 +1,7 @@
 package com.sample
  
 import org.xtext.ecerule.model.*;
+import org.xtext.ecerule.plus.*;
  
  
 rule "Success"
@@ -23,4 +24,21 @@ rule "Failure"
 		System.out.println("Failure");
 		//$stm.setFailure();
 end
+
+
+
+/*
+rule "Success_eventNow"
+	when
+		$evn: EventNow()
+		$stm: Statement(this.getEvent().getEventName==$evn.getName())
+		$expc: ExpContext() from $stm.expContextList
+		ConditionInterface(this.validate()==true) from $expc.finalCondition
+	then
+		System.out.println("Success");
+		//$stm.setSuccess();
+		
+end
+*/
+
 	 
