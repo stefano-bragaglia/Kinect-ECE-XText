@@ -147,16 +147,15 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cEcContextsListAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cEcContextsListEcContextsListParserRuleCall_0_0 = (RuleCall)cEcContextsListAssignment_0.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cExpContextsListAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cExpContextsListExpContextsListParserRuleCall_1_1_0 = (RuleCall)cExpContextsListAssignment_1_1.eContents().get(0);
+		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cExpContextsListAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cExpContextsListExpContextsListParserRuleCall_2_0 = (RuleCall)cExpContextsListAssignment_2.eContents().get(0);
 		
 		//ContextsList:
-		//	ecContextsList=EcContextsList? ("," expContextsList=ExpContextsList)?;
+		//	ecContextsList=EcContextsList? "," expContextsList=ExpContextsList?;
 		public ParserRule getRule() { return rule; }
 
-		//ecContextsList=EcContextsList? ("," expContextsList=ExpContextsList)?
+		//ecContextsList=EcContextsList? "," expContextsList=ExpContextsList?
 		public Group getGroup() { return cGroup; }
 
 		//ecContextsList=EcContextsList?
@@ -165,17 +164,14 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		//EcContextsList
 		public RuleCall getEcContextsListEcContextsListParserRuleCall_0_0() { return cEcContextsListEcContextsListParserRuleCall_0_0; }
 
-		//("," expContextsList=ExpContextsList)?
-		public Group getGroup_1() { return cGroup_1; }
-
 		//","
-		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
 
-		//expContextsList=ExpContextsList
-		public Assignment getExpContextsListAssignment_1_1() { return cExpContextsListAssignment_1_1; }
+		//expContextsList=ExpContextsList?
+		public Assignment getExpContextsListAssignment_2() { return cExpContextsListAssignment_2; }
 
 		//ExpContextsList
-		public RuleCall getExpContextsListExpContextsListParserRuleCall_1_1_0() { return cExpContextsListExpContextsListParserRuleCall_1_1_0; }
+		public RuleCall getExpContextsListExpContextsListParserRuleCall_2_0() { return cExpContextsListExpContextsListParserRuleCall_2_0; }
 	}
 
 	public class EcContextsListElements extends AbstractParserRuleElementFinder {
@@ -256,17 +252,13 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSetKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cFluentAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cFluentFluentParserRuleCall_1_0 = (RuleCall)cFluentAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cFluentAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cFluentFluentParserRuleCall_2_1_0 = (RuleCall)cFluentAssignment_2_1.eContents().get(0);
 		
 		//// EC CONTEXT ******************************************************************
-		//EcContext:
-		//	"set" fluent+=Fluent ("," fluent+=Fluent)*;
+		/// *(',' fluent+=Fluent)** / EcContext:
+		//	"set" fluent+=Fluent;
 		public ParserRule getRule() { return rule; }
 
-		//"set" fluent+=Fluent ("," fluent+=Fluent)*
+		//"set" fluent+=Fluent
 		public Group getGroup() { return cGroup; }
 
 		//"set"
@@ -277,18 +269,6 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Fluent
 		public RuleCall getFluentFluentParserRuleCall_1_0() { return cFluentFluentParserRuleCall_1_0; }
-
-		//("," fluent+=Fluent)*
-		public Group getGroup_2() { return cGroup_2; }
-
-		//","
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
-
-		//fluent+=Fluent
-		public Assignment getFluentAssignment_2_1() { return cFluentAssignment_2_1; }
-
-		//Fluent
-		public RuleCall getFluentFluentParserRuleCall_2_1_0() { return cFluentFluentParserRuleCall_2_1_0; }
 	}
 
 	public class ExpContextElements extends AbstractParserRuleElementFinder {
@@ -1258,7 +1238,7 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ContextsList:
-	//	ecContextsList=EcContextsList? ("," expContextsList=ExpContextsList)?;
+	//	ecContextsList=EcContextsList? "," expContextsList=ExpContextsList?;
 	public ContextsListElements getContextsListAccess() {
 		return (pContextsList != null) ? pContextsList : (pContextsList = new ContextsListElements());
 	}
@@ -1288,8 +1268,8 @@ public class EceGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// EC CONTEXT ******************************************************************
-	//EcContext:
-	//	"set" fluent+=Fluent ("," fluent+=Fluent)*;
+	/// *(',' fluent+=Fluent)** / EcContext:
+	//	"set" fluent+=Fluent;
 	public EcContextElements getEcContextAccess() {
 		return (pEcContext != null) ? pEcContext : (pEcContext = new EcContextElements());
 	}

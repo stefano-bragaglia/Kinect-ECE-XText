@@ -2023,6 +2023,8 @@ public class EceGenerator implements IGenerator {
     _builder.append(_compileRecExpr, "");
     _builder.append(");");
     _builder.newLineIfNotEmpty();
+    _builder.append("expContext.setTime(time);");
+    _builder.newLine();
     _builder.newLine();
     return _builder;
   }

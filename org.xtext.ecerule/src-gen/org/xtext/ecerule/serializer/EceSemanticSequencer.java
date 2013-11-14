@@ -562,7 +562,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (fluent+=Fluent fluent+=Fluent*)
+	 *     fluent+=Fluent
 	 */
 	protected void sequence_EcContext(EObject context, EcContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

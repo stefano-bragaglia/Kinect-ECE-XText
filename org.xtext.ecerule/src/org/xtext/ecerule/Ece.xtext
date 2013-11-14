@@ -17,7 +17,7 @@ EventFeature:
 	name=ID;
 
 ContextsList:
-	(ecContextsList=EcContextsList)? (',' expContextsList=ExpContextsList)?;
+	(ecContextsList=EcContextsList)? ',' (expContextsList=ExpContextsList)?;
 
 EcContextsList:
 	ecContexts+=EcContext (',' ecContexts+=EcContext)*;
@@ -27,7 +27,7 @@ ExpContextsList:
 
 // EC CONTEXT ******************************************************************
  EcContext:
-	'set' fluent+=Fluent (',' fluent+=Fluent)*;
+	'set' fluent+=Fluent /*(',' fluent+=Fluent)**/;
 
 // EXP CONTEXT *****************************************************************
  ExpContext:

@@ -580,6 +580,7 @@ class EceGenerator implements IGenerator {
 		time = new Time();
 		time.setllenOp(«op.value»);
 		time.setTimeValue(«compileRecExpr(expr as ExpressionImpl, statement)»);
+		expContext.setTime(time);
 		
 		'''
 	}

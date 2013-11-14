@@ -325,14 +325,14 @@ ruleContextsList returns [EObject current=null]
 	    }
 
 )
-)?(	otherlv_1=',' 
+)?	otherlv_1=',' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getContextsListAccess().getCommaKeyword_1_0());
+    	newLeafNode(otherlv_1, grammarAccess.getContextsListAccess().getCommaKeyword_1());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_1_1_0()); 
+	        newCompositeNode(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_2_0()); 
 	    }
 		lv_expContextsList_2_0=ruleExpContextsList		{
 	        if ($current==null) {
@@ -347,7 +347,7 @@ ruleContextsList returns [EObject current=null]
 	    }
 
 )
-))?)
+)?)
 ;
 
 
@@ -512,29 +512,7 @@ ruleEcContext returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_2=',' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getEcContextAccess().getCommaKeyword_2_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getEcContextAccess().getFluentFluentParserRuleCall_2_1_0()); 
-	    }
-		lv_fluent_3_0=ruleFluent		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getEcContextRule());
-	        }
-       		add(
-       			$current, 
-       			"fluent",
-        		lv_fluent_3_0, 
-        		"Fluent");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))*)
+))
 ;
 
 

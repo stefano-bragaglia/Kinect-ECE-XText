@@ -1533,6 +1533,7 @@ rule__ContextsList__Group__1
     }
 :
 	rule__ContextsList__Group__1__Impl
+	rule__ContextsList__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1544,44 +1545,11 @@ rule__ContextsList__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getContextsListAccess().getGroup_1()); }
-(rule__ContextsList__Group_1__0)?
-{ after(grammarAccess.getContextsListAccess().getGroup_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
-
-rule__ContextsList__Group_1__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__ContextsList__Group_1__0__Impl
-	rule__ContextsList__Group_1__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__ContextsList__Group_1__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getContextsListAccess().getCommaKeyword_1_0()); }
+{ before(grammarAccess.getContextsListAccess().getCommaKeyword_1()); }
 
 	',' 
 
-{ after(grammarAccess.getContextsListAccess().getCommaKeyword_1_0()); }
+{ after(grammarAccess.getContextsListAccess().getCommaKeyword_1()); }
 )
 
 ;
@@ -1590,32 +1558,34 @@ finally {
 }
 
 
-rule__ContextsList__Group_1__1
+rule__ContextsList__Group__2
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__ContextsList__Group_1__1__Impl
+	rule__ContextsList__Group__2__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContextsList__Group_1__1__Impl
+rule__ContextsList__Group__2__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getContextsListAccess().getExpContextsListAssignment_1_1()); }
-(rule__ContextsList__ExpContextsListAssignment_1_1)
-{ after(grammarAccess.getContextsListAccess().getExpContextsListAssignment_1_1()); }
+{ before(grammarAccess.getContextsListAccess().getExpContextsListAssignment_2()); }
+(rule__ContextsList__ExpContextsListAssignment_2)?
+{ after(grammarAccess.getContextsListAccess().getExpContextsListAssignment_2()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
 
 
 
@@ -1907,7 +1877,6 @@ rule__EcContext__Group__1
     }
 :
 	rule__EcContext__Group__1__Impl
-	rule__EcContext__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1922,99 +1891,6 @@ rule__EcContext__Group__1__Impl
 { before(grammarAccess.getEcContextAccess().getFluentAssignment_1()); }
 (rule__EcContext__FluentAssignment_1)
 { after(grammarAccess.getEcContextAccess().getFluentAssignment_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__EcContext__Group__2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__EcContext__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__EcContext__Group__2__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getEcContextAccess().getGroup_2()); }
-(rule__EcContext__Group_2__0)*
-{ after(grammarAccess.getEcContextAccess().getGroup_2()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
-
-
-
-rule__EcContext__Group_2__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__EcContext__Group_2__0__Impl
-	rule__EcContext__Group_2__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__EcContext__Group_2__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getEcContextAccess().getCommaKeyword_2_0()); }
-
-	',' 
-
-{ after(grammarAccess.getEcContextAccess().getCommaKeyword_2_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__EcContext__Group_2__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__EcContext__Group_2__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__EcContext__Group_2__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getEcContextAccess().getFluentAssignment_2_1()); }
-(rule__EcContext__FluentAssignment_2_1)
-{ after(grammarAccess.getEcContextAccess().getFluentAssignment_2_1()); }
 )
 
 ;
@@ -4970,14 +4846,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContextsList__ExpContextsListAssignment_1_1
+rule__ContextsList__ExpContextsListAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_1_1_0()); }
-	ruleExpContextsList{ after(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_1_1_0()); }
+{ before(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_2_0()); }
+	ruleExpContextsList{ after(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_2_0()); }
 )
 
 ;
@@ -5053,21 +4929,6 @@ rule__EcContext__FluentAssignment_1
 (
 { before(grammarAccess.getEcContextAccess().getFluentFluentParserRuleCall_1_0()); }
 	ruleFluent{ after(grammarAccess.getEcContextAccess().getFluentFluentParserRuleCall_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__EcContext__FluentAssignment_2_1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getEcContextAccess().getFluentFluentParserRuleCall_2_1_0()); }
-	ruleFluent{ after(grammarAccess.getEcContextAccess().getFluentFluentParserRuleCall_2_1_0()); }
 )
 
 ;

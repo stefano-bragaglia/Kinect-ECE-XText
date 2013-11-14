@@ -54,13 +54,11 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEventAccess().getGroup_1(), "rule__Event__Group_1__0");
 					put(grammarAccess.getEventAccess().getGroup_1_2(), "rule__Event__Group_1_2__0");
 					put(grammarAccess.getContextsListAccess().getGroup(), "rule__ContextsList__Group__0");
-					put(grammarAccess.getContextsListAccess().getGroup_1(), "rule__ContextsList__Group_1__0");
 					put(grammarAccess.getEcContextsListAccess().getGroup(), "rule__EcContextsList__Group__0");
 					put(grammarAccess.getEcContextsListAccess().getGroup_1(), "rule__EcContextsList__Group_1__0");
 					put(grammarAccess.getExpContextsListAccess().getGroup(), "rule__ExpContextsList__Group__0");
 					put(grammarAccess.getExpContextsListAccess().getGroup_1(), "rule__ExpContextsList__Group_1__0");
 					put(grammarAccess.getEcContextAccess().getGroup(), "rule__EcContext__Group__0");
-					put(grammarAccess.getEcContextAccess().getGroup_2(), "rule__EcContext__Group_2__0");
 					put(grammarAccess.getExpContextAccess().getGroup(), "rule__ExpContext__Group__0");
 					put(grammarAccess.getExpContextAccess().getGroup_2(), "rule__ExpContext__Group_2__0");
 					put(grammarAccess.getExpContextAccess().getGroup_3(), "rule__ExpContext__Group_3__0");
@@ -107,13 +105,12 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEventAccess().getParamsAssignment_1_2_1(), "rule__Event__ParamsAssignment_1_2_1");
 					put(grammarAccess.getEventFeatureAccess().getNameAssignment(), "rule__EventFeature__NameAssignment");
 					put(grammarAccess.getContextsListAccess().getEcContextsListAssignment_0(), "rule__ContextsList__EcContextsListAssignment_0");
-					put(grammarAccess.getContextsListAccess().getExpContextsListAssignment_1_1(), "rule__ContextsList__ExpContextsListAssignment_1_1");
+					put(grammarAccess.getContextsListAccess().getExpContextsListAssignment_2(), "rule__ContextsList__ExpContextsListAssignment_2");
 					put(grammarAccess.getEcContextsListAccess().getEcContextsAssignment_0(), "rule__EcContextsList__EcContextsAssignment_0");
 					put(grammarAccess.getEcContextsListAccess().getEcContextsAssignment_1_1(), "rule__EcContextsList__EcContextsAssignment_1_1");
 					put(grammarAccess.getExpContextsListAccess().getExpContextsAssignment_0(), "rule__ExpContextsList__ExpContextsAssignment_0");
 					put(grammarAccess.getExpContextsListAccess().getExpContextsAssignment_1_1(), "rule__ExpContextsList__ExpContextsAssignment_1_1");
 					put(grammarAccess.getEcContextAccess().getFluentAssignment_1(), "rule__EcContext__FluentAssignment_1");
-					put(grammarAccess.getEcContextAccess().getFluentAssignment_2_1(), "rule__EcContext__FluentAssignment_2_1");
 					put(grammarAccess.getExpContextAccess().getFinalConditionAssignment_1(), "rule__ExpContext__FinalConditionAssignment_1");
 					put(grammarAccess.getExpContextAccess().getAllenOpAssignment_2_0(), "rule__ExpContext__AllenOpAssignment_2_0");
 					put(grammarAccess.getExpContextAccess().getTimeAssignment_2_1(), "rule__ExpContext__TimeAssignment_2_1");

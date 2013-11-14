@@ -34,7 +34,7 @@ public class MyTest {
   public void testErrorParsing() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("on BilanciaMisuraEasy(pesata) set peso to pesata if pesata <=100, set peso to 88888 if pesata >100, expect peso == 88888 before 3600 if pesata>100;");
+      _builder.append("on siAlza expect seduto==1 after 10;");
       _builder.newLine();
       EceModel _parse = this._parseHelper.parse(_builder);
       this._validationTestHelper.assertNoErrors(_parse);
