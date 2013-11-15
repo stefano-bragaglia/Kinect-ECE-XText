@@ -63,7 +63,7 @@ class EceGenerator implements IGenerator {
 					«««per ogni Statement»
 					«FOR stm : eceModel.statements» 
 						statement = new Statement();
-						«««»«compileEvent(stm)» 		«««gestisco l'evento
+						«««»«compileEvent(stm)» 		«««gestisco l'evento ***DA DECOMMENTARE!!!!!!!!
 						«compileContextsList(stm)»	«««gestisco i contesti
 						
 						«««aggiungo lo Statement al Model
@@ -108,9 +108,16 @@ class EceGenerator implements IGenerator {
 	def compileExpContext(ExpContext expContext, Statement statement) {
 		'''
 		expContext = new ExpContext();
+		
+		«IF expContext.initialCondition != null»
 		«compileCond(expContext.initialCondition as ExpressionImpl, statement, "Initial")»	«««(1)gestisci contizione iniziale
+		«ENDIF»
+		
 		«compileCond(expContext.finalCondition as ExpressionImpl, statement, "Final")»		«««(2)gestisci contizione finale
+		
+		«IF expContext.allenOp!=null»
 		«compileTime(expContext.allenOp as AllenOperatorImpl, expContext.time as ExpressionImpl, statement)»	«««(3)gestisci info temporale
+		«ENDIF»
 		
 		statement.addExpContext(expContext);
 		
@@ -579,8 +586,8 @@ class EceGenerator implements IGenerator {
 	def compileTime(AllenOperatorImpl op, ExpressionImpl expr, Statement statement) {
 		'''
 		time = new Time();
-		time.setllenOp(«op.value»);
-		time.setTimeValue(«compileRecExpr(expr as ExpressionImpl, statement)»);
+		time.setAllenOp("«op.value»");
+		time.setTimeValueExpr(«compileRecExpr(expr as ExpressionImpl, statement)»);
 		expContext.setTime(time);
 		
 		'''

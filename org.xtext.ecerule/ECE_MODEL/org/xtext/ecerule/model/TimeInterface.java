@@ -4,10 +4,10 @@ public interface TimeInterface {
 
 	public void setAllenOp(String allenOp);
 	
-	public void setTimeValue(int timeValue);
+	public void setTimeValueExpr(ExpressionInterface timeValueExpr);
 	
 	public String getAllenOp();
 
-	public int getTimeValue();
+	public ExpressionInterface getTimeValueExpr();
 
 }

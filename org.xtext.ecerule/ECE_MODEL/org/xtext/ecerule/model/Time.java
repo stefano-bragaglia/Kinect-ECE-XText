@@ -3,17 +3,17 @@ package org.xtext.ecerule.model;
 public class Time implements TimeInterface {
 
 	private String allenOp;
-	private int timeValue;
+	private ExpressionInterface timeValueExpr;
 
 	
 	public Time() {
 		super();
 	}
 
-	public Time(String allenOp, int timeValue) {
+	public Time(String allenOp, ExpressionInterface timeValueExpr) {
 		super();
 		this.allenOp = allenOp;
-		this.timeValue = timeValue;
+		this.timeValueExpr = timeValueExpr;
 	}
 
 	@Override
@@ -27,13 +27,18 @@ public class Time implements TimeInterface {
 	}
 
 	@Override
-	public void setTimeValue(int timeValue) {
-		this.timeValue = timeValue;
+	public void setTimeValueExpr(ExpressionInterface timeValueExpr) {
+		this.timeValueExpr = timeValueExpr;
 
 	}
 
-	public int getTimeValue() {
-		return timeValue;
+	public ExpressionInterface getTimeValueExpr() {
+		return timeValueExpr;
+	}
+	
+	public double getTimevalue(){
+		return this.timeValueExpr.validate();
+		
 	}
 
 }

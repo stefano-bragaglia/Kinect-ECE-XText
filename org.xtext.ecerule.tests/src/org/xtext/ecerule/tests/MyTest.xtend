@@ -29,6 +29,7 @@ class MyTest {
 	def void testErrorParsing() {
 		'''
 		on Start set Seduto to 0 ;
+		on SiAlza expect Seduto == 1 after 10 ;
 		'''.parse.assertNoErrors
 	}
 	
@@ -37,6 +38,7 @@ class MyTest {
 	@Test def void testGeneratedCode() {
 		'''
 		on Start set Seduto to 0 ;
+		on SiAlza expect Seduto == 1 after 10 ;
 		'''.assertCompilesTo(
 		'''
 import org.xtext.ecerule.model.*;

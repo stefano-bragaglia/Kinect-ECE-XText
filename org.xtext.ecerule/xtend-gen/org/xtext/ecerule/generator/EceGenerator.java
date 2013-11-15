@@ -183,23 +183,40 @@ public class EceGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("expContext = new ExpContext();");
     _builder.newLine();
-    ConditionRule _initialCondition = expContext.getInitialCondition();
-    CharSequence _compileCond = this.compileCond(((ExpressionImpl) _initialCondition), statement, "Initial");
-    _builder.append(_compileCond, "");
-    _builder.append("\t");
-    _builder.append("\t\t");
+    _builder.newLine();
+    {
+      ConditionRule _initialCondition = expContext.getInitialCondition();
+      boolean _notEquals = (!Objects.equal(_initialCondition, null));
+      if (_notEquals) {
+        ConditionRule _initialCondition_1 = expContext.getInitialCondition();
+        CharSequence _compileCond = this.compileCond(((ExpressionImpl) _initialCondition_1), statement, "Initial");
+        _builder.append(_compileCond, "");
+        _builder.append("\t");
+        _builder.append("\t\t");
+      }
+    }
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
     ConditionRule _finalCondition = expContext.getFinalCondition();
     CharSequence _compileCond_1 = this.compileCond(((ExpressionImpl) _finalCondition), statement, "Final");
     _builder.append(_compileCond_1, "");
     _builder.append("\t\t");
     _builder.append("\t\t");
-    AllenOp _allenOp = expContext.getAllenOp();
-    Expression _time = expContext.getTime();
-    CharSequence _compileTime = this.compileTime(((AllenOperatorImpl) _allenOp), ((ExpressionImpl) _time), statement);
-    _builder.append(_compileTime, "");
-    _builder.append("\t");
-    _builder.append("\t\t");
     _builder.newLineIfNotEmpty();
+    {
+      AllenOp _allenOp = expContext.getAllenOp();
+      boolean _notEquals_1 = (!Objects.equal(_allenOp, null));
+      if (_notEquals_1) {
+        AllenOp _allenOp_1 = expContext.getAllenOp();
+        Expression _time = expContext.getTime();
+        CharSequence _compileTime = this.compileTime(((AllenOperatorImpl) _allenOp_1), ((ExpressionImpl) _time), statement);
+        _builder.append(_compileTime, "");
+        _builder.append("\t");
+        _builder.append("\t\t");
+      }
+    }
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
     _builder.append("statement.addExpContext(expContext);");
     _builder.newLine();
     _builder.newLine();
@@ -2017,12 +2034,12 @@ public class EceGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("time = new Time();");
     _builder.newLine();
-    _builder.append("time.setllenOp(");
+    _builder.append("time.setAllenOp(\"");
     String _value = op.getValue();
     _builder.append(_value, "");
-    _builder.append(");");
+    _builder.append("\");");
     _builder.newLineIfNotEmpty();
-    _builder.append("time.setTimeValue(");
+    _builder.append("time.setTimeValueExpr(");
     CharSequence _compileRecExpr = this.compileRecExpr(((ExpressionImpl) expr), statement);
     _builder.append(_compileRecExpr, "");
     _builder.append(");");

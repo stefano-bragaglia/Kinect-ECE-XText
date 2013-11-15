@@ -34,26 +34,41 @@ public class DroolsTest {
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
             // go !
             
-            ConditionInterface condContainer = new SameDescr(new SampleDescr("Seduto"),new NumberDescr(1));
-            Time time = new Time();
-            time.setAllenOp("after");
-            time.setTimeValue(10);
-            
-            ExpContext expCtx = new ExpContext();
-            expCtx.setFinalCondition(condContainer);
-            expCtx.setTime(time);
-            
-            Event event = new Event();
-            event.setEventName("siAlza");
-            
-            Statement stm = new Statement();
-            stm.addExpContext(expCtx);
-            stm.setEvent(event);
+//            ConditionInterface condContainer = new SameDescr(new SampleDescr("Seduto"),new NumberDescr(1));
+//            Time time = new Time();
+//            time.setAllenOp("after");
+//            time.setTimeValue(10);
+//            
+//            ExpContext expCtx = new ExpContext();
+//            expCtx.setFinalCondition(condContainer);
+//            expCtx.setTime(time);
+//            
+//            Event event = new Event();
+//            event.setEventName("siAlza");
+//            
+//            Statement stm = new Statement();
+//            stm.addExpContext(expCtx);
+//            stm.setEvent(event);
             
 //          ************************************************************
-//			test validate 
-//            boolean result = condContainer.validate();
-//            System.out.println("Il risultato di 7 >= 2 ?  e': "+result);
+            Statement stm = new Statement();
+			
+			
+            ExpContext expContext = new ExpContext();
+			
+			
+            ConditionInterface condContainer = new SameDescr(new SampleDescr("Seduto")
+			,new NumberDescr(1));
+			expContext.setFinalCondition(condContainer);
+			
+			Time time = new Time();
+			time.setAllenOp("after");
+			time.setTimeValueExpr(new NumberDescr(10));
+			expContext.setTime(time);
+			
+			
+			stm.addExpContext(expContext);
+			
             
 //          ************************************************************
             

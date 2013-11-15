@@ -36,6 +36,8 @@ public class MyTest {
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("on Start set Seduto to 0 ;");
       _builder.newLine();
+      _builder.append("on SiAlza expect Seduto == 1 after 10 ;");
+      _builder.newLine();
       EceModel _parse = this._parseHelper.parse(_builder);
       this._validationTestHelper.assertNoErrors(_parse);
     } catch (Throwable _e) {
@@ -48,6 +50,8 @@ public class MyTest {
     try {
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("on Start set Seduto to 0 ;");
+      _builder.newLine();
+      _builder.append("on SiAlza expect Seduto == 1 after 10 ;");
       _builder.newLine();
       StringConcatenation _builder_1 = new StringConcatenation();
       _builder_1.append("import org.xtext.ecerule.model.*;");
