@@ -105,7 +105,7 @@ public class EceParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEventAccess().getParamsAssignment_1_2_1(), "rule__Event__ParamsAssignment_1_2_1");
 					put(grammarAccess.getEventFeatureAccess().getNameAssignment(), "rule__EventFeature__NameAssignment");
 					put(grammarAccess.getContextsListAccess().getEcContextsListAssignment_0(), "rule__ContextsList__EcContextsListAssignment_0");
-					put(grammarAccess.getContextsListAccess().getExpContextsListAssignment_2(), "rule__ContextsList__ExpContextsListAssignment_2");
+					put(grammarAccess.getContextsListAccess().getExpContextsListAssignment_1(), "rule__ContextsList__ExpContextsListAssignment_1");
 					put(grammarAccess.getEcContextsListAccess().getEcContextsAssignment_0(), "rule__EcContextsList__EcContextsAssignment_0");
 					put(grammarAccess.getEcContextsListAccess().getEcContextsAssignment_1_1(), "rule__EcContextsList__EcContextsAssignment_1_1");
 					put(grammarAccess.getExpContextsListAccess().getExpContextsAssignment_0(), "rule__ExpContextsList__ExpContextsAssignment_0");

@@ -63,7 +63,7 @@ class EceGenerator implements IGenerator {
 					«««per ogni Statement»
 					«FOR stm : eceModel.statements» 
 						statement = new Statement();
-						«compileEvent(stm)» 		«««gestisco l'evento
+						«««»«compileEvent(stm)» 		«««gestisco l'evento
 						«compileContextsList(stm)»	«««gestisco i contesti
 						
 						«««aggiungo lo Statement al Model
@@ -96,11 +96,12 @@ class EceGenerator implements IGenerator {
 «««		«FOR ecContext : stm.contextsList.ecContextsList.ecContexts»
 «««			«compileEceContext(eceContext, stm)»
 «««		«ENDFOR»
-
-		«FOR expContext : stm.contextsList.expContextsList.expContexts»
-			«compileExpContext(expContext, stm)»
-		«ENDFOR»
 		
+		«IF stm.contextsList.expContextsList !=null »
+			«FOR expContext : stm.contextsList.expContextsList.expContexts»
+				«compileExpContext(expContext, stm)»
+			«ENDFOR»
+		«ENDIF»
 		'''
 	}
 	

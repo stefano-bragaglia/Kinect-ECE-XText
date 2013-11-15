@@ -714,24 +714,23 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContextsList"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:306:1: ruleContextsList returns [EObject current=null] : ( ( (lv_ecContextsList_0_0= ruleEcContextsList ) )? otherlv_1= ',' ( (lv_expContextsList_2_0= ruleExpContextsList ) )? ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:306:1: ruleContextsList returns [EObject current=null] : ( ( (lv_ecContextsList_0_0= ruleEcContextsList ) )? ( (lv_expContextsList_1_0= ruleExpContextsList ) )? ) ;
     public final EObject ruleContextsList() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
         EObject lv_ecContextsList_0_0 = null;
 
-        EObject lv_expContextsList_2_0 = null;
+        EObject lv_expContextsList_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:309:28: ( ( ( (lv_ecContextsList_0_0= ruleEcContextsList ) )? otherlv_1= ',' ( (lv_expContextsList_2_0= ruleExpContextsList ) )? ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:310:1: ( ( (lv_ecContextsList_0_0= ruleEcContextsList ) )? otherlv_1= ',' ( (lv_expContextsList_2_0= ruleExpContextsList ) )? )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:309:28: ( ( ( (lv_ecContextsList_0_0= ruleEcContextsList ) )? ( (lv_expContextsList_1_0= ruleExpContextsList ) )? ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:310:1: ( ( (lv_ecContextsList_0_0= ruleEcContextsList ) )? ( (lv_expContextsList_1_0= ruleExpContextsList ) )? )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:310:1: ( ( (lv_ecContextsList_0_0= ruleEcContextsList ) )? otherlv_1= ',' ( (lv_expContextsList_2_0= ruleExpContextsList ) )? )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:310:2: ( (lv_ecContextsList_0_0= ruleEcContextsList ) )? otherlv_1= ',' ( (lv_expContextsList_2_0= ruleExpContextsList ) )?
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:310:1: ( ( (lv_ecContextsList_0_0= ruleEcContextsList ) )? ( (lv_expContextsList_1_0= ruleExpContextsList ) )? )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:310:2: ( (lv_ecContextsList_0_0= ruleEcContextsList ) )? ( (lv_expContextsList_1_0= ruleExpContextsList ) )?
             {
             // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:310:2: ( (lv_ecContextsList_0_0= ruleEcContextsList ) )?
             int alt4=2;
@@ -775,11 +774,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleContextsList640); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getContextsListAccess().getCommaKeyword_1());
-                
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:332:1: ( (lv_expContextsList_2_0= ruleExpContextsList ) )?
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:328:3: ( (lv_expContextsList_1_0= ruleExpContextsList ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -788,16 +783,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:333:1: (lv_expContextsList_2_0= ruleExpContextsList )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:329:1: (lv_expContextsList_1_0= ruleExpContextsList )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:333:1: (lv_expContextsList_2_0= ruleExpContextsList )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:334:3: lv_expContextsList_2_0= ruleExpContextsList
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:329:1: (lv_expContextsList_1_0= ruleExpContextsList )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:330:3: lv_expContextsList_1_0= ruleExpContextsList
                     {
                      
-                    	        newCompositeNode(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_2_0()); 
+                    	        newCompositeNode(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleExpContextsList_in_ruleContextsList661);
-                    lv_expContextsList_2_0=ruleExpContextsList();
+                    pushFollow(FOLLOW_ruleExpContextsList_in_ruleContextsList649);
+                    lv_expContextsList_1_0=ruleExpContextsList();
 
                     state._fsp--;
 
@@ -808,7 +803,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                            		set(
                            			current, 
                            			"expContextsList",
-                            		lv_expContextsList_2_0, 
+                            		lv_expContextsList_1_0, 
                             		"ExpContextsList");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -842,7 +837,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEcContextsList"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:358:1: entryRuleEcContextsList returns [EObject current=null] : iv_ruleEcContextsList= ruleEcContextsList EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:354:1: entryRuleEcContextsList returns [EObject current=null] : iv_ruleEcContextsList= ruleEcContextsList EOF ;
     public final EObject entryRuleEcContextsList() throws RecognitionException {
         EObject current = null;
 
@@ -850,17 +845,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:359:2: (iv_ruleEcContextsList= ruleEcContextsList EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:360:2: iv_ruleEcContextsList= ruleEcContextsList EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:355:2: (iv_ruleEcContextsList= ruleEcContextsList EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:356:2: iv_ruleEcContextsList= ruleEcContextsList EOF
             {
              newCompositeNode(grammarAccess.getEcContextsListRule()); 
-            pushFollow(FOLLOW_ruleEcContextsList_in_entryRuleEcContextsList698);
+            pushFollow(FOLLOW_ruleEcContextsList_in_entryRuleEcContextsList686);
             iv_ruleEcContextsList=ruleEcContextsList();
 
             state._fsp--;
 
              current =iv_ruleEcContextsList; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEcContextsList708); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEcContextsList696); 
 
             }
 
@@ -878,7 +873,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEcContextsList"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:367:1: ruleEcContextsList returns [EObject current=null] : ( ( (lv_ecContexts_0_0= ruleEcContext ) ) (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )* ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:363:1: ruleEcContextsList returns [EObject current=null] : ( ( (lv_ecContexts_0_0= ruleEcContext ) ) (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )* ) ;
     public final EObject ruleEcContextsList() throws RecognitionException {
         EObject current = null;
 
@@ -891,22 +886,22 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:370:28: ( ( ( (lv_ecContexts_0_0= ruleEcContext ) ) (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )* ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:371:1: ( ( (lv_ecContexts_0_0= ruleEcContext ) ) (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:366:28: ( ( ( (lv_ecContexts_0_0= ruleEcContext ) ) (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )* ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:367:1: ( ( (lv_ecContexts_0_0= ruleEcContext ) ) (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )* )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:371:1: ( ( (lv_ecContexts_0_0= ruleEcContext ) ) (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )* )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:371:2: ( (lv_ecContexts_0_0= ruleEcContext ) ) (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:367:1: ( ( (lv_ecContexts_0_0= ruleEcContext ) ) (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:367:2: ( (lv_ecContexts_0_0= ruleEcContext ) ) (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )*
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:371:2: ( (lv_ecContexts_0_0= ruleEcContext ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:372:1: (lv_ecContexts_0_0= ruleEcContext )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:367:2: ( (lv_ecContexts_0_0= ruleEcContext ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:368:1: (lv_ecContexts_0_0= ruleEcContext )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:372:1: (lv_ecContexts_0_0= ruleEcContext )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:373:3: lv_ecContexts_0_0= ruleEcContext
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:368:1: (lv_ecContexts_0_0= ruleEcContext )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:369:3: lv_ecContexts_0_0= ruleEcContext
             {
              
             	        newCompositeNode(grammarAccess.getEcContextsListAccess().getEcContextsEcContextParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleEcContext_in_ruleEcContextsList754);
+            pushFollow(FOLLOW_ruleEcContext_in_ruleEcContextsList742);
             lv_ecContexts_0_0=ruleEcContext();
 
             state._fsp--;
@@ -928,41 +923,35 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:389:2: (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:385:2: (otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) ) )*
             loop6:
             do {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
                 if ( (LA6_0==15) ) {
-                    int LA6_1 = input.LA(2);
-
-                    if ( (LA6_1==17) ) {
-                        alt6=1;
-                    }
-
-
+                    alt6=1;
                 }
 
 
                 switch (alt6) {
             	case 1 :
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:389:4: otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:385:4: otherlv_1= ',' ( (lv_ecContexts_2_0= ruleEcContext ) )
             	    {
-            	    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleEcContextsList767); 
+            	    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleEcContextsList755); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getEcContextsListAccess().getCommaKeyword_1_0());
             	        
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:393:1: ( (lv_ecContexts_2_0= ruleEcContext ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:394:1: (lv_ecContexts_2_0= ruleEcContext )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:389:1: ( (lv_ecContexts_2_0= ruleEcContext ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:390:1: (lv_ecContexts_2_0= ruleEcContext )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:394:1: (lv_ecContexts_2_0= ruleEcContext )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:395:3: lv_ecContexts_2_0= ruleEcContext
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:390:1: (lv_ecContexts_2_0= ruleEcContext )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:391:3: lv_ecContexts_2_0= ruleEcContext
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getEcContextsListAccess().getEcContextsEcContextParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleEcContext_in_ruleEcContextsList788);
+            	    pushFollow(FOLLOW_ruleEcContext_in_ruleEcContextsList776);
             	    lv_ecContexts_2_0=ruleEcContext();
 
             	    state._fsp--;
@@ -1014,7 +1003,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpContextsList"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:419:1: entryRuleExpContextsList returns [EObject current=null] : iv_ruleExpContextsList= ruleExpContextsList EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:415:1: entryRuleExpContextsList returns [EObject current=null] : iv_ruleExpContextsList= ruleExpContextsList EOF ;
     public final EObject entryRuleExpContextsList() throws RecognitionException {
         EObject current = null;
 
@@ -1022,17 +1011,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:420:2: (iv_ruleExpContextsList= ruleExpContextsList EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:421:2: iv_ruleExpContextsList= ruleExpContextsList EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:416:2: (iv_ruleExpContextsList= ruleExpContextsList EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:417:2: iv_ruleExpContextsList= ruleExpContextsList EOF
             {
              newCompositeNode(grammarAccess.getExpContextsListRule()); 
-            pushFollow(FOLLOW_ruleExpContextsList_in_entryRuleExpContextsList826);
+            pushFollow(FOLLOW_ruleExpContextsList_in_entryRuleExpContextsList814);
             iv_ruleExpContextsList=ruleExpContextsList();
 
             state._fsp--;
 
              current =iv_ruleExpContextsList; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExpContextsList836); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExpContextsList824); 
 
             }
 
@@ -1050,7 +1039,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpContextsList"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:428:1: ruleExpContextsList returns [EObject current=null] : ( ( (lv_expContexts_0_0= ruleExpContext ) ) (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )* ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:424:1: ruleExpContextsList returns [EObject current=null] : ( ( (lv_expContexts_0_0= ruleExpContext ) ) (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )* ) ;
     public final EObject ruleExpContextsList() throws RecognitionException {
         EObject current = null;
 
@@ -1063,22 +1052,22 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:431:28: ( ( ( (lv_expContexts_0_0= ruleExpContext ) ) (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )* ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:432:1: ( ( (lv_expContexts_0_0= ruleExpContext ) ) (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:427:28: ( ( ( (lv_expContexts_0_0= ruleExpContext ) ) (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )* ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:428:1: ( ( (lv_expContexts_0_0= ruleExpContext ) ) (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )* )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:432:1: ( ( (lv_expContexts_0_0= ruleExpContext ) ) (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )* )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:432:2: ( (lv_expContexts_0_0= ruleExpContext ) ) (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:428:1: ( ( (lv_expContexts_0_0= ruleExpContext ) ) (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:428:2: ( (lv_expContexts_0_0= ruleExpContext ) ) (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )*
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:432:2: ( (lv_expContexts_0_0= ruleExpContext ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:433:1: (lv_expContexts_0_0= ruleExpContext )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:428:2: ( (lv_expContexts_0_0= ruleExpContext ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:429:1: (lv_expContexts_0_0= ruleExpContext )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:433:1: (lv_expContexts_0_0= ruleExpContext )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:434:3: lv_expContexts_0_0= ruleExpContext
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:429:1: (lv_expContexts_0_0= ruleExpContext )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:430:3: lv_expContexts_0_0= ruleExpContext
             {
              
             	        newCompositeNode(grammarAccess.getExpContextsListAccess().getExpContextsExpContextParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleExpContext_in_ruleExpContextsList882);
+            pushFollow(FOLLOW_ruleExpContext_in_ruleExpContextsList870);
             lv_expContexts_0_0=ruleExpContext();
 
             state._fsp--;
@@ -1100,7 +1089,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:450:2: (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:446:2: (otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) ) )*
             loop7:
             do {
                 int alt7=2;
@@ -1113,22 +1102,22 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:450:4: otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:446:4: otherlv_1= ',' ( (lv_expContexts_2_0= ruleExpContext ) )
             	    {
-            	    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleExpContextsList895); 
+            	    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleExpContextsList883); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getExpContextsListAccess().getCommaKeyword_1_0());
             	        
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:454:1: ( (lv_expContexts_2_0= ruleExpContext ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:455:1: (lv_expContexts_2_0= ruleExpContext )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:450:1: ( (lv_expContexts_2_0= ruleExpContext ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:451:1: (lv_expContexts_2_0= ruleExpContext )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:455:1: (lv_expContexts_2_0= ruleExpContext )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:456:3: lv_expContexts_2_0= ruleExpContext
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:451:1: (lv_expContexts_2_0= ruleExpContext )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:452:3: lv_expContexts_2_0= ruleExpContext
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getExpContextsListAccess().getExpContextsExpContextParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleExpContext_in_ruleExpContextsList916);
+            	    pushFollow(FOLLOW_ruleExpContext_in_ruleExpContextsList904);
             	    lv_expContexts_2_0=ruleExpContext();
 
             	    state._fsp--;
@@ -1180,7 +1169,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEcContext"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:480:1: entryRuleEcContext returns [EObject current=null] : iv_ruleEcContext= ruleEcContext EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:476:1: entryRuleEcContext returns [EObject current=null] : iv_ruleEcContext= ruleEcContext EOF ;
     public final EObject entryRuleEcContext() throws RecognitionException {
         EObject current = null;
 
@@ -1188,17 +1177,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:481:2: (iv_ruleEcContext= ruleEcContext EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:482:2: iv_ruleEcContext= ruleEcContext EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:477:2: (iv_ruleEcContext= ruleEcContext EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:478:2: iv_ruleEcContext= ruleEcContext EOF
             {
              newCompositeNode(grammarAccess.getEcContextRule()); 
-            pushFollow(FOLLOW_ruleEcContext_in_entryRuleEcContext954);
+            pushFollow(FOLLOW_ruleEcContext_in_entryRuleEcContext942);
             iv_ruleEcContext=ruleEcContext();
 
             state._fsp--;
 
              current =iv_ruleEcContext; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEcContext964); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEcContext952); 
 
             }
 
@@ -1216,7 +1205,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEcContext"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:489:1: ruleEcContext returns [EObject current=null] : (otherlv_0= 'set' ( (lv_fluent_1_0= ruleFluent ) ) ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:485:1: ruleEcContext returns [EObject current=null] : (otherlv_0= 'set' ( (lv_fluent_1_0= ruleFluent ) ) ) ;
     public final EObject ruleEcContext() throws RecognitionException {
         EObject current = null;
 
@@ -1227,26 +1216,26 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:492:28: ( (otherlv_0= 'set' ( (lv_fluent_1_0= ruleFluent ) ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:493:1: (otherlv_0= 'set' ( (lv_fluent_1_0= ruleFluent ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:488:28: ( (otherlv_0= 'set' ( (lv_fluent_1_0= ruleFluent ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:489:1: (otherlv_0= 'set' ( (lv_fluent_1_0= ruleFluent ) ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:493:1: (otherlv_0= 'set' ( (lv_fluent_1_0= ruleFluent ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:493:3: otherlv_0= 'set' ( (lv_fluent_1_0= ruleFluent ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:489:1: (otherlv_0= 'set' ( (lv_fluent_1_0= ruleFluent ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:489:3: otherlv_0= 'set' ( (lv_fluent_1_0= ruleFluent ) )
             {
-            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleEcContext1001); 
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleEcContext989); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEcContextAccess().getSetKeyword_0());
                 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:497:1: ( (lv_fluent_1_0= ruleFluent ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:498:1: (lv_fluent_1_0= ruleFluent )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:493:1: ( (lv_fluent_1_0= ruleFluent ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:494:1: (lv_fluent_1_0= ruleFluent )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:498:1: (lv_fluent_1_0= ruleFluent )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:499:3: lv_fluent_1_0= ruleFluent
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:494:1: (lv_fluent_1_0= ruleFluent )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:495:3: lv_fluent_1_0= ruleFluent
             {
              
             	        newCompositeNode(grammarAccess.getEcContextAccess().getFluentFluentParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleFluent_in_ruleEcContext1022);
+            pushFollow(FOLLOW_ruleFluent_in_ruleEcContext1010);
             lv_fluent_1_0=ruleFluent();
 
             state._fsp--;
@@ -1289,7 +1278,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpContext"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:523:1: entryRuleExpContext returns [EObject current=null] : iv_ruleExpContext= ruleExpContext EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:519:1: entryRuleExpContext returns [EObject current=null] : iv_ruleExpContext= ruleExpContext EOF ;
     public final EObject entryRuleExpContext() throws RecognitionException {
         EObject current = null;
 
@@ -1297,17 +1286,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:524:2: (iv_ruleExpContext= ruleExpContext EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:525:2: iv_ruleExpContext= ruleExpContext EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:520:2: (iv_ruleExpContext= ruleExpContext EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:521:2: iv_ruleExpContext= ruleExpContext EOF
             {
              newCompositeNode(grammarAccess.getExpContextRule()); 
-            pushFollow(FOLLOW_ruleExpContext_in_entryRuleExpContext1058);
+            pushFollow(FOLLOW_ruleExpContext_in_entryRuleExpContext1046);
             iv_ruleExpContext=ruleExpContext();
 
             state._fsp--;
 
              current =iv_ruleExpContext; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExpContext1068); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExpContext1056); 
 
             }
 
@@ -1325,7 +1314,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpContext"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:532:1: ruleExpContext returns [EObject current=null] : (otherlv_0= 'expect' ( (lv_finalCondition_1_0= ruleConditionRule ) ) ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )? (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )? ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:528:1: ruleExpContext returns [EObject current=null] : (otherlv_0= 'expect' ( (lv_finalCondition_1_0= ruleConditionRule ) ) ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )? (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )? ) ;
     public final EObject ruleExpContext() throws RecognitionException {
         EObject current = null;
 
@@ -1343,26 +1332,26 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:535:28: ( (otherlv_0= 'expect' ( (lv_finalCondition_1_0= ruleConditionRule ) ) ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )? (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )? ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:536:1: (otherlv_0= 'expect' ( (lv_finalCondition_1_0= ruleConditionRule ) ) ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )? (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )? )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:531:28: ( (otherlv_0= 'expect' ( (lv_finalCondition_1_0= ruleConditionRule ) ) ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )? (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )? ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:532:1: (otherlv_0= 'expect' ( (lv_finalCondition_1_0= ruleConditionRule ) ) ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )? (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )? )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:536:1: (otherlv_0= 'expect' ( (lv_finalCondition_1_0= ruleConditionRule ) ) ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )? (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )? )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:536:3: otherlv_0= 'expect' ( (lv_finalCondition_1_0= ruleConditionRule ) ) ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )? (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )?
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:532:1: (otherlv_0= 'expect' ( (lv_finalCondition_1_0= ruleConditionRule ) ) ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )? (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )? )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:532:3: otherlv_0= 'expect' ( (lv_finalCondition_1_0= ruleConditionRule ) ) ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )? (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )?
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleExpContext1105); 
+            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleExpContext1093); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getExpContextAccess().getExpectKeyword_0());
                 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:540:1: ( (lv_finalCondition_1_0= ruleConditionRule ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:541:1: (lv_finalCondition_1_0= ruleConditionRule )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:536:1: ( (lv_finalCondition_1_0= ruleConditionRule ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:537:1: (lv_finalCondition_1_0= ruleConditionRule )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:541:1: (lv_finalCondition_1_0= ruleConditionRule )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:542:3: lv_finalCondition_1_0= ruleConditionRule
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:537:1: (lv_finalCondition_1_0= ruleConditionRule )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:538:3: lv_finalCondition_1_0= ruleConditionRule
             {
              
             	        newCompositeNode(grammarAccess.getExpContextAccess().getFinalConditionConditionRuleParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleConditionRule_in_ruleExpContext1126);
+            pushFollow(FOLLOW_ruleConditionRule_in_ruleExpContext1114);
             lv_finalCondition_1_0=ruleConditionRule();
 
             state._fsp--;
@@ -1384,7 +1373,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:558:2: ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )?
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:554:2: ( ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) ) )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1393,18 +1382,18 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:558:3: ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:554:3: ( (lv_allenOp_2_0= ruleAllenOp ) ) ( (lv_time_3_0= rulePlusOrMinus ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:558:3: ( (lv_allenOp_2_0= ruleAllenOp ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:559:1: (lv_allenOp_2_0= ruleAllenOp )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:554:3: ( (lv_allenOp_2_0= ruleAllenOp ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:555:1: (lv_allenOp_2_0= ruleAllenOp )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:559:1: (lv_allenOp_2_0= ruleAllenOp )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:560:3: lv_allenOp_2_0= ruleAllenOp
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:555:1: (lv_allenOp_2_0= ruleAllenOp )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:556:3: lv_allenOp_2_0= ruleAllenOp
                     {
                      
                     	        newCompositeNode(grammarAccess.getExpContextAccess().getAllenOpAllenOpParserRuleCall_2_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleAllenOp_in_ruleExpContext1148);
+                    pushFollow(FOLLOW_ruleAllenOp_in_ruleExpContext1136);
                     lv_allenOp_2_0=ruleAllenOp();
 
                     state._fsp--;
@@ -1426,16 +1415,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:576:2: ( (lv_time_3_0= rulePlusOrMinus ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:577:1: (lv_time_3_0= rulePlusOrMinus )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:572:2: ( (lv_time_3_0= rulePlusOrMinus ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:573:1: (lv_time_3_0= rulePlusOrMinus )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:577:1: (lv_time_3_0= rulePlusOrMinus )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:578:3: lv_time_3_0= rulePlusOrMinus
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:573:1: (lv_time_3_0= rulePlusOrMinus )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:574:3: lv_time_3_0= rulePlusOrMinus
                     {
                      
                     	        newCompositeNode(grammarAccess.getExpContextAccess().getTimePlusOrMinusParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_rulePlusOrMinus_in_ruleExpContext1169);
+                    pushFollow(FOLLOW_rulePlusOrMinus_in_ruleExpContext1157);
                     lv_time_3_0=rulePlusOrMinus();
 
                     state._fsp--;
@@ -1463,7 +1452,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:594:4: (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )?
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:590:4: (otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) ) )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1472,22 +1461,22 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:594:6: otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:590:6: otherlv_4= 'if' ( (lv_initialCondition_5_0= ruleConditionRule ) )
                     {
-                    otherlv_4=(Token)match(input,19,FOLLOW_19_in_ruleExpContext1184); 
+                    otherlv_4=(Token)match(input,19,FOLLOW_19_in_ruleExpContext1172); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getExpContextAccess().getIfKeyword_3_0());
                         
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:598:1: ( (lv_initialCondition_5_0= ruleConditionRule ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:599:1: (lv_initialCondition_5_0= ruleConditionRule )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:594:1: ( (lv_initialCondition_5_0= ruleConditionRule ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:595:1: (lv_initialCondition_5_0= ruleConditionRule )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:599:1: (lv_initialCondition_5_0= ruleConditionRule )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:600:3: lv_initialCondition_5_0= ruleConditionRule
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:595:1: (lv_initialCondition_5_0= ruleConditionRule )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:596:3: lv_initialCondition_5_0= ruleConditionRule
                     {
                      
                     	        newCompositeNode(grammarAccess.getExpContextAccess().getInitialConditionConditionRuleParserRuleCall_3_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleConditionRule_in_ruleExpContext1205);
+                    pushFollow(FOLLOW_ruleConditionRule_in_ruleExpContext1193);
                     lv_initialCondition_5_0=ruleConditionRule();
 
                     state._fsp--;
@@ -1536,7 +1525,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAllenOp"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:624:1: entryRuleAllenOp returns [EObject current=null] : iv_ruleAllenOp= ruleAllenOp EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:620:1: entryRuleAllenOp returns [EObject current=null] : iv_ruleAllenOp= ruleAllenOp EOF ;
     public final EObject entryRuleAllenOp() throws RecognitionException {
         EObject current = null;
 
@@ -1544,17 +1533,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:625:2: (iv_ruleAllenOp= ruleAllenOp EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:626:2: iv_ruleAllenOp= ruleAllenOp EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:621:2: (iv_ruleAllenOp= ruleAllenOp EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:622:2: iv_ruleAllenOp= ruleAllenOp EOF
             {
              newCompositeNode(grammarAccess.getAllenOpRule()); 
-            pushFollow(FOLLOW_ruleAllenOp_in_entryRuleAllenOp1243);
+            pushFollow(FOLLOW_ruleAllenOp_in_entryRuleAllenOp1231);
             iv_ruleAllenOp=ruleAllenOp();
 
             state._fsp--;
 
              current =iv_ruleAllenOp; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAllenOp1253); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAllenOp1241); 
 
             }
 
@@ -1572,7 +1561,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAllenOp"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:633:1: ruleAllenOp returns [EObject current=null] : ( () ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) ) ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:629:1: ruleAllenOp returns [EObject current=null] : ( () ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) ) ) ;
     public final EObject ruleAllenOp() throws RecognitionException {
         EObject current = null;
 
@@ -1583,14 +1572,14 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:636:28: ( ( () ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:637:1: ( () ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:632:28: ( ( () ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:633:1: ( () ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:637:1: ( () ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:637:2: () ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:633:1: ( () ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:633:2: () ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:637:2: ()
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:638:5: 
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:633:2: ()
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:634:5: 
             {
 
                     current = forceCreateModelElement(
@@ -1600,13 +1589,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:643:2: ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:644:1: ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:639:2: ( ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:640:1: ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:644:1: ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:645:1: (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:640:1: ( (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:641:1: (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:645:1: (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:641:1: (lv_value_1_1= 'before' | lv_value_1_2= 'after' | lv_value_1_3= 'in' )
             int alt10=3;
             switch ( input.LA(1) ) {
             case 20:
@@ -1633,9 +1622,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             switch (alt10) {
                 case 1 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:646:3: lv_value_1_1= 'before'
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:642:3: lv_value_1_1= 'before'
                     {
-                    lv_value_1_1=(Token)match(input,20,FOLLOW_20_in_ruleAllenOp1307); 
+                    lv_value_1_1=(Token)match(input,20,FOLLOW_20_in_ruleAllenOp1295); 
 
                             newLeafNode(lv_value_1_1, grammarAccess.getAllenOpAccess().getValueBeforeKeyword_1_0_0());
                         
@@ -1649,9 +1638,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:658:8: lv_value_1_2= 'after'
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:654:8: lv_value_1_2= 'after'
                     {
-                    lv_value_1_2=(Token)match(input,21,FOLLOW_21_in_ruleAllenOp1336); 
+                    lv_value_1_2=(Token)match(input,21,FOLLOW_21_in_ruleAllenOp1324); 
 
                             newLeafNode(lv_value_1_2, grammarAccess.getAllenOpAccess().getValueAfterKeyword_1_0_1());
                         
@@ -1665,9 +1654,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:670:8: lv_value_1_3= 'in'
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:666:8: lv_value_1_3= 'in'
                     {
-                    lv_value_1_3=(Token)match(input,22,FOLLOW_22_in_ruleAllenOp1365); 
+                    lv_value_1_3=(Token)match(input,22,FOLLOW_22_in_ruleAllenOp1353); 
 
                             newLeafNode(lv_value_1_3, grammarAccess.getAllenOpAccess().getValueInKeyword_1_0_2());
                         
@@ -1710,7 +1699,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFluent"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:693:1: entryRuleFluent returns [EObject current=null] : iv_ruleFluent= ruleFluent EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:689:1: entryRuleFluent returns [EObject current=null] : iv_ruleFluent= ruleFluent EOF ;
     public final EObject entryRuleFluent() throws RecognitionException {
         EObject current = null;
 
@@ -1718,17 +1707,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:694:2: (iv_ruleFluent= ruleFluent EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:695:2: iv_ruleFluent= ruleFluent EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:690:2: (iv_ruleFluent= ruleFluent EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:691:2: iv_ruleFluent= ruleFluent EOF
             {
              newCompositeNode(grammarAccess.getFluentRule()); 
-            pushFollow(FOLLOW_ruleFluent_in_entryRuleFluent1417);
+            pushFollow(FOLLOW_ruleFluent_in_entryRuleFluent1405);
             iv_ruleFluent=ruleFluent();
 
             state._fsp--;
 
              current =iv_ruleFluent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFluent1427); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFluent1415); 
 
             }
 
@@ -1746,7 +1735,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFluent"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:702:1: ruleFluent returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) ) (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )? (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )? ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:698:1: ruleFluent returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) ) (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )? (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )? ) ;
     public final EObject ruleFluent() throws RecognitionException {
         EObject current = null;
 
@@ -1764,19 +1753,19 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:705:28: ( ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) ) (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )? (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )? ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:706:1: ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) ) (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )? (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )? )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:701:28: ( ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) ) (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )? (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )? ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:702:1: ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) ) (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )? (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )? )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:706:1: ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) ) (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )? (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )? )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:706:2: ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) ) (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )? (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )?
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:702:1: ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) ) (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )? (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )? )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:702:2: ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) ) (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )? (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )?
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:706:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:707:1: (lv_name_0_0= RULE_ID )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:702:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:703:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:707:1: (lv_name_0_0= RULE_ID )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:708:3: lv_name_0_0= RULE_ID
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:703:1: (lv_name_0_0= RULE_ID )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:704:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFluent1469); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFluent1457); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getFluentAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -1796,23 +1785,23 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:724:2: (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:724:4: otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:720:2: (otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:720:4: otherlv_1= 'to' ( (lv_valuePart_2_0= ruleToRule ) )
             {
-            otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleFluent1487); 
+            otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleFluent1475); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getFluentAccess().getToKeyword_1_0());
                 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:728:1: ( (lv_valuePart_2_0= ruleToRule ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:729:1: (lv_valuePart_2_0= ruleToRule )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:724:1: ( (lv_valuePart_2_0= ruleToRule ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:725:1: (lv_valuePart_2_0= ruleToRule )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:729:1: (lv_valuePart_2_0= ruleToRule )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:730:3: lv_valuePart_2_0= ruleToRule
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:725:1: (lv_valuePart_2_0= ruleToRule )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:726:3: lv_valuePart_2_0= ruleToRule
             {
              
             	        newCompositeNode(grammarAccess.getFluentAccess().getValuePartToRuleParserRuleCall_1_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleToRule_in_ruleFluent1508);
+            pushFollow(FOLLOW_ruleToRule_in_ruleFluent1496);
             lv_valuePart_2_0=ruleToRule();
 
             state._fsp--;
@@ -1837,7 +1826,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:746:3: (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )?
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:742:3: (otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) ) )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1846,22 +1835,22 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:746:5: otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:742:5: otherlv_3= 'in' ( (lv_timePart_4_0= ruleInRule ) )
                     {
-                    otherlv_3=(Token)match(input,22,FOLLOW_22_in_ruleFluent1522); 
+                    otherlv_3=(Token)match(input,22,FOLLOW_22_in_ruleFluent1510); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getFluentAccess().getInKeyword_2_0());
                         
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:750:1: ( (lv_timePart_4_0= ruleInRule ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:751:1: (lv_timePart_4_0= ruleInRule )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:746:1: ( (lv_timePart_4_0= ruleInRule ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:747:1: (lv_timePart_4_0= ruleInRule )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:751:1: (lv_timePart_4_0= ruleInRule )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:752:3: lv_timePart_4_0= ruleInRule
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:747:1: (lv_timePart_4_0= ruleInRule )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:748:3: lv_timePart_4_0= ruleInRule
                     {
                      
                     	        newCompositeNode(grammarAccess.getFluentAccess().getTimePartInRuleParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleInRule_in_ruleFluent1543);
+                    pushFollow(FOLLOW_ruleInRule_in_ruleFluent1531);
                     lv_timePart_4_0=ruleInRule();
 
                     state._fsp--;
@@ -1889,7 +1878,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:768:4: (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )?
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:764:4: (otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) ) )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1898,22 +1887,22 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:768:6: otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:764:6: otherlv_5= 'if' ( (lv_condPart_6_0= ruleConditionRule ) )
                     {
-                    otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleFluent1558); 
+                    otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleFluent1546); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getFluentAccess().getIfKeyword_3_0());
                         
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:772:1: ( (lv_condPart_6_0= ruleConditionRule ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:773:1: (lv_condPart_6_0= ruleConditionRule )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:768:1: ( (lv_condPart_6_0= ruleConditionRule ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:769:1: (lv_condPart_6_0= ruleConditionRule )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:773:1: (lv_condPart_6_0= ruleConditionRule )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:774:3: lv_condPart_6_0= ruleConditionRule
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:769:1: (lv_condPart_6_0= ruleConditionRule )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:770:3: lv_condPart_6_0= ruleConditionRule
                     {
                      
                     	        newCompositeNode(grammarAccess.getFluentAccess().getCondPartConditionRuleParserRuleCall_3_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleConditionRule_in_ruleFluent1579);
+                    pushFollow(FOLLOW_ruleConditionRule_in_ruleFluent1567);
                     lv_condPart_6_0=ruleConditionRule();
 
                     state._fsp--;
@@ -1962,7 +1951,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConditionRule"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:798:1: entryRuleConditionRule returns [EObject current=null] : iv_ruleConditionRule= ruleConditionRule EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:794:1: entryRuleConditionRule returns [EObject current=null] : iv_ruleConditionRule= ruleConditionRule EOF ;
     public final EObject entryRuleConditionRule() throws RecognitionException {
         EObject current = null;
 
@@ -1970,17 +1959,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:799:2: (iv_ruleConditionRule= ruleConditionRule EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:800:2: iv_ruleConditionRule= ruleConditionRule EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:795:2: (iv_ruleConditionRule= ruleConditionRule EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:796:2: iv_ruleConditionRule= ruleConditionRule EOF
             {
              newCompositeNode(grammarAccess.getConditionRuleRule()); 
-            pushFollow(FOLLOW_ruleConditionRule_in_entryRuleConditionRule1617);
+            pushFollow(FOLLOW_ruleConditionRule_in_entryRuleConditionRule1605);
             iv_ruleConditionRule=ruleConditionRule();
 
             state._fsp--;
 
              current =iv_ruleConditionRule; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConditionRule1627); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConditionRule1615); 
 
             }
 
@@ -1998,7 +1987,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConditionRule"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:807:1: ruleConditionRule returns [EObject current=null] : ( () ( (lv_condition_1_0= ruleExpression ) ) ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:803:1: ruleConditionRule returns [EObject current=null] : ( () ( (lv_condition_1_0= ruleExpression ) ) ) ;
     public final EObject ruleConditionRule() throws RecognitionException {
         EObject current = null;
 
@@ -2008,14 +1997,14 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:810:28: ( ( () ( (lv_condition_1_0= ruleExpression ) ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:811:1: ( () ( (lv_condition_1_0= ruleExpression ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:806:28: ( ( () ( (lv_condition_1_0= ruleExpression ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:807:1: ( () ( (lv_condition_1_0= ruleExpression ) ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:811:1: ( () ( (lv_condition_1_0= ruleExpression ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:811:2: () ( (lv_condition_1_0= ruleExpression ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:807:1: ( () ( (lv_condition_1_0= ruleExpression ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:807:2: () ( (lv_condition_1_0= ruleExpression ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:811:2: ()
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:812:5: 
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:807:2: ()
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:808:5: 
             {
 
                     current = forceCreateModelElement(
@@ -2025,16 +2014,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:817:2: ( (lv_condition_1_0= ruleExpression ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:818:1: (lv_condition_1_0= ruleExpression )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:813:2: ( (lv_condition_1_0= ruleExpression ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:814:1: (lv_condition_1_0= ruleExpression )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:818:1: (lv_condition_1_0= ruleExpression )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:819:3: lv_condition_1_0= ruleExpression
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:814:1: (lv_condition_1_0= ruleExpression )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:815:3: lv_condition_1_0= ruleExpression
             {
              
             	        newCompositeNode(grammarAccess.getConditionRuleAccess().getConditionExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleExpression_in_ruleConditionRule1682);
+            pushFollow(FOLLOW_ruleExpression_in_ruleConditionRule1670);
             lv_condition_1_0=ruleExpression();
 
             state._fsp--;
@@ -2077,7 +2066,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleToRule"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:843:1: entryRuleToRule returns [EObject current=null] : iv_ruleToRule= ruleToRule EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:839:1: entryRuleToRule returns [EObject current=null] : iv_ruleToRule= ruleToRule EOF ;
     public final EObject entryRuleToRule() throws RecognitionException {
         EObject current = null;
 
@@ -2085,17 +2074,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:844:2: (iv_ruleToRule= ruleToRule EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:845:2: iv_ruleToRule= ruleToRule EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:840:2: (iv_ruleToRule= ruleToRule EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:841:2: iv_ruleToRule= ruleToRule EOF
             {
              newCompositeNode(grammarAccess.getToRuleRule()); 
-            pushFollow(FOLLOW_ruleToRule_in_entryRuleToRule1718);
+            pushFollow(FOLLOW_ruleToRule_in_entryRuleToRule1706);
             iv_ruleToRule=ruleToRule();
 
             state._fsp--;
 
              current =iv_ruleToRule; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleToRule1728); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleToRule1716); 
 
             }
 
@@ -2113,7 +2102,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleToRule"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:852:1: ruleToRule returns [EObject current=null] : ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:848:1: ruleToRule returns [EObject current=null] : ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) ) ;
     public final EObject ruleToRule() throws RecognitionException {
         EObject current = null;
 
@@ -2123,14 +2112,14 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:855:28: ( ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:856:1: ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:851:28: ( ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:852:1: ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:856:1: ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:856:2: () ( (lv_expression_1_0= rulePlusOrMinus ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:852:1: ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:852:2: () ( (lv_expression_1_0= rulePlusOrMinus ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:856:2: ()
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:857:5: 
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:852:2: ()
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:853:5: 
             {
 
                     current = forceCreateModelElement(
@@ -2140,16 +2129,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:862:2: ( (lv_expression_1_0= rulePlusOrMinus ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:863:1: (lv_expression_1_0= rulePlusOrMinus )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:858:2: ( (lv_expression_1_0= rulePlusOrMinus ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:859:1: (lv_expression_1_0= rulePlusOrMinus )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:863:1: (lv_expression_1_0= rulePlusOrMinus )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:864:3: lv_expression_1_0= rulePlusOrMinus
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:859:1: (lv_expression_1_0= rulePlusOrMinus )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:860:3: lv_expression_1_0= rulePlusOrMinus
             {
              
             	        newCompositeNode(grammarAccess.getToRuleAccess().getExpressionPlusOrMinusParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_rulePlusOrMinus_in_ruleToRule1783);
+            pushFollow(FOLLOW_rulePlusOrMinus_in_ruleToRule1771);
             lv_expression_1_0=rulePlusOrMinus();
 
             state._fsp--;
@@ -2192,7 +2181,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInRule"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:888:1: entryRuleInRule returns [EObject current=null] : iv_ruleInRule= ruleInRule EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:884:1: entryRuleInRule returns [EObject current=null] : iv_ruleInRule= ruleInRule EOF ;
     public final EObject entryRuleInRule() throws RecognitionException {
         EObject current = null;
 
@@ -2200,17 +2189,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:889:2: (iv_ruleInRule= ruleInRule EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:890:2: iv_ruleInRule= ruleInRule EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:885:2: (iv_ruleInRule= ruleInRule EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:886:2: iv_ruleInRule= ruleInRule EOF
             {
              newCompositeNode(grammarAccess.getInRuleRule()); 
-            pushFollow(FOLLOW_ruleInRule_in_entryRuleInRule1819);
+            pushFollow(FOLLOW_ruleInRule_in_entryRuleInRule1807);
             iv_ruleInRule=ruleInRule();
 
             state._fsp--;
 
              current =iv_ruleInRule; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInRule1829); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInRule1817); 
 
             }
 
@@ -2228,7 +2217,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInRule"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:897:1: ruleInRule returns [EObject current=null] : ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:893:1: ruleInRule returns [EObject current=null] : ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) ) ;
     public final EObject ruleInRule() throws RecognitionException {
         EObject current = null;
 
@@ -2238,14 +2227,14 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:900:28: ( ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:901:1: ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:896:28: ( ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:897:1: ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:901:1: ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:901:2: () ( (lv_expression_1_0= rulePlusOrMinus ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:897:1: ( () ( (lv_expression_1_0= rulePlusOrMinus ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:897:2: () ( (lv_expression_1_0= rulePlusOrMinus ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:901:2: ()
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:902:5: 
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:897:2: ()
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:898:5: 
             {
 
                     current = forceCreateModelElement(
@@ -2255,16 +2244,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:907:2: ( (lv_expression_1_0= rulePlusOrMinus ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:908:1: (lv_expression_1_0= rulePlusOrMinus )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:903:2: ( (lv_expression_1_0= rulePlusOrMinus ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:904:1: (lv_expression_1_0= rulePlusOrMinus )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:908:1: (lv_expression_1_0= rulePlusOrMinus )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:909:3: lv_expression_1_0= rulePlusOrMinus
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:904:1: (lv_expression_1_0= rulePlusOrMinus )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:905:3: lv_expression_1_0= rulePlusOrMinus
             {
              
             	        newCompositeNode(grammarAccess.getInRuleAccess().getExpressionPlusOrMinusParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_rulePlusOrMinus_in_ruleInRule1884);
+            pushFollow(FOLLOW_rulePlusOrMinus_in_ruleInRule1872);
             lv_expression_1_0=rulePlusOrMinus();
 
             state._fsp--;
@@ -2307,7 +2296,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpression"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:933:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:929:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
     public final EObject entryRuleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2315,17 +2304,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:934:2: (iv_ruleExpression= ruleExpression EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:935:2: iv_ruleExpression= ruleExpression EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:930:2: (iv_ruleExpression= ruleExpression EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:931:2: iv_ruleExpression= ruleExpression EOF
             {
              newCompositeNode(grammarAccess.getExpressionRule()); 
-            pushFollow(FOLLOW_ruleExpression_in_entryRuleExpression1920);
+            pushFollow(FOLLOW_ruleExpression_in_entryRuleExpression1908);
             iv_ruleExpression=ruleExpression();
 
             state._fsp--;
 
              current =iv_ruleExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExpression1930); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExpression1918); 
 
             }
 
@@ -2343,7 +2332,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpression"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:942:1: ruleExpression returns [EObject current=null] : this_Or_0= ruleOr ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:938:1: ruleExpression returns [EObject current=null] : this_Or_0= ruleOr ;
     public final EObject ruleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2353,13 +2342,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:945:28: (this_Or_0= ruleOr )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:947:5: this_Or_0= ruleOr
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:941:28: (this_Or_0= ruleOr )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:943:5: this_Or_0= ruleOr
             {
              
                     newCompositeNode(grammarAccess.getExpressionAccess().getOrParserRuleCall()); 
                 
-            pushFollow(FOLLOW_ruleOr_in_ruleExpression1976);
+            pushFollow(FOLLOW_ruleOr_in_ruleExpression1964);
             this_Or_0=ruleOr();
 
             state._fsp--;
@@ -2386,7 +2375,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOr"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:963:1: entryRuleOr returns [EObject current=null] : iv_ruleOr= ruleOr EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:959:1: entryRuleOr returns [EObject current=null] : iv_ruleOr= ruleOr EOF ;
     public final EObject entryRuleOr() throws RecognitionException {
         EObject current = null;
 
@@ -2394,17 +2383,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:964:2: (iv_ruleOr= ruleOr EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:965:2: iv_ruleOr= ruleOr EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:960:2: (iv_ruleOr= ruleOr EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:961:2: iv_ruleOr= ruleOr EOF
             {
              newCompositeNode(grammarAccess.getOrRule()); 
-            pushFollow(FOLLOW_ruleOr_in_entryRuleOr2010);
+            pushFollow(FOLLOW_ruleOr_in_entryRuleOr1998);
             iv_ruleOr=ruleOr();
 
             state._fsp--;
 
              current =iv_ruleOr; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOr2020); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOr2008); 
 
             }
 
@@ -2422,7 +2411,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOr"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:972:1: ruleOr returns [EObject current=null] : (this_And_0= ruleAnd ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )* ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:968:1: ruleOr returns [EObject current=null] : (this_And_0= ruleAnd ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )* ) ;
     public final EObject ruleOr() throws RecognitionException {
         EObject current = null;
 
@@ -2435,16 +2424,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:975:28: ( (this_And_0= ruleAnd ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )* ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:976:1: (this_And_0= ruleAnd ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:971:28: ( (this_And_0= ruleAnd ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )* ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:972:1: (this_And_0= ruleAnd ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )* )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:976:1: (this_And_0= ruleAnd ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )* )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:977:5: this_And_0= ruleAnd ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:972:1: (this_And_0= ruleAnd ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:973:5: this_And_0= ruleAnd ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )*
             {
              
                     newCompositeNode(grammarAccess.getOrAccess().getAndParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleAnd_in_ruleOr2067);
+            pushFollow(FOLLOW_ruleAnd_in_ruleOr2055);
             this_And_0=ruleAnd();
 
             state._fsp--;
@@ -2453,7 +2442,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     current = this_And_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:985:1: ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:981:1: ( () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) ) )*
             loop13:
             do {
                 int alt13=2;
@@ -2466,10 +2455,10 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:985:2: () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:981:2: () otherlv_2= 'OR' ( (lv_right_3_0= ruleAnd ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:985:2: ()
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:986:5: 
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:981:2: ()
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:982:5: 
             	    {
 
             	            current = forceCreateModelElementAndSet(
@@ -2479,20 +2468,20 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,24,FOLLOW_24_in_ruleOr2088); 
+            	    otherlv_2=(Token)match(input,24,FOLLOW_24_in_ruleOr2076); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getOrAccess().getORKeyword_1_1());
             	        
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:995:1: ( (lv_right_3_0= ruleAnd ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:996:1: (lv_right_3_0= ruleAnd )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:991:1: ( (lv_right_3_0= ruleAnd ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:992:1: (lv_right_3_0= ruleAnd )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:996:1: (lv_right_3_0= ruleAnd )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:997:3: lv_right_3_0= ruleAnd
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:992:1: (lv_right_3_0= ruleAnd )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:993:3: lv_right_3_0= ruleAnd
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getOrAccess().getRightAndParserRuleCall_1_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnd_in_ruleOr2109);
+            	    pushFollow(FOLLOW_ruleAnd_in_ruleOr2097);
             	    lv_right_3_0=ruleAnd();
 
             	    state._fsp--;
@@ -2544,7 +2533,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAnd"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1021:1: entryRuleAnd returns [EObject current=null] : iv_ruleAnd= ruleAnd EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1017:1: entryRuleAnd returns [EObject current=null] : iv_ruleAnd= ruleAnd EOF ;
     public final EObject entryRuleAnd() throws RecognitionException {
         EObject current = null;
 
@@ -2552,17 +2541,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1022:2: (iv_ruleAnd= ruleAnd EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1023:2: iv_ruleAnd= ruleAnd EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1018:2: (iv_ruleAnd= ruleAnd EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1019:2: iv_ruleAnd= ruleAnd EOF
             {
              newCompositeNode(grammarAccess.getAndRule()); 
-            pushFollow(FOLLOW_ruleAnd_in_entryRuleAnd2147);
+            pushFollow(FOLLOW_ruleAnd_in_entryRuleAnd2135);
             iv_ruleAnd=ruleAnd();
 
             state._fsp--;
 
              current =iv_ruleAnd; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAnd2157); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAnd2145); 
 
             }
 
@@ -2580,7 +2569,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnd"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1030:1: ruleAnd returns [EObject current=null] : (this_Equality_0= ruleEquality ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )* ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1026:1: ruleAnd returns [EObject current=null] : (this_Equality_0= ruleEquality ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )* ) ;
     public final EObject ruleAnd() throws RecognitionException {
         EObject current = null;
 
@@ -2593,16 +2582,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1033:28: ( (this_Equality_0= ruleEquality ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )* ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1034:1: (this_Equality_0= ruleEquality ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1029:28: ( (this_Equality_0= ruleEquality ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )* ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1030:1: (this_Equality_0= ruleEquality ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )* )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1034:1: (this_Equality_0= ruleEquality ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )* )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1035:5: this_Equality_0= ruleEquality ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1030:1: (this_Equality_0= ruleEquality ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1031:5: this_Equality_0= ruleEquality ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )*
             {
              
                     newCompositeNode(grammarAccess.getAndAccess().getEqualityParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleEquality_in_ruleAnd2204);
+            pushFollow(FOLLOW_ruleEquality_in_ruleAnd2192);
             this_Equality_0=ruleEquality();
 
             state._fsp--;
@@ -2611,7 +2600,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     current = this_Equality_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1043:1: ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1039:1: ( () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) ) )*
             loop14:
             do {
                 int alt14=2;
@@ -2624,10 +2613,10 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                 switch (alt14) {
             	case 1 :
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1043:2: () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1039:2: () otherlv_2= 'AND' ( (lv_right_3_0= ruleEquality ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1043:2: ()
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1044:5: 
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1039:2: ()
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1040:5: 
             	    {
 
             	            current = forceCreateModelElementAndSet(
@@ -2637,20 +2626,20 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,25,FOLLOW_25_in_ruleAnd2225); 
+            	    otherlv_2=(Token)match(input,25,FOLLOW_25_in_ruleAnd2213); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getAndAccess().getANDKeyword_1_1());
             	        
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1053:1: ( (lv_right_3_0= ruleEquality ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1054:1: (lv_right_3_0= ruleEquality )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1049:1: ( (lv_right_3_0= ruleEquality ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1050:1: (lv_right_3_0= ruleEquality )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1054:1: (lv_right_3_0= ruleEquality )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1055:3: lv_right_3_0= ruleEquality
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1050:1: (lv_right_3_0= ruleEquality )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1051:3: lv_right_3_0= ruleEquality
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getAndAccess().getRightEqualityParserRuleCall_1_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleEquality_in_ruleAnd2246);
+            	    pushFollow(FOLLOW_ruleEquality_in_ruleAnd2234);
             	    lv_right_3_0=ruleEquality();
 
             	    state._fsp--;
@@ -2702,7 +2691,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEquality"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1079:1: entryRuleEquality returns [EObject current=null] : iv_ruleEquality= ruleEquality EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1075:1: entryRuleEquality returns [EObject current=null] : iv_ruleEquality= ruleEquality EOF ;
     public final EObject entryRuleEquality() throws RecognitionException {
         EObject current = null;
 
@@ -2710,17 +2699,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1080:2: (iv_ruleEquality= ruleEquality EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1081:2: iv_ruleEquality= ruleEquality EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1076:2: (iv_ruleEquality= ruleEquality EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1077:2: iv_ruleEquality= ruleEquality EOF
             {
              newCompositeNode(grammarAccess.getEqualityRule()); 
-            pushFollow(FOLLOW_ruleEquality_in_entryRuleEquality2284);
+            pushFollow(FOLLOW_ruleEquality_in_entryRuleEquality2272);
             iv_ruleEquality=ruleEquality();
 
             state._fsp--;
 
              current =iv_ruleEquality; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEquality2294); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEquality2282); 
 
             }
 
@@ -2738,7 +2727,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEquality"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1088:1: ruleEquality returns [EObject current=null] : (this_Comparison_0= ruleComparison ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )* ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1084:1: ruleEquality returns [EObject current=null] : (this_Comparison_0= ruleComparison ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )* ) ;
     public final EObject ruleEquality() throws RecognitionException {
         EObject current = null;
 
@@ -2752,16 +2741,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1091:28: ( (this_Comparison_0= ruleComparison ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )* ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1092:1: (this_Comparison_0= ruleComparison ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1087:28: ( (this_Comparison_0= ruleComparison ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )* ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1088:1: (this_Comparison_0= ruleComparison ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )* )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1092:1: (this_Comparison_0= ruleComparison ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )* )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1093:5: this_Comparison_0= ruleComparison ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1088:1: (this_Comparison_0= ruleComparison ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1089:5: this_Comparison_0= ruleComparison ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )*
             {
              
                     newCompositeNode(grammarAccess.getEqualityAccess().getComparisonParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleComparison_in_ruleEquality2341);
+            pushFollow(FOLLOW_ruleComparison_in_ruleEquality2329);
             this_Comparison_0=ruleComparison();
 
             state._fsp--;
@@ -2770,7 +2759,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     current = this_Comparison_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1101:1: ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1097:1: ( () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) ) )*
             loop16:
             do {
                 int alt16=2;
@@ -2783,10 +2772,10 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1101:2: () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1097:2: () ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) ) ( (lv_right_3_0= ruleComparison ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1101:2: ()
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1102:5: 
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1097:2: ()
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1098:5: 
             	    {
 
             	            current = forceCreateModelElementAndSet(
@@ -2796,13 +2785,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1107:2: ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1108:1: ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1103:2: ( ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1104:1: ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1108:1: ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1109:1: (lv_op_2_1= '==' | lv_op_2_2= '!=' )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1104:1: ( (lv_op_2_1= '==' | lv_op_2_2= '!=' ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1105:1: (lv_op_2_1= '==' | lv_op_2_2= '!=' )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1109:1: (lv_op_2_1= '==' | lv_op_2_2= '!=' )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1105:1: (lv_op_2_1= '==' | lv_op_2_2= '!=' )
             	    int alt15=2;
             	    int LA15_0 = input.LA(1);
 
@@ -2820,9 +2809,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt15) {
             	        case 1 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1110:3: lv_op_2_1= '=='
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1106:3: lv_op_2_1= '=='
             	            {
-            	            lv_op_2_1=(Token)match(input,26,FOLLOW_26_in_ruleEquality2370); 
+            	            lv_op_2_1=(Token)match(input,26,FOLLOW_26_in_ruleEquality2358); 
 
             	                    newLeafNode(lv_op_2_1, grammarAccess.getEqualityAccess().getOpEqualsSignEqualsSignKeyword_1_1_0_0());
             	                
@@ -2836,9 +2825,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1122:8: lv_op_2_2= '!='
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1118:8: lv_op_2_2= '!='
             	            {
-            	            lv_op_2_2=(Token)match(input,27,FOLLOW_27_in_ruleEquality2399); 
+            	            lv_op_2_2=(Token)match(input,27,FOLLOW_27_in_ruleEquality2387); 
 
             	                    newLeafNode(lv_op_2_2, grammarAccess.getEqualityAccess().getOpExclamationMarkEqualsSignKeyword_1_1_0_1());
             	                
@@ -2860,16 +2849,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1137:2: ( (lv_right_3_0= ruleComparison ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1138:1: (lv_right_3_0= ruleComparison )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1133:2: ( (lv_right_3_0= ruleComparison ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1134:1: (lv_right_3_0= ruleComparison )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1138:1: (lv_right_3_0= ruleComparison )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1139:3: lv_right_3_0= ruleComparison
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1134:1: (lv_right_3_0= ruleComparison )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1135:3: lv_right_3_0= ruleComparison
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getEqualityAccess().getRightComparisonParserRuleCall_1_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleComparison_in_ruleEquality2436);
+            	    pushFollow(FOLLOW_ruleComparison_in_ruleEquality2424);
             	    lv_right_3_0=ruleComparison();
 
             	    state._fsp--;
@@ -2921,7 +2910,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComparison"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1163:1: entryRuleComparison returns [EObject current=null] : iv_ruleComparison= ruleComparison EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1159:1: entryRuleComparison returns [EObject current=null] : iv_ruleComparison= ruleComparison EOF ;
     public final EObject entryRuleComparison() throws RecognitionException {
         EObject current = null;
 
@@ -2929,17 +2918,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1164:2: (iv_ruleComparison= ruleComparison EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1165:2: iv_ruleComparison= ruleComparison EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1160:2: (iv_ruleComparison= ruleComparison EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1161:2: iv_ruleComparison= ruleComparison EOF
             {
              newCompositeNode(grammarAccess.getComparisonRule()); 
-            pushFollow(FOLLOW_ruleComparison_in_entryRuleComparison2474);
+            pushFollow(FOLLOW_ruleComparison_in_entryRuleComparison2462);
             iv_ruleComparison=ruleComparison();
 
             state._fsp--;
 
              current =iv_ruleComparison; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComparison2484); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComparison2472); 
 
             }
 
@@ -2957,7 +2946,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComparison"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1172:1: ruleComparison returns [EObject current=null] : (this_PlusOrMinus_0= rulePlusOrMinus ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )* ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1168:1: ruleComparison returns [EObject current=null] : (this_PlusOrMinus_0= rulePlusOrMinus ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )* ) ;
     public final EObject ruleComparison() throws RecognitionException {
         EObject current = null;
 
@@ -2973,16 +2962,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1175:28: ( (this_PlusOrMinus_0= rulePlusOrMinus ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )* ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1176:1: (this_PlusOrMinus_0= rulePlusOrMinus ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1171:28: ( (this_PlusOrMinus_0= rulePlusOrMinus ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )* ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1172:1: (this_PlusOrMinus_0= rulePlusOrMinus ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )* )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1176:1: (this_PlusOrMinus_0= rulePlusOrMinus ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )* )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1177:5: this_PlusOrMinus_0= rulePlusOrMinus ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1172:1: (this_PlusOrMinus_0= rulePlusOrMinus ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1173:5: this_PlusOrMinus_0= rulePlusOrMinus ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )*
             {
              
                     newCompositeNode(grammarAccess.getComparisonAccess().getPlusOrMinusParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_rulePlusOrMinus_in_ruleComparison2531);
+            pushFollow(FOLLOW_rulePlusOrMinus_in_ruleComparison2519);
             this_PlusOrMinus_0=rulePlusOrMinus();
 
             state._fsp--;
@@ -2991,7 +2980,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     current = this_PlusOrMinus_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1185:1: ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1181:1: ( () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) ) )*
             loop18:
             do {
                 int alt18=2;
@@ -3004,10 +2993,10 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                 switch (alt18) {
             	case 1 :
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1185:2: () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1181:2: () ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) ) ( (lv_right_3_0= rulePlusOrMinus ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1185:2: ()
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1186:5: 
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1181:2: ()
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1182:5: 
             	    {
 
             	            current = forceCreateModelElementAndSet(
@@ -3017,13 +3006,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1191:2: ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1192:1: ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1187:2: ( ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1188:1: ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1192:1: ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1193:1: (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1188:1: ( (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1189:1: (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1193:1: (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1189:1: (lv_op_2_1= '>=' | lv_op_2_2= '<=' | lv_op_2_3= '>' | lv_op_2_4= '<' )
             	    int alt17=4;
             	    switch ( input.LA(1) ) {
             	    case 28:
@@ -3055,9 +3044,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    switch (alt17) {
             	        case 1 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1194:3: lv_op_2_1= '>='
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1190:3: lv_op_2_1= '>='
             	            {
-            	            lv_op_2_1=(Token)match(input,28,FOLLOW_28_in_ruleComparison2560); 
+            	            lv_op_2_1=(Token)match(input,28,FOLLOW_28_in_ruleComparison2548); 
 
             	                    newLeafNode(lv_op_2_1, grammarAccess.getComparisonAccess().getOpGreaterThanSignEqualsSignKeyword_1_1_0_0());
             	                
@@ -3071,9 +3060,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1206:8: lv_op_2_2= '<='
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1202:8: lv_op_2_2= '<='
             	            {
-            	            lv_op_2_2=(Token)match(input,29,FOLLOW_29_in_ruleComparison2589); 
+            	            lv_op_2_2=(Token)match(input,29,FOLLOW_29_in_ruleComparison2577); 
 
             	                    newLeafNode(lv_op_2_2, grammarAccess.getComparisonAccess().getOpLessThanSignEqualsSignKeyword_1_1_0_1());
             	                
@@ -3087,9 +3076,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 3 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1218:8: lv_op_2_3= '>'
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1214:8: lv_op_2_3= '>'
             	            {
-            	            lv_op_2_3=(Token)match(input,30,FOLLOW_30_in_ruleComparison2618); 
+            	            lv_op_2_3=(Token)match(input,30,FOLLOW_30_in_ruleComparison2606); 
 
             	                    newLeafNode(lv_op_2_3, grammarAccess.getComparisonAccess().getOpGreaterThanSignKeyword_1_1_0_2());
             	                
@@ -3103,9 +3092,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 4 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1230:8: lv_op_2_4= '<'
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1226:8: lv_op_2_4= '<'
             	            {
-            	            lv_op_2_4=(Token)match(input,31,FOLLOW_31_in_ruleComparison2647); 
+            	            lv_op_2_4=(Token)match(input,31,FOLLOW_31_in_ruleComparison2635); 
 
             	                    newLeafNode(lv_op_2_4, grammarAccess.getComparisonAccess().getOpLessThanSignKeyword_1_1_0_3());
             	                
@@ -3127,16 +3116,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1245:2: ( (lv_right_3_0= rulePlusOrMinus ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1246:1: (lv_right_3_0= rulePlusOrMinus )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1241:2: ( (lv_right_3_0= rulePlusOrMinus ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1242:1: (lv_right_3_0= rulePlusOrMinus )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1246:1: (lv_right_3_0= rulePlusOrMinus )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1247:3: lv_right_3_0= rulePlusOrMinus
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1242:1: (lv_right_3_0= rulePlusOrMinus )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1243:3: lv_right_3_0= rulePlusOrMinus
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getComparisonAccess().getRightPlusOrMinusParserRuleCall_1_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulePlusOrMinus_in_ruleComparison2684);
+            	    pushFollow(FOLLOW_rulePlusOrMinus_in_ruleComparison2672);
             	    lv_right_3_0=rulePlusOrMinus();
 
             	    state._fsp--;
@@ -3188,7 +3177,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePlusOrMinus"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1271:1: entryRulePlusOrMinus returns [EObject current=null] : iv_rulePlusOrMinus= rulePlusOrMinus EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1267:1: entryRulePlusOrMinus returns [EObject current=null] : iv_rulePlusOrMinus= rulePlusOrMinus EOF ;
     public final EObject entryRulePlusOrMinus() throws RecognitionException {
         EObject current = null;
 
@@ -3196,17 +3185,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1272:2: (iv_rulePlusOrMinus= rulePlusOrMinus EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1273:2: iv_rulePlusOrMinus= rulePlusOrMinus EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1268:2: (iv_rulePlusOrMinus= rulePlusOrMinus EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1269:2: iv_rulePlusOrMinus= rulePlusOrMinus EOF
             {
              newCompositeNode(grammarAccess.getPlusOrMinusRule()); 
-            pushFollow(FOLLOW_rulePlusOrMinus_in_entryRulePlusOrMinus2722);
+            pushFollow(FOLLOW_rulePlusOrMinus_in_entryRulePlusOrMinus2710);
             iv_rulePlusOrMinus=rulePlusOrMinus();
 
             state._fsp--;
 
              current =iv_rulePlusOrMinus; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePlusOrMinus2732); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePlusOrMinus2720); 
 
             }
 
@@ -3224,7 +3213,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePlusOrMinus"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1280:1: rulePlusOrMinus returns [EObject current=null] : (this_MulOrDiv_0= ruleMulOrDiv ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )* ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1276:1: rulePlusOrMinus returns [EObject current=null] : (this_MulOrDiv_0= ruleMulOrDiv ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )* ) ;
     public final EObject rulePlusOrMinus() throws RecognitionException {
         EObject current = null;
 
@@ -3238,16 +3227,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1283:28: ( (this_MulOrDiv_0= ruleMulOrDiv ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )* ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1284:1: (this_MulOrDiv_0= ruleMulOrDiv ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1279:28: ( (this_MulOrDiv_0= ruleMulOrDiv ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )* ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1280:1: (this_MulOrDiv_0= ruleMulOrDiv ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )* )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1284:1: (this_MulOrDiv_0= ruleMulOrDiv ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )* )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1285:5: this_MulOrDiv_0= ruleMulOrDiv ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1280:1: (this_MulOrDiv_0= ruleMulOrDiv ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1281:5: this_MulOrDiv_0= ruleMulOrDiv ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )*
             {
              
                     newCompositeNode(grammarAccess.getPlusOrMinusAccess().getMulOrDivParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleMulOrDiv_in_rulePlusOrMinus2779);
+            pushFollow(FOLLOW_ruleMulOrDiv_in_rulePlusOrMinus2767);
             this_MulOrDiv_0=ruleMulOrDiv();
 
             state._fsp--;
@@ -3256,7 +3245,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     current = this_MulOrDiv_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1293:1: ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1289:1: ( ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) ) )*
             loop20:
             do {
                 int alt20=2;
@@ -3269,9 +3258,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                 switch (alt20) {
             	case 1 :
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1293:2: ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1289:2: ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ( (lv_right_5_0= ruleMulOrDiv ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1293:2: ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1289:2: ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) )
             	    int alt19=2;
             	    int LA19_0 = input.LA(1);
 
@@ -3289,13 +3278,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt19) {
             	        case 1 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1293:3: ( () otherlv_2= '+' )
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1289:3: ( () otherlv_2= '+' )
             	            {
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1293:3: ( () otherlv_2= '+' )
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1293:4: () otherlv_2= '+'
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1289:3: ( () otherlv_2= '+' )
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1289:4: () otherlv_2= '+'
             	            {
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1293:4: ()
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1294:5: 
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1289:4: ()
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1290:5: 
             	            {
 
             	                    current = forceCreateModelElementAndSet(
@@ -3305,7 +3294,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            otherlv_2=(Token)match(input,32,FOLLOW_32_in_rulePlusOrMinus2802); 
+            	            otherlv_2=(Token)match(input,32,FOLLOW_32_in_rulePlusOrMinus2790); 
 
             	                	newLeafNode(otherlv_2, grammarAccess.getPlusOrMinusAccess().getPlusSignKeyword_1_0_0_1());
             	                
@@ -3316,13 +3305,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1304:6: ( () otherlv_4= '-' )
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1300:6: ( () otherlv_4= '-' )
             	            {
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1304:6: ( () otherlv_4= '-' )
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1304:7: () otherlv_4= '-'
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1300:6: ( () otherlv_4= '-' )
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1300:7: () otherlv_4= '-'
             	            {
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1304:7: ()
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1305:5: 
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1300:7: ()
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1301:5: 
             	            {
 
             	                    current = forceCreateModelElementAndSet(
@@ -3332,7 +3321,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            otherlv_4=(Token)match(input,33,FOLLOW_33_in_rulePlusOrMinus2831); 
+            	            otherlv_4=(Token)match(input,33,FOLLOW_33_in_rulePlusOrMinus2819); 
 
             	                	newLeafNode(otherlv_4, grammarAccess.getPlusOrMinusAccess().getHyphenMinusKeyword_1_0_1_1());
             	                
@@ -3345,16 +3334,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1314:3: ( (lv_right_5_0= ruleMulOrDiv ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1315:1: (lv_right_5_0= ruleMulOrDiv )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1310:3: ( (lv_right_5_0= ruleMulOrDiv ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1311:1: (lv_right_5_0= ruleMulOrDiv )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1315:1: (lv_right_5_0= ruleMulOrDiv )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1316:3: lv_right_5_0= ruleMulOrDiv
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1311:1: (lv_right_5_0= ruleMulOrDiv )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1312:3: lv_right_5_0= ruleMulOrDiv
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getPlusOrMinusAccess().getRightMulOrDivParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleMulOrDiv_in_rulePlusOrMinus2854);
+            	    pushFollow(FOLLOW_ruleMulOrDiv_in_rulePlusOrMinus2842);
             	    lv_right_5_0=ruleMulOrDiv();
 
             	    state._fsp--;
@@ -3406,7 +3395,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMulOrDiv"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1340:1: entryRuleMulOrDiv returns [EObject current=null] : iv_ruleMulOrDiv= ruleMulOrDiv EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1336:1: entryRuleMulOrDiv returns [EObject current=null] : iv_ruleMulOrDiv= ruleMulOrDiv EOF ;
     public final EObject entryRuleMulOrDiv() throws RecognitionException {
         EObject current = null;
 
@@ -3414,17 +3403,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1341:2: (iv_ruleMulOrDiv= ruleMulOrDiv EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1342:2: iv_ruleMulOrDiv= ruleMulOrDiv EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1337:2: (iv_ruleMulOrDiv= ruleMulOrDiv EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1338:2: iv_ruleMulOrDiv= ruleMulOrDiv EOF
             {
              newCompositeNode(grammarAccess.getMulOrDivRule()); 
-            pushFollow(FOLLOW_ruleMulOrDiv_in_entryRuleMulOrDiv2892);
+            pushFollow(FOLLOW_ruleMulOrDiv_in_entryRuleMulOrDiv2880);
             iv_ruleMulOrDiv=ruleMulOrDiv();
 
             state._fsp--;
 
              current =iv_ruleMulOrDiv; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMulOrDiv2902); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMulOrDiv2890); 
 
             }
 
@@ -3442,7 +3431,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMulOrDiv"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1349:1: ruleMulOrDiv returns [EObject current=null] : (this_Primary_0= rulePrimary ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )* ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1345:1: ruleMulOrDiv returns [EObject current=null] : (this_Primary_0= rulePrimary ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )* ) ;
     public final EObject ruleMulOrDiv() throws RecognitionException {
         EObject current = null;
 
@@ -3458,16 +3447,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1352:28: ( (this_Primary_0= rulePrimary ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )* ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1353:1: (this_Primary_0= rulePrimary ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1348:28: ( (this_Primary_0= rulePrimary ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )* ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1349:1: (this_Primary_0= rulePrimary ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )* )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1353:1: (this_Primary_0= rulePrimary ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )* )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1354:5: this_Primary_0= rulePrimary ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1349:1: (this_Primary_0= rulePrimary ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1350:5: this_Primary_0= rulePrimary ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )*
             {
              
                     newCompositeNode(grammarAccess.getMulOrDivAccess().getPrimaryParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_rulePrimary_in_ruleMulOrDiv2949);
+            pushFollow(FOLLOW_rulePrimary_in_ruleMulOrDiv2937);
             this_Primary_0=rulePrimary();
 
             state._fsp--;
@@ -3476,7 +3465,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     current = this_Primary_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1362:1: ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1358:1: ( () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) ) )*
             loop22:
             do {
                 int alt22=2;
@@ -3489,10 +3478,10 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                 switch (alt22) {
             	case 1 :
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1362:2: () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1358:2: () ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) ) ( (lv_right_3_0= rulePrimary ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1362:2: ()
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1363:5: 
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1358:2: ()
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1359:5: 
             	    {
 
             	            current = forceCreateModelElementAndSet(
@@ -3502,13 +3491,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1368:2: ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1369:1: ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1364:2: ( ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1365:1: ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1369:1: ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1370:1: (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1365:1: ( (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1366:1: (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1370:1: (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1366:1: (lv_op_2_1= '*' | lv_op_2_2= '/' | lv_op_2_3= '%' | lv_op_2_4= '^' )
             	    int alt21=4;
             	    switch ( input.LA(1) ) {
             	    case 34:
@@ -3540,9 +3529,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    switch (alt21) {
             	        case 1 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1371:3: lv_op_2_1= '*'
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1367:3: lv_op_2_1= '*'
             	            {
-            	            lv_op_2_1=(Token)match(input,34,FOLLOW_34_in_ruleMulOrDiv2978); 
+            	            lv_op_2_1=(Token)match(input,34,FOLLOW_34_in_ruleMulOrDiv2966); 
 
             	                    newLeafNode(lv_op_2_1, grammarAccess.getMulOrDivAccess().getOpAsteriskKeyword_1_1_0_0());
             	                
@@ -3556,9 +3545,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1383:8: lv_op_2_2= '/'
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1379:8: lv_op_2_2= '/'
             	            {
-            	            lv_op_2_2=(Token)match(input,35,FOLLOW_35_in_ruleMulOrDiv3007); 
+            	            lv_op_2_2=(Token)match(input,35,FOLLOW_35_in_ruleMulOrDiv2995); 
 
             	                    newLeafNode(lv_op_2_2, grammarAccess.getMulOrDivAccess().getOpSolidusKeyword_1_1_0_1());
             	                
@@ -3572,9 +3561,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 3 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1395:8: lv_op_2_3= '%'
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1391:8: lv_op_2_3= '%'
             	            {
-            	            lv_op_2_3=(Token)match(input,36,FOLLOW_36_in_ruleMulOrDiv3036); 
+            	            lv_op_2_3=(Token)match(input,36,FOLLOW_36_in_ruleMulOrDiv3024); 
 
             	                    newLeafNode(lv_op_2_3, grammarAccess.getMulOrDivAccess().getOpPercentSignKeyword_1_1_0_2());
             	                
@@ -3588,9 +3577,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 4 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1407:8: lv_op_2_4= '^'
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1403:8: lv_op_2_4= '^'
             	            {
-            	            lv_op_2_4=(Token)match(input,37,FOLLOW_37_in_ruleMulOrDiv3065); 
+            	            lv_op_2_4=(Token)match(input,37,FOLLOW_37_in_ruleMulOrDiv3053); 
 
             	                    newLeafNode(lv_op_2_4, grammarAccess.getMulOrDivAccess().getOpCircumflexAccentKeyword_1_1_0_3());
             	                
@@ -3612,16 +3601,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1422:2: ( (lv_right_3_0= rulePrimary ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1423:1: (lv_right_3_0= rulePrimary )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1418:2: ( (lv_right_3_0= rulePrimary ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1419:1: (lv_right_3_0= rulePrimary )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1423:1: (lv_right_3_0= rulePrimary )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1424:3: lv_right_3_0= rulePrimary
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1419:1: (lv_right_3_0= rulePrimary )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1420:3: lv_right_3_0= rulePrimary
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getMulOrDivAccess().getRightPrimaryParserRuleCall_1_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulePrimary_in_ruleMulOrDiv3102);
+            	    pushFollow(FOLLOW_rulePrimary_in_ruleMulOrDiv3090);
             	    lv_right_3_0=rulePrimary();
 
             	    state._fsp--;
@@ -3673,7 +3662,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePrimary"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1448:1: entryRulePrimary returns [EObject current=null] : iv_rulePrimary= rulePrimary EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1444:1: entryRulePrimary returns [EObject current=null] : iv_rulePrimary= rulePrimary EOF ;
     public final EObject entryRulePrimary() throws RecognitionException {
         EObject current = null;
 
@@ -3681,17 +3670,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1449:2: (iv_rulePrimary= rulePrimary EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1450:2: iv_rulePrimary= rulePrimary EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1445:2: (iv_rulePrimary= rulePrimary EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1446:2: iv_rulePrimary= rulePrimary EOF
             {
              newCompositeNode(grammarAccess.getPrimaryRule()); 
-            pushFollow(FOLLOW_rulePrimary_in_entryRulePrimary3140);
+            pushFollow(FOLLOW_rulePrimary_in_entryRulePrimary3128);
             iv_rulePrimary=rulePrimary();
 
             state._fsp--;
 
              current =iv_rulePrimary; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePrimary3150); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePrimary3138); 
 
             }
 
@@ -3709,7 +3698,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrimary"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1457:1: rulePrimary returns [EObject current=null] : ( (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' ) | ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) ) | this_Atomic_6= ruleAtomic ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1453:1: rulePrimary returns [EObject current=null] : ( (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' ) | ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) ) | this_Atomic_6= ruleAtomic ) ;
     public final EObject rulePrimary() throws RecognitionException {
         EObject current = null;
 
@@ -3726,10 +3715,10 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1460:28: ( ( (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' ) | ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) ) | this_Atomic_6= ruleAtomic ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1461:1: ( (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' ) | ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) ) | this_Atomic_6= ruleAtomic )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1456:28: ( ( (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' ) | ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) ) | this_Atomic_6= ruleAtomic ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1457:1: ( (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' ) | ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) ) | this_Atomic_6= ruleAtomic )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1461:1: ( (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' ) | ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) ) | this_Atomic_6= ruleAtomic )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1457:1: ( (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' ) | ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) ) | this_Atomic_6= ruleAtomic )
             int alt23=3;
             switch ( input.LA(1) ) {
             case 14:
@@ -3761,19 +3750,19 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             switch (alt23) {
                 case 1 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1461:2: (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1457:2: (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1461:2: (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1461:4: otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')'
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1457:2: (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1457:4: otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')'
                     {
-                    otherlv_0=(Token)match(input,14,FOLLOW_14_in_rulePrimary3188); 
+                    otherlv_0=(Token)match(input,14,FOLLOW_14_in_rulePrimary3176); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_0_0());
                         
                      
                             newCompositeNode(grammarAccess.getPrimaryAccess().getExpressionParserRuleCall_0_1()); 
                         
-                    pushFollow(FOLLOW_ruleExpression_in_rulePrimary3210);
+                    pushFollow(FOLLOW_ruleExpression_in_rulePrimary3198);
                     this_Expression_1=ruleExpression();
 
                     state._fsp--;
@@ -3782,7 +3771,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                             current = this_Expression_1; 
                             afterParserOrEnumRuleCall();
                         
-                    otherlv_2=(Token)match(input,16,FOLLOW_16_in_rulePrimary3221); 
+                    otherlv_2=(Token)match(input,16,FOLLOW_16_in_rulePrimary3209); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_0_2());
                         
@@ -3793,13 +3782,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1479:6: ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1475:6: ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1479:6: ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1479:7: () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1475:6: ( () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1475:7: () otherlv_4= '!' ( (lv_expression_5_0= rulePrimary ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1479:7: ()
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1480:5: 
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1475:7: ()
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1476:5: 
                     {
 
                             current = forceCreateModelElement(
@@ -3809,20 +3798,20 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,38,FOLLOW_38_in_rulePrimary3250); 
+                    otherlv_4=(Token)match(input,38,FOLLOW_38_in_rulePrimary3238); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getPrimaryAccess().getExclamationMarkKeyword_1_1());
                         
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1489:1: ( (lv_expression_5_0= rulePrimary ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1490:1: (lv_expression_5_0= rulePrimary )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1485:1: ( (lv_expression_5_0= rulePrimary ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1486:1: (lv_expression_5_0= rulePrimary )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1490:1: (lv_expression_5_0= rulePrimary )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1491:3: lv_expression_5_0= rulePrimary
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1486:1: (lv_expression_5_0= rulePrimary )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1487:3: lv_expression_5_0= rulePrimary
                     {
                      
                     	        newCompositeNode(grammarAccess.getPrimaryAccess().getExpressionPrimaryParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FOLLOW_rulePrimary_in_rulePrimary3271);
+                    pushFollow(FOLLOW_rulePrimary_in_rulePrimary3259);
                     lv_expression_5_0=rulePrimary();
 
                     state._fsp--;
@@ -3851,12 +3840,12 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1509:5: this_Atomic_6= ruleAtomic
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1505:5: this_Atomic_6= ruleAtomic
                     {
                      
                             newCompositeNode(grammarAccess.getPrimaryAccess().getAtomicParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleAtomic_in_rulePrimary3300);
+                    pushFollow(FOLLOW_ruleAtomic_in_rulePrimary3288);
                     this_Atomic_6=ruleAtomic();
 
                     state._fsp--;
@@ -3889,7 +3878,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAtomic"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1525:1: entryRuleAtomic returns [EObject current=null] : iv_ruleAtomic= ruleAtomic EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1521:1: entryRuleAtomic returns [EObject current=null] : iv_ruleAtomic= ruleAtomic EOF ;
     public final EObject entryRuleAtomic() throws RecognitionException {
         EObject current = null;
 
@@ -3897,17 +3886,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1526:2: (iv_ruleAtomic= ruleAtomic EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1527:2: iv_ruleAtomic= ruleAtomic EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1522:2: (iv_ruleAtomic= ruleAtomic EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1523:2: iv_ruleAtomic= ruleAtomic EOF
             {
              newCompositeNode(grammarAccess.getAtomicRule()); 
-            pushFollow(FOLLOW_ruleAtomic_in_entryRuleAtomic3335);
+            pushFollow(FOLLOW_ruleAtomic_in_entryRuleAtomic3323);
             iv_ruleAtomic=ruleAtomic();
 
             state._fsp--;
 
              current =iv_ruleAtomic; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAtomic3345); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtomic3333); 
 
             }
 
@@ -3925,7 +3914,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAtomic"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1534:1: ruleAtomic returns [EObject current=null] : ( ( () ( (lv_value_1_0= RULE_FLOAT ) ) ) | ( () ( (lv_value_3_0= RULE_INT ) ) ) | ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) ) | ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? ) | ( () ( (lv_value_11_0= 'now' ) ) ) ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1530:1: ruleAtomic returns [EObject current=null] : ( ( () ( (lv_value_1_0= RULE_FLOAT ) ) ) | ( () ( (lv_value_3_0= RULE_INT ) ) ) | ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) ) | ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? ) | ( () ( (lv_value_11_0= 'now' ) ) ) ) ;
     public final EObject ruleAtomic() throws RecognitionException {
         EObject current = null;
 
@@ -3942,10 +3931,10 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1537:28: ( ( ( () ( (lv_value_1_0= RULE_FLOAT ) ) ) | ( () ( (lv_value_3_0= RULE_INT ) ) ) | ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) ) | ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? ) | ( () ( (lv_value_11_0= 'now' ) ) ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1538:1: ( ( () ( (lv_value_1_0= RULE_FLOAT ) ) ) | ( () ( (lv_value_3_0= RULE_INT ) ) ) | ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) ) | ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? ) | ( () ( (lv_value_11_0= 'now' ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1533:28: ( ( ( () ( (lv_value_1_0= RULE_FLOAT ) ) ) | ( () ( (lv_value_3_0= RULE_INT ) ) ) | ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) ) | ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? ) | ( () ( (lv_value_11_0= 'now' ) ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1534:1: ( ( () ( (lv_value_1_0= RULE_FLOAT ) ) ) | ( () ( (lv_value_3_0= RULE_INT ) ) ) | ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) ) | ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? ) | ( () ( (lv_value_11_0= 'now' ) ) ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1538:1: ( ( () ( (lv_value_1_0= RULE_FLOAT ) ) ) | ( () ( (lv_value_3_0= RULE_INT ) ) ) | ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) ) | ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? ) | ( () ( (lv_value_11_0= 'now' ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1534:1: ( ( () ( (lv_value_1_0= RULE_FLOAT ) ) ) | ( () ( (lv_value_3_0= RULE_INT ) ) ) | ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) ) | ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? ) | ( () ( (lv_value_11_0= 'now' ) ) ) )
             int alt26=5;
             switch ( input.LA(1) ) {
             case RULE_FLOAT:
@@ -3983,13 +3972,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             switch (alt26) {
                 case 1 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1538:2: ( () ( (lv_value_1_0= RULE_FLOAT ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1534:2: ( () ( (lv_value_1_0= RULE_FLOAT ) ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1538:2: ( () ( (lv_value_1_0= RULE_FLOAT ) ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1538:3: () ( (lv_value_1_0= RULE_FLOAT ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1534:2: ( () ( (lv_value_1_0= RULE_FLOAT ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1534:3: () ( (lv_value_1_0= RULE_FLOAT ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1538:3: ()
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1539:5: 
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1534:3: ()
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1535:5: 
                     {
 
                             current = forceCreateModelElement(
@@ -3999,13 +3988,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1544:2: ( (lv_value_1_0= RULE_FLOAT ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1545:1: (lv_value_1_0= RULE_FLOAT )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1540:2: ( (lv_value_1_0= RULE_FLOAT ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1541:1: (lv_value_1_0= RULE_FLOAT )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1545:1: (lv_value_1_0= RULE_FLOAT )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1546:3: lv_value_1_0= RULE_FLOAT
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1541:1: (lv_value_1_0= RULE_FLOAT )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1542:3: lv_value_1_0= RULE_FLOAT
                     {
-                    lv_value_1_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleAtomic3397); 
+                    lv_value_1_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleAtomic3385); 
 
                     			newLeafNode(lv_value_1_0, grammarAccess.getAtomicAccess().getValueFLOATTerminalRuleCall_0_1_0()); 
                     		
@@ -4032,13 +4021,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1563:6: ( () ( (lv_value_3_0= RULE_INT ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1559:6: ( () ( (lv_value_3_0= RULE_INT ) ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1563:6: ( () ( (lv_value_3_0= RULE_INT ) ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1563:7: () ( (lv_value_3_0= RULE_INT ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1559:6: ( () ( (lv_value_3_0= RULE_INT ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1559:7: () ( (lv_value_3_0= RULE_INT ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1563:7: ()
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1564:5: 
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1559:7: ()
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1560:5: 
                     {
 
                             current = forceCreateModelElement(
@@ -4048,13 +4037,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1569:2: ( (lv_value_3_0= RULE_INT ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1570:1: (lv_value_3_0= RULE_INT )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1565:2: ( (lv_value_3_0= RULE_INT ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1566:1: (lv_value_3_0= RULE_INT )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1570:1: (lv_value_3_0= RULE_INT )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1571:3: lv_value_3_0= RULE_INT
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1566:1: (lv_value_3_0= RULE_INT )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1567:3: lv_value_3_0= RULE_INT
                     {
-                    lv_value_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleAtomic3436); 
+                    lv_value_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleAtomic3424); 
 
                     			newLeafNode(lv_value_3_0, grammarAccess.getAtomicAccess().getValueINTTerminalRuleCall_1_1_0()); 
                     		
@@ -4081,13 +4070,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1588:6: ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1584:6: ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1588:6: ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1588:7: () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1584:6: ( () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1584:7: () ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1588:7: ()
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1589:5: 
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1584:7: ()
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1585:5: 
                     {
 
                             current = forceCreateModelElement(
@@ -4097,13 +4086,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1594:2: ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1595:1: ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1590:2: ( ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1591:1: ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1595:1: ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1596:1: (lv_value_5_1= 'true' | lv_value_5_2= 'false' )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1591:1: ( (lv_value_5_1= 'true' | lv_value_5_2= 'false' ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1592:1: (lv_value_5_1= 'true' | lv_value_5_2= 'false' )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1596:1: (lv_value_5_1= 'true' | lv_value_5_2= 'false' )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1592:1: (lv_value_5_1= 'true' | lv_value_5_2= 'false' )
                     int alt24=2;
                     int LA24_0 = input.LA(1);
 
@@ -4121,9 +4110,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt24) {
                         case 1 :
-                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1597:3: lv_value_5_1= 'true'
+                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1593:3: lv_value_5_1= 'true'
                             {
-                            lv_value_5_1=(Token)match(input,39,FOLLOW_39_in_ruleAtomic3478); 
+                            lv_value_5_1=(Token)match(input,39,FOLLOW_39_in_ruleAtomic3466); 
 
                                     newLeafNode(lv_value_5_1, grammarAccess.getAtomicAccess().getValueTrueKeyword_2_1_0_0());
                                 
@@ -4137,9 +4126,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1609:8: lv_value_5_2= 'false'
+                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1605:8: lv_value_5_2= 'false'
                             {
-                            lv_value_5_2=(Token)match(input,40,FOLLOW_40_in_ruleAtomic3507); 
+                            lv_value_5_2=(Token)match(input,40,FOLLOW_40_in_ruleAtomic3495); 
 
                                     newLeafNode(lv_value_5_2, grammarAccess.getAtomicAccess().getValueFalseKeyword_2_1_0_1());
                                 
@@ -4168,13 +4157,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1625:6: ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1621:6: ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1625:6: ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1625:7: () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )?
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1621:6: ( () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )? )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1621:7: () ( (otherlv_7= RULE_ID ) ) (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )?
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1625:7: ()
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1626:5: 
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1621:7: ()
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1622:5: 
                     {
 
                             current = forceCreateModelElement(
@@ -4184,18 +4173,18 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1631:2: ( (otherlv_7= RULE_ID ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1632:1: (otherlv_7= RULE_ID )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1627:2: ( (otherlv_7= RULE_ID ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1628:1: (otherlv_7= RULE_ID )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1632:1: (otherlv_7= RULE_ID )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1633:3: otherlv_7= RULE_ID
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1628:1: (otherlv_7= RULE_ID )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1629:3: otherlv_7= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getAtomicRule());
                     	        }
                             
-                    otherlv_7=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAtomic3560); 
+                    otherlv_7=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAtomic3548); 
 
                     		newLeafNode(otherlv_7, grammarAccess.getAtomicAccess().getRefReferenceTypeCrossReference_3_1_0()); 
                     	
@@ -4205,7 +4194,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1644:2: (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )?
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1640:2: (otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) ) )?
                     int alt25=2;
                     int LA25_0 = input.LA(1);
 
@@ -4214,22 +4203,22 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt25) {
                         case 1 :
-                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1644:4: otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) )
+                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1640:4: otherlv_8= 'at' ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) )
                             {
-                            otherlv_8=(Token)match(input,41,FOLLOW_41_in_ruleAtomic3573); 
+                            otherlv_8=(Token)match(input,41,FOLLOW_41_in_ruleAtomic3561); 
 
                                 	newLeafNode(otherlv_8, grammarAccess.getAtomicAccess().getAtKeyword_3_2_0());
                                 
-                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1648:1: ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) )
-                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1649:1: (lv_fluentValueSample_9_0= ruleAtTimePrimary )
+                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1644:1: ( (lv_fluentValueSample_9_0= ruleAtTimePrimary ) )
+                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1645:1: (lv_fluentValueSample_9_0= ruleAtTimePrimary )
                             {
-                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1649:1: (lv_fluentValueSample_9_0= ruleAtTimePrimary )
-                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1650:3: lv_fluentValueSample_9_0= ruleAtTimePrimary
+                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1645:1: (lv_fluentValueSample_9_0= ruleAtTimePrimary )
+                            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1646:3: lv_fluentValueSample_9_0= ruleAtTimePrimary
                             {
                              
                             	        newCompositeNode(grammarAccess.getAtomicAccess().getFluentValueSampleAtTimePrimaryParserRuleCall_3_2_1_0()); 
                             	    
-                            pushFollow(FOLLOW_ruleAtTimePrimary_in_ruleAtomic3594);
+                            pushFollow(FOLLOW_ruleAtTimePrimary_in_ruleAtomic3582);
                             lv_fluentValueSample_9_0=ruleAtTimePrimary();
 
                             state._fsp--;
@@ -4264,13 +4253,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1667:6: ( () ( (lv_value_11_0= 'now' ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1663:6: ( () ( (lv_value_11_0= 'now' ) ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1667:6: ( () ( (lv_value_11_0= 'now' ) ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1667:7: () ( (lv_value_11_0= 'now' ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1663:6: ( () ( (lv_value_11_0= 'now' ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1663:7: () ( (lv_value_11_0= 'now' ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1667:7: ()
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1668:5: 
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1663:7: ()
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1664:5: 
                     {
 
                             current = forceCreateModelElement(
@@ -4280,13 +4269,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1673:2: ( (lv_value_11_0= 'now' ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1674:1: (lv_value_11_0= 'now' )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1669:2: ( (lv_value_11_0= 'now' ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1670:1: (lv_value_11_0= 'now' )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1674:1: (lv_value_11_0= 'now' )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1675:3: lv_value_11_0= 'now'
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1670:1: (lv_value_11_0= 'now' )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1671:3: lv_value_11_0= 'now'
                     {
-                    lv_value_11_0=(Token)match(input,42,FOLLOW_42_in_ruleAtomic3631); 
+                    lv_value_11_0=(Token)match(input,42,FOLLOW_42_in_ruleAtomic3619); 
 
                             newLeafNode(lv_value_11_0, grammarAccess.getAtomicAccess().getValueNowKeyword_4_1_0());
                         
@@ -4329,7 +4318,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAtTimeExpression"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1698:1: entryRuleAtTimeExpression returns [EObject current=null] : iv_ruleAtTimeExpression= ruleAtTimeExpression EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1694:1: entryRuleAtTimeExpression returns [EObject current=null] : iv_ruleAtTimeExpression= ruleAtTimeExpression EOF ;
     public final EObject entryRuleAtTimeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4337,17 +4326,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1699:2: (iv_ruleAtTimeExpression= ruleAtTimeExpression EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1700:2: iv_ruleAtTimeExpression= ruleAtTimeExpression EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1695:2: (iv_ruleAtTimeExpression= ruleAtTimeExpression EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1696:2: iv_ruleAtTimeExpression= ruleAtTimeExpression EOF
             {
              newCompositeNode(grammarAccess.getAtTimeExpressionRule()); 
-            pushFollow(FOLLOW_ruleAtTimeExpression_in_entryRuleAtTimeExpression3683);
+            pushFollow(FOLLOW_ruleAtTimeExpression_in_entryRuleAtTimeExpression3671);
             iv_ruleAtTimeExpression=ruleAtTimeExpression();
 
             state._fsp--;
 
              current =iv_ruleAtTimeExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAtTimeExpression3693); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtTimeExpression3681); 
 
             }
 
@@ -4365,7 +4354,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAtTimeExpression"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1707:1: ruleAtTimeExpression returns [EObject current=null] : (this_AtTimePrimary_0= ruleAtTimePrimary ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )* ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1703:1: ruleAtTimeExpression returns [EObject current=null] : (this_AtTimePrimary_0= ruleAtTimePrimary ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )* ) ;
     public final EObject ruleAtTimeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4379,16 +4368,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1710:28: ( (this_AtTimePrimary_0= ruleAtTimePrimary ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )* ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1711:1: (this_AtTimePrimary_0= ruleAtTimePrimary ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1706:28: ( (this_AtTimePrimary_0= ruleAtTimePrimary ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )* ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1707:1: (this_AtTimePrimary_0= ruleAtTimePrimary ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )* )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1711:1: (this_AtTimePrimary_0= ruleAtTimePrimary ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )* )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1712:5: this_AtTimePrimary_0= ruleAtTimePrimary ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1707:1: (this_AtTimePrimary_0= ruleAtTimePrimary ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )* )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1708:5: this_AtTimePrimary_0= ruleAtTimePrimary ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )*
             {
              
                     newCompositeNode(grammarAccess.getAtTimeExpressionAccess().getAtTimePrimaryParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleAtTimePrimary_in_ruleAtTimeExpression3740);
+            pushFollow(FOLLOW_ruleAtTimePrimary_in_ruleAtTimeExpression3728);
             this_AtTimePrimary_0=ruleAtTimePrimary();
 
             state._fsp--;
@@ -4397,7 +4386,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     current = this_AtTimePrimary_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1720:1: ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )*
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1716:1: ( () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) ) )*
             loop28:
             do {
                 int alt28=2;
@@ -4410,10 +4399,10 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                 switch (alt28) {
             	case 1 :
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1720:2: () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1716:2: () ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) ) ( (lv_right_3_0= ruleAtTimePrimary ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1720:2: ()
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1721:5: 
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1716:2: ()
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1717:5: 
             	    {
 
             	            current = forceCreateModelElementAndSet(
@@ -4423,13 +4412,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1726:2: ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1727:1: ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1722:2: ( ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1723:1: ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1727:1: ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1728:1: (lv_op_2_1= '-' | lv_op_2_2= '+' )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1723:1: ( (lv_op_2_1= '-' | lv_op_2_2= '+' ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1724:1: (lv_op_2_1= '-' | lv_op_2_2= '+' )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1728:1: (lv_op_2_1= '-' | lv_op_2_2= '+' )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1724:1: (lv_op_2_1= '-' | lv_op_2_2= '+' )
             	    int alt27=2;
             	    int LA27_0 = input.LA(1);
 
@@ -4447,9 +4436,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt27) {
             	        case 1 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1729:3: lv_op_2_1= '-'
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1725:3: lv_op_2_1= '-'
             	            {
-            	            lv_op_2_1=(Token)match(input,33,FOLLOW_33_in_ruleAtTimeExpression3769); 
+            	            lv_op_2_1=(Token)match(input,33,FOLLOW_33_in_ruleAtTimeExpression3757); 
 
             	                    newLeafNode(lv_op_2_1, grammarAccess.getAtTimeExpressionAccess().getOpHyphenMinusKeyword_1_1_0_0());
             	                
@@ -4463,9 +4452,9 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1741:8: lv_op_2_2= '+'
+            	            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1737:8: lv_op_2_2= '+'
             	            {
-            	            lv_op_2_2=(Token)match(input,32,FOLLOW_32_in_ruleAtTimeExpression3798); 
+            	            lv_op_2_2=(Token)match(input,32,FOLLOW_32_in_ruleAtTimeExpression3786); 
 
             	                    newLeafNode(lv_op_2_2, grammarAccess.getAtTimeExpressionAccess().getOpPlusSignKeyword_1_1_0_1());
             	                
@@ -4487,16 +4476,16 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1756:2: ( (lv_right_3_0= ruleAtTimePrimary ) )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1757:1: (lv_right_3_0= ruleAtTimePrimary )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1752:2: ( (lv_right_3_0= ruleAtTimePrimary ) )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1753:1: (lv_right_3_0= ruleAtTimePrimary )
             	    {
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1757:1: (lv_right_3_0= ruleAtTimePrimary )
-            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1758:3: lv_right_3_0= ruleAtTimePrimary
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1753:1: (lv_right_3_0= ruleAtTimePrimary )
+            	    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1754:3: lv_right_3_0= ruleAtTimePrimary
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getAtTimeExpressionAccess().getRightAtTimePrimaryParserRuleCall_1_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAtTimePrimary_in_ruleAtTimeExpression3835);
+            	    pushFollow(FOLLOW_ruleAtTimePrimary_in_ruleAtTimeExpression3823);
             	    lv_right_3_0=ruleAtTimePrimary();
 
             	    state._fsp--;
@@ -4548,7 +4537,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAtTimePrimary"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1782:1: entryRuleAtTimePrimary returns [EObject current=null] : iv_ruleAtTimePrimary= ruleAtTimePrimary EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1778:1: entryRuleAtTimePrimary returns [EObject current=null] : iv_ruleAtTimePrimary= ruleAtTimePrimary EOF ;
     public final EObject entryRuleAtTimePrimary() throws RecognitionException {
         EObject current = null;
 
@@ -4556,17 +4545,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1783:2: (iv_ruleAtTimePrimary= ruleAtTimePrimary EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1784:2: iv_ruleAtTimePrimary= ruleAtTimePrimary EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1779:2: (iv_ruleAtTimePrimary= ruleAtTimePrimary EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1780:2: iv_ruleAtTimePrimary= ruleAtTimePrimary EOF
             {
              newCompositeNode(grammarAccess.getAtTimePrimaryRule()); 
-            pushFollow(FOLLOW_ruleAtTimePrimary_in_entryRuleAtTimePrimary3873);
+            pushFollow(FOLLOW_ruleAtTimePrimary_in_entryRuleAtTimePrimary3861);
             iv_ruleAtTimePrimary=ruleAtTimePrimary();
 
             state._fsp--;
 
              current =iv_ruleAtTimePrimary; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAtTimePrimary3883); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtTimePrimary3871); 
 
             }
 
@@ -4584,7 +4573,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAtTimePrimary"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1791:1: ruleAtTimePrimary returns [EObject current=null] : ( (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' ) | this_AtTimeAtomic_3= ruleAtTimeAtomic ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1787:1: ruleAtTimePrimary returns [EObject current=null] : ( (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' ) | this_AtTimeAtomic_3= ruleAtTimeAtomic ) ;
     public final EObject ruleAtTimePrimary() throws RecognitionException {
         EObject current = null;
 
@@ -4598,10 +4587,10 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1794:28: ( ( (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' ) | this_AtTimeAtomic_3= ruleAtTimeAtomic ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1795:1: ( (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' ) | this_AtTimeAtomic_3= ruleAtTimeAtomic )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1790:28: ( ( (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' ) | this_AtTimeAtomic_3= ruleAtTimeAtomic ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1791:1: ( (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' ) | this_AtTimeAtomic_3= ruleAtTimeAtomic )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1795:1: ( (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' ) | this_AtTimeAtomic_3= ruleAtTimeAtomic )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1791:1: ( (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' ) | this_AtTimeAtomic_3= ruleAtTimeAtomic )
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -4619,19 +4608,19 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             }
             switch (alt29) {
                 case 1 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1795:2: (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1791:2: (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1795:2: (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1795:4: otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')'
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1791:2: (otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')' )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1791:4: otherlv_0= '(' this_AtTimeExpression_1= ruleAtTimeExpression otherlv_2= ')'
                     {
-                    otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleAtTimePrimary3921); 
+                    otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleAtTimePrimary3909); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getAtTimePrimaryAccess().getLeftParenthesisKeyword_0_0());
                         
                      
                             newCompositeNode(grammarAccess.getAtTimePrimaryAccess().getAtTimeExpressionParserRuleCall_0_1()); 
                         
-                    pushFollow(FOLLOW_ruleAtTimeExpression_in_ruleAtTimePrimary3943);
+                    pushFollow(FOLLOW_ruleAtTimeExpression_in_ruleAtTimePrimary3931);
                     this_AtTimeExpression_1=ruleAtTimeExpression();
 
                     state._fsp--;
@@ -4640,7 +4629,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                             current = this_AtTimeExpression_1; 
                             afterParserOrEnumRuleCall();
                         
-                    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleAtTimePrimary3954); 
+                    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleAtTimePrimary3942); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getAtTimePrimaryAccess().getRightParenthesisKeyword_0_2());
                         
@@ -4651,12 +4640,12 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1814:5: this_AtTimeAtomic_3= ruleAtTimeAtomic
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1810:5: this_AtTimeAtomic_3= ruleAtTimeAtomic
                     {
                      
                             newCompositeNode(grammarAccess.getAtTimePrimaryAccess().getAtTimeAtomicParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleAtTimeAtomic_in_ruleAtTimePrimary3983);
+                    pushFollow(FOLLOW_ruleAtTimeAtomic_in_ruleAtTimePrimary3971);
                     this_AtTimeAtomic_3=ruleAtTimeAtomic();
 
                     state._fsp--;
@@ -4689,7 +4678,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAtTimeAtomic"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1830:1: entryRuleAtTimeAtomic returns [EObject current=null] : iv_ruleAtTimeAtomic= ruleAtTimeAtomic EOF ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1826:1: entryRuleAtTimeAtomic returns [EObject current=null] : iv_ruleAtTimeAtomic= ruleAtTimeAtomic EOF ;
     public final EObject entryRuleAtTimeAtomic() throws RecognitionException {
         EObject current = null;
 
@@ -4697,17 +4686,17 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1831:2: (iv_ruleAtTimeAtomic= ruleAtTimeAtomic EOF )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1832:2: iv_ruleAtTimeAtomic= ruleAtTimeAtomic EOF
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1827:2: (iv_ruleAtTimeAtomic= ruleAtTimeAtomic EOF )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1828:2: iv_ruleAtTimeAtomic= ruleAtTimeAtomic EOF
             {
              newCompositeNode(grammarAccess.getAtTimeAtomicRule()); 
-            pushFollow(FOLLOW_ruleAtTimeAtomic_in_entryRuleAtTimeAtomic4018);
+            pushFollow(FOLLOW_ruleAtTimeAtomic_in_entryRuleAtTimeAtomic4006);
             iv_ruleAtTimeAtomic=ruleAtTimeAtomic();
 
             state._fsp--;
 
              current =iv_ruleAtTimeAtomic; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAtTimeAtomic4028); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtTimeAtomic4016); 
 
             }
 
@@ -4725,7 +4714,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAtTimeAtomic"
-    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1839:1: ruleAtTimeAtomic returns [EObject current=null] : ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_atTimeValue_3_0= 'now' ) ) ) ) ;
+    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1835:1: ruleAtTimeAtomic returns [EObject current=null] : ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_atTimeValue_3_0= 'now' ) ) ) ) ;
     public final EObject ruleAtTimeAtomic() throws RecognitionException {
         EObject current = null;
 
@@ -4735,10 +4724,10 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1842:28: ( ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_atTimeValue_3_0= 'now' ) ) ) ) )
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1843:1: ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_atTimeValue_3_0= 'now' ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1838:28: ( ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_atTimeValue_3_0= 'now' ) ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1839:1: ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_atTimeValue_3_0= 'now' ) ) ) )
             {
-            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1843:1: ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_atTimeValue_3_0= 'now' ) ) ) )
+            // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1839:1: ( ( () ( (lv_value_1_0= RULE_INT ) ) ) | ( () ( (lv_atTimeValue_3_0= 'now' ) ) ) )
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -4756,13 +4745,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
             }
             switch (alt30) {
                 case 1 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1843:2: ( () ( (lv_value_1_0= RULE_INT ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1839:2: ( () ( (lv_value_1_0= RULE_INT ) ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1843:2: ( () ( (lv_value_1_0= RULE_INT ) ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1843:3: () ( (lv_value_1_0= RULE_INT ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1839:2: ( () ( (lv_value_1_0= RULE_INT ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1839:3: () ( (lv_value_1_0= RULE_INT ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1843:3: ()
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1844:5: 
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1839:3: ()
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1840:5: 
                     {
 
                             current = forceCreateModelElement(
@@ -4772,13 +4761,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1849:2: ( (lv_value_1_0= RULE_INT ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1850:1: (lv_value_1_0= RULE_INT )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1845:2: ( (lv_value_1_0= RULE_INT ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1846:1: (lv_value_1_0= RULE_INT )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1850:1: (lv_value_1_0= RULE_INT )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1851:3: lv_value_1_0= RULE_INT
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1846:1: (lv_value_1_0= RULE_INT )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1847:3: lv_value_1_0= RULE_INT
                     {
-                    lv_value_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleAtTimeAtomic4080); 
+                    lv_value_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleAtTimeAtomic4068); 
 
                     			newLeafNode(lv_value_1_0, grammarAccess.getAtTimeAtomicAccess().getValueINTTerminalRuleCall_0_1_0()); 
                     		
@@ -4805,13 +4794,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1868:6: ( () ( (lv_atTimeValue_3_0= 'now' ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1864:6: ( () ( (lv_atTimeValue_3_0= 'now' ) ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1868:6: ( () ( (lv_atTimeValue_3_0= 'now' ) ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1868:7: () ( (lv_atTimeValue_3_0= 'now' ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1864:6: ( () ( (lv_atTimeValue_3_0= 'now' ) ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1864:7: () ( (lv_atTimeValue_3_0= 'now' ) )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1868:7: ()
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1869:5: 
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1864:7: ()
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1865:5: 
                     {
 
                             current = forceCreateModelElement(
@@ -4821,13 +4810,13 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1874:2: ( (lv_atTimeValue_3_0= 'now' ) )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1875:1: (lv_atTimeValue_3_0= 'now' )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1870:2: ( (lv_atTimeValue_3_0= 'now' ) )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1871:1: (lv_atTimeValue_3_0= 'now' )
                     {
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1875:1: (lv_atTimeValue_3_0= 'now' )
-                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1876:3: lv_atTimeValue_3_0= 'now'
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1871:1: (lv_atTimeValue_3_0= 'now' )
+                    // ../org.xtext.ecerule/src-gen/org/xtext/ecerule/parser/antlr/internal/InternalEce.g:1872:3: lv_atTimeValue_3_0= 'now'
                     {
-                    lv_atTimeValue_3_0=(Token)match(input,42,FOLLOW_42_in_ruleAtTimeAtomic4120); 
+                    lv_atTimeValue_3_0=(Token)match(input,42,FOLLOW_42_in_ruleAtTimeAtomic4108); 
 
                             newLeafNode(lv_atTimeValue_3_0, grammarAccess.getAtTimeAtomicAccess().getAtTimeValueNowKeyword_1_1_0());
                         
@@ -4879,7 +4868,7 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleStatement_in_entryRuleStatement166 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStatement176 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_12_in_ruleStatement213 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleEvent_in_ruleStatement234 = new BitSet(new long[]{0x0000000000028000L});
+    public static final BitSet FOLLOW_ruleEvent_in_ruleStatement234 = new BitSet(new long[]{0x0000000000062000L});
     public static final BitSet FOLLOW_ruleContextsList_in_ruleStatement255 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_13_in_ruleStatement267 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent303 = new BitSet(new long[]{0x0000000000000000L});
@@ -4895,128 +4884,127 @@ public class InternalEceParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_ID_in_ruleEventFeature531 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleContextsList_in_entryRuleContextsList571 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleContextsList581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEcContextsList_in_ruleContextsList627 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleContextsList640 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_ruleExpContextsList_in_ruleContextsList661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEcContextsList_in_entryRuleEcContextsList698 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEcContextsList708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEcContext_in_ruleEcContextsList754 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleEcContextsList767 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_ruleEcContext_in_ruleEcContextsList788 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_ruleExpContextsList_in_entryRuleExpContextsList826 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExpContextsList836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpContext_in_ruleExpContextsList882 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleExpContextsList895 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_ruleExpContext_in_ruleExpContextsList916 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_ruleEcContext_in_entryRuleEcContext954 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEcContext964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleEcContext1001 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleFluent_in_ruleEcContext1022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpContext_in_entryRuleExpContext1058 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExpContext1068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleExpContext1105 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_ruleConditionRule_in_ruleExpContext1126 = new BitSet(new long[]{0x0000000000780002L});
-    public static final BitSet FOLLOW_ruleAllenOp_in_ruleExpContext1148 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_rulePlusOrMinus_in_ruleExpContext1169 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_19_in_ruleExpContext1184 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_ruleConditionRule_in_ruleExpContext1205 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAllenOp_in_entryRuleAllenOp1243 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAllenOp1253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleAllenOp1307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleAllenOp1336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleAllenOp1365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFluent_in_entryRuleFluent1417 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFluent1427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFluent1469 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleFluent1487 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_ruleToRule_in_ruleFluent1508 = new BitSet(new long[]{0x0000000000480002L});
-    public static final BitSet FOLLOW_22_in_ruleFluent1522 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_ruleInRule_in_ruleFluent1543 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_19_in_ruleFluent1558 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_ruleConditionRule_in_ruleFluent1579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConditionRule_in_entryRuleConditionRule1617 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConditionRule1627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleConditionRule1682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleToRule_in_entryRuleToRule1718 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleToRule1728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePlusOrMinus_in_ruleToRule1783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInRule_in_entryRuleInRule1819 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInRule1829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePlusOrMinus_in_ruleInRule1884 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression1920 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExpression1930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOr_in_ruleExpression1976 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOr_in_entryRuleOr2010 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOr2020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnd_in_ruleOr2067 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleOr2088 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_ruleAnd_in_ruleOr2109 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_ruleAnd_in_entryRuleAnd2147 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAnd2157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEquality_in_ruleAnd2204 = new BitSet(new long[]{0x0000000002000002L});
-    public static final BitSet FOLLOW_25_in_ruleAnd2225 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_ruleEquality_in_ruleAnd2246 = new BitSet(new long[]{0x0000000002000002L});
-    public static final BitSet FOLLOW_ruleEquality_in_entryRuleEquality2284 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEquality2294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparison_in_ruleEquality2341 = new BitSet(new long[]{0x000000000C000002L});
-    public static final BitSet FOLLOW_26_in_ruleEquality2370 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_27_in_ruleEquality2399 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_ruleComparison_in_ruleEquality2436 = new BitSet(new long[]{0x000000000C000002L});
-    public static final BitSet FOLLOW_ruleComparison_in_entryRuleComparison2474 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComparison2484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePlusOrMinus_in_ruleComparison2531 = new BitSet(new long[]{0x00000000F0000002L});
-    public static final BitSet FOLLOW_28_in_ruleComparison2560 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_29_in_ruleComparison2589 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_30_in_ruleComparison2618 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_31_in_ruleComparison2647 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_rulePlusOrMinus_in_ruleComparison2684 = new BitSet(new long[]{0x00000000F0000002L});
-    public static final BitSet FOLLOW_rulePlusOrMinus_in_entryRulePlusOrMinus2722 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePlusOrMinus2732 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMulOrDiv_in_rulePlusOrMinus2779 = new BitSet(new long[]{0x0000000300000002L});
-    public static final BitSet FOLLOW_32_in_rulePlusOrMinus2802 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_33_in_rulePlusOrMinus2831 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_ruleMulOrDiv_in_rulePlusOrMinus2854 = new BitSet(new long[]{0x0000000300000002L});
-    public static final BitSet FOLLOW_ruleMulOrDiv_in_entryRuleMulOrDiv2892 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMulOrDiv2902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimary_in_ruleMulOrDiv2949 = new BitSet(new long[]{0x0000003C00000002L});
-    public static final BitSet FOLLOW_34_in_ruleMulOrDiv2978 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_35_in_ruleMulOrDiv3007 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_36_in_ruleMulOrDiv3036 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_37_in_ruleMulOrDiv3065 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_rulePrimary_in_ruleMulOrDiv3102 = new BitSet(new long[]{0x0000003C00000002L});
-    public static final BitSet FOLLOW_rulePrimary_in_entryRulePrimary3140 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePrimary3150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rulePrimary3188 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_ruleExpression_in_rulePrimary3210 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_rulePrimary3221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rulePrimary3250 = new BitSet(new long[]{0x000005C000004070L});
-    public static final BitSet FOLLOW_rulePrimary_in_rulePrimary3271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtomic_in_rulePrimary3300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtomic_in_entryRuleAtomic3335 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAtomic3345 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleAtomic3397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleAtomic3436 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleAtomic3478 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleAtomic3507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAtomic3560 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_41_in_ruleAtomic3573 = new BitSet(new long[]{0x0000040000004040L});
-    public static final BitSet FOLLOW_ruleAtTimePrimary_in_ruleAtomic3594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleAtomic3631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtTimeExpression_in_entryRuleAtTimeExpression3683 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAtTimeExpression3693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtTimePrimary_in_ruleAtTimeExpression3740 = new BitSet(new long[]{0x0000000300000002L});
-    public static final BitSet FOLLOW_33_in_ruleAtTimeExpression3769 = new BitSet(new long[]{0x0000040000004040L});
-    public static final BitSet FOLLOW_32_in_ruleAtTimeExpression3798 = new BitSet(new long[]{0x0000040000004040L});
-    public static final BitSet FOLLOW_ruleAtTimePrimary_in_ruleAtTimeExpression3835 = new BitSet(new long[]{0x0000000300000002L});
-    public static final BitSet FOLLOW_ruleAtTimePrimary_in_entryRuleAtTimePrimary3873 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAtTimePrimary3883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleAtTimePrimary3921 = new BitSet(new long[]{0x0000040000004040L});
-    public static final BitSet FOLLOW_ruleAtTimeExpression_in_ruleAtTimePrimary3943 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleAtTimePrimary3954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtTimeAtomic_in_ruleAtTimePrimary3983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtTimeAtomic_in_entryRuleAtTimeAtomic4018 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAtTimeAtomic4028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleAtTimeAtomic4080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleAtTimeAtomic4120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEcContextsList_in_ruleContextsList627 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_ruleExpContextsList_in_ruleContextsList649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEcContextsList_in_entryRuleEcContextsList686 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEcContextsList696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEcContext_in_ruleEcContextsList742 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleEcContextsList755 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_ruleEcContext_in_ruleEcContextsList776 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_ruleExpContextsList_in_entryRuleExpContextsList814 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExpContextsList824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpContext_in_ruleExpContextsList870 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleExpContextsList883 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_ruleExpContext_in_ruleExpContextsList904 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_ruleEcContext_in_entryRuleEcContext942 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEcContext952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleEcContext989 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleFluent_in_ruleEcContext1010 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpContext_in_entryRuleExpContext1046 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExpContext1056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleExpContext1093 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_ruleConditionRule_in_ruleExpContext1114 = new BitSet(new long[]{0x0000000000780002L});
+    public static final BitSet FOLLOW_ruleAllenOp_in_ruleExpContext1136 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_rulePlusOrMinus_in_ruleExpContext1157 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleExpContext1172 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_ruleConditionRule_in_ruleExpContext1193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAllenOp_in_entryRuleAllenOp1231 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAllenOp1241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleAllenOp1295 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleAllenOp1324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleAllenOp1353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFluent_in_entryRuleFluent1405 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFluent1415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFluent1457 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleFluent1475 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_ruleToRule_in_ruleFluent1496 = new BitSet(new long[]{0x0000000000480002L});
+    public static final BitSet FOLLOW_22_in_ruleFluent1510 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_ruleInRule_in_ruleFluent1531 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleFluent1546 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_ruleConditionRule_in_ruleFluent1567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConditionRule_in_entryRuleConditionRule1605 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConditionRule1615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleConditionRule1670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleToRule_in_entryRuleToRule1706 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleToRule1716 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePlusOrMinus_in_ruleToRule1771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInRule_in_entryRuleInRule1807 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInRule1817 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePlusOrMinus_in_ruleInRule1872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression1908 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExpression1918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOr_in_ruleExpression1964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOr_in_entryRuleOr1998 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOr2008 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnd_in_ruleOr2055 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_24_in_ruleOr2076 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_ruleAnd_in_ruleOr2097 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_ruleAnd_in_entryRuleAnd2135 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAnd2145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEquality_in_ruleAnd2192 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_25_in_ruleAnd2213 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_ruleEquality_in_ruleAnd2234 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_ruleEquality_in_entryRuleEquality2272 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEquality2282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparison_in_ruleEquality2329 = new BitSet(new long[]{0x000000000C000002L});
+    public static final BitSet FOLLOW_26_in_ruleEquality2358 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_27_in_ruleEquality2387 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_ruleComparison_in_ruleEquality2424 = new BitSet(new long[]{0x000000000C000002L});
+    public static final BitSet FOLLOW_ruleComparison_in_entryRuleComparison2462 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComparison2472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePlusOrMinus_in_ruleComparison2519 = new BitSet(new long[]{0x00000000F0000002L});
+    public static final BitSet FOLLOW_28_in_ruleComparison2548 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_29_in_ruleComparison2577 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_30_in_ruleComparison2606 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_31_in_ruleComparison2635 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_rulePlusOrMinus_in_ruleComparison2672 = new BitSet(new long[]{0x00000000F0000002L});
+    public static final BitSet FOLLOW_rulePlusOrMinus_in_entryRulePlusOrMinus2710 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePlusOrMinus2720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMulOrDiv_in_rulePlusOrMinus2767 = new BitSet(new long[]{0x0000000300000002L});
+    public static final BitSet FOLLOW_32_in_rulePlusOrMinus2790 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_33_in_rulePlusOrMinus2819 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_ruleMulOrDiv_in_rulePlusOrMinus2842 = new BitSet(new long[]{0x0000000300000002L});
+    public static final BitSet FOLLOW_ruleMulOrDiv_in_entryRuleMulOrDiv2880 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMulOrDiv2890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimary_in_ruleMulOrDiv2937 = new BitSet(new long[]{0x0000003C00000002L});
+    public static final BitSet FOLLOW_34_in_ruleMulOrDiv2966 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_35_in_ruleMulOrDiv2995 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_36_in_ruleMulOrDiv3024 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_37_in_ruleMulOrDiv3053 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_rulePrimary_in_ruleMulOrDiv3090 = new BitSet(new long[]{0x0000003C00000002L});
+    public static final BitSet FOLLOW_rulePrimary_in_entryRulePrimary3128 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePrimary3138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rulePrimary3176 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_ruleExpression_in_rulePrimary3198 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_rulePrimary3209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rulePrimary3238 = new BitSet(new long[]{0x000005C000004070L});
+    public static final BitSet FOLLOW_rulePrimary_in_rulePrimary3259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtomic_in_rulePrimary3288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtomic_in_entryRuleAtomic3323 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtomic3333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleAtomic3385 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleAtomic3424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleAtomic3466 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleAtomic3495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAtomic3548 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_41_in_ruleAtomic3561 = new BitSet(new long[]{0x0000040000004040L});
+    public static final BitSet FOLLOW_ruleAtTimePrimary_in_ruleAtomic3582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleAtomic3619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtTimeExpression_in_entryRuleAtTimeExpression3671 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtTimeExpression3681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtTimePrimary_in_ruleAtTimeExpression3728 = new BitSet(new long[]{0x0000000300000002L});
+    public static final BitSet FOLLOW_33_in_ruleAtTimeExpression3757 = new BitSet(new long[]{0x0000040000004040L});
+    public static final BitSet FOLLOW_32_in_ruleAtTimeExpression3786 = new BitSet(new long[]{0x0000040000004040L});
+    public static final BitSet FOLLOW_ruleAtTimePrimary_in_ruleAtTimeExpression3823 = new BitSet(new long[]{0x0000000300000002L});
+    public static final BitSet FOLLOW_ruleAtTimePrimary_in_entryRuleAtTimePrimary3861 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtTimePrimary3871 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleAtTimePrimary3909 = new BitSet(new long[]{0x0000040000004040L});
+    public static final BitSet FOLLOW_ruleAtTimeExpression_in_ruleAtTimePrimary3931 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleAtTimePrimary3942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtTimeAtomic_in_ruleAtTimePrimary3971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtTimeAtomic_in_entryRuleAtTimeAtomic4006 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtTimeAtomic4016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleAtTimeAtomic4068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleAtTimeAtomic4108 = new BitSet(new long[]{0x0000000000000002L});
 
 }

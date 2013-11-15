@@ -1,5 +1,6 @@
 package org.xtext.ecerule.generator;
 
+import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import java.util.Arrays;
 import org.eclipse.emf.common.util.EList;
@@ -101,12 +102,9 @@ public class EceGenerator implements IGenerator {
       for(final Statement stm : _statements) {
         _builder.append("statement = new Statement();");
         _builder.newLine();
-        CharSequence _compileEvent = this.compileEvent(stm);
-        _builder.append(_compileEvent, "");
-        _builder.append(" \t\t");
         _builder.append("\t\t\t\t\t\t");
         CharSequence _compileContextsList = this.compileContextsList(stm);
-        _builder.append(_compileContextsList, "");
+        _builder.append(_compileContextsList, "						");
         _builder.append("\t");
         _builder.append("\t\t\t\t\t\t");
         _builder.newLineIfNotEmpty();
@@ -164,14 +162,20 @@ public class EceGenerator implements IGenerator {
     {
       ContextsList _contextsList = stm.getContextsList();
       ExpContextsList _expContextsList = _contextsList.getExpContextsList();
-      EList<ExpContext> _expContexts = _expContextsList.getExpContexts();
-      for(final ExpContext expContext : _expContexts) {
-        CharSequence _compileExpContext = this.compileExpContext(expContext, stm);
-        _builder.append(_compileExpContext, "");
-        _builder.newLineIfNotEmpty();
+      boolean _notEquals = (!Objects.equal(_expContextsList, null));
+      if (_notEquals) {
+        {
+          ContextsList _contextsList_1 = stm.getContextsList();
+          ExpContextsList _expContextsList_1 = _contextsList_1.getExpContextsList();
+          EList<ExpContext> _expContexts = _expContextsList_1.getExpContexts();
+          for(final ExpContext expContext : _expContexts) {
+            CharSequence _compileExpContext = this.compileExpContext(expContext, stm);
+            _builder.append(_compileExpContext, "");
+            _builder.newLineIfNotEmpty();
+          }
+        }
       }
     }
-    _builder.newLine();
     return _builder;
   }
   

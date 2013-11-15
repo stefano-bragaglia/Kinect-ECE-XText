@@ -325,23 +325,19 @@ ruleContextsList returns [EObject current=null]
 	    }
 
 )
-)?	otherlv_1=',' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getContextsListAccess().getCommaKeyword_1());
-    }
-(
+)?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getContextsListAccess().getExpContextsListExpContextsListParserRuleCall_1_0()); 
 	    }
-		lv_expContextsList_2_0=ruleExpContextsList		{
+		lv_expContextsList_1_0=ruleExpContextsList		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getContextsListRule());
 	        }
        		set(
        			$current, 
        			"expContextsList",
-        		lv_expContextsList_2_0, 
+        		lv_expContextsList_1_0, 
         		"ExpContextsList");
 	        afterParserOrEnumRuleCall();
 	    }

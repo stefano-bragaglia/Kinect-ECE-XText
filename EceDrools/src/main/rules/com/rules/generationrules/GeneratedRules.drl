@@ -9,3 +9,10 @@ $evnow: EventNow(this.getEventName().equals("siAlza"), $:et this.getExpTimeFC())
 then
 insert(new Expectation(org.xtext.ecerule.model.conditions.relations.SameDescr@1bd20bbe, $et+10))
 end
+
+rule "Expectation Success - siAlza"
+when
+$evnow: EventNow(this.getEventName().equals("siAlza"), $:et this.getExpTimeFC())
+then
+insert(new Expectation(org.xtext.ecerule.model.conditions.relations.SameDescr@7080d6b4, $et+10))
+end
