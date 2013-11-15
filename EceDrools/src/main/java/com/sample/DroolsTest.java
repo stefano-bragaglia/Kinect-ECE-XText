@@ -52,6 +52,11 @@ public class DroolsTest {
             
 //          ************************************************************
             Statement stm = new Statement();
+            
+            Event event = new Event();
+            String eventName = "SiAlza";
+            event.setEventName(eventName);
+            stm.setEvent(event);
 			
 			
             ExpContext expContext = new ExpContext();

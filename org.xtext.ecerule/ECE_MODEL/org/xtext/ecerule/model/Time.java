@@ -36,7 +36,7 @@ public class Time implements TimeInterface {
 		return timeValueExpr;
 	}
 	
-	public double getTimevalue(){
+	public double getTimeValue(){
 		return this.timeValueExpr.validate();
 		
 	}

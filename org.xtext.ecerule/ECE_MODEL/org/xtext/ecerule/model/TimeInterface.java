@@ -9,5 +9,7 @@ public interface TimeInterface {
 	public String getAllenOp();
 
 	public ExpressionInterface getTimeValueExpr();
+	
+	public double getTimeValue();
 
 }

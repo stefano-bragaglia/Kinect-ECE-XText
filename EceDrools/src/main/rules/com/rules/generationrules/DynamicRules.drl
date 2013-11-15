@@ -21,6 +21,7 @@ rule "Parse Statements"
         PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(path, true)));
         out.println();
         
+        
         out.println("rule \"Expectation Success - "+$evn+"\"");
         out.println("when");
         
@@ -29,9 +30,6 @@ rule "Parse Statements"
         out.println("then");
         
         	out.println("insert(new Expectation("+$fc+", $et+"+$rit+"))");
-        
-        
-        
         
         out.println("end");
         

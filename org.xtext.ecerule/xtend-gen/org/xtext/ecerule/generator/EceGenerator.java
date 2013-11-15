@@ -102,9 +102,12 @@ public class EceGenerator implements IGenerator {
       for(final Statement stm : _statements) {
         _builder.append("statement = new Statement();");
         _builder.newLine();
+        CharSequence _compileEvent = this.compileEvent(stm);
+        _builder.append(_compileEvent, "");
+        _builder.append(" \t\t");
         _builder.append("\t\t\t\t\t\t");
         CharSequence _compileContextsList = this.compileContextsList(stm);
-        _builder.append(_compileContextsList, "						");
+        _builder.append(_compileContextsList, "");
         _builder.append("\t");
         _builder.append("\t\t\t\t\t\t");
         _builder.newLineIfNotEmpty();

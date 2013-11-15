@@ -63,7 +63,7 @@ class EceGenerator implements IGenerator {
 					«««per ogni Statement»
 					«FOR stm : eceModel.statements» 
 						statement = new Statement();
-						«««»«compileEvent(stm)» 		«««gestisco l'evento ***DA DECOMMENTARE!!!!!!!!
+						«compileEvent(stm)» 		«««gestisco l'evento 
 						«compileContextsList(stm)»	«««gestisco i contesti
 						
 						«««aggiungo lo Statement al Model

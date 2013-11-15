@@ -21,7 +21,7 @@ public class ExpContext implements ExpContextInterface {
 	@Override
 	public void setFinalCondition(ConditionInterface finalCondition) {
 		this.finalCondition = finalCondition;
-		this.time=new Time("", 0);
+		this.time=new Time("", null);
 
 	}
 
