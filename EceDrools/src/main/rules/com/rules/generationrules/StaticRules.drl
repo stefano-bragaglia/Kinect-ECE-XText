@@ -2,7 +2,7 @@
 package com.rules.generationrules
 
 //list any import classes here.
-
+import com.rules.generationrules.*
 
 
 //declare any global variables here
@@ -13,19 +13,21 @@ package com.rules.generationrules
 rule "Success Rule"
 
     when
-    	$clk:Clock($clkt:clkValue)
-        $exp: Expectation(this.getFinalCondition()==true, this.getExpTimeFC()==$clkt)
+    	$clk:Clock($clkt:this.getTimeStamp())
+        $exp: Expectation(this.getFinalCondition().validate()==true, this.getExpeTimeFC()==$clkt)
     then
         $exp.setSuccess();
+        retract ($clk);
 
 end
 
 rule "failure Rule"
 
     when
-    	$clk:Clock($clkt:clkValue)
-        $exp: Expectation(this.getFinalCondition()==false, this.getExpTimeFC()==$clkt)
+    	$clk:Clock($clkt:this.getTimeStamp())
+        $exp: Expectation(this.getFinalCondition().validate()==false, this.getExpeTimeFC()==$clkt)
     then
         $exp.setFailure();
+        retract ($clk);
 
 end

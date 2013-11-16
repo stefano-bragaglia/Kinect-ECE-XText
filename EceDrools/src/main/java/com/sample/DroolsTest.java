@@ -14,12 +14,15 @@ import org.drools.io.ResourceFactory;
 import org.drools.logger.KnowledgeRuntimeLogger;
 import org.drools.logger.KnowledgeRuntimeLoggerFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
+import org.drools.time.SessionClock;
+import org.drools.time.SessionPseudoClock;
 import org.xtext.ecerule.model.*;
-import org.xtext.ecerule.model.Time;
 import org.xtext.ecerule.model.conditions.relations.MoreEqualsDescr;
 import org.xtext.ecerule.model.conditions.relations.SameDescr;
 import org.xtext.ecerule.model.expressions.NumberDescr;
 import org.xtext.ecerule.model.expressions.SampleDescr;
+
+import com.rules.generationrules.Clock;
 
 /**
  * This is a sample class to launch a rule.
@@ -33,24 +36,11 @@ public class DroolsTest {
             StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
             // go !
-            
-//            ConditionInterface condContainer = new SameDescr(new SampleDescr("Seduto"),new NumberDescr(1));
-//            Time time = new Time();
-//            time.setAllenOp("after");
-//            time.setTimeValue(10);
-//            
-//            ExpContext expCtx = new ExpContext();
-//            expCtx.setFinalCondition(condContainer);
-//            expCtx.setTime(time);
-//            
-//            Event event = new Event();
-//            event.setEventName("siAlza");
-//            
-//            Statement stm = new Statement();
-//            stm.addExpContext(expCtx);
-//            stm.setEvent(event);
-            
 //          ************************************************************
+            Clock nowClk;
+            
+            SessionClock clock = ksession.getSessionClock();
+      
             Statement stm = new Statement();
             
             Event event = new Event();
@@ -80,7 +70,14 @@ public class DroolsTest {
           	
             ksession.insert(stm);
             ksession.fireAllRules();
-            logger.close();
+            
+            while(true){
+            	nowClk = new Clock(clock.getCurrentTime());
+            	 ksession.insert(nowClk);
+                 ksession.fireAllRules();
+            }
+            
+    //        logger.close();
         } catch (Throwable t) {
             t.printStackTrace();
         }

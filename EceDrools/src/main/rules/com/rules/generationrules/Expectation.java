@@ -6,14 +6,14 @@ import org.xtext.ecerule.model.ConditionInterface;
 public class Expectation {
 
 	ConditionInterface finalCondition;
-	int expTimeFC; // tempo al quale verificare la finalCondition
+	int expeTimeFC; // tempo al quale verificare la finalCondition
 	boolean success; // finalCondition soddisfatta o violata
 	boolean evaluated; // finalCondition valutata o ancora da valutare
 
 	public Expectation(ConditionInterface finalCondition, int expTimeFC) {
 		super();
 		this.finalCondition = finalCondition;
-		this.expTimeFC = expTimeFC;
+		this.expeTimeFC = expTimeFC;
 		this.success = false;
 		this.evaluated = false;
 	}
@@ -26,12 +26,12 @@ public class Expectation {
 		this.finalCondition = finalCondition;
 	}
 
-	public int getExpTimeFC() {
-		return expTimeFC;
+	public int getExpeTimeFC() {
+		return expeTimeFC;
 	}
 
-	public void setExpTimeFC(int expTimeFC) {
-		this.expTimeFC = expTimeFC;
+	public void setExpeTimeFC(int expTimeFC) {
+		this.expeTimeFC = expTimeFC;
 	}
 
 	public boolean isSuccess() {

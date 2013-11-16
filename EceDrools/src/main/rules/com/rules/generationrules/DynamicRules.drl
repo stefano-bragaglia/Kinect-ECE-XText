@@ -20,16 +20,17 @@ rule "Parse Statements"
     	String path= "src/main/rules/com/rules/generationrules/GeneratedRules.drl";
         PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(path, true)));
         out.println();
+        out.println();
         
         
-        out.println("rule \"Expectation Success - "+$evn+"\"");
+        out.println("rule \"Expectation - "+$evn+"\"");
         out.println("when");
         
-        	out.println("$evnow: EventNow(this.getEventName().equals(\""+$evn+"\"), $:et this.getExpTimeFC())");
+        	out.println("$evnow: EventNow(this.getEventName().equals(\""+$evn+"\"), $et: this.getExpeTimeFC())");
        
         out.println("then");
         
-        	out.println("insert(new Expectation("+$fc+", $et+"+$rit+"))");
+        	out.println("insert(new Expectation("+$fc+", $et+"+$rit+"));");
         
         out.println("end");
         

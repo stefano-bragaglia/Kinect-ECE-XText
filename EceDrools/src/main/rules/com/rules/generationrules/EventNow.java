@@ -1,9 +1,15 @@
-package com.xtext.ecerule.plus;
+package com.rules.generationrules;
 
 public class EventNow {
 
 	private String eventName;
 	private int expeTimeFC;
+	
+	
+
+	public EventNow() {
+		super();
+	}
 
 	public String getEventName() {
 		return eventName;
