@@ -71,13 +71,9 @@ public class DroolsTest {
             ksession.insert(stm);
             ksession.fireAllRules();
             
-            while(true){
-            	nowClk = new Clock(clock.getCurrentTime());
-            	 ksession.insert(nowClk);
-                 ksession.fireAllRules();
-            }
             
-    //        logger.close();
+            
+            logger.close();
         } catch (Throwable t) {
             t.printStackTrace();
         }
@@ -87,7 +83,7 @@ public class DroolsTest {
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
         
 //        kbuilder.add(ResourceFactory.newClassPathResource("Sample.drl"), ResourceType.DRL);
-        kbuilder.add(ResourceFactory.newClassPathResource("com/rules/generationrules/DynamicRules.drl"), ResourceType.DRL);
+        kbuilder.add(ResourceFactory.newClassPathResource("com/rules/generationrules/GENERATIONRules.drl"), ResourceType.DRL);
         
         KnowledgeBuilderErrors errors = kbuilder.getErrors();
         if (errors.size() > 0) {
