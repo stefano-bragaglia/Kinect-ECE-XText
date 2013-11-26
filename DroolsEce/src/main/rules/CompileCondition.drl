@@ -1,0 +1,84 @@
+package com.sample
+
+declare ConditionD
+end
+
+declare ExpressionD
+end
+
+declare AndDescD extends ConditionD
+	cond1: ConditionD
+	cond2: ConditionD
+	type: String
+	result: boolean
+end
+
+declare SameDescD extends ConditionD
+	exp1: ExpressionD
+	exp2: ExpressionD
+	result: boolean
+end
+
+declare MoreDescD extends ConditionD
+	exp1: ExpressionD
+	exp2: ExpressionD
+	result: boolean
+end
+
+declare SampleDescD extends ExpressionD
+	fluentName: String
+	result: ExpressionD
+end
+
+declare NumberDescD
+	value: double
+	result: double
+end
+
+//--------------------------------------------------------
+
+rule "Compile AndDescD"
+when
+	AndDescD($c1:cond1, $c2:cond2, $t:type, $r:result)
+then
+	if($c1.result && $c2.result)
+		$r=true;
+	else
+		$r=false;
+end
+
+rule "Compile MoreDescD"
+when
+	MoreDescD($e1: exp1, $e2: exp2, $r: result)
+then
+	if($e1.result > $e2.result)
+		$r=true;
+	else
+		$r=false;
+end
+
+rule "Compile SameDescD"
+when
+	SameDescD($e1: exp1, $e2: exp2, $r: result)
+then
+	if($e1.result == $e2.result)
+		$r=true;
+	else
+		$r=false;
+end
+
+rule "Compile NumberDescD"
+when 
+	NumberDescD($v: value, $r: result)
+then
+	$r=$v;
+end
+
+rule "Compile SampleDescD"
+when 
+	SampleDescD($n: fluentName, $r:result)
+	Fluent(name==$n, $v:value)
+then
+	$r=$v;
+end
+

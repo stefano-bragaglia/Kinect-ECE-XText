@@ -1,0 +1,25 @@
+<object-stream>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Gen rules [1]</activationId>
+  <rule>Gen rules</rule>
+  <declarations>$evptr=SiAlza(1); $fcond=Fluent(name==&quot;Seduto&quot;, value==&quot;true&quot;)(1); $icond=(1); $codef=System.out.println(&quot;&lt;code if fulfilled&gt;&quot;);(1); $codev=System.out.println(&quot;&lt;code if violated&gt;&quot;);(1); $ecestm=com.sample.EceStatement@293dead6(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>1</factId>
+  <objectToString>com.sample.EceStatement@293dead6</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Gen rules [1]</activationId>
+  <rule>Gen rules</rule>
+  <declarations>$evptr=SiAlza(1); $fcond=Fluent(name==&quot;Seduto&quot;, value==&quot;true&quot;)(1); $icond=(1); $codef=System.out.println(&quot;&lt;code if fulfilled&gt;&quot;);(1); $codev=System.out.println(&quot;&lt;code if violated&gt;&quot;);(1); $ecestm=com.sample.EceStatement@293dead6(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Gen rules [1]</activationId>
+  <rule>Gen rules</rule>
+  <declarations>$evptr=SiAlza(1); $fcond=Fluent(name==&quot;Seduto&quot;, value==&quot;true&quot;)(1); $icond=(1); $codef=System.out.println(&quot;&lt;code if fulfilled&gt;&quot;);(1); $codev=System.out.println(&quot;&lt;code if violated&gt;&quot;);(1); $ecestm=com.sample.EceStatement@293dead6(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+</object-stream>
