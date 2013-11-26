@@ -17,6 +17,10 @@ public class EceStatement {
 		this.codeViol = codeViol;
 	}
 
+	public EceStatement() {
+		
+	}
+
 	public String getEventPattern() {
 		return eventPattern;
 	}

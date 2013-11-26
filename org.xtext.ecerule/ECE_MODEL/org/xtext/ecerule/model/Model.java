@@ -1,12 +1,13 @@
 package org.xtext.ecerule.model;
 
+import java.util.HashMap;
 import java.util.Map;
 
 
 
 public class Model implements ModelInterface {
 
-	private Map<String, StatementInterface> statements;
+	private Map<String, StatementInterface> statements = new HashMap();
 	
 	@Override
 	public void add(String statementName, StatementInterface statement) {
@@ -19,6 +20,12 @@ public class Model implements ModelInterface {
 		this.statements.remove(statementName);
 		
 	}
+
+	public Map<String, StatementInterface> getStatements() {
+		return statements;
+	}
+	
+	
 
 	
 }

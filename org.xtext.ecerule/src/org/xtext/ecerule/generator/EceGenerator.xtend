@@ -83,7 +83,7 @@ class EceGenerator implements IGenerator {
 		eventName = "«stm.event.eventName»";
 		event.setEventName(eventName);
 		«FOR feature : stm.event.params»
-			event.addEventFeature(«feature.name»);
+			event.addEventFeature("«feature.name»");
 		«ENDFOR»
 		statement.setEvent(event);
 		'''

@@ -146,10 +146,10 @@ public class EceGenerator implements IGenerator {
       Event _event_1 = stm.getEvent();
       EList<EventFeature> _params = _event_1.getParams();
       for(final EventFeature feature : _params) {
-        _builder.append("event.addEventFeature(");
+        _builder.append("event.addEventFeature(\"");
         String _name = feature.getName();
         _builder.append(_name, "");
-        _builder.append(");");
+        _builder.append("\");");
         _builder.newLineIfNotEmpty();
       }
     }

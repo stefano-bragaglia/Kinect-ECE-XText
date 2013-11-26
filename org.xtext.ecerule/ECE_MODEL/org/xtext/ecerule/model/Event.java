@@ -1,11 +1,12 @@
 package org.xtext.ecerule.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Event implements EventInterface {
 
 	private String eventName;
-	private List<String> eventFeatureList;
+	private List<String> eventFeatureList = new ArrayList();
 	
 	@Override
 	public void setEventName(String eventName) {
