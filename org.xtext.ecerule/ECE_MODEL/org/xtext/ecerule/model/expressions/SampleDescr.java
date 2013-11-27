@@ -47,7 +47,6 @@ public class SampleDescr implements ExpressionInterface {
 	 * 
 	 * @see it.bragaglia.freckles.Expression#validate(java.lang.String[])
 	 */
-	@Override
 	public boolean validate(String[] parameters) {
 		if (parameters == null)
 			throw new IllegalArgumentException(
@@ -55,6 +54,11 @@ public class SampleDescr implements ExpressionInterface {
 							+ parameters);
 		assert invariant() : "Illegal state in SampleDescr.validate()";
 		return true;
+	}
+
+	public double validate() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

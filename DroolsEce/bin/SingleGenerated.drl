@@ -1,0 +1,42 @@
+package com.sample.onestep
+
+rule "Fulfilment SiDistende 18113"
+when
+	$ev: Event(name=="SiDistende")
+	Inginocchiato==true after 10
+	age=="young"
+then
+	<code if fulfilled>
+	System.out.println("FULFILLED :)");
+end
+
+rule "Violation SiDistende 20799"
+when
+	$ev: Event(name=="SiDistende")
+	not Inginocchiato==true after 10
+	age=="young"
+then
+	<code if violated>
+	System.out.println("VIOLATED :(");
+end
+
+
+rule "Fulfilment SiAlza 56389"
+when
+	$ev: Event(name=="SiAlza")
+	Alzato==true after 10
+then
+	<code if fulfilled>
+	System.out.println("FULFILLED :)");
+end
+
+rule "Violation SiAlza 86341"
+when
+	$ev: Event(name=="SiAlza")
+	not Alzato==true after 10
+then
+	<code if violated>
+	System.out.println("VIOLATED :(");
+end
+
+

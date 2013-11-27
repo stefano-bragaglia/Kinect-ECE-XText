@@ -15,7 +15,6 @@ public class Statement implements StatementInterface {
 		expContextList= new ArrayList();
 	}
 
-	@Override
 	public void setEvent(EventInterface event) {
 		this.event = event;
 
@@ -33,7 +32,6 @@ public class Statement implements StatementInterface {
 		return event;
 	}
 
-	@Override
 	public void addExpContext(ExpContextInterface expContext) {
 		this.expContextList.add(expContext);
 

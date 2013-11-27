@@ -1726,6 +1726,8 @@ public class EceGenerator implements IGenerator {
       String _name = _eClass.getName();
       boolean _contains = _name.contains("Feature");
       if (_contains) {
+        _builder.append(" ");
+        _builder.append("\t\t\tnew ParameterDescr(\"");
         Event _event = statement.getEvent();
         EList<EventFeature> _params = _event.getParams();
         ReferenceType _ref_1 = conditionExpr.getRef();
@@ -1734,9 +1736,11 @@ public class EceGenerator implements IGenerator {
         EventFeature _get = _params.get(_retrieveParam);
         String _name_2 = _get.getName();
         _builder.append(_name_2, "");
+        _builder.append("\")");
         _builder.newLineIfNotEmpty();
       } else {
-        _builder.append("new SampleDescr(\"");
+        _builder.append(" ");
+        _builder.append("\t\t\tnew SampleDescr(\"");
         ReferenceType _ref_2 = conditionExpr.getRef();
         String _name_3 = _ref_2.getName();
         _builder.append(_name_3, "");

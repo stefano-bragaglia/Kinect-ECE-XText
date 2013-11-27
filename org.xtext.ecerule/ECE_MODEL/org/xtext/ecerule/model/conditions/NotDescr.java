@@ -48,7 +48,6 @@ public class NotDescr implements ConditionInterface {
 	 * 
 	 * @see it.bragaglia.freckles.ConditionDescr#validate(java.lang.String[])
 	 */
-	@Override
 	public boolean validate(String[] parameters) {
 		if (parameters == null)
 			throw new IllegalArgumentException(
@@ -59,7 +58,6 @@ public class NotDescr implements ConditionInterface {
 		return result;
 	}
 
-	@Override
 	public boolean validate() {
 		ConditionInterface cond = this.getCondition();
 		boolean value= cond.validate();

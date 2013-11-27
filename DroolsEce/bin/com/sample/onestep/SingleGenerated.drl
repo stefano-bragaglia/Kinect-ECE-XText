@@ -1,0 +1,23 @@
+package com.sample.onestep
+
+import com.sample.*;
+
+rule "Fulfilment SiAlza 14374"
+when
+	$ev: Event(name=="SiAlza")
+	Fluent(name=="Seduto", value=="true")
+then
+	System.out.println("<code if fulfilled>");
+	System.out.println("FULFILLED :)");
+end
+
+rule "Violation SiAlza 88033"
+when
+	$ev: Event(name=="SiAlza")
+	not Fluent(name=="Seduto", value=="true")
+then
+	System.out.println("<code if violated>");
+	System.out.println("VIOLATED :(");
+end
+
+

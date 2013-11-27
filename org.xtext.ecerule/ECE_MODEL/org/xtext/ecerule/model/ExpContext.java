@@ -18,20 +18,17 @@ public class ExpContext implements ExpContextInterface {
 		return time;
 	}
 
-	@Override
 	public void setFinalCondition(ConditionInterface finalCondition) {
 		this.finalCondition = finalCondition;
 		this.time=new Time("", null);
 
 	}
 
-	@Override
 	public void setInitialCondition(ConditionInterface initialCondition) {
 		this.initialCondition = initialCondition;
 
 	}
 
-	@Override
 	public void setTime(TimeInterface time) {
 		this.time = time;
 

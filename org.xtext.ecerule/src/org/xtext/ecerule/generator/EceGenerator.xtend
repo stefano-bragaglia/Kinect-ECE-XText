@@ -497,9 +497,9 @@ class EceGenerator implements IGenerator {
 	
 	def dispatch compileRecExpr (ReferenceImpl conditionExpr, Statement statement){
 		'''
-		«IF conditionExpr.ref.eClass.name.contains("Feature")»
-			«statement.event.params.get(retrieveParam(conditionExpr.ref.name, statement)).name»
-		«ELSE»
+		«IF conditionExpr.ref.eClass.name.contains("Feature")» «««se rif a parametro
+			new ParameterDescr("«statement.event.params.get(retrieveParam(conditionExpr.ref.name, statement)).name»")
+		«ELSE» ««« se rif a fluente
 			new SampleDescr("«conditionExpr.ref.name»")
 		«ENDIF»
 		'''

@@ -67,7 +67,6 @@ public abstract class OperationDescr implements ExpressionInterface {
 	 * 
 	 * @see it.bragaglia.freckles.Expression#validate(java.lang.String[])
 	 */
-	@Override
 	public boolean validate(String[] parameters) {
 		if (parameters == null)
 			throw new IllegalArgumentException(

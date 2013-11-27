@@ -16,7 +16,6 @@ public class Time implements TimeInterface {
 		this.timeValueExpr = timeValueExpr;
 	}
 
-	@Override
 	public void setAllenOp(String allenOp) {
 		this.allenOp = allenOp;
 
@@ -26,7 +25,6 @@ public class Time implements TimeInterface {
 		return allenOp;
 	}
 
-	@Override
 	public void setTimeValueExpr(ExpressionInterface timeValueExpr) {
 		this.timeValueExpr = timeValueExpr;
 

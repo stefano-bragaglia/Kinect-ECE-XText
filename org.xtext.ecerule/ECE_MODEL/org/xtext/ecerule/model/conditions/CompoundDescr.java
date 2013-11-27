@@ -72,7 +72,6 @@ public abstract class CompoundDescr implements ConditionInterface {
 	}
 
 	
-	@Override
 	public boolean validate(String[] parameters) {
 		if (parameters == null)
 			throw new IllegalArgumentException(

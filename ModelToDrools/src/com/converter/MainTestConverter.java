@@ -7,6 +7,7 @@ import org.xtext.ecerule.model.Model;
 import org.xtext.ecerule.model.Statement;
 import org.xtext.ecerule.model.conditions.relations.LessDescr;
 import org.xtext.ecerule.model.expressions.NumberDescr;
+import org.xtext.ecerule.model.expressions.ParameterDescr;
 
 public class MainTestConverter {
 
@@ -24,7 +25,7 @@ public class MainTestConverter {
 		 								
 
 		ExpContext expContext = new ExpContext();
-		ConditionInterface condContainer = new LessDescr(pesata ,new NumberDescr(100));
+		ConditionInterface condContainer = new LessDescr(new ParameterDescr("pesata") ,new NumberDescr(100));
 
 		expContext.setFinalCondition(condContainer);			
 

@@ -69,7 +69,6 @@ public abstract class RelationDescr implements ConditionInterface {
 	 * 
 	 * @see it.bragaglia.freckles.ConditionDescr#validate(java.lang.String[])
 	 */
-	@Override
 	public boolean validate(String[] parameters) {
 		if (parameters == null)
 			throw new IllegalArgumentException(

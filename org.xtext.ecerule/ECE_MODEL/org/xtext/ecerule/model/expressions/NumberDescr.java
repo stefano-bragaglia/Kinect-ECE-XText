@@ -17,7 +17,7 @@ public class NumberDescr implements ExpressionInterface {
 	/**
 	 * The cache for numbers.
 	 */
-	private static Map<Double, Number> numbers = new Hashtable<>();
+	private static Map<Double, Number> numbers = new Hashtable();
 
 	/**
 	 * 
@@ -103,7 +103,6 @@ public class NumberDescr implements ExpressionInterface {
 		return (numbers != null);
 	}
 
-	@Override
 	public boolean validate(String[] parameters) {
 		if (parameters == null)
 			throw new IllegalArgumentException(

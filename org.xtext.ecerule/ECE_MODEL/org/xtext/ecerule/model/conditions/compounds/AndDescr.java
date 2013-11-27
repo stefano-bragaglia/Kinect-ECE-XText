@@ -17,7 +17,6 @@ public class AndDescr extends CompoundDescr implements ConditionInterface {
 		super(cond1, cond2);
 	}
 
-	@Override
 	public boolean validate() {
 		ConditionInterface cond1 = super.getCond1();
 		ConditionInterface cond2 = super.getCond2();
