@@ -26,9 +26,7 @@ public class MainTestConverter {
 
 		ExpContext expContext = new ExpContext();
 		ConditionInterface condContainer = new LessDescr(new ParameterDescr("pesata") ,new NumberDescr(100));
-
-		expContext.setFinalCondition(condContainer);			
-
+		expContext.setFinalCondition(condContainer);		
 		statement.addExpContext(expContext);
 
 								

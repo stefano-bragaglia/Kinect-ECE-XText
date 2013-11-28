@@ -32,8 +32,6 @@ public class EventConverter {
 		String out="";
 		if(event.getEventFeatureList()!=null){
 			
-			System.out.println("ho dei parametri");
-			
 			out=out.concat(", ");
 			
 			for(int i=0; i<event.getEventFeatureList().size(); i++){

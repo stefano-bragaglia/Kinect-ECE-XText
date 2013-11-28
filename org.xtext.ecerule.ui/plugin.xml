@@ -392,5 +392,21 @@
             extensions="ece">
     </provider>
   </extension>
+  <!-- compile button -->
+  <extension id="NewInvokatronAction"
+         name="New Compile Document Action"
+         point="org.eclipse.ui.actionSets">
+		  <actionSet id="invokatron.actionSet"
+		        label="Invokatron Actions"
+		        visible="true">
+			    <action id="org.xtext.ecerule.ui.actions.CompileAction"
+			          toolbarPath="org.eclipse.ui.workbench.file/new.ext"
+			          icon="icons/compile.png"
+			          tooltip="Compile the phrases that I wrote"
+			          class="org.xtext.ecerule.ui.actions.CompileAction">
+			    </action>
+		  </actionSet>
+</extension>
+  
 
 </plugin>
