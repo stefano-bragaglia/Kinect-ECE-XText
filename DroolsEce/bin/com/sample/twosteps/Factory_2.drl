@@ -1,0 +1,67 @@
+package com.sample.twosteps
+
+import com.sample.EceStatement;
+ 
+global java.lang.StringBuilder strbuild;
+global java.util.Random random;
+
+declare Expectation
+	event: String
+	finCond: String
+	codeViol: String
+	codeFulf: String
+end
+
+
+rule "Gen Fulf-Viol"
+
+when
+	$exp: Expectation(
+		$evptr: event, 
+		$fcond: finCond, 
+		$codev: codeViol, 
+		$codef: codeFulf
+	)
+then
+	System.out.println("INIZIO GENERAZIONE F E V");
+
+
+
+	strbuild.append("rule \"Fulfilment "+$evptr+" "+random.nextInt(100000)+"\"\n");
+	strbuild.append("when\n");
+	
+		strbuild.append("\t$ev: Event(name==\""+$evptr+"\")\n");
+		strbuild.append("\t"+$fcond+"\n");
+		
+	strbuild.append("then\n");
+	
+		if($codef!=null)
+		strbuild.append("\t"+$codef+"\n");
+		strbuild.append("\tSystem.out.println(\"FULFILLED :)\");\n");
+	
+	strbuild.append("end\n\n\n");
+	
+	System.out.println("Generated Fulf - "+$evptr);
+	
+	
+	
+	strbuild.append("rule \"Violation "+$evptr+" "+random.nextInt(100000)+"\"\n");
+	strbuild.append("when\n");
+	
+		strbuild.append("\t$ev: Event(name==\""+$evptr+"\")\n");
+		strbuild.append("\tnot "+$fcond+"\n");
+	
+	strbuild.append("then\n");
+		
+		if($codev!=null)
+			strbuild.append("\t"+$codev+"\n");
+		strbuild.append("\tSystem.out.println(\"VIOLATED :(\");\n");
+	
+	strbuild.append("end\n\n\n");
+	
+	System.out.println("Generated Viol - "+$evptr);
+
+end
+
+
+

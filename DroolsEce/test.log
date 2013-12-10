@@ -1,0 +1,40 @@
+<object-stream>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Gen rules [1]</activationId>
+  <rule>Gen rules</rule>
+  <declarations>$evptr=SiAlza(1); $fcond=Fluent(name==&quot;Pippo&quot;, $val_Pippo:value);
+Fluent(name==&quot;Pluto&quot;, $val_Pluto:value);
+Fluent(name==&quot;Topolino&quot;, $val_Topolino:value);
+eval($val_Pippo+$val_Pluto&lt;$val_Topolino+5.0);(1); $icond=Fluent(name==&quot;Paperino&quot;, $val_Paperino:value);
+Fluent(name==&quot;Pippo&quot;, $val_Pippo:value);
+eval($val_Paperino-8.0&gt;$val_Pippo);(1); $codef=System.out.println(&quot;&lt;code if fulfilled&gt;&quot;);(1); $codev=System.out.println(&quot;&lt;code if violated&gt;&quot;);(1); $ecestm=com.sample.EceStatement@78da29ee(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>1</factId>
+  <objectToString>com.sample.EceStatement@78da29ee</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Gen rules [1]</activationId>
+  <rule>Gen rules</rule>
+  <declarations>$evptr=SiAlza(1); $fcond=Fluent(name==&quot;Pippo&quot;, $val_Pippo:value);
+Fluent(name==&quot;Pluto&quot;, $val_Pluto:value);
+Fluent(name==&quot;Topolino&quot;, $val_Topolino:value);
+eval($val_Pippo+$val_Pluto&lt;$val_Topolino+5.0);(1); $icond=Fluent(name==&quot;Paperino&quot;, $val_Paperino:value);
+Fluent(name==&quot;Pippo&quot;, $val_Pippo:value);
+eval($val_Paperino-8.0&gt;$val_Pippo);(1); $codef=System.out.println(&quot;&lt;code if fulfilled&gt;&quot;);(1); $codev=System.out.println(&quot;&lt;code if violated&gt;&quot;);(1); $ecestm=com.sample.EceStatement@78da29ee(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Gen rules [1]</activationId>
+  <rule>Gen rules</rule>
+  <declarations>$evptr=SiAlza(1); $fcond=Fluent(name==&quot;Pippo&quot;, $val_Pippo:value);
+Fluent(name==&quot;Pluto&quot;, $val_Pluto:value);
+Fluent(name==&quot;Topolino&quot;, $val_Topolino:value);
+eval($val_Pippo+$val_Pluto&lt;$val_Topolino+5.0);(1); $icond=Fluent(name==&quot;Paperino&quot;, $val_Paperino:value);
+Fluent(name==&quot;Pippo&quot;, $val_Pippo:value);
+eval($val_Paperino-8.0&gt;$val_Pippo);(1); $codef=System.out.println(&quot;&lt;code if fulfilled&gt;&quot;);(1); $codev=System.out.println(&quot;&lt;code if violated&gt;&quot;);(1); $ecestm=com.sample.EceStatement@78da29ee(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+</object-stream>

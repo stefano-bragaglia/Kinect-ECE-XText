@@ -1,0 +1,37 @@
+package com.sample.twosteps
+
+import com.sample.*;
+
+declare Event
+	@role(event)
+end
+
+rule "Rule Find Event"
+when
+	$ev: Event($n: name)
+then
+	System.out.println("L'evento " +$n+ " è arrivato");
+
+end
+
+
+rule "Fulfilment SiAlza 98841"
+when
+	$ev: Event(name=="SiAlza")
+	Fluent(name=="Seduto", value=="true")
+then
+	System.out.println("<code if violated>");
+	System.out.println("FULFILLED :)");
+end
+
+
+rule "Violation SiAlza 79144"
+when
+	$ev: Event(name=="SiAlza")
+	not Fluent(name=="Seduto", value=="true")
+then
+	System.out.println("<code if fulfilled>");
+	System.out.println("VIOLATED :(");
+end
+
+

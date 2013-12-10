@@ -1,0 +1,10 @@
+declare AlzatoEv extends Event
+	@role(event)
+end
+
+
+declare SedutoEv extends Event
+	@role(event)
+end
+
+

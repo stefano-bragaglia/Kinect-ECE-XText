@@ -1,0 +1,18 @@
+package com.sample.twosteps
+
+declare Expectation
+	event: String
+	finCond: String
+	codeViol: String
+	codeFulf: String
+	codeViol: String
+end
+
+rule "SiAlza 77134"
+when
+then
+	insert(new Expectation("SiAlza", "Fluent(name==\"Seduto\", value==\"true\")", "System.out.println(\"<code if fulfilled>\");", "System.out.println(\"<code if violated>\");"));
+	System.out.println("Generate Expectation - SiAlza");
+end
+
+

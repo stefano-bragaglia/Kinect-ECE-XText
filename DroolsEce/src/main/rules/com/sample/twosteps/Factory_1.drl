@@ -1,0 +1,47 @@
+package com.sample.twosteps
+ 
+import com.sample.EceStatement;
+ 
+global java.lang.StringBuilder strbuild;
+global java.util.Random random;
+
+declare Expectation
+	event: String
+	finCond: String
+	codeViol: String
+	codeFulf: String
+end
+
+rule "Gen Exeption"
+when
+	$ecestm: EceStatement(
+		$evptr: eventPattern, 
+		$icond: initialCondition, 
+		$fcond: finalCondition, 
+		$codef: codeFulf, 
+		$codev: codeViol 
+	)
+then
+	strbuild.append("rule \""+$evptr+" "+random.nextInt(100000)+"\"\n");
+	strbuild.append("when\n");
+		
+		if($icond!=null && $icond!="")
+			strbuild.append("\t"+$icond+"\n");
+	
+	strbuild.append("then\n");
+	
+		strbuild.append("\tinsert(new Expectation(\""+$evptr+"\", \""+$fcond+"\", \""+$codef+"\", \""+$codev+"\"));\n");
+		strbuild.append("\tSystem.out.println(\"Generate Expectation - "+$evptr+"\");\n");
+	
+	strbuild.append("end\n\n\n");
+	
+	System.out.println("Generated initial condition Expectation - "+$evptr);
+
+end
+
+
+
+ 
+ 
+ 
+ 
