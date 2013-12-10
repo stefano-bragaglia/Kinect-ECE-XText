@@ -59,7 +59,8 @@ public class TransfCondiVisitor implements Visitor {
 		System.out.println(out);
 		sbExpression.append(out);
 		
-		String ref = "Fluent(name==\""+fluentName+"\", $val_"+fluentName+":value);\n";
+//		String ref = "Fluent(name==\""+fluentName+"\", $val_"+fluentName+":value);\n";
+		String ref = fluentName+"($val_"+fluentName+":value);\n";
 		sbReference.append(ref);
 
 	}

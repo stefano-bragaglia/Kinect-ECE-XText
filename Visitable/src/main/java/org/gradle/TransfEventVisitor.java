@@ -49,11 +49,18 @@ public class TransfEventVisitor implements Visitor {
 		
 	}
 
+//	public void visit(Event event) {
+//		eventPattern = "$evPtr: Event(name==\""+event.getEventName()+"\")";
+//		System.out.println(eventPattern);
+//	}
+
+	
 	public void visit(Event event) {
-		eventPattern = "$evPtr: Event(name==\""+event.getEventName()+"\")";
+		eventPattern = "$evPtr: "+event.getEventName()+"";
 		System.out.println(eventPattern);
 	}
-
+	
+	
 	public void visit(Visitable object) {
 		// TODO Auto-generated method stub
 		

@@ -1,4 +1,6 @@
-declare AlzatoEv extends Event
+package com.sample.onestep 
+
+declare AlzatoEvn extends Event
 	@role(event)
 end
 

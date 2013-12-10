@@ -4,28 +4,28 @@
   <activationId>Gen rules [1]</activationId>
   <rule>Gen rules</rule>
   <declarations>$evptr=
-$evPtr: Event(name==&quot;AlzatoEv&quot;);(1); $fcond=Fluent(name==&quot;SedutoFl&quot;, $val_SedutoFl:value);
-eval($val_SedutoFl==0.0);(1); $icond=(1); $codef=null; $codev=null; $ecestm=com.sample.EceStatement@78d88d3e(1)</declarations>
+$evPtr: AlzatoEv;(1); $fcond=SedutoFl($val_SedutoFl:value);
+eval($val_SedutoFl==0.0);(1); $icond=(1); $codef=null; $codev=null; $ecestm=com.sample.EceStatement@1c871041(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>com.sample.EceStatement@78d88d3e</objectToString>
+  <objectToString>com.sample.EceStatement@1c871041</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
   <activationId>Gen rules [1]</activationId>
   <rule>Gen rules</rule>
   <declarations>$evptr=
-$evPtr: Event(name==&quot;AlzatoEv&quot;);(1); $fcond=Fluent(name==&quot;SedutoFl&quot;, $val_SedutoFl:value);
-eval($val_SedutoFl==0.0);(1); $icond=(1); $codef=null; $codev=null; $ecestm=com.sample.EceStatement@78d88d3e(1)</declarations>
+$evPtr: AlzatoEv;(1); $fcond=SedutoFl($val_SedutoFl:value);
+eval($val_SedutoFl==0.0);(1); $icond=(1); $codef=null; $codev=null; $ecestm=com.sample.EceStatement@1c871041(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
   <activationId>Gen rules [1]</activationId>
   <rule>Gen rules</rule>
   <declarations>$evptr=
-$evPtr: Event(name==&quot;AlzatoEv&quot;);(1); $fcond=Fluent(name==&quot;SedutoFl&quot;, $val_SedutoFl:value);
-eval($val_SedutoFl==0.0);(1); $icond=(1); $codef=null; $codev=null; $ecestm=com.sample.EceStatement@78d88d3e(1)</declarations>
+$evPtr: AlzatoEv;(1); $fcond=SedutoFl($val_SedutoFl:value);
+eval($val_SedutoFl==0.0);(1); $icond=(1); $codef=null; $codev=null; $ecestm=com.sample.EceStatement@1c871041(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>

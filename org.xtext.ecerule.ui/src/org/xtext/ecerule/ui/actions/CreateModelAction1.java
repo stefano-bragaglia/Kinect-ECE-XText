@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
-import org.ece.test.TestGenExpDrl;
+import org.ece.generation.GenerateExpectationDrl;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.ui.IWorkbenchWindow;
@@ -40,7 +40,7 @@ public class CreateModelAction1 implements IWorkbenchWindowActionDelegate {
 	public void run(IAction action) {
 		System.out.println("Ho cliccato il tasto  1) Create Model");
 		 
-		TestGenExpDrl.mainRun();
+		GenerateExpectationDrl.mainRun();
 		
 		MessageDialog.openInformation(
 			window.getShell(),

@@ -2,21 +2,21 @@ package com.sample.onestep
 
 import com.sample.*;
 
-rule "Fulfilment 88542"
+rule "Fulfilment 30415"
 when
 	
-$evPtr: Event(name=="AlzatoEv");
-	Fluent(name=="SedutoFl", $val_SedutoFl:value);
+$evPtr: AlzatoEv;
+	SedutoFl($val_SedutoFl:value);
 eval($val_SedutoFl==0.0);
 then
 	System.out.println("FULFILLED :)");
 end
 
-rule "Violation 34782"
+rule "Violation 7796"
 when
 	
-$evPtr: Event(name=="AlzatoEv");
-	not Fluent(name=="SedutoFl", $val_SedutoFl:value);
+$evPtr: AlzatoEv;
+	not SedutoFl($val_SedutoFl:value);
 eval($val_SedutoFl==0.0);
 then
 	System.out.println("VIOLATED :(");
