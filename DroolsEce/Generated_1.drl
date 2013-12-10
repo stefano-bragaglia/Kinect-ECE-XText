@@ -1,8 +1,0 @@
-Rule "SiAlza 88769"
-when
-	Age=="medium"
-then
-	insert(new Expectation("SiAlza", "Alzato==true after 10", "<code if fulfilled>", "<code if violated>"))
-end
-
-
