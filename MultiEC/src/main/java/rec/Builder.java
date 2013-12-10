@@ -69,6 +69,7 @@ public class Builder {
 	}
 
 	public Session build() {
+		//add many drl
 		KnowledgeBuilder builder = KnowledgeBuilderFactory.newKnowledgeBuilder();
 		builder.add(ResourceFactory.newClassPathResource("multi.drl"), ResourceType.DRL);
 		if (Mode.LITE == mode)
@@ -77,6 +78,7 @@ public class Builder {
 			builder.add(ResourceFactory.newClassPathResource("full.drl"), ResourceType.DRL);
 		for (String resource : resources)
 			builder.add(ResourceFactory.newClassPathResource(resource), ResourceType.DRL);
+		
 		if (builder.hasErrors()) {
 			for (KnowledgeBuilderError error : builder.getErrors())
 				System.err.println(error);

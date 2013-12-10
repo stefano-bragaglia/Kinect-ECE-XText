@@ -1,11 +1,6 @@
 package com.sample.onestep 
 
-declare AlzatoEvn extends Event
-	@role(event)
-end
-
-
-declare SedutoEv extends Event
+declare AlzatoEv extends Event
 	@role(event)
 end
 

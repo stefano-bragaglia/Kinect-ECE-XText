@@ -2,7 +2,7 @@ package com.sample.onestep
 
 import com.sample.*;
 
-rule "Fulfilment 30415"
+rule "Fulfilment 76872"
 when
 	
 $evPtr: AlzatoEv;
@@ -12,7 +12,7 @@ then
 	System.out.println("FULFILLED :)");
 end
 
-rule "Violation 7796"
+rule "Violation 79313"
 when
 	
 $evPtr: AlzatoEv;

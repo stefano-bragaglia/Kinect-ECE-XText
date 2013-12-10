@@ -12,5 +12,6 @@
 	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/drools-jsr94.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/drools-decisiontables.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JDT CORE"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MultiEC"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
