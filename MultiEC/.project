@@ -15,4 +15,16 @@
 		<nature>org.springsource.ide.eclipse.gradle.core.nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/resources/Declarations.drl</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/MainProject/src/org/ece/rules/Declarations.drl</locationURI>
+		</link>
+		<link>
+			<name>src/main/resources/SingleGenerated.drl</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/MainProject/src/org/ece/rules/SingleGenerated.drl</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

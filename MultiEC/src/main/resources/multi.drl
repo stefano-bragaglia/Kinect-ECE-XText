@@ -3,6 +3,7 @@ package rec.dom;
 declare Fluent 
 end
 
+/*
 declare Event 
 	@role(event) 
 	@timestamp(time) 
@@ -10,6 +11,15 @@ declare Event
 	values : Map<String, Object> 
 	value : Object 
 	time : long
+end
+*/
+
+declare Event
+	@role(event)
+	@timestamp(time)
+	//@expires(100ms)
+	//value: Object
+	time : long	
 end
 
 declare Sample 

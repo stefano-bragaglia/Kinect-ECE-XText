@@ -110,6 +110,7 @@ public class Session {
 			try {
 				FactType type = base.getFactType(PACKAGE, name);
 				if (null != type) {
+					//create event, insert it into session, fire
 					Object eventObj = type.newInstance();
 					type.set(eventObj, "value", value);
 					type.set(eventObj, "params", params);

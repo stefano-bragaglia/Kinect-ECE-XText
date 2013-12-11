@@ -29,7 +29,7 @@ public class GenerateDeclarationsDrl {
 			
 		}
 		
-		strbuild.append("package com.sample.onestep \n\n");
+		strbuild.append("package rec.dom; \n\n");
 		strbuild.append(declarationVisitor.getDeclarations());
 		
 		

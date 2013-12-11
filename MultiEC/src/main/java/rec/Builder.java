@@ -78,6 +78,7 @@ public class Builder {
 			builder.add(ResourceFactory.newClassPathResource("full.drl"), ResourceType.DRL);
 		for (String resource : resources)
 			builder.add(ResourceFactory.newClassPathResource(resource), ResourceType.DRL);
+		//end
 		
 		if (builder.hasErrors()) {
 			for (KnowledgeBuilderError error : builder.getErrors())

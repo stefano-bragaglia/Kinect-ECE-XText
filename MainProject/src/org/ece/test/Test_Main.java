@@ -63,7 +63,9 @@ public class Test_Main {
 		
 		Builder builder = new Builder();
 		builder.setMode(Mode.FULL);
-		builder.addResource("com/sample/onestep/SingleFactory.drl");
+		//add generated rules
+		builder.addResource("Declarations.drl");
+		//builder.addResource("SingleGenerated.drl");
 
 		Session session = builder.build();
 		session.start();
