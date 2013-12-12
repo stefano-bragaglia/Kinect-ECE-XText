@@ -1,0 +1,21 @@
+package rec.dom
+
+declare SedutoF// extends Sample
+	value: double
+end
+
+rule "InTempDeclarations" 
+when
+then
+	System.out.println("Sono dentro a TempDeclarations.drl");
+end
+
+rule "Initially" 
+when
+then
+	insert(new AlzatoE());
+	insert(new SedutoF((double)0));
+	System.out.println("Aggiungo fatti");	
+end
+
+

@@ -71,11 +71,11 @@ public class Builder {
 	public Session build() {
 		//add many drl
 		KnowledgeBuilder builder = KnowledgeBuilderFactory.newKnowledgeBuilder();
-		builder.add(ResourceFactory.newClassPathResource("multi.drl"), ResourceType.DRL);
-		if (Mode.LITE == mode)
-			builder.add(ResourceFactory.newClassPathResource("lite.drl"), ResourceType.DRL);
-		else
-			builder.add(ResourceFactory.newClassPathResource("full.drl"), ResourceType.DRL);
+		builder.add(ResourceFactory.newClassPathResource("A1_multi.drl"), ResourceType.DRL);
+//		if (Mode.LITE == mode)
+//			builder.add(ResourceFactory.newClassPathResource("A2_lite.drl"), ResourceType.DRL);
+//		else
+//			builder.add(ResourceFactory.newClassPathResource("A3_full.drl"), ResourceType.DRL);
 		for (String resource : resources)
 			builder.add(ResourceFactory.newClassPathResource(resource), ResourceType.DRL);
 		//end

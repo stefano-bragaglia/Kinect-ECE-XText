@@ -32,6 +32,7 @@ public class GenerateDeclarationsDrl {
 		strbuild.append("package rec.dom; \n\n");
 		strbuild.append(declarationVisitor.getDeclarations());
 		
+		strbuild.append("rule \"InDeclaration\" \nwhen\nthen\n\tSystem.out.println(\"Sono dentro a Declaration.drl\");\nend");
 		
 	}
 	

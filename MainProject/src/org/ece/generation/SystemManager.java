@@ -51,24 +51,26 @@ public class SystemManager {
 				String evStr = visitorEvent.getOutputString();
 				eceStm.setEventPattern(evStr);
 
-				if (expContext.getInitialCondition() != null) {
-					ConditionInterface initialCondition = expContext
-							.getInitialCondition();
-					TransfCondiVisitor visitor3 = new TransfCondiVisitor();
-					initialCondition.accept(visitor3);
-
-					String icStr = visitor3.getOutputString();
-					eceStm.setInitialCondition(icStr);
-				} else {
+//				if (expContext.getInitialCondition() != null) {
+//					ConditionInterface initialCondition = expContext
+//							.getInitialCondition();
+//					TransfCondiVisitor visitor3 = new TransfCondiVisitor();
+//					initialCondition.accept(visitor3);
+//
+//					String icStr = visitor3.getOutputString();
+//					eceStm.setInitialCondition(icStr);
+//				} else {
 					eceStm.setInitialCondition("");
-				}
+//				}
 
 				ConditionInterface finalCondition = expContext
 						.getFinalCondition();
 				TransfCondiVisitor visitor1 = new TransfCondiVisitor();
 				finalCondition.accept(visitor1);
-				String fcStr = visitor1.getOutputString();
-				eceStm.setFinalCondition(fcStr);
+				String fcRefStr = visitor1.getOutputStringReference();
+				eceStm.setFinalConditionRef(fcRefStr);
+				String fcExpStr = visitor1.getOutputStringExpression();
+				eceStm.setFinalConditionExp(fcExpStr);
 
 				eceStmList.add(eceStm);
 			}

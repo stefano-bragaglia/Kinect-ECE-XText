@@ -1,7 +1,0 @@
-package rec.dom; 
-
-declare AlzatoEv extends Event
-	@role(event)
-end
-
-

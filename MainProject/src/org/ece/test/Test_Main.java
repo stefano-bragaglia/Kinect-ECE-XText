@@ -37,36 +37,40 @@ public class Test_Main {
 
 		statement = new Statement();
 		event = new Event();
-		eventName = "AlzatoEv";
+		eventName = "AlzatoE";
 		event.setEventName(eventName);
 		statement.setEvent(event);
 
 		expContext = new ExpContext();
 
-		condContainer = new SameDescr(new SampleDescr("SedutoFl"),
+		condContainer = new SameDescr(new SampleDescr("SedutoF"),
 				new NumberDescr(0));
 		expContext.setFinalCondition(condContainer);
 
 		statement.addExpContext(expContext);
 
-		model.add("StmAlzatoEv", statement);
+		model.add("StmAlzatoE", statement);
 		// ---------------------------------------------------
 
 		// generate declarations
 		GenerateDeclarationsDrl gdd = new GenerateDeclarationsDrl(model);
-		gdd.generateDRL("src/org/ece/rules/Declarations.drl");
+		gdd.generateDRL("src/org/ece/rules/r2_Declarations.drl");
 
 		// generate specific expectation rules
 		GenerateExpectationDrl ged = new GenerateExpectationDrl(model);
-		ged.generateDRL("src/org/ece/rules/SingleGenerated.drl");
+		ged.generateDRL("src/org/ece/rules/r7_SingleGenerated.drl");
 
 		
 		Builder builder = new Builder();
 		builder.setMode(Mode.FULL);
-		//add generated rules
-		builder.addResource("Declarations.drl");
-		//builder.addResource("SingleGenerated.drl");
+		
+		builder.addResource("r7_SingleGenerated.drl");
+		builder.addResource("r3_TempDeclarations.drl");
+		builder.addResource("r2_Declarations.drl");
+		
+		
 
+		
 		Session session = builder.build();
 		session.start();
 		
@@ -76,7 +80,7 @@ public class Test_Main {
 
 		session.stop();
 
-		System.out.println("Done.");
+		System.out.println("\n\nDone.");
 
 	}
 

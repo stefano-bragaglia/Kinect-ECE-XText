@@ -17,14 +17,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>src/main/resources/Declarations.drl</name>
+			<name>src/main/resources/r2_Declarations.drl</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/MainProject/src/org/ece/rules/Declarations.drl</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/MainProject/src/org/ece/rules/r2_Declarations.drl</locationURI>
 		</link>
 		<link>
-			<name>src/main/resources/SingleGenerated.drl</name>
+			<name>src/main/resources/r7_SingleGenerated.drl</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/MainProject/src/org/ece/rules/SingleGenerated.drl</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/MainProject/src/org/ece/rules/r7_SingleGenerated.drl</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

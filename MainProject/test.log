@@ -3,29 +3,29 @@
   <type>4</type>
   <activationId>Gen rules [1]</activationId>
   <rule>Gen rules</rule>
-  <declarations>$evptr=
-$evPtr: AlzatoEv;(1); $fcond=SedutoFl($val_SedutoFl:value);
-eval($val_SedutoFl==0.0);(1); $icond=(1); $codef=null; $codev=null; $ecestm=com.sample.EceStatement@7f051743(1)</declarations>
+  <declarations>$fcondExp=($val_SedutoF==0.0)(1); $evptr=
+$evPtr: AlzatoE()(1); $icond=(1); $codef=null; $fcondRef=SedutoF($val_SedutoF:value);
+(1); $codev=null; $ecestm=com.sample.EceStatement@d2b24c7(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>com.sample.EceStatement@7f051743</objectToString>
+  <objectToString>com.sample.EceStatement@d2b24c7</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
   <activationId>Gen rules [1]</activationId>
   <rule>Gen rules</rule>
-  <declarations>$evptr=
-$evPtr: AlzatoEv;(1); $fcond=SedutoFl($val_SedutoFl:value);
-eval($val_SedutoFl==0.0);(1); $icond=(1); $codef=null; $codev=null; $ecestm=com.sample.EceStatement@7f051743(1)</declarations>
+  <declarations>$fcondExp=($val_SedutoF==0.0)(1); $evptr=
+$evPtr: AlzatoE()(1); $icond=(1); $codef=null; $fcondRef=SedutoF($val_SedutoF:value);
+(1); $codev=null; $ecestm=com.sample.EceStatement@d2b24c7(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
   <activationId>Gen rules [1]</activationId>
   <rule>Gen rules</rule>
-  <declarations>$evptr=
-$evPtr: AlzatoEv;(1); $fcond=SedutoFl($val_SedutoFl:value);
-eval($val_SedutoFl==0.0);(1); $icond=(1); $codef=null; $codev=null; $ecestm=com.sample.EceStatement@7f051743(1)</declarations>
+  <declarations>$fcondExp=($val_SedutoF==0.0)(1); $evptr=
+$evPtr: AlzatoE()(1); $icond=(1); $codef=null; $fcondRef=SedutoF($val_SedutoF:value);
+(1); $codev=null; $ecestm=com.sample.EceStatement@d2b24c7(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>

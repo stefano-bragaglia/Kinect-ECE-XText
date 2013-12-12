@@ -3,16 +3,18 @@ package com.sample;
 public class EceStatement {
 	private String eventPattern;
 	private String initialCondition;
-	private String finalCondition;
+	private String finalConditionRef;
+	private String finalConditionExp;
 	private String codeFulf;
 	private String codeViol;
 
 	public EceStatement(String eventPattern, String initialCondition,
-			String finalCondition, String codeFulf, String codeViol) {
+			String finalConditionRef,String finalConditionExp, String codeFulf, String codeViol) {
 		super();
 		this.eventPattern = eventPattern;
 		this.initialCondition = initialCondition;
-		this.finalCondition = finalCondition;
+		this.finalConditionRef = finalConditionRef;
+		this.finalConditionExp = finalConditionExp;
 		this.codeFulf = codeFulf;
 		this.codeViol = codeViol;
 	}
@@ -37,12 +39,20 @@ public class EceStatement {
 		this.initialCondition = initialCondition;
 	}
 
-	public String getFinalCondition() {
-		return finalCondition;
+	public String getFinalConditionRef() {
+		return finalConditionRef;
 	}
 
-	public void setFinalCondition(String finalCondition) {
-		this.finalCondition = finalCondition;
+	public void setFinalConditionRef(String finalConditionRef) {
+		this.finalConditionRef = finalConditionRef;
+	}
+	
+	public String getFinalConditionExp() {
+		return finalConditionExp;
+	}
+
+	public void setFinalConditionExp(String finalConditionExp) {
+		this.finalConditionExp = finalConditionExp;
 	}
 
 	public String getCodeFulf() {

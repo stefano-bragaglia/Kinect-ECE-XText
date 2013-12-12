@@ -15,7 +15,7 @@ public class TransfEventVisitor implements Visitor {
 	private String eventPattern;
 
 	public String getOutputString(){
-		return "\n"+eventPattern+";";
+		return "\n"+eventPattern+"";
 	}
 	
 
@@ -56,7 +56,7 @@ public class TransfEventVisitor implements Visitor {
 
 	
 	public void visit(Event event) {
-		eventPattern = "$evPtr: "+event.getEventName()+"";
+		eventPattern = "$evPtr: "+event.getEventName()+"()";
 		System.out.println(eventPattern);
 	}
 	

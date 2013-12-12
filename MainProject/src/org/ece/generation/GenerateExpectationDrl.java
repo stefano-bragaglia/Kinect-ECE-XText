@@ -56,8 +56,8 @@ public class GenerateExpectationDrl {
 			}
 
 			strbuild = new StringBuilder("");
-			strbuild.append("package com.sample.onestep\n\n");
-			strbuild.append("import com.sample.*;\n\n");
+			strbuild.append("package rec.dom;\n\n");
+			//strbuild.append("import rec.dom.*;\n\n");
 
 			ksession.setGlobal("strbuild", strbuild);
 			Random random = new Random();
@@ -67,6 +67,8 @@ public class GenerateExpectationDrl {
 			logger.close();
 			// stamp();
 
+			strbuild.append("rule \"InSingleGenerated\" \nwhen\nthen\n\tSystem.out.println(\"Sono dentro a SingleGenerated.drl\");\nend");
+			
 		} catch (Throwable t) {
 			t.printStackTrace();
 		}

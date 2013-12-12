@@ -1,0 +1,30 @@
+package rec.dom;
+
+rule "Fulfilment 24486"
+when
+	
+$evPtr: AlzatoE()
+	SedutoF($val_SedutoF:value);
+
+	eval(($val_SedutoF==0.0)==true)
+then
+	System.out.println("FULFILLED :)");
+end
+
+rule "Violation 23799"
+when
+	
+$evPtr: AlzatoE()
+	SedutoF($val_SedutoF:value);
+
+	eval(($val_SedutoF==0.0)==false)
+then
+	System.out.println("VIOLATED :(");
+end
+
+
+rule "InSingleGenerated" 
+when
+then
+	System.out.println("Sono dentro a SingleGenerated.drl");
+end

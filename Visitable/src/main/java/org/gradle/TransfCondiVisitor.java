@@ -15,8 +15,12 @@ public class TransfCondiVisitor implements Visitor {
 	private StringBuilder sbReference = new StringBuilder(); //richiamo pattern Fatti
 	private StringBuilder sbExpression = new StringBuilder(); //espressione da valutare
 	
-	public String getOutputString(){
-		return ""+sbReference.toString() + "eval(" +sbExpression.toString() +");";
+	public String getOutputStringReference(){
+		return ""+sbReference.toString();
+	}
+	
+	public String getOutputStringExpression(){
+		return ""+"("+sbExpression.toString() +")";
 	}
 
 	public void visit(Visitable object) {

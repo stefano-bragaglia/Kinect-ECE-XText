@@ -10,7 +10,8 @@ when
 	$ecestm: EceStatement(
 		$evptr: eventPattern, 
 		$icond: initialCondition, 
-		$fcond: finalCondition, 
+		$fcondRef: finalConditionRef, 
+		$fcondExp: finalConditionExp, 
 		$codef: codeFulf, 
 		$codev: codeViol 
 	)
@@ -19,7 +20,8 @@ then
 	strbuild.append("when\n");
 	
 		strbuild.append("\t"+$evptr+"\n");
-		strbuild.append("\t"+$fcond+"\n");
+		strbuild.append("\t"+$fcondRef+"\n");
+		strbuild.append("\teval("+$fcondExp+"==true)\n");
 		if($icond!="")
 		strbuild.append("\t"+$icond+"\n");
 		
@@ -37,7 +39,8 @@ then
 	strbuild.append("when\n");
 	
 		strbuild.append("\t"+$evptr+"\n");
-		strbuild.append("\tnot "+$fcond+"\n");
+		strbuild.append("\t"+$fcondRef+"\n");
+		strbuild.append("\teval("+$fcondExp+"==false)\n");
 		if($icond!="")
 		strbuild.append("\t"+$icond+"\n");	
 
