@@ -57,7 +57,7 @@ public class GenerateExpectationDrl {
 
 			strbuild = new StringBuilder("");
 			strbuild.append("package rec.dom;\n\n");
-			//strbuild.append("import rec.dom.*;\n\n");
+			strbuild.append("global org.drools.time.SessionPseudoClock clock;\n\n");
 
 			ksession.setGlobal("strbuild", strbuild);
 			Random random = new Random();

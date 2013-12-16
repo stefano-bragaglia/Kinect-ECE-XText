@@ -6,12 +6,12 @@ public interface TimeInterface {
 
 	public void setAllenOp(String allenOp);
 	
-	public void setTimeValueExpr(ExpressionInterface timeValueExpr);
+	public void setTimeValue(long timeValue);
 	
 	public String getAllenOp();
 
-	public ExpressionInterface getTimeValueExpr();
+	public long getTimeValue();
 	
-	public double getTimeValue();
+	//public double getTimeValue();
 
 }

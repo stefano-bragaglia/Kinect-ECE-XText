@@ -2,6 +2,8 @@ package org.gradle;
 
 import org.xtext.ecerule.model.Event;
 import org.xtext.ecerule.model.EventInterface;
+import org.xtext.ecerule.model.ExpContext;
+import org.xtext.ecerule.model.Time;
 import org.xtext.ecerule.model.conditions.relations.LessDescr;
 import org.xtext.ecerule.model.conditions.relations.MoreDescr;
 import org.xtext.ecerule.model.conditions.relations.SameDescr;
@@ -84,6 +86,16 @@ public class TransfCondiVisitor implements Visitor {
 	}
 
 	public void visit(Event event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void visit(ExpContext expContext) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void visit(Time time) {
 		// TODO Auto-generated method stub
 		
 	}

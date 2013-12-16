@@ -1,4 +1,6 @@
 package rec.dom
+import java.util.concurrent.TimeUnit;
+global org.drools.time.SessionPseudoClock clock;
 
 declare SedutoF// extends Sample
 	value: double
@@ -7,15 +9,17 @@ end
 rule "InTempDeclarations" 
 when
 then
-	System.out.println("Sono dentro a TempDeclarations.drl");
+	System.out.println("//Sono dentro a TempDeclarations.drl");
 end
 
 rule "Initially" 
 when
 then
-	insert(new AlzatoE());
-	insert(new SedutoF((double)0));
-	System.out.println("Aggiungo fatti");	
+	insert(new AlzatoE((long)  0));  //evento arriva a tempo 0
+	
+	clock.advanceTime(13, TimeUnit.MILLISECONDS);
+	insert(new SedutoF((double)0));  //valore del fluente
+	System.out.println("//Aggiunti fatti...");	
 end
 
 

@@ -55,5 +55,5 @@ end
 rule "Test"
 when
 then
-	System.out.println("I'm alive!");
+	System.out.println("//I'm alive!");
 end

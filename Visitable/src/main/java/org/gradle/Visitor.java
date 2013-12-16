@@ -5,6 +5,8 @@ package org.gradle;
 
 import org.xtext.ecerule.model.Event;
 import org.xtext.ecerule.model.EventInterface;
+import org.xtext.ecerule.model.ExpContext;
+import org.xtext.ecerule.model.Time;
 import org.xtext.ecerule.model.conditions.relations.LessDescr;
 import org.xtext.ecerule.model.conditions.relations.MoreDescr;
 import org.xtext.ecerule.model.conditions.relations.SameDescr;
@@ -36,6 +38,8 @@ public interface Visitor {
 	public void visit(SameDescr sameDescr);
 	
 	public void visit(Event event);
+	
+	public void visit(Time time);
 	
 	
 

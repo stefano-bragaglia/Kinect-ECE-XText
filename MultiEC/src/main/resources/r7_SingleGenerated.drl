@@ -1,23 +1,25 @@
 package rec.dom;
 
-rule "Fulfilment 24486"
+global org.drools.time.SessionPseudoClock clock;
+
+rule "Fulfilment 22369"
 when
 	
-$evPtr: AlzatoE()
+$evPtr: AlzatoE($tsmp:time)
 	SedutoF($val_SedutoF:value);
 
-	eval(($val_SedutoF==0.0)==true)
+	eval(($val_SedutoF==0.0)==true && ($tsmp<clock.getCurrentTime()-10)==true)
 then
 	System.out.println("FULFILLED :)");
 end
 
-rule "Violation 23799"
+rule "Violation 20550"
 when
 	
-$evPtr: AlzatoE()
+$evPtr: AlzatoE($tsmp:time)
 	SedutoF($val_SedutoF:value);
 
-	eval(($val_SedutoF==0.0)==false)
+	eval(($val_SedutoF==0.0)==false || ($tsmp<clock.getCurrentTime()-10)==false)
 then
 	System.out.println("VIOLATED :(");
 end

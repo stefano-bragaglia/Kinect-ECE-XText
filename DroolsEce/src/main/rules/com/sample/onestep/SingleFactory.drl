@@ -12,6 +12,7 @@ when
 		$icond: initialCondition, 
 		$fcondRef: finalConditionRef, 
 		$fcondExp: finalConditionExp, 
+		$allenExp: allenExp,
 		$codef: codeFulf, 
 		$codev: codeViol 
 	)
@@ -21,10 +22,9 @@ then
 	
 		strbuild.append("\t"+$evptr+"\n");
 		strbuild.append("\t"+$fcondRef+"\n");
-		strbuild.append("\teval("+$fcondExp+"==true)\n");
+		strbuild.append("\teval("+$fcondExp+"==true && "+$allenExp+"==true)\n");
 		if($icond!="")
 		strbuild.append("\t"+$icond+"\n");
-		
 
 	strbuild.append("then\n");
 	
@@ -35,14 +35,16 @@ then
 	strbuild.append("end\n\n");
 	
 	
+	
+	
 	strbuild.append("rule \"Violation " +random.nextInt(100000)+"\"\n");
 	strbuild.append("when\n");
 	
 		strbuild.append("\t"+$evptr+"\n");
 		strbuild.append("\t"+$fcondRef+"\n");
-		strbuild.append("\teval("+$fcondExp+"==false)\n");
+		strbuild.append("\teval("+$fcondExp+"==false || "+$allenExp+"==false)\n");
 		if($icond!="")
-		strbuild.append("\t"+$icond+"\n");	
+		strbuild.append("\t"+$icond+"\n");
 
 	strbuild.append("then\n");
 	

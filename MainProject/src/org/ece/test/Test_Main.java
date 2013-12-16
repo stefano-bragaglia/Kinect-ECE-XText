@@ -18,11 +18,12 @@ import org.xtext.ecerule.model.expressions.SampleDescr;
 
 import rec.Builder;
 import rec.Session;
+import rec.config.Clock;
 import rec.config.Mode;
 
 public class Test_Main {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws FileNotFoundException, InterruptedException {
 		// ---------------------------------------------------
 		Statement statement;
 		Event event;
@@ -46,6 +47,12 @@ public class Test_Main {
 		condContainer = new SameDescr(new SampleDescr("SedutoF"),
 				new NumberDescr(0));
 		expContext.setFinalCondition(condContainer);
+		
+		time = new Time();
+		time.setAllenOp("after");
+		time.setTimeValue(10); 
+		expContext.setTime(time);
+		
 
 		statement.addExpContext(expContext);
 
@@ -61,8 +68,15 @@ public class Test_Main {
 		ged.generateDRL("src/org/ece/rules/r7_SingleGenerated.drl");
 
 		
+		
+		//Thread.currentThread().sleep(5000);
+		
+		
+		
 		Builder builder = new Builder();
 		builder.setMode(Mode.FULL);
+		
+		builder.setClock(Clock.PSEUDO); //commentare se REALTIME
 		
 		builder.addResource("r7_SingleGenerated.drl");
 		builder.addResource("r3_TempDeclarations.drl");

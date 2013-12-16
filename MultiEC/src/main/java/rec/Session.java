@@ -6,6 +6,7 @@ package rec;
 import java.io.PrintStream;
 import java.util.Collection;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.drools.KnowledgeBase;
 import org.drools.definition.type.FactType;
@@ -13,6 +14,7 @@ import org.drools.runtime.ClassObjectFilter;
 import org.drools.runtime.KnowledgeSessionConfiguration;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.rule.FactHandle;
+import org.drools.time.SessionPseudoClock;
 
 /**
  * @author stefano
@@ -31,6 +33,8 @@ public class Session {
 	// private FactType event;
 
 	private StatefulKnowledgeSession session;
+	
+	
 
 	protected Session(KnowledgeBase base, KnowledgeSessionConfiguration config) {
 		if (base == null)
@@ -41,6 +45,9 @@ public class Session {
 					"Illegal 'config' in Session(KnowledgeBase, KnowledgeSessionConfiguration): " + config);
 		this.base = base;
 		this.config = config;
+		
+		
+		
 		// this.event = base.getFactType(PACKAGE, "Event");
 		assert invariant() : "Illegal state in Session(KnowledgeBase, KnowledgeSessionConfiguration)";
 	}
@@ -130,6 +137,14 @@ public class Session {
 	public void start() {
 		if (null == session) {
 			session = base.newStatefulKnowledgeSession(config, null);
+			////////////////////////////////////////////////////
+			SessionPseudoClock clock = (SessionPseudoClock) session.getSessionClock();
+			
+
+		
+			
+			session.setGlobal("clock", clock);
+			////////////////////////////////////////////////////
 			session.fireAllRules();
 		}
 		assert invariant() : "Illegal state in Session.start()";

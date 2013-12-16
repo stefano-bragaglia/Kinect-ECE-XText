@@ -32,5 +32,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/drools-compiler.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/drools-core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/drools-decisiontables.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/drools-jsr94.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/knowledge-api.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.gradle.AfterVisitor;
 import org.gradle.TransfCondiVisitor;
 import org.gradle.TransfEventVisitor;
 import org.xtext.ecerule.model.ConditionInterface;
@@ -12,6 +13,8 @@ import org.xtext.ecerule.model.ExpContext;
 import org.xtext.ecerule.model.ExpContextInterface;
 import org.xtext.ecerule.model.Model;
 import org.xtext.ecerule.model.Statement;
+import org.xtext.ecerule.model.Time;
+import org.xtext.ecerule.model.TimeInterface;
 
 import com.sample.EceStatement;
 
@@ -71,7 +74,24 @@ public class SystemManager {
 				eceStm.setFinalConditionRef(fcRefStr);
 				String fcExpStr = visitor1.getOutputStringExpression();
 				eceStm.setFinalConditionExp(fcExpStr);
+				
+				
+				
+				
+				if (expContext.getTime()!=null){
+					Time time = (Time) expContext.getTime();
+					AfterVisitor aftVisitor = new AfterVisitor();
+					time.accept(aftVisitor);
+					String afterPattern = aftVisitor.getAfter();
+					eceStm.setAllenExp(afterPattern);
+				}
+				
+				
+				
+				
 
+				
+				
 				eceStmList.add(eceStm);
 			}
 

@@ -94,7 +94,7 @@ public class Builder {
 		base.addKnowledgePackages(builder.getKnowledgePackages());
 		KnowledgeSessionConfiguration sessionCfg = KnowledgeBaseFactory.newKnowledgeSessionConfiguration();
 		if (Clock.PSEUDO == clock)
-			sessionCfg.setOption(ClockTypeOption.get("psuedo"));
+			sessionCfg.setOption(ClockTypeOption.get("pseudo"));
 		else
 			sessionCfg.setOption(ClockTypeOption.get("realtime"));
 		Session result = new Session(base, sessionCfg);
@@ -120,7 +120,7 @@ public class Builder {
 		return this;
 	}
 
-	protected Builder setClock(Clock clock) {
+	public Builder setClock(Clock clock) {  //PROTECTED????????????
 		if (clock == null)
 			throw new IllegalArgumentException("Illegal 'clock' argument in Builder.setClock(Clock): " + clock);
 		this.clock = clock;

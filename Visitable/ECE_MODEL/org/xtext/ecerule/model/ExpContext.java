@@ -28,7 +28,6 @@ public class ExpContext implements ExpContextInterface, Visitable {
 	//@Override
 	public void setFinalCondition(ConditionInterface finalCondition) {
 		this.finalCondition = finalCondition;
-		this.time=new Time("", null);
 
 	}
 
@@ -39,7 +38,6 @@ public class ExpContext implements ExpContextInterface, Visitable {
 	}
 	
 	
-
 	//@Override
 	public void setTime(TimeInterface time) {
 		this.time = time;

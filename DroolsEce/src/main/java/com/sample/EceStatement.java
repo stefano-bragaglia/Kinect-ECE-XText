@@ -5,16 +5,18 @@ public class EceStatement {
 	private String initialCondition;
 	private String finalConditionRef;
 	private String finalConditionExp;
+	private String allenExp;
 	private String codeFulf;
 	private String codeViol;
 
 	public EceStatement(String eventPattern, String initialCondition,
-			String finalConditionRef,String finalConditionExp, String codeFulf, String codeViol) {
+			String finalConditionRef,String finalConditionExp, String allenExp, String codeFulf, String codeViol) {
 		super();
 		this.eventPattern = eventPattern;
 		this.initialCondition = initialCondition;
 		this.finalConditionRef = finalConditionRef;
 		this.finalConditionExp = finalConditionExp;
+		this.allenExp=allenExp;
 		this.codeFulf = codeFulf;
 		this.codeViol = codeViol;
 	}
@@ -69,6 +71,14 @@ public class EceStatement {
 
 	public void setCodeViol(String codeViol) {
 		this.codeViol = codeViol;
+	}
+
+	public String getAllenExp() {
+		return allenExp;
+	}
+
+	public void setAllenExp(String allenExp) {
+		this.allenExp = allenExp;
 	}
 	
 	

@@ -1,0 +1,13 @@
+package rec.dom; 
+
+declare AlzatoE extends Event
+	@role(event)
+end
+
+
+
+rule "InDeclaration" 
+when
+then
+	System.out.println("//Sono dentro a Declaration.drl");
+end

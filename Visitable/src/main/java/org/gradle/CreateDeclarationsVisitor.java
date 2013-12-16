@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.xtext.ecerule.model.Event;
+import org.xtext.ecerule.model.ExpContext;
+import org.xtext.ecerule.model.Time;
 import org.xtext.ecerule.model.conditions.relations.LessDescr;
 import org.xtext.ecerule.model.conditions.relations.MoreDescr;
 import org.xtext.ecerule.model.conditions.relations.SameDescr;
@@ -72,10 +74,20 @@ public class CreateDeclarationsVisitor implements Visitor {
 
 	public void visit(Event event) {
 		String eventName = event.getEventName();
-		String decl = "declare "+eventName+ "// extends Event\n";
-		//decl = decl.concat("\t@role(event)\n");
+		String decl = "declare "+eventName+ " extends Event\n";
+		decl = decl.concat("\t@role(event)\n");
 		decl = decl.concat("end\n");
 		declarationsList.add(decl);
+	}
+
+	public void visit(ExpContext expContext) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void visit(Time time) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
