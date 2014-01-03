@@ -27,5 +27,6 @@
 	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/xpp3_min.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/xstream.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JDT_CORE"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/StayInShape2"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
