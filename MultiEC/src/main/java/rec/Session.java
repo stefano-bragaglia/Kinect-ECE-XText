@@ -34,6 +34,8 @@ public class Session {
 
 	private StatefulKnowledgeSession session;
 	
+	private SessionPseudoClock clock;
+	
 	
 
 	protected Session(KnowledgeBase base, KnowledgeSessionConfiguration config) {
@@ -102,16 +104,14 @@ public class Session {
 		return result;
 	}
 
-	public FactHandle notify(String name, Object value, Map<String, Object> params) {
+	public FactHandle notify(String name, Map<String, Object> params) {
 		if (null == name || (name = name.trim()).isEmpty())
 			throw new IllegalArgumentException(
 					"Illegal 'name' argument in Session.notify(String, Object, Map<String, Object>): " + name);
-		if (null == value)
-			throw new IllegalArgumentException(
-					"Illegal 'value' argument in Session.notify(String, Object, Map<String, Object>): " + value);
 		if (null == params)
 			throw new IllegalArgumentException(
 					"Illegal 'values' argument in Session.notify(String, Object, Map<String, Object>): " + params);
+		
 		FactHandle handle = null;
 		if (null != session)
 			try {
@@ -119,8 +119,7 @@ public class Session {
 				if (null != type) {
 					//create event, insert it into session, fire
 					Object eventObj = type.newInstance();
-					type.set(eventObj, "value", value);
-					type.set(eventObj, "params", params);
+					//type.set(eventObj, "params", params);
 					handle = session.insert(eventObj);
 					session.fireAllRules();
 				} else
@@ -138,7 +137,7 @@ public class Session {
 		if (null == session) {
 			session = base.newStatefulKnowledgeSession(config, null);
 			////////////////////////////////////////////////////
-			SessionPseudoClock clock = (SessionPseudoClock) session.getSessionClock();
+			clock = (SessionPseudoClock) session.getSessionClock();
 			
 
 		

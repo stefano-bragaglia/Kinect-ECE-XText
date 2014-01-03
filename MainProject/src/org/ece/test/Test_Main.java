@@ -2,6 +2,7 @@ package org.ece.test;
 
 import java.io.FileNotFoundException;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.ece.generation.GenerateDeclarationsDrl;
 import org.ece.generation.GenerateExpectationDrl;
@@ -82,16 +83,15 @@ public class Test_Main {
 		builder.addResource("r3_TempDeclarations.drl");
 		builder.addResource("r2_Declarations.drl");
 		
-		
 
 		
 		Session session = builder.build();
 		session.start();
 		
-//		// This event is defined in the above .drl
-//		session.notify("MyEvent", new Integer(5), new HashMap<String, Object>());
-//		session.dump(null);
+		
+		session.notify("AlzatoE", new HashMap<String, Object>());
 
+		
 		session.stop();
 
 		System.out.println("\n\nDone.");

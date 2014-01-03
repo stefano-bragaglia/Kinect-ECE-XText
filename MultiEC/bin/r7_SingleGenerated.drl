@@ -2,7 +2,7 @@ package rec.dom;
 
 global org.drools.time.SessionPseudoClock clock;
 
-rule "Fulfilment 22369"
+rule "Fulfilment 88185"
 when
 	
 $evPtr: AlzatoE($tsmp:time)
@@ -13,7 +13,7 @@ then
 	System.out.println("FULFILLED :)");
 end
 
-rule "Violation 20550"
+rule "Violation 53380"
 when
 	
 $evPtr: AlzatoE($tsmp:time)

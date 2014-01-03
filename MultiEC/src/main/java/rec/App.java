@@ -25,7 +25,8 @@ public class App {
 		Session session = builder.build();
 		session.start();
 		// This event is defined in the above .drl
-		session.notify("MyEvent", new Integer(5), new HashMap<String, Object>());
+		HashMap<String, Object> params = new HashMap<String, Object>();
+		session.notify("MyEvent", params);
 		session.dump(null);
 		session.stop();
 

@@ -1,24 +1,15 @@
 package rec.dom;
 
+//import java.util.Map<String, Object>;
+
 declare Fluent 
 end
-
-/*
-declare Event 
-	@role(event) 
-	@timestamp(time) 
-	// @expires(100ms)
-	values : Map<String, Object> 
-	value : Object 
-	time : long
-end
-*/
 
 declare Event
 	@role(event)
 	@timestamp(time)
 	//@expires(100ms)
-	//value: Object
+	//params : Map<String, Object> 
 	time : long	
 end
 
