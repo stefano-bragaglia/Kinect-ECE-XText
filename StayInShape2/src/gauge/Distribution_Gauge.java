@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
+import org.ece.poses.PoseKnown;
+import org.ece.poses.LeftArmLowered;
+import org.ece.poses.LeftArmStretched;
+
 import rec.controller.Controller;
 import rec.reasoner.Reasoner;
 import static constants.HumanBodyValues.*;
@@ -17,11 +21,16 @@ import static constants.TrackerHumanValues.*;
 
 public class Distribution_Gauge extends Observable implements Observer {
 
+	double maxQuality = 0;
+	int poseMatched = -1;
 	private int execution = HAPHAZARD;
 
 	Object[] obj = new Object[3];
 	Object[] alert = new Object[3];
-
+	
+	//list of known poses (if used in editor phrases)
+	private ArrayList<PoseKnown> poses;
+	
 	private HumanModel[] hm;
 	private int current_step = DEFAULT, number_of_step,
 			last_pose_executed = -1;
@@ -39,6 +48,16 @@ public class Distribution_Gauge extends Observable implements Observer {
 	private boolean first = true;
 
 	public Distribution_Gauge() {
+		//to test
+		
+		poses = new ArrayList<PoseKnown>();
+		PoseKnown posaBraccioSxChiuso = new LeftArmLowered();
+		PoseKnown posaBraccioSxAperto = new LeftArmStretched();
+		poses.add(posaBraccioSxAperto);
+		poses.add(posaBraccioSxChiuso);
+		
+		//to test
+		
 	}
 
 	public void addObservers(Controller controller, PoseWO poseWO, InfoWO infoWO){
@@ -66,7 +85,7 @@ public class Distribution_Gauge extends Observable implements Observer {
 		sendReset(time + 1);
 	}
 
-	public int[] checkLimbPose(int limb_model, String model) {
+	public int[] checkLimbPose(int limb_model, String model) { //arto, posiz.arto
 		// *****************************for distribution
 		int[] limb_pred = new int[2];
 
@@ -164,7 +183,110 @@ public class Distribution_Gauge extends Observable implements Observer {
 
 		return enable;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//� una posa tra quelle che sono state usate nell'editor?
+	public boolean matchSomething(){
+		maxQuality = 0;
+		poseMatched = -1;
+		
+		boolean ret = false;
+		
+		
+		for (int ipose = 0; ipose<poses.size(); ipose++){
+			PoseKnown poseToTest = poses.get(ipose);
+			boolean match = checkPose(poseToTest, ipose);
+			if (match){
+				
+				ret = true;
+			}else{
+				//System.out.println("-----NO :( match con posa "+poseToTest.getHumanPoseName());
+			}
+		}
+		
+		
+		if(poseMatched>-1){
+			System.out.println("-----OK :) match con posa "+poses.get(poseMatched).getHumanPoseName());
+			System.out.println();
+		}
+		
+		return ret;
+	}
+	
 
+	//fa match con questa posa?
+	private boolean checkPose(PoseKnown poseToTest, int ipose) {
+		
+		
+		limbs_model = poseToTest.getHm().getHumanModelStringParameters();
+		
+		// *****************************for distribution
+		for (int i = 0; i < TOTAL_LIMB; i++) {
+			String model = limbs_model.get(i);
+			
+			if (model != "") {
+				
+				int[] index = checkLimbPose(i, model); //index dice che arto � e la sua posa
+
+				double[] distr = limbs_distr.get(index[0]);
+				average += distr[index[1]];
+				count += 1;
+//				System.out.println("model = " + model + "\tdistr = "
+//						+ distr[index[1]]);
+			}
+		}
+		// *************************************************
+		
+		double quality = average / count;
+		
+		double temp = Math.pow(10, 4);
+	    double q = Math.round(quality * temp) / temp;
+		
+		System.out.println("pose quality "+poseToTest.getHumanPoseName()+ " = " + q);
+		if (quality >= MIN_QUALITY){
+			if(quality>maxQuality){
+				maxQuality=quality;
+				poseMatched=ipose;
+			}
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public int checkPassedPose() {
 		int pose = -1, i = 0;
 
@@ -230,7 +352,7 @@ public class Distribution_Gauge extends Observable implements Observer {
 	@SuppressWarnings("unchecked")
 	public void update(Observable arg0, Object arg1) {
 		// TODO Auto-generated method stub
-		if (arg1 instanceof ArrayList<?>) {
+		if (arg1 instanceof ArrayList<?>) { //if from Classifier
 
 			ArrayList<Object> array = (ArrayList<Object>) arg1;
 
@@ -261,108 +383,44 @@ public class Distribution_Gauge extends Observable implements Observer {
 			// //send values of prediction to InfoPanel.java
 			// sendQualityOfPose();
 
+			
+			
 			// if person has performed the request pose sends to Drools/EC
-			if (checkCurrentPose()) {
-
-				if (first) {
-					// Initialization of Alert with first pose recognized
-					// Setting to 1.0 the HarryUp Fluent
-					sendAlert(time, 1.0);
-					// -----------------------------
-					first = false;
-				} else
-					sendAlert(time, 0.0);
-
-				last_pose_executed = current_step - 1;
-
-				// pose
-				if (current_step == number_of_step) {
-					obj[0] = POSES[POSES.length - 1];
-					current_step = DEFAULT;
-				} else {
-					obj[0] = POSES[current_step - 1];
-					current_step += 1;
-				}
-
-				// average of all of limb's value
-				obj[2] = new Double(average / count);
-			} else {
-				if (current_step > 2) { // perchè checkPassedPose() esegue
-										// sì il controllo sulle pose passate ma
-										// non sulla penultima in quanto il
-										// paziente potrebbe rimanere immobile
-										// una volta eseguita la penunltima
-										// posa; in tal caso non si tratterebe
-										// di una posa errata
-//					System.out.println(current_step);
-
-					int step = checkPassedPose();
-					if (step >= 0) {
-						if (execution == INPUT_ORDER) {
-							System.out
-									.println("\nErrore!\nEsercizio non eseguito correttamente.\nPosa attuale 'step#"
-											+ (step + 1)
-											+ ".\n"
-											+ "Posa richiesta: 'step#"
-											+ current_step
-											+ "\n"
-											+ "Prego ricomnciare dall'inizio.");
-
-							/********************************************
-							 * indicare al POSE che deve ripresentare la prima
-							 * Posa: Utilizzare la relazione Observer-Observable
-							 * tra Pose e Reasoner, e in particolar modo
-							 * l'arrivo dell'evento RESET!
-							 *********************************************/
-
-							current_step = DEFAULT;
-							last_pose_executed = -1;
-
-							// reset WorkingMemory: reset all sample into WM
-							sendReset(time);
-
-							// reset ALERT too
-							sendAlert(time, 0.0);
-							first = true;
-
-						} else if (execution == HAPHAZARD) {
-							System.out
-									.println("\nWarning!\nEsercizio non eseguito nell'ordine previsto...");
-						}
-					}
-
-					// e se esegue una posa futura????
-					// possibile soluzione: inserire in "if (checkFuturePose)"
-				}
+			boolean matchSomething = matchSomething();
+			if(matchSomething){
+				//System.out.println("-----Match con una delle pose in lista");
 			}
-
-			if (last_pose_executed != -1) { // se almeno la prima posa è stata
-											// eseguita correttamente
-
-				System.out.println(obj[0]);
-
-				// send to Controller for Drools/EC
-				setChanged();
-				notifyObservers(obj);
-			}
+			
+			
+			
+			
+//			if (last_pose_executed != -1) { // se almeno la prima posa è stata
+//											// eseguita correttamente
+//
+//				System.out.println(obj[0]);
+//
+//				// send to Controller for Drools/EC
+//				setChanged();
+//				notifyObservers(obj);
+//			}
 		}
 
-		if (arg0 instanceof Reasoner) {
-			if (arg1 instanceof Object[]) {
-				Object[] obj = (Object[]) arg1;
-				String fluent = (String) obj[0];
-				Double value = (Double) obj[1];
-				Long start = (Long) obj[2];
-
-				if (fluent.equalsIgnoreCase(HURRYUP) && value < 1.0
-						&& last_pose_executed != -1) {
-
-					if (value == 0.5)
-						System.out.println("HARRY UP!!!");
-
-					sendAlert(start + 1, 1.0);
-				}
-			}
-		}
+//		if (arg0 instanceof Reasoner) {
+//			if (arg1 instanceof Object[]) {
+//				Object[] obj = (Object[]) arg1;
+//				String fluent = (String) obj[0];
+//				Double value = (Double) obj[1];
+//				Long start = (Long) obj[2];
+//
+//				if (fluent.equalsIgnoreCase(HURRYUP) && value < 1.0
+//						&& last_pose_executed != -1) {
+//
+//					if (value == 0.5)
+//						System.out.println("HARRY UP!!!");
+//
+//					sendAlert(start + 1, 1.0);
+//				}
+//			}
+//		}
 	}
 }

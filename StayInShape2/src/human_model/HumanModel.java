@@ -282,6 +282,19 @@ public class HumanModel {
 	}
 
 	public String toString() {
+		System.out.println("head      -----  "+head+ "   "+head_pose);
+		System.out.println("body[0]   -----  "+body[0]+ "   "+body_pose);
+		System.out.println("body[1]   -----  "+body[1]);
+		System.out.println("left_arm  -----  "+left_arm+ "   "+la_pose);
+		System.out.println("right_arm -----  "+right_arm+ "   "+ra_pose);
+		System.out.println("left_leg  -----  "+left_leg+ "   "+ll_pose);
+		System.out.println("right_leg -----  "+right_leg+ "   "+rl_pose);
+		
+		System.out.println();
+		
+		
+		
+		
 		String desc = constants.HumanBodyValues.getHumanModelDescription(head,
 				body, left_arm, right_arm, left_leg, right_leg);
 

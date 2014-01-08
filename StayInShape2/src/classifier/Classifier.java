@@ -161,11 +161,16 @@ public class Classifier extends Observable {
 		if (skeletonIstance.get(limb).dataset() == null)
 			skeletonIstance.get(limb).setDataset(getLimbEmptyDataSet(limb));
 
+		//classifica l'arto (es: per il braccio dice se è alzato o abbassato)
 		double clsLabel = limbNET[limb].classifyInstance(skeletonIstance
 				.get(limb));
 		String event = testLIMB[limb].classAttribute().value((int) clsLabel);
+		
+		//distribuzione di prob. per tutte le classi possibili
+		//la classe con prob. più alta determina clsLabel
 		double distr[] = limbNET[limb].distributionForInstance(skeletonIstance
 				.get(limb));
+		//valore di prob (il più alto quindi) con il quale ho classificato
 		double value = distr[(int) clsLabel];
 
 		// System.out.println(event + "---->" + clsLabel);
