@@ -1,6 +1,6 @@
 package gui.workout;
 
-import gauge.Distribution_Gauge;
+import gauge.Distribution_GaugeBAK;
 import gui.views.posture_pose.PoseWO;
 import gui.workout.countdown.ImagesToStart;
 
@@ -43,7 +43,7 @@ public class ControlsWO extends JPanel implements ActionListener,
 	private boolean paused = false;
 	private Thread t;
 	private Classifier classifier;
-	private Distribution_Gauge gauge;
+	private Distribution_GaugeBAK gauge;
 
 //	private MenuBar mb;
 
@@ -116,7 +116,7 @@ public class ControlsWO extends JPanel implements ActionListener,
 		this.classifier = classifier;
 	}
 	
-	public void setGauge(Distribution_Gauge gauge) {
+	public void setGauge(Distribution_GaugeBAK gauge) {
 		this.gauge = gauge;
 	}
 

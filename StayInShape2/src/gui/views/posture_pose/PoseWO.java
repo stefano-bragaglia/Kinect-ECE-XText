@@ -1,6 +1,6 @@
 package gui.views.posture_pose;
 
-import gauge.Distribution_Gauge;
+import gauge.Distribution_GaugeBAK;
 import gui.workout.countdown.ImagesToStart;
 
 import java.awt.Color;
@@ -214,7 +214,7 @@ public class PoseWO extends JPanel implements Observer {
 			}
 		}
 		
-		if (arg0 instanceof Distribution_Gauge) {
+		if (arg0 instanceof Distribution_GaugeBAK) {
 			if (arg1 instanceof Object[]) {
 				Object[] obj = (Object[]) arg1;
 				String s = (String) obj[0];

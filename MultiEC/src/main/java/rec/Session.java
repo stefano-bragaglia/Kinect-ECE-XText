@@ -38,6 +38,8 @@ public class Session {
 	
 	
 
+	
+
 	protected Session(KnowledgeBase base, KnowledgeSessionConfiguration config) {
 		if (base == null)
 			throw new IllegalArgumentException(
@@ -156,6 +158,10 @@ public class Session {
 			zombie.dispose();
 		}
 		assert invariant() : "Illegal state in Session.stop()";
+	}
+	
+	public SessionPseudoClock getClock() {
+		return clock;
 	}
 
 }

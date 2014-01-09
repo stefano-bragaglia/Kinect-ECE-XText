@@ -3,29 +3,29 @@
   <type>4</type>
   <activationId>Gen rules [1]</activationId>
   <rule>Gen rules</rule>
-  <declarations>$fcondRef=SedutoF($val_SedutoF:value);
-(1); $codev=null; $ecestm=com.sample.EceStatement@17a41aba(1); $fcondExp=($val_SedutoF==0.0)(1); $evptr=
-$evPtr: AlzatoE($tsmp:time)(1); $icond=(1); $codef=null; $allenExp=($tsmp&lt;clock.getCurrentTime()-10)(1)</declarations>
+  <declarations>$fcondRef=LeftArmLowered($val_LeftArmLowered:value);
+(1); $codev=null; $ecestm=com.sample.EceStatement@3be6c541(1); $fcondExp=($val_LeftArmLowered==0.0)(1); $evptr=
+$evPtr: LeftArmStrethced($tsmp:time)(1); $icond=(1); $codef=null; $allenExp=($tsmp&lt;clock.getCurrentTime()-10)(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>com.sample.EceStatement@17a41aba</objectToString>
+  <objectToString>com.sample.EceStatement@3be6c541</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
   <activationId>Gen rules [1]</activationId>
   <rule>Gen rules</rule>
-  <declarations>$fcondRef=SedutoF($val_SedutoF:value);
-(1); $codev=null; $ecestm=com.sample.EceStatement@17a41aba(1); $fcondExp=($val_SedutoF==0.0)(1); $evptr=
-$evPtr: AlzatoE($tsmp:time)(1); $icond=(1); $codef=null; $allenExp=($tsmp&lt;clock.getCurrentTime()-10)(1)</declarations>
+  <declarations>$fcondRef=LeftArmLowered($val_LeftArmLowered:value);
+(1); $codev=null; $ecestm=com.sample.EceStatement@3be6c541(1); $fcondExp=($val_LeftArmLowered==0.0)(1); $evptr=
+$evPtr: LeftArmStrethced($tsmp:time)(1); $icond=(1); $codef=null; $allenExp=($tsmp&lt;clock.getCurrentTime()-10)(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
   <activationId>Gen rules [1]</activationId>
   <rule>Gen rules</rule>
-  <declarations>$fcondRef=SedutoF($val_SedutoF:value);
-(1); $codev=null; $ecestm=com.sample.EceStatement@17a41aba(1); $fcondExp=($val_SedutoF==0.0)(1); $evptr=
-$evPtr: AlzatoE($tsmp:time)(1); $icond=(1); $codef=null; $allenExp=($tsmp&lt;clock.getCurrentTime()-10)(1)</declarations>
+  <declarations>$fcondRef=LeftArmLowered($val_LeftArmLowered:value);
+(1); $codev=null; $ecestm=com.sample.EceStatement@3be6c541(1); $fcondExp=($val_LeftArmLowered==0.0)(1); $evptr=
+$evPtr: LeftArmStrethced($tsmp:time)(1); $icond=(1); $codef=null; $allenExp=($tsmp&lt;clock.getCurrentTime()-10)(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>

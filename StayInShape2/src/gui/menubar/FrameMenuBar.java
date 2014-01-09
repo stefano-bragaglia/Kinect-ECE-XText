@@ -1,6 +1,6 @@
 package gui.menubar;
 
-import gauge.Distribution_Gauge;
+import gauge.Distribution_GaugeBAK;
 import gui.choose.CHOOSEpanel;
 import gui.make.MAKEpanel;
 import human_model.HumanModel;
@@ -56,7 +56,7 @@ public class FrameMenuBar extends JMenuBar implements ActionListener {
 
 	private MAKEpanel mye;
 
-	private Distribution_Gauge gauge;
+	private Distribution_GaugeBAK gauge;
 	private WorkOut wo;
 
 	private CHOOSEpanel choose;
@@ -216,7 +216,7 @@ public class FrameMenuBar extends JMenuBar implements ActionListener {
 		helpMenu.removeAll();
 	}
 
-	public void setGauge(Distribution_Gauge gauge) {
+	public void setGauge(Distribution_GaugeBAK gauge) {
 		this.gauge = gauge;
 	}
 

@@ -1,6 +1,6 @@
 package applet;
 
-import gauge.Distribution_Gauge;
+import gauge.Distribution_GaugeBAK;
 import static constants.MBConstants.*;
 import gui.choose.CHOOSEpanel;
 import gui.make.MAKEpanel;
@@ -44,7 +44,7 @@ public class Background extends JFrame implements ActionListener {
 	private FrameMenuBar mb;
 
 	private WorkOut wo;
-	private Distribution_Gauge gauge;
+	private Distribution_GaugeBAK gauge;
 
 	boolean fake;
 
@@ -57,7 +57,7 @@ public class Background extends JFrame implements ActionListener {
 		wo = new WorkOut(fake);
 		mye = new MAKEpanel();
 		choose = new CHOOSEpanel();
-		gauge = new Distribution_Gauge();
+		gauge = new Distribution_GaugeBAK();
 
 		// addObservers
 		wo.addObserverToClassifier(gauge);

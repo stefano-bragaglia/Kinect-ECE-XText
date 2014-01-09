@@ -1,6 +1,6 @@
 package rec.dom; 
 
-declare AlzatoE extends Event
+declare LeftArmStrethced extends Event
 	@role(event)
 end
 

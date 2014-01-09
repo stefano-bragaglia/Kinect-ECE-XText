@@ -3,7 +3,6 @@
 	<classpathentry excluding="org/ece/rules/" kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Visitable"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/DroolsEce"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/MultiEC"/>
 	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/antlr-runtime.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/drools-compiler.jar"/>
@@ -27,6 +26,6 @@
 	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/xpp3_min.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/xstream.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JDT_CORE"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/StayInShape2"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/DroolsEce"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

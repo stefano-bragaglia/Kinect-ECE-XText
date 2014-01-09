@@ -1,7 +1,7 @@
 package gui.workout;
 
 import static gui.workout.pose.Pose.*;
-import gauge.Distribution_Gauge;
+import gauge.Distribution_GaugeBAK;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -205,7 +205,7 @@ public class InfoWO extends JPanel implements PropertyChangeListener, Observer {
 
 	public void update(Observable arg0, Object arg1) {
 		// TODO Auto-generated method stub
-		if (arg0 instanceof Distribution_Gauge) {
+		if (arg0 instanceof Distribution_GaugeBAK) {
 			if (arg1 instanceof Object[]) {
 				Object[] obj = (Object[]) arg1;
 				String s = (String) obj[0];

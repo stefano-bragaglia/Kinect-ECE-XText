@@ -1,6 +1,6 @@
 package gui.views;
 
-import gauge.Distribution_Gauge;
+import gauge.Distribution_GaugeBAK;
 import gui.make.take.LimbSquare;
 import gui.menubar.FrameMenuBar;
 import gui.views.posture_pose.PoseWO;
@@ -74,7 +74,7 @@ public class Silhouette extends JPanel implements MouseListener, ActionListener 
 	DataFlavor dataFlavor = new DataFlavor(LimbSquare.class,
 			LimbSquare.class.getSimpleName());
 
-	private Distribution_Gauge gauge;
+	private Distribution_GaugeBAK gauge;
 
 	private PoseWO poseWO;
 
@@ -164,7 +164,7 @@ public class Silhouette extends JPanel implements MouseListener, ActionListener 
 		this.mb = mb;
 	}
 
-	public void setGauge(Distribution_Gauge gauge) {
+	public void setGauge(Distribution_GaugeBAK gauge) {
 		this.gauge = gauge;
 	}
 
