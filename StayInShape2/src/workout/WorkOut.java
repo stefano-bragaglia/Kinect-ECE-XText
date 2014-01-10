@@ -2,6 +2,7 @@ package workout;
 
 import java.util.Observer;
 
+import gauge.Distribution_Gauge;
 import gauge.Distribution_GaugeBAK;
 import gui.workout.WorkOutPanel;
 import rec.controller.Controller;
@@ -31,7 +32,7 @@ public class WorkOut {
 		setDependencies();
 	}
 	
-	public void addObserverToClassifier(Distribution_GaugeBAK gauge){
+	public void addObserverToClassifier(Distribution_Gauge gauge){
 		classifier.addObserver(gauge);
 	}
 	

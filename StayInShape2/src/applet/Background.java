@@ -1,10 +1,15 @@
 package applet;
 
+import gauge.Distribution_Gauge;
 import gauge.Distribution_GaugeBAK;
 import static constants.MBConstants.*;
 import gui.choose.CHOOSEpanel;
 import gui.make.MAKEpanel;
 import gui.menubar.FrameMenuBar;
+
+
+
+
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -24,6 +29,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import org.ece.reasoner.Reasoner;
+
 import workout.WorkOut;
 
 public class Background extends JFrame implements ActionListener {
@@ -32,6 +39,7 @@ public class Background extends JFrame implements ActionListener {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 
 	private String[] images = {MAKE, CHOOSE, BACKGROUND};
 	
@@ -44,20 +52,23 @@ public class Background extends JFrame implements ActionListener {
 	private FrameMenuBar mb;
 
 	private WorkOut wo;
-	private Distribution_GaugeBAK gauge;
+	private Distribution_Gauge gauge;
 
 	boolean fake;
 
 	private CHOOSEpanel choose;
 
 	public Background(boolean fake) {
+		System.out.println("*****Sono dentro a Background");
+		System.out.println();
+		
 		this.fake = fake;
 
 		// create all main component
 		wo = new WorkOut(fake);
 		mye = new MAKEpanel();
 		choose = new CHOOSEpanel();
-		gauge = new Distribution_GaugeBAK();
+		gauge = new Distribution_Gauge();
 
 		// addObservers
 		wo.addObserverToClassifier(gauge);
@@ -216,5 +227,11 @@ public class Background extends JFrame implements ActionListener {
 			mb.setChooseConfigurations();
 			setChoosePanel();
 		}
+	}
+	
+	
+
+	public void setReasoner(Reasoner eceReasoner) {
+		this.gauge.setReasoner(eceReasoner);
 	}
 }

@@ -27,5 +27,17 @@
 	<classpathentry kind="lib" path="C:/Users/Public/Libraries/drools5/xstream.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JDT_CORE"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/DroolsEce"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/StayInShape2"/>
+	<classpathentry kind="lib" path="C:/Program Files/PrimeSense/NiTE2/Redist/com.primesense.nite.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Program Files/PrimeSense/NiTE2/Redist"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Program Files/OpenNI2/Redist/org.openni.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Program Files/OpenNI2/Redist"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/REC-mv"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

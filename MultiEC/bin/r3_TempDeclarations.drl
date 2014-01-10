@@ -23,3 +23,16 @@ then
 end
 
 
+
+rule "test delay"  
+when
+	
+$evPtr: LeftArmStretched($tsmp:time)
+	LeftArmLowered($val_LeftArmLowered:value);
+then
+	System.out.println("delay= "+(clock.getCurrentTime()-$tsmp));
+end
+
+
+
+

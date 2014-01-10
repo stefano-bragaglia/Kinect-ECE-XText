@@ -14,12 +14,16 @@ import org.xtext.ecerule.model.conditions.relations.SameDescr;
 import org.xtext.ecerule.model.expressions.NumberDescr;
 import org.xtext.ecerule.model.expressions.SampleDescr;
 
+import applet.Background;
+
 public class MainLaucher {
 
 	public static void main(String[] args) throws FileNotFoundException {
+		System.out.println("*****Sono dentro a MainLauncher");
+		System.out.println();
 		
 		// ---------------------------------------------------
-		//se braccio a T, mmi aspetto braccio abbassato dopo 10 
+		//se braccio a T, mi aspetto braccio abbassato dopo 10 
 		Statement statement;
 		Event event;
 		String eventName;
@@ -33,7 +37,7 @@ public class MainLaucher {
 
 		statement = new Statement();
 		event = new Event();
-		eventName = "LeftArmStrethced";
+		eventName = "LeftArmStretched";
 		event.setEventName(eventName);
 		statement.setEvent(event);
 
@@ -53,11 +57,10 @@ public class MainLaucher {
 		model.add("Stm_LeftArmStrethced", statement);
 		// ---------------------------------------------------
 		
-		
-		Reasoner reasoner = new Reasoner();
-		reasoner.setModel(model);
-		reasoner.init();
-		reasoner.start();
+		Reasoner eceReasoner = new Reasoner();
+		eceReasoner.setModel(model);
+		eceReasoner.init();
+		eceReasoner.start();
 		
 		
 		//reasoner.notifyEvent("LeftArmStrethced", new HashMap<String, Object>()); //al tempo 0
@@ -65,7 +68,8 @@ public class MainLaucher {
 		//reasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), reasoner.getCurrentTime()+9);
 		
 		
-		//new Background(false);
+		Background bkg = new Background(false);
+		bkg.setReasoner(eceReasoner);
 		
 		
 		

@@ -36,6 +36,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Program Files/PrimeSense/NiTE2/Redist/com.primesense.nite.jar">
 		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Program%20Files/PrimeSense/NiTE2/Documentation/java/"/>
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Program Files/PrimeSense/NiTE2/Redist"/>
 		</attributes>
 	</classpathentry>

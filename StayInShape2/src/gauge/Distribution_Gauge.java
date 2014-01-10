@@ -6,6 +6,7 @@ import human_model.HumanModel;
 import static gui.workout.pose.Pose.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -21,6 +22,7 @@ import static constants.TrackerHumanValues.*;
 
 public class Distribution_Gauge extends Observable implements Observer {
 
+	private org.ece.reasoner.Reasoner eceReasoner;
 	double maxQuality = 0;
 	int poseMatched = -1;
 	private int execution = HAPHAZARD;
@@ -217,8 +219,14 @@ public class Distribution_Gauge extends Observable implements Observer {
 		
 		
 		if(poseMatched>-1){
-			System.out.println("-----OK :) match con posa "+poses.get(poseMatched).getHumanPoseName());
+			String eventName = poses.get(poseMatched).getHumanPoseName();
+			
+			System.out.println("-----OK :) match con posa "+eventName);
+			System.out.println("-----timestamp: "+time/1000);
+			this.eceReasoner.notifyEvent(eventName, new HashMap<String, Object>(), time/1000);
+			System.out.println("-----at "+time/1000+" notify "+eventName);
 			System.out.println();
+		
 		}
 		
 		return ret;
@@ -422,5 +430,9 @@ public class Distribution_Gauge extends Observable implements Observer {
 //				}
 //			}
 //		}
+	}
+	
+	public void setReasoner(org.ece.reasoner.Reasoner eceReasoner) {
+		this.eceReasoner = eceReasoner;
 	}
 }

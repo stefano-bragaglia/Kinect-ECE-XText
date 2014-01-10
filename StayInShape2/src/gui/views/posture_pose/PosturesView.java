@@ -1,5 +1,6 @@
 package gui.views.posture_pose;
 
+import gauge.Distribution_Gauge;
 import gauge.Distribution_GaugeBAK;
 import gui.choose.select.PreimpostedEX;
 import gui.menubar.FrameMenuBar;
@@ -64,7 +65,7 @@ public class PosturesView extends JPanel implements MouseListener,
 	DataFlavor dataFlavor = new DataFlavor(PreimpostedEX.class,
 			PreimpostedEX.class.getSimpleName());
 
-	private Distribution_GaugeBAK gauge;
+	private Distribution_Gauge gauge;
 
 	private PoseWO poseWO;
 	private Image img;
@@ -239,8 +240,8 @@ public class PosturesView extends JPanel implements MouseListener,
 		this.mb = mb;
 	}
 
-	public void setGauge(Distribution_GaugeBAK gauge) {
-		this.gauge = gauge;
+	public void setGauge(Distribution_Gauge gauge2) {
+		this.gauge = gauge2;
 	}
 
 	public void setPoseWO(PoseWO poseWO) {
