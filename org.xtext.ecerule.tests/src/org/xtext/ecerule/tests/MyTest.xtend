@@ -28,8 +28,8 @@ class MyTest {
 	@Test
 	def void testErrorParsing() {
 		'''
-		on StartEv set SedutoFl to 1 ;
-		on AlzatoEv expect SedutoFl == 0;
+		on Start set LeftArmLowered to 1;
+		on LeftArmStretched expect LeftArmLowered==1 after 10; 
 		'''.parse.assertNoErrors
 	}
 	
@@ -37,59 +37,71 @@ class MyTest {
 
 	@Test def void testGeneratedCode() {
 		'''
-		on StartEv set SedutoFl to 1 ;
-		on AlzatoEv expect SedutoFl == 0;
+		on Start set LeftArmLowered to 1;
+		on LeftArmStretched expect LeftArmLowered==1 after 10; 
 		'''.assertCompilesTo(
 		'''
-import org.xtext.ecerule.model.*;
+package org.ece.include;
 
-public class MainEce {
+	import org.xtext.ecerule.model.*;
+	import org.xtext.ecerule.model.conditions.*;
+	import org.xtext.ecerule.model.conditions.compounds.*;
+	import org.xtext.ecerule.model.conditions.relations.*;
+	import org.xtext.ecerule.model.expressions.*;
+	import org.xtext.ecerule.model.expressions.operations.*;
 	
-	public Model getModel() {	
+	public class MainEce {
 		
-		public Statement statement;
-		public Event event;
-		public String eventName;
-		public ExpressionDescr exprContainer;
-		public ConditionDescr condContainer;
-		public ExpContext expContext;
-		public Time time;
-		
-		Model model = new Model();
-		
-		
+		public static Model getModel() {	
+			
+			Statement statement;
+			Event event;
+			String eventName;
+			ExpressionInterface exprContainer;
+			ConditionInterface condContainer;
+			//EcContext ecContext;
+			ExpContext expContext;
+			Time time;
+			
+			Model model = new Model();
+			
+			
 		statement = new Statement();
-		
-		event = new Event();
-		eventName = "StartEv";
-		event.setEventName(eventName);
-		statement.setEvent(event);
-		
- 		ecContext = new EcContext();
-		statement.addEcContext(ecContext);
+event = new Event();
+eventName = "Start";
+event.setEventName(eventName);
+statement.setEvent(event);
+ 								//ecContext = new EcContext();
+//statement.addEcContext(ecContext);
 
-		model.add("StmStartEv", statement);
-		
-		
+
+													model.add("StmStart", statement);
+
+
 		statement = new Statement();
-		
-		event = new Event();
-		eventName = "AlzatoEv";
-		event.setEventName(eventName);
-		statement.setEvent(event);
-		 								
-		expContext = new ExpContext();
-		condContainer = new SameDescr(new SampleDescr("SedutoFl") ,new NumberDescr(0));
-		expContext.setFinalCondition(condContainer);
-		statement.addExpContext(expContext);
+event = new Event();
+eventName = "BraccioAlzato";
+event.setEventName(eventName);
+statement.setEvent(event);
+ 								
+expContext = new ExpContext();
 
-		model.add("StmAlzatoEv", statement);
-		
-		
-		
-		return model;
-	}	
-}
+//default compileCond
+//TYPE OF condExpr IS---> Reference
+time = new Time();
+time.setAllenOp("after");
+		time.setTimeValue(10);
+expContext.setTime(time);
+
+statement.addExpContext(expContext);
+
+													model.add("StmBraccioAlzato", statement);
+
+
+			
+			return model;
+		}	
+	}
 		''')
 	}
 

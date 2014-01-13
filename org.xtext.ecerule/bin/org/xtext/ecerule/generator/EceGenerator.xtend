@@ -548,6 +548,7 @@ class EceGenerator implements IGenerator {
 		'''
 	}
 	
+	
 	def dispatch compileRecExpr (IntConstantImpl conditionExpr, Statement statement){
 		'''new NumberDescr(«conditionExpr.value»)'''
 	}
@@ -652,10 +653,15 @@ class EceGenerator implements IGenerator {
 		'''
 		time = new Time();
 		time.setAllenOp("«op.value»");
-		time.setTimeValueExpr(«compileRecExpr(expr as ExpressionImpl, statement)»);
+		«««time.setTimeValue(«compileRecExpr(expr as ExpressionImpl, statement)»);
+		time.setTimeValue(«compileTimeValue(expr as IntConstantImpl, statement)»);
 		expContext.setTime(time);
 		
 		'''
+	}
+	
+	def compileTimeValue (IntConstantImpl conditionExpr, Statement statement){
+		'''«conditionExpr.value»'''
 	}
 	
 	

@@ -2,6 +2,7 @@ package org.ece.main;
 
 import java.io.FileNotFoundException;
 
+import org.ece.include.MainEce;
 import org.ece.reasoner.Reasoner;
 import org.xtext.ecerule.model.ConditionInterface;
 import org.xtext.ecerule.model.Event;
@@ -21,7 +22,8 @@ public class MainLaucher {
 	public static void main(String[] args) throws FileNotFoundException {
 		System.out.println("*****Sono dentro a MainLauncher");
 		System.out.println();
-		
+
+		/*
 		// ---------------------------------------------------
 		//se braccio a T, mi aspetto braccio abbassato dopo 10 
 		Statement statement;
@@ -56,6 +58,9 @@ public class MainLaucher {
 
 		model.add("Stm_LeftArmStrethced", statement);
 		// ---------------------------------------------------
+		*/
+		
+		Model model = MainEce.getModel();
 		
 		Reasoner eceReasoner = new Reasoner();
 		eceReasoner.setModel(model);
