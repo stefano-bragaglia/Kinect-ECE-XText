@@ -23,7 +23,7 @@ public class MainLaucher {
 		System.out.println("*****Sono dentro a MainLauncher");
 		System.out.println();
 
-		/*
+		
 		// ---------------------------------------------------
 		//se braccio a T, mi aspetto braccio abbassato dopo 10 
 		Statement statement;
@@ -58,9 +58,9 @@ public class MainLaucher {
 
 		model.add("Stm_LeftArmStrethced", statement);
 		// ---------------------------------------------------
-		*/
 		
-		Model model = MainEce.getModel();
+		
+		//Model model = MainEce.getModel();
 		
 		Reasoner eceReasoner = new Reasoner();
 		eceReasoner.setModel(model);

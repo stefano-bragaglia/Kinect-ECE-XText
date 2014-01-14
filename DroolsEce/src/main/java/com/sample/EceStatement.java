@@ -1,5 +1,8 @@
 package com.sample;
 
+import org.gradle.CreateDeclarationsVisitor;
+import org.gradle.CreateExpectationsVisitor;
+
 public class EceStatement {
 	private String eventPattern;
 	private String initialCondition;
@@ -79,6 +82,12 @@ public class EceStatement {
 
 	public void setAllenExp(String allenExp) {
 		this.allenExp = allenExp;
+	}
+	
+	
+	public void accept(CreateExpectationsVisitor expectationVisitor) {
+		expectationVisitor.visit(this);
+		
 	}
 	
 	
