@@ -1,0 +1,56 @@
+package com.sample.onestep
+
+import com.sample.EceStatement;
+ 
+global java.lang.StringBuilder strbuild;
+global java.util.Random random;
+
+rule "Gen rules"
+when
+	$ecestm: EceStatement(
+		$evptr: eventPattern, 
+		$icond: initialCondition, 
+		$fcondRef: finalConditionRef, 
+		$fcondExp: finalConditionExp, 
+		$allenExp: allenExp,
+		$codef: codeFulf, 
+		$codev: codeViol 
+	)
+then
+	strbuild.append("rule \"Fulfilment " +random.nextInt(100000)+"\"\n");
+	strbuild.append("when\n");
+	
+		strbuild.append("\t"+$evptr+"\n");
+		strbuild.append("\t"+$fcondRef+"\n");
+		strbuild.append("\teval("+$fcondExp+"==true && "+$allenExp+"==true)\n");
+		if($icond!="")
+		strbuild.append("\t"+$icond+"\n");
+
+	strbuild.append("then\n");
+	
+		if($codef!=null)
+		strbuild.append("\t"+$codef+"\n");
+		strbuild.append("\tSystem.out.println(\"FULFILLED :)\");\n");
+	
+	strbuild.append("end\n\n");
+	
+	
+	
+	
+	strbuild.append("rule \"Violation " +random.nextInt(100000)+"\"\n");
+	strbuild.append("when\n");
+	
+		strbuild.append("\t"+$evptr+"\n");
+		strbuild.append("\t"+$fcondRef+"\n");
+		strbuild.append("\teval("+$fcondExp+"==false || "+$allenExp+"==false)\n");
+		if($icond!="")
+		strbuild.append("\t"+$icond+"\n");
+
+	strbuild.append("then\n");
+	
+		if($codef!=null)
+		strbuild.append("\t"+$codev+"\n");
+		strbuild.append("\tSystem.out.println(\"VIOLATED :(\");\n");
+	
+	strbuild.append("end\n\n\n");
+end
