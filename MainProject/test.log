@@ -1,0 +1,31 @@
+<object-stream>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Gen rules [1]</activationId>
+  <rule>Gen rules</rule>
+  <declarations>$fcondRef=LeftArmLowered($val_LeftArmLowered:value);
+(1); $codev=null; $ecestm=com.sample.EceStatement@6e5d9c6d(1); $fcondExp=($val_LeftArmLowered==0.0)(1); $evptr=
+$evPtr: LeftArmStretched($tsmp:time)(1); $icond=(1); $codef=null; $allenExp=($tsmp&lt;clock.getCurrentTime()-10)(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>1</factId>
+  <objectToString>com.sample.EceStatement@6e5d9c6d</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Gen rules [1]</activationId>
+  <rule>Gen rules</rule>
+  <declarations>$fcondRef=LeftArmLowered($val_LeftArmLowered:value);
+(1); $codev=null; $ecestm=com.sample.EceStatement@6e5d9c6d(1); $fcondExp=($val_LeftArmLowered==0.0)(1); $evptr=
+$evPtr: LeftArmStretched($tsmp:time)(1); $icond=(1); $codef=null; $allenExp=($tsmp&lt;clock.getCurrentTime()-10)(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Gen rules [1]</activationId>
+  <rule>Gen rules</rule>
+  <declarations>$fcondRef=LeftArmLowered($val_LeftArmLowered:value);
+(1); $codev=null; $ecestm=com.sample.EceStatement@6e5d9c6d(1); $fcondExp=($val_LeftArmLowered==0.0)(1); $evptr=
+$evPtr: LeftArmStretched($tsmp:time)(1); $icond=(1); $codef=null; $allenExp=($tsmp&lt;clock.getCurrentTime()-10)(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+</object-stream>
