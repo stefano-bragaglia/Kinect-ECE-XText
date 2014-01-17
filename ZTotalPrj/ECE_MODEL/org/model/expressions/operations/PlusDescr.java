@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package org.model.expressions.operations;
+
+import org.model.ExpressionInterface;
+import org.model.expressions.NumberDescr;
+import org.model.expressions.OperationDescr;
+import org.visitor.Visitable;
+import org.visitor.Visitor;
+
+/**
+ * @author stefano
+ * 
+ */
+public class PlusDescr extends OperationDescr implements ExpressionInterface, Visitable {
+
+	/**
+	 * @param exp1
+	 * @param exp2
+	 */
+	public PlusDescr(ExpressionInterface exp1, ExpressionInterface exp2) {
+		super(exp1, exp2);
+		assert invariant() : "Illegal state in PlusDescr(ExpressionDescr, ExpressionDescr)";
+	}
+
+	/**
+	 * Invariant check against the internal state.
+	 * 
+	 * @return <code>true</code> if this instance's state is consistent,
+	 *         <code>false</code> otherwise
+	 */
+	private boolean invariant() {
+		return (true);
+	}
+	
+	public double validate(){
+		
+		NumberDescr nd1 = (NumberDescr)super.getExp1();
+		NumberDescr nd2 = (NumberDescr)super.getExp2();
+		double value1= nd1.validate();
+		double value2 = nd2.validate();
+		
+		return value1+value2;
+	}
+
+	public void accept(Visitor visitor) {
+		super.getExp1().accept(visitor);
+		visitor.visit(this);
+		super.getExp2().accept(visitor);	
+	}
+
+	
+
+}
