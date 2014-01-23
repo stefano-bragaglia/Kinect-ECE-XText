@@ -76,6 +76,7 @@ public class MainLaucher {
 //		eceReasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
 //		
 //		eceReasoner.notifyEvent("LeftArmStretched", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
+//		eceReasoner.notifyEvent("LeftArmStretched", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
 //		
 //		eceReasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
 		

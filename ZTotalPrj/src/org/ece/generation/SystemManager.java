@@ -96,10 +96,7 @@ public class SystemManager {
 				}
 				
 				
-				
-				
-
-				
+			
 				
 				eceStmList.add(eceStm);
 			}

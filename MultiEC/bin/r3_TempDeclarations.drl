@@ -30,7 +30,7 @@ when
 $evPtr: LeftArmStretched($tsmp:time)
 	LeftArmLowered($val_LeftArmLowered:value);
 then
-	System.out.println("delay= "+(clock.getCurrentTime()-$tsmp));
+	//System.out.println("delay= "+(clock.getCurrentTime()-$tsmp));
 end
 
 

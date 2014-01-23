@@ -33,7 +33,7 @@ rule "test delay"
 when
 	
 $evPtr: LeftArmStretched($tsmp:time)
-	LeftArmLowered($val_LeftArmLowered:value);
+	LeftArmLowered(this after $evPtr, $val_LeftArmLowered:value);
 then
 	System.out.println("delay= "+(clock.getCurrentTime()-$tsmp));
 end
@@ -46,7 +46,7 @@ no-loop
 when
 	$las:LeftArmStretched();
 then
-	System.out.println("//LAS cambiato il timestamp!!");
+	//System.out.println("//LAS cambiato il timestamp!!");
 	modify( $las ){
     	setTime(clock.getCurrentTime())
 	}
@@ -59,7 +59,7 @@ no-loop
 when
 	$lal:LeftArmLowered();
 then
-	System.out.println("//LAL cambiato il timestamp!!");
+	//System.out.println("//LAL cambiato il timestamp!!");
 	modify( $lal ){
     	setTime(clock.getCurrentTime())
 	}

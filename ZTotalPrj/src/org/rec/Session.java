@@ -107,6 +107,9 @@ public class Session {
 	}
 
 	public FactHandle notify(String name, Map<String, Object> params) {
+		System.out.println("--- in  "+clock.getCurrentTime()+"   notify "+name);
+		System.out.println();
+		
 		if (null == name || (name = name.trim()).isEmpty())
 			throw new IllegalArgumentException(
 					"Illegal 'name' argument in Session.notify(String, Object, Map<String, Object>): " + name);

@@ -226,7 +226,7 @@ public class Distribution_Gauge extends Observable implements Observer {
 			System.out.println("-----OK :) match con posa "+eventName);
 			System.out.println("-----timestamp: "+time/1000);
 			this.eceReasoner.notifyEvent(eventName, new HashMap<String, Object>(), time/1000);
-			System.out.println("-----at "+time/1000+" notify "+eventName);
+			//System.out.println("-----at "+time/1000+" notify "+eventName);
 			System.out.println();
 		
 		}

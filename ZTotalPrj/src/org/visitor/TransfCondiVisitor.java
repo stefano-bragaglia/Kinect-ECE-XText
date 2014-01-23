@@ -67,7 +67,7 @@ public class TransfCondiVisitor implements Visitor {
 		sbExpression.append(out);
 		
 //		String ref = "Fluent(name==\""+fluentName+"\", $val_"+fluentName+":value);\n";
-		String ref = fluentName+"($val_"+fluentName+":value);\n";
+		String ref = fluentName+"(this after $evPtr, $val_"+fluentName+":value);\n";
 		sbReference.append(ref);
 
 	}
