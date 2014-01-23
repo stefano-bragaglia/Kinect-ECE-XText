@@ -60,7 +60,7 @@ public class TransfEventVisitor implements Visitor {
 	
 	public void visit(Event event) {
 		eventPattern = "$evPtr: "+event.getEventName()+"($tsmp:time)";
-		System.out.println(eventPattern);
+		//System.out.println(eventPattern);
 	}
 	
 	

@@ -10,27 +10,27 @@ import java.util.concurrent.TimeUnit;
 
 //import rec.dom.Interval;
 import org.rec.messages.EventMessage;
-import org.support.KnowledgeBase;
-import org.support.KnowledgeBaseConfiguration;
-import org.support.KnowledgeBaseFactory;
-import org.support.builder.KnowledgeBuilder;
-import org.support.builder.KnowledgeBuilderError;
-import org.support.builder.KnowledgeBuilderErrors;
-import org.support.builder.KnowledgeBuilderFactory;
-import org.support.builder.ResourceType;
-import org.support.conf.EventProcessingOption;
-import org.support.definition.type.FactType;
-import org.support.event.rule.ObjectInsertedEvent;
-import org.support.event.rule.ObjectRetractedEvent;
-import org.support.event.rule.ObjectUpdatedEvent;
-import org.support.event.rule.WorkingMemoryEventListener;
-import org.support.io.ResourceFactory;
-import org.support.runtime.ClassObjectFilter;
-import org.support.runtime.KnowledgeSessionConfiguration;
-import org.support.runtime.StatefulKnowledgeSession;
-import org.support.runtime.conf.ClockTypeOption;
-import org.support.runtime.rule.FactHandle;
-import org.support.time.SessionPseudoClock;
+import org.drools.KnowledgeBase;
+import org.drools.KnowledgeBaseConfiguration;
+import org.drools.KnowledgeBaseFactory;
+import org.drools.builder.KnowledgeBuilder;
+import org.drools.builder.KnowledgeBuilderError;
+import org.drools.builder.KnowledgeBuilderErrors;
+import org.drools.builder.KnowledgeBuilderFactory;
+import org.drools.builder.ResourceType;
+import org.drools.conf.EventProcessingOption;
+import org.drools.definition.type.FactType;
+import org.drools.event.rule.ObjectInsertedEvent;
+import org.drools.event.rule.ObjectRetractedEvent;
+import org.drools.event.rule.ObjectUpdatedEvent;
+import org.drools.event.rule.WorkingMemoryEventListener;
+import org.drools.io.ResourceFactory;
+import org.drools.runtime.ClassObjectFilter;
+import org.drools.runtime.KnowledgeSessionConfiguration;
+import org.drools.runtime.StatefulKnowledgeSession;
+import org.drools.runtime.conf.ClockTypeOption;
+import org.drools.runtime.rule.FactHandle;
+import org.drools.time.SessionPseudoClock;
 
 /**
  * @author stefano

@@ -78,7 +78,7 @@ public class CreateDeclarationsVisitor implements Visitor {
 	public void visit(Event event) {
 		String eventName = event.getEventName();
 		String decl = "declare "+eventName+ " extends Event\n";
-		decl = decl.concat("\t@role(event)\n");
+		//decl = decl.concat("\t@role(event)\n");
 		decl = decl.concat("end\n");
 		declarationsList.add(decl);
 	}

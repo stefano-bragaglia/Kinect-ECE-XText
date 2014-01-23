@@ -21,7 +21,6 @@ import applet.Background;
 public class MainLaucher {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println("*****Sono dentro a MainLauncher");
 		System.out.println();
 
 		
@@ -71,15 +70,18 @@ public class MainLaucher {
 		eceReasoner.start();
 		
 		
-		eceReasoner.notifyEvent("LeftArmStretched", new HashMap<String, Object>()); //al tempo 0
-		                         
 	
-		eceReasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+8);
+		                         
+//		eceReasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
+//		eceReasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
+//		
+//		eceReasoner.notifyEvent("LeftArmStretched", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
+//		
+//		eceReasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
 		
-		
-//		Background bkg = new Background(false);
-//		bkg.setReasoner(eceReasoner);
-		
+		Background bkg = new Background(false);
+		bkg.setReasoner(eceReasoner);
+	
 		
 		
 		

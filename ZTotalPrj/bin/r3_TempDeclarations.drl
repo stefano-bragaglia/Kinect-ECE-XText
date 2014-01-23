@@ -2,7 +2,7 @@ package rec.dom
 import java.util.concurrent.TimeUnit;
 global org.drools.time.SessionPseudoClock clock;
 
-declare LeftArmLowered// extends Sample
+declare LeftArmLowered extends Event
 	value: double
 end
 
@@ -40,12 +40,29 @@ end
 
 
 
-rule "set timestamp"
+rule "set timestamp LAS"
+salience 100
+no-loop
 when
 	$las:LeftArmStretched();
 then
-	System.out.println("//cambiato il timestamp!!");
-	$las.setTime(clock.getCurrentTime());
+	System.out.println("//LAS cambiato il timestamp!!");
+	modify( $las ){
+    	setTime(clock.getCurrentTime())
+	}
+end
+
+
+rule "set timestamp LAL"
+salience 100
+no-loop
+when
+	$lal:LeftArmLowered();
+then
+	System.out.println("//LAL cambiato il timestamp!!");
+	modify( $lal ){
+    	setTime(clock.getCurrentTime())
+	}
 end
 
 

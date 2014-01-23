@@ -2,7 +2,7 @@ package rec.dom;
 
 global org.drools.time.SessionPseudoClock clock;
 
-rule "Fulfilment 49153"
+rule "Fulfilment 47083"
 when
 	
 $evPtr: LeftArmStretched($tsmp:time)
@@ -13,7 +13,7 @@ then
 	System.out.println("FULFILLED :)");
 end
 
-rule "Violation 34637"
+rule "Violation 69072"
 when
 	
 $evPtr: LeftArmStretched($tsmp:time)
