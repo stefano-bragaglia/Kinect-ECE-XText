@@ -1,8 +1,9 @@
 package org.ece.main;
 
 import java.io.FileNotFoundException;
+import java.util.HashMap;
 
-import org.ece.reasoner.Reasoner;
+import org.ece.reasoner.ReasonerECE;
 import org.model.ConditionInterface;
 import org.model.Event;
 import org.model.ExpContext;
@@ -50,7 +51,7 @@ public class MainLaucher {
 		expContext.setFinalCondition(condContainer);
 
 		time = new Time();
-		time.setAllenOp("after");
+		time.setAllenOp("before");
 		time.setTimeValue(10);
 		expContext.setTime(time);
 
@@ -64,19 +65,20 @@ public class MainLaucher {
 		
 		
 		
-		Reasoner eceReasoner = new Reasoner();
+		ReasonerECE eceReasoner = new ReasonerECE();
 		eceReasoner.setModel(model);
 		eceReasoner.init();
 		eceReasoner.start();
 		
 		
-		//reasoner.notifyEvent("LeftArmStrethced", new HashMap<String, Object>()); //al tempo 0
+		eceReasoner.notifyEvent("LeftArmStretched", new HashMap<String, Object>()); //al tempo 0
+		                         
 	
-		//reasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), reasoner.getCurrentTime()+9);
+		eceReasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+8);
 		
 		
-		Background bkg = new Background(false);
-		bkg.setReasoner(eceReasoner);
+//		Background bkg = new Background(false);
+//		bkg.setReasoner(eceReasoner);
 		
 		
 		

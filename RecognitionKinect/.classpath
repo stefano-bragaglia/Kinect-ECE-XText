@@ -40,6 +40,6 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Program Files/PrimeSense/NiTE2/Redist"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/MainProject"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ZTotalPrj"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

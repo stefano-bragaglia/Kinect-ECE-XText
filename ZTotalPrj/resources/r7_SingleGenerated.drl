@@ -2,24 +2,24 @@ package rec.dom;
 
 global org.drools.time.SessionPseudoClock clock;
 
-rule "Fulfilment 16132"
+rule "Fulfilment 49153"
 when
 	
 $evPtr: LeftArmStretched($tsmp:time)
 	LeftArmLowered($val_LeftArmLowered:value);
 
-	eval(($val_LeftArmLowered==0.0)==true && ($tsmp<clock.getCurrentTime()-10)==true)
+	eval(($val_LeftArmLowered==0.0)==true && (clock.getCurrentTime()<$tsmp+10 && clock.getCurrentTime()>$tsmp)==true)
 then
 	System.out.println("FULFILLED :)");
 end
 
-rule "Violation 67207"
+rule "Violation 34637"
 when
 	
 $evPtr: LeftArmStretched($tsmp:time)
 	LeftArmLowered($val_LeftArmLowered:value);
 
-	eval(($val_LeftArmLowered==0.0)==false || ($tsmp<clock.getCurrentTime()-10)==false)
+	eval(($val_LeftArmLowered==0.0)==false || (clock.getCurrentTime()<$tsmp+10 && clock.getCurrentTime()>$tsmp)==false)
 then
 	System.out.println("VIOLATED :(");
 end

@@ -121,6 +121,8 @@ public class Session {
 				if (null != type) {
 					//create event, insert it into session, fire
 					Object eventObj = type.newInstance();
+					//type.set(eventObj, "time", clock.getCurrentTime());
+					//System.out.println("clock corrente: "+ clock.getCurrentTime());
 					//type.set(eventObj, "params", params);
 					handle = session.insert(eventObj);
 					session.fireAllRules();

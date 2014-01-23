@@ -6,6 +6,11 @@ declare LeftArmLowered// extends Sample
 	value: double
 end
 
+//declare LeftArmStretched// extends Sample
+	//time:long
+//end
+
+
 rule "InTempDeclarations" 
 when
 then
@@ -31,6 +36,16 @@ $evPtr: LeftArmStretched($tsmp:time)
 	LeftArmLowered($val_LeftArmLowered:value);
 then
 	System.out.println("delay= "+(clock.getCurrentTime()-$tsmp));
+end
+
+
+
+rule "set timestamp"
+when
+	$las:LeftArmStretched();
+then
+	System.out.println("//cambiato il timestamp!!");
+	$las.setTime(clock.getCurrentTime());
 end
 
 

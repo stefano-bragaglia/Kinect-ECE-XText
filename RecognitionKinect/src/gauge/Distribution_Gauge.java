@@ -22,7 +22,7 @@ import static constants.TrackerHumanValues.*;
 
 public class Distribution_Gauge extends Observable implements Observer {
 
-	private org.ece.reasoner.Reasoner eceReasoner;
+	private org.ece.reasoner.ReasonerECE eceReasoner;
 	double maxQuality = 0;
 	int poseMatched = -1;
 	private int execution = HAPHAZARD;
@@ -434,7 +434,7 @@ public class Distribution_Gauge extends Observable implements Observer {
 //		}
 	}
 	
-	public void setReasoner(org.ece.reasoner.Reasoner eceReasoner) {
+	public void setReasoner(org.ece.reasoner.ReasonerECE eceReasoner) {
 		this.eceReasoner = eceReasoner;
 	}
 }

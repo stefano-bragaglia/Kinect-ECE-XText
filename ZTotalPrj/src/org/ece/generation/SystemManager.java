@@ -14,6 +14,7 @@ import org.model.Time;
 import org.model.TimeInterface;
 import org.support.EceStatement;
 import org.visitor.AfterVisitor;
+import org.visitor.BeforeVisitor;
 import org.visitor.TransfCondiVisitor;
 import org.visitor.TransfEventVisitor;
 
@@ -79,10 +80,19 @@ public class SystemManager {
 				
 				if (expContext.getTime()!=null){
 					Time time = (Time) expContext.getTime();
+					
 					AfterVisitor aftVisitor = new AfterVisitor();
 					time.accept(aftVisitor);
 					String afterPattern = aftVisitor.getAfter();
-					eceStm.setAllenExp(afterPattern);
+					if(afterPattern!=null)
+						eceStm.setAllenExp(afterPattern);
+					
+					BeforeVisitor bfrVisitor = new BeforeVisitor();
+					time.accept(bfrVisitor);
+					String beforePattern = bfrVisitor.getBefore();
+					if(beforePattern!=null)
+						eceStm.setAllenExp(beforePattern);
+					
 				}
 				
 				

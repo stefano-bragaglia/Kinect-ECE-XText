@@ -11,6 +11,7 @@ import org.model.expressions.NumberDescr;
 import org.model.expressions.SampleDescr;
 import org.model.expressions.operations.MinusDescr;
 import org.model.expressions.operations.PlusDescr;
+import org.support.EceStatement;
 
 public class TransfCondiVisitor implements Visitor {
 	
@@ -96,6 +97,12 @@ public class TransfCondiVisitor implements Visitor {
 	}
 
 	public void visit(Time time) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void visit(EceStatement eceStatement) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -29,7 +29,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import org.ece.reasoner.Reasoner;
+import org.ece.reasoner.ReasonerECE;
 
 import workout.WorkOut;
 
@@ -240,7 +240,7 @@ public class Background extends JFrame implements ActionListener {
 	
 	
 
-	public void setReasoner(Reasoner eceReasoner) {
+	public void setReasoner(ReasonerECE eceReasoner) {
 		this.gauge.setReasoner(eceReasoner);
 	}
 }
