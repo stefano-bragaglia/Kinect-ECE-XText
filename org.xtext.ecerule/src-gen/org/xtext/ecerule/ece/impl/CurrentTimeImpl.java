@@ -24,7 +24,7 @@ import org.xtext.ecerule.ece.EcePackage;
  *
  * @generated
  */
-public class CurrentTimeImpl extends ExpressionImpl implements CurrentTime
+public class CurrentTimeImpl extends AtomicImpl implements CurrentTime
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.

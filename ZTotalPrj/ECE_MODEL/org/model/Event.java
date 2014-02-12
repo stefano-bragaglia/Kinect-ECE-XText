@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.model.EventInterface;
 import org.visitor.CreateDeclarationsVisitor;
+import org.visitor.CreateOperationsVisitor;
 import org.visitor.TransfEventVisitor;
 
 public class Event implements EventInterface {
@@ -50,6 +51,11 @@ public class Event implements EventInterface {
 	public void accept(CreateDeclarationsVisitor visitor) {
 		visitor.visit(this);
 		
+	}
+
+	@Override
+	public void accept(CreateOperationsVisitor visitor) {
+		visitor.visit(this);
 	}
 
 

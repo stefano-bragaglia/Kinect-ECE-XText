@@ -24,7 +24,7 @@ import org.xtext.ecerule.ece.EcePackage;
  *
  * @generated
  */
-public class BoolConstantImpl extends ExpressionImpl implements BoolConstant
+public class BoolConstantImpl extends AtomicImpl implements BoolConstant
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.

@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.ece.generation.GenerateDeclarationsDrl;
 import org.ece.generation.GenerateExpectationDrl_visitor;
+import org.ece.generation.GenerateOperationsDrl;
 import org.model.Model;
 import org.rec.Builder;
 import org.rec.Session;
@@ -27,16 +28,18 @@ public class ReasonerECE {
 
 	//generate required .drl and configure reasoner
 	public void init() throws FileNotFoundException {
-		// generate declarations
+		//generate declarations
 		GenerateDeclarationsDrl gdd = new GenerateDeclarationsDrl(model);
 		gdd.generateDRL("resources/r2_Declarations.drl");
-
-		// generate specific expectation rules
-//		GenerateExpectationDrl ged = new GenerateExpectationDrl(model);  //to remove
-//		ged.generateDRL("src/org/ece/rules/r7_SingleGenerated.drl"); //to remove
+		
+		//generate operation (What should I do if silmple events occur)
+		GenerateOperationsDrl god = new GenerateOperationsDrl(model);
+		god.generateDRL("resources/r4_Operations.drl");
+		
+		// generate specific expectation rules (What should I do if fulfilment/violation expectation)
 		GenerateExpectationDrl_visitor gedv = new GenerateExpectationDrl_visitor(model);
 		gedv.generateDRL("resources/r7_SingleGenerated.drl");
-		
+	
 
 		// Thread.currentThread().sleep(5000);
 
@@ -44,9 +47,9 @@ public class ReasonerECE {
 		builder.setMode(Mode.FULL);
 		builder.setClock(Clock.PSEUDO); // commentare se REALTIME
 
-		//builder.addResource("r7_SingleGenerated.drl"); //to remove
 		builder.addResource("r7_SingleGenerated.drl");
-		builder.addResource("r3_TempDeclarations.drl");
+		builder.addResource("r4_Operations.drl");
+		//builder.addResource("r3_TempDeclarations.drl");
 		builder.addResource("r2_Declarations.drl");
 
 		session = builder.build();

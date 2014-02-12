@@ -24,7 +24,7 @@ import org.xtext.ecerule.ece.FloatConstant;
  *
  * @generated
  */
-public class FloatConstantImpl extends ExpressionImpl implements FloatConstant
+public class FloatConstantImpl extends AtomicImpl implements FloatConstant
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.

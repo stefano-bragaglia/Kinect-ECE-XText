@@ -107,6 +107,7 @@ public class Session {
 	}
 
 	public FactHandle notify(String name, Map<String, Object> params) {
+		System.out.println();
 		System.out.println("--- in  "+clock.getCurrentTime()+"   notify "+name);
 		System.out.println();
 		
@@ -126,7 +127,11 @@ public class Session {
 					Object eventObj = type.newInstance();
 					//type.set(eventObj, "time", clock.getCurrentTime());
 					//System.out.println("clock corrente: "+ clock.getCurrentTime());
-					//type.set(eventObj, "params", params);
+					
+					if(params.toString()!="{}"){
+						type.set(eventObj, "param", params.values().iterator().next());
+					}
+					//type.set(eventObj, "param", 729);
 					handle = session.insert(eventObj);
 					session.fireAllRules();
 				} else
@@ -149,7 +154,7 @@ public class Session {
 
 		
 			
-			session.setGlobal("clock", clock);
+			//session.setGlobal("clock", clock);
 			////////////////////////////////////////////////////
 			session.fireAllRules();
 		}

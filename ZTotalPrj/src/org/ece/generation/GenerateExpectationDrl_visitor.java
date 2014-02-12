@@ -3,9 +3,11 @@ package org.ece.generation;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.util.Iterator;
 import java.util.List;
 
 import org.model.Model;
+import org.model.Statement;
 import org.support.EceStatement;
 import org.visitor.CreateDeclarationsVisitor;
 import org.visitor.CreateExpectationsVisitor;
@@ -17,7 +19,6 @@ public class GenerateExpectationDrl_visitor {
 	
 	public GenerateExpectationDrl_visitor(Model m) {
 		this.model=m;
-		SystemManager sm = new SystemManager(model);
 		CreateExpectationsVisitor expectationVisitor = new CreateExpectationsVisitor();
 		
 		strbuild = new StringBuilder("");
@@ -25,10 +26,15 @@ public class GenerateExpectationDrl_visitor {
 		strbuild.append("global org.drools.time.SessionPseudoClock clock;\n\n");
 		
 		
-		List<EceStatement> eceStmList = sm.getEceStmList();
-		for (EceStatement eceStm : eceStmList) {
-			eceStm.accept(expectationVisitor);
+		Iterator it = (Iterator) model.getStatements().values().iterator();
+		while (it.hasNext()) {
+			Statement stm = (Statement) it.next();
+			if(stm.getExpContextList().size()!=0){
+				stm.accept(expectationVisitor);
+			}
 		}
+
+		
 		strbuild.append(expectationVisitor.getExpectations());
 		
 		strbuild.append("rule \"InSingleGenerated\" \nwhen\nthen\n\tSystem.out.println(\"//Sono dentro a Expectations.drl\");\nend");

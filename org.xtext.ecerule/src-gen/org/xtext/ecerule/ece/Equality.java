@@ -32,12 +32,12 @@ public interface Equality extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(Expression)
+   * @see #setLeft(Atomic)
    * @see org.xtext.ecerule.ece.EcePackage#getEquality_Left()
    * @model containment="true"
    * @generated
    */
-  Expression getLeft();
+  Atomic getLeft();
 
   /**
    * Sets the value of the '{@link org.xtext.ecerule.ece.Equality#getLeft <em>Left</em>}' containment reference.
@@ -47,7 +47,7 @@ public interface Equality extends Expression
    * @see #getLeft()
    * @generated
    */
-  void setLeft(Expression value);
+  void setLeft(Atomic value);
 
   /**
    * Returns the value of the '<em><b>Op</b></em>' attribute.
@@ -84,12 +84,12 @@ public interface Equality extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Right</em>' containment reference.
-   * @see #setRight(Expression)
+   * @see #setRight(Atomic)
    * @see org.xtext.ecerule.ece.EcePackage#getEquality_Right()
    * @model containment="true"
    * @generated
    */
-  Expression getRight();
+  Atomic getRight();
 
   /**
    * Sets the value of the '{@link org.xtext.ecerule.ece.Equality#getRight <em>Right</em>}' containment reference.
@@ -99,6 +99,6 @@ public interface Equality extends Expression
    * @see #getRight()
    * @generated
    */
-  void setRight(Expression value);
+  void setRight(Atomic value);
 
 } // Equality

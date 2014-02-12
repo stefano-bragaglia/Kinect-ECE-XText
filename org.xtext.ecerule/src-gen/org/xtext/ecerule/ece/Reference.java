@@ -20,7 +20,7 @@ package org.xtext.ecerule.ece;
  * @model
  * @generated
  */
-public interface Reference extends Expression
+public interface Reference extends Atomic
 {
   /**
    * Returns the value of the '<em><b>Ref</b></em>' reference.

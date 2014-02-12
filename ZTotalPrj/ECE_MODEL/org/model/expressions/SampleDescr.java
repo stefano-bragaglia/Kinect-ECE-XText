@@ -3,6 +3,9 @@
  */
 package org.model.expressions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.model.ExpressionInterface;
 import org.visitor.Visitable;
 import org.visitor.Visitor;
@@ -17,7 +20,7 @@ public class SampleDescr implements ExpressionInterface, Visitable {
 	 * 
 	 */
 	private String name;
-
+	private List<String> eventFeatureList = new ArrayList();
 	/**
 	 * @param name
 	 */
@@ -44,6 +47,24 @@ public class SampleDescr implements ExpressionInterface, Visitable {
 		return name;
 	}
 
+	
+	public void addEventFeature(String eventFeatureName) {
+		this.eventFeatureList.add(eventFeatureName);
+
+	}
+	
+	public List<String> getEventFeatureList() {
+		return eventFeatureList;
+	}
+
+	public void setEventFeatureList(List<String> eventFeatureList) {
+		this.eventFeatureList = eventFeatureList;
+	}
+	
+	
+	
+	
+	
 	/*
 	 * (non-Javadoc)
 	 * 

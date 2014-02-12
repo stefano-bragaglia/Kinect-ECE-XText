@@ -2,28 +2,23 @@ package rec.dom;
 
 global org.drools.time.SessionPseudoClock clock;
 
-rule "Fulfilment 81168"
+rule "Evaluate FULF ExpectationLeftArmStr"
 when
-	
-$evPtr: LeftArmStretched($tsmp:time)
-	LeftArmLowered(this after $evPtr, $val_LeftArmLowered:value);
+	$evframe: EventFrame() 
+	$exp: ExpectationLeftArmStr(state==-1, this before [0, 10] $evframe)  
 
-	eval(($val_LeftArmLowered==0.0)==true && (clock.getCurrentTime()<$tsmp+10 && clock.getCurrentTime()>$tsmp)==true)
+	$fl_LeftArm: LeftArm()  
+	$s_LeftArm: Sample(fluent==$fl_LeftArm)  
+
+	eval((double)$s_LeftArm.getValue()==0.0)  
 then
-	System.out.println("FULFILLED :)");
+	retract($evframe); 
+	retract($exp); 
+
+	System.out.println("Expectation FULFILLED");    
+	MyExpectationFulf ef = new MyExpectationFulf();  
+	insert(ef);  
 end
-
-rule "Violation 20592"
-when
-	
-$evPtr: LeftArmStretched($tsmp:time)
-	LeftArmLowered(this after $evPtr, $val_LeftArmLowered:value);
-
-	eval(($val_LeftArmLowered==0.0)==false || (clock.getCurrentTime()<$tsmp+10 && clock.getCurrentTime()>$tsmp)==false)
-then
-	System.out.println("VIOLATED :(");
-end
-
 
 
 

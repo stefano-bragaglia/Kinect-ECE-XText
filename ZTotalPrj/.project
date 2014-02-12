@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/org/ece/include/MainEce.java</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/runtime-EclipseXtext/ECE/src-gen/gen/MainEce.java</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

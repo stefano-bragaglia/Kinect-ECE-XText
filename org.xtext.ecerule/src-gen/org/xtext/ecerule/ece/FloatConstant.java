@@ -19,7 +19,7 @@ package org.xtext.ecerule.ece;
  * @model
  * @generated
  */
-public interface FloatConstant extends Expression
+public interface FloatConstant extends Atomic
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

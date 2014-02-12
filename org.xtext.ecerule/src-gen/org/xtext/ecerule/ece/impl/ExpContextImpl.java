@@ -15,7 +15,6 @@ import org.xtext.ecerule.ece.AllenOp;
 import org.xtext.ecerule.ece.ConditionRule;
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.ExpContext;
-import org.xtext.ecerule.ece.Expression;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,6 +27,8 @@ import org.xtext.ecerule.ece.Expression;
  *   <li>{@link org.xtext.ecerule.ece.impl.ExpContextImpl#getAllenOp <em>Allen Op</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.impl.ExpContextImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.impl.ExpContextImpl#getInitialCondition <em>Initial Condition</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.impl.ExpContextImpl#getActionF <em>Action F</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.impl.ExpContextImpl#getActionV <em>Action V</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,14 +57,24 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
   protected AllenOp allenOp;
 
   /**
-   * The cached value of the '{@link #getTime() <em>Time</em>}' containment reference.
+   * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getTime()
    * @generated
    * @ordered
    */
-  protected Expression time;
+  protected static final int TIME_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTime()
+   * @generated
+   * @ordered
+   */
+  protected int time = TIME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getInitialCondition() <em>Initial Condition</em>}' containment reference.
@@ -74,6 +85,46 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
    * @ordered
    */
   protected ConditionRule initialCondition;
+
+  /**
+   * The default value of the '{@link #getActionF() <em>Action F</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getActionF()
+   * @generated
+   * @ordered
+   */
+  protected static final String ACTION_F_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getActionF() <em>Action F</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getActionF()
+   * @generated
+   * @ordered
+   */
+  protected String actionF = ACTION_F_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getActionV() <em>Action V</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getActionV()
+   * @generated
+   * @ordered
+   */
+  protected static final String ACTION_V_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getActionV() <em>Action V</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getActionV()
+   * @generated
+   * @ordered
+   */
+  protected String actionV = ACTION_V_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -197,7 +248,7 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getTime()
+  public int getTime()
   {
     return time;
   }
@@ -207,37 +258,12 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTime(Expression newTime, NotificationChain msgs)
+  public void setTime(int newTime)
   {
-    Expression oldTime = time;
+    int oldTime = time;
     time = newTime;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EcePackage.EXP_CONTEXT__TIME, oldTime, newTime);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTime(Expression newTime)
-  {
-    if (newTime != time)
-    {
-      NotificationChain msgs = null;
-      if (time != null)
-        msgs = ((InternalEObject)time).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EcePackage.EXP_CONTEXT__TIME, null, msgs);
-      if (newTime != null)
-        msgs = ((InternalEObject)newTime).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EcePackage.EXP_CONTEXT__TIME, null, msgs);
-      msgs = basicSetTime(newTime, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.EXP_CONTEXT__TIME, newTime, newTime));
+      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.EXP_CONTEXT__TIME, oldTime, time));
   }
 
   /**
@@ -293,6 +319,52 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getActionF()
+  {
+    return actionF;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setActionF(String newActionF)
+  {
+    String oldActionF = actionF;
+    actionF = newActionF;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.EXP_CONTEXT__ACTION_F, oldActionF, actionF));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getActionV()
+  {
+    return actionV;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setActionV(String newActionV)
+  {
+    String oldActionV = actionV;
+    actionV = newActionV;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.EXP_CONTEXT__ACTION_V, oldActionV, actionV));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -302,8 +374,6 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
         return basicSetFinalCondition(null, msgs);
       case EcePackage.EXP_CONTEXT__ALLEN_OP:
         return basicSetAllenOp(null, msgs);
-      case EcePackage.EXP_CONTEXT__TIME:
-        return basicSetTime(null, msgs);
       case EcePackage.EXP_CONTEXT__INITIAL_CONDITION:
         return basicSetInitialCondition(null, msgs);
     }
@@ -328,6 +398,10 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
         return getTime();
       case EcePackage.EXP_CONTEXT__INITIAL_CONDITION:
         return getInitialCondition();
+      case EcePackage.EXP_CONTEXT__ACTION_F:
+        return getActionF();
+      case EcePackage.EXP_CONTEXT__ACTION_V:
+        return getActionV();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -349,10 +423,16 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
         setAllenOp((AllenOp)newValue);
         return;
       case EcePackage.EXP_CONTEXT__TIME:
-        setTime((Expression)newValue);
+        setTime((Integer)newValue);
         return;
       case EcePackage.EXP_CONTEXT__INITIAL_CONDITION:
         setInitialCondition((ConditionRule)newValue);
+        return;
+      case EcePackage.EXP_CONTEXT__ACTION_F:
+        setActionF((String)newValue);
+        return;
+      case EcePackage.EXP_CONTEXT__ACTION_V:
+        setActionV((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -375,10 +455,16 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
         setAllenOp((AllenOp)null);
         return;
       case EcePackage.EXP_CONTEXT__TIME:
-        setTime((Expression)null);
+        setTime(TIME_EDEFAULT);
         return;
       case EcePackage.EXP_CONTEXT__INITIAL_CONDITION:
         setInitialCondition((ConditionRule)null);
+        return;
+      case EcePackage.EXP_CONTEXT__ACTION_F:
+        setActionF(ACTION_F_EDEFAULT);
+        return;
+      case EcePackage.EXP_CONTEXT__ACTION_V:
+        setActionV(ACTION_V_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -399,11 +485,36 @@ public class ExpContextImpl extends MinimalEObjectImpl.Container implements ExpC
       case EcePackage.EXP_CONTEXT__ALLEN_OP:
         return allenOp != null;
       case EcePackage.EXP_CONTEXT__TIME:
-        return time != null;
+        return time != TIME_EDEFAULT;
       case EcePackage.EXP_CONTEXT__INITIAL_CONDITION:
         return initialCondition != null;
+      case EcePackage.EXP_CONTEXT__ACTION_F:
+        return ACTION_F_EDEFAULT == null ? actionF != null : !ACTION_F_EDEFAULT.equals(actionF);
+      case EcePackage.EXP_CONTEXT__ACTION_V:
+        return ACTION_V_EDEFAULT == null ? actionV != null : !ACTION_V_EDEFAULT.equals(actionV);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (time: ");
+    result.append(time);
+    result.append(", actionF: ");
+    result.append(actionF);
+    result.append(", actionV: ");
+    result.append(actionV);
+    result.append(')');
+    return result.toString();
   }
 
 } //ExpContextImpl

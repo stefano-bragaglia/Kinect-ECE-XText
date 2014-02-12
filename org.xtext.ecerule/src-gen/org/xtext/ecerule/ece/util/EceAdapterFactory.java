@@ -130,29 +130,34 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createFluentAdapter();
       }
       @Override
-      public Adapter caseConditionRule(ConditionRule object)
-      {
-        return createConditionRuleAdapter();
-      }
-      @Override
-      public Adapter caseToRule(ToRule object)
-      {
-        return createToRuleAdapter();
-      }
-      @Override
-      public Adapter caseInRule(InRule object)
-      {
-        return createInRuleAdapter();
-      }
-      @Override
       public Adapter caseExpression(Expression object)
       {
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseAtomic(Atomic object)
+      {
+        return createAtomicAdapter();
+      }
+      @Override
       public Adapter caseReferenceType(ReferenceType object)
       {
         return createReferenceTypeAdapter();
+      }
+      @Override
+      public Adapter caseEquality(Equality object)
+      {
+        return createEqualityAdapter();
+      }
+      @Override
+      public Adapter caseConditionRule(ConditionRule object)
+      {
+        return createConditionRuleAdapter();
+      }
+      @Override
+      public Adapter caseFluentRef(FluentRef object)
+      {
+        return createFluentRefAdapter();
       }
       @Override
       public Adapter caseAtExpr(AtExpr object)
@@ -165,44 +170,9 @@ public class EceAdapterFactory extends AdapterFactoryImpl
         return createAllenOperatorAdapter();
       }
       @Override
-      public Adapter caseOr(Or object)
-      {
-        return createOrAdapter();
-      }
-      @Override
-      public Adapter caseAnd(And object)
-      {
-        return createAndAdapter();
-      }
-      @Override
-      public Adapter caseEquality(Equality object)
-      {
-        return createEqualityAdapter();
-      }
-      @Override
-      public Adapter caseComparison(Comparison object)
-      {
-        return createComparisonAdapter();
-      }
-      @Override
-      public Adapter casePlus(Plus object)
-      {
-        return createPlusAdapter();
-      }
-      @Override
-      public Adapter caseMinus(Minus object)
-      {
-        return createMinusAdapter();
-      }
-      @Override
       public Adapter caseMulOrDiv(MulOrDiv object)
       {
         return createMulOrDivAdapter();
-      }
-      @Override
-      public Adapter caseNot(Not object)
-      {
-        return createNotAdapter();
       }
       @Override
       public Adapter caseFloatConstant(FloatConstant object)
@@ -228,6 +198,36 @@ public class EceAdapterFactory extends AdapterFactoryImpl
       public Adapter caseCurrentTime(CurrentTime object)
       {
         return createCurrentTimeAdapter();
+      }
+      @Override
+      public Adapter caseOr(Or object)
+      {
+        return createOrAdapter();
+      }
+      @Override
+      public Adapter caseAnd(And object)
+      {
+        return createAndAdapter();
+      }
+      @Override
+      public Adapter caseComparison(Comparison object)
+      {
+        return createComparisonAdapter();
+      }
+      @Override
+      public Adapter casePlus(Plus object)
+      {
+        return createPlusAdapter();
+      }
+      @Override
+      public Adapter caseMinus(Minus object)
+      {
+        return createMinusAdapter();
+      }
+      @Override
+      public Adapter caseNot(Not object)
+      {
+        return createNotAdapter();
       }
       @Override
       public Adapter caseAtTimePlusOrMin(AtTimePlusOrMin object)
@@ -432,51 +432,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ConditionRule <em>Condition Rule</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.ConditionRule
-   * @generated
-   */
-  public Adapter createConditionRuleAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ToRule <em>To Rule</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.ToRule
-   * @generated
-   */
-  public Adapter createToRuleAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.InRule <em>In Rule</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.InRule
-   * @generated
-   */
-  public Adapter createInRuleAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Expression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -492,6 +447,21 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Atomic <em>Atomic</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.Atomic
+   * @generated
+   */
+  public Adapter createAtomicAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ReferenceType <em>Reference Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -502,6 +472,51 @@ public class EceAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createReferenceTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Equality <em>Equality</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.Equality
+   * @generated
+   */
+  public Adapter createEqualityAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.ConditionRule <em>Condition Rule</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.ConditionRule
+   * @generated
+   */
+  public Adapter createConditionRuleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.FluentRef <em>Fluent Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.FluentRef
+   * @generated
+   */
+  public Adapter createFluentRefAdapter()
   {
     return null;
   }
@@ -537,96 +552,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Or <em>Or</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.Or
-   * @generated
-   */
-  public Adapter createOrAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.And <em>And</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.And
-   * @generated
-   */
-  public Adapter createAndAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Equality <em>Equality</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.Equality
-   * @generated
-   */
-  public Adapter createEqualityAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Comparison <em>Comparison</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.Comparison
-   * @generated
-   */
-  public Adapter createComparisonAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Plus <em>Plus</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.Plus
-   * @generated
-   */
-  public Adapter createPlusAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Minus <em>Minus</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.Minus
-   * @generated
-   */
-  public Adapter createMinusAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.MulOrDiv <em>Mul Or Div</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -637,21 +562,6 @@ public class EceAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMulOrDivAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Not <em>Not</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.ecerule.ece.Not
-   * @generated
-   */
-  public Adapter createNotAdapter()
   {
     return null;
   }
@@ -727,6 +637,96 @@ public class EceAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createCurrentTimeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Or <em>Or</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.Or
+   * @generated
+   */
+  public Adapter createOrAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.And <em>And</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.And
+   * @generated
+   */
+  public Adapter createAndAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Comparison <em>Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.Comparison
+   * @generated
+   */
+  public Adapter createComparisonAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Plus <em>Plus</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.Plus
+   * @generated
+   */
+  public Adapter createPlusAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Minus <em>Minus</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.Minus
+   * @generated
+   */
+  public Adapter createMinusAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.ecerule.ece.Not <em>Not</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.ecerule.ece.Not
+   * @generated
+   */
+  public Adapter createNotAdapter()
   {
     return null;
   }

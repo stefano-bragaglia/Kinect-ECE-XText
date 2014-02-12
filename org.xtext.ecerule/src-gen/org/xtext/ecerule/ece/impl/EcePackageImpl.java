@@ -16,6 +16,7 @@ import org.xtext.ecerule.ece.AtExpr;
 import org.xtext.ecerule.ece.AtTimeCurrentTime;
 import org.xtext.ecerule.ece.AtTimeIntConstant;
 import org.xtext.ecerule.ece.AtTimePlusOrMin;
+import org.xtext.ecerule.ece.Atomic;
 import org.xtext.ecerule.ece.BoolConstant;
 import org.xtext.ecerule.ece.Comparison;
 import org.xtext.ecerule.ece.ConditionRule;
@@ -34,7 +35,7 @@ import org.xtext.ecerule.ece.ExpContextsList;
 import org.xtext.ecerule.ece.Expression;
 import org.xtext.ecerule.ece.FloatConstant;
 import org.xtext.ecerule.ece.Fluent;
-import org.xtext.ecerule.ece.InRule;
+import org.xtext.ecerule.ece.FluentRef;
 import org.xtext.ecerule.ece.IntConstant;
 import org.xtext.ecerule.ece.Minus;
 import org.xtext.ecerule.ece.MulOrDiv;
@@ -44,7 +45,6 @@ import org.xtext.ecerule.ece.Plus;
 import org.xtext.ecerule.ece.Reference;
 import org.xtext.ecerule.ece.ReferenceType;
 import org.xtext.ecerule.ece.Statement;
-import org.xtext.ecerule.ece.ToRule;
 
 /**
  * <!-- begin-user-doc -->
@@ -136,27 +136,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass conditionRuleEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass toRuleEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass inRuleEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass expressionEClass = null;
 
   /**
@@ -164,7 +143,35 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass atomicEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass referenceTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass equalityEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass conditionRuleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fluentRefEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -185,56 +192,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass orEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass andEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass equalityEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass comparisonEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass plusEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass minusEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass mulOrDivEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass notEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -270,6 +228,48 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * @generated
    */
   private EClass currentTimeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass orEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass andEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass comparisonEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass plusEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass minusEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass notEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -570,9 +570,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExpContext_Time()
+  public EAttribute getExpContext_Time()
   {
-    return (EReference)expContextEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)expContextEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -583,6 +583,26 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
   public EReference getExpContext_InitialCondition()
   {
     return (EReference)expContextEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExpContext_ActionF()
+  {
+    return (EAttribute)expContextEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExpContext_ActionV()
+  {
+    return (EAttribute)expContextEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -620,49 +640,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFluent_TimePart()
-  {
-    return (EReference)fluentEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getFluent_CondPart()
   {
-    return (EReference)fluentEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getConditionRule()
-  {
-    return conditionRuleEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getToRule()
-  {
-    return toRuleEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getInRule()
-  {
-    return inRuleEClass;
+    return (EReference)fluentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -680,7 +660,7 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExpression_Condition()
+  public EReference getExpression_Expression()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(0);
   }
@@ -690,9 +670,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExpression_Expression()
+  public EClass getAtomic()
   {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(1);
+    return atomicEClass;
   }
 
   /**
@@ -713,96 +693,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
   public EAttribute getReferenceType_Name()
   {
     return (EAttribute)referenceTypeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAtExpr()
-  {
-    return atExprEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAllenOperator()
-  {
-    return allenOperatorEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAllenOperator_Value()
-  {
-    return (EAttribute)allenOperatorEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getOr()
-  {
-    return orEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getOr_Left()
-  {
-    return (EReference)orEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getOr_Right()
-  {
-    return (EReference)orEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAnd()
-  {
-    return andEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAnd_Left()
-  {
-    return (EReference)andEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAnd_Right()
-  {
-    return (EReference)andEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -850,9 +740,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getComparison()
+  public EClass getConditionRule()
   {
-    return comparisonEClass;
+    return conditionRuleEClass;
   }
 
   /**
@@ -860,9 +750,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getComparison_Left()
+  public EReference getConditionRule_Condition()
   {
-    return (EReference)comparisonEClass.getEStructuralFeatures().get(0);
+    return (EReference)conditionRuleEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -870,9 +760,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getComparison_Op()
+  public EClass getFluentRef()
   {
-    return (EAttribute)comparisonEClass.getEStructuralFeatures().get(1);
+    return fluentRefEClass;
   }
 
   /**
@@ -880,9 +770,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getComparison_Right()
+  public EAttribute getFluentRef_Value()
   {
-    return (EReference)comparisonEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)fluentRefEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -890,9 +780,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPlus()
+  public EClass getAtExpr()
   {
-    return plusEClass;
+    return atExprEClass;
   }
 
   /**
@@ -900,9 +790,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPlus_Left()
+  public EClass getAllenOperator()
   {
-    return (EReference)plusEClass.getEStructuralFeatures().get(0);
+    return allenOperatorEClass;
   }
 
   /**
@@ -910,39 +800,9 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPlus_Right()
+  public EAttribute getAllenOperator_Value()
   {
-    return (EReference)plusEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getMinus()
-  {
-    return minusEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMinus_Left()
-  {
-    return (EReference)minusEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMinus_Right()
-  {
-    return (EReference)minusEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)allenOperatorEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -983,16 +843,6 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
   public EReference getMulOrDiv_Right()
   {
     return (EReference)mulOrDivEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getNot()
-  {
-    return notEClass;
   }
 
   /**
@@ -1103,6 +953,176 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
   public EAttribute getCurrentTime_Value()
   {
     return (EAttribute)currentTimeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOr()
+  {
+    return orEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOr_Left()
+  {
+    return (EReference)orEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOr_Right()
+  {
+    return (EReference)orEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAnd()
+  {
+    return andEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAnd_Left()
+  {
+    return (EReference)andEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAnd_Right()
+  {
+    return (EReference)andEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getComparison()
+  {
+    return comparisonEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getComparison_Left()
+  {
+    return (EReference)comparisonEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getComparison_Op()
+  {
+    return (EAttribute)comparisonEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getComparison_Right()
+  {
+    return (EReference)comparisonEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPlus()
+  {
+    return plusEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPlus_Left()
+  {
+    return (EReference)plusEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPlus_Right()
+  {
+    return (EReference)plusEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMinus()
+  {
+    return minusEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMinus_Left()
+  {
+    return (EReference)minusEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMinus_Right()
+  {
+    return (EReference)minusEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNot()
+  {
+    return notEClass;
   }
 
   /**
@@ -1244,66 +1264,45 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     expContextEClass = createEClass(EXP_CONTEXT);
     createEReference(expContextEClass, EXP_CONTEXT__FINAL_CONDITION);
     createEReference(expContextEClass, EXP_CONTEXT__ALLEN_OP);
-    createEReference(expContextEClass, EXP_CONTEXT__TIME);
+    createEAttribute(expContextEClass, EXP_CONTEXT__TIME);
     createEReference(expContextEClass, EXP_CONTEXT__INITIAL_CONDITION);
+    createEAttribute(expContextEClass, EXP_CONTEXT__ACTION_F);
+    createEAttribute(expContextEClass, EXP_CONTEXT__ACTION_V);
 
     allenOpEClass = createEClass(ALLEN_OP);
 
     fluentEClass = createEClass(FLUENT);
     createEReference(fluentEClass, FLUENT__VALUE_PART);
-    createEReference(fluentEClass, FLUENT__TIME_PART);
     createEReference(fluentEClass, FLUENT__COND_PART);
 
-    conditionRuleEClass = createEClass(CONDITION_RULE);
-
-    toRuleEClass = createEClass(TO_RULE);
-
-    inRuleEClass = createEClass(IN_RULE);
-
     expressionEClass = createEClass(EXPRESSION);
-    createEReference(expressionEClass, EXPRESSION__CONDITION);
     createEReference(expressionEClass, EXPRESSION__EXPRESSION);
+
+    atomicEClass = createEClass(ATOMIC);
 
     referenceTypeEClass = createEClass(REFERENCE_TYPE);
     createEAttribute(referenceTypeEClass, REFERENCE_TYPE__NAME);
-
-    atExprEClass = createEClass(AT_EXPR);
-
-    allenOperatorEClass = createEClass(ALLEN_OPERATOR);
-    createEAttribute(allenOperatorEClass, ALLEN_OPERATOR__VALUE);
-
-    orEClass = createEClass(OR);
-    createEReference(orEClass, OR__LEFT);
-    createEReference(orEClass, OR__RIGHT);
-
-    andEClass = createEClass(AND);
-    createEReference(andEClass, AND__LEFT);
-    createEReference(andEClass, AND__RIGHT);
 
     equalityEClass = createEClass(EQUALITY);
     createEReference(equalityEClass, EQUALITY__LEFT);
     createEAttribute(equalityEClass, EQUALITY__OP);
     createEReference(equalityEClass, EQUALITY__RIGHT);
 
-    comparisonEClass = createEClass(COMPARISON);
-    createEReference(comparisonEClass, COMPARISON__LEFT);
-    createEAttribute(comparisonEClass, COMPARISON__OP);
-    createEReference(comparisonEClass, COMPARISON__RIGHT);
+    conditionRuleEClass = createEClass(CONDITION_RULE);
+    createEReference(conditionRuleEClass, CONDITION_RULE__CONDITION);
 
-    plusEClass = createEClass(PLUS);
-    createEReference(plusEClass, PLUS__LEFT);
-    createEReference(plusEClass, PLUS__RIGHT);
+    fluentRefEClass = createEClass(FLUENT_REF);
+    createEAttribute(fluentRefEClass, FLUENT_REF__VALUE);
 
-    minusEClass = createEClass(MINUS);
-    createEReference(minusEClass, MINUS__LEFT);
-    createEReference(minusEClass, MINUS__RIGHT);
+    atExprEClass = createEClass(AT_EXPR);
+
+    allenOperatorEClass = createEClass(ALLEN_OPERATOR);
+    createEAttribute(allenOperatorEClass, ALLEN_OPERATOR__VALUE);
 
     mulOrDivEClass = createEClass(MUL_OR_DIV);
     createEReference(mulOrDivEClass, MUL_OR_DIV__LEFT);
     createEAttribute(mulOrDivEClass, MUL_OR_DIV__OP);
     createEReference(mulOrDivEClass, MUL_OR_DIV__RIGHT);
-
-    notEClass = createEClass(NOT);
 
     floatConstantEClass = createEClass(FLOAT_CONSTANT);
     createEAttribute(floatConstantEClass, FLOAT_CONSTANT__VALUE);
@@ -1320,6 +1319,29 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
 
     currentTimeEClass = createEClass(CURRENT_TIME);
     createEAttribute(currentTimeEClass, CURRENT_TIME__VALUE);
+
+    orEClass = createEClass(OR);
+    createEReference(orEClass, OR__LEFT);
+    createEReference(orEClass, OR__RIGHT);
+
+    andEClass = createEClass(AND);
+    createEReference(andEClass, AND__LEFT);
+    createEReference(andEClass, AND__RIGHT);
+
+    comparisonEClass = createEClass(COMPARISON);
+    createEReference(comparisonEClass, COMPARISON__LEFT);
+    createEAttribute(comparisonEClass, COMPARISON__OP);
+    createEReference(comparisonEClass, COMPARISON__RIGHT);
+
+    plusEClass = createEClass(PLUS);
+    createEReference(plusEClass, PLUS__LEFT);
+    createEReference(plusEClass, PLUS__RIGHT);
+
+    minusEClass = createEClass(MINUS);
+    createEReference(minusEClass, MINUS__LEFT);
+    createEReference(minusEClass, MINUS__RIGHT);
+
+    notEClass = createEClass(NOT);
 
     atTimePlusOrMinEClass = createEClass(AT_TIME_PLUS_OR_MIN);
     createEReference(atTimePlusOrMinEClass, AT_TIME_PLUS_OR_MIN__LEFT);
@@ -1364,23 +1386,22 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     // Add supertypes to classes
     eventFeatureEClass.getESuperTypes().add(this.getReferenceType());
     fluentEClass.getESuperTypes().add(this.getReferenceType());
-    expressionEClass.getESuperTypes().add(this.getConditionRule());
-    expressionEClass.getESuperTypes().add(this.getToRule());
-    expressionEClass.getESuperTypes().add(this.getInRule());
+    atomicEClass.getESuperTypes().add(this.getExpression());
+    atomicEClass.getESuperTypes().add(this.getEquality());
+    equalityEClass.getESuperTypes().add(this.getExpression());
     allenOperatorEClass.getESuperTypes().add(this.getAllenOp());
+    mulOrDivEClass.getESuperTypes().add(this.getExpression());
+    floatConstantEClass.getESuperTypes().add(this.getAtomic());
+    intConstantEClass.getESuperTypes().add(this.getAtomic());
+    boolConstantEClass.getESuperTypes().add(this.getAtomic());
+    referenceEClass.getESuperTypes().add(this.getAtomic());
+    currentTimeEClass.getESuperTypes().add(this.getAtomic());
     orEClass.getESuperTypes().add(this.getExpression());
     andEClass.getESuperTypes().add(this.getExpression());
-    equalityEClass.getESuperTypes().add(this.getExpression());
     comparisonEClass.getESuperTypes().add(this.getExpression());
     plusEClass.getESuperTypes().add(this.getExpression());
     minusEClass.getESuperTypes().add(this.getExpression());
-    mulOrDivEClass.getESuperTypes().add(this.getExpression());
     notEClass.getESuperTypes().add(this.getExpression());
-    floatConstantEClass.getESuperTypes().add(this.getExpression());
-    intConstantEClass.getESuperTypes().add(this.getExpression());
-    boolConstantEClass.getESuperTypes().add(this.getExpression());
-    referenceEClass.getESuperTypes().add(this.getExpression());
-    currentTimeEClass.getESuperTypes().add(this.getExpression());
     atTimePlusOrMinEClass.getESuperTypes().add(this.getAtExpr());
     atTimeIntConstantEClass.getESuperTypes().add(this.getAtExpr());
     atTimeCurrentTimeEClass.getESuperTypes().add(this.getAtExpr());
@@ -1415,66 +1436,45 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
     initEClass(expContextEClass, ExpContext.class, "ExpContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExpContext_FinalCondition(), this.getConditionRule(), null, "finalCondition", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpContext_AllenOp(), this.getAllenOp(), null, "allenOp", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpContext_Time(), this.getExpression(), null, "time", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExpContext_Time(), ecorePackage.getEInt(), "time", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpContext_InitialCondition(), this.getConditionRule(), null, "initialCondition", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExpContext_ActionF(), ecorePackage.getEString(), "actionF", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExpContext_ActionV(), ecorePackage.getEString(), "actionV", null, 0, 1, ExpContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(allenOpEClass, AllenOp.class, "AllenOp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(fluentEClass, Fluent.class, "Fluent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFluent_ValuePart(), this.getToRule(), null, "valuePart", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFluent_TimePart(), this.getInRule(), null, "timePart", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFluent_ValuePart(), this.getExpression(), null, "valuePart", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFluent_CondPart(), this.getConditionRule(), null, "condPart", null, 0, 1, Fluent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(conditionRuleEClass, ConditionRule.class, "ConditionRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(toRuleEClass, ToRule.class, "ToRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(inRuleEClass, InRule.class, "InRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExpression_Condition(), this.getExpression(), null, "condition", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(atomicEClass, Atomic.class, "Atomic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(referenceTypeEClass, ReferenceType.class, "ReferenceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getReferenceType_Name(), ecorePackage.getEString(), "name", null, 0, 1, ReferenceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(equalityEClass, Equality.class, "Equality", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEquality_Left(), this.getAtomic(), null, "left", null, 0, 1, Equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEquality_Op(), ecorePackage.getEString(), "op", null, 0, 1, Equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEquality_Right(), this.getAtomic(), null, "right", null, 0, 1, Equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(conditionRuleEClass, ConditionRule.class, "ConditionRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getConditionRule_Condition(), this.getEquality(), null, "condition", null, 0, 1, ConditionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fluentRefEClass, FluentRef.class, "FluentRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFluentRef_Value(), ecorePackage.getEString(), "value", null, 0, 1, FluentRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atExprEClass, AtExpr.class, "AtExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(allenOperatorEClass, AllenOperator.class, "AllenOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAllenOperator_Value(), ecorePackage.getEString(), "value", null, 0, 1, AllenOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(orEClass, Or.class, "Or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getOr_Left(), this.getExpression(), null, "left", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getOr_Right(), this.getExpression(), null, "right", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(andEClass, And.class, "And", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAnd_Left(), this.getExpression(), null, "left", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAnd_Right(), this.getExpression(), null, "right", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(equalityEClass, Equality.class, "Equality", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getEquality_Left(), this.getExpression(), null, "left", null, 0, 1, Equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEquality_Op(), ecorePackage.getEString(), "op", null, 0, 1, Equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEquality_Right(), this.getExpression(), null, "right", null, 0, 1, Equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(comparisonEClass, Comparison.class, "Comparison", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getComparison_Left(), this.getExpression(), null, "left", null, 0, 1, Comparison.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getComparison_Op(), ecorePackage.getEString(), "op", null, 0, 1, Comparison.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getComparison_Right(), this.getExpression(), null, "right", null, 0, 1, Comparison.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(plusEClass, Plus.class, "Plus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPlus_Left(), this.getExpression(), null, "left", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPlus_Right(), this.getExpression(), null, "right", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(minusEClass, Minus.class, "Minus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMinus_Left(), this.getExpression(), null, "left", null, 0, 1, Minus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMinus_Right(), this.getExpression(), null, "right", null, 0, 1, Minus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(mulOrDivEClass, MulOrDiv.class, "MulOrDiv", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMulOrDiv_Left(), this.getExpression(), null, "left", null, 0, 1, MulOrDiv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMulOrDiv_Left(), this.getAtomic(), null, "left", null, 0, 1, MulOrDiv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMulOrDiv_Op(), ecorePackage.getEString(), "op", null, 0, 1, MulOrDiv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMulOrDiv_Right(), this.getExpression(), null, "right", null, 0, 1, MulOrDiv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(notEClass, Not.class, "Not", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMulOrDiv_Right(), this.getAtomic(), null, "right", null, 0, 1, MulOrDiv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(floatConstantEClass, FloatConstant.class, "FloatConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFloatConstant_Value(), ecorePackage.getEFloat(), "value", null, 0, 1, FloatConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1491,6 +1491,29 @@ public class EcePackageImpl extends EPackageImpl implements EcePackage
 
     initEClass(currentTimeEClass, CurrentTime.class, "CurrentTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCurrentTime_Value(), ecorePackage.getEString(), "value", null, 0, 1, CurrentTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(orEClass, Or.class, "Or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getOr_Left(), this.getExpression(), null, "left", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOr_Right(), this.getExpression(), null, "right", null, 0, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(andEClass, And.class, "And", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAnd_Left(), this.getEquality(), null, "left", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAnd_Right(), this.getEquality(), null, "right", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(comparisonEClass, Comparison.class, "Comparison", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getComparison_Left(), this.getExpression(), null, "left", null, 0, 1, Comparison.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getComparison_Op(), ecorePackage.getEString(), "op", null, 0, 1, Comparison.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComparison_Right(), this.getExpression(), null, "right", null, 0, 1, Comparison.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(plusEClass, Plus.class, "Plus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPlus_Left(), this.getExpression(), null, "left", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPlus_Right(), this.getExpression(), null, "right", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(minusEClass, Minus.class, "Minus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMinus_Left(), this.getExpression(), null, "left", null, 0, 1, Minus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMinus_Right(), this.getExpression(), null, "right", null, 0, 1, Minus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(notEClass, Not.class, "Not", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(atTimePlusOrMinEClass, AtTimePlusOrMin.class, "AtTimePlusOrMin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAtTimePlusOrMin_Left(), this.getAtExpr(), null, "left", null, 0, 1, AtTimePlusOrMin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

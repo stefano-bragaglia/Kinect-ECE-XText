@@ -122,33 +122,6 @@ public interface EceFactory extends EFactory
   Fluent createFluent();
 
   /**
-   * Returns a new object of class '<em>Condition Rule</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Condition Rule</em>'.
-   * @generated
-   */
-  ConditionRule createConditionRule();
-
-  /**
-   * Returns a new object of class '<em>To Rule</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>To Rule</em>'.
-   * @generated
-   */
-  ToRule createToRule();
-
-  /**
-   * Returns a new object of class '<em>In Rule</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>In Rule</em>'.
-   * @generated
-   */
-  InRule createInRule();
-
-  /**
    * Returns a new object of class '<em>Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -158,6 +131,15 @@ public interface EceFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Atomic</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atomic</em>'.
+   * @generated
+   */
+  Atomic createAtomic();
+
+  /**
    * Returns a new object of class '<em>Reference Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -165,6 +147,33 @@ public interface EceFactory extends EFactory
    * @generated
    */
   ReferenceType createReferenceType();
+
+  /**
+   * Returns a new object of class '<em>Equality</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Equality</em>'.
+   * @generated
+   */
+  Equality createEquality();
+
+  /**
+   * Returns a new object of class '<em>Condition Rule</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Condition Rule</em>'.
+   * @generated
+   */
+  ConditionRule createConditionRule();
+
+  /**
+   * Returns a new object of class '<em>Fluent Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Fluent Ref</em>'.
+   * @generated
+   */
+  FluentRef createFluentRef();
 
   /**
    * Returns a new object of class '<em>At Expr</em>'.
@@ -185,60 +194,6 @@ public interface EceFactory extends EFactory
   AllenOperator createAllenOperator();
 
   /**
-   * Returns a new object of class '<em>Or</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Or</em>'.
-   * @generated
-   */
-  Or createOr();
-
-  /**
-   * Returns a new object of class '<em>And</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>And</em>'.
-   * @generated
-   */
-  And createAnd();
-
-  /**
-   * Returns a new object of class '<em>Equality</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Equality</em>'.
-   * @generated
-   */
-  Equality createEquality();
-
-  /**
-   * Returns a new object of class '<em>Comparison</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Comparison</em>'.
-   * @generated
-   */
-  Comparison createComparison();
-
-  /**
-   * Returns a new object of class '<em>Plus</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Plus</em>'.
-   * @generated
-   */
-  Plus createPlus();
-
-  /**
-   * Returns a new object of class '<em>Minus</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Minus</em>'.
-   * @generated
-   */
-  Minus createMinus();
-
-  /**
    * Returns a new object of class '<em>Mul Or Div</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -246,15 +201,6 @@ public interface EceFactory extends EFactory
    * @generated
    */
   MulOrDiv createMulOrDiv();
-
-  /**
-   * Returns a new object of class '<em>Not</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Not</em>'.
-   * @generated
-   */
-  Not createNot();
 
   /**
    * Returns a new object of class '<em>Float Constant</em>'.
@@ -300,6 +246,60 @@ public interface EceFactory extends EFactory
    * @generated
    */
   CurrentTime createCurrentTime();
+
+  /**
+   * Returns a new object of class '<em>Or</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Or</em>'.
+   * @generated
+   */
+  Or createOr();
+
+  /**
+   * Returns a new object of class '<em>And</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>And</em>'.
+   * @generated
+   */
+  And createAnd();
+
+  /**
+   * Returns a new object of class '<em>Comparison</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Comparison</em>'.
+   * @generated
+   */
+  Comparison createComparison();
+
+  /**
+   * Returns a new object of class '<em>Plus</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Plus</em>'.
+   * @generated
+   */
+  Plus createPlus();
+
+  /**
+   * Returns a new object of class '<em>Minus</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Minus</em>'.
+   * @generated
+   */
+  Minus createMinus();
+
+  /**
+   * Returns a new object of class '<em>Not</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Not</em>'.
+   * @generated
+   */
+  Not createNot();
 
   /**
    * Returns a new object of class '<em>At Time Plus Or Min</em>'.

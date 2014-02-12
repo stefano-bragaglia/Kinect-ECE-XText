@@ -24,7 +24,7 @@ import org.xtext.ecerule.ece.IntConstant;
  *
  * @generated
  */
-public class IntConstantImpl extends ExpressionImpl implements IntConstant
+public class IntConstantImpl extends AtomicImpl implements IntConstant
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.

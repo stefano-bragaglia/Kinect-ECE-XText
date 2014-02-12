@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.model.ConditionInterface;
 import org.model.Event;
+import org.model.ExpContext;
 import org.model.Statement;
 import org.model.Time;
 import org.model.conditions.relations.LessDescr;
@@ -13,6 +15,7 @@ import org.model.conditions.relations.SameDescr;
 import org.model.expressions.NumberDescr;
 import org.model.expressions.SampleDescr;
 import org.model.expressions.operations.MinusDescr;
+import org.model.expressions.operations.MultDescr;
 import org.model.expressions.operations.PlusDescr;
 import org.support.EceStatement;
 
@@ -84,55 +87,75 @@ public class CreateExpectationsVisitor implements Visitor {
 		
 	}
 
+
+	@Override
+	public void visit(MultDescr multDescr) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void visit(Statement statement) {
+		
+		if(statement.getExpContextList().size()!=0){ //se è uno statement EXP
+			
+			Event ev = (Event) statement.getEvent();
+			String evName = ev.getEventName(); //event name
+			
+			ExpContext expCtx = (ExpContext) statement.getExpContextList().get(0); //ciclo for se ci sono più expContext in uno statement
+			
+			String allenOp = expCtx.getTime().getAllenOp();
+			long timeVal = expCtx.getTime().getTimeValue();
+			
+			ConditionInterface fCond = expCtx.getFinalCondition();
+			TransfCondiVisitor tcv = new TransfCondiVisitor();
+			fCond.accept(tcv);
+			List<String> refList = tcv.getReferenceList();
+			String fCondExpr = tcv.getExprPattern();
+			
+			String actionOnFulf = expCtx.getActionOnFulf().getAction();
+			
+			
+			//fulfilment
+			String exp = "rule \"Evaluate FULF Expectation"+evName+"\"\n";
+			exp = exp.concat("when\n");
+				
+			
+				exp = exp.concat("\t$evframe: EventFrame() \n");
+				exp = exp.concat("\t$exp: Expectation"+evName+"(state==-1, this before [0, "+timeVal+"] $evframe)  \n\n");
+				
+				for(String flName: refList){
+					exp = exp.concat("\t$fl_"+flName+": "+flName+"()  \n");
+					exp = exp.concat("\t$s_"+flName+": Sample(fluent==$fl_"+flName+")  \n"); 
+				}
+				
+				exp = exp.concat("\n\teval("+fCondExpr+")  \n");
+				
+				
+			exp = exp.concat("then\n");
+			
+			
+				exp = exp.concat("\tretract($evframe); \n");
+				exp = exp.concat("\tretract($exp); \n\n");
+				
+				exp = exp.concat("\tSystem.out.println(\"Expectation FULFILLED\");    \n");
+				exp = exp.concat("\t"+actionOnFulf+" ef = new "+actionOnFulf+"();  \n");
+				exp = exp.concat("\tinsert(ef);  \n");
+			
+				
+			exp = exp.concat("end\n");
+			
+			
+			expectationList.add(exp);
+			
+			
+		}
+	}
+
+	@Override
 	public void visit(EceStatement eceStatement) {
-		String evptr = eceStatement.getEventPattern();
-		String icond = eceStatement.getInitialCondition();
-		String fcondRef = eceStatement.getFinalConditionRef();
-		String fcondExp = eceStatement.getFinalConditionExp();
-		String allenExp = eceStatement.getAllenExp();
-		String codef = eceStatement.getCodeFulf();
-		String codev = eceStatement.getCodeViol();
-		
-		
-		//fulfilment
-		String exp = "rule \"Fulfilment " +random.nextInt(100000)+ "\"\n";
-		exp = exp.concat("when\n");
-		
-			exp = exp.concat("\t"+evptr+"\n");
-			exp = exp.concat("\t"+fcondRef+"\n");
-			exp=exp.concat("\teval("+fcondExp+"==true && "+allenExp+"==true)\n");
-			if(icond!="")
-				exp=exp.concat("\t"+icond+"\n");
-		
-		exp = exp.concat("then\n");
-		
-			if(codef!=null)
-				exp=exp.concat("\t"+codef+"\n");
-			exp=exp.concat("\tSystem.out.println(\"FULFILLED :)\");\n");
-		
-		exp = exp.concat("end\n\n");
-		
-		
-		//violation
-		exp = exp.concat("rule \"Violation " +random.nextInt(100000)+ "\"\n");
-		exp = exp.concat("when\n");
-		
-			exp = exp.concat("\t"+evptr+"\n");
-			exp = exp.concat("\t"+fcondRef+"\n");
-			exp=exp.concat("\teval("+fcondExp+"==false || "+allenExp+"==false)\n");
-			if(icond!="")
-				exp=exp.concat("\t"+icond+"\n");
-		
-		exp = exp.concat("then\n");
-		
-			if(codef!=null)
-				exp=exp.concat("\t"+codef+"\n");
-			exp=exp.concat("\tSystem.out.println(\"VIOLATED :(\");\n");
-		
-		exp = exp.concat("end\n\n");
-		
-		
-		expectationList.add(exp);
+		// TODO Auto-generated method stub
 		
 	}
 

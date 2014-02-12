@@ -29,7 +29,7 @@ import org.xtext.ecerule.ece.ReferenceType;
  *
  * @generated
  */
-public class ReferenceImpl extends ExpressionImpl implements Reference
+public class ReferenceImpl extends AtomicImpl implements Reference
 {
   /**
    * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.

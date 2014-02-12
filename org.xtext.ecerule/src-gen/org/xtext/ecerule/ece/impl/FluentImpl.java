@@ -12,9 +12,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.ecerule.ece.ConditionRule;
 import org.xtext.ecerule.ece.EcePackage;
+import org.xtext.ecerule.ece.Expression;
 import org.xtext.ecerule.ece.Fluent;
-import org.xtext.ecerule.ece.InRule;
-import org.xtext.ecerule.ece.ToRule;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,6 @@ import org.xtext.ecerule.ece.ToRule;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.ecerule.ece.impl.FluentImpl#getValuePart <em>Value Part</em>}</li>
- *   <li>{@link org.xtext.ecerule.ece.impl.FluentImpl#getTimePart <em>Time Part</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.impl.FluentImpl#getCondPart <em>Cond Part</em>}</li>
  * </ul>
  * </p>
@@ -41,17 +39,7 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
    * @generated
    * @ordered
    */
-  protected ToRule valuePart;
-
-  /**
-   * The cached value of the '{@link #getTimePart() <em>Time Part</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTimePart()
-   * @generated
-   * @ordered
-   */
-  protected InRule timePart;
+  protected Expression valuePart;
 
   /**
    * The cached value of the '{@link #getCondPart() <em>Cond Part</em>}' containment reference.
@@ -89,7 +77,7 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
    * <!-- end-user-doc -->
    * @generated
    */
-  public ToRule getValuePart()
+  public Expression getValuePart()
   {
     return valuePart;
   }
@@ -99,9 +87,9 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValuePart(ToRule newValuePart, NotificationChain msgs)
+  public NotificationChain basicSetValuePart(Expression newValuePart, NotificationChain msgs)
   {
-    ToRule oldValuePart = valuePart;
+    Expression oldValuePart = valuePart;
     valuePart = newValuePart;
     if (eNotificationRequired())
     {
@@ -116,7 +104,7 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValuePart(ToRule newValuePart)
+  public void setValuePart(Expression newValuePart)
   {
     if (newValuePart != valuePart)
     {
@@ -130,54 +118,6 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.FLUENT__VALUE_PART, newValuePart, newValuePart));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InRule getTimePart()
-  {
-    return timePart;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetTimePart(InRule newTimePart, NotificationChain msgs)
-  {
-    InRule oldTimePart = timePart;
-    timePart = newTimePart;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EcePackage.FLUENT__TIME_PART, oldTimePart, newTimePart);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTimePart(InRule newTimePart)
-  {
-    if (newTimePart != timePart)
-    {
-      NotificationChain msgs = null;
-      if (timePart != null)
-        msgs = ((InternalEObject)timePart).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EcePackage.FLUENT__TIME_PART, null, msgs);
-      if (newTimePart != null)
-        msgs = ((InternalEObject)newTimePart).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EcePackage.FLUENT__TIME_PART, null, msgs);
-      msgs = basicSetTimePart(newTimePart, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.FLUENT__TIME_PART, newTimePart, newTimePart));
   }
 
   /**
@@ -240,8 +180,6 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
     {
       case EcePackage.FLUENT__VALUE_PART:
         return basicSetValuePart(null, msgs);
-      case EcePackage.FLUENT__TIME_PART:
-        return basicSetTimePart(null, msgs);
       case EcePackage.FLUENT__COND_PART:
         return basicSetCondPart(null, msgs);
     }
@@ -260,8 +198,6 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
     {
       case EcePackage.FLUENT__VALUE_PART:
         return getValuePart();
-      case EcePackage.FLUENT__TIME_PART:
-        return getTimePart();
       case EcePackage.FLUENT__COND_PART:
         return getCondPart();
     }
@@ -279,10 +215,7 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
     switch (featureID)
     {
       case EcePackage.FLUENT__VALUE_PART:
-        setValuePart((ToRule)newValue);
-        return;
-      case EcePackage.FLUENT__TIME_PART:
-        setTimePart((InRule)newValue);
+        setValuePart((Expression)newValue);
         return;
       case EcePackage.FLUENT__COND_PART:
         setCondPart((ConditionRule)newValue);
@@ -302,10 +235,7 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
     switch (featureID)
     {
       case EcePackage.FLUENT__VALUE_PART:
-        setValuePart((ToRule)null);
-        return;
-      case EcePackage.FLUENT__TIME_PART:
-        setTimePart((InRule)null);
+        setValuePart((Expression)null);
         return;
       case EcePackage.FLUENT__COND_PART:
         setCondPart((ConditionRule)null);
@@ -326,8 +256,6 @@ public class FluentImpl extends ReferenceTypeImpl implements Fluent
     {
       case EcePackage.FLUENT__VALUE_PART:
         return valuePart != null;
-      case EcePackage.FLUENT__TIME_PART:
-        return timePart != null;
       case EcePackage.FLUENT__COND_PART:
         return condPart != null;
     }

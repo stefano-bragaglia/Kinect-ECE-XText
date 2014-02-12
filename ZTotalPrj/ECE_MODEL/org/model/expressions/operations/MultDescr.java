@@ -6,6 +6,7 @@ package org.model.expressions.operations;
 import org.model.ExpressionInterface;
 import org.model.expressions.NumberDescr;
 import org.model.expressions.OperationDescr;
+import org.visitor.Visitor;
 
 /**
  * @author stefano
@@ -40,6 +41,12 @@ public class MultDescr extends OperationDescr implements ExpressionInterface {
 		double value2 = nd2.validate();
 		
 		return value1*value2;
+	}
+
+	@Override
+	public void accept(Visitor visitor) {
+		visitor.visit(this);
+		
 	}
 
 }

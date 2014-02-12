@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.ecerule.ece.Atomic;
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.Equality;
-import org.xtext.ecerule.ece.Expression;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public class EqualityImpl extends ExpressionImpl implements Equality
    * @generated
    * @ordered
    */
-  protected Expression left;
+  protected Atomic left;
 
   /**
    * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -69,7 +69,7 @@ public class EqualityImpl extends ExpressionImpl implements Equality
    * @generated
    * @ordered
    */
-  protected Expression right;
+  protected Atomic right;
 
   /**
    * <!-- begin-user-doc -->
@@ -97,7 +97,7 @@ public class EqualityImpl extends ExpressionImpl implements Equality
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getLeft()
+  public Atomic getLeft()
   {
     return left;
   }
@@ -107,9 +107,9 @@ public class EqualityImpl extends ExpressionImpl implements Equality
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(Expression newLeft, NotificationChain msgs)
+  public NotificationChain basicSetLeft(Atomic newLeft, NotificationChain msgs)
   {
-    Expression oldLeft = left;
+    Atomic oldLeft = left;
     left = newLeft;
     if (eNotificationRequired())
     {
@@ -124,7 +124,7 @@ public class EqualityImpl extends ExpressionImpl implements Equality
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLeft(Expression newLeft)
+  public void setLeft(Atomic newLeft)
   {
     if (newLeft != left)
     {
@@ -168,7 +168,7 @@ public class EqualityImpl extends ExpressionImpl implements Equality
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getRight()
+  public Atomic getRight()
   {
     return right;
   }
@@ -178,9 +178,9 @@ public class EqualityImpl extends ExpressionImpl implements Equality
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRight(Expression newRight, NotificationChain msgs)
+  public NotificationChain basicSetRight(Atomic newRight, NotificationChain msgs)
   {
-    Expression oldRight = right;
+    Atomic oldRight = right;
     right = newRight;
     if (eNotificationRequired())
     {
@@ -195,7 +195,7 @@ public class EqualityImpl extends ExpressionImpl implements Equality
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRight(Expression newRight)
+  public void setRight(Atomic newRight)
   {
     if (newRight != right)
     {
@@ -260,13 +260,13 @@ public class EqualityImpl extends ExpressionImpl implements Equality
     switch (featureID)
     {
       case EcePackage.EQUALITY__LEFT:
-        setLeft((Expression)newValue);
+        setLeft((Atomic)newValue);
         return;
       case EcePackage.EQUALITY__OP:
         setOp((String)newValue);
         return;
       case EcePackage.EQUALITY__RIGHT:
-        setRight((Expression)newValue);
+        setRight((Atomic)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -283,13 +283,13 @@ public class EqualityImpl extends ExpressionImpl implements Equality
     switch (featureID)
     {
       case EcePackage.EQUALITY__LEFT:
-        setLeft((Expression)null);
+        setLeft((Atomic)null);
         return;
       case EcePackage.EQUALITY__OP:
         setOp(OP_EDEFAULT);
         return;
       case EcePackage.EQUALITY__RIGHT:
-        setRight((Expression)null);
+        setRight((Atomic)null);
         return;
     }
     super.eUnset(featureID);

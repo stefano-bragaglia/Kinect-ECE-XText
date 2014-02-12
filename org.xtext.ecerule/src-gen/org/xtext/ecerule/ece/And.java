@@ -31,12 +31,12 @@ public interface And extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(Expression)
+   * @see #setLeft(Equality)
    * @see org.xtext.ecerule.ece.EcePackage#getAnd_Left()
    * @model containment="true"
    * @generated
    */
-  Expression getLeft();
+  Equality getLeft();
 
   /**
    * Sets the value of the '{@link org.xtext.ecerule.ece.And#getLeft <em>Left</em>}' containment reference.
@@ -46,7 +46,7 @@ public interface And extends Expression
    * @see #getLeft()
    * @generated
    */
-  void setLeft(Expression value);
+  void setLeft(Equality value);
 
   /**
    * Returns the value of the '<em><b>Right</b></em>' containment reference.
@@ -57,12 +57,12 @@ public interface And extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Right</em>' containment reference.
-   * @see #setRight(Expression)
+   * @see #setRight(Equality)
    * @see org.xtext.ecerule.ece.EcePackage#getAnd_Right()
    * @model containment="true"
    * @generated
    */
-  Expression getRight();
+  Equality getRight();
 
   /**
    * Sets the value of the '{@link org.xtext.ecerule.ece.And#getRight <em>Right</em>}' containment reference.
@@ -72,6 +72,6 @@ public interface And extends Expression
    * @see #getRight()
    * @generated
    */
-  void setRight(Expression value);
+  void setRight(Equality value);
 
 } // And

@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.model.Event;
 import org.model.ExpContext;
+import org.model.Statement;
 import org.model.Time;
 import org.model.TimeInterface;
 import org.model.conditions.relations.LessDescr;
@@ -13,6 +14,7 @@ import org.model.conditions.relations.SameDescr;
 import org.model.expressions.NumberDescr;
 import org.model.expressions.SampleDescr;
 import org.model.expressions.operations.MinusDescr;
+import org.model.expressions.operations.MultDescr;
 import org.model.expressions.operations.PlusDescr;
 import org.support.EceStatement;
 
@@ -99,6 +101,21 @@ public class AfterVisitor implements Visitor{
 
 	@Override
 	public void visit(EceStatement eceStatement) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void visit(MultDescr multDescr) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void visit(Statement statement) {
 		// TODO Auto-generated method stub
 		
 	}

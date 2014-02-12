@@ -1,0 +1,146 @@
+package rec.dom; 
+
+rule "Operations on Start event    78691" 
+when
+	$ev: Start($par:param!=null)
+
+	$fl_LeftArm: LeftArm()
+	$s_LeftArm: Sample(fluent==$fl_LeftArm)
+
+	$fl_LeftArmStrConf: LeftArmStrConf()
+	$s_LeftArmStrConf: Sample(fluent==$fl_LeftArmStrConf)
+
+	$fl_LeftArmLowConf: LeftArmLowConf()
+	$s_LeftArmLowConf: Sample(fluent==$fl_LeftArmLowConf)
+
+	$fl_Score: Score()
+	$s_Score: Sample(fluent==$fl_Score)
+
+then
+	retract($ev);
+
+	System.out.println("Set LeftArm to -1.0  ");
+	modify($s_LeftArm){
+		setValue(-1.0);
+	}
+	System.out.println("Set LeftArmStrConf to -1.0  ");
+	modify($s_LeftArmStrConf){
+		setValue(-1.0);
+	}
+	System.out.println("Set LeftArmLowConf to -1.0  ");
+	modify($s_LeftArmLowConf){
+		setValue(-1.0);
+	}
+	System.out.println("Set Score to -1.0  ");
+	modify($s_Score){
+		setValue(-1.0);
+	}
+
+	EventFrame evf = new EventFrame();
+	insert(evf);
+
+end
+
+
+
+rule "Operations on LeftArmLow event    15489" 
+when
+	$ev: LeftArmLow($par:param!=null)
+
+	$fl_LeftArm: LeftArm()
+	$s_LeftArm: Sample(fluent==$fl_LeftArm)
+
+	$flpar_poseConf: poseConf() 
+	$s_poseConf: Sample(fluent==$flpar_poseConf)
+
+	$fl_LeftArmLowConf: LeftArmLowConf()
+	$s_LeftArmLowConf: Sample(fluent==$fl_LeftArmLowConf)
+
+then
+	retract($ev);
+
+	System.out.println("Set LeftArm to 0.0  ");
+	modify($s_LeftArm){
+		setValue(0.0);
+	}
+	System.out.println("Set LeftArmLowConf to $par  ");
+	modify($s_LeftArmLowConf){
+		setValue($par);
+	}
+
+	EventFrame evf = new EventFrame();
+	insert(evf);
+
+end
+
+
+
+rule "Operations on MyExpectationFulf event    45875" 
+when
+	$ev: MyExpectationFulf($par:param!=null)
+
+	$flpar_LeftArmStrConf: LeftArmStrConf() 
+	$s_LeftArmStrConf: Sample(fluent==$flpar_LeftArmStrConf)
+
+	$flpar_LeftArmLowConf: LeftArmLowConf() 
+	$s_LeftArmLowConf: Sample(fluent==$flpar_LeftArmLowConf)
+
+	$fl_Score: Score()
+	$s_Score: Sample(fluent==$fl_Score)
+
+then
+	retract($ev);
+
+	System.out.println("Set Score to fluent/parameter value (or or their composition)");
+	modify($s_Score){
+		setValue(((long)$s_LeftArmStrConf.getValue()) * ((long)$s_LeftArmLowConf.getValue()));
+	}
+
+	EventFrame evf = new EventFrame();
+	insert(evf);
+
+end
+
+
+
+rule "Operations on LeftArmStr event    94678" 
+when
+	$ev: LeftArmStr($par:param!=null)
+
+	$fl_LeftArm: LeftArm()
+	$s_LeftArm: Sample(fluent==$fl_LeftArm)
+
+	$flpar_poseConf: poseConf() 
+	$s_poseConf: Sample(fluent==$flpar_poseConf)
+
+	$fl_LeftArmStrConf: LeftArmStrConf()
+	$s_LeftArmStrConf: Sample(fluent==$fl_LeftArmStrConf)
+
+then
+	retract($ev);
+
+	System.out.println("Set LeftArm to 1.0  ");
+	modify($s_LeftArm){
+		setValue(1.0);
+	}
+	System.out.println("Set LeftArmStrConf to $par  ");
+	modify($s_LeftArmStrConf){
+		setValue($par);
+	}
+
+	EventFrame evf = new EventFrame();
+	insert(evf);
+
+	ExpectationLeftArmStr exp = new ExpectationLeftArmStr();
+	exp.setState(-1);//pending
+	insert(exp);
+	System.out.println("Lancio aspettativa...");
+end
+
+
+
+rule "InOperations" 
+when
+then
+	System.out.println("//Sono dentro a Operations.drl");
+end

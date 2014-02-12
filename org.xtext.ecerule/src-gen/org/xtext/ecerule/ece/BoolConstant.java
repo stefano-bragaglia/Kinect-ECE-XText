@@ -19,7 +19,7 @@ package org.xtext.ecerule.ece;
  * @model
  * @generated
  */
-public interface BoolConstant extends Expression
+public interface BoolConstant extends Atomic
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

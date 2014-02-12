@@ -4,6 +4,7 @@
 package org.model.expressions;
 
 import org.model.ExpressionInterface;
+import org.visitor.Visitor;
 
 /**
  * @author stefano
@@ -58,6 +59,18 @@ public class ParameterDescr implements ExpressionInterface {
 			result = name.equals(parameters[i]);
 		assert invariant() : "Illegal state in Parameter.validate()";
 		return result;
+	}
+
+	@Override
+	public double validate() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void accept(Visitor visitor) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

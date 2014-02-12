@@ -1,7 +1,109 @@
 package rec.dom; 
 
-declare LeftArmStretched extends Event
+declare EventFrame extends Event 
 end
+
+
+
+declare Start extends Event
+end
+
+
+
+declare LeftArmLow extends Event
+end
+
+
+
+declare MyExpectationFulf extends Event
+end
+
+
+
+declare LeftArmStr extends Event
+end
+
+
+
+declare LeftArm extends Fluent 
+end
+
+rule "Insert fluent e sample LeftArm" 
+when
+then
+	LeftArm f = new LeftArm();  
+	insert(f);  
+	Sample s = new Sample(); 
+	s.setFluent(f); 
+	insert(s);  
+end
+
+
+
+declare LeftArmStrConf extends Fluent 
+end
+
+rule "Insert fluent e sample LeftArmStrConf" 
+when
+then
+	LeftArmStrConf f = new LeftArmStrConf();  
+	insert(f);  
+	Sample s = new Sample(); 
+	s.setFluent(f); 
+	insert(s);  
+end
+
+
+
+declare LeftArmLowConf extends Fluent 
+end
+
+rule "Insert fluent e sample LeftArmLowConf" 
+when
+then
+	LeftArmLowConf f = new LeftArmLowConf();  
+	insert(f);  
+	Sample s = new Sample(); 
+	s.setFluent(f); 
+	insert(s);  
+end
+
+
+
+declare Score extends Fluent 
+end
+
+rule "Insert fluent e sample Score" 
+when
+then
+	Score f = new Score();  
+	insert(f);  
+	Sample s = new Sample(); 
+	s.setFluent(f); 
+	insert(s);  
+end
+
+
+
+declare poseConf extends Fluent 
+end
+
+rule "Insert fluent e sample poseConf" 
+when
+then
+	poseConf f = new poseConf();  
+	insert(f);  
+	Sample s = new Sample(); 
+	s.setFluent(f); 
+	insert(s);  
+end
+
+
+
+declare ExpectationLeftArmStr extends Event 
+	state: int //-1 pending, 0 violated, 1 fulfilled   
+end
+
 
 
 

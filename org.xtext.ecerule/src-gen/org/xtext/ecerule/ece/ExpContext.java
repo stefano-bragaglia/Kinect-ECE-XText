@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.ecerule.ece.ExpContext#getAllenOp <em>Allen Op</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.ExpContext#getTime <em>Time</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.ExpContext#getInitialCondition <em>Initial Condition</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.ExpContext#getActionF <em>Action F</em>}</li>
+ *   <li>{@link org.xtext.ecerule.ece.ExpContext#getActionV <em>Action V</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,30 +80,30 @@ public interface ExpContext extends EObject
   void setAllenOp(AllenOp value);
 
   /**
-   * Returns the value of the '<em><b>Time</b></em>' containment reference.
+   * Returns the value of the '<em><b>Time</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Time</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Time</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Time</em>' containment reference.
-   * @see #setTime(Expression)
+   * @return the value of the '<em>Time</em>' attribute.
+   * @see #setTime(int)
    * @see org.xtext.ecerule.ece.EcePackage#getExpContext_Time()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  Expression getTime();
+  int getTime();
 
   /**
-   * Sets the value of the '{@link org.xtext.ecerule.ece.ExpContext#getTime <em>Time</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.ecerule.ece.ExpContext#getTime <em>Time</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Time</em>' containment reference.
+   * @param value the new value of the '<em>Time</em>' attribute.
    * @see #getTime()
    * @generated
    */
-  void setTime(Expression value);
+  void setTime(int value);
 
   /**
    * Returns the value of the '<em><b>Initial Condition</b></em>' containment reference.
@@ -128,5 +130,57 @@ public interface ExpContext extends EObject
    * @generated
    */
   void setInitialCondition(ConditionRule value);
+
+  /**
+   * Returns the value of the '<em><b>Action F</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Action F</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Action F</em>' attribute.
+   * @see #setActionF(String)
+   * @see org.xtext.ecerule.ece.EcePackage#getExpContext_ActionF()
+   * @model
+   * @generated
+   */
+  String getActionF();
+
+  /**
+   * Sets the value of the '{@link org.xtext.ecerule.ece.ExpContext#getActionF <em>Action F</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Action F</em>' attribute.
+   * @see #getActionF()
+   * @generated
+   */
+  void setActionF(String value);
+
+  /**
+   * Returns the value of the '<em><b>Action V</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Action V</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Action V</em>' attribute.
+   * @see #setActionV(String)
+   * @see org.xtext.ecerule.ece.EcePackage#getExpContext_ActionV()
+   * @model
+   * @generated
+   */
+  String getActionV();
+
+  /**
+   * Sets the value of the '{@link org.xtext.ecerule.ece.ExpContext#getActionV <em>Action V</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Action V</em>' attribute.
+   * @see #getActionV()
+   * @generated
+   */
+  void setActionV(String value);
 
 } // ExpContext

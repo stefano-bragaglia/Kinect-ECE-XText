@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.ecerule.ece.And;
 import org.xtext.ecerule.ece.EcePackage;
-import org.xtext.ecerule.ece.Expression;
+import org.xtext.ecerule.ece.Equality;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public class AndImpl extends ExpressionImpl implements And
    * @generated
    * @ordered
    */
-  protected Expression left;
+  protected Equality left;
 
   /**
    * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
@@ -48,7 +48,7 @@ public class AndImpl extends ExpressionImpl implements And
    * @generated
    * @ordered
    */
-  protected Expression right;
+  protected Equality right;
 
   /**
    * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getLeft()
+  public Equality getLeft()
   {
     return left;
   }
@@ -86,9 +86,9 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(Expression newLeft, NotificationChain msgs)
+  public NotificationChain basicSetLeft(Equality newLeft, NotificationChain msgs)
   {
-    Expression oldLeft = left;
+    Equality oldLeft = left;
     left = newLeft;
     if (eNotificationRequired())
     {
@@ -103,7 +103,7 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLeft(Expression newLeft)
+  public void setLeft(Equality newLeft)
   {
     if (newLeft != left)
     {
@@ -124,7 +124,7 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getRight()
+  public Equality getRight()
   {
     return right;
   }
@@ -134,9 +134,9 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRight(Expression newRight, NotificationChain msgs)
+  public NotificationChain basicSetRight(Equality newRight, NotificationChain msgs)
   {
-    Expression oldRight = right;
+    Equality oldRight = right;
     right = newRight;
     if (eNotificationRequired())
     {
@@ -151,7 +151,7 @@ public class AndImpl extends ExpressionImpl implements And
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRight(Expression newRight)
+  public void setRight(Equality newRight)
   {
     if (newRight != right)
     {
@@ -214,10 +214,10 @@ public class AndImpl extends ExpressionImpl implements And
     switch (featureID)
     {
       case EcePackage.AND__LEFT:
-        setLeft((Expression)newValue);
+        setLeft((Equality)newValue);
         return;
       case EcePackage.AND__RIGHT:
-        setRight((Expression)newValue);
+        setRight((Equality)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -234,10 +234,10 @@ public class AndImpl extends ExpressionImpl implements And
     switch (featureID)
     {
       case EcePackage.AND__LEFT:
-        setLeft((Expression)null);
+        setLeft((Equality)null);
         return;
       case EcePackage.AND__RIGHT:
-        setRight((Expression)null);
+        setRight((Equality)null);
         return;
     }
     super.eUnset(featureID);

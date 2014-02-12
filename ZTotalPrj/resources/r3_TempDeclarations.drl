@@ -1,14 +1,32 @@
-package rec.dom
-import java.util.concurrent.TimeUnit;
-global org.drools.time.SessionPseudoClock clock;
 
-declare LeftArmLowered extends Event
-	value: double
-end
 
-//declare LeftArmStretched// extends Sample
-	//time:long
-//end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 rule "InTempDeclarations" 
@@ -16,55 +34,6 @@ when
 then
 	System.out.println("//Sono dentro a TempDeclarations.drl");
 end
-
-rule "Initially" 
-when
-then
-	//insert(new AlzatoE((long)  0));  //evento arriva a tempo 0
-	
-	//clock.advanceTime(13, TimeUnit.MILLISECONDS);
-	//insert(new SedutoF((double)0));  //valore del fluente
-	//System.out.println("//Aggiunti fatti...");	
-end
-
-
-
-rule "test delay"  
-when
-	
-$evPtr: LeftArmStretched($tsmp:time)
-	LeftArmLowered(this after $evPtr, $val_LeftArmLowered:value);
-then
-	System.out.println("delay= "+(clock.getCurrentTime()-$tsmp));
-end
-
-
-
-rule "set timestamp LAS"
-salience 100
-no-loop
-when
-	$las:LeftArmStretched();
-then
-	//System.out.println("//LAS cambiato il timestamp!!");
-	modify( $las ){
-    	setTime(clock.getCurrentTime())
-	}
-end
-
-
-rule "set timestamp LAL"
-salience 100
-no-loop
-when
-	$lal:LeftArmLowered();
-then
-	//System.out.println("//LAL cambiato il timestamp!!");
-	modify( $lal ){
-    	setTime(clock.getCurrentTime())
-	}
-end
-
 
 
 

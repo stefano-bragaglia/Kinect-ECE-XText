@@ -2,6 +2,7 @@ package org.model;
 
 import org.model.ConditionInterface;
 import org.model.TimeInterface;
+import org.visitor.CreateDeclarationsVisitor;
 import org.visitor.Visitable;
 
 public interface ExpContextInterface extends Visitable{
@@ -14,7 +15,8 @@ public interface ExpContextInterface extends Visitable{
 	
 	public ConditionInterface getInitialCondition();
 	
-	
 	public void setTime(TimeInterface time);
 
+	
+	public void accept(CreateDeclarationsVisitor visitor);
 }

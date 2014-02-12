@@ -35,61 +35,43 @@
     <genClasses ecoreClass="Ece.ecore#//ExpContext">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpContext/finalCondition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpContext/allenOp"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpContext/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//ExpContext/time"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ExpContext/initialCondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//ExpContext/actionF"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//ExpContext/actionV"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//AllenOp"/>
     <genClasses ecoreClass="Ece.ecore#//Fluent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/valuePart"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/timePart"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Fluent/condPart"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//ConditionRule"/>
-    <genClasses ecoreClass="Ece.ecore#//ToRule"/>
-    <genClasses ecoreClass="Ece.ecore#//InRule"/>
     <genClasses ecoreClass="Ece.ecore#//Expression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Expression/condition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Expression/expression"/>
     </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Atomic"/>
     <genClasses ecoreClass="Ece.ecore#//ReferenceType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//ReferenceType/name"/>
-    </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//AtExpr"/>
-    <genClasses ecoreClass="Ece.ecore#//AllenOperator">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//AllenOperator/value"/>
-    </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//Or">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Or/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Or/right"/>
-    </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//And">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//And/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//And/right"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//Equality">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Equality/left"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Equality/op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Equality/right"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//Comparison">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Comparison/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Comparison/op"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Comparison/right"/>
+    <genClasses ecoreClass="Ece.ecore#//ConditionRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//ConditionRule/condition"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//Plus">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Plus/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Plus/right"/>
+    <genClasses ecoreClass="Ece.ecore#//FluentRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//FluentRef/value"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//Minus">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Minus/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Minus/right"/>
+    <genClasses ecoreClass="Ece.ecore#//AtExpr"/>
+    <genClasses ecoreClass="Ece.ecore#//AllenOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//AllenOperator/value"/>
     </genClasses>
     <genClasses ecoreClass="Ece.ecore#//MulOrDiv">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//MulOrDiv/left"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//MulOrDiv/op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//MulOrDiv/right"/>
     </genClasses>
-    <genClasses ecoreClass="Ece.ecore#//Not"/>
     <genClasses ecoreClass="Ece.ecore#//FloatConstant">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//FloatConstant/value"/>
     </genClasses>
@@ -106,6 +88,28 @@
     <genClasses ecoreClass="Ece.ecore#//CurrentTime">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//CurrentTime/value"/>
     </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Or">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Or/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Or/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//And">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//And/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//And/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Comparison">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Comparison/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//Comparison/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Comparison/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Plus">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Plus/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Plus/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Minus">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Minus/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//Minus/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Ece.ecore#//Not"/>
     <genClasses ecoreClass="Ece.ecore#//AtTimePlusOrMin">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ece.ecore#//AtTimePlusOrMin/left"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ece.ecore#//AtTimePlusOrMin/op"/>

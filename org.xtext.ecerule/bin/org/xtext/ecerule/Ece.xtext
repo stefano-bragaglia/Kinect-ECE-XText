@@ -31,7 +31,11 @@ ExpContextsList:
 
 // EXP CONTEXT *****************************************************************
  ExpContext:
-	'expect' finalCondition=ConditionRule (allenOp=AllenOp time=PlusOrMinus)? ('if' initialCondition=ConditionRule)?;
+	'expect' finalCondition=ConditionRule 
+	(allenOp=AllenOp time=INT)? 
+	('if' initialCondition=ConditionRule)? 
+	('onFulf' actionF=ID)?
+	('onViol' actionV=ID)?;
 
 
 AllenOp:
@@ -40,18 +44,49 @@ AllenOp:
 Fluent:
 	name=ID
 	('to' valuePart=ToRule)
-	('in' timePart=InRule)?
+	//('in' timePart=InRule)?
 	('if' condPart=ConditionRule)?;
 
-ConditionRule:
-	({Expression} condition=Expression);
 
-ToRule:
-	({Expression} expression=PlusOrMinus);
+ToRule returns Expression:
+	expression=(MulOrDiv);
+	
 
-InRule:
-	({Expression} expression=PlusOrMinus)
+
+MulOrDiv returns Expression:
+	Atomic ({MulOrDiv.left=current} op=('*' | '/' | '%' | '^')
+	right=Atomic)*;
+
+Atomic:
+	{FloatConstant} value=FLOAT |
+	{IntConstant} value=INT |
+	{BoolConstant} value=('true' | 'false')| 
+	{Reference} ref=[ReferenceType|ID] ('at' fluentValueSample=AtTimePrimary)?|
+	{CurrentTime} value='now'
 ;
+
+
+ReferenceType:
+	EventFeature | Fluent;
+
+
+
+
+
+
+
+Equality:
+	Atomic ({Equality.left=current} op=("==" | "!=")
+	right=Atomic)*;
+
+ConditionRule:
+	(condition=Equality);
+
+
+
+//InRule:
+//	({Expression} expression=PlusOrMinus)
+//;
 
 // LEFT_ASSOCIATIVITY
 Expression:
@@ -63,9 +98,6 @@ Or returns Expression:
 And returns Expression:
 	Equality ({And.left=current} "AND" right=Equality)*;
 
-Equality returns Expression:
-	Comparison ({Equality.left=current} op=("==" | "!=")
-	right=Comparison)*;
 
 Comparison returns Expression:
 	PlusOrMinus ({Comparison.left=current} op=(">=" | "<=" | ">" | "<")
@@ -75,25 +107,20 @@ PlusOrMinus returns Expression:
 	MulOrDiv (({Plus.left=current} '+' | {Minus.left=current} '-')
 	right=MulOrDiv)*;
 
-MulOrDiv returns Expression:
-	Primary ({MulOrDiv.left=current} op=('*' | '/' | '%' | '^')
-	right=Primary)*;
+
 
 Primary returns Expression:
 	'(' Expression ')' |
 	{Not} "!" expression=Primary |
 	Atomic;
 
-Atomic returns Expression:
-	{FloatConstant} value=FLOAT |
-	{IntConstant} value=INT |
-	{BoolConstant} value=('true' | 'false')
-	| {Reference} ref=[ReferenceType|ID] ('at' fluentValueSample=AtTimePrimary)?
-	|{CurrentTime} value='now'
+
+
+FluentRef:
+	value=ID
 ;
 
-ReferenceType:
-	EventFeature | Fluent;
+
 
 
 // AT --> tempo del riferimento

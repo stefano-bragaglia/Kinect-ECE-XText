@@ -20,6 +20,7 @@ import org.xtext.ecerule.ece.AtTimeIntConstant;
 import org.xtext.ecerule.ece.AtTimePlusOrMin;
 import org.xtext.ecerule.ece.BoolConstant;
 import org.xtext.ecerule.ece.Comparison;
+import org.xtext.ecerule.ece.ConditionRule;
 import org.xtext.ecerule.ece.ContextsList;
 import org.xtext.ecerule.ece.CurrentTime;
 import org.xtext.ecerule.ece.EcContext;
@@ -34,6 +35,7 @@ import org.xtext.ecerule.ece.ExpContextsList;
 import org.xtext.ecerule.ece.Expression;
 import org.xtext.ecerule.ece.FloatConstant;
 import org.xtext.ecerule.ece.Fluent;
+import org.xtext.ecerule.ece.FluentRef;
 import org.xtext.ecerule.ece.IntConstant;
 import org.xtext.ecerule.ece.Minus;
 import org.xtext.ecerule.ece.MulOrDiv;
@@ -61,18 +63,9 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case EcePackage.AND:
 				if(context == grammarAccess.getAndRule() ||
 				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
-				   context == grammarAccess.getComparisonRule() ||
-				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0() ||
-				   context == grammarAccess.getEqualityRule() ||
-				   context == grammarAccess.getEqualityAccess().getEqualityLeftAction_1_0() ||
 				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getMulOrDivRule() ||
-				   context == grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0() ||
 				   context == grammarAccess.getOrRule() ||
 				   context == grammarAccess.getOrAccess().getOrLeftAction_1_0() ||
-				   context == grammarAccess.getPlusOrMinusRule() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getPrimaryRule()) {
 					sequence_And(context, (And) semanticObject); 
 					return; 
@@ -126,22 +119,15 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case EcePackage.COMPARISON:
-				if(context == grammarAccess.getAndRule() ||
-				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
-				   context == grammarAccess.getComparisonRule() ||
-				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0() ||
-				   context == grammarAccess.getEqualityRule() ||
-				   context == grammarAccess.getEqualityAccess().getEqualityLeftAction_1_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getMulOrDivRule() ||
-				   context == grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0() ||
-				   context == grammarAccess.getOrRule() ||
-				   context == grammarAccess.getOrAccess().getOrLeftAction_1_0() ||
-				   context == grammarAccess.getPlusOrMinusRule() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getPrimaryRule()) {
+				if(context == grammarAccess.getComparisonRule() ||
+				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0()) {
 					sequence_Comparison(context, (Comparison) semanticObject); 
+					return; 
+				}
+				else break;
+			case EcePackage.CONDITION_RULE:
+				if(context == grammarAccess.getConditionRuleRule()) {
+					sequence_ConditionRule(context, (ConditionRule) semanticObject); 
 					return; 
 				}
 				else break;
@@ -193,18 +179,11 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case EcePackage.EQUALITY:
 				if(context == grammarAccess.getAndRule() ||
 				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
-				   context == grammarAccess.getComparisonRule() ||
-				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0() ||
 				   context == grammarAccess.getEqualityRule() ||
 				   context == grammarAccess.getEqualityAccess().getEqualityLeftAction_1_0() ||
 				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getMulOrDivRule() ||
-				   context == grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0() ||
 				   context == grammarAccess.getOrRule() ||
 				   context == grammarAccess.getOrAccess().getOrLeftAction_1_0() ||
-				   context == grammarAccess.getPlusOrMinusRule() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getPrimaryRule()) {
 					sequence_Equality(context, (Equality) semanticObject); 
 					return; 
@@ -236,15 +215,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case EcePackage.EXPRESSION:
-				if(context == grammarAccess.getConditionRuleRule()) {
-					sequence_ConditionRule(context, (Expression) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getInRuleRule()) {
-					sequence_InRule(context, (Expression) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getToRuleRule()) {
+				if(context == grammarAccess.getToRuleRule()) {
 					sequence_ToRule(context, (Expression) semanticObject); 
 					return; 
 				}
@@ -277,6 +248,12 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case EcePackage.FLUENT_REF:
+				if(context == grammarAccess.getFluentRefRule()) {
+					sequence_FluentRef(context, (FluentRef) semanticObject); 
+					return; 
+				}
+				else break;
 			case EcePackage.INT_CONSTANT:
 				if(context == grammarAccess.getAndRule() ||
 				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
@@ -299,101 +276,48 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case EcePackage.MINUS:
-				if(context == grammarAccess.getAndRule() ||
-				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
-				   context == grammarAccess.getComparisonRule() ||
+				if(context == grammarAccess.getComparisonRule() ||
 				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0() ||
-				   context == grammarAccess.getEqualityRule() ||
-				   context == grammarAccess.getEqualityAccess().getEqualityLeftAction_1_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getMulOrDivRule() ||
-				   context == grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0() ||
-				   context == grammarAccess.getOrRule() ||
-				   context == grammarAccess.getOrAccess().getOrLeftAction_1_0() ||
 				   context == grammarAccess.getPlusOrMinusRule() ||
 				   context == grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getPrimaryRule()) {
+				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0()) {
 					sequence_PlusOrMinus(context, (Minus) semanticObject); 
 					return; 
 				}
 				else break;
 			case EcePackage.MUL_OR_DIV:
-				if(context == grammarAccess.getAndRule() ||
-				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
-				   context == grammarAccess.getComparisonRule() ||
+				if(context == grammarAccess.getComparisonRule() ||
 				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0() ||
-				   context == grammarAccess.getEqualityRule() ||
-				   context == grammarAccess.getEqualityAccess().getEqualityLeftAction_1_0() ||
-				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getMulOrDivRule() ||
 				   context == grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0() ||
-				   context == grammarAccess.getOrRule() ||
-				   context == grammarAccess.getOrAccess().getOrLeftAction_1_0() ||
 				   context == grammarAccess.getPlusOrMinusRule() ||
 				   context == grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getPrimaryRule()) {
+				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0()) {
 					sequence_MulOrDiv(context, (MulOrDiv) semanticObject); 
 					return; 
 				}
 				else break;
 			case EcePackage.NOT:
-				if(context == grammarAccess.getAndRule() ||
-				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
-				   context == grammarAccess.getComparisonRule() ||
-				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0() ||
-				   context == grammarAccess.getEqualityRule() ||
-				   context == grammarAccess.getEqualityAccess().getEqualityLeftAction_1_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getMulOrDivRule() ||
-				   context == grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0() ||
-				   context == grammarAccess.getOrRule() ||
-				   context == grammarAccess.getOrAccess().getOrLeftAction_1_0() ||
-				   context == grammarAccess.getPlusOrMinusRule() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getPrimaryRule()) {
+				if(context == grammarAccess.getPrimaryRule()) {
 					sequence_Primary(context, (Not) semanticObject); 
 					return; 
 				}
 				else break;
 			case EcePackage.OR:
-				if(context == grammarAccess.getAndRule() ||
-				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
-				   context == grammarAccess.getComparisonRule() ||
-				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0() ||
-				   context == grammarAccess.getEqualityRule() ||
-				   context == grammarAccess.getEqualityAccess().getEqualityLeftAction_1_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getMulOrDivRule() ||
-				   context == grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0() ||
+				if(context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getOrRule() ||
 				   context == grammarAccess.getOrAccess().getOrLeftAction_1_0() ||
-				   context == grammarAccess.getPlusOrMinusRule() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getPrimaryRule()) {
 					sequence_Or(context, (Or) semanticObject); 
 					return; 
 				}
 				else break;
 			case EcePackage.PLUS:
-				if(context == grammarAccess.getAndRule() ||
-				   context == grammarAccess.getAndAccess().getAndLeftAction_1_0() ||
-				   context == grammarAccess.getComparisonRule() ||
+				if(context == grammarAccess.getComparisonRule() ||
 				   context == grammarAccess.getComparisonAccess().getComparisonLeftAction_1_0() ||
-				   context == grammarAccess.getEqualityRule() ||
-				   context == grammarAccess.getEqualityAccess().getEqualityLeftAction_1_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getMulOrDivRule() ||
-				   context == grammarAccess.getMulOrDivAccess().getMulOrDivLeftAction_1_0() ||
-				   context == grammarAccess.getOrRule() ||
-				   context == grammarAccess.getOrAccess().getOrLeftAction_1_0() ||
 				   context == grammarAccess.getPlusOrMinusRule() ||
 				   context == grammarAccess.getPlusOrMinusAccess().getMinusLeftAction_1_0_1_0() ||
-				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getPrimaryRule()) {
+				   context == grammarAccess.getPlusOrMinusAccess().getPlusLeftAction_1_0_0_0()) {
 					sequence_PlusOrMinus(context, (Plus) semanticObject); 
 					return; 
 				}
@@ -544,10 +468,17 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     condition=Expression
+	 *     condition=Equality
 	 */
-	protected void sequence_ConditionRule(EObject context, Expression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_ConditionRule(EObject context, ConditionRule semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.CONDITION_RULE__CONDITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.CONDITION_RULE__CONDITION));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getConditionRuleAccess().getConditionEqualityParserRuleCall_0(), semanticObject.getCondition());
+		feeder.finish();
 	}
 	
 	
@@ -589,7 +520,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (left=Equality_Equality_1_0 (op='==' | op='!=') right=Comparison)
+	 *     (left=Equality_Equality_1_0 (op='==' | op='!=') right=Atomic)
 	 */
 	protected void sequence_Equality(EObject context, Equality semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -623,7 +554,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (finalCondition=ConditionRule (allenOp=AllenOp time=PlusOrMinus)? initialCondition=ConditionRule?)
+	 *     (finalCondition=ConditionRule (allenOp=AllenOp time=INT)? initialCondition=ConditionRule? actionF=ID? actionV=ID?)
 	 */
 	protected void sequence_ExpContext(EObject context, ExpContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -641,7 +572,23 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID valuePart=ToRule timePart=InRule? condPart=ConditionRule?)
+	 *     value=ID
+	 */
+	protected void sequence_FluentRef(EObject context, FluentRef semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.FLUENT_REF__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.FLUENT_REF__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getFluentRefAccess().getValueIDTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID valuePart=ToRule condPart=ConditionRule?)
 	 */
 	protected void sequence_Fluent(EObject context, Fluent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -650,16 +597,7 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     expression=PlusOrMinus
-	 */
-	protected void sequence_InRule(EObject context, Expression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (left=MulOrDiv_MulOrDiv_1_0 (op='*' | op='/' | op='%' | op='^') right=Primary)
+	 *     (left=MulOrDiv_MulOrDiv_1_0 (op='*' | op='/' | op='%' | op='^') right=Atomic)
 	 */
 	protected void sequence_MulOrDiv(EObject context, MulOrDiv semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -698,7 +636,14 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     expression=Primary
 	 */
 	protected void sequence_Primary(EObject context, Not semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.EXPRESSION__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.EXPRESSION__EXPRESSION));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getPrimaryAccess().getExpressionPrimaryParserRuleCall_1_2_0(), semanticObject.getExpression());
+		feeder.finish();
 	}
 	
 	
@@ -723,9 +668,16 @@ public class EceSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     expression=PlusOrMinus
+	 *     expression=MulOrDiv
 	 */
 	protected void sequence_ToRule(EObject context, Expression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, EcePackage.Literals.EXPRESSION__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EcePackage.Literals.EXPRESSION__EXPRESSION));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getToRuleAccess().getExpressionMulOrDivParserRuleCall_0(), semanticObject.getExpression());
+		feeder.finish();
 	}
 }

@@ -5,11 +5,15 @@ package rec.dom;
 declare Fluent 
 end
 
+declare InternalEvent	
+end
+
 declare Event
 	@role(event)
 	@timestamp(time)
 	//@expires(100ms)
 	//params : Map<String, Object> 
+	param : long
 	time : long	
 end
 

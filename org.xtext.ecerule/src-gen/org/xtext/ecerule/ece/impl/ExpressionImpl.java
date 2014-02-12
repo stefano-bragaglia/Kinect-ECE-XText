@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.ecerule.ece.EcePackage;
 import org.xtext.ecerule.ece.Expression;
@@ -20,25 +21,14 @@ import org.xtext.ecerule.ece.Expression;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.ecerule.ece.impl.ExpressionImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link org.xtext.ecerule.ece.impl.ExpressionImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ExpressionImpl extends ConditionRuleImpl implements Expression
+public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expression
 {
-  /**
-   * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCondition()
-   * @generated
-   * @ordered
-   */
-  protected Expression condition;
-
   /**
    * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -68,54 +58,6 @@ public class ExpressionImpl extends ConditionRuleImpl implements Expression
   protected EClass eStaticClass()
   {
     return EcePackage.Literals.EXPRESSION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Expression getCondition()
-  {
-    return condition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetCondition(Expression newCondition, NotificationChain msgs)
-  {
-    Expression oldCondition = condition;
-    condition = newCondition;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EcePackage.EXPRESSION__CONDITION, oldCondition, newCondition);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setCondition(Expression newCondition)
-  {
-    if (newCondition != condition)
-    {
-      NotificationChain msgs = null;
-      if (condition != null)
-        msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EcePackage.EXPRESSION__CONDITION, null, msgs);
-      if (newCondition != null)
-        msgs = ((InternalEObject)newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EcePackage.EXPRESSION__CONDITION, null, msgs);
-      msgs = basicSetCondition(newCondition, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EcePackage.EXPRESSION__CONDITION, newCondition, newCondition));
   }
 
   /**
@@ -176,8 +118,6 @@ public class ExpressionImpl extends ConditionRuleImpl implements Expression
   {
     switch (featureID)
     {
-      case EcePackage.EXPRESSION__CONDITION:
-        return basicSetCondition(null, msgs);
       case EcePackage.EXPRESSION__EXPRESSION:
         return basicSetExpression(null, msgs);
     }
@@ -194,8 +134,6 @@ public class ExpressionImpl extends ConditionRuleImpl implements Expression
   {
     switch (featureID)
     {
-      case EcePackage.EXPRESSION__CONDITION:
-        return getCondition();
       case EcePackage.EXPRESSION__EXPRESSION:
         return getExpression();
     }
@@ -212,9 +150,6 @@ public class ExpressionImpl extends ConditionRuleImpl implements Expression
   {
     switch (featureID)
     {
-      case EcePackage.EXPRESSION__CONDITION:
-        setCondition((Expression)newValue);
-        return;
       case EcePackage.EXPRESSION__EXPRESSION:
         setExpression((Expression)newValue);
         return;
@@ -232,9 +167,6 @@ public class ExpressionImpl extends ConditionRuleImpl implements Expression
   {
     switch (featureID)
     {
-      case EcePackage.EXPRESSION__CONDITION:
-        setCondition((Expression)null);
-        return;
       case EcePackage.EXPRESSION__EXPRESSION:
         setExpression((Expression)null);
         return;
@@ -252,8 +184,6 @@ public class ExpressionImpl extends ConditionRuleImpl implements Expression
   {
     switch (featureID)
     {
-      case EcePackage.EXPRESSION__CONDITION:
-        return condition != null;
       case EcePackage.EXPRESSION__EXPRESSION:
         return expression != null;
     }

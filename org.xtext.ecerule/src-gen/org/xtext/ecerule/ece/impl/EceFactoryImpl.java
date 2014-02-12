@@ -75,26 +75,26 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
       case EcePackage.EXP_CONTEXT: return createExpContext();
       case EcePackage.ALLEN_OP: return createAllenOp();
       case EcePackage.FLUENT: return createFluent();
-      case EcePackage.CONDITION_RULE: return createConditionRule();
-      case EcePackage.TO_RULE: return createToRule();
-      case EcePackage.IN_RULE: return createInRule();
       case EcePackage.EXPRESSION: return createExpression();
+      case EcePackage.ATOMIC: return createAtomic();
       case EcePackage.REFERENCE_TYPE: return createReferenceType();
+      case EcePackage.EQUALITY: return createEquality();
+      case EcePackage.CONDITION_RULE: return createConditionRule();
+      case EcePackage.FLUENT_REF: return createFluentRef();
       case EcePackage.AT_EXPR: return createAtExpr();
       case EcePackage.ALLEN_OPERATOR: return createAllenOperator();
-      case EcePackage.OR: return createOr();
-      case EcePackage.AND: return createAnd();
-      case EcePackage.EQUALITY: return createEquality();
-      case EcePackage.COMPARISON: return createComparison();
-      case EcePackage.PLUS: return createPlus();
-      case EcePackage.MINUS: return createMinus();
       case EcePackage.MUL_OR_DIV: return createMulOrDiv();
-      case EcePackage.NOT: return createNot();
       case EcePackage.FLOAT_CONSTANT: return createFloatConstant();
       case EcePackage.INT_CONSTANT: return createIntConstant();
       case EcePackage.BOOL_CONSTANT: return createBoolConstant();
       case EcePackage.REFERENCE: return createReference();
       case EcePackage.CURRENT_TIME: return createCurrentTime();
+      case EcePackage.OR: return createOr();
+      case EcePackage.AND: return createAnd();
+      case EcePackage.COMPARISON: return createComparison();
+      case EcePackage.PLUS: return createPlus();
+      case EcePackage.MINUS: return createMinus();
+      case EcePackage.NOT: return createNot();
       case EcePackage.AT_TIME_PLUS_OR_MIN: return createAtTimePlusOrMin();
       case EcePackage.AT_TIME_INT_CONSTANT: return createAtTimeIntConstant();
       case EcePackage.AT_TIME_CURRENT_TIME: return createAtTimeCurrentTime();
@@ -229,39 +229,6 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ConditionRule createConditionRule()
-  {
-    ConditionRuleImpl conditionRule = new ConditionRuleImpl();
-    return conditionRule;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ToRule createToRule()
-  {
-    ToRuleImpl toRule = new ToRuleImpl();
-    return toRule;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InRule createInRule()
-  {
-    InRuleImpl inRule = new InRuleImpl();
-    return inRule;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Expression createExpression()
   {
     ExpressionImpl expression = new ExpressionImpl();
@@ -273,10 +240,54 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Atomic createAtomic()
+  {
+    AtomicImpl atomic = new AtomicImpl();
+    return atomic;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ReferenceType createReferenceType()
   {
     ReferenceTypeImpl referenceType = new ReferenceTypeImpl();
     return referenceType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Equality createEquality()
+  {
+    EqualityImpl equality = new EqualityImpl();
+    return equality;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConditionRule createConditionRule()
+  {
+    ConditionRuleImpl conditionRule = new ConditionRuleImpl();
+    return conditionRule;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FluentRef createFluentRef()
+  {
+    FluentRefImpl fluentRef = new FluentRefImpl();
+    return fluentRef;
   }
 
   /**
@@ -306,87 +317,10 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Or createOr()
-  {
-    OrImpl or = new OrImpl();
-    return or;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public And createAnd()
-  {
-    AndImpl and = new AndImpl();
-    return and;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Equality createEquality()
-  {
-    EqualityImpl equality = new EqualityImpl();
-    return equality;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Comparison createComparison()
-  {
-    ComparisonImpl comparison = new ComparisonImpl();
-    return comparison;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Plus createPlus()
-  {
-    PlusImpl plus = new PlusImpl();
-    return plus;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Minus createMinus()
-  {
-    MinusImpl minus = new MinusImpl();
-    return minus;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public MulOrDiv createMulOrDiv()
   {
     MulOrDivImpl mulOrDiv = new MulOrDivImpl();
     return mulOrDiv;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Not createNot()
-  {
-    NotImpl not = new NotImpl();
-    return not;
   }
 
   /**
@@ -442,6 +376,72 @@ public class EceFactoryImpl extends EFactoryImpl implements EceFactory
   {
     CurrentTimeImpl currentTime = new CurrentTimeImpl();
     return currentTime;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Or createOr()
+  {
+    OrImpl or = new OrImpl();
+    return or;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public And createAnd()
+  {
+    AndImpl and = new AndImpl();
+    return and;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Comparison createComparison()
+  {
+    ComparisonImpl comparison = new ComparisonImpl();
+    return comparison;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Plus createPlus()
+  {
+    PlusImpl plus = new PlusImpl();
+    return plus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Minus createMinus()
+  {
+    MinusImpl minus = new MinusImpl();
+    return minus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Not createNot()
+  {
+    NotImpl not = new NotImpl();
+    return not;
   }
 
   /**
