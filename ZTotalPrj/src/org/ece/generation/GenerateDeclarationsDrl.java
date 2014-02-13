@@ -27,7 +27,9 @@ public class GenerateDeclarationsDrl {
 		
 		strbuild.append("package rec.dom; \n\n");
 		
-		strbuild.append("declare EventFrame extends Event \nend\n\n\n\n");
+		strbuild.append("declare EventFrame extends Event \nend\n\n");
+		
+		strbuild.append("rule \"Insert EventFrame\"\nwhen\nthen\n\tEventFrame ef = new EventFrame();\n\tinsert(ef);\nend  \n\n\n\n");
 		
 		
 		

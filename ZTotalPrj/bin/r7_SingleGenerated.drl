@@ -18,6 +18,30 @@ then
 	System.out.println("Expectation FULFILLED");    
 	MyExpectationFulf ef = new MyExpectationFulf();  
 	insert(ef);  
+	EventFrame evf = new EventFrame();     
+	evf.setTime(drools.getWorkingMemory().getSessionClock().getCurrentTime());      
+	insert(evf);      
+end
+
+
+
+rule "Evaluate VIOL ExpectationLeftArmStr"
+when
+	$evframe: EventFrame() 
+	$exp: ExpectationLeftArmStr(state==-1, this before [10] $evframe)  
+
+	$fl_LeftArm: LeftArm()  
+	$s_LeftArm: Sample(fluent==$fl_LeftArm)  
+
+	eval((double)$s_LeftArm.getValue()==0.0)  
+then
+	retract($evframe); 
+	retract($exp); 
+
+	System.out.println("Expectation VIOLATED");    
+	EventFrame evf = new EventFrame();     
+	evf.setTime(drools.getWorkingMemory().getSessionClock().getCurrentTime());      
+	insert(evf);      
 end
 
 

@@ -121,7 +121,7 @@ public class MainLaucher {
 		time.setTimeValue(10);
 		expContext.setTime(time);
 		expContext.setActionOnFulf(new ActionAftExpectEval("MyExpectationFulf"));
-		expContext.setActionOnViol(new ActionAftExpectEval("MyExpectationViol"));
+		//expContext.setActionOnViol(new ActionAftExpectEval("MyExpectationViol"));
 		statement.addExpContext(expContext);
 		
 		
@@ -192,37 +192,37 @@ public class MainLaucher {
 		eceReasoner.start();
 		
 		
-	
 		
+//NOTIFICA EVENTI
+		/*
+		HashMap hm;
 		
 		eceReasoner.notifyEvent("Start", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
-	
-		HashMap hm = new HashMap<String, Object>();
-		hm.put("confidence", 95);
+		
+		
+		hm = new HashMap<String, Object>();
+		hm.put("confidence", 93);
+		eceReasoner.notifyEvent("LeftArmLow", hm, eceReasoner.getCurrentTime()+1);
+
+		
+		hm = new HashMap<String, Object>();
+		hm.put("confidence", 97);
 		eceReasoner.notifyEvent("LeftArmStr", hm, eceReasoner.getCurrentTime()+1);
+		
 		
 		hm = new HashMap<String, Object>();
 		hm.put("confidence", 91);
 		eceReasoner.notifyEvent("LeftArmLow", hm, eceReasoner.getCurrentTime()+1);
 		
-		//evento interno (in realtà lanciato da una regola!
-		//eceReasoner.notifyEvent("MyExpectationFulf", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
-		                         
-//		eceReasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
-//		eceReasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
-//		
-//		eceReasoner.notifyEvent("LeftArmStretched", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
-//		eceReasoner.notifyEvent("LeftArmStretched", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
-//		
-//		eceReasoner.notifyEvent("LeftArmLowered", new HashMap<String, Object>(), eceReasoner.getCurrentTime()+1);
 		
-//		Background bkg = new Background(false);
-//		bkg.setReasoner(eceReasoner);
-	
+		*/
 		
 		
 		
 		
+		
+		Background bkg = new Background(false);
+		bkg.setReasoner(eceReasoner);
 		
 		//reasoner.stop();
 		

@@ -187,8 +187,8 @@ public class CreateOperationsVisitor implements Visitor{
 					ope = ope.concat("\t$fl_"+flName+": "+flName+"()\n"); // $fl_LeftArm: LeftArm()
 					ope = ope.concat("\t$s_"+flName+": Sample(fluent==$fl_"+flName+")\n\n"); // $s_LeftArm: Sample(fluent==$fl_LeftArm)
 					
-					
 				}
+				ope = ope.concat("\t$evframe_old: EventFrame()\n\n");
 				
 			ope = ope.concat("then\n");
 			
@@ -217,7 +217,9 @@ public class CreateOperationsVisitor implements Visitor{
 					ope = ope.concat("\t}\n");
 					
 				}
-				ope = ope.concat("\n\tEventFrame evf = new EventFrame();\n");
+				ope = ope.concat("\n\tretract($evframe_old); \n");
+				ope = ope.concat("\tEventFrame evf = new EventFrame();\n");
+				ope = ope.concat("\tevf.setTime(drools.getWorkingMemory().getSessionClock().getCurrentTime()); \n");
 				ope = ope.concat("\tinsert(evf);\n\n");
 				
 				

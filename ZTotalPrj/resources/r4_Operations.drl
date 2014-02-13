@@ -1,6 +1,6 @@
 package rec.dom; 
 
-rule "Operations on Start event    78691" 
+rule "Operations on Start event    80555" 
 when
 	$ev: Start($par:param!=null)
 
@@ -15,6 +15,8 @@ when
 
 	$fl_Score: Score()
 	$s_Score: Sample(fluent==$fl_Score)
+
+	$evframe_old: EventFrame()
 
 then
 	retract($ev);
@@ -36,14 +38,16 @@ then
 		setValue(-1.0);
 	}
 
+	retract($evframe_old); 
 	EventFrame evf = new EventFrame();
+	evf.setTime(drools.getWorkingMemory().getSessionClock().getCurrentTime()); 
 	insert(evf);
 
 end
 
 
 
-rule "Operations on LeftArmLow event    15489" 
+rule "Operations on LeftArmLow event    69067" 
 when
 	$ev: LeftArmLow($par:param!=null)
 
@@ -55,6 +59,8 @@ when
 
 	$fl_LeftArmLowConf: LeftArmLowConf()
 	$s_LeftArmLowConf: Sample(fluent==$fl_LeftArmLowConf)
+
+	$evframe_old: EventFrame()
 
 then
 	retract($ev);
@@ -68,14 +74,16 @@ then
 		setValue($par);
 	}
 
+	retract($evframe_old); 
 	EventFrame evf = new EventFrame();
+	evf.setTime(drools.getWorkingMemory().getSessionClock().getCurrentTime()); 
 	insert(evf);
 
 end
 
 
 
-rule "Operations on MyExpectationFulf event    45875" 
+rule "Operations on MyExpectationFulf event    42605" 
 when
 	$ev: MyExpectationFulf($par:param!=null)
 
@@ -88,6 +96,8 @@ when
 	$fl_Score: Score()
 	$s_Score: Sample(fluent==$fl_Score)
 
+	$evframe_old: EventFrame()
+
 then
 	retract($ev);
 
@@ -96,14 +106,16 @@ then
 		setValue(((long)$s_LeftArmStrConf.getValue()) * ((long)$s_LeftArmLowConf.getValue()));
 	}
 
+	retract($evframe_old); 
 	EventFrame evf = new EventFrame();
+	evf.setTime(drools.getWorkingMemory().getSessionClock().getCurrentTime()); 
 	insert(evf);
 
 end
 
 
 
-rule "Operations on LeftArmStr event    94678" 
+rule "Operations on LeftArmStr event    33773" 
 when
 	$ev: LeftArmStr($par:param!=null)
 
@@ -115,6 +127,8 @@ when
 
 	$fl_LeftArmStrConf: LeftArmStrConf()
 	$s_LeftArmStrConf: Sample(fluent==$fl_LeftArmStrConf)
+
+	$evframe_old: EventFrame()
 
 then
 	retract($ev);
@@ -128,7 +142,9 @@ then
 		setValue($par);
 	}
 
+	retract($evframe_old); 
 	EventFrame evf = new EventFrame();
+	evf.setTime(drools.getWorkingMemory().getSessionClock().getCurrentTime()); 
 	insert(evf);
 
 	ExpectationLeftArmStr exp = new ExpectationLeftArmStr();

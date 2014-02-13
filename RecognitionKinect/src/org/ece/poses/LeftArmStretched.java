@@ -21,7 +21,7 @@ public class LeftArmStretched implements PoseKnown {
 //		humanModel.setLeftLeg(-1);
 //		humanModel.setRightLeg(-1);
 
-		poseName = "LeftArmStretched";
+		poseName = "LeftArmStr";
 	}
 
 	public HumanModel getHm() {

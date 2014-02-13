@@ -24,7 +24,9 @@ public class Distribution_Gauge extends Observable implements Observer {
 
 	private org.ece.reasoner.ReasonerECE eceReasoner;
 	double maxQuality = 0;
+	double quality;
 	int poseMatched = -1;
+	String lastEventName="un_nome_che_non_verra_mai_usato_per_un_evento";
 	private int execution = HAPHAZARD;
 
 	Object[] obj = new Object[3];
@@ -207,7 +209,7 @@ public class Distribution_Gauge extends Observable implements Observer {
 		
 		boolean ret = false;
 		
-		
+		System.out.println("**************************************************");
 		for (int ipose = 0; ipose<poses.size(); ipose++){
 			PoseKnown poseToTest = poses.get(ipose);
 			boolean match = checkPose(poseToTest, ipose);
@@ -225,10 +227,15 @@ public class Distribution_Gauge extends Observable implements Observer {
 			
 			System.out.println("-----OK :) match con posa "+eventName);
 			System.out.println("-----timestamp: "+time/1000);
-			this.eceReasoner.notifyEvent(eventName, new HashMap<String, Object>(), time/1000);
-			//System.out.println("-----at "+time/1000+" notify "+eventName);
-			System.out.println();
-		
+			
+			if(eventName!=lastEventName){
+				lastEventName=eventName;
+				HashMap hm = new HashMap<String, Object>();
+				hm.put("confidence", quality);
+				this.eceReasoner.notifyEvent(eventName, hm, time/1000);
+				//System.out.println("-----at "+time/1000+" notify "+eventName);
+				System.out.println();	
+			}
 		}
 		
 		return ret;
@@ -319,7 +326,7 @@ public class Distribution_Gauge extends Observable implements Observer {
 			}
 			// *************************************************
 
-			double quality = average / count;
+			quality = average / count;
 			System.out.println("pose n°" + h+1 + " ---> quality = " + quality);
 			if (quality >= MIN_QUALITY){
 				pose = h;

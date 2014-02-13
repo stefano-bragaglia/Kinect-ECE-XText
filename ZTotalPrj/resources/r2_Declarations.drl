@@ -3,6 +3,13 @@ package rec.dom;
 declare EventFrame extends Event 
 end
 
+rule "Insert EventFrame"
+when
+then
+	EventFrame ef = new EventFrame();
+	insert(ef);
+end  
+
 
 
 declare Start extends Event

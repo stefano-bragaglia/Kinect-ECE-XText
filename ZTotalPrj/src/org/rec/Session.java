@@ -125,7 +125,7 @@ public class Session {
 				if (null != type) {
 					//create event, insert it into session, fire
 					Object eventObj = type.newInstance();
-					//type.set(eventObj, "time", clock.getCurrentTime());
+					type.set(eventObj, "time", clock.getCurrentTime()); //setto tempo evento a clock corrente
 					//System.out.println("clock corrente: "+ clock.getCurrentTime());
 					
 					if(params.toString()!="{}"){

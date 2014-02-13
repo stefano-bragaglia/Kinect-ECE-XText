@@ -21,7 +21,7 @@ public class LeftArmLowered implements PoseKnown {
 //		humanModel.setLeftLeg(-1);
 //		humanModel.setRightLeg(-1);
 
-		poseName = "LeftArmLowered";
+		poseName = "LeftArmLow";
 	}
 
 	public HumanModel getHm() {

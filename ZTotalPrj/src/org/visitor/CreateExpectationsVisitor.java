@@ -7,6 +7,7 @@ import java.util.Random;
 import org.model.ConditionInterface;
 import org.model.Event;
 import org.model.ExpContext;
+import org.model.Fluent;
 import org.model.Statement;
 import org.model.Time;
 import org.model.conditions.relations.LessDescr;
@@ -113,8 +114,24 @@ public class CreateExpectationsVisitor implements Visitor {
 			fCond.accept(tcv);
 			List<String> refList = tcv.getReferenceList();
 			String fCondExpr = tcv.getExprPattern();
+			String actionOnFulf;
+			String actionOnViol;
+		
+			if(expCtx.getActionOnFulf()!=null){
+				actionOnFulf = expCtx.getActionOnFulf().getAction();
+			}else{
+				actionOnFulf="";
+			}
+				
+			if(expCtx.getActionOnViol()!=null){
+				actionOnViol = expCtx.getActionOnViol().getAction();	
+			}else{
+				actionOnViol="";
+			}
 			
-			String actionOnFulf = expCtx.getActionOnFulf().getAction();
+			System.err.println(actionOnFulf);
+			System.err.println(actionOnViol);
+			
 			
 			
 			//fulfilment
@@ -140,9 +157,54 @@ public class CreateExpectationsVisitor implements Visitor {
 				exp = exp.concat("\tretract($exp); \n\n");
 				
 				exp = exp.concat("\tSystem.out.println(\"Expectation FULFILLED\");    \n");
-				exp = exp.concat("\t"+actionOnFulf+" ef = new "+actionOnFulf+"();  \n");
-				exp = exp.concat("\tinsert(ef);  \n");
+				if(actionOnFulf!=""){
+					exp = exp.concat("\t"+actionOnFulf+" ef = new "+actionOnFulf+"();  \n");
+					exp = exp.concat("\tinsert(ef);  \n");
+				}
 			
+				exp = exp.concat("\tEventFrame evf = new EventFrame();     \n");
+				exp = exp.concat("\tevf.setTime(drools.getWorkingMemory().getSessionClock().getCurrentTime());      \n");
+				exp = exp.concat("\tinsert(evf);      \n");
+				
+			exp = exp.concat("end\n");
+			
+			
+			expectationList.add(exp);
+			
+			
+			
+			
+			//violation
+			exp = "rule \"Evaluate VIOL Expectation"+evName+"\"\n";
+			exp = exp.concat("when\n");
+				
+			
+				exp = exp.concat("\t$evframe: EventFrame() \n");
+				exp = exp.concat("\t$exp: Expectation"+evName+"(state==-1, this before ["+timeVal+"] $evframe)  \n\n");
+				
+				for(String flName: refList){
+					exp = exp.concat("\t$fl_"+flName+": "+flName+"()  \n");
+					exp = exp.concat("\t$s_"+flName+": Sample(fluent==$fl_"+flName+")  \n"); 
+				}
+				
+				exp = exp.concat("\n\teval("+fCondExpr+")  \n");
+				
+				
+			exp = exp.concat("then\n");
+			
+			
+				exp = exp.concat("\tretract($evframe); \n");
+				exp = exp.concat("\tretract($exp); \n\n");
+				
+				exp = exp.concat("\tSystem.out.println(\"Expectation VIOLATED\");    \n");
+				if(actionOnViol!=""){
+					exp = exp.concat("\t"+actionOnViol+" ef = new "+actionOnViol+"();  \n");
+					exp = exp.concat("\tinsert(ef);  \n\n");
+				}
+				
+				exp = exp.concat("\tEventFrame evf = new EventFrame();     \n");
+				exp = exp.concat("\tevf.setTime(drools.getWorkingMemory().getSessionClock().getCurrentTime());      \n");
+				exp = exp.concat("\tinsert(evf);      \n");
 				
 			exp = exp.concat("end\n");
 			
@@ -155,6 +217,12 @@ public class CreateExpectationsVisitor implements Visitor {
 
 	@Override
 	public void visit(EceStatement eceStatement) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void visit(Fluent fluent) {
 		// TODO Auto-generated method stub
 		
 	}
